@@ -1,8 +1,6 @@
-# Preface {.unnumbered}
+# Vorwort {.unnumbered}
 
-This is a Quarto book.
-
-To learn more about Quarto books visit <https://quarto.org/docs/books>.
+Hier finden sie die Materialien für das Modul "Einführung in die forstliche Fernerkundung"
 
 ```{r}
 1 + 1

@@ -2,8 +2,8 @@ project:
   type: book
 
 book:
-  title: "book"
-  author: "Norah Jones"
+  title: "Einführung in die forstliche Fernerkundung"
+  author: "Paul Magdon"
   date: "6.9.2025"
   chapters:
     - index.qmd
