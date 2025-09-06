@@ -1,0 +1,21 @@
+{
+  "hash": "f1318618b1ddad7ff9e6538a92009457",
+  "result": {
+    "engine": "knitr",
+    "markdown": "# Vorwort {.unnumbered}\n\nHier finden sie die Materialien für das Modul \"Einführung in die forstliche Fernerkundung\"\n\n\n\n\n\n\n::: {.cell}\n\n```{.r .cell-code}\n1 + 1\n```\n\n::: {.cell-output .cell-output-stdout}\n\n```\n[1] 2\n```\n\n\n:::\n:::\n",
+    "supporting": [
+      "index_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {
+      "knitr": [
+        "{\"type\":\"list\",\"attributes\":{},\"value\":[]}"
+      ]
+    },
+    "preserve": null,
+    "postProcess": false
+  }
+}

@@ -1,6 +1,9 @@
 project:
   type: book
 
+execute:
+  freeze: auto
+  
 book:
   title: "Einführung in die forstliche Fernerkundung"
   author: "Paul Magdon"
