@@ -1,7 +1,4 @@
 # Vorwort {.unnumbered}
 
-Hier finden sie die Materialien für das Modul "Einführung in die forstliche Fernerkundung"
-
-```{r}
-1 + 1
-```
+Hier finden sie die Materialien für das Modul "Einführung in die forstliche 
+Fernerkundung" des B.Sc. Studiengangs Forstwirtschaft an der HAWK in Göttingen. 
