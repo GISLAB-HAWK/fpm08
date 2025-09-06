@@ -1,0 +1,4 @@
+# Übung 01
+## Erste Schritte in QGIS & OTB
+
+In diesem Kurs wird die Software QGIS verwendet. 

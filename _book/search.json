@@ -38,5 +38,25 @@
     "crumbs": [
       "References"
     ]
+  },
+  {
+    "objectID": "einleitung.html",
+    "href": "einleitung.html",
+    "title": "1  Einleitung",
+    "section": "",
+    "text": "This is a book created from markdown and executable code.\nSee Knuth (1984) for additional discussion of literate programming.\n\n\n\n\nKnuth, Donald E. 1984. “Literate Programming.” Comput. J. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einleitung</span>"
+    ]
+  },
+  {
+    "objectID": "uebung01.html",
+    "href": "uebung01.html",
+    "title": "2  Übung 01",
+    "section": "",
+    "text": "2.1 Erste Schritte in QGIS & OTB\nIn diesem Kurs wird die Software QGIS verwendet.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Übung 01</span>"
+    ]
   }
 ]
