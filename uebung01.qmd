@@ -1,4 +1,17 @@
 # Übung 01
-## Erste Schritte in QGIS & OTB
 
-In diesem Kurs wird die Software QGIS verwendet. 
+## Installation von QGIS und OTB
+
+In diesem Kurs wird die Software QGIS in der Version 3.40.x verwendet. Sie
+können die Software hier herunterladen:
+
+<https://qgis.org/downloads/QGIS-OSGeo4W-3.40.10-1.msi>
+
+Weiter Hinweise zu den unterschiedlichen Installationsmöglichkeiten finden Sie 
+hier: <https://docs.qgis.org/3.40/de/docs/user_manual/introduction/getting_started.html#installing-qgis>
+
+
+::: {.callout-note}
+
+Auf den PC-Pool Rechner  sind die notwendigen Programme bereits installiert. 
+:::
