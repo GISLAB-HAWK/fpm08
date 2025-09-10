@@ -4,19 +4,9 @@
     "href": "index.html",
     "title": "Einführung in die forstliche Fernerkundung",
     "section": "",
-    "text": "Vorwort\nHier finden sie die Materialien für das Modul “Einführung in die forstliche Fernerkundung” des B.Sc. Studiengangs Forstwirtschaft an der HAWK in Göttingen.",
+    "text": "Vorwort\nDas Modul FPM08 “Forstliche Fernerkundung” ist eine neues Pflichtmodul im B.Sc. Studiengang “Forstwissenschaften” an der HAWK in Göttingen. Neben eine Vorlesung werden in dem Modul praktische Übungen am PC mit der Software QGIS und OTB durchgeführt. Die Inhalte dieser Übungen werden in diesem Repositorium abgelegt, verwaltet und aktualisiert.\nBei Frage und Anregungen zu den Übungen melden sie sich gerne bei Paul Magdon",
     "crumbs": [
       "Vorwort"
-    ]
-  },
-  {
-    "objectID": "einleitung.html",
-    "href": "einleitung.html",
-    "title": "1  Einleitung",
-    "section": "",
-    "text": "This is a book created from markdown and executable code.\nSee Knuth (1984) for additional discussion of literate programming.\n\n\n\n\nKnuth, Donald E. 1984. “Literate Programming.” Comput. J. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97.",
-    "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einleitung</span>"
     ]
   },
   {
@@ -24,19 +14,19 @@
     "href": "uebung01.html",
     "title": "2  Übung 01",
     "section": "",
-    "text": "2.1 Erste Schritte in QGIS & OTB\nIn diesem Kurs wird die Software QGIS verwendet.",
+    "text": "2.1 Installation von QGIS und OTB\nIn diesem Kurs wird die Software QGIS in der Version 3.40.x verwendet. Sie können die Software hier herunterladen:\nhttps://qgis.org/downloads/QGIS-OSGeo4W-3.40.10-1.msi\nWeiter Hinweise zu den unterschiedlichen Installationsmöglichkeiten finden Sie hier: https://docs.qgis.org/3.40/de/docs/user_manual/introduction/getting_started.html#installing-qgis",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Übung 01</span>"
     ]
   },
   {
-    "objectID": "references.html",
-    "href": "references.html",
-    "title": "References",
+    "objectID": "uebung01.html#installation-von-qgis-und-otb",
+    "href": "uebung01.html#installation-von-qgis-und-otb",
+    "title": "2  Übung 01",
     "section": "",
-    "text": "Knuth, Donald E. 1984. “Literate Programming.” Comput.\nJ. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97.",
+    "text": "Note\n\n\n\nAuf den PC-Pool Rechner sind die notwendigen Programme bereits installiert.",
     "crumbs": [
-      "References"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Übung 01</span>"
     ]
   }
 ]
