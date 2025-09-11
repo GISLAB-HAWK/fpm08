@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>2&nbsp; Übung 01 Erste Schritte in QGIS – Einführung in die forstliche Fernerkundung</title>
+<title>2&nbsp; Übung 01 – Einführung in die forstliche Fernerkundung</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -42,6 +42,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap-23102fe0f0b5b1a9f09cc09ebcc8fe5b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-contrib/videojs/video.min.js"></script>
+<link href="site_libs/quarto-contrib/videojs/video-js.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -82,7 +84,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./uebung01.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Übung 01 Erste Schritte in QGIS</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./uebung01.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Übung 01</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -122,7 +124,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./uebung01.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Übung 01 Erste Schritte in QGIS</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Übung 01</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -141,18 +143,8 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#qgis-otb-installation-und-konfiguration" id="toc-qgis-otb-installation-und-konfiguration" class="nav-link active" data-scroll-target="#qgis-otb-installation-und-konfiguration"><span class="header-section-number">2.1</span> QGIS &amp; OTB Installation und Konfiguration</a>
-  <ul class="collapse">
-  <li><a href="#installation-von-qgis-und-otb" id="toc-installation-von-qgis-und-otb" class="nav-link" data-scroll-target="#installation-von-qgis-und-otb"><span class="header-section-number">2.1.1</span> Installation von QGIS und OTB</a></li>
-  <li><a href="#anlegen-eines-persönlichen-qgis-nutzerprofils" id="toc-anlegen-eines-persönlichen-qgis-nutzerprofils" class="nav-link" data-scroll-target="#anlegen-eines-persönlichen-qgis-nutzerprofils"><span class="header-section-number">2.1.2</span> Anlegen eines persönlichen QGIS-Nutzerprofils</a></li>
-  <li><a href="#einrichtung-von-otb-in-qgis" id="toc-einrichtung-von-otb-in-qgis" class="nav-link" data-scroll-target="#einrichtung-von-otb-in-qgis"><span class="header-section-number">2.1.3</span> Einrichtung von OTB in QGIS</a></li>
-  <li><a href="#sichern-des-nutzerprofils" id="toc-sichern-des-nutzerprofils" class="nav-link" data-scroll-target="#sichern-des-nutzerprofils"><span class="header-section-number">2.1.4</span> Sichern des Nutzerprofils</a></li>
-  </ul></li>
-  <li><a href="#projekt--und-datenmanagement-mit-qgis" id="toc-projekt--und-datenmanagement-mit-qgis" class="nav-link" data-scroll-target="#projekt--und-datenmanagement-mit-qgis"><span class="header-section-number">2.2</span> Projekt- und Datenmanagement mit QGIS</a>
-  <ul class="collapse">
-  <li><a href="#anlegen-eines-neuen-projektes" id="toc-anlegen-eines-neuen-projektes" class="nav-link" data-scroll-target="#anlegen-eines-neuen-projektes"><span class="header-section-number">2.2.1</span> Anlegen eines neuen Projektes</a></li>
-  <li><a href="#anlegen-einer-ordnerstruktur" id="toc-anlegen-einer-ordnerstruktur" class="nav-link" data-scroll-target="#anlegen-einer-ordnerstruktur"><span class="header-section-number">2.2.2</span> Anlegen einer Ordnerstruktur</a></li>
-  </ul></li>
+  <li><a href="#installation-von-qgisotb" id="toc-installation-von-qgisotb" class="nav-link active" data-scroll-target="#installation-von-qgisotb"><span class="header-section-number">2.1</span> Installation von QGIS/OTB</a></li>
+  <li><a href="#erste-schritte-in-qgis-otb" id="toc-erste-schritte-in-qgis-otb" class="nav-link" data-scroll-target="#erste-schritte-in-qgis-otb"><span class="header-section-number">2.2</span> Erste Schritte in QGIS &amp; OTB</a></li>
   </ul>
 </nav>
     </div>
@@ -161,7 +153,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Übung 01 Erste Schritte in QGIS</span></h1>
+<h1 class="title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Übung 01</span></h1>
 </div>
 
 
@@ -178,102 +170,17 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="qgis-otb-installation-und-konfiguration" class="level2" data-number="2.1">
-<h2 data-number="2.1" class="anchored" data-anchor-id="qgis-otb-installation-und-konfiguration"><span class="header-section-number">2.1</span> QGIS &amp; OTB Installation und Konfiguration</h2>
-<p>In der ersten Übung installieren wir die notewendigen Programme und Erweiterungen und konfigurieren diese für die spätere Verwendung. Es wird außerdem gezeigt, wie wir diese Einstellungen über die QGIS-Profile speichern und sichern können.</p>
-<section id="installation-von-qgis-und-otb" class="level3" data-number="2.1.1">
-<h3 data-number="2.1.1" class="anchored" data-anchor-id="installation-von-qgis-und-otb"><span class="header-section-number">2.1.1</span> Installation von QGIS und OTB</h3>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Im PC-Pool der HAWK sind die notwendigen Programme bereits auf den Computern installiert. Die Installation ist also nur notwendig, wenn sie die Übungen auf einem eigenen Computer durchführen wollen. Die vorgestellten Programme funktionieren grundsätzlich unter Windows, Linux und MacOS Betriebssystemen. Für die Übungen wird aber nur auf Windows-Betriebssystemen getestet.</p>
-</div>
-</div>
-<p>In diesem Kurs wird die Software QGIS in der Version 3.40.x verwendet. Sie können die Software hier herunterladen:</p>
-<p><a href="https://qgis.org/downloads/QGIS-OSGeo4W-3.40.10-1.msi" class="uri">https://qgis.org/downloads/QGIS-OSGeo4W-3.40.10-1.msi</a></p>
-<p>Weiter Hinweise zu den unterschiedlichen Installationsmöglichkeiten finden sie hier:</p>
-<p><a href="https://docs.qgis.org/3.40/de/docs/user_manual/introduction/getting_started.html#installing-qgis" class="uri">https://docs.qgis.org/3.40/de/docs/user_manual/introduction/getting_started.html#installing-qgis</a></p>
-<p>Neben QGIS nutzen wir für de fernerkundlichen Auswertungen die open source Software <a href="https://www.orfeo-toolbox.org/">Orfeo Toolbox</a> V.9.1.1. welche hier heruntergeladen werden kann:</p>
-<p><a href="https://www.orfeo-toolbox.org/download/" class="uri">https://www.orfeo-toolbox.org/download/</a></p>
-<p>Weiter Hinweise zu den unterschiedlichen Installationsmöglichkeiten finden sie hier:</p>
-<p><a href="https://www.orfeo-toolbox.org/CookBook/Installation.html" class="uri">https://www.orfeo-toolbox.org/CookBook/Installation.html</a></p>
+<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD ## Übersicht 1.) Installation von QGIS/OTB 2.) Erstellen, Sichern und Wiederherstellen eigener QGIS-Profile 3.) Anlegen von QGIS-Projekten 4.) Strukturierte Ablagen von Projekten und Daten der Übungen</p>
+<section id="installation-von-qgisotb" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="installation-von-qgisotb"><span class="header-section-number">2.1</span> Installation von QGIS/OTB</h2>
+<p>In diesem Kurs arbeiten wir mit der open-source GIS Software “QGIS” in der Version 3.40. LTR.</p>
 </section>
-<section id="anlegen-eines-persönlichen-qgis-nutzerprofils" class="level3" data-number="2.1.2">
-<h3 data-number="2.1.2" class="anchored" data-anchor-id="anlegen-eines-persönlichen-qgis-nutzerprofils"><span class="header-section-number">2.1.2</span> Anlegen eines persönlichen QGIS-Nutzerprofils</h3>
-<p>QGIS kann auf die eigenen Bedürfnisse umfangreich angepasst werden. Dazu zählen z.B. folgende Einstellungen:</p>
-<ul>
-<li>Sprache</li>
-<li>Projektionen und Koordinatensysteme</li>
-<li>Passwörter für Datenbankzugänge</li>
-<li>Anpassungen des Erscheinungsbildes und der dargestellten Werkzeuge</li>
-<li>Installationen und Konfigurationen von Plugin</li>
-</ul>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Das Anlegen persönlicher Nutzerprofile geschieht in der Regel vollständig automatisch. Im PC-Pool werden diese Profile aber nicht zwischen den Rechnern synchronisiert. Außerdem werden die lokalen Nutzerdaten in unregelmäßigen Abständen gelöscht. Daher kann es für die Arbeit im PC-Pool sinnvoll sein, ein eigenes Profil anzulegen und in einem persönlichen Ordner zu sichern.</p>
-</div>
-</div>
-<p>QGIS speicher die Nutzerprofile automatisch lokalen im jeweiligen Nutzerordner <code>C:\Users\???\AppData\Roaming\QGIS\QGIS3\profiles\</code>. Standardmäßig gibt es in QGIS nur ein Benutzerprofil namens <em>default</em>. Es können aber beliebig viele neue angelegt werden.</p>
-<div style="border: 2px solid #afca0b; background-color: #fafafa; padding: 8px;">
-<p>Legen sie ein neues Nutzerprofile mit ihrem Namen (z.B. mueller) an:</p>
-<p><code>Einstellungen</code> → <code>Nutzerprofile</code> → <code>Neues Profil anlegen</code></p>
-</div>
-<p>Weitere Informationen zu den QGIS-Nutzerprofilen finden sie hier:</p>
-<p><a href="https://docs.qgis.org/3.40/de/docs/user_manual/introduction/qgis_configuration.html#user-profiles" class="uri">https://docs.qgis.org/3.40/de/docs/user_manual/introduction/qgis_configuration.html#user-profiles</a></p>
-</section>
-<section id="einrichtung-von-otb-in-qgis" class="level3" data-number="2.1.3">
-<h3 data-number="2.1.3" class="anchored" data-anchor-id="einrichtung-von-otb-in-qgis"><span class="header-section-number">2.1.3</span> Einrichtung von OTB in QGIS</h3>
-<p>Die OTB kann direkt über eine Kommandozeile verwendet werden oder -wie im Kurs- innerhalb von QGIS. Dazu steht ein Plugin zur Verfügung welches wie folgt installiert und konfiguriert werden muss:</p>
-<p>1.) Installation des Orfeo Toolbox Plugins in QGIS</p>
-<div style="border: 2px solid #afca0b; background-color: #fafafa; padding: 8px;">
-<p><code>Erweiterung</code> → <code>Erweiterungen verwalten und installieren</code> Im Suchfenster <code>OrfeoToolboxProvide</code> das Plugin auswählen und installieren.</p>
-</div>
-<p>2.) Konfiguration des OTB-Plugins</p>
-<p>Nachdem das Plugin Installiert ist, muss es noch konfiguriert werden.Dazu müssen die Pfade zu der OTB Software eingetragen werden.</p>
-<div style="border: 2px solid #afca0b; background-color: #fafafa; padding: 8px;">
-<p><strong>Starten der Werkzeugkiste</strong>: <code>Verarbeitung</code> → <code>Werkzeugkiste</code></p>
-<p>In der Werkzeugkiste das Schraubenschlüsselsymbol (Optionen) wählen und dort unter <code>Datenanbieter</code> –&gt; <code>OTB</code> zwei Eintragungen vornehmen:</p>
-<p><strong>OTB application folder:</strong> <code>C:/OTB/lib/otb/applications</code></p>
-<p><strong>OTB folder:</strong> <code>C:/OTB</code></p>
-</div>
-<p>Nach korrekter Eingabe der Pfade und dem Schließen des Optionsmenüs sollte nach kurzer Zeit bei den Verarbeitungswerkzeugen die OTB-Werkzeuge angezeigt werden.</p>
-<p>Weitere Anleitungen zur Konfiguration des OTB-Plugins können sie hier finden:</p>
-<p><a href="https://www.orfeo-toolbox.org/CookBook-9.1/QGISInterface.html" class="uri">https://www.orfeo-toolbox.org/CookBook-9.1/QGISInterface.html</a></p>
-</section>
-<section id="sichern-des-nutzerprofils" class="level3" data-number="2.1.4">
-<h3 data-number="2.1.4" class="anchored" data-anchor-id="sichern-des-nutzerprofils"><span class="header-section-number">2.1.4</span> Sichern des Nutzerprofils</h3>
-<p>Nach dem nun die wichtigsten Einstellungen vorgenommen und im QGIS-Nutzerprofil hinterlegt wurden, ist es sinnvoll dieses für die spätere Verwendung zu sichern.</p>
-<div style="border: 2px solid #afca0b; background-color: #fafafa; padding: 8px;">
-<p>Sichern sie den Ordner mit ihrem Profil (<code>C:\Users\???\AppData\Roaming\QGIS\QGIS3\profiles\???</code>.) in ihr persönliches Laufwerk unter <code>U:</code></p>
-</div>
-<p>Sollten sie im späteren Verlauf des Kurses ihr Profile wiederherstellen wollen, können sie diesen Ordner von <code>U:</code> wieder in den QGIS-Profil Ordner kopieren.</p>
-</section>
-</section>
-<section id="projekt--und-datenmanagement-mit-qgis" class="level2" data-number="2.2">
-<h2 data-number="2.2" class="anchored" data-anchor-id="projekt--und-datenmanagement-mit-qgis"><span class="header-section-number">2.2</span> Projekt- und Datenmanagement mit QGIS</h2>
-<section id="anlegen-eines-neuen-projektes" class="level3" data-number="2.2.1">
-<h3 data-number="2.2.1" class="anchored" data-anchor-id="anlegen-eines-neuen-projektes"><span class="header-section-number">2.2.1</span> Anlegen eines neuen Projektes</h3>
-</section>
-<section id="anlegen-einer-ordnerstruktur" class="level3" data-number="2.2.2">
-<h3 data-number="2.2.2" class="anchored" data-anchor-id="anlegen-einer-ordnerstruktur"><span class="header-section-number">2.2.2</span> Anlegen einer Ordnerstruktur</h3>
+<section id="erste-schritte-in-qgis-otb" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="erste-schritte-in-qgis-otb"><span class="header-section-number">2.2</span> Erste Schritte in QGIS &amp; OTB</h2>
+<p>In diesem Kurs wird die Software QGIS verwendet.</p>
+<div class="quarto-video"><video id="video_shortcode_videojs_video1" class="video-js vjs-default-skin vjs-fluid" controls="" preload="auto" data-setup="{}" title=""><source src="F:/Temp/2025-09-06"></video></div>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
@@ -689,6 +596,7 @@ Note
   </div>
 </nav>
 </div> <!-- /content -->
+<script>videojs(video_shortcode_videojs_video1);</script>
 
 
 
