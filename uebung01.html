@@ -143,14 +143,17 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#installation-von-qgis-und-otb" id="toc-installation-von-qgis-und-otb" class="nav-link active" data-scroll-target="#installation-von-qgis-und-otb"><span class="header-section-number">2.0.1</span> Installation von QGIS und OTB</a></li>
-  <li><a href="#anlegen-eines-persönlichen-qgis-nutzerprofils" id="toc-anlegen-eines-persönlichen-qgis-nutzerprofils" class="nav-link" data-scroll-target="#anlegen-eines-persönlichen-qgis-nutzerprofils"><span class="header-section-number">2.0.2</span> Anlegen eines persönlichen QGIS-Nutzerprofils</a></li>
-  <li><a href="#einrichtung-von-otb-in-qgis" id="toc-einrichtung-von-otb-in-qgis" class="nav-link" data-scroll-target="#einrichtung-von-otb-in-qgis"><span class="header-section-number">2.0.3</span> Einrichtung von OTB in QGIS</a></li>
-  <li><a href="#sichern-des-nutzerprofils" id="toc-sichern-des-nutzerprofils" class="nav-link" data-scroll-target="#sichern-des-nutzerprofils"><span class="header-section-number">2.0.4</span> Sichern des Nutzerprofils</a></li>
-  <li><a href="#projekt--und-datenmanagement-mit-qgis" id="toc-projekt--und-datenmanagement-mit-qgis" class="nav-link" data-scroll-target="#projekt--und-datenmanagement-mit-qgis"><span class="header-section-number">2.1</span> Projekt- und Datenmanagement mit QGIS</a>
+  <li><a href="#qgis-otb-installation-und-konfiguration" id="toc-qgis-otb-installation-und-konfiguration" class="nav-link active" data-scroll-target="#qgis-otb-installation-und-konfiguration"><span class="header-section-number">2.1</span> QGIS &amp; OTB Installation und Konfiguration</a>
   <ul class="collapse">
-  <li><a href="#anlegen-eines-neuen-projektes" id="toc-anlegen-eines-neuen-projektes" class="nav-link" data-scroll-target="#anlegen-eines-neuen-projektes"><span class="header-section-number">2.1.1</span> Anlegen eines neuen Projektes</a></li>
-  <li><a href="#anlegen-einer-ordnerstruktur-head" id="toc-anlegen-einer-ordnerstruktur-head" class="nav-link" data-scroll-target="#anlegen-einer-ordnerstruktur-head"><span class="header-section-number">2.1.2</span> Anlegen einer Ordnerstruktur&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</a></li>
+  <li><a href="#installation-von-qgis-und-otb" id="toc-installation-von-qgis-und-otb" class="nav-link" data-scroll-target="#installation-von-qgis-und-otb"><span class="header-section-number">2.1.1</span> Installation von QGIS und OTB</a></li>
+  <li><a href="#anlegen-eines-persönlichen-qgis-nutzerprofils" id="toc-anlegen-eines-persönlichen-qgis-nutzerprofils" class="nav-link" data-scroll-target="#anlegen-eines-persönlichen-qgis-nutzerprofils"><span class="header-section-number">2.1.2</span> Anlegen eines persönlichen QGIS-Nutzerprofils</a></li>
+  <li><a href="#einrichtung-von-otb-in-qgis" id="toc-einrichtung-von-otb-in-qgis" class="nav-link" data-scroll-target="#einrichtung-von-otb-in-qgis"><span class="header-section-number">2.1.3</span> Einrichtung von OTB in QGIS</a></li>
+  <li><a href="#sichern-des-nutzerprofils" id="toc-sichern-des-nutzerprofils" class="nav-link" data-scroll-target="#sichern-des-nutzerprofils"><span class="header-section-number">2.1.4</span> Sichern des Nutzerprofils</a></li>
+  </ul></li>
+  <li><a href="#projekt--und-datenmanagement-mit-qgis" id="toc-projekt--und-datenmanagement-mit-qgis" class="nav-link" data-scroll-target="#projekt--und-datenmanagement-mit-qgis"><span class="header-section-number">2.2</span> Projekt- und Datenmanagement mit QGIS</a>
+  <ul class="collapse">
+  <li><a href="#anlegen-eines-neuen-projektes" id="toc-anlegen-eines-neuen-projektes" class="nav-link" data-scroll-target="#anlegen-eines-neuen-projektes"><span class="header-section-number">2.2.1</span> Anlegen eines neuen Projektes</a></li>
+  <li><a href="#anlegen-einer-ordnerstruktur-head" id="toc-anlegen-einer-ordnerstruktur-head" class="nav-link" data-scroll-target="#anlegen-einer-ordnerstruktur-head"><span class="header-section-number">2.2.2</span> Anlegen einer Ordnerstruktur&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</a></li>
   </ul></li>
   <li><a href="#übung-01" id="toc-übung-01" class="nav-link" data-scroll-target="#übung-01"><span class="header-section-number">3</span> Übung 01</a>
   <ul class="collapse">
@@ -183,10 +186,11 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD ## QGIS &amp; OTB Installation und Konfiguration</p>
+<section id="qgis-otb-installation-und-konfiguration" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="qgis-otb-installation-und-konfiguration"><span class="header-section-number">2.1</span> QGIS &amp; OTB Installation und Konfiguration</h2>
 <p>In der ersten Übung installieren wir die notewendigen Programme und Erweiterungen und konfigurieren diese für die spätere Verwendung. Es wird außerdem gezeigt, wie wir diese Einstellungen über die QGIS-Profile speichern und sichern können.</p>
-<section id="installation-von-qgis-und-otb" class="level3" data-number="2.0.1">
-<h3 data-number="2.0.1" class="anchored" data-anchor-id="installation-von-qgis-und-otb"><span class="header-section-number">2.0.1</span> Installation von QGIS und OTB</h3>
+<section id="installation-von-qgis-und-otb" class="level3" data-number="2.1.1">
+<h3 data-number="2.1.1" class="anchored" data-anchor-id="installation-von-qgis-und-otb"><span class="header-section-number">2.1.1</span> Installation von QGIS und OTB</h3>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -209,8 +213,8 @@ Note
 <p>Weiter Hinweise zu den unterschiedlichen Installationsmöglichkeiten finden sie hier:</p>
 <p><a href="https://www.orfeo-toolbox.org/CookBook/Installation.html" class="uri">https://www.orfeo-toolbox.org/CookBook/Installation.html</a></p>
 </section>
-<section id="anlegen-eines-persönlichen-qgis-nutzerprofils" class="level3" data-number="2.0.2">
-<h3 data-number="2.0.2" class="anchored" data-anchor-id="anlegen-eines-persönlichen-qgis-nutzerprofils"><span class="header-section-number">2.0.2</span> Anlegen eines persönlichen QGIS-Nutzerprofils</h3>
+<section id="anlegen-eines-persönlichen-qgis-nutzerprofils" class="level3" data-number="2.1.2">
+<h3 data-number="2.1.2" class="anchored" data-anchor-id="anlegen-eines-persönlichen-qgis-nutzerprofils"><span class="header-section-number">2.1.2</span> Anlegen eines persönlichen QGIS-Nutzerprofils</h3>
 <p>QGIS kann auf die eigenen Bedürfnisse umfangreich angepasst werden. Dazu zählen z.B. folgende Einstellungen:</p>
 <ul>
 <li>Sprache</li>
@@ -240,8 +244,8 @@ Note
 <p>Weitere Informationen zu den QGIS-Nutzerprofilen finden sie hier:</p>
 <p><a href="https://docs.qgis.org/3.40/de/docs/user_manual/introduction/qgis_configuration.html#user-profiles" class="uri">https://docs.qgis.org/3.40/de/docs/user_manual/introduction/qgis_configuration.html#user-profiles</a></p>
 </section>
-<section id="einrichtung-von-otb-in-qgis" class="level3" data-number="2.0.3">
-<h3 data-number="2.0.3" class="anchored" data-anchor-id="einrichtung-von-otb-in-qgis"><span class="header-section-number">2.0.3</span> Einrichtung von OTB in QGIS</h3>
+<section id="einrichtung-von-otb-in-qgis" class="level3" data-number="2.1.3">
+<h3 data-number="2.1.3" class="anchored" data-anchor-id="einrichtung-von-otb-in-qgis"><span class="header-section-number">2.1.3</span> Einrichtung von OTB in QGIS</h3>
 <p>Die OTB kann direkt über eine Kommandozeile verwendet werden oder -wie im Kurs- innerhalb von QGIS. Dazu steht ein Plugin zur Verfügung welches wie folgt installiert und konfiguriert werden muss:</p>
 <p>1.) Installation des Orfeo Toolbox Plugins in QGIS</p>
 <div style="border: 2px solid #afca0b; background-color: #fafafa; padding: 8px;">
@@ -259,21 +263,22 @@ Note
 <p>Weitere Anleitungen zur Konfiguration des OTB-Plugins können sie hier finden:</p>
 <p><a href="https://www.orfeo-toolbox.org/CookBook-9.1/QGISInterface.html" class="uri">https://www.orfeo-toolbox.org/CookBook-9.1/QGISInterface.html</a></p>
 </section>
-<section id="sichern-des-nutzerprofils" class="level3" data-number="2.0.4">
-<h3 data-number="2.0.4" class="anchored" data-anchor-id="sichern-des-nutzerprofils"><span class="header-section-number">2.0.4</span> Sichern des Nutzerprofils</h3>
+<section id="sichern-des-nutzerprofils" class="level3" data-number="2.1.4">
+<h3 data-number="2.1.4" class="anchored" data-anchor-id="sichern-des-nutzerprofils"><span class="header-section-number">2.1.4</span> Sichern des Nutzerprofils</h3>
 <p>Nach dem nun die wichtigsten Einstellungen vorgenommen und im QGIS-Nutzerprofil hinterlegt wurden, ist es sinnvoll dieses für die spätere Verwendung zu sichern.</p>
 <div style="border: 2px solid #afca0b; background-color: #fafafa; padding: 8px;">
 <p>Sichern sie den Ordner mit ihrem Profil (<code>C:\Users\???\AppData\Roaming\QGIS\QGIS3\profiles\???</code>.) in ihr persönliches Laufwerk unter <code>U:</code></p>
 </div>
 <p>Sollten sie im späteren Verlauf des Kurses ihr Profile wiederherstellen wollen, können sie diesen Ordner von <code>U:</code> wieder in den QGIS-Profil Ordner kopieren.</p>
 </section>
-<section id="projekt--und-datenmanagement-mit-qgis" class="level2" data-number="2.1">
-<h2 data-number="2.1" class="anchored" data-anchor-id="projekt--und-datenmanagement-mit-qgis"><span class="header-section-number">2.1</span> Projekt- und Datenmanagement mit QGIS</h2>
-<section id="anlegen-eines-neuen-projektes" class="level3" data-number="2.1.1">
-<h3 data-number="2.1.1" class="anchored" data-anchor-id="anlegen-eines-neuen-projektes"><span class="header-section-number">2.1.1</span> Anlegen eines neuen Projektes</h3>
 </section>
-<section id="anlegen-einer-ordnerstruktur-head" class="level3" data-number="2.1.2">
-<h3 data-number="2.1.2" class="anchored" data-anchor-id="anlegen-einer-ordnerstruktur-head"><span class="header-section-number">2.1.2</span> Anlegen einer Ordnerstruktur&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</h3>
+<section id="projekt--und-datenmanagement-mit-qgis" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="projekt--und-datenmanagement-mit-qgis"><span class="header-section-number">2.2</span> Projekt- und Datenmanagement mit QGIS</h2>
+<section id="anlegen-eines-neuen-projektes" class="level3" data-number="2.2.1">
+<h3 data-number="2.2.1" class="anchored" data-anchor-id="anlegen-eines-neuen-projektes"><span class="header-section-number">2.2.1</span> Anlegen eines neuen Projektes</h3>
+</section>
+<section id="anlegen-einer-ordnerstruktur-head" class="level3" data-number="2.2.2">
+<h3 data-number="2.2.2" class="anchored" data-anchor-id="anlegen-einer-ordnerstruktur-head"><span class="header-section-number">2.2.2</span> Anlegen einer Ordnerstruktur&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</h3>
 </section>
 </section>
 <section id="übung-01" class="level1" data-number="3">
