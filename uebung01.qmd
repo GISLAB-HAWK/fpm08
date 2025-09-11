@@ -1,4 +1,134 @@
 <<<<<<< HEAD
+# Übung 01 Erste Schritte in  QGIS
+## QGIS & OTB Installation und Konfiguration
+
+In der ersten Übung installieren wir die notewendigen Programme und 
+Erweiterungen und konfigurieren diese für die spätere Verwendung. Es wird
+außerdem gezeigt, wie wir diese Einstellungen über die QGIS-Profile speichern
+und sichern können. 
+
+### Installation von QGIS und OTB
+::: {.callout-note}
+
+Im PC-Pool der HAWK sind die notwendigen Programme bereits auf den Computern
+installiert. Die Installation ist also nur notwendig, wenn sie die Übungen auf
+einem eigenen Computer durchführen wollen. Die vorgestellten Programme 
+funktionieren grundsätzlich unter Windows, Linux und MacOS Betriebssystemen.
+Für die Übungen wird aber nur auf Windows-Betriebssystemen getestet. 
+:::
+
+In diesem Kurs wird die Software QGIS in der Version 3.40.x verwendet. Sie
+können die Software hier herunterladen:
+
+<https://qgis.org/downloads/QGIS-OSGeo4W-3.40.10-1.msi>
+
+Weiter Hinweise zu den unterschiedlichen Installationsmöglichkeiten finden sie 
+hier: 
+
+<https://docs.qgis.org/3.40/de/docs/user_manual/introduction/getting_started.html#installing-qgis>
+
+Neben QGIS nutzen wir für de fernerkundlichen Auswertungen die open source 
+Software [Orfeo Toolbox](https://www.orfeo-toolbox.org/) V.9.1.1. welche hier
+heruntergeladen werden kann:
+
+<https://www.orfeo-toolbox.org/download/>
+
+Weiter Hinweise zu den unterschiedlichen Installationsmöglichkeiten finden sie 
+hier:
+
+<https://www.orfeo-toolbox.org/CookBook/Installation.html>
+
+
+### Anlegen eines persönlichen QGIS-Nutzerprofils
+QGIS kann auf die eigenen Bedürfnisse umfangreich angepasst werden. Dazu zählen
+z.B. folgende Einstellungen:
+
+* Sprache
+* Projektionen und Koordinatensysteme
+* Passwörter für Datenbankzugänge
+* Anpassungen des Erscheinungsbildes und der dargestellten Werkzeuge
+* Installationen und Konfigurationen von Plugin
+
+::: {.callout-note}
+
+Das Anlegen persönlicher Nutzerprofile geschieht in der Regel vollständig 
+automatisch. Im PC-Pool werden diese Profile aber nicht zwischen den Rechnern
+synchronisiert. Außerdem werden die lokalen Nutzerdaten in unregelmäßigen
+Abständen gelöscht. Daher kann es für die Arbeit im PC-Pool sinnvoll sein, ein
+eigenes Profil anzulegen und in einem persönlichen Ordner zu sichern. 
+:::
+
+QGIS speicher die Nutzerprofile automatisch lokalen im jeweiligen Nutzerordner ```C:\Users\???\AppData\Roaming\QGIS\QGIS3\profiles\```. Standardmäßig gibt es 
+in QGIS nur ein Benutzerprofil namens *default*. Es können aber beliebig viele
+neue angelegt werden. 
+
+::: {style="border: 2px solid #afca0b; background-color: #fafafa; padding: 8px;"}
+
+Legen sie ein neues Nutzerprofile mit ihrem Namen (z.B. mueller) an:
+
+`Einstellungen` → `Nutzerprofile` → `Neues Profil anlegen`
+:::
+
+Weitere Informationen zu den QGIS-Nutzerprofilen finden sie hier:
+
+<https://docs.qgis.org/3.40/de/docs/user_manual/introduction/qgis_configuration.html#user-profiles>
+
+### Einrichtung von OTB in QGIS
+
+Die OTB kann direkt über eine Kommandozeile verwendet werden oder -wie im Kurs- 
+innerhalb von QGIS. Dazu steht ein Plugin zur Verfügung welches wie folgt 
+installiert und konfiguriert werden muss:
+
+1.) Installation des Orfeo Toolbox Plugins in QGIS
+
+::: {style="border: 2px solid #afca0b; background-color: #fafafa; padding: 8px;"}
+`Erweiterung` → `Erweiterungen verwalten und installieren`
+Im Suchfenster `OrfeoToolboxProvide` das Plugin auswählen und installieren. 
+:::
+
+
+2.) Konfiguration des OTB-Plugins
+
+Nachdem das Plugin Installiert ist, muss es noch konfiguriert werden.Dazu müssen
+die Pfade zu der OTB Software eingetragen werden.
+
+::: {style="border: 2px solid #afca0b; background-color: #fafafa; padding: 8px;"}
+**Starten der Werkzeugkiste**: `Verarbeitung` → `Werkzeugkiste` 
+
+In der Werkzeugkiste das Schraubenschlüsselsymbol (Optionen) wählen und dort 
+unter `Datenanbieter` --> `OTB` zwei Eintragungen vornehmen:
+
+**OTB application folder:** `C:/OTB/lib/otb/applications`
+
+**OTB folder:** `C:/OTB`
+:::
+
+Nach korrekter Eingabe der Pfade und dem Schließen des Optionsmenüs sollte nach
+kurzer Zeit bei den Verarbeitungswerkzeugen die OTB-Werkzeuge angezeigt werden. 
+
+Weitere Anleitungen zur Konfiguration des OTB-Plugins können sie hier finden:
+
+<https://www.orfeo-toolbox.org/CookBook-9.1/QGISInterface.html>
+
+### Sichern des Nutzerprofils
+
+Nach dem nun die wichtigsten Einstellungen vorgenommen und im QGIS-Nutzerprofil
+hinterlegt wurden, ist es sinnvoll dieses für die spätere Verwendung zu sichern. 
+
+::: {style="border: 2px solid #afca0b; background-color: #fafafa; padding: 8px;"}
+
+Sichern sie den Ordner mit ihrem Profil 
+(```C:\Users\???\AppData\Roaming\QGIS\QGIS3\profiles\???```.) in ihr 
+persönliches Laufwerk unter `U:`
+:::
+
+Sollten sie im späteren Verlauf des Kurses ihr Profile wiederherstellen wollen,
+können sie diesen Ordner von `U:` wieder in den QGIS-Profil Ordner kopieren. 
+
+## Projekt- und Datenmanagement mit QGIS
+
+### Anlegen eines neuen Projektes
+### Anlegen einer Ordnerstruktur<<<<<<< HEAD
 # Übung 01
 ## Übersicht
 1.) Installation von QGIS/OTB
