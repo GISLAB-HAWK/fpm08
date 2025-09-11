@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Übung 01
 ## Übersicht
 1.) Installation von QGIS/OTB
