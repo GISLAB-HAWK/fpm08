@@ -10,36 +10,6 @@
     ]
   },
   {
-    "objectID": "intro.html",
-    "href": "intro.html",
-    "title": "1  Introduction",
-    "section": "",
-    "text": "This is a book created from markdown and executable code.\nSee Knuth (1984) for additional discussion of literate programming.\n\n1 + 1\n\n[1] 2\n\n\n\n\n\n\nKnuth, Donald E. 1984. “Literate Programming.” Comput. J. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97.",
-    "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
-    ]
-  },
-  {
-    "objectID": "summary.html",
-    "href": "summary.html",
-    "title": "2  Summary",
-    "section": "",
-    "text": "In summary, this book has no content whatsoever.\n\n1 + 1\n\n[1] 2",
-    "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Summary</span>"
-    ]
-  },
-  {
-    "objectID": "references.html",
-    "href": "references.html",
-    "title": "References",
-    "section": "",
-    "text": "Knuth, Donald E. 1984. “Literate Programming.” Comput.\nJ. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97.",
-    "crumbs": [
-      "References"
-    ]
-  },
-  {
     "objectID": "einleitung.html",
     "href": "einleitung.html",
     "title": "1  Einleitung",
@@ -54,7 +24,37 @@
     "href": "uebung01.html",
     "title": "2  Übung 01",
     "section": "",
-    "text": "2.1 Erste Schritte in QGIS & OTB\nIn diesem Kurs wird die Software QGIS verwendet.",
+    "text": "2.1 Übersicht\n1.) Installation von QGIS/OTB 2.) Erstellen, Sichern und Wiederherstellen eigener QGIS-Profile 3.) Anlegen von QGIS-Projekten 4.) Strukturierte Ablagen von Projekten und Daten der Übungen",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Übung 01</span>"
+    ]
+  },
+  {
+    "objectID": "references.html",
+    "href": "references.html",
+    "title": "References",
+    "section": "",
+    "text": "Knuth, Donald E. 1984. “Literate Programming.” Comput.\nJ. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97.",
+    "crumbs": [
+      "References"
+    ]
+  },
+  {
+    "objectID": "uebung01.html#installation-von-qgisotb",
+    "href": "uebung01.html#installation-von-qgisotb",
+    "title": "2  Übung 01",
+    "section": "2.2 Installation von QGIS/OTB",
+    "text": "2.2 Installation von QGIS/OTB\nIn diesem Kurs arbeiten wir mit der open-source GIS Software “QGIS” in der Version 3.40. LTR.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Übung 01</span>"
+    ]
+  },
+  {
+    "objectID": "uebung01.html#erste-schritte-in-qgis-otb",
+    "href": "uebung01.html#erste-schritte-in-qgis-otb",
+    "title": "2  Übung 01",
+    "section": "2.3 Erste Schritte in QGIS & OTB",
+    "text": "2.3 Erste Schritte in QGIS & OTB\nIn diesem Kurs wird die Software QGIS verwendet.",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Übung 01</span>"
     ]

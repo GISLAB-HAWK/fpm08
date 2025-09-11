@@ -1,4 +1,17 @@
 # Übung 01
+## Übersicht
+1.) Installation von QGIS/OTB
+2.) Erstellen, Sichern und Wiederherstellen eigener QGIS-Profile
+3.) Anlegen von QGIS-Projekten
+4.) Strukturierte Ablagen von Projekten und Daten der Übungen
+
+## Installation von QGIS/OTB
+In diesem Kurs arbeiten wir mit der open-source GIS Software "QGIS" in der 
+Version 3.40. LTR.
+
 ## Erste Schritte in QGIS & OTB
 
-In diesem Kurs wird die Software QGIS verwendet. 
+In diesem Kurs wird die Software QGIS verwendet.
+
+
+{{< video F:/Temp/2025-09-06 17-56-17.mp4>}}
