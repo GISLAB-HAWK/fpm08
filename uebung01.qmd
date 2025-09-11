@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Übung 01 Erste Schritte in  QGIS
 ## QGIS & OTB Installation und Konfiguration
 
