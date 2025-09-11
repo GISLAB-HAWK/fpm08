@@ -12,21 +12,51 @@
   {
     "objectID": "uebung01.html",
     "href": "uebung01.html",
-    "title": "2  Übung 01",
+    "title": "2  Übung 01 Erste Schritte in QGIS",
     "section": "",
-    "text": "2.1 Installation von QGIS/OTB\n&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD ## Übersicht 1.) Installation von QGIS/OTB 2.) Erstellen, Sichern und Wiederherstellen eigener QGIS-Profile 3.) Anlegen von QGIS-Projekten 4.) Strukturierte Ablagen von Projekten und Daten der Übungen\nIn diesem Kurs arbeiten wir mit der open-source GIS Software “QGIS” in der Version 3.40. LTR.",
+    "text": "2.0.1 Installation von QGIS und OTB\n&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD ## QGIS & OTB Installation und Konfiguration\nIn der ersten Übung installieren wir die notewendigen Programme und Erweiterungen und konfigurieren diese für die spätere Verwendung. Es wird außerdem gezeigt, wie wir diese Einstellungen über die QGIS-Profile speichern und sichern können.\nIn diesem Kurs wird die Software QGIS in der Version 3.40.x verwendet. Sie können die Software hier herunterladen:\nhttps://qgis.org/downloads/QGIS-OSGeo4W-3.40.10-1.msi\nWeiter Hinweise zu den unterschiedlichen Installationsmöglichkeiten finden sie hier:\nhttps://docs.qgis.org/3.40/de/docs/user_manual/introduction/getting_started.html#installing-qgis\nNeben QGIS nutzen wir für de fernerkundlichen Auswertungen die open source Software Orfeo Toolbox V.9.1.1. welche hier heruntergeladen werden kann:\nhttps://www.orfeo-toolbox.org/download/\nWeiter Hinweise zu den unterschiedlichen Installationsmöglichkeiten finden sie hier:\nhttps://www.orfeo-toolbox.org/CookBook/Installation.html",
     "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Übung 01</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Übung 01 Erste Schritte in  QGIS</span>"
+    ]
+  },
+  {
+    "objectID": "uebung01.html#projekt--und-datenmanagement-mit-qgis",
+    "href": "uebung01.html#projekt--und-datenmanagement-mit-qgis",
+    "title": "2  Übung 01 Erste Schritte in QGIS",
+    "section": "2.1 Projekt- und Datenmanagement mit QGIS",
+    "text": "2.1 Projekt- und Datenmanagement mit QGIS\n\n2.1.1 Anlegen eines neuen Projektes\n\n\n2.1.2 Anlegen einer Ordnerstruktur&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Übung 01 Erste Schritte in  QGIS</span>"
+    ]
+  },
+  {
+    "objectID": "uebung01.html#übersicht",
+    "href": "uebung01.html#übersicht",
+    "title": "2  Übung 01 Erste Schritte in QGIS",
+    "section": "3.1 Übersicht",
+    "text": "3.1 Übersicht\n1.) Installation von QGIS/OTB 2.) Erstellen, Sichern und Wiederherstellen eigener QGIS-Profile 3.) Anlegen von QGIS-Projekten 4.) Strukturierte Ablagen von Projekten und Daten der Übungen",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Übung 01 Erste Schritte in  QGIS</span>"
+    ]
+  },
+  {
+    "objectID": "uebung01.html#installation-von-qgisotb",
+    "href": "uebung01.html#installation-von-qgisotb",
+    "title": "2  Übung 01 Erste Schritte in QGIS",
+    "section": "3.2 Installation von QGIS/OTB",
+    "text": "3.2 Installation von QGIS/OTB\nIn diesem Kurs arbeiten wir mit der open-source GIS Software “QGIS” in der Version 3.40. LTR.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Übung 01 Erste Schritte in  QGIS</span>"
     ]
   },
   {
     "objectID": "uebung01.html#erste-schritte-in-qgis-otb",
     "href": "uebung01.html#erste-schritte-in-qgis-otb",
-    "title": "2  Übung 01",
-    "section": "2.2 Erste Schritte in QGIS & OTB",
-    "text": "2.2 Erste Schritte in QGIS & OTB\nIn diesem Kurs wird die Software QGIS verwendet.",
+    "title": "2  Übung 01 Erste Schritte in QGIS",
+    "section": "3.3 Erste Schritte in QGIS & OTB",
+    "text": "3.3 Erste Schritte in QGIS & OTB\nIn diesem Kurs wird die Software QGIS verwendet.",
     "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Übung 01</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Übung 01 Erste Schritte in  QGIS</span>"
     ]
   }
 ]
