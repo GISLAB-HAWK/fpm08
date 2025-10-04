@@ -12,7 +12,7 @@ vorgestellt wir QGIS-Erweiterungen installiert werden können.
 
 Die Studierenden sollen:
 
--   QGIS installieren können bzw. überprüfen können welche Version installiert ist.
+-   QGIS installieren können bzw.. überprüfen können welche Version installiert ist.
 -   die Funktionsweise von Nutzerprofilen verstehen und anwenden können
 -   eine sinnvolle Ordnerstruktur zur Verwaltung von QGIS-Projekten kennen und
 -   anlegen können
@@ -152,7 +152,7 @@ diesen Ordner von `U:` wieder in den QGIS-Profil Ordner kopieren.
 
 Eine gute Ordnerstruktur ist für das Datenmanagement sehr hilfreich. Daher wird empfohlen
 für jedes Projekt / jede Lerneinheit eine eigene Ordnerstruktur nach einheitlichem Muster
-anzulegen. Die Strutktur könnte so aussehen:
+anzulegen. Die Struktur könnte so aussehen:
 
 ``` plaintext
 projekt_xy/
@@ -174,7 +174,7 @@ ist möglich, da die Projektdatei die relativen Pfade, ausgehend von dem Ordner 
 
 ::: callout-caution
 Der Dateipfad in dem die Ordnerstruktur angelegt wird darf keine Umlaute oder (ä,ö,ü),
-Sonderzeichen (!,?, .,etc.) oder Leerzeichen enthalten. Dies kann bei der Verarbeitung zu
+Sonderzeichen (!,?, .,etc..) oder Leerzeichen enthalten. Dies kann bei der Verarbeitung zu
 Fehlern führen. Daher sollten bei der Anlage der gesamte Pfad kontrolliert werden.
 
 Beispiel:
@@ -184,7 +184,7 @@ Beispiel:
 
 ### Anlegen eines neuen QGIS-Projektes
 
-In QGIS können einzelne Projekte z.B. eine Lereinheit als Projekte angelegt und
+In QGIS können einzelne Projekte z.B. eine Lehreinheit als Projekte angelegt und
 gespeichert werden. Dabei werden sämtliche Einstellungen und Darstellungen (z.B.
 Kartenlayouts, Symbologien), Bearbeitungsstand und vieles mehr gespeichert. Das ist vor
 allem sinnvoll wenn man seine Arbeit unterbrechen und zu einem späteren Zeitpunkt
@@ -193,7 +193,7 @@ fortsetzen möchte. Die Projekte werden in einer Datei mit der Endung \*.qgz ges
 ::: callout-caution
 Die Projektdatei \*.qgz enthält nicht die Geodaten, des Projektes. Es werden lediglich die
 Pfade zu den Dateien mit den Geodaten gespeichert. Beim Laden des Projektes werden die
-Geodaten an den hinterlegten Datepfaden gesucht und geladen. Sollten diese nicht mehr an
+Geodaten an den hinterlegten Datenpfaden gesucht und geladen. Sollten diese nicht mehr an
 dem Ort gespeichert sein, wir QGIS einen Fehler melden. Eine klare Ordnerstruktur kann
 solche Fehler vermeiden helfen.
 :::
