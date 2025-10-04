@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.34">
+<meta name="generator" content="quarto-1.8.25">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>2&nbsp; Übung 01 Erste Schritte in QGIS – Einführung in die forstliche Fernerkundung</title>
+<title>2&nbsp; Lerneinheit 01 Erste Schritte in QGIS – Einführung in die forstliche Fernerkundung</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -34,16 +34,15 @@ ul.task-list li input[type="checkbox"] {
 <link href="./einleitung.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-c8ad9e5dbd60b7b70b38521ab19b7da4.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-23102fe0f0b5b1a9f09cc09ebcc8fe5b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
-<script src="site_libs/quarto-contrib/videojs/video.min.js"></script>
-<link href="site_libs/quarto-contrib/videojs/video-js.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-0dd2bd5de344125cf763a379ddc3eb04.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -84,7 +83,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./uebung01.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Übung 01 Erste Schritte in QGIS</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./uebung01.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Lerneinheit 01 Erste Schritte in QGIS</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -97,7 +96,9 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
-    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
+      <a href="./index.html" class="sidebar-logo-link">
+      </a>
     <div class="sidebar-title mb-0 py-0">
       <a href="./">Einführung in die forstliche Fernerkundung</a> 
     </div>
@@ -124,7 +125,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./uebung01.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Übung 01 Erste Schritte in QGIS</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Lerneinheit 01 Erste Schritte in QGIS</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -152,14 +153,12 @@ ul.task-list li input[type="checkbox"] {
   </ul></li>
   <li><a href="#projekt--und-datenmanagement-mit-qgis" id="toc-projekt--und-datenmanagement-mit-qgis" class="nav-link" data-scroll-target="#projekt--und-datenmanagement-mit-qgis"><span class="header-section-number">2.2</span> Projekt- und Datenmanagement mit QGIS</a>
   <ul class="collapse">
-  <li><a href="#anlegen-eines-neuen-projektes" id="toc-anlegen-eines-neuen-projektes" class="nav-link" data-scroll-target="#anlegen-eines-neuen-projektes"><span class="header-section-number">2.2.1</span> Anlegen eines neuen Projektes</a></li>
-  <li><a href="#anlegen-einer-ordnerstruktur-head" id="toc-anlegen-einer-ordnerstruktur-head" class="nav-link" data-scroll-target="#anlegen-einer-ordnerstruktur-head"><span class="header-section-number">2.2.2</span> Anlegen einer Ordnerstruktur&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</a></li>
+  <li><a href="#anlegen-eines-neuen-qgis-projektes" id="toc-anlegen-eines-neuen-qgis-projektes" class="nav-link" data-scroll-target="#anlegen-eines-neuen-qgis-projektes"><span class="header-section-number">2.2.1</span> Anlegen eines neuen QGIS-Projektes</a></li>
+  <li><a href="#anlegen-einer-ordnerstruktur" id="toc-anlegen-einer-ordnerstruktur" class="nav-link" data-scroll-target="#anlegen-einer-ordnerstruktur"><span class="header-section-number">2.2.2</span> Anlegen einer Ordnerstruktur</a></li>
   </ul></li>
   <li><a href="#übung-01" id="toc-übung-01" class="nav-link" data-scroll-target="#übung-01"><span class="header-section-number">3</span> Übung 01</a>
   <ul class="collapse">
-  <li><a href="#übersicht" id="toc-übersicht" class="nav-link" data-scroll-target="#übersicht"><span class="header-section-number">3.1</span> Übersicht</a></li>
-  <li><a href="#installation-von-qgisotb" id="toc-installation-von-qgisotb" class="nav-link" data-scroll-target="#installation-von-qgisotb"><span class="header-section-number">3.2</span> Installation von QGIS/OTB</a></li>
-  <li><a href="#erste-schritte-in-qgis-otb" id="toc-erste-schritte-in-qgis-otb" class="nav-link" data-scroll-target="#erste-schritte-in-qgis-otb"><span class="header-section-number">3.3</span> Erste Schritte in QGIS &amp; OTB</a></li>
+  <li><a href="#aufgabenstellung" id="toc-aufgabenstellung" class="nav-link" data-scroll-target="#aufgabenstellung"><span class="header-section-number">3.1</span> Aufgabenstellung</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -169,7 +168,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Übung 01 Erste Schritte in QGIS</span></h1>
+<h1 class="title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Lerneinheit 01 Erste Schritte in QGIS</span></h1>
 </div>
 
 
@@ -274,27 +273,44 @@ Note
 </section>
 <section id="projekt--und-datenmanagement-mit-qgis" class="level2" data-number="2.2">
 <h2 data-number="2.2" class="anchored" data-anchor-id="projekt--und-datenmanagement-mit-qgis"><span class="header-section-number">2.2</span> Projekt- und Datenmanagement mit QGIS</h2>
-<section id="anlegen-eines-neuen-projektes" class="level3" data-number="2.2.1">
-<h3 data-number="2.2.1" class="anchored" data-anchor-id="anlegen-eines-neuen-projektes"><span class="header-section-number">2.2.1</span> Anlegen eines neuen Projektes</h3>
+<section id="anlegen-eines-neuen-qgis-projektes" class="level3" data-number="2.2.1">
+<h3 data-number="2.2.1" class="anchored" data-anchor-id="anlegen-eines-neuen-qgis-projektes"><span class="header-section-number">2.2.1</span> Anlegen eines neuen QGIS-Projektes</h3>
+<p>QGIS bietet die Möglichkeiten Projekte anzulegen und zu speichern. Dabei werden sämtliche Einstellungen und Darstellungen (z.B. Kartenlayouts, Symbologien) etc. gespeichert. Das ist vorallem sinnvoll wenn man seine Arbeit unterbrechen und zu einem späteren Zeitpunkt fortsetzen möchte. Die Projekte werden in einer Datei mit der Endung *.qgz gespeiechert.</p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Die Projektdatei *.qgz enthält nicht die Geodaten die in dem Projekt geladen sind. Es werden lediglich die Pfade zu den Datein mit den Geodaten gespeichert. Beim Laden des Projektes werden die Geodaten also an den hinterlegten Pfaden gesucht und geladen. Sollten diese nicht mehr an dem Ort gespeichert sein, wir QGIS einen Fehler melden.</p>
+</div>
+</div>
 </section>
-<section id="anlegen-einer-ordnerstruktur-head" class="level3" data-number="2.2.2">
-<h3 data-number="2.2.2" class="anchored" data-anchor-id="anlegen-einer-ordnerstruktur-head"><span class="header-section-number">2.2.2</span> Anlegen einer Ordnerstruktur&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</h3>
+<section id="anlegen-einer-ordnerstruktur" class="level3" data-number="2.2.2">
+<h3 data-number="2.2.2" class="anchored" data-anchor-id="anlegen-einer-ordnerstruktur"><span class="header-section-number">2.2.2</span> Anlegen einer Ordnerstruktur</h3>
+<p>Eine gute Ordnerstruktur ist für das Datenmanagement sehr hilfreich. Daher wird empfohlen für jedes Projekt / jede Lerneinheit eine eigene Ordnerstrutur nach einheitlichem Muster anzulegen. Die Strutktur könnte so aussehen:</p>
+<pre class="plaintext"><code>projekt_xy/
+├── daten/
+│   └── raster_1.tif
+|   └── raster_2.tif
+├── skripte/
+│   └── analyse.R
+├── karten/
+│   └── baumartenkarte.pdf
+└── projekt_XY.qgz</code></pre>
+<p>Diese Ordnerstruktur kann natürlich an die eigenen Präferenzen und die Notwendigkeiten im Projekt angepasst werden. Weitere wesentlicher Vorteil einer solchen Ordnerstrutkrur ist, dass die Ordner im ganzen verschoben, kopiert oder mit anderen geteilt werden können. Dies ist Möglich, da die Projektdatei die relativen Pfade, ausgehend von dem Ordner in dem die *.qgz Datei liegt speichert. Also z.B. daten/raster_1.tif.</p>
 </section>
 </section>
 <section id="übung-01" class="level1" data-number="3">
 <h1 data-number="3"><span class="header-section-number">3</span> Übung 01</h1>
-<section id="übersicht" class="level2" data-number="3.1">
-<h2 data-number="3.1" class="anchored" data-anchor-id="übersicht"><span class="header-section-number">3.1</span> Übersicht</h2>
-<p>1.) Installation von QGIS/OTB 2.) Erstellen, Sichern und Wiederherstellen eigener QGIS-Profile 3.) Anlegen von QGIS-Projekten 4.) Strukturierte Ablagen von Projekten und Daten der Übungen</p>
-</section>
-<section id="installation-von-qgisotb" class="level2" data-number="3.2">
-<h2 data-number="3.2" class="anchored" data-anchor-id="installation-von-qgisotb"><span class="header-section-number">3.2</span> Installation von QGIS/OTB</h2>
-<p>In diesem Kurs arbeiten wir mit der open-source GIS Software “QGIS” in der Version 3.40. LTR.</p>
-</section>
-<section id="erste-schritte-in-qgis-otb" class="level2" data-number="3.3">
-<h2 data-number="3.3" class="anchored" data-anchor-id="erste-schritte-in-qgis-otb"><span class="header-section-number">3.3</span> Erste Schritte in QGIS &amp; OTB</h2>
-<p>In diesem Kurs wird die Software QGIS verwendet.</p>
-<div class="quarto-video"><video id="video_shortcode_videojs_video1" class="video-js vjs-default-skin vjs-fluid" controls="" preload="auto" data-setup="{}" title=""><source src="F:/Temp/2025-09-06"></video></div>
+<section id="aufgabenstellung" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="aufgabenstellung"><span class="header-section-number">3.1</span> Aufgabenstellung</h2>
+<p>1.) Überprüfen Sie die Installation von QGIS und OTB. Überprüfen sie dabei auch welche Versionen installiert sind.</p>
+<p>2.) Starten Sie QGIS und legen Sie ein neues Nutzerprofil mit ihrem Namen an 3.) Installieren Sie das OTB-Plugin und hinterlegen Sie die korrekten Pfade für die OTB-Programmmbibliotheken. Beenden Sie QGIS anschließend. 4.) Sichern sie ihr Nutzerprofil an einem permanenten Speicherort z.B. U:, oder auf einem USB-Stick. 5.) Legen Sie eine Ordnerstruktur für das Projekt uebung01 an. 6.) Starten Sie QGIS und speichern Sie das Projekt in der ORdnerstruktur unter uebung01.qgz</p>
 
 
 </section>
@@ -352,13 +368,14 @@ Note
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy
@@ -713,7 +730,6 @@ Note
   </div>
 </nav>
 </div> <!-- /content -->
-<script>videojs(video_shortcode_videojs_video1);</script>
 
 
 
