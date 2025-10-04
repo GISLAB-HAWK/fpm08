@@ -10,150 +10,43 @@
     ]
   },
   {
-<<<<<<< HEAD
-    "objectID": "einleitung.html",
-    "href": "einleitung.html",
-    "title": "1  Einleitung",
-    "section": "",
-    "text": "This is a book created from markdown and executable code.\nSee Knuth (1984) for additional discussion of literate programming.\n\n\n\n\nKnuth, Donald E. 1984. “Literate Programming.” Comput. J. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97.",
-    "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einleitung</span>"
-    ]
-  },
-  {
-=======
->>>>>>> ace7840b2b38cfa041ba8278688772de44916554
     "objectID": "uebung01.html",
     "href": "uebung01.html",
-    "title": "2  Übung 01 Erste Schritte in QGIS",
+    "title": "2  Lerneinheit 01 Erste Schritte in QGIS",
     "section": "",
-<<<<<<< HEAD
-    "text": "2.1 Übersicht\n1.) Installation von QGIS/OTB 2.) Erstellen, Sichern und Wiederherstellen eigener QGIS-Profile 3.) Anlegen von QGIS-Projekten 4.) Strukturierte Ablagen von Projekten und Daten der Übungen",
-    "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Übung 01</span>"
-    ]
-  },
-  {
-    "objectID": "references.html",
-    "href": "references.html",
-    "title": "References",
-    "section": "",
-    "text": "Knuth, Donald E. 1984. “Literate Programming.” Comput.\nJ. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97.",
-    "crumbs": [
-      "References"
-    ]
-  },
-  {
-    "objectID": "uebung01.html#installation-von-qgisotb",
-    "href": "uebung01.html#installation-von-qgisotb",
-    "title": "2  Übung 01",
-    "section": "2.2 Installation von QGIS/OTB",
-    "text": "2.2 Installation von QGIS/OTB\nIn diesem Kurs arbeiten wir mit der open-source GIS Software “QGIS” in der Version 3.40. LTR.",
-    "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Übung 01</span>"
-    ]
-  },
-  {
-    "objectID": "uebung01.html#erste-schritte-in-qgis-otb",
-    "href": "uebung01.html#erste-schritte-in-qgis-otb",
-    "title": "2  Übung 01",
-    "section": "2.3 Erste Schritte in QGIS & OTB",
-    "text": "2.3 Erste Schritte in QGIS & OTB\nIn diesem Kurs wird die Software QGIS verwendet.",
-=======
     "text": "2.1 QGIS & OTB Installation und Konfiguration\nIn der ersten Übung installieren wir die notewendigen Programme und Erweiterungen und konfigurieren diese für die spätere Verwendung. Es wird außerdem gezeigt, wie wir diese Einstellungen über die QGIS-Profile speichern und sichern können.",
     "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Übung 01 Erste Schritte in  QGIS</span>"
-    ]
-  },
-  {
-    "objectID": "uebung01.html#installation-von-qgis-und-otb",
-    "href": "uebung01.html#installation-von-qgis-und-otb",
-    "title": "2  Übung 01 QGIS & OTB Installation und Konfiguration",
-    "section": "",
-    "text": "Note\n\n\n\nIm PC-Pool der HAWK sind die notwendigen Programme bereits auf den Computern installiert. Die Installation ist also nur notwendig, wenn sie die Übungen auf einem eigenen Computer durchführen wollen. Die vorgestellten Programme funktionieren grundsätzlich unter Windows, Linux und MacOS Betriebssystemen. Für die Übungen wird aber nur auf Windows-Betriebssystemen getestet.",
-    "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Übung 01 QGIS & OTB Installation und Konfiguration</span>"
-    ]
-  },
-  {
-    "objectID": "uebung01.html#section",
-    "href": "uebung01.html#section",
-    "title": "2  Übung 01",
-    "section": "2.2 ",
-    "text": "2.2",
->>>>>>> ace7840b2b38cfa041ba8278688772de44916554
-    "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Übung 01</span>"
-    ]
-  },
-  {
-    "objectID": "uebung01.html#einrichtung-von-otb-in-qgis",
-    "href": "uebung01.html#einrichtung-von-otb-in-qgis",
-    "title": "2  Übung 01 QGIS & OTB Installation und Konfiguration",
-    "section": "2.3 Einrichtung von OTB in QGIS",
-    "text": "2.3 Einrichtung von OTB in QGIS\nDie OTB kann direkt über eine Kommandozeile verwendet werden oder -wie im Kurs- innerhalb von QGIS. Dazu steht ein Plugin zur Verfügung welches wie folgt installiert und konfiguriert werden muss:\n1.) Installation des Orfeo Toolbox Plugins in QGIS\n\nErweiterung → Erweiterungen verwalten und installieren Im Suchfenster OrfeoToolboxProvide das Plugin auswählen und installieren.\n\n2.) Konfiguration des OTB-Plugins\nNachdem das Plugin Installiert ist, muss es noch konfiguriert werden.Dazu müssen die Pfade zu der OTB Software eingetragen werden.\n\nStarten der Werkzeugkiste: Verarbeitung → Werkzeugkiste\nIn der Werkzeugkiste das Schraubenschlüsselsymbol (Optionen) wählen und dort unter Datenanbieter –&gt; OTB zwei Eintragungen vornehmen:\nOTB application folder: C:/OTB/lib/otb/applications\nOTB folder: C:/OTB\n\nNach korrekter Eingabe der Pfade und dem Schließen des Optionsmenüs sollte nach kurzer Zeit bei den Verarbeitungswerkzeugen die OTB-Werkzeuge angezeigt werden.\nWeitere Anleitungen zur Konfiguration des OTB-Plugins können sie hier finden:\nhttps://www.orfeo-toolbox.org/CookBook-9.1/QGISInterface.html",
-    "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Übung 01 QGIS & OTB Installation und Konfiguration</span>"
-    ]
-  },
-  {
-    "objectID": "uebung01.html#anlegen-eines-persönlichen-qgis-nutzerprofils",
-    "href": "uebung01.html#anlegen-eines-persönlichen-qgis-nutzerprofils",
-    "title": "2  Übung 01 QGIS & OTB Installation und Konfiguration",
-    "section": "2.2 Anlegen eines persönlichen QGIS-Nutzerprofils",
-    "text": "2.2 Anlegen eines persönlichen QGIS-Nutzerprofils\nQGIS kann auf die eigenen Bedürfnisse umfangreich angepasst werden. Dazu zählen z.B. folgende Einstellungen:\n\nSprache\nProjektionen und Koordinatensysteme\nPasswörter für Datenbankzugänge\nAnpassungen des Erscheinungsbildes und der dargestellten Werkzeuge\nInstallationen und Konfigurationen von Plugin\n\n\n\n\n\n\n\nNote\n\n\n\nDas Anlegen persönlicher Nutzerprofile geschieht in der Regel vollständig automatisch. Im PC-Pool werden diese Profile aber nicht zwischen den Rechnern synchronisiert. Außerdem werden die lokalen Nutzerdaten in unregelmäßigen Abständen gelöscht. Daher kann es für die Arbeit im PC-Pool sinnvoll sein, ein eigenes Profil anzulegen und in einem persönlichen Ordner zu sichern.\n\n\nQGIS speicher die Nutzerprofile automatisch lokalen im jeweiligen Nutzerordner C:\\Users\\???\\AppData\\Roaming\\QGIS\\QGIS3\\profiles\\. Standardmäßig gibt es in QGIS nur ein Benutzerprofil namens default. Es können aber beliebig viele neue angelegt werden.\n\nLegen sie ein neues Nutzerprofile mit ihrem Namen (z.B. mueller) an:\nEinstellungen → Nutzerprofile → Neues Profil anlegen\n\nWeitere Informationen zu den QGIS-Nutzerprofilen finden sie hier:\nhttps://docs.qgis.org/3.40/de/docs/user_manual/introduction/qgis_configuration.html#user-profiles",
-    "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Übung 01 QGIS & OTB Installation und Konfiguration</span>"
-    ]
-  },
-  {
-    "objectID": "uebung01.html#sichern-des-nutzerprofils",
-    "href": "uebung01.html#sichern-des-nutzerprofils",
-    "title": "2  Übung 01 QGIS & OTB Installation und Konfiguration",
-    "section": "2.4 Sichern des Nutzerprofils",
-    "text": "2.4 Sichern des Nutzerprofils\nNach dem nun die wichtigsten Einstellungen vorgenommen und im QGIS-Nutzerprofil hinterlegt wurden, ist es sinnvoll dieses für die spätere Verwendung zu sichern.\n\nSichern sie den Ordner mit ihrem Profil (C:\\Users\\???\\AppData\\Roaming\\QGIS\\QGIS3\\profiles\\???.) in ihr persönliches Laufwerk unter U:\n\nSollten sie im späteren Verlauf des Kurses ihr Profile wiederherstellen wollen, können sie diesen Ordner von U: wieder in den QGIS-Profil Ordner kopieren.",
-    "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Übung 01 QGIS & OTB Installation und Konfiguration</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Lerneinheit 01 Erste Schritte in  QGIS</span>"
     ]
   },
   {
     "objectID": "uebung01.html#qgis-otb-installation-und-konfiguration",
     "href": "uebung01.html#qgis-otb-installation-und-konfiguration",
-    "title": "2  Übung 01 Erste Schritte in QGIS",
+    "title": "2  Lerneinheit 01 Erste Schritte in QGIS",
     "section": "",
     "text": "2.1.1 Installation von QGIS und OTB\n\n\n\n\n\n\nNote\n\n\n\nIm PC-Pool der HAWK sind die notwendigen Programme bereits auf den Computern installiert. Die Installation ist also nur notwendig, wenn sie die Übungen auf einem eigenen Computer durchführen wollen. Die vorgestellten Programme funktionieren grundsätzlich unter Windows, Linux und MacOS Betriebssystemen. Für die Übungen wird aber nur auf Windows-Betriebssystemen getestet.\n\n\nIn diesem Kurs wird die Software QGIS in der Version 3.40.x verwendet. Sie können die Software hier herunterladen:\nhttps://qgis.org/downloads/QGIS-OSGeo4W-3.40.10-1.msi\nWeiter Hinweise zu den unterschiedlichen Installationsmöglichkeiten finden sie hier:\nhttps://docs.qgis.org/3.40/de/docs/user_manual/introduction/getting_started.html#installing-qgis\nNeben QGIS nutzen wir für de fernerkundlichen Auswertungen die open source Software Orfeo Toolbox V.9.1.1. welche hier heruntergeladen werden kann:\nhttps://www.orfeo-toolbox.org/download/\nWeiter Hinweise zu den unterschiedlichen Installationsmöglichkeiten finden sie hier:\nhttps://www.orfeo-toolbox.org/CookBook/Installation.html\n\n\n2.1.2 Anlegen eines persönlichen QGIS-Nutzerprofils\nQGIS kann auf die eigenen Bedürfnisse umfangreich angepasst werden. Dazu zählen z.B. folgende Einstellungen:\n\nSprache\nProjektionen und Koordinatensysteme\nPasswörter für Datenbankzugänge\nAnpassungen des Erscheinungsbildes und der dargestellten Werkzeuge\nInstallationen und Konfigurationen von Plugin\n\n\n\n\n\n\n\nNote\n\n\n\nDas Anlegen persönlicher Nutzerprofile geschieht in der Regel vollständig automatisch. Im PC-Pool werden diese Profile aber nicht zwischen den Rechnern synchronisiert. Außerdem werden die lokalen Nutzerdaten in unregelmäßigen Abständen gelöscht. Daher kann es für die Arbeit im PC-Pool sinnvoll sein, ein eigenes Profil anzulegen und in einem persönlichen Ordner zu sichern.\n\n\nQGIS speicher die Nutzerprofile automatisch lokalen im jeweiligen Nutzerordner C:\\Users\\???\\AppData\\Roaming\\QGIS\\QGIS3\\profiles\\. Standardmäßig gibt es in QGIS nur ein Benutzerprofil namens default. Es können aber beliebig viele neue angelegt werden.\n\nLegen sie ein neues Nutzerprofile mit ihrem Namen (z.B. mueller) an:\nEinstellungen → Nutzerprofile → Neues Profil anlegen\n\nWeitere Informationen zu den QGIS-Nutzerprofilen finden sie hier:\nhttps://docs.qgis.org/3.40/de/docs/user_manual/introduction/qgis_configuration.html#user-profiles\n\n\n2.1.3 Einrichtung von OTB in QGIS\nDie OTB kann direkt über eine Kommandozeile verwendet werden oder -wie im Kurs- innerhalb von QGIS. Dazu steht ein Plugin zur Verfügung welches wie folgt installiert und konfiguriert werden muss:\n1.) Installation des Orfeo Toolbox Plugins in QGIS\n\nErweiterung → Erweiterungen verwalten und installieren Im Suchfenster OrfeoToolboxProvide das Plugin auswählen und installieren.\n\n2.) Konfiguration des OTB-Plugins\nNachdem das Plugin Installiert ist, muss es noch konfiguriert werden.Dazu müssen die Pfade zu der OTB Software eingetragen werden.\n\nStarten der Werkzeugkiste: Verarbeitung → Werkzeugkiste\nIn der Werkzeugkiste das Schraubenschlüsselsymbol (Optionen) wählen und dort unter Datenanbieter –&gt; OTB zwei Eintragungen vornehmen:\nOTB application folder: C:/OTB/lib/otb/applications\nOTB folder: C:/OTB\n\nNach korrekter Eingabe der Pfade und dem Schließen des Optionsmenüs sollte nach kurzer Zeit bei den Verarbeitungswerkzeugen die OTB-Werkzeuge angezeigt werden.\nWeitere Anleitungen zur Konfiguration des OTB-Plugins können sie hier finden:\nhttps://www.orfeo-toolbox.org/CookBook-9.1/QGISInterface.html\n\n\n2.1.4 Sichern des Nutzerprofils\nNach dem nun die wichtigsten Einstellungen vorgenommen und im QGIS-Nutzerprofil hinterlegt wurden, ist es sinnvoll dieses für die spätere Verwendung zu sichern.\n\nSichern sie den Ordner mit ihrem Profil (C:\\Users\\???\\AppData\\Roaming\\QGIS\\QGIS3\\profiles\\???.) in ihr persönliches Laufwerk unter U:\n\nSollten sie im späteren Verlauf des Kurses ihr Profile wiederherstellen wollen, können sie diesen Ordner von U: wieder in den QGIS-Profil Ordner kopieren.",
     "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Übung 01 Erste Schritte in  QGIS</span>"
-    ]
-  },
-  {
-    "objectID": "uebung01.html#anlegen-eines-neuen-projektes",
-    "href": "uebung01.html#anlegen-eines-neuen-projektes",
-    "title": "2  Übung 01 Erste Schritte in QGIS",
-    "section": "3.1 Anlegen eines neuen Projektes",
-    "text": "3.1 Anlegen eines neuen Projektes",
-    "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Übung 01 Erste Schritte in  QGIS</span>"
-    ]
-  },
-  {
-    "objectID": "uebung01.html#anlegen-einer-ordnerstruktur",
-    "href": "uebung01.html#anlegen-einer-ordnerstruktur",
-    "title": "2  Übung 01 Erste Schritte in QGIS",
-    "section": "3.2 Anlegen einer Ordnerstruktur",
-    "text": "3.2 Anlegen einer Ordnerstruktur",
-    "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Übung 01 Erste Schritte in  QGIS</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Lerneinheit 01 Erste Schritte in  QGIS</span>"
     ]
   },
   {
     "objectID": "uebung01.html#projekt--und-datenmanagement-mit-qgis",
     "href": "uebung01.html#projekt--und-datenmanagement-mit-qgis",
-    "title": "2  Übung 01 Erste Schritte in QGIS",
+    "title": "2  Lerneinheit 01 Erste Schritte in QGIS",
     "section": "2.2 Projekt- und Datenmanagement mit QGIS",
-    "text": "2.2 Projekt- und Datenmanagement mit QGIS\n\n2.2.1 Anlegen eines neuen Projektes\n\n\n2.2.2 Anlegen einer Ordnerstruktur",
+    "text": "2.2 Projekt- und Datenmanagement mit QGIS\n\n2.2.1 Anlegen eines neuen QGIS-Projektes\nQGIS bietet die Möglichkeiten Projekte anzulegen und zu speichern. Dabei werden sämtliche Einstellungen und Darstellungen (z.B. Kartenlayouts, Symbologien) etc. gespeichert. Das ist vorallem sinnvoll wenn man seine Arbeit unterbrechen und zu einem späteren Zeitpunkt fortsetzen möchte. Die Projekte werden in einer Datei mit der Endung *.qgz gespeiechert.\n\n\n\n\n\n\nWarning\n\n\n\nDie Projektdatei *.qgz enthält nicht die Geodaten die in dem Projekt geladen sind. Es werden lediglich die Pfade zu den Datein mit den Geodaten gespeichert. Beim Laden des Projektes werden die Geodaten also an den hinterlegten Pfaden gesucht und geladen. Sollten diese nicht mehr an dem Ort gespeichert sein, wir QGIS einen Fehler melden.\n\n\n\n\n2.2.2 Anlegen einer Ordnerstruktur\nEine gute Ordnerstruktur ist für das Datenmanagement sehr hilfreich. Daher wird empfohlen für jedes Projekt / jede Lerneinheit eine eigene Ordnerstrutur nach einheitlichem Muster anzulegen. Die Strutktur könnte so aussehen:\nprojekt_xy/\n├── daten/\n│   └── raster_1.tif\n|   └── raster_2.tif\n├── skripte/\n│   └── analyse.R\n├── karten/\n│   └── baumartenkarte.pdf\n└── projekt_XY.qgz\nDiese Ordnerstruktur kann natürlich an die eigenen Präferenzen und die Notwendigkeiten im Projekt angepasst werden. Weitere wesentlicher Vorteil einer solchen Ordnerstrutkrur ist, dass die Ordner im ganzen verschoben, kopiert oder mit anderen geteilt werden können. Dies ist Möglich, da die Projektdatei die relativen Pfade, ausgehend von dem Ordner in dem die *.qgz Datei liegt speichert. Also z.B. daten/raster_1.tif.",
     "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Übung 01 Erste Schritte in  QGIS</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Lerneinheit 01 Erste Schritte in  QGIS</span>"
+    ]
+  },
+  {
+    "objectID": "uebung01.html#aufgabenstellung",
+    "href": "uebung01.html#aufgabenstellung",
+    "title": "2  Lerneinheit 01 Erste Schritte in QGIS",
+    "section": "3.1 Aufgabenstellung",
+    "text": "3.1 Aufgabenstellung\n1.) Überprüfen Sie die Installation von QGIS und OTB. Überprüfen sie dabei auch welche Versionen installiert sind.\n2.) Starten Sie QGIS und legen Sie ein neues Nutzerprofil mit ihrem Namen an 3.) Installieren Sie das OTB-Plugin und hinterlegen Sie die korrekten Pfade für die OTB-Programmmbibliotheken. Beenden Sie QGIS anschließend. 4.) Sichern sie ihr Nutzerprofil an einem permanenten Speicherort z.B. U:, oder auf einem USB-Stick. 5.) Legen Sie eine Ordnerstruktur für das Projekt uebung01 an. 6.) Starten Sie QGIS und speichern Sie das Projekt in der ORdnerstruktur unter uebung01.qgz",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Lerneinheit 01 Erste Schritte in  QGIS</span>"
     ]
   }
 ]

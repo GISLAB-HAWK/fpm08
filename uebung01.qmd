@@ -1,4 +1,4 @@
-# Übung 01 Erste Schritte in  QGIS
+# Lerneinheit 01 Erste Schritte in  QGIS
 ## QGIS & OTB Installation und Konfiguration
 
 In der ersten Übung installieren wir die notewendigen Programme und 
@@ -125,23 +125,59 @@ Sollten sie im späteren Verlauf des Kurses ihr Profile wiederherstellen wollen,
 können sie diesen Ordner von `U:` wieder in den QGIS-Profil Ordner kopieren. 
 
 ## Projekt- und Datenmanagement mit QGIS
+### Anlegen eines neuen QGIS-Projektes
 
-### Anlegen eines neuen Projektes
-### Anlegen einer Ordnerstruktur<<<<<<< HEAD
+QGIS bietet die Möglichkeiten Projekte anzulegen und zu speichern. Dabei werden
+sämtliche Einstellungen und Darstellungen (z.B. Kartenlayouts, Symbologien) etc.
+gespeichert. Das ist vorallem sinnvoll wenn man seine Arbeit unterbrechen und zu
+einem späteren Zeitpunkt fortsetzen möchte. Die Projekte werden in einer Datei 
+mit der Endung *.qgz gespeiechert. 
+
+::: {.callout-warning}
+
+Die Projektdatei *.qgz enthält nicht die Geodaten die in dem Projekt geladen 
+sind. Es werden lediglich die Pfade zu den Datein mit den Geodaten gespeichert. 
+Beim Laden des Projektes werden die Geodaten also an den hinterlegten Pfaden
+gesucht und geladen. Sollten diese nicht mehr an dem Ort gespeichert sein, wir
+QGIS einen Fehler melden. 
+
+:::
+
+### Anlegen einer Ordnerstruktur
+
+Eine gute Ordnerstruktur ist für das Datenmanagement sehr hilfreich. Daher wird
+empfohlen für jedes Projekt / jede Lerneinheit eine eigene Ordnerstrutur nach
+einheitlichem Muster anzulegen. Die Strutktur könnte so aussehen:
+
+```plaintext
+projekt_xy/
+├── daten/
+│   └── raster_1.tif
+|   └── raster_2.tif
+├── skripte/
+│   └── analyse.R
+├── karten/
+│   └── baumartenkarte.pdf
+└── projekt_XY.qgz
+```
+Diese Ordnerstruktur kann natürlich an die eigenen Präferenzen und die 
+Notwendigkeiten im Projekt angepasst werden. Weitere wesentlicher Vorteil einer
+solchen Ordnerstrutkrur ist, dass die Ordner im ganzen verschoben, kopiert oder
+mit anderen geteilt werden können. Dies ist Möglich, da die Projektdatei die
+relativen Pfade, ausgehend von dem Ordner in dem die *.qgz Datei liegt speichert.
+Also z.B. daten/raster_1.tif. 
+
 # Übung 01
-## Übersicht
-1.) Installation von QGIS/OTB
-2.) Erstellen, Sichern und Wiederherstellen eigener QGIS-Profile
-3.) Anlegen von QGIS-Projekten
-4.) Strukturierte Ablagen von Projekten und Daten der Übungen
+## Aufgabenstellung
 
-## Installation von QGIS/OTB
-In diesem Kurs arbeiten wir mit der open-source GIS Software "QGIS" in der 
-Version 3.40. LTR.
+1.) Überprüfen Sie die Installation von QGIS und OTB. Überprüfen sie dabei auch
+welche Versionen installiert sind. 
 
-## Erste Schritte in QGIS & OTB
-
-In diesem Kurs wird die Software QGIS verwendet.
-
-
-{{< video F:/Temp/2025-09-06 17-56-17.mp4>}}
+2.) Starten Sie QGIS und legen Sie ein neues Nutzerprofil mit ihrem Namen an
+3.) Installieren Sie das OTB-Plugin und hinterlegen Sie die korrekten Pfade für
+die OTB-Programmmbibliotheken. Beenden Sie QGIS anschließend.
+4.) Sichern sie ihr Nutzerprofil an einem permanenten Speicherort z.B. U:\, 
+oder auf einem USB-Stick.
+5.) Legen Sie eine Ordnerstruktur für das Projekt uebung01 an. 
+6.) Starten Sie QGIS und speichern Sie das Projekt in der ORdnerstruktur unter
+uebung01.qgz
