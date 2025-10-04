@@ -10,7 +10,7 @@ book:
   date: "6.9.2025"
   chapters:
     - index.qmd
-    - einleitung.qmd
+    - vorwort.qmd
     - uebung01.qmd
     - references.qmd
 
