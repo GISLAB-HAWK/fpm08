@@ -187,8 +187,7 @@ ul.task-list li input[type="checkbox"] {
 <ul>
 <li>QGIS installieren können bzw.. überprüfen können welche Version installiert ist.</li>
 <li>die Funktionsweise von Nutzerprofilen verstehen und anwenden können</li>
-<li>eine sinnvolle Ordnerstruktur zur Verwaltung von QGIS-Projekten kennen und</li>
-<li>anlegen können</li>
+<li>eine sinnvolle Ordnerstruktur zur Verwaltung von QGIS-Projekten kennen und anlegen können</li>
 <li>Projekte in QGIS anlegen können</li>
 </ul>
 <p><strong>Aufgabenstellung</strong></p>
@@ -222,7 +221,7 @@ Note
 <p><a href="https://qgis.org/downloads/QGIS-OSGeo4W-3.40.10-1.msi" class="uri">https://qgis.org/downloads/QGIS-OSGeo4W-3.40.10-1.msi</a></p>
 <p>Weiter Hinweise zu den unterschiedlichen Installationsmöglichkeiten finden sie hier:</p>
 <p><a href="https://docs.qgis.org/3.40/de/docs/user_manual/introduction/getting_started.html#installing-qgis" class="uri">https://docs.qgis.org/3.40/de/docs/user_manual/introduction/getting_started.html#installing-qgis</a></p>
-<p>Neben QGIS nutzen wir für de fernerkundlichen Auswertungen die open source Software <a href="https://www.orfeo-toolbox.org/">Orfeo Toolbox</a> V.9.1.1. welche hier heruntergeladen werden kann:</p>
+<p>Neben QGIS nutzen wir für die fernerkundlichen Auswertungen die open-source Software <a href="https://www.orfeo-toolbox.org/">Orfeo Toolbox</a> V.9.1.1. welche hier heruntergeladen werden kann:</p>
 <p><a href="https://www.orfeo-toolbox.org/download/" class="uri">https://www.orfeo-toolbox.org/download/</a></p>
 <p>Weiter Hinweise zu den unterschiedlichen Installationsmöglichkeiten finden sie hier:</p>
 <p><a href="https://www.orfeo-toolbox.org/CookBook/Installation.html" class="uri">https://www.orfeo-toolbox.org/CookBook/Installation.html</a></p>
@@ -235,7 +234,7 @@ Note
 <li>Projektionen und Koordinatensysteme</li>
 <li>Passwörter für Datenbankzugänge</li>
 <li>Anpassungen des Erscheinungsbildes und der dargestellten Werkzeuge</li>
-<li>Installationen und Konfigurationen von Plugin</li>
+<li>Installationen und Konfigurationen von Plugins</li>
 </ul>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -247,10 +246,10 @@ Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Das Anlegen persönlicher Nutzerprofile geschieht in der Regel vollständig automatisch. Im PC-Pool werden diese Profile aber nicht zwischen den Rechnern synchronisiert. Außerdem werden die lokalen Nutzerdaten in unregelmäßigen Abständen gelöscht. Daher kann es für die Arbeit im PC-Pool sinnvoll sein, ein eigenes Profil anzulegen und in einem persönlichen Ordner zu sichern.</p>
+<p>Das Anlegen persönlicher Nutzerprofile geschieht in der Regel vollständig automatisch. Im PC-Pool werden diese Profile aber nicht zwischen den PC-Arbeitsplätzen synchronisiert. Außerdem werden die lokalen Nutzerdaten in unregelmäßigen Abständen gelöscht. Daher kann es für die Arbeit im PC-Pool sinnvoll sein, ein eigenes Profil anzulegen und in einem persönlichen Ordner zu sichern.</p>
 </div>
 </div>
-<p>QGIS speicher die Nutzerprofile automatisch lokalen im jeweiligen Nutzerordner <code>C:\Users\???\AppData\Roaming\QGIS\QGIS3\profiles\</code>. Standardmäßig gibt es in QGIS nur ein Benutzerprofil namens <em>default</em>. Es können aber beliebig viele neue angelegt werden.</p>
+<p>QGIS speicher die Nutzerprofile automatisch lokalen im jeweiligen Nutzerordner <code>C:\Users\???\AppData\Roaming\QGIS\QGIS3\profiles\</code>. Standardmäßig gibt es in QGIS nur das Benutzerprofil <em>default</em>. Es können aber beliebig viele weitere angelegt werden.</p>
 <div style="border: 2px solid #afca0b; background-color: #fafafa; padding: 8px;">
 <p>Legen sie ein neues Nutzerprofile mit ihrem Namen (z.B. mueller) an:</p>
 <p><code>Einstellungen</code> → <code>Nutzerprofile</code> → <code>Neues Profil anlegen</code></p>
@@ -260,20 +259,20 @@ Note
 </section>
 <section id="installation-einrichtung-von-otb-in-qgis" class="level3" data-number="2.2.3">
 <h3 data-number="2.2.3" class="anchored" data-anchor-id="installation-einrichtung-von-otb-in-qgis"><span class="header-section-number">2.2.3</span> Installation &amp; Einrichtung von OTB in QGIS</h3>
-<p>Die OTB kann direkt über eine Kommandozeile verwendet werden oder -wie im Kurs- innerhalb von QGIS. Dazu steht ein Plugin zur Verfügung welches wie folgt installiert und konfiguriert werden muss:</p>
+<p>Die OTB-Software kann direkt über eine Kommandozeile verwendet werden oder -wie im Kurs- innerhalb von QGIS. Dazu steht ein Plugin zur Verfügung, welches wie folgt installiert und konfiguriert werden muss:</p>
 <p>1.) Installation des Orfeo Toolbox Plugins in QGIS</p>
 <div style="border: 2px solid #afca0b; background-color: #fafafa; padding: 8px;">
-<p><code>Erweiterung</code> → <code>Erweiterungen verwalten und installieren</code> Im Suchfenster <code>OrfeoToolboxProvide</code> das Plugin auswählen und installieren.</p>
+<p><code>Erweiterung</code> → <code>Erweiterungen verwalten und installieren</code> Im Suchfenster <code>OrfeoToolboxProvider</code> das Plugin auswählen und installieren.</p>
 </div>
 <p>2.) Konfiguration des OTB-Plugins</p>
-<p>Nachdem das Plugin Installiert ist, muss es noch konfiguriert werden.Dazu müssen die Pfade zu der OTB Software eingetragen werden.</p>
+<p>Nachdem das Plugin Installiert ist, muss es noch konfiguriert werden. Dazu müssen die Pfade zu der OTB-Software eingetragen werden.</p>
 <div style="border: 2px solid #afca0b; background-color: #fafafa; padding: 8px;">
 <p><strong>Starten der Werkzeugkiste</strong>: <code>Verarbeitung</code> → <code>Werkzeugkiste</code></p>
 <p>In der Werkzeugkiste das Schraubenschlüsselsymbol (Optionen) wählen und dort unter <code>Datenanbieter</code> –&gt; <code>OTB</code> zwei Eintragungen vornehmen:</p>
 <p><strong>OTB application folder:</strong> <code>C:/OTB/lib/otb/applications</code></p>
 <p><strong>OTB folder:</strong> <code>C:/OTB</code></p>
 </div>
-<p>Nach korrekter Eingabe der Pfade und dem Schließen des Optionsmenüs sollte nach kurzer Zeit bei den Verarbeitungswerkzeugen die OTB-Werkzeuge angezeigt werden.</p>
+<p>Nach korrekter Eingabe der Pfade und dem Schließen des Optionsmenüs sollte nach kurzer Zeit bei den Verarbeitungswerkzeugen in der Werkzeugkiste die OTB-Werkzeuge angezeigt werden.</p>
 <p>Weitere Anleitungen zur Konfiguration des OTB-Plugins können sie hier finden:</p>
 <p><a href="https://www.orfeo-toolbox.org/CookBook-9.1/QGISInterface.html" class="uri">https://www.orfeo-toolbox.org/CookBook-9.1/QGISInterface.html</a></p>
 </section>
@@ -300,7 +299,7 @@ Note
 ├── karten/
 │   └── baumartenkarte.pdf
 └── projekt_XY.qgz</code></pre>
-<p>Diese Ordnerstruktur kann natürlich an die eigenen Präferenzen und die Notwendigkeiten im Projekt angepasst werden. Weitere wesentlicher Vorteil einer solchen Ordnerstruktur ist, dass die Ordner im ganzen verschoben, kopiert oder mit anderen geteilt werden können. Dies ist möglich, da die Projektdatei die relativen Pfade, ausgehend von dem Ordner in dem die <em>*.qgz</em> Datei liegt speichert. Also z.B. <em>daten/raster_1.tif</em></p>
+<p>Diese Ordnerstruktur kann an die eigenen Präferenzen und die Notwendigkeiten im Projekt angepasst werden. Weitere wesentlicher Vorteil einer solchen Ordnerstruktur ist, dass die Ordner im ganzen verschoben, kopiert oder mit anderen geteilt werden können. Dies ist möglich, da die Projektdatei die relativen Pfade, ausgehend von dem Ordner in dem die <em>*.qgz</em> Datei liegt speichert. Also z.B. ./<em>daten/raster_1.tif</em></p>
 <div class="callout callout-style-default callout-caution callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -319,14 +318,14 @@ Caution
 </section>
 <section id="anlegen-eines-neuen-qgis-projektes" class="level3" data-number="2.3.2">
 <h3 data-number="2.3.2" class="anchored" data-anchor-id="anlegen-eines-neuen-qgis-projektes"><span class="header-section-number">2.3.2</span> Anlegen eines neuen QGIS-Projektes</h3>
-<p>In QGIS können einzelne Projekte z.B. eine Lehreinheit als Projekte angelegt und gespeichert werden. Dabei werden sämtliche Einstellungen und Darstellungen (z.B. Kartenlayouts, Symbologien), Bearbeitungsstand und vieles mehr gespeichert. Das ist vor allem sinnvoll wenn man seine Arbeit unterbrechen und zu einem späteren Zeitpunkt fortsetzen möchte. Die Projekte werden in einer Datei mit der Endung *.qgz gespeichert.</p>
-<div class="callout callout-style-default callout-caution callout-titled">
+<p>In QGIS können einzelne Projekte z.B. eine Lehreinheit als Projekte angelegt und gespeichert werden. Dabei werden sämtliche Einstellungen und Darstellungen (z.B. Kartenlayouts, Symbologien, Layer), Bearbeitungsstand und vieles mehr gespeichert. Das ist vor allem sinnvoll wenn man seine Arbeit unterbrechen und zu einem späteren Zeitpunkt fortsetzen möchte. Die Projekte werden in einer Datei mit der Endung *.qgz gespeichert.</p>
+<div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Caution
+Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
