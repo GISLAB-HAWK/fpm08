@@ -1,9 +1,15 @@
-# Vorwort {.unnumbered}
+---
+title: 'Forstliche Fernerkundung'
+author: 'Paul Magdon'
+date: 2025-10-4
+title-block-banner: true
+affiliation-title: Fakutält für Ressourcen Management, HAWK , Göttingen
+description: "Übungsaufgaben"
+github-repo: "geocompx/geocompr"
+---
 
-Das Modul FPM08 "Forstliche Fernerkundung" ist eine neues Pflichtmodul im B.Sc.
-Studiengang "Forstwissenschaften" an der HAWK in Göttingen. Neben eine Vorlesung
-werden in dem Modul praktische Übungen am PC mit der Software QGIS und OTB
-durchgeführt. Die Inhalte dieser Übungen werden in diesem Repositorium abgelegt,
-verwaltet und aktualisiert. 
 
-Bei Frage und Anregungen zu den Übungen melden sie sich gerne bei Paul Magdon
+# Vorwort {-}
+
+Hier finden sie die Materialien für das Modul "Einführung in die forstliche 
+Fernerkundung" des B.Sc. Studiengangs Forstwirtschaft an der HAWK in Göttingen. 

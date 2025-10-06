@@ -14,5 +14,11 @@ LaTeX: XeLaTeX
 
 MarkdownWrap: Column
 MarkdownWrapAtColumn: 90
+<<<<<<< HEAD
+=======
+MarkdownReferences: Document
+>>>>>>> c2df50c14506e591e6dcdcd81b708ee6760be743
 
 SpellingDictionary: de_DE_neu
+
+ProjectName: FPM08_Übungen

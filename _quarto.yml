@@ -1,16 +1,20 @@
 project:
   type: book
+  output-dir: _book
 
 execute:
   freeze: auto
   
 book:
-  title: "Einführung in die forstliche Fernerkundung"
-  author: "Paul Magdon"
-  date: "6.9.2025"
+  title: "Forstliche Fernerkundung"
+  page-footer:
+   left: |
+      Übungaufgaben
+   right: |
+      This book was built with <a href="https://quarto.org/">Quarto</a>.
+  repo-url: https://github.com/GISLAB-HAWK/fpm08
   chapters:
     - index.qmd
-    - einleitung.qmd
     - uebung01.qmd
     - references.qmd
 
