@@ -6,7 +6,7 @@ Die erste Lerneinheit dient der Einrichtung einer Arbeitsumgebung und der Wieder
 wesentlichen QGIS-Funktionen. Wir prüfen die Installation der notwendigen Programme und
 konfigurieren diese für die spätere Verwendung. Es wird außerdem gezeigt, wie wir diese
 Einstellungen über die QGIS-Profile speichern und sichern können. Außerdem wird
-vorgestellt wir QGIS-Erweiterungen installiert werden können.
+vorgestellt wie QGIS-Erweiterungen installiert werden können.
 
 **Lernziele**
 
