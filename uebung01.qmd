@@ -5,8 +5,8 @@
 Die erste Lerneinheit dient der Einrichtung einer Arbeitsumgebung und der Wiederholung der
 wesentlichen QGIS-Funktionen. Wir prüfen die Installation der notwendigen Programme und
 konfigurieren diese für die spätere Verwendung. Es wird außerdem gezeigt, wie wir diese
-Einstellungen über die QGIS-Profile speichern und sichern können. Außerdem wird
-vorgestellt wie QGIS-Erweiterungen installiert werden können.
+Einstellungen über die QGIS-Profile speichern und sichern können. Außerdem wird vorgestellt wie
+QGIS-Erweiterungen installiert werden können.
 
 **Lernziele**
 
@@ -14,15 +14,14 @@ Die Studierenden sollen:
 
 -   QGIS installieren können bzw.. überprüfen können welche Version installiert ist.
 -   die Funktionsweise von Nutzerprofilen verstehen und anwenden können
--   eine sinnvolle Ordnerstruktur zur Verwaltung von QGIS-Projekten kennen und
--   anlegen können
+-   eine sinnvolle Ordnerstruktur zur Verwaltung von QGIS-Projekten kennen und anlegen können
 -   Projekte in QGIS anlegen können
 
 **Aufgabenstellung**
 
 1.  Überprüfen sie die Installation von QGIS und OTB.
 
-2.   Legen sie ein neues Nutzerprofil mit ihrem Namen an.
+2.  Legen sie ein neues Nutzerprofil mit ihrem Namen an.
 
 3.  Installieren sie das OTB-Plugin und hinterlegen sie die korrekten Pfade für die
     OTB-Programmbibliotheken.
@@ -38,15 +37,14 @@ Die Studierenden sollen:
 ### Installation von QGIS und OTB
 
 ::: callout-note
-Im PC-Pool der HAWK sind die notwendigen Programme bereits auf den Computern installiert.
-Die Installation ist also nur notwendig, wenn sie die Übungen auf einem eigenen Computer
-durchführen wollen. Die vorgestellten Programme funktionieren grundsätzlich unter Windows,
-Linux und MacOS Betriebssystemen. Für die Übungen wird aber nur auf
-Windows-Betriebssystemen getestet.
+Im PC-Pool der HAWK sind die notwendigen Programme bereits auf den Computern installiert. Die
+Installation ist also nur notwendig, wenn sie die Übungen auf einem eigenen Computer durchführen
+wollen. Die vorgestellten Programme funktionieren grundsätzlich unter Windows, Linux und MacOS
+Betriebssystemen. Für die Übungen wird aber nur auf Windows-Betriebssystemen getestet.
 :::
 
-In diesem Kurs wird die Software QGIS in der Version 3.40.x verwendet. Sie können die
-Software hier herunterladen:
+In diesem Kurs wird die Software QGIS in der Version 3.40.x verwendet. Sie können die Software hier
+herunterladen:
 
 <https://qgis.org/downloads/QGIS-OSGeo4W-3.40.10-1.msi>
 
@@ -54,7 +52,7 @@ Weiter Hinweise zu den unterschiedlichen Installationsmöglichkeiten finden sie 
 
 <https://docs.qgis.org/3.40/de/docs/user_manual/introduction/getting_started.html#installing-qgis>
 
-Neben QGIS nutzen wir für de fernerkundlichen Auswertungen die open source Software [Orfeo
+Neben QGIS nutzen wir für die fernerkundlichen Auswertungen die open-source Software [Orfeo
 Toolbox](https://www.orfeo-toolbox.org/) V.9.1.1. welche hier heruntergeladen werden kann:
 
 <https://www.orfeo-toolbox.org/download/>
@@ -65,26 +63,25 @@ Weiter Hinweise zu den unterschiedlichen Installationsmöglichkeiten finden sie 
 
 ### Anlegen eines persönlichen QGIS-Nutzerprofils
 
-QGIS kann auf die eigenen Bedürfnisse umfangreich angepasst werden. Dazu zählen z.B.
-folgende Einstellungen:
+QGIS kann auf die eigenen Bedürfnisse umfangreich angepasst werden. Dazu zählen z.B. folgende
+Einstellungen:
 
 -   Sprache
 -   Projektionen und Koordinatensysteme
 -   Passwörter für Datenbankzugänge
 -   Anpassungen des Erscheinungsbildes und der dargestellten Werkzeuge
--   Installationen und Konfigurationen von Plugin
+-   Installationen und Konfigurationen von Plugins
 
 ::: callout-note
-Das Anlegen persönlicher Nutzerprofile geschieht in der Regel vollständig automatisch. Im
-PC-Pool werden diese Profile aber nicht zwischen den Rechnern synchronisiert. Außerdem
-werden die lokalen Nutzerdaten in unregelmäßigen Abständen gelöscht. Daher kann es für die
-Arbeit im PC-Pool sinnvoll sein, ein eigenes Profil anzulegen und in einem persönlichen
-Ordner zu sichern.
+Das Anlegen persönlicher Nutzerprofile geschieht in der Regel vollständig automatisch. Im PC-Pool
+werden diese Profile aber nicht zwischen den PC-Arbeitsplätzen synchronisiert. Außerdem werden die
+lokalen Nutzerdaten in unregelmäßigen Abständen gelöscht. Daher kann es für die Arbeit im PC-Pool
+sinnvoll sein, ein eigenes Profil anzulegen und in einem persönlichen Ordner zu sichern.
 :::
 
 QGIS speicher die Nutzerprofile automatisch lokalen im jeweiligen Nutzerordner
-`C:\Users\???\AppData\Roaming\QGIS\QGIS3\profiles\`. Standardmäßig gibt es in QGIS nur ein
-Benutzerprofil namens *default*. Es können aber beliebig viele neue angelegt werden.
+`C:\Users\???\AppData\Roaming\QGIS\QGIS3\profiles\`. Standardmäßig gibt es in QGIS nur das
+Benutzerprofil *default*. Es können aber beliebig viele weitere angelegt werden.
 
 ::: {style="border: 2px solid #afca0b; background-color: #fafafa; padding: 8px;"}
 Legen sie ein neues Nutzerprofile mit ihrem Namen (z.B. mueller) an:
@@ -98,35 +95,35 @@ Weitere Informationen zu den QGIS-Nutzerprofilen finden sie hier:
 
 ### Installation & Einrichtung von OTB in QGIS
 
-Die OTB kann direkt über eine Kommandozeile verwendet werden oder -wie im Kurs- innerhalb
-von QGIS. Dazu steht ein Plugin zur Verfügung welches wie folgt installiert und
-konfiguriert werden muss:
+Die OTB-Software kann direkt über eine Kommandozeile verwendet werden oder -wie im Kurs- innerhalb
+von QGIS. Dazu steht ein Plugin zur Verfügung, welches wie folgt installiert und konfiguriert werden
+muss:
 
 1.) Installation des Orfeo Toolbox Plugins in QGIS
 
 ::: {style="border: 2px solid #afca0b; background-color: #fafafa; padding: 8px;"}
-`Erweiterung` → `Erweiterungen verwalten und installieren` Im Suchfenster
-`OrfeoToolboxProvide` das Plugin auswählen und installieren.
+`Erweiterung` → `Erweiterungen verwalten und installieren` Im Suchfenster `OrfeoToolboxProvider` das
+Plugin auswählen und installieren.
 :::
 
 2.) Konfiguration des OTB-Plugins
 
-Nachdem das Plugin Installiert ist, muss es noch konfiguriert werden.Dazu müssen die Pfade
-zu der OTB Software eingetragen werden.
+Nachdem das Plugin Installiert ist, muss es noch konfiguriert werden. Dazu müssen die Pfade zu der
+OTB-Software eingetragen werden.
 
 ::: {style="border: 2px solid #afca0b; background-color: #fafafa; padding: 8px;"}
 **Starten der Werkzeugkiste**: `Verarbeitung` → `Werkzeugkiste`
 
-In der Werkzeugkiste das Schraubenschlüsselsymbol (Optionen) wählen und dort unter
-`Datenanbieter` --\> `OTB` zwei Eintragungen vornehmen:
+In der Werkzeugkiste das Schraubenschlüsselsymbol (Optionen) wählen und dort unter `Datenanbieter`
+--\> `OTB` zwei Eintragungen vornehmen:
 
 **OTB application folder:** `C:/OTB/lib/otb/applications`
 
 **OTB folder:** `C:/OTB`
 :::
 
-Nach korrekter Eingabe der Pfade und dem Schließen des Optionsmenüs sollte nach kurzer
-Zeit bei den Verarbeitungswerkzeugen die OTB-Werkzeuge angezeigt werden.
+Nach korrekter Eingabe der Pfade und dem Schließen des Optionsmenüs sollte nach kurzer Zeit bei den
+Verarbeitungswerkzeugen in der Werkzeugkiste die OTB-Werkzeuge angezeigt werden.
 
 Weitere Anleitungen zur Konfiguration des OTB-Plugins können sie hier finden:
 
@@ -134,25 +131,24 @@ Weitere Anleitungen zur Konfiguration des OTB-Plugins können sie hier finden:
 
 ### Sichern des persönlichen Nutzerprofils
 
-Nach dem nun die wichtigsten Einstellungen vorgenommen und im QGIS-Nutzerprofil hinterlegt
-wurden, ist es sinnvoll dieses für die spätere Verwendung zu sichern.
+Nach dem nun die wichtigsten Einstellungen vorgenommen und im QGIS-Nutzerprofil hinterlegt wurden,
+ist es sinnvoll dieses für die spätere Verwendung zu sichern.
 
 ::: {style="border: 2px solid #afca0b; background-color: #fafafa; padding: 8px;"}
-Sichern sie den Ordner mit ihrem Profil
-(`C:\Users\???\AppData\Roaming\QGIS\QGIS3\profiles\???`.) in ihr persönliches Laufwerk
-unter `U:`
+Sichern sie den Ordner mit ihrem Profil (`C:\Users\???\AppData\Roaming\QGIS\QGIS3\profiles\???`.) in
+ihr persönliches Laufwerk unter `U:`
 :::
 
-Sollten sie im späteren Verlauf des Kurses ihr Profile wiederherstellen wollen, können sie
-diesen Ordner von `U:` wieder in den QGIS-Profil Ordner kopieren.
+Sollten sie im späteren Verlauf des Kurses ihr Profile wiederherstellen wollen, können sie diesen
+Ordner von `U:` wieder in den QGIS-Profil Ordner kopieren.
 
 ## Projekt- und Datenmanagement mit QGIS
 
 ### Anlegen einer Ordnerstruktur
 
-Eine gute Ordnerstruktur ist für das Datenmanagement sehr hilfreich. Daher wird empfohlen
-für jedes Projekt / jede Lerneinheit eine eigene Ordnerstruktur nach einheitlichem Muster
-anzulegen. Die Struktur könnte so aussehen:
+Eine gute Ordnerstruktur ist für das Datenmanagement sehr hilfreich. Daher wird empfohlen für jedes
+Projekt / jede Lerneinheit eine eigene Ordnerstruktur nach einheitlichem Muster anzulegen. Die
+Struktur könnte so aussehen:
 
 ``` plaintext
 projekt_xy/
@@ -166,16 +162,16 @@ projekt_xy/
 └── projekt_XY.qgz
 ```
 
-Diese Ordnerstruktur kann natürlich an die eigenen Präferenzen und die Notwendigkeiten im
-Projekt angepasst werden. Weitere wesentlicher Vorteil einer solchen Ordnerstruktur ist,
-dass die Ordner im ganzen verschoben, kopiert oder mit anderen geteilt werden können. Dies
-ist möglich, da die Projektdatei die relativen Pfade, ausgehend von dem Ordner in dem die
-*\*.qgz* Datei liegt speichert. Also z.B. *daten/raster_1.tif*
+Diese Ordnerstruktur kann an die eigenen Präferenzen und die Notwendigkeiten im Projekt angepasst
+werden. Weitere wesentlicher Vorteil einer solchen Ordnerstruktur ist, dass die Ordner im ganzen
+verschoben, kopiert oder mit anderen geteilt werden können. Dies ist möglich, da die Projektdatei
+die relativen Pfade, ausgehend von dem Ordner in dem die *\*.qgz* Datei liegt speichert. Also z.B.
+./*daten/raster_1.tif*
 
 ::: callout-caution
-Der Dateipfad in dem die Ordnerstruktur angelegt wird darf keine Umlaute oder (ä,ö,ü),
-Sonderzeichen (!,?, .,etc..) oder Leerzeichen enthalten. Dies kann bei der Verarbeitung zu
-Fehlern führen. Daher sollten bei der Anlage der gesamte Pfad kontrolliert werden.
+Der Dateipfad in dem die Ordnerstruktur angelegt wird darf keine Umlaute oder (ä,ö,ü), Sonderzeichen
+(!,?, .,etc..) oder Leerzeichen enthalten. Dies kann bei der Verarbeitung zu Fehlern führen. Daher
+sollten bei der Anlage der gesamte Pfad kontrolliert werden.
 
 Beispiel:
 
@@ -184,16 +180,15 @@ Beispiel:
 
 ### Anlegen eines neuen QGIS-Projektes
 
-In QGIS können einzelne Projekte z.B. eine Lehreinheit als Projekte angelegt und
-gespeichert werden. Dabei werden sämtliche Einstellungen und Darstellungen (z.B.
-Kartenlayouts, Symbologien), Bearbeitungsstand und vieles mehr gespeichert. Das ist vor
-allem sinnvoll wenn man seine Arbeit unterbrechen und zu einem späteren Zeitpunkt
-fortsetzen möchte. Die Projekte werden in einer Datei mit der Endung \*.qgz gespeichert.
+In QGIS können einzelne Projekte z.B. eine Lehreinheit als Projekte angelegt und gespeichert werden.
+Dabei werden sämtliche Einstellungen und Darstellungen (z.B. Kartenlayouts, Symbologien, Layer),
+Bearbeitungsstand und vieles mehr gespeichert. Das ist vor allem sinnvoll wenn man seine Arbeit
+unterbrechen und zu einem späteren Zeitpunkt fortsetzen möchte. Die Projekte werden in einer Datei
+mit der Endung \*.qgz gespeichert.
 
-::: callout-caution
-Die Projektdatei \*.qgz enthält nicht die Geodaten, des Projektes. Es werden lediglich die
-Pfade zu den Dateien mit den Geodaten gespeichert. Beim Laden des Projektes werden die
-Geodaten an den hinterlegten Datenpfaden gesucht und geladen. Sollten diese nicht mehr an
-dem Ort gespeichert sein, wir QGIS einen Fehler melden. Eine klare Ordnerstruktur kann
-solche Fehler vermeiden helfen.
+::: callout-note
+Die Projektdatei \*.qgz enthält nicht die Geodaten, des Projektes. Es werden lediglich die Pfade zu
+den Dateien mit den Geodaten gespeichert. Beim Laden des Projektes werden die Geodaten an den
+hinterlegten Datenpfaden gesucht und geladen. Sollten diese nicht mehr an dem Ort gespeichert sein,
+wir QGIS einen Fehler melden. Eine klare Ordnerstruktur kann solche Fehler vermeiden helfen.
 :::
