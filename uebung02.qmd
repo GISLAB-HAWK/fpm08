@@ -1,5 +1,10 @@
 # Lerneinheit 02: Import und Visualisierung von Rasterdaten in QGIS
 
+Viele Fernerkundungsdaten werden in Form von Rasterdaten gespeichert. Diese bestehen aus einem
+regelmäßigen Raster aus Zellen/Pixel. In jedem Pixel kann genau ein Zahlenwert gespeichert sein.
+Typische Dateiformate für Rastergeodaten sind GeoTIFF (*.tif), ArcInfo ASCI (*.ascii), Geopackage
+(\*.gpkg) und ERDAS Imagine (\*.img).
+
 ## Lernziele & Aufgabenstellung
 
 **Lernziele**
@@ -9,15 +14,16 @@ Die Studierenden sollen:
 -   verschiedene Rasterdatenformate kennenlernen
 -   Rasterdaten in QGIS importieren
 -   Eigenschaften von Rasterdaten in QGIS untersuchen und manipulieren können
--   Unterschiedliche Visualisierungsmethoden für Ein- und Mehrkanalrasterbilder nutzen
-    können
+-   Unterschiedliche Visualisierungsmethoden für Ein- und Mehrkanalrasterbilder nutzen können
 
 **Aufgaben**
 
-1.   Importieren eine Mehrkanal Luftbildes
+1.  Importieren eine Mehrkanalluftbildes
 
-2.  Erstellen von Echt- und Falschfarben Darstellungen
+2.  Erstellen eines virtuellen Rasterstacks
 
-3.  Untersuchen der Rastereigenschaften
+3.  Erstellen von Echt- und Falschfarben Darstellungen
 
-4.  Festlegung eines Koordinatenreferenzsystems
+4.  Untersuchen der Rastereigenschaften
+
+5.  Festlegung eines Koordinatenreferenzsystems
