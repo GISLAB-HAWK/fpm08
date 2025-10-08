@@ -13,6 +13,7 @@ book:
    right: |
       This book was built with <a href="https://quarto.org/">Quarto</a>.
   repo-url: https://github.com/GISLAB-HAWK/fpm08
+  search: true
   chapters:
     - index.qmd
     - uebung01.qmd

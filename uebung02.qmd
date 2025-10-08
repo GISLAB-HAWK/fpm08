@@ -1,0 +1,23 @@
+# Lerneinheit 02: Import und Visualisierung von Rasterdaten in QGIS
+
+## Lernziele & Aufgabenstellung
+
+**Lernziele**
+
+Die Studierenden sollen:
+
+-   verschiedene Rasterdatenformate kennenlernen
+-   Rasterdaten in QGIS importieren
+-   Eigenschaften von Rasterdaten in QGIS untersuchen und manipulieren können
+-   Unterschiedliche Visualisierungsmethoden für Ein- und Mehrkanalrasterbilder nutzen
+    können
+
+**Aufgaben**
+
+1.   Importieren eine Mehrkanal Luftbildes
+
+2.  Erstellen von Echt- und Falschfarben Darstellungen
+
+3.  Untersuchen der Rastereigenschaften
+
+4.  Festlegung eines Koordinatenreferenzsystems
