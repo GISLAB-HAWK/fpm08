@@ -142,7 +142,7 @@ ihr persönliches Laufwerk unter `U:`
 Sollten sie im späteren Verlauf des Kurses ihr Profile wiederherstellen wollen, können sie diesen
 Ordner von `U:` wieder in den QGIS-Profil Ordner kopieren.
 
-## Projekt- und Datenmanagement mit QGIS
+## Projekt- und Datenmanagement mit QGIS {#projekt_datenmanagement}
 
 ### Anlegen einer Ordnerstruktur
 
@@ -179,7 +179,6 @@ Beispiel:
 :::
 
 ### Anlegen eines neuen QGIS-Projektes
-
 In QGIS können einzelne Projekte z.B. eine Lehreinheit als Projekte angelegt und gespeichert werden.
 Dabei werden sämtliche Einstellungen und Darstellungen (z.B. Kartenlayouts, Symbologien, Layer),
 Bearbeitungsstand und vieles mehr gespeichert. Das ist vor allem sinnvoll wenn man seine Arbeit
