@@ -30,7 +30,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./references.html" rel="next">
+<link href="./uebung02.html" rel="next">
 <link href="./index.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -127,6 +127,12 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./uebung02.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Lerneinheit 02: Erstellen eines Ortholuftbildmosaiks in der Rfö Kattenbühl</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./references.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Referenzen</span></a>
   </div>
@@ -149,7 +155,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#installation-einrichtung-von-otb-in-qgis" id="toc-installation-einrichtung-von-otb-in-qgis" class="nav-link" data-scroll-target="#installation-einrichtung-von-otb-in-qgis"><span class="header-section-number">2.2.3</span> Installation &amp; Einrichtung von OTB in QGIS</a></li>
   <li><a href="#sichern-des-persönlichen-nutzerprofils" id="toc-sichern-des-persönlichen-nutzerprofils" class="nav-link" data-scroll-target="#sichern-des-persönlichen-nutzerprofils"><span class="header-section-number">2.2.4</span> Sichern des persönlichen Nutzerprofils</a></li>
   </ul></li>
-  <li><a href="#projekt--und-datenmanagement-mit-qgis" id="toc-projekt--und-datenmanagement-mit-qgis" class="nav-link" data-scroll-target="#projekt--und-datenmanagement-mit-qgis"><span class="header-section-number">2.3</span> Projekt- und Datenmanagement mit QGIS</a>
+  <li><a href="#sec-projekt_management" id="toc-sec-projekt_management" class="nav-link" data-scroll-target="#sec-projekt_management"><span class="header-section-number">2.3</span> Projekt- und Datenmanagement mit QGIS</a>
   <ul class="collapse">
   <li><a href="#anlegen-einer-ordnerstruktur" id="toc-anlegen-einer-ordnerstruktur" class="nav-link" data-scroll-target="#anlegen-einer-ordnerstruktur"><span class="header-section-number">2.3.1</span> Anlegen einer Ordnerstruktur</a></li>
   <li><a href="#anlegen-eines-neuen-qgis-projektes" id="toc-anlegen-eines-neuen-qgis-projektes" class="nav-link" data-scroll-target="#anlegen-eines-neuen-qgis-projektes"><span class="header-section-number">2.3.2</span> Anlegen eines neuen QGIS-Projektes</a></li>
@@ -179,6 +185,16 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<!--
+
+Skripte für die Übungen 02 des Moduls FPM08 Forstliche Fernerkundung im Studiengang
+B.Sc. Forstwirtschaft an der HAWK Göttingen.
+
+Autor: Paul Magdon
+Datum: 2025-10-12
+Lizenz: Creative Commons BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
+
+-->
 <section id="lernziele-aufgabenstellung" class="level2" data-number="2.1">
 <h2 data-number="2.1" class="anchored" data-anchor-id="lernziele-aufgabenstellung"><span class="header-section-number">2.1</span> Lernziele &amp; Aufgabenstellung</h2>
 <p>Die erste Lerneinheit dient der Einrichtung einer Arbeitsumgebung und der Wiederholung der wesentlichen QGIS-Funktionen. Wir prüfen die Installation der notwendigen Programme und konfigurieren diese für die spätere Verwendung. Es wird außerdem gezeigt, wie wir diese Einstellungen über die QGIS-Profile speichern und sichern können. Außerdem wird vorgestellt wie QGIS-Erweiterungen installiert werden können.</p>
@@ -285,8 +301,8 @@ Note
 <p>Sollten sie im späteren Verlauf des Kurses ihr Profile wiederherstellen wollen, können sie diesen Ordner von <code>U:</code> wieder in den QGIS-Profil Ordner kopieren.</p>
 </section>
 </section>
-<section id="projekt--und-datenmanagement-mit-qgis" class="level2" data-number="2.3">
-<h2 data-number="2.3" class="anchored" data-anchor-id="projekt--und-datenmanagement-mit-qgis"><span class="header-section-number">2.3</span> Projekt- und Datenmanagement mit QGIS</h2>
+<section id="sec-projekt_management" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="sec-projekt_management"><span class="header-section-number">2.3</span> Projekt- und Datenmanagement mit QGIS</h2>
 <section id="anlegen-einer-ordnerstruktur" class="level3" data-number="2.3.1">
 <h3 data-number="2.3.1" class="anchored" data-anchor-id="anlegen-einer-ordnerstruktur"><span class="header-section-number">2.3.1</span> Anlegen einer Ordnerstruktur</h3>
 <p>Eine gute Ordnerstruktur ist für das Datenmanagement sehr hilfreich. Daher wird empfohlen für jedes Projekt / jede Lerneinheit eine eigene Ordnerstruktur nach einheitlichem Muster anzulegen. Die Struktur könnte so aussehen:</p>
@@ -745,8 +761,8 @@ Note
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./references.html" class="pagination-link" aria-label="Referenzen">
-        <span class="nav-page-text">Referenzen</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./uebung02.html" class="pagination-link" aria-label="Lerneinheit 02: Erstellen eines Ortholuftbildmosaiks in der Rfö Kattenbühl">
+        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Lerneinheit 02: Erstellen eines Ortholuftbildmosaiks in der Rfö Kattenbühl</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
