@@ -1,15 +1,5 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Forstliche Fernerkundung",
-    "section": "",
-    "text": "Vorwort\nHier finden sie die Materialien für das Modul “Einführung in die forstliche Fernerkundung” des B.Sc. Studiengangs Forstwirtschaft an der HAWK in Göttingen.",
-    "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Forstliche Fernerkundung</span>"
-    ]
-  },
-  {
     "objectID": "uebung01.html",
     "href": "uebung01.html",
     "title": "2  Lerneinheit 01: Erste Schritte in QGIS",
