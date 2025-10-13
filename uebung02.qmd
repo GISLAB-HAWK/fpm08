@@ -39,17 +39,14 @@ Die Studierenden sollen:
 
 **Aufgaben**
 
-1.  Importieren sie die Grenzen der Rfö. Kattenbühl als Vektordatensatz. Passen sie die Darstellung
-    der Grenzen so an, das sie nur die Außengrenze als Linie angezeigt bekommen.
-
-2.  Importieren sie die einzelnen Kanäle der Ortholuftbilder und untersuchen sie die
+1.  Importieren sie die einzelnen Kanäle der Ortholuftbilder und untersuchen sie die
     Rastereigenschaften
 
-3.  Fügen sie die einzelnen Kanäle zu einem virtuellen Mehrkanalbild zusammen.
+2.  Fügen sie die einzelnen Kanäle zu einem virtuellen Mehrkanalbild zusammen.
 
-4.  Erstellen sie ein virtuelles Orthobildmosaik
+3.  Erstellen sie ein virtuelles Orthobildmosaik
 
-5.  Erstellen sie eine echt- und eine falschfarben Darstellungen
+4.  Erstellen sie eine echt- und eine falschfarben Darstellungen
 
 ## Anlegen eine neuen QGIS-Projektes
 
