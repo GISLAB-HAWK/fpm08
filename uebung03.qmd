@@ -1,0 +1,63 @@
+```{=html}
+<!--
+
+Skripte für die Übungen 03 des Moduls FPM08 Forstliche Fernerkundung im Studiengang
+B.Sc. Forstwirtschaft an der HAWK Göttingen.
+
+Autor: Paul Magdon
+Datum: 2025-10-12
+Lizenz: Creative Commons BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
+
+-->
+```
+
+# Lerneinheit 03: Erstellung einer Karte des Stadt Göttingen.
+
+## Lernziele & Aufgabenstellung
+
+In der Übung01 haben wir vorgestellt, wie Rasterdaten die als GeoTIF-Datei auf der Festplatte
+vorliegen, in ein QGIS-Projekt importiert und dargestellt werden können. Wenn größere Gebiete
+bearbeitete werden oder sehr hohe räumliche Auflösungen verwendet werden, kann diese sehr schnell zu
+einem hohen Bedarf an Speicherkapazität führen. Daher werden im GIS-Bereich zunehmende sogenante
+Geodatendienste verwendet. Bei diesen Diensten werden die Daten auf großen zentralen Servern
+gehostet und dem Nutzer einzelne Ausschnitte auf Anfrage ausgeliefert. Dieses Vorgehen bietet mehere
+Vorteile: \* Nur die in dem jeweiligen Moment notwendigen Daten werden temporär auf dem PC des
+Nutzers abgelegt \* Die Datenverwaltung erfolgt zentral durch den Betrieber des Geodatendienstes \*
+Alle Nutzer arbeiten mit einem einheitlichen Datensatz \* Aktuallisierungen der Daten können einfach
+an alle Nutzer ausgepspielt werden
+
+In der Übung sollen aktuelle Daten für den Stadtwald Göttingen dargestellt werden. Dazu sollen die
+unterschiedlichen Angeboten des Open-Data Niedersachsen Portals des LGLN genutzt werden.
+
+**Lernziele**
+
+Die Studierenden sollen:
+
+-   verschiedene Geodatendienste kennenlernen
+-   Raster- und Vektordaten als Geodatendienst in QGIS importieren
+-   Eigenschaften von Geodatendiensten in QGIS untersuchen
+
+**Aufgaben**
+
+1.  Laden sie ein aktuelles Luftbild des Stadtwaldes Göttingen herunter um eine CIR-Darstellung
+    anzulegen.
+
+2.  Binden sie das aktuelle Luftbild als WMS-Service ein
+
+3.  Binden sie das aktuelle Luftbild als WCS-Service ein
+
+4.  Fügen sie die Flurstückskarten als WFS-Dienst ein
+
+5.  Fügen sie als Hintergrund die Basemap.de als Vektor-Kacheln hinzu.
+
+## Datei Download
+
+## WMS-Dienste
+
+## WCS-Dienste
+
+## WFS-Dienste
+
+## Vektor-Kacheln
+
+https://basemap.de/produkte-und-dienste/web-vektor/

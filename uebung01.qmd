@@ -1,3 +1,14 @@
+<!--
+
+Skripte für die Übungen 02 des Moduls FPM08 Forstliche Fernerkundung im Studiengang
+B.Sc. Forstwirtschaft an der HAWK Göttingen.
+
+Autor: Paul Magdon
+Datum: 2025-10-12
+Lizenz: Creative Commons BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
+
+-->
+
 # Lerneinheit 01: Erste Schritte in QGIS
 
 ## Lernziele & Aufgabenstellung
@@ -142,7 +153,7 @@ ihr persönliches Laufwerk unter `U:`
 Sollten sie im späteren Verlauf des Kurses ihr Profile wiederherstellen wollen, können sie diesen
 Ordner von `U:` wieder in den QGIS-Profil Ordner kopieren.
 
-## Projekt- und Datenmanagement mit QGIS
+## Projekt- und Datenmanagement mit QGIS {#sec-projekt_management}
 
 ### Anlegen einer Ordnerstruktur
 
