@@ -12,7 +12,7 @@ QGIS-Erweiterungen installiert werden können.
 
 Die Studierenden sollen:
 
--   QGIS installieren können bzw.. überprüfen können welche Version installiert ist.
+-   QGIS installieren können bzw. überprüfen können welche Version installiert ist.
 -   die Funktionsweise von Nutzerprofilen verstehen und anwenden können
 -   eine sinnvolle Ordnerstruktur zur Verwaltung von QGIS-Projekten kennen und anlegen können
 -   Projekte in QGIS anlegen können
