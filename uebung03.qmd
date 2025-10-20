@@ -11,7 +11,7 @@ Lizenz: Creative Commons BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc
 -->
 ```
 
-# Lerneinheit 03: Beschaffung von Geodaten des Stadtwalds Göttingen.
+# Lerneinheit 03: Beschaffung von Geodaten für den Nordcampus Göttingen.
 
 ## Lernziele & Aufgabenstellung
 
@@ -32,7 +32,7 @@ einzelne Ausschnitte auf Anfrage ausgeliefert. Dieses Vorgehen bietet mehrere Vo
 
 -   Aktualisierungen der Daten können einfach an alle Nutzer ausgespielt werden
 
-In der Übung sollen aktuelle Daten für den Stadtwald Göttingen dargestellt werden. Dazu sollen die
+In der Übung sollen aktuelle Daten für den Nordcampus, Göttingen dargestellt werden. Dazu sollen die
 unterschiedlichen Angeboten des Open-Data Niedersachsen Portals des LGLN genutzt werden.
 
 **Lernziele**
@@ -45,7 +45,7 @@ Die Studierenden sollen:
 
 **Aufgaben**
 
-1.  Laden sie ein aktuelles Luftbild des Stadtwaldes Göttingen herunter um eine CIR-Darstellung
+1.  Laden sie ein aktuelles Luftbild des Nordcampus Göttingen herunter um eine CIR-Darstellung
     anzulegen.
 
 2.  Binden sie das aktuelle Ortholuftbildmosaik des LGLN als WMS-Service ein
