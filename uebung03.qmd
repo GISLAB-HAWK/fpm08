@@ -10,18 +10,20 @@ Lizenz: Creative Commons BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc
 
 -->
 ```
-
-# Lerneinheit 03: Beschaffung von Geodaten für den Nordcampus Göttingen.
-
+# Lerneinheit 03: Beschaffung von Geodaten für den Nordcampus Göttingen
 ## Lernziele & Aufgabenstellung
 
 In der Lerneinheit 02 haben wir vorgestellt, wie Rasterdaten, welche als GeoTIF-Datei auf der
-Festplatte vorliegen, in ein QGIS-Projekt importiert und dargestellt werden können. Wenn größere
-Gebiete bearbeitete und / oder sehr hohe räumliche Auflösungen verwendet werden, kann dies sehr
-schnell zu einem hohen Zeitaufwand und Bedarf an lokalem Speicherplatz -und damit verbunden hohen
-Kosten für die Hardware- führen. Daher werden im GIS-Bereich zunehmende sogenannte Geodatendienste
-verwendet. Bei diesen Diensten werden die Daten auf zentralen Servern gespeichert und dem Nutzer
-einzelne Ausschnitte auf Anfrage ausgeliefert. Dieses Vorgehen bietet mehrere Vorteile:
+Festplatte vorliegen, in ein QGIS-Projekt importiert und dargestellt werden können. Dazu wurden die
+Rasterdaten über das lokale Netzlaufwerk zur Verfügung gestellt. In der Lerneinheit 03 wir nun
+gezeigt wie frei verfügbare Raster- und Vektordaten gesucht, beschafft und in QGIS-Projekte
+eingebunden werden können. Dazu werden die Datendownload Portale der Landesvermessungsämter am
+Beispiel von Niedersachsen vorgestellt. Wenn größere Gebiete bearbeitete und / oder sehr hohe
+räumliche Auflösungen verwendet werden, kann dies sehr schnell zu einem hohen Zeitaufwand und Bedarf
+an lokalem Speicherplatz -und damit verbunden hohen Kosten für die Hardware- führen. Daher werden im
+GIS-Bereich zunehmende sogenannte Geodatendienste verwendet. Bei diesen Diensten werden die Daten
+auf zentralen Servern gespeichert und dem Nutzer einzelne Ausschnitte auf Anfrage ausgeliefert.
+Dieses Vorgehen bietet mehrere Vorteile:
 
 -   Nur die in dem jeweiligen Moment notwendigen Daten werden temporär auf dem PC des Nutzers
     abgelegt
@@ -32,34 +34,35 @@ einzelne Ausschnitte auf Anfrage ausgeliefert. Dieses Vorgehen bietet mehrere Vo
 
 -   Aktualisierungen der Daten können einfach an alle Nutzer ausgespielt werden
 
-In der Übung sollen aktuelle Daten für den Nordcampus, Göttingen dargestellt werden. Dazu sollen die
-unterschiedlichen Angeboten des Open-Data Niedersachsen Portals des LGLN genutzt werden.
+In der Übung sollen aktuelle Daten für den Nordcampus, Göttingen beschafft und dargestellt werden.
+Dazu sollen die unterschiedlichen Angeboten des Open-Data Niedersachsen Portals des LGLN genutzt
+werden.
 
 **Lernziele**
 
 Die Studierenden sollen:
 
+-   die Geodatenportale der Landesvermessungen kennenlernen
 -   die unterschiedlichen Schnittstellen von Geodatendienste kennenlernen
 -   Raster- und Vektordaten als Geodatendienst in QGIS importieren
 -   Eigenschaften von Geodatendiensten in QGIS untersuchen
 
 **Aufgaben**
 
-1.  Laden sie ein aktuelles Luftbild des Nordcampus Göttingen herunter um eine CIR-Darstellung
-    anzulegen.
+1.  Laden sie ein aktuelles Luftbild des Nordcampus Göttingen vom Geodatenportal des LGLN herunter und visualisieren sie dies als CIR-Darstellung.
 
-2.  Binden sie das aktuelle Ortholuftbildmosaik des LGLN als WMS-Service ein
+2.  Binden sie das aktuelle Ortholuftbildmosaik des LGLN als WMS-Service ein.
 
-3.  Fügen sie die Flurstückskarten als WFS-Dienst ein
+3.  Fügen sie die aktuelle Flurstückskarten aus Niedersachsen als WFS-Dienst ein.
 
-4.  Fügen sie als Hintergrund die Basemap.de als Vektor-Kacheln hinzu.
+4.  Fügen sie als Hintergrundkarte die Basemap.de als Vektor-Kacheln hinzu.
 
 ## Aufgabe 0: Anlegen eine neuen QGIS-Projektes
 
 Folgen sie der Anleitung aus @sec-projekt_management um eine neue Ordnerstruktur und ein neues
 QGIS-Projekt für LE03 anzulegen.
 
-## Aufgabe 01: Download und CIR-Darstellung einesOrtholuftbildes des Nordcampus
+## Aufgabe 01: Download und CIR-Darstellung eines Ortholuftbildes des Nordcampus
 
 Das Landesamt für Geoinformation und Landesvermessung Niedersachsen (LGLN) stellt über die
 [OpenGeoDate.NI](https://ni-lgln-opengeodata.hub.arcgis.com/pages/opengeodata) Plattform offene
@@ -91,7 +94,7 @@ Rasterbild in ihr QGIS-Projekt und stellen sie es als CIR-Falschfarbenbild dar (
 6.  *Welche spektrale Auflösung haben die Bilder?*
 :::
 
-## Aufgabe 02: Einbinden von WMS-Diensten
+## Aufgabe 02: Einbinden von WMS-Diensten zur Darstellung von Ortholuftbildern
 
 Wie sie in dem OpenData-Viewer erkennen können, bräuchte es zur vollständigen Abdeckung des gesamten
 Göttinger Stadtwaldes über 35 Ortholuftbildkacheln, was einem Downloadvolumen von ca. $35*500=1,7GB$
@@ -123,8 +126,7 @@ Luftbildern](images/LE03_add_wms_lgln.png){width="407"}
 Nachdem die Verbindung angelegt wurde, kann QGIS sich mit dem Server verbinden und die Layer können
 ausgewählt und dem Projekt hinzugefügt werden.
 
-![WMS-Layer dem Projekt hinzufügen](images/LE03_add_wms_layer_lgln.png)
-
+![WMS-Layer dem Projekt hinzufügen](images/LE03_add_wms_layer_lgln.png) <!--
 ::: callout-tip
 Wenn sie sich tiefergehend mit den technischen Details der STAC implementierung beim LGLN
 auseinandersetzen möchten empfehle ich den Vortrag von Katrin Pinkert und Ralf Wohlfart auf der
@@ -132,21 +134,22 @@ FOSSGIS 2024:
 
 <https://media.ccc.de/v/fossgis2024-38982-bereitstellung-von-freien-geodaten-opendata-mit-stac-beim-lgln#t=372>
 :::
+-->
 
 ::: {style="border: 3px solid #ff8a0b; background-color: #ffffff; padding: 8px;"}
 **Frage:**
 
-Vergleichen sie die Pixelwerte eines ausgewählten Pixels in dem WMS- und dem Geotifflayer.
+Vergleichen sie die Pixelwerte eines ausgewählten Pixels in dem WMS-DOP und dem Geotiff Layer.
 :::
 
 ## Aufgabe 03: Einbinden der Flurstücksgrenzen als WFS-Dienste
 
 Nachdem Einbinden der Ortholuftbilder, sollen weitere Geodaten in Form von Vektordaten in das
-Projekt eingebunden werden. Als Beispiel möchten wir die amtl. Flurstücksgrenzen aus dem Amtlichen
+Projekt eingebunden werden. Als Beispiel möchten wir die amtl. Flurstückgrenzen aus dem Amtlichen
 Liegenschafts Kataster Informationssystems (ALKIS) nutzen. Diese Daten werden vom LGLN als Web
 Feature Service (WFS) bereitgestellt. Im Gegensatz zu den WMS-Diensten werden bei WFS keine vorher
 gerenderten Bilder, sondern die originalen Vektordaten übertragen. Das ermöglicht es den Stil
-anzupassen und eigenen Geographische Prozessierungen z.B. Buffer, Verschneidungen etc.
+anzupassen und eigenen Geographische Prozessierungen z.B. Puffer, Verschneidungen etc.
 durchzuführen.
 
 Auf der
@@ -170,9 +173,11 @@ Verfügung stehen den Layer abrufen
 ## Aufgabe 04: Hintergrundkarte als Vektor-Kacheln
 
 Als Hintergrund Karten wollen wir einen zusätzlichen Geodatendienst in Form von Vektor-Kacheln
-nutzen. Basemap ist eine Kartengrundlage die auf amtlichen Daten basiert und kostenfrei von der Arbeitsgemeinschaft der Vermessungsverwaltungen der Länder der Bundesrepublik Deutschland (AdV) zur Verfügung gestellt wird. Um diese zu
-verwenden kann die Verbindungseinstellung per XML-Datei in QGIS importiert werden. Laden sie sich dazu
-folgende XML-Datei herunter und speichern sie die Datei lokal auf ihrem Rechner:
+nutzen. Basemap ist eine Kartengrundlage die auf amtlichen Daten basiert und kostenfrei von der
+Arbeitsgemeinschaft der Vermessungsverwaltungen der Länder der Bundesrepublik Deutschland (AdV) zur
+Verfügung gestellt wird. Um diese zu verwenden kann die Verbindungseinstellung per XML-Datei in QGIS
+importiert werden. Laden sie sich dazu folgende XML-Datei herunter und speichern sie die Datei lokal
+auf ihrem Rechner:
 
 <https://basemap.de/data/produkte/web_vektor/sonstiges/basemap_de_Web_Vektor_qgis_connection.xml>
 
@@ -186,9 +191,12 @@ Es wird eine neue Datenquelle "basemap.de Farbe" angelegt, die dem Projekt hinzu
 
 https://basemap.de/produkte-und-dienste/web-vektor/
 
-## Aufgabe 05: Sicher der Nutzerprofile
+## Aufgabe 05: Sicher des Nutzerprofils
 
-Sie haben nun mehrere neue Datenquellen angelegt. QGIS speichert diese Datenquellen in ihrem Nutzerprofil. Beim nächsten Start von QGIS können diese Quellen wieder verwendet werden. Daher ist jetzt ein guter Zeitpunkt die Kopie ihres Nutzerprofils erneut zu sichern. Folgen Sie dazu der Anleitung in LE01 @sec-nutzerprofil
+Sie haben nun mehrere neue Datenquellen angelegt. QGIS speichert diese Datenquellen in ihrem
+Nutzerprofil. Beim nächsten Start von QGIS können diese Quellen wieder verwendet werden. Daher ist
+jetzt ein guter Zeitpunkt die Kopie ihres Nutzerprofils erneut zu sichern. Folgen Sie dazu der
+Anleitung in LE01 @sec-nutzerprofil
 
 ```{=html}
 <!--

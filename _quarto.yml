@@ -12,6 +12,8 @@ book:
       Übungaufgaben
    right: |
       This book was built with <a href="https://quarto.org/">Quarto</a>.
+  author: "Paul Magdon"
+  description: "Übungsaufgaben für das Modul FPM08 forstliche Fernerkundung"
   repo-url: https://github.com/GISLAB-HAWK/fpm08
   search: true
   chapters:

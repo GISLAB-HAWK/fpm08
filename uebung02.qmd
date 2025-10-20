@@ -8,7 +8,6 @@ Datum: 2025-10-12
 Lizenz: Creative Commons BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 -->
-
 # Lerneinheit 02: Erstellen eines Ortholuftbildmosaiks in der Rfö Kattenbühl
 
 ![Falschfarben Orthomosaik Rfö. Kattenbühl](images/LE02_cover.png){fig-align="center"}
