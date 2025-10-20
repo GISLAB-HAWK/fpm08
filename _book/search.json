@@ -174,7 +174,17 @@
     "href": "uebung03.html#aufgabe-04-hintergrundkarte-als-vektor-kacheln",
     "title": "4  Lerneinheit 03: Beschaffung von Geodaten des Stadtwalds Göttingen.",
     "section": "4.6 Aufgabe 04: Hintergrundkarte als Vektor-Kacheln",
-    "text": "4.6 Aufgabe 04: Hintergrundkarte als Vektor-Kacheln\nAls Hintergrund Karten wollen wir einen zusätzlichen Geodatendienst in Form von Vektor-Kacheln nutzen. Basemap ist eine KArtengrundlage die von XXX zur Verfügung gestellt wird. Um diese zu verwenden kann die Verbindungseinstellung per XML-Datei importiert werden. Laden sie sich dazu folgende XML-Datei herunter und speichern sie die Datei lokal auf ihrem Rechner:\nhttps://basemap.de/data/produkte/web_vektor/sonstiges/basemap_de_Web_Vektor_qgis_connection.xml\nAnschließend nutzen sie die XML-Datei um die Verbindung anzulegen:\n\nLayer → Datenquellenverwaltung → Vektorkachel -&gt; laden\n\nEs wird eine neue Datenquelle “basemap.de Farbe” angelegt, die dem Projekt hinzugefügt werden kann.\nhttps://basemap.de/produkte-und-dienste/web-vektor/",
+    "text": "4.6 Aufgabe 04: Hintergrundkarte als Vektor-Kacheln\nAls Hintergrund Karten wollen wir einen zusätzlichen Geodatendienst in Form von Vektor-Kacheln nutzen. Basemap ist eine Kartengrundlage die auf amtlichen Daten basiert und kostenfrei von der Arbeitsgemeinschaft der Vermessungsverwaltungen der Länder der Bundesrepublik Deutschland (AdV) zur Verfügung gestellt wird. Um diese zu verwenden kann die Verbindungseinstellung per XML-Datei in QGIS importiert werden. Laden sie sich dazu folgende XML-Datei herunter und speichern sie die Datei lokal auf ihrem Rechner:\nhttps://basemap.de/data/produkte/web_vektor/sonstiges/basemap_de_Web_Vektor_qgis_connection.xml\nAnschließend nutzen sie die XML-Datei um die Verbindung anzulegen:\n\nLayer → Datenquellenverwaltung → Vektorkachel -&gt; laden\n\nEs wird eine neue Datenquelle “basemap.de Farbe” angelegt, die dem Projekt hinzugefügt werden kann.\nhttps://basemap.de/produkte-und-dienste/web-vektor/",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Lerneinheit 03: Beschaffung von Geodaten des Stadtwalds Göttingen.</span>"
+    ]
+  },
+  {
+    "objectID": "uebung03.html#aufgabe-05-sicher-der-nutzerprofile",
+    "href": "uebung03.html#aufgabe-05-sicher-der-nutzerprofile",
+    "title": "4  Lerneinheit 03: Beschaffung von Geodaten des Stadtwalds Göttingen.",
+    "section": "4.7 Aufgabe 05: Sicher der Nutzerprofile",
+    "text": "4.7 Aufgabe 05: Sicher der Nutzerprofile\nSie haben nun mehrere neue Datenquellen angelegt. QGIS speichert diese Datenquellen in ihrem Nutzerprofil. Beim nächsten Start von QGIS können diese Quellen wieder verwendet werden. Daher ist jetzt ein guter Zeitpunkt die Kopie ihres Nutzerprofils erneut zu sichern. Folgen Sie dazu der Anleitung in LE01 Section 2.2.4",
     "crumbs": [
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Lerneinheit 03: Beschaffung von Geodaten des Stadtwalds Göttingen.</span>"
     ]

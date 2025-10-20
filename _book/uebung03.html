@@ -184,6 +184,7 @@ window.Quarto = {
   <li><a href="#aufgabe-02-einbinden-von-wms-diensten" id="toc-aufgabe-02-einbinden-von-wms-diensten" class="nav-link" data-scroll-target="#aufgabe-02-einbinden-von-wms-diensten"><span class="header-section-number">4.4</span> Aufgabe 02: Einbinden von WMS-Diensten</a></li>
   <li><a href="#aufgabe-03-einbinden-der-flurstücksgrenzen-als-wfs-dienste" id="toc-aufgabe-03-einbinden-der-flurstücksgrenzen-als-wfs-dienste" class="nav-link" data-scroll-target="#aufgabe-03-einbinden-der-flurstücksgrenzen-als-wfs-dienste"><span class="header-section-number">4.5</span> Aufgabe 03: Einbinden der Flurstücksgrenzen als WFS-Dienste</a></li>
   <li><a href="#aufgabe-04-hintergrundkarte-als-vektor-kacheln" id="toc-aufgabe-04-hintergrundkarte-als-vektor-kacheln" class="nav-link" data-scroll-target="#aufgabe-04-hintergrundkarte-als-vektor-kacheln"><span class="header-section-number">4.6</span> Aufgabe 04: Hintergrundkarte als Vektor-Kacheln</a></li>
+  <li><a href="#aufgabe-05-sicher-der-nutzerprofile" id="toc-aufgabe-05-sicher-der-nutzerprofile" class="nav-link" data-scroll-target="#aufgabe-05-sicher-der-nutzerprofile"><span class="header-section-number">4.7</span> Aufgabe 05: Sicher der Nutzerprofile</a></li>
   </ul>
 </nav>
     </div>
@@ -330,7 +331,7 @@ Tip
 </section>
 <section id="aufgabe-04-hintergrundkarte-als-vektor-kacheln" class="level2" data-number="4.6">
 <h2 data-number="4.6" class="anchored" data-anchor-id="aufgabe-04-hintergrundkarte-als-vektor-kacheln"><span class="header-section-number">4.6</span> Aufgabe 04: Hintergrundkarte als Vektor-Kacheln</h2>
-<p>Als Hintergrund Karten wollen wir einen zusätzlichen Geodatendienst in Form von Vektor-Kacheln nutzen. Basemap ist eine KArtengrundlage die von XXX zur Verfügung gestellt wird. Um diese zu verwenden kann die Verbindungseinstellung per XML-Datei importiert werden. Laden sie sich dazu folgende XML-Datei herunter und speichern sie die Datei lokal auf ihrem Rechner:</p>
+<p>Als Hintergrund Karten wollen wir einen zusätzlichen Geodatendienst in Form von Vektor-Kacheln nutzen. Basemap ist eine Kartengrundlage die auf amtlichen Daten basiert und kostenfrei von der Arbeitsgemeinschaft der Vermessungsverwaltungen der Länder der Bundesrepublik Deutschland (AdV) zur Verfügung gestellt wird. Um diese zu verwenden kann die Verbindungseinstellung per XML-Datei in QGIS importiert werden. Laden sie sich dazu folgende XML-Datei herunter und speichern sie die Datei lokal auf ihrem Rechner:</p>
 <p><a href="https://basemap.de/data/produkte/web_vektor/sonstiges/basemap_de_Web_Vektor_qgis_connection.xml" class="uri">https://basemap.de/data/produkte/web_vektor/sonstiges/basemap_de_Web_Vektor_qgis_connection.xml</a></p>
 <p>Anschließend nutzen sie die XML-Datei um die Verbindung anzulegen:</p>
 <div style="border: 2px solid #afca0b; background-color: #fafafa; padding: 8px;">
@@ -338,6 +339,10 @@ Tip
 </div>
 <p>Es wird eine neue Datenquelle “basemap.de Farbe” angelegt, die dem Projekt hinzugefügt werden kann.</p>
 <p>https://basemap.de/produkte-und-dienste/web-vektor/</p>
+</section>
+<section id="aufgabe-05-sicher-der-nutzerprofile" class="level2" data-number="4.7">
+<h2 data-number="4.7" class="anchored" data-anchor-id="aufgabe-05-sicher-der-nutzerprofile"><span class="header-section-number">4.7</span> Aufgabe 05: Sicher der Nutzerprofile</h2>
+<p>Sie haben nun mehrere neue Datenquellen angelegt. QGIS speichert diese Datenquellen in ihrem Nutzerprofil. Beim nächsten Start von QGIS können diese Quellen wieder verwendet werden. Daher ist jetzt ein guter Zeitpunkt die Kopie ihres Nutzerprofils erneut zu sichern. Folgen Sie dazu der Anleitung in LE01 <a href="uebung01.html#sec-nutzerprofil" class="quarto-xref"><span>Section 2.2.4</span></a></p>
 <!--
 ## Rettungspunkte als ESRI Shapefile
 

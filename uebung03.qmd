@@ -170,8 +170,8 @@ Verfügung stehen den Layer abrufen
 ## Aufgabe 04: Hintergrundkarte als Vektor-Kacheln
 
 Als Hintergrund Karten wollen wir einen zusätzlichen Geodatendienst in Form von Vektor-Kacheln
-nutzen. Basemap ist eine KArtengrundlage die von XXX zur Verfügung gestellt wird. Um diese zu
-verwenden kann die Verbindungseinstellung per XML-Datei importiert werden. Laden sie sich dazu
+nutzen. Basemap ist eine Kartengrundlage die auf amtlichen Daten basiert und kostenfrei von der Arbeitsgemeinschaft der Vermessungsverwaltungen der Länder der Bundesrepublik Deutschland (AdV) zur Verfügung gestellt wird. Um diese zu
+verwenden kann die Verbindungseinstellung per XML-Datei in QGIS importiert werden. Laden sie sich dazu
 folgende XML-Datei herunter und speichern sie die Datei lokal auf ihrem Rechner:
 
 <https://basemap.de/data/produkte/web_vektor/sonstiges/basemap_de_Web_Vektor_qgis_connection.xml>
@@ -185,6 +185,10 @@ Anschließend nutzen sie die XML-Datei um die Verbindung anzulegen:
 Es wird eine neue Datenquelle "basemap.de Farbe" angelegt, die dem Projekt hinzugefügt werden kann.
 
 https://basemap.de/produkte-und-dienste/web-vektor/
+
+## Aufgabe 05: Sicher der Nutzerprofile
+
+Sie haben nun mehrere neue Datenquellen angelegt. QGIS speichert diese Datenquellen in ihrem Nutzerprofil. Beim nächsten Start von QGIS können diese Quellen wieder verwendet werden. Daher ist jetzt ein guter Zeitpunkt die Kopie ihres Nutzerprofils erneut zu sichern. Folgen Sie dazu der Anleitung in LE01 @sec-nutzerprofil
 
 ```{=html}
 <!--
