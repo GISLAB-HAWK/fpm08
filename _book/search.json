@@ -14,7 +14,7 @@
     "href": "uebung01.html#lernziele-aufgabenstellung",
     "title": "2  Lerneinheit 01: Erste Schritte in QGIS",
     "section": "",
-    "text": "QGIS installieren können bzw.. überprüfen können welche Version installiert ist.\ndie Funktionsweise von Nutzerprofilen verstehen und anwenden können\neine sinnvolle Ordnerstruktur zur Verwaltung von QGIS-Projekten kennen und anlegen können\nProjekte in QGIS anlegen können\n\n\n\nÜberprüfen sie die Installation von QGIS und OTB.\nLegen sie ein neues Nutzerprofil mit ihrem Namen an.\nInstallieren sie das OTB-Plugin und hinterlegen sie die korrekten Pfade für die OTB-Programmbibliotheken.\nSichern sie ihr Nutzerprofil an einem permanenten Speicherort.\nLegen sie eine Ordnerstruktur für das Projekt uebung01 an.\nLegen sie innerhalb der Ordnerstruktur eine neues QGIS-Projekt ‘uebung01.qgz’ an.",
+    "text": "QGIS installieren können bzw. überprüfen können welche Version installiert ist.\ndie Funktionsweise von Nutzerprofilen verstehen und anwenden können\neine sinnvolle Ordnerstruktur zur Verwaltung von QGIS-Projekten kennen und anlegen können\nProjekte in QGIS anlegen können\n\n\n\nÜberprüfen sie die Installation von QGIS und OTB.\nLegen sie ein neues Nutzerprofil mit ihrem Namen an.\nInstallieren sie das OTB-Plugin und hinterlegen sie die korrekten Pfade für die OTB-Programmbibliotheken.\nSichern sie ihr Nutzerprofil an einem permanenten Speicherort.\nLegen sie eine Ordnerstruktur für das Projekt uebung01 an.\nLegen sie innerhalb der Ordnerstruktur eine neues QGIS-Projekt ‘uebung01.qgz’ an.",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Lerneinheit 01: Erste Schritte in QGIS</span>"
     ]
@@ -54,7 +54,7 @@
     "href": "uebung02.html#lernziele-aufgabenstellung",
     "title": "3  Lerneinheit 02: Erstellen eines Ortholuftbildmosaiks in der Rfö Kattenbühl",
     "section": "",
-    "text": "verschiedene Rasterdatenformate kennenlernen\nRasterdaten in QGIS importieren\nEigenschaften von Rasterdaten in QGIS untersuchen und manipulieren können\nMehrkanalbilder und Bildmosaike mithilfe von virtuellen Rastern erstellen können\nunterschiedliche Visualisierungsmethoden für Ein- und Mehrkanalrasterbilder nutzen können\n\n\n\nImportieren sie die Grenzen der Rfö. Kattenbühl als Vektordatensatz. Passen sie die Darstellung der Grenzen so an, das sie nur die Außengrenze als Linie angezeigt bekommen.\nImportieren sie die einzelnen Kanäle der Ortholuftbilder und untersuchen sie die Rastereigenschaften\nFügen sie die einzelnen Kanäle zu einem virtuellen Mehrkanalbild zusammen.\nErstellen sie ein virtuelles Orthobildmosaik\nErstellen sie eine echt- und eine falschfarben Darstellungen",
+    "text": "verschiedene Rasterdatenformate kennenlernen\nRasterdaten in QGIS importieren\nEigenschaften von Rasterdaten in QGIS untersuchen und manipulieren können\nMehrkanalbilder und Bildmosaike mithilfe von virtuellen Rastern erstellen können\nunterschiedliche Visualisierungsmethoden für Ein- und Mehrkanalrasterbilder nutzen können\n\n\n\nImportieren sie die einzelnen Kanäle der Ortholuftbilder und untersuchen sie die Rastereigenschaften\nFügen sie die einzelnen Kanäle zu einem virtuellen Mehrkanalbild zusammen.\nErstellen sie ein virtuelles Orthobildmosaik\nErstellen sie eine echt- und eine falschfarben Darstellungen",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Lerneinheit 02: Erstellen eines Ortholuftbildmosaiks in der Rfö Kattenbühl</span>"
     ]
@@ -90,8 +90,8 @@
     ]
   },
   {
-    "objectID": "uebung02.html#echt--und-falschfarben-darstellungen-von-luftbildern",
-    "href": "uebung02.html#echt--und-falschfarben-darstellungen-von-luftbildern",
+    "objectID": "uebung02.html#sec-CIR_darstellung",
+    "href": "uebung02.html#sec-CIR_darstellung",
     "title": "3  Lerneinheit 02: Erstellen eines Ortholuftbildmosaiks in der Rfö Kattenbühl",
     "section": "3.5 Echt- und falschfarben Darstellungen von Luftbildern",
     "text": "3.5 Echt- und falschfarben Darstellungen von Luftbildern\nNach dem ein Mehrkanalraster als virtuelle Datei angelegt wurde, stellt QGIS diese sofort als Farbbild dar. Dabei nutzt QGIS die Standardeinstellungen für Raster und interpretiert die Bänder wie folgt:\nBand 1: blau; Band 2: grün; Band 3: rot.\nEchtfarben Darstellung\nWenn die spektralen Bereiche den entsprechenden Farben zugeordnete werden, also blau zu blau, grün zu grün und rot zu rot, wird das Raster in den echten Farben dargestellt. In vorliegenden Fall ist das bereits korrekt und führt automatisch zu einer Echtfarbendarstellung. Dies muss jedoch nicht immer der Fall sein. Daher ist es wichtig, die Zuordnung der Bänder zu den Farben in den Layereigenschaften zu überprüfen. Dazu mit Rechtsklick auf den jeweiligen VRT-Layer:\n\nEigenschaften → Symbolisierung → Darstellungsart → Multikanal Farbe\n\nHier wird angezeigt, welcher Kanal für rot, grün und für blau verwendet wird.\nColor-Infrarot (CIR) Darstellung\nZur Beobachtung von Wäldern und Pflanzen werden häufig falschfarben Darstellungen gewählt. Sie zeigen nicht die Farben wie sie in der Realität vorgefunden werden, sonden machen besonders Unterschiede in der Vegetation sichtbar. Dazu wird häufig der rote Kanal mit den Reflexionsdaten aus dem Nahen Infrarot Spektrum ersetzt.\nQGIS bietet die Möglichkeit für jeden Layer mehrere Symbolisierungen zu hinterlegen. Dadurch ist es dann möglich sehr einfach zwischen unterschiedlichen Ansichten zu wechseln. Um ein weitere Symbolisierung für einen Layer anzulegen klicken wir mit der rechten Maustaste auf einen Layer und wählen:\n\nStil → Stil hinzufügen → Name: CIR\n\nAnschließend öffnen wie wieder die Symbolisierung des Layers und wählen in der multikanal Darstellung für den roten Kanal das Band 4 (NIR) aus. Dadurch wird nun eine CIR-Falschfarben Darstellung angezeigt.\n\nFrage:\n\nWie unterscheiden sich die Echtfarben- und die CIR-Darstellung?\nWelche Objekte können Sie in der CIR-Darstellung besser erkennen, welche schlechter?",
@@ -107,6 +107,76 @@
     "text": "3.6 Erstellen eine Ortholuftbildmosaiks\nDie Ortholuftbilder werden, wie die meisten Rasterdaten, in sogenannten Kacheln (engl. tiles) z.B. mit einer Größe von 2000 m x 2000 m ausgeliefert. In der Übung haben vier solche Kacheln vorliegen. Zur Abdeckung größere Gebiete werden meistens mehrere Kacheln benötigt. Besonders für große Gebiete kann das sehr aufwendig werden, da die Einstellungen z.B. der Darstellung für jede Kachel einzeln angepasst werden muss. Daher ist es sinnvoll die Kacheln eines zusammenhängenden Gebietes zusammenzuführen. Diese Zusammenstellung mehrere Bilder die räumlich benachbart sind, bezeichnet man in der Fernerkundung häufig als Bildmosaik. QGIS bietet unterschiedliche Möglichkeiten Bildmosaike zu erstellen. Ein Option wäre es mehrere Kacheln zusammenzuführen und als neue GeoTiff-Datei abzuspeichern. Diese hätte den Vorteil, dass wir für das jeweilige Gebiet nur noch eine Datei hätten. Es gibt bei diesem Vorgehen allerdings mehrere Nachteile. Je nach Gebietsgröße werden die Dateien sehr groß. Das kann dann zu sehr langen Ladezeiten führen, wenn man in das Bild zoomt. Außerdem würde auch wieder eine Kopie der Daten angelegt, was zu einem größeren Speicherplatzbedarf führt. Alternativ kann auch für dieses Problem ein virtuelles Raster verwendet werden. Anders als im oberen Abschnitt nutzen wir diese Funktion nun um benachbarten Bilder zusammenzuführen. Voraussetzung dafür ist, dass die Bilder das selbe Koordinatenreferenzsystem nutzen, die räumliche Auflösung und die Anzahl der Bänder identisch ist.\nZum Erstellen eines VRT-Mosaiks nutzen wie wieder:\n\nVerarbeitung →Werkzeugkiste → Virtuelles Raster generieren → Raster → File\n\nDiesmal wählen wir als Input die vier Mehrkanalbilder (VRTs) die wir bereits erzeugt haben. Als Ausgabe definieren wir das VRT le02_Ortholuftbildmosaik.vrt, welches wir im Rasterordner ablegen.\n\n\n\n\n\n\n\nCaution\n\n\n\nDa wir die einzelnen Bilder nebeneinander anordnen wollen wählen wir hier nicht die Option “Place each input file into a speate band”.\n\n\nAls Ergebnis haben wir nun eine VRT-Datei mit der wir gleichzeitig alle Kanäle und alle Bilder darstellen können. Dies ermöglicht es nun sehr einfach auch die Darstellung aller Bilder gleichzeitig und einheitlich anzupassen. Legen sie dazu wie oben beschrieben für das Orthomosaik einen neuen Stil ‘CIR’ an und stellen sie das Mosaik hier als CIR-Abbildung dar.",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Lerneinheit 02: Erstellen eines Ortholuftbildmosaiks in der Rfö Kattenbühl</span>"
+    ]
+  },
+  {
+    "objectID": "uebung03.html",
+    "href": "uebung03.html",
+    "title": "4  Lerneinheit 03: Beschaffung von Geodaten des Stadtwalds Göttingen.",
+    "section": "",
+    "text": "4.1 Lernziele & Aufgabenstellung\nIn der Lerneinheit 02 haben wir vorgestellt, wie Rasterdaten, welche als GeoTIF-Datei auf der Festplatte vorliegen, in ein QGIS-Projekt importiert und dargestellt werden können. Wenn größere Gebiete bearbeitete und / oder sehr hohe räumliche Auflösungen verwendet werden, kann dies sehr schnell zu einem hohen Zeitaufwand und Bedarf an lokalem Speicherplatz -und damit verbunden hohen Kosten für die Hardware- führen. Daher werden im GIS-Bereich zunehmende sogenannte Geodatendienste verwendet. Bei diesen Diensten werden die Daten auf zentralen Servern gespeichert und dem Nutzer einzelne Ausschnitte auf Anfrage ausgeliefert. Dieses Vorgehen bietet mehrere Vorteile:\nIn der Übung sollen aktuelle Daten für den Stadtwald Göttingen dargestellt werden. Dazu sollen die unterschiedlichen Angeboten des Open-Data Niedersachsen Portals des LGLN genutzt werden.\nLernziele\nDie Studierenden sollen:\nAufgaben",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Lerneinheit 03: Beschaffung von Geodaten des Stadtwalds Göttingen.</span>"
+    ]
+  },
+  {
+    "objectID": "uebung03.html#lernziele-aufgabenstellung",
+    "href": "uebung03.html#lernziele-aufgabenstellung",
+    "title": "4  Lerneinheit 03: Beschaffung von Geodaten des Stadtwalds Göttingen.",
+    "section": "",
+    "text": "Nur die in dem jeweiligen Moment notwendigen Daten werden temporär auf dem PC des Nutzers abgelegt\nDie Datenverwaltung erfolgt zentral durch den Betreiber des Geodatendienstes\nAlle Nutzer arbeiten mit einem einheitlichen Datensatz\nAktualisierungen der Daten können einfach an alle Nutzer ausgespielt werden\n\n\n\n\n\ndie unterschiedlichen Schnittstellen von Geodatendienste kennenlernen\nRaster- und Vektordaten als Geodatendienst in QGIS importieren\nEigenschaften von Geodatendiensten in QGIS untersuchen\n\n\n\nLaden sie ein aktuelles Luftbild des Stadtwaldes Göttingen herunter um eine CIR-Darstellung anzulegen.\nBinden sie das aktuelle Ortholuftbildmosaik des LGLN als WMS-Service ein\nFügen sie die Flurstückskarten als WFS-Dienst ein\nFügen sie als Hintergrund die Basemap.de als Vektor-Kacheln hinzu.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Lerneinheit 03: Beschaffung von Geodaten des Stadtwalds Göttingen.</span>"
+    ]
+  },
+  {
+    "objectID": "uebung03.html#aufgabe-0-anlegen-eine-neuen-qgis-projektes",
+    "href": "uebung03.html#aufgabe-0-anlegen-eine-neuen-qgis-projektes",
+    "title": "4  Lerneinheit 03: Beschaffung von Geodaten des Stadtwalds Göttingen.",
+    "section": "4.2 Aufgabe 0: Anlegen eine neuen QGIS-Projektes",
+    "text": "4.2 Aufgabe 0: Anlegen eine neuen QGIS-Projektes\nFolgen sie der Anleitung aus Section 2.3 um eine neue Ordnerstruktur und ein neues QGIS-Projekt für LE03 anzulegen.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Lerneinheit 03: Beschaffung von Geodaten des Stadtwalds Göttingen.</span>"
+    ]
+  },
+  {
+    "objectID": "uebung03.html#aufgabe-01-download-und-cir-darstellung-einesortholuftbildes-des-nordcampus",
+    "href": "uebung03.html#aufgabe-01-download-und-cir-darstellung-einesortholuftbildes-des-nordcampus",
+    "title": "4  Lerneinheit 03: Beschaffung von Geodaten des Stadtwalds Göttingen.",
+    "section": "4.3 Aufgabe 01: Download und CIR-Darstellung einesOrtholuftbildes des Nordcampus",
+    "text": "4.3 Aufgabe 01: Download und CIR-Darstellung einesOrtholuftbildes des Nordcampus\nDas Landesamt für Geoinformation und Landesvermessung Niedersachsen (LGLN) stellt über die OpenGeoDate.NI Plattform offene amtliche Geodaten kostenfrei zur Verfügung. Ein Produkt sind die Digitalen Orthophotos (DOP). Diese können im Viewer des Portals angezeigt und ausgewählt werden.\n\n\n\nScreenshot des LGLN OpenData-Viewers mit der hervorgehobenen Kachel des Nordcampus\n\n\nNutzen sie den LGLN OpenData-Viewer um die Kachel (325665712), die dieses Gebiet abdeckt auszuwählen und das RGBI Bild herunterzuladen. Laden sie zusätzlich die Metadaten als XML-Datei herunter und speichern sie beides in ihrem Projektordner unter “daten”. Importieren sie die GeoTIF-Datei als Rasterbild in ihr QGIS-Projekt und stellen sie es als CIR-Falschfarbenbild dar (siehe dazu auch LE02 Section 3.5 . Nutzen sie anschließend das Metadatenfile um folgende Fragen zu beantworten:\n\nFragen:\n\nAn welchem Tag wurde die Luftbildaufnahme gemacht?\nWelche Kamera wurde für die Luftbildaufnahme verwendet?\nWelches Koordinatenreferenzsystem haben die Rasterbilder?\nWelche räumliche Auflösung haben die Bilder?\nWelche radiometrische Auflösung haben die Bilder?\nWelche spektrale Auflösung haben die Bilder?",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Lerneinheit 03: Beschaffung von Geodaten des Stadtwalds Göttingen.</span>"
+    ]
+  },
+  {
+    "objectID": "uebung03.html#aufgabe-02-einbinden-von-wms-diensten",
+    "href": "uebung03.html#aufgabe-02-einbinden-von-wms-diensten",
+    "title": "4  Lerneinheit 03: Beschaffung von Geodaten des Stadtwalds Göttingen.",
+    "section": "4.4 Aufgabe 02: Einbinden von WMS-Diensten",
+    "text": "4.4 Aufgabe 02: Einbinden von WMS-Diensten\nWie sie in dem OpenData-Viewer erkennen können, bräuchte es zur vollständigen Abdeckung des gesamten Göttinger Stadtwaldes über 35 Ortholuftbildkacheln, was einem Downloadvolumen von ca. \\(35*500=1,7GB\\) entsprechen würde. Für eine reine Darstellung z.B. als Hintergrundkarte oder zur Abgrenzung der Waldgrenzen ist das ein erheblicher Aufwand.\nDas LGLN-OpenData Portal bietet neben dem Downloaddienst auch verschiedene Geodatendienste an. Für die reine Darstellung der Bilder kann ein sogenannter Web Mapping Service (WMS) genutzt werden. WMS-Dienste übertragen bereits gerendertet Bilder. Das bedeutet, dass die original Daten auf dem Server verbleiben und dort alle Einstellungen bzgl. der Symbolisierung und der Farbdarstellung zentral festgelegt werden. Der Nutzer erhält dann bereits gerenderte Bildausschnitte und kann die Darstellung z.B. der einzelnen Farbkanäle nicht mehr ändern. Der Vorteil ist, dass so wesentlich kleinere Datenmengen übertragen werden müssen.\nZum einbinden von Geodatendiensten wird zunächst die URL mit den Geodatendienst benötigt. Sie finden diese URL unter WMS auf der Beschreibung der Ortholuftbildprodukte auf der LGNL-Seite.\nAnschließend nutzen sie in QGIS die Datenquellenverwaltung:\n\nLayer → Datenquellenverwaltung → WMS → neu\n\n\n\n\nEinbinden des LGLN WMS-Dienst mit aktuellen Luftbildern\n\n\nNachdem die Verbindung angelegt wurde, kann QGIS sich mit dem Server verbinden und die Layer können ausgewählt und dem Projekt hinzugefügt werden.\n\n\n\nWMS-Layer dem Projekt hinzufügen\n\n\n\n\n\n\n\n\nTip\n\n\n\nWenn sie sich tiefergehend mit den technischen Details der STAC implementierung beim LGLN auseinandersetzen möchten empfehle ich den Vortrag von Katrin Pinkert und Ralf Wohlfart auf der FOSSGIS 2024:\nhttps://media.ccc.de/v/fossgis2024-38982-bereitstellung-von-freien-geodaten-opendata-mit-stac-beim-lgln#t=372\n\n\n\nFrage:\nVergleichen sie die Pixelwerte eines ausgewählten Pixels in dem WMS- und dem Geotifflayer.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Lerneinheit 03: Beschaffung von Geodaten des Stadtwalds Göttingen.</span>"
+    ]
+  },
+  {
+    "objectID": "uebung03.html#aufgabe-03-einbinden-der-flurstücksgrenzen-als-wfs-dienste",
+    "href": "uebung03.html#aufgabe-03-einbinden-der-flurstücksgrenzen-als-wfs-dienste",
+    "title": "4  Lerneinheit 03: Beschaffung von Geodaten des Stadtwalds Göttingen.",
+    "section": "4.5 Aufgabe 03: Einbinden der Flurstücksgrenzen als WFS-Dienste",
+    "text": "4.5 Aufgabe 03: Einbinden der Flurstücksgrenzen als WFS-Dienste\nNachdem Einbinden der Ortholuftbilder, sollen weitere Geodaten in Form von Vektordaten in das Projekt eingebunden werden. Als Beispiel möchten wir die amtl. Flurstücksgrenzen aus dem Amtlichen Liegenschafts Kataster Informationssystems (ALKIS) nutzen. Diese Daten werden vom LGLN als Web Feature Service (WFS) bereitgestellt. Im Gegensatz zu den WMS-Diensten werden bei WFS keine vorher gerenderten Bilder, sondern die originalen Vektordaten übertragen. Das ermöglicht es den Stil anzupassen und eigenen Geographische Prozessierungen z.B. Buffer, Verschneidungen etc. durchzuführen.\nAuf der ALKIS-Produktseite wird das Produkt vorgestellt. Hier sind auch die URLs für den WFS-Service zu finden. Für die Übung reicht der vereinfachte WFS vollkommen aus.\nZum Einbinden des WFS gehen wir wie folgt vor:\n\nLayer → Datenquellenverwaltung → WFS / OGC API → neu\n\nIn dem Menü kann dann die korrekte URL des Dienstes eingetragen werden\n\n\n\nEinbinden eines WFS-Dienstes\n\n\nNachdem die Verbindung angelegt wurde kann QGIS sich mit dem WFS-Server verbinden und die zur Verfügung stehen den Layer abrufen",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Lerneinheit 03: Beschaffung von Geodaten des Stadtwalds Göttingen.</span>"
+    ]
+  },
+  {
+    "objectID": "uebung03.html#aufgabe-04-hintergrundkarte-als-vektor-kacheln",
+    "href": "uebung03.html#aufgabe-04-hintergrundkarte-als-vektor-kacheln",
+    "title": "4  Lerneinheit 03: Beschaffung von Geodaten des Stadtwalds Göttingen.",
+    "section": "4.6 Aufgabe 04: Hintergrundkarte als Vektor-Kacheln",
+    "text": "4.6 Aufgabe 04: Hintergrundkarte als Vektor-Kacheln\nAls Hintergrund Karten wollen wir einen zusätzlichen Geodatendienst in Form von Vektor-Kacheln nutzen. Basemap ist eine KArtengrundlage die von XXX zur Verfügung gestellt wird. Um diese zu verwenden kann die Verbindungseinstellung per XML-Datei importiert werden. Laden sie sich dazu folgende XML-Datei herunter und speichern sie die Datei lokal auf ihrem Rechner:\nhttps://basemap.de/data/produkte/web_vektor/sonstiges/basemap_de_Web_Vektor_qgis_connection.xml\nAnschließend nutzen sie die XML-Datei um die Verbindung anzulegen:\n\nLayer → Datenquellenverwaltung → Vektorkachel -&gt; laden\n\nEs wird eine neue Datenquelle “basemap.de Farbe” angelegt, die dem Projekt hinzugefügt werden kann.\nhttps://basemap.de/produkte-und-dienste/web-vektor/",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Lerneinheit 03: Beschaffung von Geodaten des Stadtwalds Göttingen.</span>"
     ]
   }
 ]

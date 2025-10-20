@@ -109,7 +109,7 @@ zusammengeführt werden ist es wichtig, dass die Option *"Place each input file 
 band"* aktiviert wird. Unter Virtuell wird die Ausgabedatei angegeben. Diese sollte z.B.
 *LE02/raster/bild_1/bild_1_mehrkanal.vrt* heißen.
 
-## Echt- und falschfarben Darstellungen von Luftbildern
+## Echt- und falschfarben Darstellungen von Luftbildern {#sec-CIR_darstellung}
 
 Nach dem ein Mehrkanalraster als virtuelle Datei angelegt wurde, stellt QGIS diese sofort als
 Farbbild dar. Dabei nutzt QGIS die Standardeinstellungen für Raster und interpretiert die Bänder wie

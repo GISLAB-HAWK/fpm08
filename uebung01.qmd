@@ -1,3 +1,4 @@
+```{=html}
 <!--
 
 Skripte für die Übungen 02 des Moduls FPM08 Forstliche Fernerkundung im Studiengang
@@ -8,6 +9,7 @@ Datum: 2025-10-12
 Lizenz: Creative Commons BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 -->
+```
 
 # Lerneinheit 01: Erste Schritte in QGIS
 
