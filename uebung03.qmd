@@ -5,26 +5,32 @@ Skripte für die Übungen 03 des Moduls FPM08 Forstliche Fernerkundung im Studie
 B.Sc. Forstwirtschaft an der HAWK Göttingen.
 
 Autor: Paul Magdon
-Datum: 2025-10-12
+Datum: 2025-10-18
 Lizenz: Creative Commons BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 -->
 ```
 
-# Lerneinheit 03: Erstellung einer Karte des Stadt Göttingen.
+# Lerneinheit 03: Beschaffung von Geodaten des Stadtwalds Göttingen.
 
 ## Lernziele & Aufgabenstellung
 
-In der Übung01 haben wir vorgestellt, wie Rasterdaten die als GeoTIF-Datei auf der Festplatte
-vorliegen, in ein QGIS-Projekt importiert und dargestellt werden können. Wenn größere Gebiete
-bearbeitete werden oder sehr hohe räumliche Auflösungen verwendet werden, kann diese sehr schnell zu
-einem hohen Bedarf an Speicherkapazität führen. Daher werden im GIS-Bereich zunehmende sogenante
-Geodatendienste verwendet. Bei diesen Diensten werden die Daten auf großen zentralen Servern
-gehostet und dem Nutzer einzelne Ausschnitte auf Anfrage ausgeliefert. Dieses Vorgehen bietet mehere
-Vorteile: \* Nur die in dem jeweiligen Moment notwendigen Daten werden temporär auf dem PC des
-Nutzers abgelegt \* Die Datenverwaltung erfolgt zentral durch den Betrieber des Geodatendienstes \*
-Alle Nutzer arbeiten mit einem einheitlichen Datensatz \* Aktuallisierungen der Daten können einfach
-an alle Nutzer ausgepspielt werden
+In der Lerneinheit 02 haben wir vorgestellt, wie Rasterdaten, welche als GeoTIF-Datei auf der
+Festplatte vorliegen, in ein QGIS-Projekt importiert und dargestellt werden können. Wenn größere
+Gebiete bearbeitete und / oder sehr hohe räumliche Auflösungen verwendet werden, kann dies sehr
+schnell zu einem hohen Zeitaufwand und Bedarf an lokalem Speicherplatz -und damit verbunden hohen
+Kosten für die Hardware- führen. Daher werden im GIS-Bereich zunehmende sogenannte Geodatendienste
+verwendet. Bei diesen Diensten werden die Daten auf zentralen Servern gespeichert und dem Nutzer
+einzelne Ausschnitte auf Anfrage ausgeliefert. Dieses Vorgehen bietet mehrere Vorteile:
+
+-   Nur die in dem jeweiligen Moment notwendigen Daten werden temporär auf dem PC des Nutzers
+    abgelegt
+
+-   Die Datenverwaltung erfolgt zentral durch den Betreiber des Geodatendienstes
+
+-   Alle Nutzer arbeiten mit einem einheitlichen Datensatz
+
+-   Aktualisierungen der Daten können einfach an alle Nutzer ausgespielt werden
 
 In der Übung sollen aktuelle Daten für den Stadtwald Göttingen dargestellt werden. Dazu sollen die
 unterschiedlichen Angeboten des Open-Data Niedersachsen Portals des LGLN genutzt werden.
@@ -33,7 +39,7 @@ unterschiedlichen Angeboten des Open-Data Niedersachsen Portals des LGLN genutzt
 
 Die Studierenden sollen:
 
--   verschiedene Geodatendienste kennenlernen
+-   die unterschiedlichen Schnittstellen von Geodatendienste kennenlernen
 -   Raster- und Vektordaten als Geodatendienst in QGIS importieren
 -   Eigenschaften von Geodatendiensten in QGIS untersuchen
 
@@ -42,22 +48,152 @@ Die Studierenden sollen:
 1.  Laden sie ein aktuelles Luftbild des Stadtwaldes Göttingen herunter um eine CIR-Darstellung
     anzulegen.
 
-2.  Binden sie das aktuelle Luftbild als WMS-Service ein
+2.  Binden sie das aktuelle Ortholuftbildmosaik des LGLN als WMS-Service ein
 
-3.  Binden sie das aktuelle Luftbild als WCS-Service ein
+3.  Fügen sie die Flurstückskarten als WFS-Dienst ein
 
-4.  Fügen sie die Flurstückskarten als WFS-Dienst ein
+4.  Fügen sie als Hintergrund die Basemap.de als Vektor-Kacheln hinzu.
 
-5.  Fügen sie als Hintergrund die Basemap.de als Vektor-Kacheln hinzu.
+## Aufgabe 0: Anlegen eine neuen QGIS-Projektes
 
-## Datei Download
+Folgen sie der Anleitung aus @sec-projekt_management um eine neue Ordnerstruktur und ein neues
+QGIS-Projekt für LE03 anzulegen.
 
-## WMS-Dienste
+## Aufgabe 01: Download und CIR-Darstellung einesOrtholuftbildes des Nordcampus
 
-## WCS-Dienste
+Das Landesamt für Geoinformation und Landesvermessung Niedersachsen (LGLN) stellt über die
+[OpenGeoDate.NI](https://ni-lgln-opengeodata.hub.arcgis.com/pages/opengeodata) Plattform offene
+amtliche Geodaten kostenfrei zur Verfügung. Ein Produkt sind die Digitalen Orthophotos (DOP). Diese
+können im Viewer des Portals angezeigt und ausgewählt werden.
 
-## WFS-Dienste
+![Screenshot des LGLN OpenData-Viewers mit der hervorgehobenen Kachel des
+Nordcampus](images/LE03_screenshot_LGLN_download.png)
 
-## Vektor-Kacheln
+Nutzen sie den LGLN OpenData-Viewer um die Kachel (325665712), die dieses Gebiet abdeckt auszuwählen
+und das RGBI Bild herunterzuladen. Laden sie zusätzlich die Metadaten als XML-Datei herunter und
+speichern sie beides in ihrem Projektordner unter "daten". Importieren sie die GeoTIF-Datei als
+Rasterbild in ihr QGIS-Projekt und stellen sie es als CIR-Falschfarbenbild dar (siehe dazu auch LE02
+@sec-CIR_darstellung . Nutzen sie anschließend das Metadatenfile um folgende Fragen zu beantworten:
+
+::: {style="border: 3px solid #ff8a0b; background-color: #ffffff; padding: 8px;"}
+**Fragen:**
+
+1.  *An welchem Tag wurde die Luftbildaufnahme gemacht?*
+
+2.  *Welche Kamera wurde für die Luftbildaufnahme verwendet?*
+
+3.  *Welches Koordinatenreferenzsystem haben die Rasterbilder?*
+
+4.  *Welche räumliche Auflösung haben die Bilder?*
+
+5.  *Welche radiometrische Auflösung haben die Bilder?*
+
+6.  *Welche spektrale Auflösung haben die Bilder?*
+:::
+
+## Aufgabe 02: Einbinden von WMS-Diensten
+
+Wie sie in dem OpenData-Viewer erkennen können, bräuchte es zur vollständigen Abdeckung des gesamten
+Göttinger Stadtwaldes über 35 Ortholuftbildkacheln, was einem Downloadvolumen von ca. $35*500=1,7GB$
+entsprechen würde. Für eine reine Darstellung z.B. als Hintergrundkarte oder zur Abgrenzung der
+Waldgrenzen ist das ein erheblicher Aufwand.
+
+Das LGLN-OpenData Portal bietet neben dem Downloaddienst auch verschiedene Geodatendienste an. Für
+die reine Darstellung der Bilder kann ein sogenannter Web Mapping Service (WMS) genutzt werden.
+WMS-Dienste übertragen bereits gerendertet Bilder. Das bedeutet, dass die original Daten auf dem
+Server verbleiben und dort alle Einstellungen bzgl. der Symbolisierung und der Farbdarstellung
+zentral festgelegt werden. Der Nutzer erhält dann bereits gerenderte Bildausschnitte und kann die
+Darstellung z.B. der einzelnen Farbkanäle nicht mehr ändern. Der Vorteil ist, dass so wesentlich
+kleinere Datenmengen übertragen werden müssen.
+
+Zum einbinden von Geodatendiensten wird zunächst die URL mit den Geodatendienst benötigt. Sie finden
+diese URL unter WMS auf der Beschreibung der
+[Ortholuftbildprodukte](https://ni-lgln-opengeodata.hub.arcgis.com/apps/lgln-opengeodata::digitales-orthophoto-dop/about)
+auf der LGNL-Seite.
+
+Anschließend nutzen sie in QGIS die Datenquellenverwaltung:
+
+::: {style="border: 2px solid #afca0b; background-color: #fafafa; padding: 8px;"}
+`Layer` → `Datenquellenverwaltung` → `WMS` → `neu`
+:::
+
+![Einbinden des LGLN WMS-Dienst mit aktuellen
+Luftbildern](images/LE03_add_wms_lgln.png){width="407"}
+
+Nachdem die Verbindung angelegt wurde, kann QGIS sich mit dem Server verbinden und die Layer können
+ausgewählt und dem Projekt hinzugefügt werden.
+
+![WMS-Layer dem Projekt hinzufügen](images/LE03_add_wms_layer_lgln.png)
+
+::: callout-tip
+Wenn sie sich tiefergehend mit den technischen Details der STAC implementierung beim LGLN
+auseinandersetzen möchten empfehle ich den Vortrag von Katrin Pinkert und Ralf Wohlfart auf der
+FOSSGIS 2024:
+
+<https://media.ccc.de/v/fossgis2024-38982-bereitstellung-von-freien-geodaten-opendata-mit-stac-beim-lgln#t=372>
+:::
+
+::: {style="border: 3px solid #ff8a0b; background-color: #ffffff; padding: 8px;"}
+**Frage:**
+
+Vergleichen sie die Pixelwerte eines ausgewählten Pixels in dem WMS- und dem Geotifflayer.
+:::
+
+## Aufgabe 03: Einbinden der Flurstücksgrenzen als WFS-Dienste
+
+Nachdem Einbinden der Ortholuftbilder, sollen weitere Geodaten in Form von Vektordaten in das
+Projekt eingebunden werden. Als Beispiel möchten wir die amtl. Flurstücksgrenzen aus dem Amtlichen
+Liegenschafts Kataster Informationssystems (ALKIS) nutzen. Diese Daten werden vom LGLN als Web
+Feature Service (WFS) bereitgestellt. Im Gegensatz zu den WMS-Diensten werden bei WFS keine vorher
+gerenderten Bilder, sondern die originalen Vektordaten übertragen. Das ermöglicht es den Stil
+anzupassen und eigenen Geographische Prozessierungen z.B. Buffer, Verschneidungen etc.
+durchzuführen.
+
+Auf der
+[ALKIS-Produktseite](https://ni-lgln-opengeodata.hub.arcgis.com/apps/lgln-opengeodata::alkis/about)
+wird das Produkt vorgestellt. Hier sind auch die URLs für den WFS-Service zu finden. Für die Übung
+reicht der vereinfachte WFS vollkommen aus.
+
+Zum Einbinden des WFS gehen wir wie folgt vor:
+
+::: {style="border: 2px solid #afca0b; background-color: #fafafa; padding: 8px;"}
+`Layer` → `Datenquellenverwaltung` → `WFS / OGC API` → `neu`
+:::
+
+In dem Menü kann dann die korrekte URL des Dienstes eingetragen werden
+
+![Einbinden eines WFS-Dienstes](images/LE03_add_wfs_lgln.png){width="448"}
+
+Nachdem die Verbindung angelegt wurde kann QGIS sich mit dem WFS-Server verbinden und die zur
+Verfügung stehen den Layer abrufen
+
+## Aufgabe 04: Hintergrundkarte als Vektor-Kacheln
+
+Als Hintergrund Karten wollen wir einen zusätzlichen Geodatendienst in Form von Vektor-Kacheln
+nutzen. Basemap ist eine KArtengrundlage die von XXX zur Verfügung gestellt wird. Um diese zu
+verwenden kann die Verbindungseinstellung per XML-Datei importiert werden. Laden sie sich dazu
+folgende XML-Datei herunter und speichern sie die Datei lokal auf ihrem Rechner:
+
+<https://basemap.de/data/produkte/web_vektor/sonstiges/basemap_de_Web_Vektor_qgis_connection.xml>
+
+Anschließend nutzen sie die XML-Datei um die Verbindung anzulegen:
+
+::: {style="border: 2px solid #afca0b; background-color: #fafafa; padding: 8px;"}
+`Layer` → `Datenquellenverwaltung` → Vektorkachel -\> laden
+:::
+
+Es wird eine neue Datenquelle "basemap.de Farbe" angelegt, die dem Projekt hinzugefügt werden kann.
 
 https://basemap.de/produkte-und-dienste/web-vektor/
+
+```{=html}
+<!--
+## Rettungspunkte als ESRI Shapefile
+
+Das KWF stellt eine Übersicht an Rettungspunkten in Form eines ESRI Shapefiles zur Verfügung. Dieses
+kann hier heruntergeladen werden:
+
+<https://kwf2020.kwf-online.de/rettungspunkte-download-ja/>
+  
+-->
+```

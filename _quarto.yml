@@ -18,6 +18,7 @@ book:
     - index.qmd
     - uebung01.qmd
     - uebung02.qmd
+    - uebung03.qmd
     - references.qmd
 
 bibliography: references.bib
