@@ -1,0 +1,14 @@
+```{=html}
+<!--
+
+Skripte für die Übungen 04 des Moduls FPM08 Forstliche Fernerkundung im Studiengang
+B.Sc. Forstwirtschaft an der HAWK Göttingen.
+
+Autor: Paul Magdon
+Datum: 2025-10-18
+Lizenz: Creative Commons BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
+
+-->
+```
+# Lerneinheit 04: Erstellung einer Satellitenbildkarte des Nationalpark Harz
+## Lernziele & Aufgabenstellung
