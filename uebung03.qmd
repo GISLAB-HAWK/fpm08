@@ -1,4 +1,3 @@
-```{=html}
 <!--
 
 Skripte für die Übungen 03 des Moduls FPM08 Forstliche Fernerkundung im Studiengang
@@ -9,7 +8,7 @@ Datum: 2025-10-12
 Lizenz: Creative Commons BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 -->
-```
+
 
 # Lerneinheit 03: Erstellung einer Karte des Stadt Göttingen.
 
