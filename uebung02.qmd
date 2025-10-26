@@ -8,7 +8,6 @@ Datum: 2025-10-12
 Lizenz: Creative Commons BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 -->
-
 # Lerneinheit 02: Erstellen eines Ortholuftbildmosaiks in der Rfö Kattenbühl
 
 ![Falschfarben Orthomosaik Rfö. Kattenbühl](images/LE02_cover.png){fig-align="center"}
@@ -109,7 +108,7 @@ zusammengeführt werden ist es wichtig, dass die Option *"Place each input file 
 band"* aktiviert wird. Unter Virtuell wird die Ausgabedatei angegeben. Diese sollte z.B.
 *LE02/raster/bild_1/bild_1_mehrkanal.vrt* heißen.
 
-## Echt- und falschfarben Darstellungen von Luftbildern
+## Echt- und falschfarben Darstellungen von Luftbildern {#sec-CIR_darstellung}
 
 Nach dem ein Mehrkanalraster als virtuelle Datei angelegt wurde, stellt QGIS diese sofort als
 Farbbild dar. Dabei nutzt QGIS die Standardeinstellungen für Raster und interpretiert die Bänder wie

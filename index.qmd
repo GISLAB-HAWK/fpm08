@@ -1,16 +1,4 @@
----
-title: 'Forstliche Fernerkundung'
-numbered: false
-author: 'Paul Magdon'
-date: 2025-10-4
-title-block-banner: true
-affiliation-title: Fakutält für Ressourcen Management, HAWK , Göttingen
-description: "Übungsaufgaben"
-github-repo: "geocompx/geocompr"
----
+## Vorwort {.unnumbered}
 
-
-<!-- # Vorwort {- .unnumbered} -->
-
-<!-- Hier finden sie die Materialien für das Modul "Einführung in die forstliche  -->
-<!-- Fernerkundung" des B.Sc. Studiengangs Forstwirtschaft an der HAWK in Göttingen.  -->
+Hier finden sie die Materialien für das Modul *"Einführung in die forstliche Fernerkundung"* des
+B.Sc. Studiengangs Forstwirtschaft an der HAWK in Göttingen.
