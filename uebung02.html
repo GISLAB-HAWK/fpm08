@@ -140,6 +140,12 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./uebung04.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Lerneinheit 04: Erstellung einer Satellitenbildkarte des Nationalpark Harz</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./references.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Referenzen</span></a>
   </div>
@@ -157,7 +163,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#lernziele-aufgabenstellung" id="toc-lernziele-aufgabenstellung" class="nav-link active" data-scroll-target="#lernziele-aufgabenstellung"><span class="header-section-number">2.1</span> Lernziele &amp; Aufgabenstellung</a></li>
   <li><a href="#anlegen-eine-neuen-qgis-projektes" id="toc-anlegen-eine-neuen-qgis-projektes" class="nav-link" data-scroll-target="#anlegen-eine-neuen-qgis-projektes"><span class="header-section-number">2.2</span> Anlegen eine neuen QGIS-Projektes</a></li>
   <li><a href="#import-der-ortholuftbilder" id="toc-import-der-ortholuftbilder" class="nav-link" data-scroll-target="#import-der-ortholuftbilder"><span class="header-section-number">2.3</span> Import der Ortholuftbilder</a></li>
-  <li><a href="#erstellen-von-mehrkanalbildern" id="toc-erstellen-von-mehrkanalbildern" class="nav-link" data-scroll-target="#erstellen-von-mehrkanalbildern"><span class="header-section-number">2.4</span> Erstellen von Mehrkanalbildern</a></li>
+  <li><a href="#sec-mehrkanalbilder" id="toc-sec-mehrkanalbilder" class="nav-link" data-scroll-target="#sec-mehrkanalbilder"><span class="header-section-number">2.4</span> Erstellen von Mehrkanalbildern</a></li>
   <li><a href="#sec-CIR_darstellung" id="toc-sec-CIR_darstellung" class="nav-link" data-scroll-target="#sec-CIR_darstellung"><span class="header-section-number">2.5</span> Echt- und falschfarben Darstellungen von Luftbildern</a></li>
   <li><a href="#erstellen-eine-ortholuftbildmosaiks" id="toc-erstellen-eine-ortholuftbildmosaiks" class="nav-link" data-scroll-target="#erstellen-eine-ortholuftbildmosaiks"><span class="header-section-number">2.6</span> Erstellen eine Ortholuftbildmosaiks</a></li>
   </ul>
@@ -243,8 +249,8 @@ Lizenz: Creative Commons BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc
 </ol>
 </div>
 </section>
-<section id="erstellen-von-mehrkanalbildern" class="level2" data-number="2.4">
-<h2 data-number="2.4" class="anchored" data-anchor-id="erstellen-von-mehrkanalbildern"><span class="header-section-number">2.4</span> Erstellen von Mehrkanalbildern</h2>
+<section id="sec-mehrkanalbilder" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="sec-mehrkanalbilder"><span class="header-section-number">2.4</span> Erstellen von Mehrkanalbildern</h2>
 <p>Nach dem Import der einzelnen Kanäle werden diese in QGIS als Graustufenbilder dargestellt. Damit QGIS diese als Farbbilder darstellen kann, müssen alle Kanäle eines Raster zusammengeführt werden. Dafür gibt es unterschiedliche Optionen. Eine Variante wäre das speichern aller Kanäle in eine neue Rasterdatei mit vier Kanälen. In diesem Fall würden wir aber eine Kopie der Daten anlegen und bräuchten den doppelten Speicherplatz. Eine effiziente Methode um das kopieren von Daten zu verhindern ist es mit virtuellen Rastern zu arbeiten. Dazu wird das GDAL-VRT Formate bereitgestellt (siehe: <a href="https://gdal.org/en/stable/drivers/raster/vrt.html" class="uri">https://gdal.org/en/stable/drivers/raster/vrt.html</a>). Ein virtuelles Raster ist eine kleine Textdatei im XML-Format in der die Pfade und Einstellungen der einzelnen Raster hinterlegt sind. QGIS kann diese Textdateien einlesen und diese Raster dann wie ein Mehrkanalbild verarbeiten.</p>
 <p>Erstellen sie für jedes der vier Bilder ein VRT-Datei in dem jeweiligen Bildordner.</p>
 <div style="border: 2px solid #afca0b; background-color: #fafafa; padding: 8px;">
