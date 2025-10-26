@@ -205,38 +205,38 @@ Lizenz: Creative Commons BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc
 <p><strong>Lernziele</strong></p>
 <p>Die Studierenden sollen:</p>
 <ul>
-<li>die Geodatenportale der Landesvermessungen kennenlernen</li>
-<li>die unterschiedlichen Schnittstellen von Geodatendienste kennenlernen</li>
-<li>Raster- und Vektordaten als Geodatendienst in QGIS importieren</li>
-<li>Eigenschaften von Geodatendiensten in QGIS untersuchen</li>
+<li>den Dataspace des Copernicus-Programms der Europäischen Raumfahrt Agentur (ESA) kennen lernen</li>
+<li>lernen nach Sentinel-2 Satellitenbilder für bestimmte Regionen und Zeitpunkte zu suchen und herunterzuladen</li>
+<li>die Ordnerstrukturen von Sentinel-2 Datenprodukten kennen lernen und die Satellitenbilder in QGIS importieren können.</li>
+<li>Rasterdaten auf Untersuchungsgebiete zuschneiden können.</li>
 </ul>
 <p><strong>Aufgaben</strong></p>
 <ol type="1">
 <li>Suchen sie im Copernicus Dataspace nach einer geeigneten Sentinel-2 Aufnahme aus dem 06-2025 und laden sie diese S2-Kachel herunter.</li>
-<li>Untersuchen sie die Ordnerstruktur des Satellitebproduktes und importieren sie die Bänder B02, B03, B04 und B08 mit einer räumlichen Auflösung von 10 m.</li>
-<li>Erstellen Sie ein CIR-Bild des westlichen Teils des NP-Harzes</li>
-<li></li>
+<li>Untersuchen sie die Ordnerstruktur des Satellitenproduktes und importieren sie die Bänder B02, B03, B04 und B08 mit einer räumlichen Auflösung von 10 m.</li>
+<li>Erstellen Sie ein CIR-Satellitenbildmosaik des NP-Harzes</li>
+<li>Schneiden Sie das Satellitenbildmosaik auf die Außengrenzen des NP Harz +1000m Pufffer zu und maskieren sie alle Werte außerhalb des Puffers.</li>
 </ol>
 </section>
 <section id="aufgabe-0-anlegen-eine-neuen-qgis-projektes" class="level2" data-number="4.2">
 <h2 data-number="4.2" class="anchored" data-anchor-id="aufgabe-0-anlegen-eine-neuen-qgis-projektes"><span class="header-section-number">4.2</span> Aufgabe 0: Anlegen eine neuen QGIS-Projektes</h2>
-<p>Folgen sie der Anleitung aus <a href="uebung01.html#sec-projekt_management" class="quarto-xref"><span>Section 1.3</span></a> um eine neue Ordnerstruktur und ein neues QGIS-Projekt für LE03 anzulegen.</p>
+<p>Folgen sie der Anleitung aus LE01 <a href="uebung01.html#sec-projekt_management" class="quarto-xref"><span>Section 1.3</span></a> um eine neue Ordnerstruktur und ein neues QGIS-Projekt für LE04 anzulegen.</p>
 </section>
 <section id="aufgabe-01-recherche-und-download-eines-aktuellen-sentinel-2-satellitenbildes" class="level2" data-number="4.3">
 <h2 data-number="4.3" class="anchored" data-anchor-id="aufgabe-01-recherche-und-download-eines-aktuellen-sentinel-2-satellitenbildes"><span class="header-section-number">4.3</span> Aufgabe 01: Recherche und Download eines aktuellen Sentinel-2 Satellitenbildes</h2>
 <p>Die Europäische Raumfahrt Agentur (ESA) stellt das gesamte Archiv der Copernicus Daten kostenfrei als offenen Datensatz zur Verfügung. Zur Suche und für den Download solcher Daten wird das online Datenportal <a href="https://dataspace.copernicus.eu/" class="uri">https://dataspace.copernicus.eu/</a> betrieben. Für die Nutzung des Portals ist eine einmalige kostenfreie Registrierung notwendig um einen Nutzernamen und ein Passwort zu erhalten.</p>
-<p>Nach der erfolgreichen Registrierung kann ein Login auf der Homepage erfolgen. Für die Suche nach Daten wird der Copernicus Browser unter folgender URL angeboten:</p>
+<p>Nach der erfolgreichen Registrierung kann ein Login auf der Homepage erfolgen. Für die Suche nach Daten wird der Copernicus-Browser unter folgender URL angeboten:</p>
 <p><a href="https://browser.dataspace.copernicus.eu" class="uri">https://browser.dataspace.copernicus.eu</a></p>
-<p>Der Browser bietet umfrangreiche Möglichkeient nach Geodatenprodukten zu suchen.</p>
+<p>Der Browser bietet umfangreiche Möglichkeiten nach Geodatenprodukten zu suchen.</p>
 <p><strong>Festlegen der Area of Interest (AOI)</strong></p>
-<p>Dazu kann eine Geometrien des Untersuchungsgebietes verwendet werden. Als mögliches Datenformat für die Definition der Geometrie akzeptiert der Copernicus-Browser GeoJSON. Das ist ein Text-basiertes Format zum speichern von Vektordaten. Für die Übung soll die Außengrenze des NP-Harz genutzt werden. Das entsprechende GeoJSON kann hier heruntergeladen werden:</p>
+<p>Dazu kann eine Geometrien des Untersuchungsgebietes verwendet werden. Als mögliches Datenformat für die Definition der Geometrie akzeptiert der Copernicus-Browser GeoJSON. Das ist ein Text-basiertes Format zum speichern von Vektordaten (siehe auch <a href="https://de.wikipedia.org/wiki/GeoJSON" class="uri">https://de.wikipedia.org/wiki/GeoJSON</a>). Für die Übung soll die Außengrenze des NP-Harz genutzt werden. Das entsprechende GeoJSON kann hier heruntergeladen werden:</p>
 <p><a href="https://cloud.hawk.de/index.php/s/2Zg8raN2qsHMyZf" class="uri">https://cloud.hawk.de/index.php/s/2Zg8raN2qsHMyZf</a></p>
 <p>Speichern sie diese Datei in ihrem Projektordner im Unterordner <em>“daten”</em>. Diese Datei kann sowohl mit QGIS als auch mit einem Texteditor (z.B. Editor, WordPad, Notepad++) geöffnet werden. Öffen sie die Datei in einem Texteditor und kopieren sie alle Zeilen des GeoJSON-Datei.</p>
 <p>Im Copernicus-Browser kann nun eine Area of Interest (AOI) mit diesen Informationen angelegt werden. Dazu rechts oben auf das Polygonsymbol klicken und den Upload Icon auswählen. In das Textfeld des Dialogs den kopierten Inhalte des GeoJSON einfügen.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/LE04_dataspace_area_definition.png" class="img-fluid figure-img"></p>
-<figcaption>Upload der Gebietsgrenzen als GeoJSON</figcaption>
+<p><img src="images/LE04_dataspace_area_definition.png" class="img-fluid figure-img" width="719"></p>
+<figcaption>Upload der Gebietsgrenzen als GeoJSON in den Copernicus-Browser.</figcaption>
 </figure>
 </div>
 <p>Nach dem erfolgreichen Upload werden die Außengrenzen des Nationalparks Harz im Browser angezeigt.</p>
@@ -245,15 +245,15 @@ Lizenz: Creative Commons BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc
 <ul>
 <li><p>Sensor: MSI (Multispectral Instrument)</p></li>
 <li><p>Cloud Cover: &lt;10 %</p></li>
-<li><p>L2A</p></li>
+<li><p>Produkttyp: L2A</p></li>
 </ul>
-<p>Im Abschnitt “Time Range” kann festgelegt werden in welchem Zeitraum wird Bilder suchen. Für die Übung möchten wir eine Aufnahme aus dem Juni 2025 suchen:</p>
+<p>Im Abschnitt “Time Range” kann festgelegt werden, in welchem Zeitraum Bilder gesucht werden. Für die Übung möchten wir eine Aufnahme aus dem Juni 2025 suchen und setzen daher folgende Werte:</p>
 <p>Time Range:</p>
 <ul>
 <li><p>From: <em>2025-06-01</em></p></li>
 <li><p>Until: <em>2025-06-30</em></p></li>
 </ul>
-<p>Die Ergebnisliste zeigt mehrere Aufnahmen, welche unseren Kriterien entsprechen. Keine der Aufnahmen deckt den gesamten Bereich des Nationalparks ab. Für die Übung wählen wir die zwei Kacheln vom 12.6.2025 welche den Nationalpark abdecken:</p>
+<p>Nachdem die Suche gestartet wurde wird eine Ergebnisliste angezeigt die alle Aufnahmen, welche unseren Kriterien entsprechen, enthält. Aufgrund der Aufteilung der S2-Kacheln deckt keine der Aufnahmen den gesamten Bereich des Nationalparks ab. Für die Übung wählen wir daher die beiden Kacheln vom 12.6.2025 welche den Nationalpark abdecken:</p>
 <ul>
 <li><p><em>S2B_MSIL2A_20250612T102559_N0511_R108_T32UNC_20250612T131505.SAFE</em></p></li>
 <li><p><em>S2B_MSIL2A_20250612T102559_N0511_R108_T32UPC_20250612T131505.SAFE</em></p></li>
@@ -268,11 +268,11 @@ Lizenz: Creative Commons BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc
 <li><p>Welche Dateigröße hat eine der beiden S2-Kacheln?</p></li>
 </ol>
 </div>
-<p>Laden sie anschließend die gesamte Szene als Datei herunter und speicher sie die ZIP-Datei in ihrem Projektordner unter “daten”.</p>
+<p>Laden sie anschließend jeweils die gesamte Szene als Datei herunter und speicher sie die ZIP-Datei in ihrem Projektordner unter “daten”.</p>
 </section>
 <section id="aufgabe-02-import-der-satellitendaten-in-qgis" class="level2" data-number="4.4">
 <h2 data-number="4.4" class="anchored" data-anchor-id="aufgabe-02-import-der-satellitendaten-in-qgis"><span class="header-section-number">4.4</span> Aufgabe 02: Import der Satellitendaten in QGIS</h2>
-<p>Die Satellitenprodukte werden von der ESA in einer standardisierten Struktur gespeichert und ausgegeben. Nach dem Entpacken der ZIP-Datei finden sie folgende Ordnerstruktur:</p>
+<p>Die Satellitenprodukte werden von der ESA in einer standardisierten Struktur gespeichert und ausgeliefert. Eine detailierte Beschreibung der Produkte finden sie in der Dokumentation unter: <a href="https://sentiwiki.copernicus.eu/web/s2-products" class="uri">https://sentiwiki.copernicus.eu/web/s2-products</a>. Nach dem Entpacken der ZIP-Datei finden sie folgende Ordnerstruktur:</p>
 <pre class="plaintext"><code>S2B_MSIL2A_20250612T102559_N0511_R108_T32UNC_20250612T131505.SAFE/
 ├── DATASTRIP/
 │   └── raster_1.tif
@@ -294,7 +294,6 @@ Lizenz: Creative Commons BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc
 |   |    └──QI_DATA
 |   &lt;    └──MTD_TL.xml
 ├── HTML/
-│   └── baumartenkarte.pdf
 ├── rep_Info/
 ├── inspire.xml
 ├── manifest.safe
