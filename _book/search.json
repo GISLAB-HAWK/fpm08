@@ -90,8 +90,8 @@
     ]
   },
   {
-    "objectID": "uebung02.html#erstellen-von-mehrkanalbildern",
-    "href": "uebung02.html#erstellen-von-mehrkanalbildern",
+    "objectID": "uebung02.html#sec-mehrkanalbilder",
+    "href": "uebung02.html#sec-mehrkanalbilder",
     "title": "2  Lerneinheit 02: Erstellen eines Ortholuftbildmosaiks in der Rfö Kattenbühl",
     "section": "2.4 Erstellen von Mehrkanalbildern",
     "text": "2.4 Erstellen von Mehrkanalbildern\nNach dem Import der einzelnen Kanäle werden diese in QGIS als Graustufenbilder dargestellt. Damit QGIS diese als Farbbilder darstellen kann, müssen alle Kanäle eines Raster zusammengeführt werden. Dafür gibt es unterschiedliche Optionen. Eine Variante wäre das speichern aller Kanäle in eine neue Rasterdatei mit vier Kanälen. In diesem Fall würden wir aber eine Kopie der Daten anlegen und bräuchten den doppelten Speicherplatz. Eine effiziente Methode um das kopieren von Daten zu verhindern ist es mit virtuellen Rastern zu arbeiten. Dazu wird das GDAL-VRT Formate bereitgestellt (siehe: https://gdal.org/en/stable/drivers/raster/vrt.html). Ein virtuelles Raster ist eine kleine Textdatei im XML-Format in der die Pfade und Einstellungen der einzelnen Raster hinterlegt sind. QGIS kann diese Textdateien einlesen und diese Raster dann wie ein Mehrkanalbild verarbeiten.\nErstellen sie für jedes der vier Bilder ein VRT-Datei in dem jeweiligen Bildordner.\n\nVerarbeitung →Werkzeugkiste → Virtuelles Raster generieren → Raster → File\n\n\n\n\nAnlegen eines VRT-Rasters\n\n\nIm ersten Schritt werden unter Input layers die vier Bänder ausgewählt. wichtig ist hier das die Reihenfolge der Bänder aufsteigend angezeigt wird (b1,b2,b3,b4). Sollte das nicht der Fall sein kann die Reihenfolge per drag&drop in dem Menü entsprechend angepasst werden. Da mehrerer Bänder zusammengeführt werden ist es wichtig, dass die Option “Place each input file into a separate band” aktiviert wird. Unter Virtuell wird die Ausgabedatei angegeben. Diese sollte z.B. LE02/raster/bild_1/bild_1_mehrkanal.vrt heißen.",
@@ -160,8 +160,8 @@
     ]
   },
   {
-    "objectID": "uebung03.html#aufgabe-02-einbinden-von-wms-diensten-zur-darstellung-von-ortholuftbildern",
-    "href": "uebung03.html#aufgabe-02-einbinden-von-wms-diensten-zur-darstellung-von-ortholuftbildern",
+    "objectID": "uebung03.html#sec-wms",
+    "href": "uebung03.html#sec-wms",
     "title": "3  Lerneinheit 03: Beschaffung von Geodaten für den Nordcampus Göttingen",
     "section": "3.4 Aufgabe 02: Einbinden von WMS-Diensten zur Darstellung von Ortholuftbildern",
     "text": "3.4 Aufgabe 02: Einbinden von WMS-Diensten zur Darstellung von Ortholuftbildern\nWie sie in dem OpenData-Viewer erkennen können, bräuchte es zur vollständigen Abdeckung des gesamten Göttinger Stadtwaldes über 35 Ortholuftbildkacheln, was einem Downloadvolumen von ca. \\(35*500=1,7GB\\) entsprechen würde. Für eine reine Darstellung z.B. als Hintergrundkarte oder zur Abgrenzung der Waldgrenzen ist das ein erheblicher Aufwand.\nDas LGLN-OpenData Portal bietet neben dem Downloaddienst auch verschiedene Geodatendienste an. Für die reine Darstellung der Bilder kann ein sogenannter Web Mapping Service (WMS) genutzt werden. WMS-Dienste übertragen bereits gerendertet Bilder. Das bedeutet, dass die original Daten auf dem Server verbleiben und dort alle Einstellungen bzgl. der Symbolisierung und der Farbdarstellung zentral festgelegt werden. Der Nutzer erhält dann bereits gerenderte Bildausschnitte und kann die Darstellung z.B. der einzelnen Farbkanäle nicht mehr ändern. Der Vorteil ist, dass so wesentlich kleinere Datenmengen übertragen werden müssen.\nZum einbinden von Geodatendiensten wird zunächst die URL mit den Geodatendienst benötigt. Sie finden diese URL unter WMS auf der Beschreibung der Ortholuftbildprodukte auf der LGNL-Seite.\nAnschließend nutzen sie in QGIS die Datenquellenverwaltung:\n\nLayer → Datenquellenverwaltung → WMS → neu\n\n\n\n\nEinbinden des LGLN WMS-Dienst mit aktuellen Luftbildern\n\n\nNachdem die Verbindung angelegt wurde, kann QGIS sich mit dem Server verbinden und die Layer können ausgewählt und dem Projekt hinzugefügt werden.\n \n\nFrage:\nVergleichen sie die Pixelwerte eines ausgewählten Pixels in dem WMS-DOP und dem Geotiff Layer.",
@@ -197,6 +197,76 @@
     "text": "3.7 Aufgabe 05: Sicher des Nutzerprofils\nSie haben nun mehrere neue Datenquellen angelegt. QGIS speichert diese Datenquellen in ihrem Nutzerprofil. Beim nächsten Start von QGIS können diese Quellen wieder verwendet werden. Daher ist jetzt ein guter Zeitpunkt die Kopie ihres Nutzerprofils erneut zu sichern. Folgen Sie dazu der Anleitung in LE01 Section 1.2.4",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Lerneinheit 03: Beschaffung von Geodaten für den Nordcampus Göttingen</span>"
+    ]
+  },
+  {
+    "objectID": "uebung04.html",
+    "href": "uebung04.html",
+    "title": "4  Lerneinheit 04: Erstellung einer Satellitenbildkarte des Nationalpark Harz",
+    "section": "",
+    "text": "4.1 Lernziele & Aufgabenstellung\nSatellitenbilder stellen eine wichtige Grundlage in Fernerkundungsprojekten dar. Das Copernicus-Programm der Europäischen Union betreibt eine Flotte von Erdbeobachtungssatelliten, die zunehmend im forstlichen Monitoring verwendet werden. In dieser Einheit werden wir das Sentinel-2 Satellitensystem vorstellen und die Eigenschaften der verfügbaren Produkte diskutieren. Dazu soll eine Satellitenbildkarte des Nationalpark Harz erstellt werden. Die Grenzen des NP Harz sollen für die Internet-Präsenz auf aktuellen Satellitenbildkarten dargestellt werden. Diese können auch z.B. als Grundlage für die Planung von Feldaufnahmen oder für die visuelle Erfassung einzelner Waldteile dienen.\nLernziele\nDie Studierenden sollen:\nAufgaben",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Lerneinheit 04: Erstellung einer Satellitenbildkarte des Nationalpark Harz</span>"
+    ]
+  },
+  {
+    "objectID": "uebung04.html#lernziele-aufgabenstellung",
+    "href": "uebung04.html#lernziele-aufgabenstellung",
+    "title": "4  Lerneinheit 04: Erstellung einer Satellitenbildkarte des Nationalpark Harz",
+    "section": "",
+    "text": "die Geodatenportale der Landesvermessungen kennenlernen\ndie unterschiedlichen Schnittstellen von Geodatendienste kennenlernen\nRaster- und Vektordaten als Geodatendienst in QGIS importieren\nEigenschaften von Geodatendiensten in QGIS untersuchen\n\n\n\nSuchen sie im Copernicus Dataspace nach einer geeigneten Sentinel-2 Aufnahme aus dem 06-2025 und laden sie diese S2-Kachel herunter.\nUntersuchen sie die Ordnerstruktur des Satellitebproduktes und importieren sie die Bänder B02, B03, B04 und B08 mit einer räumlichen Auflösung von 10 m.\nErstellen Sie ein CIR-Bild des westlichen Teils des NP-Harzes",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Lerneinheit 04: Erstellung einer Satellitenbildkarte des Nationalpark Harz</span>"
+    ]
+  },
+  {
+    "objectID": "uebung04.html#aufgabe-0-anlegen-eine-neuen-qgis-projektes",
+    "href": "uebung04.html#aufgabe-0-anlegen-eine-neuen-qgis-projektes",
+    "title": "4  Lerneinheit 04: Erstellung einer Satellitenbildkarte des Nationalpark Harz",
+    "section": "4.2 Aufgabe 0: Anlegen eine neuen QGIS-Projektes",
+    "text": "4.2 Aufgabe 0: Anlegen eine neuen QGIS-Projektes\nFolgen sie der Anleitung aus Section 1.3 um eine neue Ordnerstruktur und ein neues QGIS-Projekt für LE03 anzulegen.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Lerneinheit 04: Erstellung einer Satellitenbildkarte des Nationalpark Harz</span>"
+    ]
+  },
+  {
+    "objectID": "uebung04.html#aufgabe-01-recherche-und-download-eines-aktuellen-sentinel-2-satellitenbildes",
+    "href": "uebung04.html#aufgabe-01-recherche-und-download-eines-aktuellen-sentinel-2-satellitenbildes",
+    "title": "4  Lerneinheit 04: Erstellung einer Satellitenbildkarte des Nationalpark Harz",
+    "section": "4.3 Aufgabe 01: Recherche und Download eines aktuellen Sentinel-2 Satellitenbildes",
+    "text": "4.3 Aufgabe 01: Recherche und Download eines aktuellen Sentinel-2 Satellitenbildes\nDie Europäische Raumfahrt Agentur (ESA) stellt das gesamte Archiv der Copernicus Daten kostenfrei als offenen Datensatz zur Verfügung. Zur Suche und für den Download solcher Daten wird das online Datenportal https://dataspace.copernicus.eu/ betrieben. Für die Nutzung des Portals ist eine einmalige kostenfreie Registrierung notwendig um einen Nutzernamen und ein Passwort zu erhalten.\nNach der erfolgreichen Registrierung kann ein Login auf der Homepage erfolgen. Für die Suche nach Daten wird der Copernicus Browser unter folgender URL angeboten:\nhttps://browser.dataspace.copernicus.eu\nDer Browser bietet umfrangreiche Möglichkeient nach Geodatenprodukten zu suchen.\nFestlegen der Area of Interest (AOI)\nDazu kann eine Geometrien des Untersuchungsgebietes verwendet werden. Als mögliches Datenformat für die Definition der Geometrie akzeptiert der Copernicus-Browser GeoJSON. Das ist ein Text-basiertes Format zum speichern von Vektordaten. Für die Übung soll die Außengrenze des NP-Harz genutzt werden. Das entsprechende GeoJSON kann hier heruntergeladen werden:\nhttps://cloud.hawk.de/index.php/s/2Zg8raN2qsHMyZf\nSpeichern sie diese Datei in ihrem Projektordner im Unterordner “daten”. Diese Datei kann sowohl mit QGIS als auch mit einem Texteditor (z.B. Editor, WordPad, Notepad++) geöffnet werden. Öffen sie die Datei in einem Texteditor und kopieren sie alle Zeilen des GeoJSON-Datei.\nIm Copernicus-Browser kann nun eine Area of Interest (AOI) mit diesen Informationen angelegt werden. Dazu rechts oben auf das Polygonsymbol klicken und den Upload Icon auswählen. In das Textfeld des Dialogs den kopierten Inhalte des GeoJSON einfügen.\n\n\n\nUpload der Gebietsgrenzen als GeoJSON\n\n\nNach dem erfolgreichen Upload werden die Außengrenzen des Nationalparks Harz im Browser angezeigt.\nAuswahl und Download der gewünschten Produkte\nAuf der linken Seite des Browsers können die gesuchten Produkte spezifiziert werden. In der Lerneinheit arbeiten wir mit Produkten des Sentinel-2 Systems. Zusätzlich können Filter gesetzt werden:\n\nSensor: MSI (Multispectral Instrument)\nCloud Cover: &lt;10 %\nL2A\n\nIm Abschnitt “Time Range” kann festgelegt werden in welchem Zeitraum wird Bilder suchen. Für die Übung möchten wir eine Aufnahme aus dem Juni 2025 suchen:\nTime Range:\n\nFrom: 2025-06-01\nUntil: 2025-06-30\n\nDie Ergebnisliste zeigt mehrere Aufnahmen, welche unseren Kriterien entsprechen. Keine der Aufnahmen deckt den gesamten Bereich des Nationalparks ab. Für die Übung wählen wir die zwei Kacheln vom 12.6.2025 welche den Nationalpark abdecken:\n\nS2B_MSIL2A_20250612T102559_N0511_R108_T32UNC_20250612T131505.SAFE\nS2B_MSIL2A_20250612T102559_N0511_R108_T32UPC_20250612T131505.SAFE\n\nWählen sie diese Aufnahmen aus und beantworten sie mithilfe des Copernicus-Browsers folgende Fragen:\n\nFragen:\n\nUm welche Uhrzeit wurde die Aufnahme gemacht?\nWie hoch ist der Wolkenanteil der gesamten S2-Kachel?\nWelcher der drei Sentinel-2 Satelliten hat die Aufnahme gemacht?\nWelche Dateigröße hat eine der beiden S2-Kacheln?\n\n\nLaden sie anschließend die gesamte Szene als Datei herunter und speicher sie die ZIP-Datei in ihrem Projektordner unter “daten”.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Lerneinheit 04: Erstellung einer Satellitenbildkarte des Nationalpark Harz</span>"
+    ]
+  },
+  {
+    "objectID": "uebung04.html#aufgabe-02-import-der-satellitendaten-in-qgis",
+    "href": "uebung04.html#aufgabe-02-import-der-satellitendaten-in-qgis",
+    "title": "4  Lerneinheit 04: Erstellung einer Satellitenbildkarte des Nationalpark Harz",
+    "section": "4.4 Aufgabe 02: Import der Satellitendaten in QGIS",
+    "text": "4.4 Aufgabe 02: Import der Satellitendaten in QGIS\nDie Satellitenprodukte werden von der ESA in einer standardisierten Struktur gespeichert und ausgegeben. Nach dem Entpacken der ZIP-Datei finden sie folgende Ordnerstruktur:\nS2B_MSIL2A_20250612T102559_N0511_R108_T32UNC_20250612T131505.SAFE/\n├── DATASTRIP/\n│   └── raster_1.tif\n|   └── raster_2.tif\n├── GRANULE/\n│   └── L2A_T32UNC_20250612T103519\n|   |    └──AUX_DATA\n|   |    └──IMG_DATA\n|   |    |   └──R10m \n|   |    |   |   └──T32UNC_20250612T102559_AOT_10m.jp2\n|   |    |   |   └──T32UNC_20250612T102559_B02_10m.jp2\n|   |    |   |   └──T32UNC_20250612T102559_B03_10m.jp2\n|   |    |   |   └──T32UNC_20250612T102559_B04_10m.jp2\n|   |    |   |   └──T32UNC_20250612T102559_B08_10m.jp2\n|   |    |   |   └──T32UNC_20250612T102559_TCI_10m.jp2\n|   |    |   |   └──T32UNC_20250612T102559_WVP_10m.jp2\n|   |    |   └──R20m \n|   |    |   └──R60m \n|   |    └──QI_DATA\n|   &lt;    └──MTD_TL.xml\n├── HTML/\n│   └── baumartenkarte.pdf\n├── rep_Info/\n├── inspire.xml\n├── manifest.safe\n├── MTD_MSIL2A.xml\n├── S2B_MSIL2A_20250612T102559_N0511_R108_T32UNC_20250612T131505-ql.jpg  \nFügen sie die Bänder B02, B03,B04 und B08 mit einer räumlichen Auflösung zu ihrem QGIS-Projekt hinzu.\n\nOrdnen sie die Bandnummern des Sentinel-2 MSI den Spektralbereichen zu (z.B. rot):\nB02 =\nB03 =\nB04 =\nB08 =",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Lerneinheit 04: Erstellung einer Satellitenbildkarte des Nationalpark Harz</span>"
+    ]
+  },
+  {
+    "objectID": "uebung04.html#aufgabe-03-erstellen-eines-cir-falschfarbenbildes",
+    "href": "uebung04.html#aufgabe-03-erstellen-eines-cir-falschfarbenbildes",
+    "title": "4  Lerneinheit 04: Erstellung einer Satellitenbildkarte des Nationalpark Harz",
+    "section": "4.5 Aufgabe 03: Erstellen eines CIR-Falschfarbenbildes",
+    "text": "4.5 Aufgabe 03: Erstellen eines CIR-Falschfarbenbildes\nErstellen sie für beide KAcheln ein virtuelles Mehrkanalraster, speichern sie das virtuelle Raster unter S2B_MSIL2A_20250612T102559_N0511_R108_T32UNC_20250612T131505.vrt und S2B_MSIL2A_20250612T102559_N0511_R108_T32UPC_20250612T131505.vrt ab. Erstellen sie anschließend ein vituellles Satellitenbildmosaik und stellen sie es in QGIS als CIR-Bild dar. Folgen sie dazu auch der Anleitung aus der LE02 Section 2.4.\n\nVergleichen sie die CIR-Darstellung innerhalb und außerhalb des Nationalparks:\n1.) Welche Unterschiede in den Farben können sie feststellen?\n2.) Wie interpretieren Sie diese Unterschiede?\n\nZur Beantwortung der 2. Frage ist es hilfreich das aktuelle DOP20 Luftbild der LGLN einzubinden. Siehe dazu auch Section 3.4 in LE03.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Lerneinheit 04: Erstellung einer Satellitenbildkarte des Nationalpark Harz</span>"
+    ]
+  },
+  {
+    "objectID": "uebung04.html#aufgabe-04-zuschneiden-des-satellitenbildmosaiks",
+    "href": "uebung04.html#aufgabe-04-zuschneiden-des-satellitenbildmosaiks",
+    "title": "4  Lerneinheit 04: Erstellung einer Satellitenbildkarte des Nationalpark Harz",
+    "section": "4.6 Aufgabe 04: Zuschneiden des Satellitenbildmosaiks",
+    "text": "4.6 Aufgabe 04: Zuschneiden des Satellitenbildmosaiks\nDie beide original S2-Kacheln decken ca. 100 x 100km ab. Der Bereich ist also deutlich größer als der gesamte Harz. Um diesen Bereich zu verkleiner sollen die Satellitenbilder auf den Nationalpark zugeschnitten werden. Um die Grenzen trotzdem gut darstellen zu können, so ein Puffer von 1000 m um die Außengrenzen des Parks gelegt werden.\nAußengrenze Puffern\nSpeichern sie das GeoJSON der Nationalparkgrenze als Geopackage in Unterordner “daten” ab. Achten sie dabei darauf das Koordinatenbezugssystem (kbs) auf EPSG:25832 zu stellen. Führen sie anschließend einen Puffer von 1000 m durch.\nBild zuschneiden und maskieren\nZum Maskieren und zuschneiden nutzen Sie anschließend die Funktion:\n\nRaster →Extraktion → Raster auf Layermaske zuschneiden\n\nSpeichern sie das neue Raster unter dem Namen NP_Harz_2025_06_12 als GeoTIFF im Unterordner “daten” ab und laden sie die Satellitenbildkarte als CIR-Falschfarbenbild in QGIS. Überlagern sie das Bild mit den originalen Außengrenzen des Nationalparks.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Lerneinheit 04: Erstellung einer Satellitenbildkarte des Nationalpark Harz</span>"
     ]
   }
 ]

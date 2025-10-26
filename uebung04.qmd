@@ -10,5 +10,216 @@ Lizenz: Creative Commons BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc
 
 -->
 ```
+
 # Lerneinheit 04: Erstellung einer Satellitenbildkarte des Nationalpark Harz
+
+![](images/LE04_cover_image.png)
+
 ## Lernziele & Aufgabenstellung
+
+Satellitenbilder stellen eine wichtige Grundlage in Fernerkundungsprojekten dar. Das
+Copernicus-Programm der Europäischen Union betreibt eine Flotte von Erdbeobachtungssatelliten, die
+zunehmend im forstlichen Monitoring verwendet werden. In dieser Einheit werden wir das Sentinel-2
+Satellitensystem vorstellen und die Eigenschaften der verfügbaren Produkte diskutieren. Dazu soll
+eine Satellitenbildkarte des Nationalpark Harz erstellt werden. Die Grenzen des NP Harz sollen für
+die Internet-Präsenz auf aktuellen Satellitenbildkarten dargestellt werden. Diese können auch z.B.
+als Grundlage für die Planung von Feldaufnahmen oder für die visuelle Erfassung einzelner Waldteile
+dienen.
+
+**Lernziele**
+
+Die Studierenden sollen:
+
+-   die Geodatenportale der Landesvermessungen kennenlernen
+-   die unterschiedlichen Schnittstellen von Geodatendienste kennenlernen
+-   Raster- und Vektordaten als Geodatendienst in QGIS importieren
+-   Eigenschaften von Geodatendiensten in QGIS untersuchen
+
+**Aufgaben**
+
+1.  Suchen sie im Copernicus Dataspace nach einer geeigneten Sentinel-2 Aufnahme aus dem 06-2025 und
+    laden sie diese S2-Kachel herunter.
+2.  Untersuchen sie die Ordnerstruktur des Satellitebproduktes und importieren sie die Bänder B02,
+    B03, B04 und B08 mit einer räumlichen Auflösung von 10 m.
+3.  Erstellen Sie ein CIR-Bild des westlichen Teils des NP-Harzes
+4.  
+
+## Aufgabe 0: Anlegen eine neuen QGIS-Projektes
+
+Folgen sie der Anleitung aus @sec-projekt_management um eine neue Ordnerstruktur und ein neues
+QGIS-Projekt für LE03 anzulegen.
+
+## Aufgabe 01: Recherche und Download eines aktuellen Sentinel-2 Satellitenbildes
+
+Die Europäische Raumfahrt Agentur (ESA) stellt das gesamte Archiv der Copernicus Daten kostenfrei
+als offenen Datensatz zur Verfügung. Zur Suche und für den Download solcher Daten wird das online
+Datenportal <https://dataspace.copernicus.eu/> betrieben. Für die Nutzung des Portals ist eine
+einmalige kostenfreie Registrierung notwendig um einen Nutzernamen und ein Passwort zu erhalten.
+
+Nach der erfolgreichen Registrierung kann ein Login auf der Homepage erfolgen. Für die Suche nach
+Daten wird der Copernicus Browser unter folgender URL angeboten:
+
+<https://browser.dataspace.copernicus.eu>
+
+Der Browser bietet umfrangreiche Möglichkeient nach Geodatenprodukten zu suchen.
+
+**Festlegen der Area of Interest (AOI)**
+
+Dazu kann eine Geometrien des Untersuchungsgebietes verwendet werden. Als mögliches Datenformat für
+die Definition der Geometrie akzeptiert der Copernicus-Browser GeoJSON. Das ist ein Text-basiertes
+Format zum speichern von Vektordaten. Für die Übung soll die Außengrenze des NP-Harz genutzt werden.
+Das entsprechende GeoJSON kann hier heruntergeladen werden:
+
+<https://cloud.hawk.de/index.php/s/2Zg8raN2qsHMyZf>
+
+Speichern sie diese Datei in ihrem Projektordner im Unterordner *"daten"*. Diese Datei kann sowohl
+mit QGIS als auch mit einem Texteditor (z.B. Editor, WordPad, Notepad++) geöffnet werden. Öffen sie
+die Datei in einem Texteditor und kopieren sie alle Zeilen des GeoJSON-Datei.
+
+Im Copernicus-Browser kann nun eine Area of Interest (AOI) mit diesen Informationen angelegt werden.
+Dazu rechts oben auf das Polygonsymbol klicken und den Upload Icon auswählen. In das Textfeld des
+Dialogs den kopierten Inhalte des GeoJSON einfügen.
+
+![Upload der Gebietsgrenzen als GeoJSON](images/LE04_dataspace_area_definition.png)
+
+Nach dem erfolgreichen Upload werden die Außengrenzen des Nationalparks Harz im Browser angezeigt.
+
+**Auswahl und Download der gewünschten Produkte**
+
+Auf der linken Seite des Browsers können die gesuchten Produkte spezifiziert werden. In der
+Lerneinheit arbeiten wir mit Produkten des Sentinel-2 Systems. Zusätzlich können Filter gesetzt
+werden:
+
+-   Sensor: MSI (Multispectral Instrument)
+
+-   Cloud Cover: \<10 %
+
+-   L2A
+
+Im Abschnitt "Time Range" kann festgelegt werden in welchem Zeitraum wird Bilder suchen. Für die
+Übung möchten wir eine Aufnahme aus dem Juni 2025 suchen:
+
+Time Range:
+
+-   From: *2025-06-01*
+
+-   Until: *2025-06-30*
+
+Die Ergebnisliste zeigt mehrere Aufnahmen, welche unseren Kriterien entsprechen. Keine der Aufnahmen
+deckt den gesamten Bereich des Nationalparks ab. Für die Übung wählen wir die zwei Kacheln vom
+12.6.2025 welche den Nationalpark abdecken:
+
+-    *S2B_MSIL2A_20250612T102559_N0511_R108_T32UNC_20250612T131505.SAFE*
+
+-    *S2B_MSIL2A_20250612T102559_N0511_R108_T32UPC_20250612T131505.SAFE*
+
+Wählen sie diese Aufnahmen aus und beantworten sie mithilfe des Copernicus-Browsers folgende Fragen:
+
+::: {style="border: 3px solid #ff8a0b; background-color: #ffffff; padding: 8px;"}
+**Fragen:**
+
+1.  *Um welche Uhrzeit wurde die Aufnahme gemacht?*
+
+2.  *Wie hoch ist der Wolkenanteil der gesamten S2-Kachel?*
+
+3.  *Welcher der drei Sentinel-2 Satelliten hat die Aufnahme gemacht?*
+
+4.  Welche Dateigröße hat eine der beiden S2-Kacheln?
+:::
+
+Laden sie anschließend die gesamte Szene als Datei herunter und speicher sie die ZIP-Datei in ihrem
+Projektordner unter "daten".
+
+## Aufgabe 02: Import der Satellitendaten in QGIS
+
+Die Satellitenprodukte werden von der ESA in einer standardisierten Struktur gespeichert und
+ausgegeben. Nach dem Entpacken der ZIP-Datei finden sie folgende Ordnerstruktur:
+
+``` plaintext
+S2B_MSIL2A_20250612T102559_N0511_R108_T32UNC_20250612T131505.SAFE/
+├── DATASTRIP/
+│   └── raster_1.tif
+|   └── raster_2.tif
+├── GRANULE/
+│   └── L2A_T32UNC_20250612T103519
+|   |    └──AUX_DATA
+|   |    └──IMG_DATA
+|   |    |   └──R10m 
+|   |    |   |   └──T32UNC_20250612T102559_AOT_10m.jp2
+|   |    |   |   └──T32UNC_20250612T102559_B02_10m.jp2
+|   |    |   |   └──T32UNC_20250612T102559_B03_10m.jp2
+|   |    |   |   └──T32UNC_20250612T102559_B04_10m.jp2
+|   |    |   |   └──T32UNC_20250612T102559_B08_10m.jp2
+|   |    |   |   └──T32UNC_20250612T102559_TCI_10m.jp2
+|   |    |   |   └──T32UNC_20250612T102559_WVP_10m.jp2
+|   |    |   └──R20m 
+|   |    |   └──R60m 
+|   |    └──QI_DATA
+|   <    └──MTD_TL.xml
+├── HTML/
+│   └── baumartenkarte.pdf
+├── rep_Info/
+├── inspire.xml
+├── manifest.safe
+├── MTD_MSIL2A.xml
+├── S2B_MSIL2A_20250612T102559_N0511_R108_T32UNC_20250612T131505-ql.jpg  
+```
+
+Fügen sie die Bänder B02, B03,B04 und B08 mit einer räumlichen Auflösung zu ihrem QGIS-Projekt
+hinzu.
+
+::: {style="border: 3px solid #ff8a0b; background-color: #ffffff; padding: 8px;"}
+**Ordnen sie die Bandnummern des Sentinel-2 MSI den Spektralbereichen zu (z.B. rot):**
+
+B02 =
+
+B03 =
+
+B04 =
+
+B08 =
+:::
+
+## Aufgabe 03: Erstellen eines CIR-Falschfarbenbildes
+
+Erstellen sie für beide KAcheln ein virtuelles Mehrkanalraster, speichern sie das virtuelle Raster
+unter S2B_MSIL2A_20250612T102559_N0511_R108_T32UNC_20250612T131505.vrt und
+S2B_MSIL2A_20250612T102559_N0511_R108_T32UPC_20250612T131505.vrt ab. Erstellen sie anschließend ein
+vituellles Satellitenbildmosaik und stellen sie es in QGIS als CIR-Bild dar. Folgen sie dazu auch
+der Anleitung aus der LE02 @sec-mehrkanalbilder.
+
+::: {style="border: 3px solid #ff8a0b; background-color: #ffffff; padding: 8px;"}
+**Vergleichen sie die CIR-Darstellung innerhalb und außerhalb des Nationalparks:**
+
+1.) Welche Unterschiede in den Farben können sie feststellen?
+
+2.) Wie interpretieren Sie diese Unterschiede?
+:::
+
+Zur Beantwortung der 2. Frage ist es hilfreich das aktuelle DOP20 Luftbild der LGLN einzubinden.
+Siehe dazu auch @sec-wms in LE03.
+
+## Aufgabe 04: Zuschneiden des Satellitenbildmosaiks
+
+Die beide original S2-Kacheln decken ca. 100 x 100km ab. Der Bereich ist also deutlich größer als
+der gesamte Harz. Um diesen Bereich zu verkleiner sollen die Satellitenbilder auf den Nationalpark
+zugeschnitten werden. Um die Grenzen trotzdem gut darstellen zu können, so ein Puffer von 1000 m um
+die Außengrenzen des Parks gelegt werden.
+
+**Außengrenze Puffern**
+
+Speichern sie das GeoJSON der Nationalparkgrenze als Geopackage in Unterordner "daten" ab. Achten
+sie dabei darauf das Koordinatenbezugssystem (kbs) auf EPSG:25832 zu stellen. Führen sie
+anschließend einen Puffer von 1000 m durch.
+
+**Bild zuschneiden und maskieren**
+
+Zum Maskieren und zuschneiden nutzen Sie anschließend die Funktion:
+
+::: {style="border: 2px solid #afca0b; background-color: #fafafa; padding: 8px;"}
+`Raster` →`Extraktion` → Raster auf Layermaske zuschneiden
+:::
+
+Speichern sie das neue Raster unter dem Namen NP_Harz_2025_06_12 als GeoTIFF im Unterordner "daten"
+ab und laden sie die Satellitenbildkarte als CIR-Falschfarbenbild in QGIS. Überlagern sie das Bild
+mit den originalen Außengrenzen des Nationalparks.

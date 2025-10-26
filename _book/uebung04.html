@@ -8,7 +8,7 @@
 
 <meta name="description" content="Übungsaufgaben für das Modul FPM08 forstliche Fernerkundung">
 
-<title>1&nbsp; Lerneinheit 01: Erste Schritte in QGIS – Forstliche Fernerkundung</title>
+<title>4&nbsp; Lerneinheit 04: Erstellung einer Satellitenbildkarte des Nationalpark Harz – Forstliche Fernerkundung</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -31,8 +31,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./uebung02.html" rel="next">
-<link href="./index.html" rel="prev">
+<link href="./references.html" rel="next">
+<link href="./uebung03.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -83,7 +83,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./uebung01.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Lerneinheit 01: Erste Schritte in QGIS</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./uebung04.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Lerneinheit 04: Erstellung einer Satellitenbildkarte des Nationalpark Harz</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -119,7 +119,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./uebung01.html" class="sidebar-item-text sidebar-link active">
+  <a href="./uebung01.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Lerneinheit 01: Erste Schritte in QGIS</span></span></a>
   </div>
 </li>
@@ -137,7 +137,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./uebung04.html" class="sidebar-item-text sidebar-link">
+  <a href="./uebung04.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Lerneinheit 04: Erstellung einer Satellitenbildkarte des Nationalpark Harz</span></span></a>
   </div>
 </li>
@@ -157,19 +157,12 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#lernziele-aufgabenstellung" id="toc-lernziele-aufgabenstellung" class="nav-link active" data-scroll-target="#lernziele-aufgabenstellung"><span class="header-section-number">1.1</span> Lernziele &amp; Aufgabenstellung</a></li>
-  <li><a href="#qgis-otb-installation-und-konfiguration" id="toc-qgis-otb-installation-und-konfiguration" class="nav-link" data-scroll-target="#qgis-otb-installation-und-konfiguration"><span class="header-section-number">1.2</span> QGIS &amp; OTB Installation und Konfiguration</a>
-  <ul class="collapse">
-  <li><a href="#installation-von-qgis-und-otb" id="toc-installation-von-qgis-und-otb" class="nav-link" data-scroll-target="#installation-von-qgis-und-otb"><span class="header-section-number">1.2.1</span> Installation von QGIS und OTB</a></li>
-  <li><a href="#anlegen-eines-persönlichen-qgis-nutzerprofils" id="toc-anlegen-eines-persönlichen-qgis-nutzerprofils" class="nav-link" data-scroll-target="#anlegen-eines-persönlichen-qgis-nutzerprofils"><span class="header-section-number">1.2.2</span> Anlegen eines persönlichen QGIS-Nutzerprofils</a></li>
-  <li><a href="#installation-einrichtung-von-otb-in-qgis" id="toc-installation-einrichtung-von-otb-in-qgis" class="nav-link" data-scroll-target="#installation-einrichtung-von-otb-in-qgis"><span class="header-section-number">1.2.3</span> Installation &amp; Einrichtung von OTB in QGIS</a></li>
-  <li><a href="#sec-nutzerprofil" id="toc-sec-nutzerprofil" class="nav-link" data-scroll-target="#sec-nutzerprofil"><span class="header-section-number">1.2.4</span> Sichern des persönlichen Nutzerprofils</a></li>
-  </ul></li>
-  <li><a href="#sec-projekt_management" id="toc-sec-projekt_management" class="nav-link" data-scroll-target="#sec-projekt_management"><span class="header-section-number">1.3</span> Projekt- und Datenmanagement mit QGIS</a>
-  <ul class="collapse">
-  <li><a href="#anlegen-einer-ordnerstruktur" id="toc-anlegen-einer-ordnerstruktur" class="nav-link" data-scroll-target="#anlegen-einer-ordnerstruktur"><span class="header-section-number">1.3.1</span> Anlegen einer Ordnerstruktur</a></li>
-  <li><a href="#anlegen-eines-neuen-qgis-projektes" id="toc-anlegen-eines-neuen-qgis-projektes" class="nav-link" data-scroll-target="#anlegen-eines-neuen-qgis-projektes"><span class="header-section-number">1.3.2</span> Anlegen eines neuen QGIS-Projektes</a></li>
-  </ul></li>
+  <li><a href="#lernziele-aufgabenstellung" id="toc-lernziele-aufgabenstellung" class="nav-link active" data-scroll-target="#lernziele-aufgabenstellung"><span class="header-section-number">4.1</span> Lernziele &amp; Aufgabenstellung</a></li>
+  <li><a href="#aufgabe-0-anlegen-eine-neuen-qgis-projektes" id="toc-aufgabe-0-anlegen-eine-neuen-qgis-projektes" class="nav-link" data-scroll-target="#aufgabe-0-anlegen-eine-neuen-qgis-projektes"><span class="header-section-number">4.2</span> Aufgabe 0: Anlegen eine neuen QGIS-Projektes</a></li>
+  <li><a href="#aufgabe-01-recherche-und-download-eines-aktuellen-sentinel-2-satellitenbildes" id="toc-aufgabe-01-recherche-und-download-eines-aktuellen-sentinel-2-satellitenbildes" class="nav-link" data-scroll-target="#aufgabe-01-recherche-und-download-eines-aktuellen-sentinel-2-satellitenbildes"><span class="header-section-number">4.3</span> Aufgabe 01: Recherche und Download eines aktuellen Sentinel-2 Satellitenbildes</a></li>
+  <li><a href="#aufgabe-02-import-der-satellitendaten-in-qgis" id="toc-aufgabe-02-import-der-satellitendaten-in-qgis" class="nav-link" data-scroll-target="#aufgabe-02-import-der-satellitendaten-in-qgis"><span class="header-section-number">4.4</span> Aufgabe 02: Import der Satellitendaten in QGIS</a></li>
+  <li><a href="#aufgabe-03-erstellen-eines-cir-falschfarbenbildes" id="toc-aufgabe-03-erstellen-eines-cir-falschfarbenbildes" class="nav-link" data-scroll-target="#aufgabe-03-erstellen-eines-cir-falschfarbenbildes"><span class="header-section-number">4.5</span> Aufgabe 03: Erstellen eines CIR-Falschfarbenbildes</a></li>
+  <li><a href="#aufgabe-04-zuschneiden-des-satellitenbildmosaiks" id="toc-aufgabe-04-zuschneiden-des-satellitenbildmosaiks" class="nav-link" data-scroll-target="#aufgabe-04-zuschneiden-des-satellitenbildmosaiks"><span class="header-section-number">4.6</span> Aufgabe 04: Zuschneiden des Satellitenbildmosaiks</a></li>
   </ul>
 </nav>
     </div>
@@ -178,7 +171,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Lerneinheit 01: Erste Schritte in QGIS</span></h1>
+<h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Lerneinheit 04: Erstellung einer Satellitenbildkarte des Nationalpark Harz</span></h1>
 </div>
 
 
@@ -197,170 +190,148 @@ ul.task-list li input[type="checkbox"] {
 
 <!--
 
-Skripte für die Übungen 02 des Moduls FPM08 Forstliche Fernerkundung im Studiengang
+Skripte für die Übungen 04 des Moduls FPM08 Forstliche Fernerkundung im Studiengang
 B.Sc. Forstwirtschaft an der HAWK Göttingen.
 
 Autor: Paul Magdon
-Datum: 2025-10-12
+Datum: 2025-10-18
 Lizenz: Creative Commons BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 -->
-<section id="lernziele-aufgabenstellung" class="level2" data-number="1.1">
-<h2 data-number="1.1" class="anchored" data-anchor-id="lernziele-aufgabenstellung"><span class="header-section-number">1.1</span> Lernziele &amp; Aufgabenstellung</h2>
-<p>Die erste Lerneinheit dient der Einrichtung einer Arbeitsumgebung und der Wiederholung der wesentlichen QGIS-Funktionen. Wir prüfen die Installation der notwendigen Programme und konfigurieren diese für die spätere Verwendung. Es wird außerdem gezeigt, wie wir diese Einstellungen über die QGIS-Profile speichern und sichern können. Außerdem wird vorgestellt wie QGIS-Erweiterungen installiert werden können.</p>
+<p><img src="images/LE04_cover_image.png" class="img-fluid"></p>
+<section id="lernziele-aufgabenstellung" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="lernziele-aufgabenstellung"><span class="header-section-number">4.1</span> Lernziele &amp; Aufgabenstellung</h2>
+<p>Satellitenbilder stellen eine wichtige Grundlage in Fernerkundungsprojekten dar. Das Copernicus-Programm der Europäischen Union betreibt eine Flotte von Erdbeobachtungssatelliten, die zunehmend im forstlichen Monitoring verwendet werden. In dieser Einheit werden wir das Sentinel-2 Satellitensystem vorstellen und die Eigenschaften der verfügbaren Produkte diskutieren. Dazu soll eine Satellitenbildkarte des Nationalpark Harz erstellt werden. Die Grenzen des NP Harz sollen für die Internet-Präsenz auf aktuellen Satellitenbildkarten dargestellt werden. Diese können auch z.B. als Grundlage für die Planung von Feldaufnahmen oder für die visuelle Erfassung einzelner Waldteile dienen.</p>
 <p><strong>Lernziele</strong></p>
 <p>Die Studierenden sollen:</p>
 <ul>
-<li>QGIS installieren können bzw. überprüfen können welche Version installiert ist.</li>
-<li>die Funktionsweise von Nutzerprofilen verstehen und anwenden können</li>
-<li>eine sinnvolle Ordnerstruktur zur Verwaltung von QGIS-Projekten kennen und anlegen können</li>
-<li>Projekte in QGIS anlegen können</li>
+<li>die Geodatenportale der Landesvermessungen kennenlernen</li>
+<li>die unterschiedlichen Schnittstellen von Geodatendienste kennenlernen</li>
+<li>Raster- und Vektordaten als Geodatendienst in QGIS importieren</li>
+<li>Eigenschaften von Geodatendiensten in QGIS untersuchen</li>
 </ul>
-<p><strong>Aufgabenstellung</strong></p>
+<p><strong>Aufgaben</strong></p>
 <ol type="1">
-<li><p>Überprüfen sie die Installation von QGIS und OTB.</p></li>
-<li><p>Legen sie ein neues Nutzerprofil mit ihrem Namen an.</p></li>
-<li><p>Installieren sie das OTB-Plugin und hinterlegen sie die korrekten Pfade für die OTB-Programmbibliotheken.</p></li>
-<li><p>Sichern sie ihr Nutzerprofil an einem permanenten Speicherort.</p></li>
-<li><p>Legen sie eine Ordnerstruktur für das Projekt uebung01 an.</p></li>
-<li><p>Legen sie innerhalb der Ordnerstruktur eine neues QGIS-Projekt <em>‘uebung01.qgz’</em> an.</p></li>
+<li>Suchen sie im Copernicus Dataspace nach einer geeigneten Sentinel-2 Aufnahme aus dem 06-2025 und laden sie diese S2-Kachel herunter.</li>
+<li>Untersuchen sie die Ordnerstruktur des Satellitebproduktes und importieren sie die Bänder B02, B03, B04 und B08 mit einer räumlichen Auflösung von 10 m.</li>
+<li>Erstellen Sie ein CIR-Bild des westlichen Teils des NP-Harzes</li>
+<li></li>
 </ol>
 </section>
-<section id="qgis-otb-installation-und-konfiguration" class="level2" data-number="1.2">
-<h2 data-number="1.2" class="anchored" data-anchor-id="qgis-otb-installation-und-konfiguration"><span class="header-section-number">1.2</span> QGIS &amp; OTB Installation und Konfiguration</h2>
-<section id="installation-von-qgis-und-otb" class="level3" data-number="1.2.1">
-<h3 data-number="1.2.1" class="anchored" data-anchor-id="installation-von-qgis-und-otb"><span class="header-section-number">1.2.1</span> Installation von QGIS und OTB</h3>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Im PC-Pool der HAWK sind die notwendigen Programme bereits auf den Computern installiert. Die Installation ist also nur notwendig, wenn sie die Übungen auf einem eigenen Computer durchführen wollen. Die vorgestellten Programme funktionieren grundsätzlich unter Windows, Linux und MacOS Betriebssystemen. Für die Übungen wird aber nur auf Windows-Betriebssystemen getestet.</p>
-</div>
-</div>
-<p>In diesem Kurs wird die Software QGIS in der Version 3.40.x verwendet. Sie können die Software hier herunterladen:</p>
-<p><a href="https://qgis.org/downloads/QGIS-OSGeo4W-3.40.10-1.msi" class="uri">https://qgis.org/downloads/QGIS-OSGeo4W-3.40.10-1.msi</a></p>
-<p>Weiter Hinweise zu den unterschiedlichen Installationsmöglichkeiten finden sie hier:</p>
-<p><a href="https://docs.qgis.org/3.40/de/docs/user_manual/introduction/getting_started.html#installing-qgis" class="uri">https://docs.qgis.org/3.40/de/docs/user_manual/introduction/getting_started.html#installing-qgis</a></p>
-<p>Neben QGIS nutzen wir für die fernerkundlichen Auswertungen die open-source Software <a href="https://www.orfeo-toolbox.org/">Orfeo Toolbox</a> V.9.1.1. welche hier heruntergeladen werden kann:</p>
-<p><a href="https://www.orfeo-toolbox.org/download/" class="uri">https://www.orfeo-toolbox.org/download/</a></p>
-<p>Weiter Hinweise zu den unterschiedlichen Installationsmöglichkeiten finden sie hier:</p>
-<p><a href="https://www.orfeo-toolbox.org/CookBook/Installation.html" class="uri">https://www.orfeo-toolbox.org/CookBook/Installation.html</a></p>
+<section id="aufgabe-0-anlegen-eine-neuen-qgis-projektes" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="aufgabe-0-anlegen-eine-neuen-qgis-projektes"><span class="header-section-number">4.2</span> Aufgabe 0: Anlegen eine neuen QGIS-Projektes</h2>
+<p>Folgen sie der Anleitung aus <a href="uebung01.html#sec-projekt_management" class="quarto-xref"><span>Section 1.3</span></a> um eine neue Ordnerstruktur und ein neues QGIS-Projekt für LE03 anzulegen.</p>
 </section>
-<section id="anlegen-eines-persönlichen-qgis-nutzerprofils" class="level3" data-number="1.2.2">
-<h3 data-number="1.2.2" class="anchored" data-anchor-id="anlegen-eines-persönlichen-qgis-nutzerprofils"><span class="header-section-number">1.2.2</span> Anlegen eines persönlichen QGIS-Nutzerprofils</h3>
-<p>QGIS kann auf die eigenen Bedürfnisse umfangreich angepasst werden. Dazu zählen z.B. folgende Einstellungen:</p>
+<section id="aufgabe-01-recherche-und-download-eines-aktuellen-sentinel-2-satellitenbildes" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="aufgabe-01-recherche-und-download-eines-aktuellen-sentinel-2-satellitenbildes"><span class="header-section-number">4.3</span> Aufgabe 01: Recherche und Download eines aktuellen Sentinel-2 Satellitenbildes</h2>
+<p>Die Europäische Raumfahrt Agentur (ESA) stellt das gesamte Archiv der Copernicus Daten kostenfrei als offenen Datensatz zur Verfügung. Zur Suche und für den Download solcher Daten wird das online Datenportal <a href="https://dataspace.copernicus.eu/" class="uri">https://dataspace.copernicus.eu/</a> betrieben. Für die Nutzung des Portals ist eine einmalige kostenfreie Registrierung notwendig um einen Nutzernamen und ein Passwort zu erhalten.</p>
+<p>Nach der erfolgreichen Registrierung kann ein Login auf der Homepage erfolgen. Für die Suche nach Daten wird der Copernicus Browser unter folgender URL angeboten:</p>
+<p><a href="https://browser.dataspace.copernicus.eu" class="uri">https://browser.dataspace.copernicus.eu</a></p>
+<p>Der Browser bietet umfrangreiche Möglichkeient nach Geodatenprodukten zu suchen.</p>
+<p><strong>Festlegen der Area of Interest (AOI)</strong></p>
+<p>Dazu kann eine Geometrien des Untersuchungsgebietes verwendet werden. Als mögliches Datenformat für die Definition der Geometrie akzeptiert der Copernicus-Browser GeoJSON. Das ist ein Text-basiertes Format zum speichern von Vektordaten. Für die Übung soll die Außengrenze des NP-Harz genutzt werden. Das entsprechende GeoJSON kann hier heruntergeladen werden:</p>
+<p><a href="https://cloud.hawk.de/index.php/s/2Zg8raN2qsHMyZf" class="uri">https://cloud.hawk.de/index.php/s/2Zg8raN2qsHMyZf</a></p>
+<p>Speichern sie diese Datei in ihrem Projektordner im Unterordner <em>“daten”</em>. Diese Datei kann sowohl mit QGIS als auch mit einem Texteditor (z.B. Editor, WordPad, Notepad++) geöffnet werden. Öffen sie die Datei in einem Texteditor und kopieren sie alle Zeilen des GeoJSON-Datei.</p>
+<p>Im Copernicus-Browser kann nun eine Area of Interest (AOI) mit diesen Informationen angelegt werden. Dazu rechts oben auf das Polygonsymbol klicken und den Upload Icon auswählen. In das Textfeld des Dialogs den kopierten Inhalte des GeoJSON einfügen.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/LE04_dataspace_area_definition.png" class="img-fluid figure-img"></p>
+<figcaption>Upload der Gebietsgrenzen als GeoJSON</figcaption>
+</figure>
+</div>
+<p>Nach dem erfolgreichen Upload werden die Außengrenzen des Nationalparks Harz im Browser angezeigt.</p>
+<p><strong>Auswahl und Download der gewünschten Produkte</strong></p>
+<p>Auf der linken Seite des Browsers können die gesuchten Produkte spezifiziert werden. In der Lerneinheit arbeiten wir mit Produkten des Sentinel-2 Systems. Zusätzlich können Filter gesetzt werden:</p>
 <ul>
-<li>Sprache</li>
-<li>Projektionen und Koordinatensysteme</li>
-<li>Passwörter für Datenbankzugänge</li>
-<li>Anpassungen des Erscheinungsbildes und der dargestellten Werkzeuge</li>
-<li>Installationen und Konfigurationen von Plugins</li>
+<li><p>Sensor: MSI (Multispectral Instrument)</p></li>
+<li><p>Cloud Cover: &lt;10 %</p></li>
+<li><p>L2A</p></li>
 </ul>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
+<p>Im Abschnitt “Time Range” kann festgelegt werden in welchem Zeitraum wird Bilder suchen. Für die Übung möchten wir eine Aufnahme aus dem Juni 2025 suchen:</p>
+<p>Time Range:</p>
+<ul>
+<li><p>From: <em>2025-06-01</em></p></li>
+<li><p>Until: <em>2025-06-30</em></p></li>
+</ul>
+<p>Die Ergebnisliste zeigt mehrere Aufnahmen, welche unseren Kriterien entsprechen. Keine der Aufnahmen deckt den gesamten Bereich des Nationalparks ab. Für die Übung wählen wir die zwei Kacheln vom 12.6.2025 welche den Nationalpark abdecken:</p>
+<ul>
+<li><p><em>S2B_MSIL2A_20250612T102559_N0511_R108_T32UNC_20250612T131505.SAFE</em></p></li>
+<li><p><em>S2B_MSIL2A_20250612T102559_N0511_R108_T32UPC_20250612T131505.SAFE</em></p></li>
+</ul>
+<p>Wählen sie diese Aufnahmen aus und beantworten sie mithilfe des Copernicus-Browsers folgende Fragen:</p>
+<div style="border: 3px solid #ff8a0b; background-color: #ffffff; padding: 8px;">
+<p><strong>Fragen:</strong></p>
+<ol type="1">
+<li><p><em>Um welche Uhrzeit wurde die Aufnahme gemacht?</em></p></li>
+<li><p><em>Wie hoch ist der Wolkenanteil der gesamten S2-Kachel?</em></p></li>
+<li><p><em>Welcher der drei Sentinel-2 Satelliten hat die Aufnahme gemacht?</em></p></li>
+<li><p>Welche Dateigröße hat eine der beiden S2-Kacheln?</p></li>
+</ol>
 </div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Das Anlegen persönlicher Nutzerprofile geschieht in der Regel vollständig automatisch. Im PC-Pool werden diese Profile aber nicht zwischen den PC-Arbeitsplätzen synchronisiert. Außerdem werden die lokalen Nutzerdaten in unregelmäßigen Abständen gelöscht. Daher kann es für die Arbeit im PC-Pool sinnvoll sein, ein eigenes Profil anzulegen und in einem persönlichen Ordner zu sichern.</p>
-</div>
-</div>
-<p>QGIS speicher die Nutzerprofile automatisch lokalen im jeweiligen Nutzerordner <code>C:\Users\???\AppData\Roaming\QGIS\QGIS3\profiles\</code>. Standardmäßig gibt es in QGIS nur das Benutzerprofil <em>default</em>. Es können aber beliebig viele weitere angelegt werden.</p>
-<div style="border: 2px solid #afca0b; background-color: #fafafa; padding: 8px;">
-<p>Legen sie ein neues Nutzerprofile mit ihrem Namen (z.B. mueller) an:</p>
-<p><code>Einstellungen</code> → <code>Nutzerprofile</code> → <code>Neues Profil anlegen</code></p>
-</div>
-<p>Weitere Informationen zu den QGIS-Nutzerprofilen finden sie hier:</p>
-<p><a href="https://docs.qgis.org/3.40/de/docs/user_manual/introduction/qgis_configuration.html#user-profiles" class="uri">https://docs.qgis.org/3.40/de/docs/user_manual/introduction/qgis_configuration.html#user-profiles</a></p>
+<p>Laden sie anschließend die gesamte Szene als Datei herunter und speicher sie die ZIP-Datei in ihrem Projektordner unter “daten”.</p>
 </section>
-<section id="installation-einrichtung-von-otb-in-qgis" class="level3" data-number="1.2.3">
-<h3 data-number="1.2.3" class="anchored" data-anchor-id="installation-einrichtung-von-otb-in-qgis"><span class="header-section-number">1.2.3</span> Installation &amp; Einrichtung von OTB in QGIS</h3>
-<p>Die OTB-Software kann direkt über eine Kommandozeile verwendet werden oder -wie im Kurs- innerhalb von QGIS. Dazu steht ein Plugin zur Verfügung, welches wie folgt installiert und konfiguriert werden muss:</p>
-<p>1.) Installation des Orfeo Toolbox Plugins in QGIS</p>
-<div style="border: 2px solid #afca0b; background-color: #fafafa; padding: 8px;">
-<p><code>Erweiterung</code> → <code>Erweiterungen verwalten und installieren</code> Im Suchfenster <code>OrfeoToolboxProvider</code> das Plugin auswählen und installieren.</p>
-</div>
-<p>2.) Konfiguration des OTB-Plugins</p>
-<p>Nachdem das Plugin Installiert ist, muss es noch konfiguriert werden. Dazu müssen die Pfade zu der OTB-Software eingetragen werden.</p>
-<div style="border: 2px solid #afca0b; background-color: #fafafa; padding: 8px;">
-<p><strong>Starten der Werkzeugkiste</strong>: <code>Verarbeitung</code> → <code>Werkzeugkiste</code></p>
-<p>In der Werkzeugkiste das Schraubenschlüsselsymbol (Optionen) wählen und dort unter <code>Datenanbieter</code> –&gt; <code>OTB</code> zwei Eintragungen vornehmen:</p>
-<p><strong>OTB application folder:</strong> <code>C:/OTB/lib/otb/applications</code></p>
-<p><strong>OTB folder:</strong> <code>C:/OTB</code></p>
-</div>
-<p>Nach korrekter Eingabe der Pfade und dem Schließen des Optionsmenüs sollte nach kurzer Zeit bei den Verarbeitungswerkzeugen in der Werkzeugkiste die OTB-Werkzeuge angezeigt werden.</p>
-<p>Weitere Anleitungen zur Konfiguration des OTB-Plugins können sie hier finden:</p>
-<p><a href="https://www.orfeo-toolbox.org/CookBook-9.1/QGISInterface.html" class="uri">https://www.orfeo-toolbox.org/CookBook-9.1/QGISInterface.html</a></p>
-</section>
-<section id="sec-nutzerprofil" class="level3" data-number="1.2.4">
-<h3 data-number="1.2.4" class="anchored" data-anchor-id="sec-nutzerprofil"><span class="header-section-number">1.2.4</span> Sichern des persönlichen Nutzerprofils</h3>
-<p>Nach dem nun die wichtigsten Einstellungen vorgenommen und im QGIS-Nutzerprofil hinterlegt wurden, ist es sinnvoll dieses für die spätere Verwendung zu sichern.</p>
-<div style="border: 2px solid #afca0b; background-color: #fafafa; padding: 8px;">
-<p>Sichern sie den Ordner mit ihrem Profil (<code>C:\Users\???\AppData\Roaming\QGIS\QGIS3\profiles\???</code>.) in ihr persönliches Laufwerk unter <code>U:</code></p>
-</div>
-<p>Sollten sie im späteren Verlauf des Kurses ihr Profile wiederherstellen wollen, können sie diesen Ordner von <code>U:</code> wieder in den QGIS-Profil Ordner kopieren.</p>
-</section>
-</section>
-<section id="sec-projekt_management" class="level2" data-number="1.3">
-<h2 data-number="1.3" class="anchored" data-anchor-id="sec-projekt_management"><span class="header-section-number">1.3</span> Projekt- und Datenmanagement mit QGIS</h2>
-<section id="anlegen-einer-ordnerstruktur" class="level3" data-number="1.3.1">
-<h3 data-number="1.3.1" class="anchored" data-anchor-id="anlegen-einer-ordnerstruktur"><span class="header-section-number">1.3.1</span> Anlegen einer Ordnerstruktur</h3>
-<p>Eine gute Ordnerstruktur ist für das Datenmanagement sehr hilfreich. Daher wird empfohlen für jedes Projekt / jede Lerneinheit eine eigene Ordnerstruktur nach einheitlichem Muster anzulegen. Die Struktur könnte so aussehen:</p>
-<pre class="plaintext"><code>projekt_xy/
-├── daten/
+<section id="aufgabe-02-import-der-satellitendaten-in-qgis" class="level2" data-number="4.4">
+<h2 data-number="4.4" class="anchored" data-anchor-id="aufgabe-02-import-der-satellitendaten-in-qgis"><span class="header-section-number">4.4</span> Aufgabe 02: Import der Satellitendaten in QGIS</h2>
+<p>Die Satellitenprodukte werden von der ESA in einer standardisierten Struktur gespeichert und ausgegeben. Nach dem Entpacken der ZIP-Datei finden sie folgende Ordnerstruktur:</p>
+<pre class="plaintext"><code>S2B_MSIL2A_20250612T102559_N0511_R108_T32UNC_20250612T131505.SAFE/
+├── DATASTRIP/
 │   └── raster_1.tif
 |   └── raster_2.tif
-├── skripte/
-│   └── analyse.R
-├── karten/
+├── GRANULE/
+│   └── L2A_T32UNC_20250612T103519
+|   |    └──AUX_DATA
+|   |    └──IMG_DATA
+|   |    |   └──R10m 
+|   |    |   |   └──T32UNC_20250612T102559_AOT_10m.jp2
+|   |    |   |   └──T32UNC_20250612T102559_B02_10m.jp2
+|   |    |   |   └──T32UNC_20250612T102559_B03_10m.jp2
+|   |    |   |   └──T32UNC_20250612T102559_B04_10m.jp2
+|   |    |   |   └──T32UNC_20250612T102559_B08_10m.jp2
+|   |    |   |   └──T32UNC_20250612T102559_TCI_10m.jp2
+|   |    |   |   └──T32UNC_20250612T102559_WVP_10m.jp2
+|   |    |   └──R20m 
+|   |    |   └──R60m 
+|   |    └──QI_DATA
+|   &lt;    └──MTD_TL.xml
+├── HTML/
 │   └── baumartenkarte.pdf
-└── projekt_XY.qgz</code></pre>
-<p>Diese Ordnerstruktur kann an die eigenen Präferenzen und die Notwendigkeiten im Projekt angepasst werden. Weitere wesentlicher Vorteil einer solchen Ordnerstruktur ist, dass die Ordner im ganzen verschoben, kopiert oder mit anderen geteilt werden können. Dies ist möglich, da die Projektdatei die relativen Pfade, ausgehend von dem Ordner in dem die <em>*.qgz</em> Datei liegt speichert. Also z.B. ./<em>daten/raster_1.tif</em></p>
-<div class="callout callout-style-default callout-caution callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Caution
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Der Dateipfad in dem die Ordnerstruktur angelegt wird darf keine Umlaute oder (ä,ö,ü), Sonderzeichen (!,?, .,etc..) oder Leerzeichen enthalten. Dies kann bei der Verarbeitung zu Fehlern führen. Daher sollten bei der Anlage der gesamte Pfad kontrolliert werden.</p>
-<p>Beispiel:</p>
-<p><code>'C:\Users\Max Müller\Documents\Übung.01' -&gt; 'C:\Users\mmueller\Documents\uebung01'</code></p>
-</div>
+├── rep_Info/
+├── inspire.xml
+├── manifest.safe
+├── MTD_MSIL2A.xml
+├── S2B_MSIL2A_20250612T102559_N0511_R108_T32UNC_20250612T131505-ql.jpg  </code></pre>
+<p>Fügen sie die Bänder B02, B03,B04 und B08 mit einer räumlichen Auflösung zu ihrem QGIS-Projekt hinzu.</p>
+<div style="border: 3px solid #ff8a0b; background-color: #ffffff; padding: 8px;">
+<p><strong>Ordnen sie die Bandnummern des Sentinel-2 MSI den Spektralbereichen zu (z.B. rot):</strong></p>
+<p>B02 =</p>
+<p>B03 =</p>
+<p>B04 =</p>
+<p>B08 =</p>
 </div>
 </section>
-<section id="anlegen-eines-neuen-qgis-projektes" class="level3" data-number="1.3.2">
-<h3 data-number="1.3.2" class="anchored" data-anchor-id="anlegen-eines-neuen-qgis-projektes"><span class="header-section-number">1.3.2</span> Anlegen eines neuen QGIS-Projektes</h3>
-<p>In QGIS können einzelne Projekte z.B. eine Lehreinheit als Projekte angelegt und gespeichert werden. Dabei werden sämtliche Einstellungen und Darstellungen (z.B. Kartenlayouts, Symbologien, Layer), Bearbeitungsstand und vieles mehr gespeichert. Das ist vor allem sinnvoll wenn man seine Arbeit unterbrechen und zu einem späteren Zeitpunkt fortsetzen möchte. Die Projekte werden in einer Datei mit der Endung *.qgz gespeichert.</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
+<section id="aufgabe-03-erstellen-eines-cir-falschfarbenbildes" class="level2" data-number="4.5">
+<h2 data-number="4.5" class="anchored" data-anchor-id="aufgabe-03-erstellen-eines-cir-falschfarbenbildes"><span class="header-section-number">4.5</span> Aufgabe 03: Erstellen eines CIR-Falschfarbenbildes</h2>
+<p>Erstellen sie für beide KAcheln ein virtuelles Mehrkanalraster, speichern sie das virtuelle Raster unter S2B_MSIL2A_20250612T102559_N0511_R108_T32UNC_20250612T131505.vrt und S2B_MSIL2A_20250612T102559_N0511_R108_T32UPC_20250612T131505.vrt ab. Erstellen sie anschließend ein vituellles Satellitenbildmosaik und stellen sie es in QGIS als CIR-Bild dar. Folgen sie dazu auch der Anleitung aus der LE02 <a href="uebung02.html#sec-mehrkanalbilder" class="quarto-xref"><span>Section 2.4</span></a>.</p>
+<div style="border: 3px solid #ff8a0b; background-color: #ffffff; padding: 8px;">
+<p><strong>Vergleichen sie die CIR-Darstellung innerhalb und außerhalb des Nationalparks:</strong></p>
+<p>1.) Welche Unterschiede in den Farben können sie feststellen?</p>
+<p>2.) Wie interpretieren Sie diese Unterschiede?</p>
 </div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Die Projektdatei *.qgz enthält nicht die Geodaten, des Projektes. Es werden lediglich die Pfade zu den Dateien mit den Geodaten gespeichert. Beim Laden des Projektes werden die Geodaten an den hinterlegten Datenpfaden gesucht und geladen. Sollten diese nicht mehr an dem Ort gespeichert sein, wir QGIS einen Fehler melden. Eine klare Ordnerstruktur kann solche Fehler vermeiden helfen.</p>
-</div>
-</div>
-
-
+<p>Zur Beantwortung der 2. Frage ist es hilfreich das aktuelle DOP20 Luftbild der LGLN einzubinden. Siehe dazu auch <a href="uebung03.html#sec-wms" class="quarto-xref"><span>Section 3.4</span></a> in LE03.</p>
 </section>
+<section id="aufgabe-04-zuschneiden-des-satellitenbildmosaiks" class="level2" data-number="4.6">
+<h2 data-number="4.6" class="anchored" data-anchor-id="aufgabe-04-zuschneiden-des-satellitenbildmosaiks"><span class="header-section-number">4.6</span> Aufgabe 04: Zuschneiden des Satellitenbildmosaiks</h2>
+<p>Die beide original S2-Kacheln decken ca. 100 x 100km ab. Der Bereich ist also deutlich größer als der gesamte Harz. Um diesen Bereich zu verkleiner sollen die Satellitenbilder auf den Nationalpark zugeschnitten werden. Um die Grenzen trotzdem gut darstellen zu können, so ein Puffer von 1000 m um die Außengrenzen des Parks gelegt werden.</p>
+<p><strong>Außengrenze Puffern</strong></p>
+<p>Speichern sie das GeoJSON der Nationalparkgrenze als Geopackage in Unterordner “daten” ab. Achten sie dabei darauf das Koordinatenbezugssystem (kbs) auf EPSG:25832 zu stellen. Führen sie anschließend einen Puffer von 1000 m durch.</p>
+<p><strong>Bild zuschneiden und maskieren</strong></p>
+<p>Zum Maskieren und zuschneiden nutzen Sie anschließend die Funktion:</p>
+<div style="border: 2px solid #afca0b; background-color: #fafafa; padding: 8px;">
+<p><code>Raster</code> →<code>Extraktion</code> → Raster auf Layermaske zuschneiden</p>
+</div>
+<p>Speichern sie das neue Raster unter dem Namen NP_Harz_2025_06_12 als GeoTIFF im Unterordner “daten” ab und laden sie die Satellitenbildkarte als CIR-Falschfarbenbild in QGIS. Überlagern sie das Bild mit den originalen Außengrenzen des Nationalparks.</p>
+
+
 </section>
 
 </main> <!-- /main -->
@@ -765,13 +736,13 @@ Note
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./index.html" class="pagination-link" aria-label="Vorwort">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Vorwort</span>
+      <a href="./uebung03.html" class="pagination-link" aria-label="Lerneinheit 03: Beschaffung von Geodaten für den Nordcampus Göttingen">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Lerneinheit 03: Beschaffung von Geodaten für den Nordcampus Göttingen</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./uebung02.html" class="pagination-link" aria-label="Lerneinheit 02: Erstellen eines Ortholuftbildmosaiks in der Rfö Kattenbühl">
-        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Lerneinheit 02: Erstellen eines Ortholuftbildmosaiks in der Rfö Kattenbühl</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./references.html" class="pagination-link" aria-label="Referenzen">
+        <span class="nav-page-text">Referenzen</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

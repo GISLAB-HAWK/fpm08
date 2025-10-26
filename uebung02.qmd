@@ -81,7 +81,7 @@ Layereigenschaften der Raster um folgende Fragen zu beantworten:
 4.  *Was ist der kleinste und der größte Zahlenwert der Rasterbilder?*
 :::
 
-## Erstellen von Mehrkanalbildern
+## Erstellen von Mehrkanalbildern {#sec-mehrkanalbilder}
 
 Nach dem Import der einzelnen Kanäle werden diese in QGIS als Graustufenbilder dargestellt. Damit
 QGIS diese als Farbbilder darstellen kann, müssen alle Kanäle eines Raster zusammengeführt werden.

@@ -21,6 +21,7 @@ book:
     - uebung01.qmd
     - uebung02.qmd
     - uebung03.qmd
+    - uebung04.qmd
     - references.qmd
 
 bibliography: references.bib

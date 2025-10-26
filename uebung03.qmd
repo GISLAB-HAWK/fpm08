@@ -94,7 +94,7 @@ Rasterbild in ihr QGIS-Projekt und stellen sie es als CIR-Falschfarbenbild dar (
 6.  *Welche spektrale Auflösung haben die Bilder?*
 :::
 
-## Aufgabe 02: Einbinden von WMS-Diensten zur Darstellung von Ortholuftbildern
+## Aufgabe 02: Einbinden von WMS-Diensten zur Darstellung von Ortholuftbildern{#sec-wms}
 
 Wie sie in dem OpenData-Viewer erkennen können, bräuchte es zur vollständigen Abdeckung des gesamten
 Göttinger Stadtwaldes über 35 Ortholuftbildkacheln, was einem Downloadvolumen von ca. $35*500=1,7GB$

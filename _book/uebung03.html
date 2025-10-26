@@ -31,7 +31,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./references.html" rel="next">
+<link href="./uebung04.html" rel="next">
 <link href="./uebung02.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -166,6 +166,12 @@ window.Quarto = {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./uebung04.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Lerneinheit 04: Erstellung einer Satellitenbildkarte des Nationalpark Harz</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./references.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Referenzen</span></a>
   </div>
@@ -183,7 +189,7 @@ window.Quarto = {
   <li><a href="#lernziele-aufgabenstellung" id="toc-lernziele-aufgabenstellung" class="nav-link active" data-scroll-target="#lernziele-aufgabenstellung"><span class="header-section-number">3.1</span> Lernziele &amp; Aufgabenstellung</a></li>
   <li><a href="#aufgabe-0-anlegen-eine-neuen-qgis-projektes" id="toc-aufgabe-0-anlegen-eine-neuen-qgis-projektes" class="nav-link" data-scroll-target="#aufgabe-0-anlegen-eine-neuen-qgis-projektes"><span class="header-section-number">3.2</span> Aufgabe 0: Anlegen eine neuen QGIS-Projektes</a></li>
   <li><a href="#aufgabe-01-download-und-cir-darstellung-eines-ortholuftbildes-des-nordcampus" id="toc-aufgabe-01-download-und-cir-darstellung-eines-ortholuftbildes-des-nordcampus" class="nav-link" data-scroll-target="#aufgabe-01-download-und-cir-darstellung-eines-ortholuftbildes-des-nordcampus"><span class="header-section-number">3.3</span> Aufgabe 01: Download und CIR-Darstellung eines Ortholuftbildes des Nordcampus</a></li>
-  <li><a href="#aufgabe-02-einbinden-von-wms-diensten-zur-darstellung-von-ortholuftbildern" id="toc-aufgabe-02-einbinden-von-wms-diensten-zur-darstellung-von-ortholuftbildern" class="nav-link" data-scroll-target="#aufgabe-02-einbinden-von-wms-diensten-zur-darstellung-von-ortholuftbildern"><span class="header-section-number">3.4</span> Aufgabe 02: Einbinden von WMS-Diensten zur Darstellung von Ortholuftbildern</a></li>
+  <li><a href="#sec-wms" id="toc-sec-wms" class="nav-link" data-scroll-target="#sec-wms"><span class="header-section-number">3.4</span> Aufgabe 02: Einbinden von WMS-Diensten zur Darstellung von Ortholuftbildern</a></li>
   <li><a href="#aufgabe-03-einbinden-der-flurstücksgrenzen-als-wfs-dienste" id="toc-aufgabe-03-einbinden-der-flurstücksgrenzen-als-wfs-dienste" class="nav-link" data-scroll-target="#aufgabe-03-einbinden-der-flurstücksgrenzen-als-wfs-dienste"><span class="header-section-number">3.5</span> Aufgabe 03: Einbinden der Flurstücksgrenzen als WFS-Dienste</a></li>
   <li><a href="#aufgabe-04-hintergrundkarte-als-vektor-kacheln" id="toc-aufgabe-04-hintergrundkarte-als-vektor-kacheln" class="nav-link" data-scroll-target="#aufgabe-04-hintergrundkarte-als-vektor-kacheln"><span class="header-section-number">3.6</span> Aufgabe 04: Hintergrundkarte als Vektor-Kacheln</a></li>
   <li><a href="#aufgabe-05-sicher-des-nutzerprofils" id="toc-aufgabe-05-sicher-des-nutzerprofils" class="nav-link" data-scroll-target="#aufgabe-05-sicher-des-nutzerprofils"><span class="header-section-number">3.7</span> Aufgabe 05: Sicher des Nutzerprofils</a></li>
@@ -274,8 +280,8 @@ Lizenz: Creative Commons BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc
 </ol>
 </div>
 </section>
-<section id="aufgabe-02-einbinden-von-wms-diensten-zur-darstellung-von-ortholuftbildern" class="level2" data-number="3.4">
-<h2 data-number="3.4" class="anchored" data-anchor-id="aufgabe-02-einbinden-von-wms-diensten-zur-darstellung-von-ortholuftbildern"><span class="header-section-number">3.4</span> Aufgabe 02: Einbinden von WMS-Diensten zur Darstellung von Ortholuftbildern</h2>
+<section id="sec-wms" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="sec-wms"><span class="header-section-number">3.4</span> Aufgabe 02: Einbinden von WMS-Diensten zur Darstellung von Ortholuftbildern</h2>
 <p>Wie sie in dem OpenData-Viewer erkennen können, bräuchte es zur vollständigen Abdeckung des gesamten Göttinger Stadtwaldes über 35 Ortholuftbildkacheln, was einem Downloadvolumen von ca. <span class="math inline">\(35*500=1,7GB\)</span> entsprechen würde. Für eine reine Darstellung z.B. als Hintergrundkarte oder zur Abgrenzung der Waldgrenzen ist das ein erheblicher Aufwand.</p>
 <p>Das LGLN-OpenData Portal bietet neben dem Downloaddienst auch verschiedene Geodatendienste an. Für die reine Darstellung der Bilder kann ein sogenannter Web Mapping Service (WMS) genutzt werden. WMS-Dienste übertragen bereits gerendertet Bilder. Das bedeutet, dass die original Daten auf dem Server verbleiben und dort alle Einstellungen bzgl. der Symbolisierung und der Farbdarstellung zentral festgelegt werden. Der Nutzer erhält dann bereits gerenderte Bildausschnitte und kann die Darstellung z.B. der einzelnen Farbkanäle nicht mehr ändern. Der Vorteil ist, dass so wesentlich kleinere Datenmengen übertragen werden müssen.</p>
 <p>Zum einbinden von Geodatendiensten wird zunächst die URL mit den Geodatendienst benötigt. Sie finden diese URL unter WMS auf der Beschreibung der <a href="https://ni-lgln-opengeodata.hub.arcgis.com/apps/lgln-opengeodata::digitales-orthophoto-dop/about">Ortholuftbildprodukte</a> auf der LGNL-Seite.</p>
@@ -755,8 +761,8 @@ kann hier heruntergeladen werden:
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./references.html" class="pagination-link" aria-label="Referenzen">
-        <span class="nav-page-text">Referenzen</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./uebung04.html" class="pagination-link" aria-label="Lerneinheit 04: Erstellung einer Satellitenbildkarte des Nationalpark Harz">
+        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Lerneinheit 04: Erstellung einer Satellitenbildkarte des Nationalpark Harz</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
