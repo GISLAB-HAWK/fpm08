@@ -190,11 +190,11 @@
     ]
   },
   {
-    "objectID": "uebung03.html#aufgabe-05-sicher-der-nutzerprofile",
-    "href": "uebung03.html#aufgabe-05-sicher-der-nutzerprofile",
+    "objectID": "uebung03.html#aufgabe-05-sicher-des-nutzerprofils",
+    "href": "uebung03.html#aufgabe-05-sicher-des-nutzerprofils",
     "title": "3  Lerneinheit 03: Beschaffung von Geodaten für den Nordcampus Göttingen",
-    "section": "3.7 Aufgabe 05: Sicher der Nutzerprofile",
-    "text": "3.7 Aufgabe 05: Sicher der Nutzerprofile\nSie haben nun mehrere neue Datenquellen angelegt. QGIS speichert diese Datenquellen in ihrem Nutzerprofil. Beim nächsten Start von QGIS können diese Quellen wieder verwendet werden. Daher ist jetzt ein guter Zeitpunkt die Kopie ihres Nutzerprofils erneut zu sichern. Folgen Sie dazu der Anleitung in LE01 Section 1.2.4",
+    "section": "3.7 Aufgabe 05: Sicher des Nutzerprofils",
+    "text": "3.7 Aufgabe 05: Sicher des Nutzerprofils\nSie haben nun mehrere neue Datenquellen angelegt. QGIS speichert diese Datenquellen in ihrem Nutzerprofil. Beim nächsten Start von QGIS können diese Quellen wieder verwendet werden. Daher ist jetzt ein guter Zeitpunkt die Kopie ihres Nutzerprofils erneut zu sichern. Folgen Sie dazu der Anleitung in LE01 Section 1.2.4",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Lerneinheit 03: Beschaffung von Geodaten für den Nordcampus Göttingen</span>"
     ]
