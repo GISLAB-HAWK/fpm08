@@ -115,9 +115,9 @@ unseren Kriterien entsprechen, enthält. Aufgrund der Aufteilung der S2-Kacheln 
 Aufnahmen den gesamten Bereich des Nationalparks ab. Für die Übung wählen wir daher die beiden
 Kacheln vom 12.6.2025 welche den Nationalpark abdecken:
 
--    *S2B_MSIL2A_20250612T102559_N0511_R108_T32UNC_20250612T131505.SAFE*
+-   *S2B_MSIL2A_20250612T102559_N0511_R108_T32UNC_20250612T131505.SAFE*
 
--    *S2B_MSIL2A_20250612T102559_N0511_R108_T32UPC_20250612T131505.SAFE*
+-   *S2B_MSIL2A_20250612T102559_N0511_R108_T32UPC_20250612T131505.SAFE*
 
 Wählen sie diese Aufnahmen aus und beantworten sie mithilfe des Copernicus-Browsers folgende Fragen:
 
@@ -146,8 +146,8 @@ folgende Ordnerstruktur:
 ``` plaintext
 S2B_MSIL2A_20250612T102559_N0511_R108_T32UNC_20250612T131505.SAFE/
 ├── DATASTRIP/
-│   └── raster_1.tif
-|   └── raster_2.tif
+│   └── DATASTRIP/
+|   └── DS_2BPS_20250612T131505_S20250612T103519/
 ├── GRANULE/
 │   └── L2A_T32UNC_20250612T103519
 |   |    └──AUX_DATA
@@ -172,6 +172,12 @@ S2B_MSIL2A_20250612T102559_N0511_R108_T32UNC_20250612T131505.SAFE/
 ├── S2B_MSIL2A_20250612T102559_N0511_R108_T32UNC_20250612T131505-ql.jpg  
 ```
 
+::: callout-caution
+
+In einigen Fällen kommt es beim Entpacken zur Fehlermeldung "Dateiname zu lang". In diesem Fall
+benennen sie die beiden ZIP-Ordner vor dem Entpacken in "bild_1" und "bild_2" um.
+:::
+
 Fügen sie die Bänder B02, B03,B04 und B08 mit einer räumlichen Auflösung zu ihrem QGIS-Projekt
 hinzu.
 
@@ -189,22 +195,29 @@ B08 =
 
 ## Aufgabe 03: Erstellen eines CIR-Falschfarbenbildes
 
-Erstellen sie für beide KAcheln ein virtuelles Mehrkanalraster, speichern sie das virtuelle Raster
-unter S2B_MSIL2A_20250612T102559_N0511_R108_T32UNC_20250612T131505.vrt und
-S2B_MSIL2A_20250612T102559_N0511_R108_T32UPC_20250612T131505.vrt ab. Erstellen sie anschließend ein
-vituellles Satellitenbildmosaik und stellen sie es in QGIS als CIR-Bild dar. Folgen sie dazu auch
-der Anleitung aus der LE02 @sec-mehrkanalbilder.
+Nachdem Inport der einzelnen Bänder werden diese als Graustufenbilder dargestellt. Um eine
+Farbdarstellung zur ermöglichen, müssen die Bänder als Mehrkanalfarbild zusammengestellt werden.
+Siehe auch LE02 @sec-mehrkanalbilder. Erstellen sie für beide Kacheln ein virtuelles Mehrkanalraster
+und speichern sie diese unter:
+
+-   *S2B_MSIL2A_20250612T102559_N0511_R108_T32**UNC**\_20250612T131505.vrt*
+
+-   *S2B_MSIL2A_20250612T102559_N0511_R108_T32**UPC**\_20250612T131505.vrt*
+
+Erstellen sie anschließend ein virtuellles Satellitenbildmosaik und stellen sie es in QGIS als
+CIR-Bild dar. Folgen sie dazu auch der Anleitung aus der LE02 @sec-mosaikieren.
 
 ::: {style="border: 3px solid #ff8a0b; background-color: #ffffff; padding: 8px;"}
 **Vergleichen sie die CIR-Darstellung innerhalb und außerhalb des Nationalparks:**
 
-1.) Welche Unterschiede in den Farben können sie feststellen?
+*1.) Welche Unterschiede in den Farben/Reflexion können sie feststellen?*
 
-2.) Wie interpretieren Sie diese Unterschiede?
-:::
+*2.) Wie interpretieren Sie diese Unterschiede im Bezug auf die Bewirtschaftungskonzepte der beiden
+Betriebe?*
 
 Zur Beantwortung der 2. Frage ist es hilfreich das aktuelle DOP20 Luftbild der LGLN einzubinden.
 Siehe dazu auch @sec-wms in LE03.
+:::
 
 ## Aufgabe 04: Zuschneiden des Satellitenbildmosaiks
 
@@ -227,6 +240,13 @@ Zum Maskieren und zuschneiden nutzen Sie anschließend die Funktion:
 `Raster` →`Extraktion` → Raster auf Layermaske zuschneiden
 :::
 
-Speichern sie das neue Raster unter dem Namen NP_Harz_2025_06_12 als GeoTIFF im Unterordner "daten"
-ab und laden sie die Satellitenbildkarte als CIR-Falschfarbenbild in QGIS. Überlagern sie das Bild
-mit den originalen Außengrenzen des Nationalparks.
+Speichern sie das neue Raster unter dem Namen NP_Harz_2025_06_12 als \*tif im Unterordner "daten" ab
+und laden sie die Satellitenbildkarte als CIR-Falschfarbenbild in QGIS. Überlagern sie das Bild mit
+den originalen Außengrenzen des Nationalparks.
+
+## Aufgabe 05: Projekt bereinigen und sichern
+
+Nachdem wir das Satellitenbild mosaikiert und zugeschnitten haben können wir die original
+Satellitenbilder aus dem Projekt entfernen und auch aus dem Ordner "daten" löschen. Sie brauchen nur
+die Geopackages und die Datei NP_Harz_2025_06_12.tif behalten. Speichern sie dann das QGIS-Projekt,
+schließen sie QGIS und kopieren sie den Projektordner von D: in Ihr persönliches Laufwerk.

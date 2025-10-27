@@ -158,7 +158,7 @@ Darstellung angezeigt.
 2.  *Welche Objekte können Sie in der CIR-Darstellung besser erkennen, welche schlechter?*
 :::
 
-## Erstellen eine Ortholuftbildmosaiks
+## Erstellen eine Ortholuftbildmosaiks {#sec-mosaikieren}
 
 Die Ortholuftbilder werden, wie die meisten Rasterdaten, in sogenannten Kacheln (engl. tiles) z.B.
 mit einer Größe von 2000 m x 2000 m ausgeliefert. In der Übung haben vier solche Kacheln vorliegen.
