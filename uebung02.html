@@ -165,7 +165,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#import-der-ortholuftbilder" id="toc-import-der-ortholuftbilder" class="nav-link" data-scroll-target="#import-der-ortholuftbilder"><span class="header-section-number">2.3</span> Import der Ortholuftbilder</a></li>
   <li><a href="#sec-mehrkanalbilder" id="toc-sec-mehrkanalbilder" class="nav-link" data-scroll-target="#sec-mehrkanalbilder"><span class="header-section-number">2.4</span> Erstellen von Mehrkanalbildern</a></li>
   <li><a href="#sec-CIR_darstellung" id="toc-sec-CIR_darstellung" class="nav-link" data-scroll-target="#sec-CIR_darstellung"><span class="header-section-number">2.5</span> Echt- und falschfarben Darstellungen von Luftbildern</a></li>
-  <li><a href="#erstellen-eine-ortholuftbildmosaiks" id="toc-erstellen-eine-ortholuftbildmosaiks" class="nav-link" data-scroll-target="#erstellen-eine-ortholuftbildmosaiks"><span class="header-section-number">2.6</span> Erstellen eine Ortholuftbildmosaiks</a></li>
+  <li><a href="#sec-mosaikieren" id="toc-sec-mosaikieren" class="nav-link" data-scroll-target="#sec-mosaikieren"><span class="header-section-number">2.6</span> Erstellen eine Ortholuftbildmosaiks</a></li>
   </ul>
 </nav>
     </div>
@@ -289,8 +289,8 @@ Lizenz: Creative Commons BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc
 </ol>
 </div>
 </section>
-<section id="erstellen-eine-ortholuftbildmosaiks" class="level2" data-number="2.6">
-<h2 data-number="2.6" class="anchored" data-anchor-id="erstellen-eine-ortholuftbildmosaiks"><span class="header-section-number">2.6</span> Erstellen eine Ortholuftbildmosaiks</h2>
+<section id="sec-mosaikieren" class="level2" data-number="2.6">
+<h2 data-number="2.6" class="anchored" data-anchor-id="sec-mosaikieren"><span class="header-section-number">2.6</span> Erstellen eine Ortholuftbildmosaiks</h2>
 <p>Die Ortholuftbilder werden, wie die meisten Rasterdaten, in sogenannten Kacheln (engl. tiles) z.B. mit einer Größe von 2000 m x 2000 m ausgeliefert. In der Übung haben vier solche Kacheln vorliegen. Zur Abdeckung größere Gebiete werden meistens mehrere Kacheln benötigt. Besonders für große Gebiete kann das sehr aufwendig werden, da die Einstellungen z.B. der Darstellung für jede Kachel einzeln angepasst werden muss. Daher ist es sinnvoll die Kacheln eines zusammenhängenden Gebietes zusammenzuführen. Diese Zusammenstellung mehrere Bilder die räumlich benachbart sind, bezeichnet man in der Fernerkundung häufig als Bildmosaik. QGIS bietet unterschiedliche Möglichkeiten Bildmosaike zu erstellen. Ein Option wäre es mehrere Kacheln zusammenzuführen und als neue GeoTiff-Datei abzuspeichern. Diese hätte den Vorteil, dass wir für das jeweilige Gebiet nur noch eine Datei hätten. Es gibt bei diesem Vorgehen allerdings mehrere Nachteile. Je nach Gebietsgröße werden die Dateien sehr groß. Das kann dann zu sehr langen Ladezeiten führen, wenn man in das Bild zoomt. Außerdem würde auch wieder eine Kopie der Daten angelegt, was zu einem größeren Speicherplatzbedarf führt. Alternativ kann auch für dieses Problem ein virtuelles Raster verwendet werden. Anders als im oberen Abschnitt nutzen wir diese Funktion nun um benachbarten Bilder zusammenzuführen. Voraussetzung dafür ist, dass die Bilder das selbe Koordinatenreferenzsystem nutzen, die räumliche Auflösung und die Anzahl der Bänder identisch ist.</p>
 <p>Zum Erstellen eines VRT-Mosaiks nutzen wie wieder:</p>
 <div style="border: 2px solid #afca0b; background-color: #fafafa; padding: 8px;">

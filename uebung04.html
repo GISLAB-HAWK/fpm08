@@ -166,6 +166,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#aufgabe-02-import-der-satellitendaten-in-qgis" id="toc-aufgabe-02-import-der-satellitendaten-in-qgis" class="nav-link" data-scroll-target="#aufgabe-02-import-der-satellitendaten-in-qgis"><span class="header-section-number">4.4</span> Aufgabe 02: Import der Satellitendaten in QGIS</a></li>
   <li><a href="#aufgabe-03-erstellen-eines-cir-falschfarbenbildes" id="toc-aufgabe-03-erstellen-eines-cir-falschfarbenbildes" class="nav-link" data-scroll-target="#aufgabe-03-erstellen-eines-cir-falschfarbenbildes"><span class="header-section-number">4.5</span> Aufgabe 03: Erstellen eines CIR-Falschfarbenbildes</a></li>
   <li><a href="#aufgabe-04-zuschneiden-des-satellitenbildmosaiks" id="toc-aufgabe-04-zuschneiden-des-satellitenbildmosaiks" class="nav-link" data-scroll-target="#aufgabe-04-zuschneiden-des-satellitenbildmosaiks"><span class="header-section-number">4.6</span> Aufgabe 04: Zuschneiden des Satellitenbildmosaiks</a></li>
+  <li><a href="#aufgabe-05-projekt-bereinigen-und-sichern" id="toc-aufgabe-05-projekt-bereinigen-und-sichern" class="nav-link" data-scroll-target="#aufgabe-05-projekt-bereinigen-und-sichern"><span class="header-section-number">4.7</span> Aufgabe 05: Projekt bereinigen und sichern</a></li>
   </ul>
 </nav>
     </div>
@@ -278,8 +279,8 @@ Lizenz: Creative Commons BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc
 <p>Die Satellitenprodukte werden von der ESA in einer standardisierten Struktur gespeichert und ausgeliefert. Eine detailierte Beschreibung der Produkte finden sie in der Dokumentation unter: <a href="https://sentiwiki.copernicus.eu/web/s2-products" class="uri">https://sentiwiki.copernicus.eu/web/s2-products</a>. Nach dem Entpacken der ZIP-Datei finden sie folgende Ordnerstruktur:</p>
 <pre class="plaintext"><code>S2B_MSIL2A_20250612T102559_N0511_R108_T32UNC_20250612T131505.SAFE/
 ├── DATASTRIP/
-│   └── raster_1.tif
-|   └── raster_2.tif
+│   └── DATASTRIP/
+|   └── DS_2BPS_20250612T131505_S20250612T103519/
 ├── GRANULE/
 │   └── L2A_T32UNC_20250612T103519
 |   |    └──AUX_DATA
@@ -302,6 +303,19 @@ Lizenz: Creative Commons BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc
 ├── manifest.safe
 ├── MTD_MSIL2A.xml
 ├── S2B_MSIL2A_20250612T102559_N0511_R108_T32UNC_20250612T131505-ql.jpg  </code></pre>
+<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Caution
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>In einigen Fällen kommt es beim Entpacken zur Fehlermeldung “Dateiname zu lang”. In diesem Fall benennen sie die beiden ZIP-Ordner vor dem Entpacken in “bild_1” und “bild_2” um.</p>
+</div>
+</div>
 <p>Fügen sie die Bänder B02, B03,B04 und B08 mit einer räumlichen Auflösung zu ihrem QGIS-Projekt hinzu.</p>
 <div style="border: 3px solid #ff8a0b; background-color: #ffffff; padding: 8px;">
 <p><strong>Ordnen sie die Bandnummern des Sentinel-2 MSI den Spektralbereichen zu (z.B. rot):</strong></p>
@@ -313,13 +327,18 @@ Lizenz: Creative Commons BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc
 </section>
 <section id="aufgabe-03-erstellen-eines-cir-falschfarbenbildes" class="level2" data-number="4.5">
 <h2 data-number="4.5" class="anchored" data-anchor-id="aufgabe-03-erstellen-eines-cir-falschfarbenbildes"><span class="header-section-number">4.5</span> Aufgabe 03: Erstellen eines CIR-Falschfarbenbildes</h2>
-<p>Erstellen sie für beide KAcheln ein virtuelles Mehrkanalraster, speichern sie das virtuelle Raster unter S2B_MSIL2A_20250612T102559_N0511_R108_T32UNC_20250612T131505.vrt und S2B_MSIL2A_20250612T102559_N0511_R108_T32UPC_20250612T131505.vrt ab. Erstellen sie anschließend ein vituellles Satellitenbildmosaik und stellen sie es in QGIS als CIR-Bild dar. Folgen sie dazu auch der Anleitung aus der LE02 <a href="uebung02.html#sec-mehrkanalbilder" class="quarto-xref"><span>Section 2.4</span></a>.</p>
+<p>Nachdem Inport der einzelnen Bänder werden diese als Graustufenbilder dargestellt. Um eine Farbdarstellung zur ermöglichen, müssen die Bänder als Mehrkanalfarbild zusammengestellt werden. Siehe auch LE02 <a href="uebung02.html#sec-mehrkanalbilder" class="quarto-xref"><span>Section 2.4</span></a>. Erstellen sie für beide Kacheln ein virtuelles Mehrkanalraster und speichern sie diese unter:</p>
+<ul>
+<li><p><em>S2B_MSIL2A_20250612T102559_N0511_R108_T32<strong>UNC</strong>_20250612T131505.vrt</em></p></li>
+<li><p><em>S2B_MSIL2A_20250612T102559_N0511_R108_T32<strong>UPC</strong>_20250612T131505.vrt</em></p></li>
+</ul>
+<p>Erstellen sie anschließend ein virtuellles Satellitenbildmosaik und stellen sie es in QGIS als CIR-Bild dar. Folgen sie dazu auch der Anleitung aus der LE02 <a href="uebung02.html#sec-mosaikieren" class="quarto-xref"><span>Section 2.6</span></a>.</p>
 <div style="border: 3px solid #ff8a0b; background-color: #ffffff; padding: 8px;">
 <p><strong>Vergleichen sie die CIR-Darstellung innerhalb und außerhalb des Nationalparks:</strong></p>
-<p>1.) Welche Unterschiede in den Farben können sie feststellen?</p>
-<p>2.) Wie interpretieren Sie diese Unterschiede?</p>
-</div>
+<p><em>1.) Welche Unterschiede in den Farben/Reflexion können sie feststellen?</em></p>
+<p><em>2.) Wie interpretieren Sie diese Unterschiede im Bezug auf die Bewirtschaftungskonzepte der beiden Betriebe?</em></p>
 <p>Zur Beantwortung der 2. Frage ist es hilfreich das aktuelle DOP20 Luftbild der LGLN einzubinden. Siehe dazu auch <a href="uebung03.html#sec-wms" class="quarto-xref"><span>Section 3.4</span></a> in LE03.</p>
+</div>
 </section>
 <section id="aufgabe-04-zuschneiden-des-satellitenbildmosaiks" class="level2" data-number="4.6">
 <h2 data-number="4.6" class="anchored" data-anchor-id="aufgabe-04-zuschneiden-des-satellitenbildmosaiks"><span class="header-section-number">4.6</span> Aufgabe 04: Zuschneiden des Satellitenbildmosaiks</h2>
@@ -331,7 +350,11 @@ Lizenz: Creative Commons BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc
 <div style="border: 2px solid #afca0b; background-color: #fafafa; padding: 8px;">
 <p><code>Raster</code> →<code>Extraktion</code> → Raster auf Layermaske zuschneiden</p>
 </div>
-<p>Speichern sie das neue Raster unter dem Namen NP_Harz_2025_06_12 als GeoTIFF im Unterordner “daten” ab und laden sie die Satellitenbildkarte als CIR-Falschfarbenbild in QGIS. Überlagern sie das Bild mit den originalen Außengrenzen des Nationalparks.</p>
+<p>Speichern sie das neue Raster unter dem Namen NP_Harz_2025_06_12 als *tif im Unterordner “daten” ab und laden sie die Satellitenbildkarte als CIR-Falschfarbenbild in QGIS. Überlagern sie das Bild mit den originalen Außengrenzen des Nationalparks.</p>
+</section>
+<section id="aufgabe-05-projekt-bereinigen-und-sichern" class="level2" data-number="4.7">
+<h2 data-number="4.7" class="anchored" data-anchor-id="aufgabe-05-projekt-bereinigen-und-sichern"><span class="header-section-number">4.7</span> Aufgabe 05: Projekt bereinigen und sichern</h2>
+<p>Nachdem wir das Satellitenbild mosaikiert und zugeschnitten haben können wir die original Satellitenbilder aus dem Projekt entfernen und auch aus dem Ordner “daten” löschen. Sie brauchen nur die Geopackages und die Datei NP_Harz_2025_06_12.tif behalten. Speichern sie dann das QGIS-Projekt, schließen sie QGIS und kopieren sie den Projektordner von D: in Ihr persönliches Laufwerk.</p>
 
 
 </section>
