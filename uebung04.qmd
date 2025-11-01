@@ -173,13 +173,12 @@ S2B_MSIL2A_20250612T102559_N0511_R108_T32UNC_20250612T131505.SAFE/
 ```
 
 ::: callout-caution
-
 In einigen Fällen kommt es beim Entpacken zur Fehlermeldung "Dateiname zu lang". In diesem Fall
 benennen sie die beiden ZIP-Ordner vor dem Entpacken in "bild_1" und "bild_2" um.
 :::
 
-Fügen sie die Bänder B02, B03,B04 und B08 mit einer räumlichen Auflösung von 10m zu ihrem QGIS-Projekt
-hinzu.
+Fügen sie die Bänder B02, B03,B04 und B08 mit einer räumlichen Auflösung von 10m zu ihrem
+QGIS-Projekt hinzu.
 
 ::: {style="border: 3px solid #ff8a0b; background-color: #ffffff; padding: 8px;"}
 **Ordnen sie die Bandnummern des Sentinel-2 MSI den Spektralbereichen zu (z.B. rot):**
