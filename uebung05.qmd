@@ -29,17 +29,18 @@ Bestockung der Bestände ergeben. In der Übung sollen anhand von aktuellen Luft
 
 Die Studierenden sollen:
 
--   Aktuelle Luftbilder des FoA Heiligenstadt in Thüringen beschaffen
+-   Passende Luftbilder des FoA Heiligenstadt in Thüringen beschaffen
 
 -   Prinzipien des Digitalisierens von Geoobjekten kennen
 
--   Fortgeschrittene Editierfunktionen Nutzen um die Waldeinteilung zu aktualisieren
+-   Fortgeschrittene Editierfunktionen Nutzen um die Waldeinteilung unter Einhaltung einer sauberen
+    Vektortopologie zu aktualisieren
 
 **Aufgaben**
 
-1.  Beschaffen sie aktuelle CIR-Ortholoftbilder von Geoportal Thüringen
+1.  Beschaffen sie CIR-Ortholoftbilder von Geoportal Thüringen
 
-2.  Beschaffen sie die aktuelle Waldeinteilung von Geoportal und filtern Sie dieses auf das FoA
+2.  Beschaffen sie die Waldeinteilung von Geoportal und filtern Sie dieses auf das FoA
     Heilligenstadt
 
 3.  Beschaffen Sie Informationen zu Waldschäden
@@ -80,6 +81,16 @@ Nach dem Download können sie die ZIP-Ordner entpacken und die vier Luftbilder i
 ./daten/raster kopieren. Nach dem erfolgreichen Entpacken können die ZIP-Ordner aus dem
 Projektverzeichnis gelöscht werden.
 
+Importieren sie die Ortholuftbilder und erzeugen sie eine CIR-Falschfarbendarstellung (siehe auch
+LE02 @sec-CIR_darstellung).
+
+::: callout-tip
+**Stil kopieren**
+
+Mit den Funktionen *„Stil kopieren“/“Stil einfügen“* können sie die Symbolisierung von einem Layer
+auf den anderen übertragen.
+:::
+
 ::: {style="border: 3px solid #ff8a0b; background-color: #ffffff; padding: 8px;"}
 **Fragen:**
 
@@ -99,14 +110,6 @@ Thüringen heruntergeladen werden:
 
 Entpacken sie die Dateien dieses shapefiles in den Ordner *"../daten/vektor/"* und fügen sie die
 Waldeinteilung in das QGIS-Projekt ein.
-
-::: {style="border: 3px solid #ff8a0b; background-color: #ffffff; padding: 8px;"}
-**Waldeinteilungsdaten**
-
-1.) Was ist der Stichtag der vorliegenden Waldeinteilung?
-
-2.) Welche Informationen zu den Waldflächen enthält der Datensatz?
-:::
 
 Für die Übung beschränken wir uns auf die Auswertung folgende Abteilungen des FoA Heiligenstadt
 (55):
@@ -132,24 +135,26 @@ sollten 60 Zeilen ausgegeben werden. Ist dies der Fall aktivieren wir den neuen 
 
 Für die spätere Bearbeitung der Geometrien legen wir uns eine Kopie der gefilterten Bestände an und
 speichern diese im Geopackage Format ab. Dazu klicken wir im Layer-Panel rechts auf den Layer
-*„Baumarten“* und wählen die Funktion *„Export“* \> *„Objekte speichern als“*.  Wir speichern die
+*„Baumarten“* und wählen die Funktion *„Export“* \> *„Objekte speichern als“*. Wir speichern die
 Objekte als Geopackage im Ordner „.../vektor/“ unter dem Namen „uebung05.gpkg“ ab und nennen den
 Layer „Waldeinteilung“.
 
-![](images/LE05_export_geopackage.png)
+![](images/LE05_export_geopackage.png) Für die weitere Bearbeitung soll die Darstellung der
+Waldeinteilung so angepasst werden, dass eine Aktualisierung durch die visuelle Interpretation
+erfolgen kann. Dazu sollen zunächst die Bestandesgrenzen als kontrastreiche Linien vor dem
+CIR-Luftbild gezeichnet werden. Hier bietet sich als Symbollayertyp *„Rand_Einfache Linie“* mit
+einem hellen Blauton an. Wir können die Symbolisierung unter Eigenschaften -\> Symbolisierung
+einstellen.
 
-Für die Aktualisierung der Waldeinteilung benötigen wir eine zusätzliche Spalte mit
-einer Bestandesnummer. Wir können diese hinzufügen, in dem wir die
-Attributtabelle des neuen Layers öffnen. Nun aktivieren wir den Editiermodus
-mit dem kleinen Stiftsymbol und wählen „Neue Spalte“ hinzufügen.
+::: {style="border: 3px solid #ff8a0b; background-color: #ffffff; padding: 8px;"}
+**Waldeinteilungsdaten**
 
-![](images/le05_add_column_to_geopackage.png)
+1.) Was ist der Stichtag der vorliegenden Waldeinteilung?
 
-Im folgenden Menü können wir dann eine entsprechende neue Spalte *„Bestand“* als Integer Wert
-anlegen. Wir bestätigen die Änderung in dem wir den Editiermodus wieder beenden und die Änderungen
-speichern.
+2.) Welche Informationen zu den Waldflächen enthält der Datensatz?
+:::
 
-## Aufgabe 03:  Import von Informationen zu Waldschäden
+## Aufgabe 03: Import von Informationen zu Waldschäden
 
 ThüringenForst stellt außerdem die Ergebnisse einer satellitenbasierten Waldschadenserfassung zur
 Verfügung. Hierbei werden in einem automatisierten Verfahren Vitalitätsänderungen in Sentinel-2
@@ -164,82 +169,42 @@ Richten sie WMS-Verbindung in QGIS ein und laden sie den Layer "Waldschäden". S
 
 ## Aufgabe 04: Aktualisierung der Waldeinteilung
 
-### Projektvorbereitung und Anpassung der Darstellung
-
-**Luftbilder**
-
-Zur Beurteilung der Vitalität/Schäden ist eine Falschfarbendarstellung als Color-Infrared Bild
-sinnvoll. Die digitalen Orthophotos (DOPs) werden als RGBI, also mit vier Kanälen, ausgeliefert und
-können somit als CIR dargestellt werden. Dazu öffnen wir das Layer „Eigenschaften“ im Menü, in dem
-wir rechts im Layer-Panel auf eines der DOPs klicken und „Eigenschaften“ auswählen. Im Abschnitt
-„Symbolisierung“ können wir die Einstellungen für die Darstellung des Layers vornehmen. Zur
-Erstellung eines CIR-Falschfarbenbildes weisen wir dem Roten Kanal den Bildkanal 4 (NIR) zu. QGIS
-bietet uns auch die Möglichkeit Kontrastverbesserungsverfahren anzuwenden. Hier wählen wir eine
-Kontraststreckung und setzen den Min/Max Wert auf die zweifache Standardabweichung, wobei wir die
-Standardabweichung für das ganze Raster schätzen.
-
-Stellen diese Symbolisierung für alle vier Luftbilder ein.
-
-::: callout-tip
-**Stil kopieren**
-
-Mit den Funktionen *„Stil kopieren“/“Stil einfügen“* können sie die Symbolisierung
-von einem Layer auf den anderen übertragen.
-:::
-
-**Vektordaten**
-
-Für die weitere Bearbeitung soll die Darstellung der Waldeinteilung so angepasst werden, dass eine
-Aktualisierung durch die visuelle Interpretation erfolgen kann. Dazu sollen zunächst die
-Bestandesgrenzen als kontrastreiche Linien vor dem CIR-Luftbild gezeichnet werden. Hier bietet sich
-als Symbollayertyp „Rand_Einfache Linie“ mit einem hellen Blauton an. Wir können die Symbolisierung
-unter Eigenschaften-\> Symbolisierung einstellen.
-
-Zusätzlich möchten wir uns die Baumarten aus dem shapefile „Baumarten“ mit anzeigen lassen. Für jede
-Baumart soll eine eigene Farbe verwendet werden. Dazu ändern wir die Symbolisierung des Layers
-„Baumarten“ auf kategorisiert und wählen als Wert die Spalte „BA_kurz“. Wenn sie auf
-„Klassifizieren“ klicken, werden alle Werte der Spalte „BA_Kurz“ mit einer Farbe eingefärbt. Zur
-besseren Darstellung mit dem Luftbild können sie den Baumartenlayer transparent machen. Wählen sie
-dazu „Layerdarstellung“ und setzten sie den Deckkraftschieber auf ca. 40%.
-
-::: callout-tip
-**Baumartenfarben**
-
-Die Zuordnung der unterschiedlichen Farben zu den Baumarten ist in jedem Bundesland
-geregelt. Eichen werden z. B in Niedersachsen immer gelb dargestellt. Da die
-Förster an diese Farben in den Karten gewöhnt sind, sollten sie bei der
-Erstellung von Baumartenkarten dieselben Farben wie in „Ihrem“ Bundesland
-verwenden.
-:::
-
-![](images/LE05_baumarten_stil.png){fig-align="center"}
-
 ### Editieren von Vektordaten
 
 Bevor wir mit der Aktualisierung der Bestandesgrenzen beginnen können, müssen wir zunächst die
 verschiedenen Werkzeuge zum Editieren von Polygonen kennenlernen. Um topologische Fehler beim
 Editieren der Geometrien zu reduzieren verwenden wir die „Einrastwerkzeuge“(snapping) in QGIS. Bei
-der ersten Verwendung müssen diese zunächst aktiviert/sichtbar gemacht werden. Dazu wählen wir im
-Menü-\>Ansicht-\>Werkzeugkästen\> Einrastewerkzeugleiste. In der Werkzeugleiste erscheint nun ein
-kleines Magnetsymbol. Wir aktivieren die Einrastfunktion durch Klick auf das Magnet-Symbol und
-wählen folgende Einstellungen:
+der ersten Verwendung müssen diese zunächst aktiviert/sichtbar gemacht werden. Dazu wählen wir:
+
+::: {style="border: 2px solid #afca0b; background-color: #fafafa; padding: 8px;"}
+Menü `→` Ansicht `→` Werkzeugkästen `→` Einrastewerkzeugleiste
+:::
+
+In der Werkzeugleiste erscheint nun ein kleines Magnetsymbol. Wir aktivieren die Einrastfunktion
+durch Klick auf das Magnet-Symbol und wählen folgende Einstellungen:
 
 ![](images/le05_topologisches_editieren_einstellen.png)
 
-Zusätzlich möchten wir die erweiterten Digitalisierungswerkzeuge in QGIS nutzen. Bei der
-ersten Verwendung müssen wir diese aktivieren, in dem wir im
-Menü\>Ansicht\>Werkzeugkästen\>Erweiterte
-Digitalisierungswerkzeugleiste aktivieren.
+Zusätzlich möchten wir die *erweiterten Digitalisierungswerkzeuge* in QGIS nutzen. Bei der ersten
+Verwendung müssen wir diese wie folgt aktivieren:
 
-QGIS bietet vielfältige Funktionen zum Editieren von Geometrien an.  In dieser Übung wollen wir nur
+::: {style="border: 2px solid #afca0b; background-color: #fafafa; padding: 8px;"}
+Menü `→` Ansicht `→` Werkzeugkästen `→` Erweiterte Digitalisierungswerkzeugleiste
+:::
+
+QGIS bietet vielfältige Funktionen zum Editieren von Geometrien an. In dieser Übung wollen wir nur
 die wichtigsten vorstellen:
 
 #### Polygon teilen
 
 Wir können bestehende Polygone in zwei oder mehrere Teile zerschneiden. Diese Funktion ist immer
 dann sinnvoll, wenn z.B. ein schon kartierter Bestand aufgrund von Störungen weiter aufgeteilt
-werden soll. Dazu wählen wir das Tool „Objekte teilen“ in den „Erweiterte
+werden soll. Dazu wählen wir das Tool „Objekte teilen“ in der Werkzeugleiste „Erweiterte
 Digitalisierungswerkzeuge“.
+
+::: callout-caution
+Bevor sie mit dem Zerteilen starten, achten Sie darauf das kein Polygon ausgewählt ist.
+:::
 
 ::: callout-note
 Wenn sie die Funktion „Teile zerlegen“ wählen wird ein Polygon in ein Multi-Polygon aufgeteilt und
