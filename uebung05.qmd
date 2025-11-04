@@ -177,7 +177,7 @@ Editieren der Geometrien zu reduzieren verwenden wir die „Einrastwerkzeuge“(
 der ersten Verwendung müssen diese zunächst aktiviert/sichtbar gemacht werden. Dazu wählen wir:
 
 ::: {style="border: 2px solid #afca0b; background-color: #fafafa; padding: 8px;"}
-Menü `→` Ansicht `→` Werkzeugkästen `→` Einrastewerkzeugleiste
+Menü `→` Ansicht `→` Werkzeugleisten `→` Einrastewerkzeugleiste
 :::
 
 In der Werkzeugleiste erscheint nun ein kleines Magnetsymbol. Wir aktivieren die Einrastfunktion
@@ -189,7 +189,7 @@ Zusätzlich möchten wir die *erweiterten Digitalisierungswerkzeuge* in QGIS nut
 Verwendung müssen wir diese wie folgt aktivieren:
 
 ::: {style="border: 2px solid #afca0b; background-color: #fafafa; padding: 8px;"}
-Menü `→` Ansicht `→` Werkzeugkästen `→` Erweiterte Digitalisierungswerkzeugleiste
+Menü `→` Ansicht `→` Werkzeugleisten `→` Erweiterte Digitalisierungswerkzeugleiste
 :::
 
 QGIS bietet vielfältige Funktionen zum Editieren von Geometrien an. In dieser Übung wollen wir nur
