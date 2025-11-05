@@ -199,7 +199,7 @@ die wichtigsten vorstellen:
 
 Wir können bestehende Polygone in zwei oder mehrere Teile zerschneiden. Diese Funktion ist immer
 dann sinnvoll, wenn z.B. ein schon kartierter Bestand aufgrund von Störungen weiter aufgeteilt
-werden soll. Dazu wählen wir das Tool „Objekte teilen“ in der Werkzeugleiste „Erweiterte
+werden soll. Dazu wählen wir das Tool „Objekte zerteilen“ in der Werkzeugleiste „Erweiterte
 Digitalisierungswerkzeuge“.
 
 ::: callout-caution
@@ -211,7 +211,7 @@ Wenn sie die Funktion „Teile zerlegen“ wählen wird ein Polygon in ein Multi
 keine neue Zeile in der Attributtabelle angelegt!
 :::
 
-Anschließend können wir ein Polygon zerlegen, in dem wir mit der Maus eine Trennlinie einzeichnen
+Anschließend können wir ein Polygon zerteilen, in dem wir mit der Maus eine Trennlinie einzeichnen
 und diese nach dem letzten Stützpunkt mit einem Rechtsklick bestätigen. Vorteil dieses Verfahrens
 ist, dass keine Zwischenräume oder Selbstschneidungen entstehen. In der Attributtabelle wird eine
 neue Zeile mit den gleichen Werten angelegt. Hier müssen wir noch die Bestandsnummer ändern und in
