@@ -138,10 +138,10 @@ Layer „Waldeinteilung“.
 
 ![](images/LE05_export_geopackage.png)
 
-Für die Aktualisierung der Waldeinteilung benötigen wir eine zusätzliche Spalte mit
-einer Bestandesnummer. Wir können diese hinzufügen, in dem wir die
-Attributtabelle des neuen Layers öffnen. Nun aktivieren wir den Editiermodus
-mit dem kleinen Stiftsymbol und wählen „Neue Spalte“ hinzufügen.
+Für die Aktualisierung der Waldeinteilung benötigen wir eine zusätzliche Spalte mit einer
+Bestandesnummer. Wir können diese hinzufügen, in dem wir die Attributtabelle des neuen Layers
+öffnen. Nun aktivieren wir den Editiermodus mit dem kleinen Stiftsymbol und wählen „Neue Spalte“
+hinzufügen.
 
 ![](images/le05_add_column_to_geopackage.png)
 
@@ -149,7 +149,7 @@ Im folgenden Menü können wir dann eine entsprechende neue Spalte *„Bestand�
 anlegen. Wir bestätigen die Änderung in dem wir den Editiermodus wieder beenden und die Änderungen
 speichern.
 
-## Aufgabe 03:  Import von Informationen zu Waldschäden
+## Aufgabe 03: Import von Informationen zu Waldschäden
 
 ThüringenForst stellt außerdem die Ergebnisse einer satellitenbasierten Waldschadenserfassung zur
 Verfügung. Hierbei werden in einem automatisierten Verfahren Vitalitätsänderungen in Sentinel-2
@@ -183,8 +183,8 @@ Stellen diese Symbolisierung für alle vier Luftbilder ein.
 ::: callout-tip
 **Stil kopieren**
 
-Mit den Funktionen *„Stil kopieren“/“Stil einfügen“* können sie die Symbolisierung
-von einem Layer auf den anderen übertragen.
+Mit den Funktionen *„Stil kopieren“/“Stil einfügen“* können sie die Symbolisierung von einem Layer
+auf den anderen übertragen.
 :::
 
 **Vektordaten**
@@ -205,11 +205,10 @@ dazu „Layerdarstellung“ und setzten sie den Deckkraftschieber auf ca. 40%.
 ::: callout-tip
 **Baumartenfarben**
 
-Die Zuordnung der unterschiedlichen Farben zu den Baumarten ist in jedem Bundesland
-geregelt. Eichen werden z. B in Niedersachsen immer gelb dargestellt. Da die
-Förster an diese Farben in den Karten gewöhnt sind, sollten sie bei der
-Erstellung von Baumartenkarten dieselben Farben wie in „Ihrem“ Bundesland
-verwenden.
+Die Zuordnung der unterschiedlichen Farben zu den Baumarten ist in jedem Bundesland geregelt. Eichen
+werden z. B in Niedersachsen immer gelb dargestellt. Da die Förster an diese Farben in den Karten
+gewöhnt sind, sollten sie bei der Erstellung von Baumartenkarten dieselben Farben wie in „Ihrem“
+Bundesland verwenden.
 :::
 
 ![](images/LE05_baumarten_stil.png){fig-align="center"}
@@ -226,9 +225,8 @@ wählen folgende Einstellungen:
 
 ![](images/le05_topologisches_editieren_einstellen.png)
 
-Zusätzlich möchten wir die erweiterten Digitalisierungswerkzeuge in QGIS nutzen. Bei der
-ersten Verwendung müssen wir diese aktivieren, in dem wir im
-Menü\>Ansicht\>Werkzeugkästen\>Erweiterte
+Zusätzlich möchten wir die erweiterten Digitalisierungswerkzeuge in QGIS nutzen. Bei der ersten
+Verwendung müssen wir diese aktivieren, in dem wir im Menü\>Ansicht\>Werkzeugkästen\>Erweiterte
 Digitalisierungswerkzeugleiste aktivieren.
 
 QGIS bietet vielfältige Funktionen zum Editieren von Geometrien an.  In dieser Übung wollen wir nur
