@@ -8,7 +8,7 @@
 
 <meta name="description" content="Übungsaufgaben für das Modul FPM08 forstliche Fernerkundung">
 
-<title>4&nbsp; Lerneinheit 04: Erstellung einer Satellitenbildkarte des Nationalpark Harz – Forstliche Fernerkundung</title>
+<title>6&nbsp; Lerneinheit 06: Erfassung von Fraßschäden in Kiefernbeständen – Forstliche Fernerkundung</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -31,8 +31,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./uebung05.html" rel="next">
-<link href="./uebung03.html" rel="prev">
+<link href="./references.html" rel="next">
+<link href="./uebung05.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
@@ -84,7 +84,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./uebung04.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Lerneinheit 04: Erstellung einer Satellitenbildkarte des Nationalpark Harz</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./uebung06.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Lerneinheit 06: Erfassung von Fraßschäden in Kiefernbeständen</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -140,7 +140,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./uebung04.html" class="sidebar-item-text sidebar-link active">
+  <a href="./uebung04.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Lerneinheit 04: Erstellung einer Satellitenbildkarte des Nationalpark Harz</span></span></a>
   </div>
 </li>
@@ -152,7 +152,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./uebung06.html" class="sidebar-item-text sidebar-link">
+  <a href="./uebung06.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Lerneinheit 06: Erfassung von Fraßschäden in Kiefernbeständen</span></span></a>
   </div>
 </li>
@@ -172,13 +172,12 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#lernziele-aufgabenstellung" id="toc-lernziele-aufgabenstellung" class="nav-link active" data-scroll-target="#lernziele-aufgabenstellung"><span class="header-section-number">4.1</span> Lernziele &amp; Aufgabenstellung</a></li>
-  <li><a href="#aufgabe-0-anlegen-eine-neuen-qgis-projektes" id="toc-aufgabe-0-anlegen-eine-neuen-qgis-projektes" class="nav-link" data-scroll-target="#aufgabe-0-anlegen-eine-neuen-qgis-projektes"><span class="header-section-number">4.2</span> Aufgabe 0: Anlegen eine neuen QGIS-Projektes</a></li>
-  <li><a href="#aufgabe-01-recherche-und-download-eines-aktuellen-sentinel-2-satellitenbildes" id="toc-aufgabe-01-recherche-und-download-eines-aktuellen-sentinel-2-satellitenbildes" class="nav-link" data-scroll-target="#aufgabe-01-recherche-und-download-eines-aktuellen-sentinel-2-satellitenbildes"><span class="header-section-number">4.3</span> Aufgabe 01: Recherche und Download eines aktuellen Sentinel-2 Satellitenbildes</a></li>
-  <li><a href="#aufgabe-02-import-der-satellitendaten-in-qgis" id="toc-aufgabe-02-import-der-satellitendaten-in-qgis" class="nav-link" data-scroll-target="#aufgabe-02-import-der-satellitendaten-in-qgis"><span class="header-section-number">4.4</span> Aufgabe 02: Import der Satellitendaten in QGIS</a></li>
-  <li><a href="#aufgabe-03-erstellen-eines-cir-falschfarbenbildes" id="toc-aufgabe-03-erstellen-eines-cir-falschfarbenbildes" class="nav-link" data-scroll-target="#aufgabe-03-erstellen-eines-cir-falschfarbenbildes"><span class="header-section-number">4.5</span> Aufgabe 03: Erstellen eines CIR-Falschfarbenbildes</a></li>
-  <li><a href="#aufgabe-04-zuschneiden-des-satellitenbildmosaiks" id="toc-aufgabe-04-zuschneiden-des-satellitenbildmosaiks" class="nav-link" data-scroll-target="#aufgabe-04-zuschneiden-des-satellitenbildmosaiks"><span class="header-section-number">4.6</span> Aufgabe 04: Zuschneiden des Satellitenbildmosaiks</a></li>
-  <li><a href="#aufgabe-05-projekt-bereinigen-und-sichern" id="toc-aufgabe-05-projekt-bereinigen-und-sichern" class="nav-link" data-scroll-target="#aufgabe-05-projekt-bereinigen-und-sichern"><span class="header-section-number">4.7</span> Aufgabe 05: Projekt bereinigen und sichern</a></li>
+  <li><a href="#lernziele-aufgabenstellung" id="toc-lernziele-aufgabenstellung" class="nav-link active" data-scroll-target="#lernziele-aufgabenstellung"><span class="header-section-number">6.1</span> Lernziele &amp; Aufgabenstellung</a></li>
+  <li><a href="#aufgabe-0-anlegen-eine-neuen-qgis-projektes" id="toc-aufgabe-0-anlegen-eine-neuen-qgis-projektes" class="nav-link" data-scroll-target="#aufgabe-0-anlegen-eine-neuen-qgis-projektes"><span class="header-section-number">6.2</span> Aufgabe 0: Anlegen eine neuen QGIS-Projektes</a></li>
+  <li><a href="#aufgabe-01-download-und-import-der-ortholuftbilder" id="toc-aufgabe-01-download-und-import-der-ortholuftbilder" class="nav-link" data-scroll-target="#aufgabe-01-download-und-import-der-ortholuftbilder"><span class="header-section-number">6.3</span> Aufgabe 01: Download und Import der Ortholuftbilder</a></li>
+  <li><a href="#aufgabe-02-berechnung-des-normalized-vegetation-difference-vegetation-index-ndvi" id="toc-aufgabe-02-berechnung-des-normalized-vegetation-difference-vegetation-index-ndvi" class="nav-link" data-scroll-target="#aufgabe-02-berechnung-des-normalized-vegetation-difference-vegetation-index-ndvi"><span class="header-section-number">6.4</span> Aufgabe 02: Berechnung des Normalized Vegetation Difference Vegetation Index (NDVI)</a></li>
+  <li><a href="#aufgabe-03-digitalisierung-der-schadflächen" id="toc-aufgabe-03-digitalisierung-der-schadflächen" class="nav-link" data-scroll-target="#aufgabe-03-digitalisierung-der-schadflächen"><span class="header-section-number">6.5</span> Aufgabe 03: Digitalisierung der Schadflächen</a></li>
+  <li><a href="#aufgabe-04-entwicklung-der-schadflächen-optional" id="toc-aufgabe-04-entwicklung-der-schadflächen-optional" class="nav-link" data-scroll-target="#aufgabe-04-entwicklung-der-schadflächen-optional"><span class="header-section-number">6.6</span> Aufgabe 04: Entwicklung der Schadflächen (Optional)</a></li>
   </ul>
 </nav>
     </div>
@@ -187,7 +186,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Lerneinheit 04: Erstellung einer Satellitenbildkarte des Nationalpark Harz</span></h1>
+<h1 class="title"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Lerneinheit 06: Erfassung von Fraßschäden in Kiefernbeständen</span></h1>
 </div>
 
 
@@ -206,167 +205,112 @@ ul.task-list li input[type="checkbox"] {
 
 <!--
 
-Skripte für die Übungen 04 des Moduls FPM08 Forstliche Fernerkundung im Studiengang
+Skripte für die Übungen 06 des Moduls FPM08 Forstliche Fernerkundung im Studiengang
 B.Sc. Forstwirtschaft an der HAWK Göttingen.
 
 Autor: Paul Magdon
-Datum: 2025-10-18
+Datum: 2025-11-06
 Lizenz: Creative Commons BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 -->
-<p><img src="images/LE04_cover_image.png" class="img-fluid"></p>
-<section id="lernziele-aufgabenstellung" class="level2" data-number="4.1">
-<h2 data-number="4.1" class="anchored" data-anchor-id="lernziele-aufgabenstellung"><span class="header-section-number">4.1</span> Lernziele &amp; Aufgabenstellung</h2>
-<p>Satellitenbilder stellen eine wichtige Grundlage in Fernerkundungsprojekten dar. Das Copernicus-Programm der Europäischen Union betreibt eine Flotte von Erdbeobachtungssatelliten, die zunehmend im forstlichen Monitoring verwendet werden. In dieser Einheit werden wir das Sentinel-2 Satellitensystem vorstellen und die Eigenschaften der verfügbaren Produkte diskutieren. Dazu soll eine Satellitenbildkarte des Nationalpark Harz erstellt werden. Die Grenzen des NP Harz sollen für die Internet-Präsenz auf aktuellen Satellitenbildkarten dargestellt werden. Diese können auch z.B. als Grundlage für die Planung von Feldaufnahmen oder für die visuelle Erfassung einzelner Waldteile dienen.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/Le06_Kiefernspinner.jpg" class="img-fluid figure-img"></p>
+<figcaption>Kiefernspinner. Quelle: J.-H. Janßen, CC BY-SA 3.0</figcaption>
+</figure>
+</div>
+<section id="lernziele-aufgabenstellung" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="lernziele-aufgabenstellung"><span class="header-section-number">6.1</span> Lernziele &amp; Aufgabenstellung</h2>
+<p>Die Nordwestdeutsche Forstliche Versuchsanstalt (NWFVA) überwacht in Niedersachsen großflächige Fraßschäden des Kiefernspinners (<em>Dendrolimus pini</em>, Abbildung 1) mithilfe von Fernerkundungsverfahren. Im Juli 2013 wurde dazu eine Luftbildbefliegung durchgeführt und digitale Orthophotos (DOP) hergestellt. In dieser Lerneinheit sollen Schwerpunkte der Kiefernspinnerverbreitung in Kiefernwäldern des Wendlandes (Landkreis Lüchow-Dannenberg) kartiert werden. Grundlage der Kartierung verschiedener Fraßintensitäten ist ein DOP mit einer räumlichen Auflösung von 20&nbsp;cm (DOP20).</p>
 <p><strong>Lernziele</strong></p>
 <p>Die Studierenden sollen:</p>
 <ul>
-<li>den Dataspace des Copernicus-Programms der Europäischen Raumfahrt Agentur (ESA) kennen lernen</li>
-<li>lernen nach Sentinel-2 Satellitenbilder für bestimmte Regionen und Zeitpunkte zu suchen und herunterzuladen</li>
-<li>die Ordnerstrukturen von Sentinel-2 Datenprodukten kennen lernen und die Satellitenbilder in QGIS importieren können.</li>
-<li>Rasterdaten auf Untersuchungsgebiete zuschneiden können.</li>
+<li><p>Luftbilder für die Schadenkartierung aufbereiten</p></li>
+<li><p>Vegetationsindizes berechnen</p></li>
+<li><p>Schadflächen digitalisieren</p></li>
 </ul>
 <p><strong>Aufgaben</strong></p>
 <ol type="1">
-<li>Suchen sie im Copernicus Dataspace nach einer geeigneten Sentinel-2 Aufnahme aus dem 06-2025 und laden sie diese S2-Kachel herunter.</li>
-<li>Untersuchen sie die Ordnerstruktur des Satellitenproduktes und importieren sie die Bänder B02, B03, B04 und B08 mit einer räumlichen Auflösung von 10 m.</li>
-<li>Erstellen Sie ein CIR-Satellitenbildmosaik des NP-Harzes</li>
-<li>Schneiden Sie das Satellitenbildmosaik auf die Außengrenzen des NP Harz +1000m Pufffer zu und maskieren sie alle Werte außerhalb des Puffers.</li>
+<li><p>Rasterdaten importieren und als CIR Darstellen</p></li>
+<li><p>Hintergrundkarte hinzufügen</p></li>
+<li><p>Berechnung der Normalized Vegetation Difference Index (NDVI)</p></li>
+<li><p>Digitalisierung der Schadflächen</p></li>
 </ol>
 </section>
-<section id="aufgabe-0-anlegen-eine-neuen-qgis-projektes" class="level2" data-number="4.2">
-<h2 data-number="4.2" class="anchored" data-anchor-id="aufgabe-0-anlegen-eine-neuen-qgis-projektes"><span class="header-section-number">4.2</span> Aufgabe 0: Anlegen eine neuen QGIS-Projektes</h2>
-<p>Folgen sie der Anleitung aus LE01 <a href="uebung01.html#sec-projekt_management" class="quarto-xref"><span>Section 1.3</span></a> um eine neue Ordnerstruktur und ein neues QGIS-Projekt für LE04 anzulegen.</p>
+<section id="aufgabe-0-anlegen-eine-neuen-qgis-projektes" class="level2" data-number="6.2">
+<h2 data-number="6.2" class="anchored" data-anchor-id="aufgabe-0-anlegen-eine-neuen-qgis-projektes"><span class="header-section-number">6.2</span> Aufgabe 0: Anlegen eine neuen QGIS-Projektes</h2>
+<p>Folgen sie der Anleitung aus LE01 <a href="uebung01.html#sec-projekt_management" class="quarto-xref"><span>Section 1.3</span></a> um eine neue Ordnerstruktur und ein neues QGIS-Projekt für LE05 anzulegen. In der Übung bietet es sich an den Ordner “daten” weiter in die Unterordner “vektor” und “raster” zu unterteilen.</p>
 </section>
-<section id="aufgabe-01-recherche-und-download-eines-aktuellen-sentinel-2-satellitenbildes" class="level2" data-number="4.3">
-<h2 data-number="4.3" class="anchored" data-anchor-id="aufgabe-01-recherche-und-download-eines-aktuellen-sentinel-2-satellitenbildes"><span class="header-section-number">4.3</span> Aufgabe 01: Recherche und Download eines aktuellen Sentinel-2 Satellitenbildes</h2>
-<p>Die Europäische Raumfahrt Agentur (ESA) stellt das gesamte Archiv der Copernicus Daten kostenfrei als offenen Datensatz zur Verfügung. Zur Suche und für den Download solcher Daten wird das online Datenportal <a href="https://dataspace.copernicus.eu/" class="uri">https://dataspace.copernicus.eu/</a> betrieben. Für die Nutzung des Portals ist eine einmalige kostenfreie Registrierung notwendig um einen Nutzernamen und ein Passwort zu erhalten.</p>
-<p>Nach der erfolgreichen Registrierung kann ein Login auf der Homepage erfolgen. Für die Suche nach Daten wird der Copernicus-Browser unter folgender URL angeboten:</p>
-<p><a href="https://browser.dataspace.copernicus.eu" class="uri">https://browser.dataspace.copernicus.eu</a></p>
-<p>Der Browser bietet umfangreiche Möglichkeiten nach Geodatenprodukten zu suchen.</p>
-<p><strong>Festlegen der Area of Interest (AOI)</strong></p>
-<p>Dazu kann eine Geometrien des Untersuchungsgebietes verwendet werden. Als mögliches Datenformat für die Definition der Geometrie akzeptiert der Copernicus-Browser GeoJSON. Das ist ein Text-basiertes Format zum speichern von Vektordaten (siehe auch <a href="https://de.wikipedia.org/wiki/GeoJSON" class="uri">https://de.wikipedia.org/wiki/GeoJSON</a>). Für die Übung soll die Außengrenze des NP-Harz genutzt werden. Das entsprechende GeoJSON kann hier heruntergeladen werden:</p>
-<p><a href="https://cloud.hawk.de/index.php/s/2Zg8raN2qsHMyZf" class="uri">https://cloud.hawk.de/index.php/s/2Zg8raN2qsHMyZf</a></p>
-<p>Speichern sie diese Datei in ihrem Projektordner im Unterordner <em>“daten”</em>. Diese Datei kann sowohl mit QGIS als auch mit einem Texteditor (z.B. Editor, WordPad, Notepad++) geöffnet werden. Öffen sie die Datei in einem Texteditor und kopieren sie alle Zeilen des GeoJSON-Datei.</p>
-<p>Im Copernicus-Browser kann nun eine Area of Interest (AOI) mit diesen Informationen angelegt werden. Dazu rechts oben auf das Polygonsymbol klicken und den Upload Icon auswählen. In das Textfeld des Dialogs den kopierten Inhalte des GeoJSON einfügen.</p>
+<section id="aufgabe-01-download-und-import-der-ortholuftbilder" class="level2" data-number="6.3">
+<h2 data-number="6.3" class="anchored" data-anchor-id="aufgabe-01-download-und-import-der-ortholuftbilder"><span class="header-section-number">6.3</span> Aufgabe 01: Download und Import der Ortholuftbilder</h2>
+<p>Nachdem wir das Projekt angelegt haben, wollen soll das Luftbild aus der Befliegung der NW-FVA importiert werden. Laden Sie zunächst die Geodatensätze für die Übungen herunter. Sie finden diese hier:</p>
+<p><a href="https://cloud.hawk.de/index.php/s/W7GzR6TKK736Cby" class="uri">https://cloud.hawk.de/index.php/s/W7GzR6TKK736Cby</a></p>
+<p>Kopieren &amp; entpacken sie sich diesen Ordner.</p>
+<p>Bei dem Bild handelt es sich um ein Digitales Orthophoto (DOP) mit vier Bändern:</p>
+<ul>
+<li><p>Band 1 (rot)</p></li>
+<li><p>Band 2 (grün)</p></li>
+<li><p>Band 3(blau)</p></li>
+<li><p>Band 4 (Nahes Infrarot, NIR)</p></li>
+</ul>
+<p>Importieren sie die Ortholuftbilder in ihr QGIS-Projekt und erzeugen sie eine CIR-Falschfarbendarstellung (siehe auch LE02 <a href="uebung02.html#sec-CIR_darstellung" class="quarto-xref"><span>Section 2.5</span></a>).</p>
+<p><strong>Fragen:</strong></p>
+<div style="border: 3px solid #ff8a0b; background-color: #ffffff; padding: 8px;">
+<ol type="1">
+<li><p><em>Welche räumliche Auflösung hat das Luftbild?</em></p></li>
+<li><p><em>Welche radiometrische Auflösung hat das Luftbild?</em></p></li>
+</ol>
+</div>
+</section>
+<section id="aufgabe-02-berechnung-des-normalized-vegetation-difference-vegetation-index-ndvi" class="level2" data-number="6.4">
+<h2 data-number="6.4" class="anchored" data-anchor-id="aufgabe-02-berechnung-des-normalized-vegetation-difference-vegetation-index-ndvi"><span class="header-section-number">6.4</span> Aufgabe 02: Berechnung des Normalized Vegetation Difference Vegetation Index (NDVI)</h2>
+<p>Zur besseren Ansprache der Vitalität/des Blattverlusts möchten wir den Vegetationsindex NDVI berechnen. Für die Berechnung nutzen wir die Funktion <em>Radiometric Indices</em> in der Orfeo-Toolbox (OTB). Mit dieser Funktion können unterschiedliche Vegetationsindices berechnet werden. Sie finden die Funktion am einfachsten über die Suche in der Werkzeugkiste. Sollte diese nicht angezeigt werden, können sie die Werkzeugkiste im Menü -&gt; <em>Verarbeitung</em> aktivieren. Sollte ihnen die Funktion nicht angezeigt werden, müssen sie die Pfadeinstellungen zu OTB anpassen (siehe <a href="uebung01.html#sec-otb" class="quarto-xref"><span>Section 1.2.3</span></a>)</p>
+<p>Zur Berechnung des Vegetationsindex muss dem Programm mitgeteilt werden, welches Bild genutzt werden soll (<code>Input Image=sub_prezelle_2013</code>), welche Kanäle im Bild vorhanden sind (siehe oben), welchen Indices berechnet werden sollen (Available Radiometric Indices=Vegetation:NDVI), welche radiometrische Auflösung das Ausgabebild haben soll (Output pixel type= float) und wo das Ausgabebildgespeichert werden soll (Output<br>
+Image=sub_prezelle_2013_ndvi.tif).</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/LE04_dataspace_area_definition.png" class="img-fluid figure-img" width="719"></p>
-<figcaption>Upload der Gebietsgrenzen als GeoJSON in den Copernicus-Browser.</figcaption>
+<p><img src="images/le06_radiometric_indices.png" class="img-fluid figure-img"></p>
+<figcaption>Einstellungen für die Berechnung des NDVIs mit der OTB Funktion <em>Radiometric Indices</em></figcaption>
 </figure>
 </div>
-<p>Nach dem erfolgreichen Upload werden die Außengrenzen des Nationalparks Harz im Browser angezeigt.</p>
-<p><strong>Auswahl und Download der gewünschten Produkte</strong></p>
-<p>Auf der linken Seite des Browsers können die gesuchten Produkte spezifiziert werden. In der Lerneinheit arbeiten wir mit Produkten des Sentinel-2 Systems. Zusätzlich können Filter gesetzt werden:</p>
-<ul>
-<li><p>Sensor: MSI (Multispectral Instrument)</p></li>
-<li><p>Cloud Cover: &lt;10 %</p></li>
-<li><p>Produkttyp: L2A</p></li>
-</ul>
-<p>Im Abschnitt “Time Range” kann festgelegt werden, in welchem Zeitraum Bilder gesucht werden. Für die Übung möchten wir eine Aufnahme aus dem Juni 2025 suchen und setzen daher folgende Werte:</p>
-<p>Time Range:</p>
-<ul>
-<li><p>From: <em>2025-06-01</em></p></li>
-<li><p>Until: <em>2025-06-30</em></p></li>
-</ul>
-<p>Nachdem die Suche gestartet wurde wird eine Ergebnisliste angezeigt die alle Aufnahmen, welche unseren Kriterien entsprechen, enthält. Aufgrund der Aufteilung der S2-Kacheln deckt keine der Aufnahmen den gesamten Bereich des Nationalparks ab. Für die Übung wählen wir daher die beiden Kacheln vom 12.6.2025 welche den Nationalpark abdecken:</p>
-<ul>
-<li><p><em>S2B_MSIL2A_20250612T102559_N0511_R108_T32UNC_20250612T131505.SAFE</em></p></li>
-<li><p><em>S2B_MSIL2A_20250612T102559_N0511_R108_T32UPC_20250612T131505.SAFE</em></p></li>
-</ul>
-<p>Wählen sie diese Aufnahmen aus und beantworten sie mithilfe des Copernicus-Browsers folgende Fragen:</p>
+<p>Als Ausgabe erhalten wir ein Graustufenbild mit den NDVI Werten (-1≤Pixelwert≤1) wie unten dargestellt:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/le06_NDVI.png" class="img-fluid figure-img"></p>
+<figcaption>NDVI als Graustufenbild für Prezelle 2013</figcaption>
+</figure>
+</div>
 <div style="border: 3px solid #ff8a0b; background-color: #ffffff; padding: 8px;">
-<p><strong>Fragen:</strong></p>
-<ol type="1">
-<li><p><em>Um welche Uhrzeit wurde die Aufnahme gemacht?</em></p></li>
-<li><p><em>Wie hoch ist der Wolkenanteil der gesamten S2-Kachel?</em></p></li>
-<li><p><em>Welcher der drei Sentinel-2 Satelliten hat die Aufnahme gemacht?</em></p></li>
-<li><p>Welche Dateigröße hat eine der beiden S2-Kacheln?</p></li>
-</ol>
-</div>
-<p>Laden sie anschließend jeweils die gesamte Szene als Datei herunter und speicher sie die ZIP-Datei in ihrem Projektordner unter “daten”.</p>
-</section>
-<section id="aufgabe-02-import-der-satellitendaten-in-qgis" class="level2" data-number="4.4">
-<h2 data-number="4.4" class="anchored" data-anchor-id="aufgabe-02-import-der-satellitendaten-in-qgis"><span class="header-section-number">4.4</span> Aufgabe 02: Import der Satellitendaten in QGIS</h2>
-<p>Die Satellitenprodukte werden von der ESA in einer standardisierten Struktur gespeichert und ausgeliefert. Eine detailierte Beschreibung der Produkte finden sie in der Dokumentation unter: <a href="https://sentiwiki.copernicus.eu/web/s2-products" class="uri">https://sentiwiki.copernicus.eu/web/s2-products</a>. Nach dem Entpacken der ZIP-Datei finden sie folgende Ordnerstruktur:</p>
-<pre class="plaintext"><code>S2B_MSIL2A_20250612T102559_N0511_R108_T32UNC_20250612T131505.SAFE/
-├── DATASTRIP/
-│   └── DATASTRIP/
-|   └── DS_2BPS_20250612T131505_S20250612T103519/
-├── GRANULE/
-│   └── L2A_T32UNC_20250612T103519
-|   |    └──AUX_DATA
-|   |    └──IMG_DATA
-|   |    |   └──R10m 
-|   |    |   |   └──T32UNC_20250612T102559_AOT_10m.jp2
-|   |    |   |   └──T32UNC_20250612T102559_B02_10m.jp2
-|   |    |   |   └──T32UNC_20250612T102559_B03_10m.jp2
-|   |    |   |   └──T32UNC_20250612T102559_B04_10m.jp2
-|   |    |   |   └──T32UNC_20250612T102559_B08_10m.jp2
-|   |    |   |   └──T32UNC_20250612T102559_TCI_10m.jp2
-|   |    |   |   └──T32UNC_20250612T102559_WVP_10m.jp2
-|   |    |   └──R20m 
-|   |    |   └──R60m 
-|   |    └──QI_DATA
-|   &lt;    └──MTD_TL.xml
-├── HTML/
-├── rep_Info/
-├── inspire.xml
-├── manifest.safe
-├── MTD_MSIL2A.xml
-├── S2B_MSIL2A_20250612T102559_N0511_R108_T32UNC_20250612T131505-ql.jpg  </code></pre>
-<div class="callout callout-style-default callout-caution callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Caution
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>In einigen Fällen kommt es beim Entpacken zur Fehlermeldung “Dateiname zu lang”. In diesem Fall benennen sie die beiden ZIP-Ordner vor dem Entpacken in “bild_1” und “bild_2” um.</p>
-</div>
-</div>
-<p>Fügen sie die Bänder B02, B03,B04 und B08 mit einer räumlichen Auflösung von 10m zu ihrem QGIS-Projekt hinzu.</p>
-<div style="border: 3px solid #ff8a0b; background-color: #ffffff; padding: 8px;">
-<p><strong>Ordnen sie die Bandnummern des Sentinel-2 MSI den Spektralbereichen zu (z.B. rot):</strong></p>
-<p>B02 =</p>
-<p>B03 =</p>
-<p>B04 =</p>
-<p>B08 =</p>
-</div>
-</section>
-<section id="aufgabe-03-erstellen-eines-cir-falschfarbenbildes" class="level2" data-number="4.5">
-<h2 data-number="4.5" class="anchored" data-anchor-id="aufgabe-03-erstellen-eines-cir-falschfarbenbildes"><span class="header-section-number">4.5</span> Aufgabe 03: Erstellen eines CIR-Falschfarbenbildes</h2>
-<p>Nachdem Inport der einzelnen Bänder werden diese als Graustufenbilder dargestellt. Um eine Farbdarstellung zur ermöglichen, müssen die Bänder als Mehrkanalfarbild zusammengestellt werden. Siehe auch LE02 <a href="uebung02.html#sec-mehrkanalbilder" class="quarto-xref"><span>Section 2.4</span></a>. Erstellen sie für beide Kacheln ein virtuelles Mehrkanalraster und speichern sie diese unter:</p>
+<p><strong>NDVI</strong></p>
 <ul>
-<li><p><em>S2B_MSIL2A_20250612T102559_N0511_R108_T32<strong>UNC</strong>_20250612T131505.vrt</em></p></li>
-<li><p><em>S2B_MSIL2A_20250612T102559_N0511_R108_T32<strong>UPC</strong>_20250612T131505.vrt</em></p></li>
+<li><p>Wie unterscheidet sich die CIR-Falschfarbendarstellung vom NDVI?</p></li>
+<li><p>Welche NDVI-Werte haben geschädigte, welche gesunde Kiefern?</p></li>
+<li><p>Sind allen niedrigen NDVI-Werte auf Fraßschäden zurückzuführen?</p></li>
 </ul>
-<p>Erstellen sie anschließend ein virtuellles Satellitenbildmosaik und stellen sie es in QGIS als CIR-Bild dar. Folgen sie dazu auch der Anleitung aus der LE02 <a href="uebung02.html#sec-mosaikieren" class="quarto-xref"><span>Section 2.6</span></a>.</p>
+</div>
+</section>
+<section id="aufgabe-03-digitalisierung-der-schadflächen" class="level2" data-number="6.5">
+<h2 data-number="6.5" class="anchored" data-anchor-id="aufgabe-03-digitalisierung-der-schadflächen"><span class="header-section-number">6.5</span> Aufgabe 03: Digitalisierung der Schadflächen</h2>
+<p>Im nächsten Schritt sollen die vom Kiefernspinner befallen Flächen digitalisiert werden. Legen sie dazu ein neues geopackage im Ordner <em>“daten/vektor”</em> mit dem Namen <em>uebung06.gpkg</em> an. In dem Geopackage soll ein neuer Layer mit dem Namen “Schadflächen” angelegt werden.</p>
+<p>Für die Kartierung der Schadflächen kann es sinnvoll sein, die Darstellung der NDVI-Karte nicht als Graustufenbild darzustellen, sondern dafür ein Farbpalette zu nutzen.</p>
+<p>Stellen Sie dazu die Darstellungsart unter Layereigenschaften -&gt; Symbolisierung auf Einkanalpseudofarben und wählen sie eigneten Farbverlauf aus. Erfassen sie anschließend die Bereiche. die sie eindeutig als befallen erkennen können als Polygone.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/LE06_Schadflaechen.png" class="img-fluid figure-img"></p>
+<figcaption>Erfassung von Schadflächen</figcaption>
+</figure>
+</div>
+</section>
+<section id="aufgabe-04-entwicklung-der-schadflächen-optional" class="level2" data-number="6.6">
+<h2 data-number="6.6" class="anchored" data-anchor-id="aufgabe-04-entwicklung-der-schadflächen-optional"><span class="header-section-number">6.6</span> Aufgabe 04: Entwicklung der Schadflächen (Optional)</h2>
+<p>Die bisherigen bearbeiteten Aufnahmen stammen aus dem Jahr 2013. Im Mai 2024 ist das LGLN erneut Befliegung der Flächen vorgenommen. Laden sie sich die beiden Bilder für das Untersuchungsgebiet vom Geoportal des LGLN und vergleichen sie den Stand 2024 mit dem Stand 2013.</p>
 <div style="border: 3px solid #ff8a0b; background-color: #ffffff; padding: 8px;">
-<p><strong>Vergleichen sie die CIR-Darstellung innerhalb und außerhalb des Nationalparks:</strong></p>
-<p><em>1.) Welche Unterschiede in den Farben/Reflexion können sie feststellen?</em></p>
-<p><em>2.) Wie interpretieren Sie diese Unterschiede im Bezug auf die Bewirtschaftungskonzepte der beiden Betriebe?</em></p>
-<p>Zur Beantwortung der 2. Frage ist es hilfreich das aktuelle DOP20 Luftbild der LGLN einzubinden. Siehe dazu auch <a href="uebung03.html#sec-wms" class="quarto-xref"><span>Section 3.4</span></a> in LE03.</p>
+<p><strong>Zeitliche Änderungen</strong></p>
+<ul>
+<li><p>Lassen sich die Schadflächen auch in 2024 ansprechen?</p></li>
+<li><p>Welche Schlüsse lassen sich aus dem Vergleich 2013 vs 2024 ziehen?</p></li>
+</ul>
 </div>
-</section>
-<section id="aufgabe-04-zuschneiden-des-satellitenbildmosaiks" class="level2" data-number="4.6">
-<h2 data-number="4.6" class="anchored" data-anchor-id="aufgabe-04-zuschneiden-des-satellitenbildmosaiks"><span class="header-section-number">4.6</span> Aufgabe 04: Zuschneiden des Satellitenbildmosaiks</h2>
-<p>Die beide original S2-Kacheln decken ca. 100 x 100km ab. Der Bereich ist also deutlich größer als der gesamte Harz. Um diesen Bereich zu verkleiner sollen die Satellitenbilder auf den Nationalpark zugeschnitten werden. Um die Grenzen trotzdem gut darstellen zu können, so ein Puffer von 1000 m um die Außengrenzen des Parks gelegt werden.</p>
-<p><strong>Außengrenze Puffern</strong></p>
-<p>Speichern sie das GeoJSON der Nationalparkgrenze als Geopackage in Unterordner “daten” ab. Achten sie dabei darauf das Koordinatenbezugssystem (kbs) auf EPSG:25832 zu stellen. Führen sie anschließend einen Puffer von 1000 m durch.</p>
-<p><strong>Bild zuschneiden und maskieren</strong></p>
-<p>Zum Maskieren und zuschneiden nutzen Sie anschließend die Funktion:</p>
-<div style="border: 2px solid #afca0b; background-color: #fafafa; padding: 8px;">
-<p><code>Raster</code> →<code>Extraktion</code> → Raster auf Layermaske zuschneiden</p>
-</div>
-<p>Speichern sie das neue Raster unter dem Namen NP_Harz_2025_06_12 als *tif im Unterordner “daten” ab und laden sie die Satellitenbildkarte als CIR-Falschfarbenbild in QGIS. Überlagern sie das Bild mit den originalen Außengrenzen des Nationalparks.</p>
-</section>
-<section id="aufgabe-05-projekt-bereinigen-und-sichern" class="level2" data-number="4.7">
-<h2 data-number="4.7" class="anchored" data-anchor-id="aufgabe-05-projekt-bereinigen-und-sichern"><span class="header-section-number">4.7</span> Aufgabe 05: Projekt bereinigen und sichern</h2>
-<p>Nachdem wir das Satellitenbild mosaikiert und zugeschnitten haben können wir die original Satellitenbilder aus dem Projekt entfernen und auch aus dem Ordner “daten” löschen. Sie brauchen nur die Geopackages und die Datei NP_Harz_2025_06_12.tif behalten. Speichern sie dann das QGIS-Projekt, schließen sie QGIS und kopieren sie den Projektordner von D: in Ihr persönliches Laufwerk.</p>
 
 
 </section>
@@ -774,13 +718,13 @@ Caution
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./uebung03.html" class="pagination-link" aria-label="Lerneinheit 03: Beschaffung von Geodaten für den Nordcampus Göttingen">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Lerneinheit 03: Beschaffung von Geodaten für den Nordcampus Göttingen</span></span>
+      <a href="./uebung05.html" class="pagination-link" aria-label="Lerneinheit 05: Aktualisierung der Waldeinteilung auf Basis von Ortholuftbildern">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Lerneinheit 05: Aktualisierung der Waldeinteilung auf Basis von Ortholuftbildern</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./uebung05.html" class="pagination-link" aria-label="Lerneinheit 05: Aktualisierung der Waldeinteilung auf Basis von Ortholuftbildern">
-        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Lerneinheit 05: Aktualisierung der Waldeinteilung auf Basis von Ortholuftbildern</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./references.html" class="pagination-link" aria-label="Referenzen">
+        <span class="nav-page-text">Referenzen</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

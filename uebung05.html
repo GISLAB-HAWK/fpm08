@@ -8,7 +8,7 @@
 
 <meta name="description" content="Übungsaufgaben für das Modul FPM08 forstliche Fernerkundung">
 
-<title>5&nbsp; Lerneinheit 05: Aktuallisierung der Waldeinteilung auf Basis von Ortholuftbildern – Forstliche Fernerkundung</title>
+<title>5&nbsp; Lerneinheit 05: Aktualisierung der Waldeinteilung auf Basis von Ortholuftbildern – Forstliche Fernerkundung</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -66,7 +66,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./references.html" rel="next">
+<link href="./uebung06.html" rel="next">
 <link href="./uebung04.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -119,7 +119,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./uebung05.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Lerneinheit 05: Aktuallisierung der Waldeinteilung auf Basis von Ortholuftbildern</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./uebung05.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Lerneinheit 05: Aktualisierung der Waldeinteilung auf Basis von Ortholuftbildern</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -182,7 +182,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./uebung05.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Lerneinheit 05: Aktuallisierung der Waldeinteilung auf Basis von Ortholuftbildern</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Lerneinheit 05: Aktualisierung der Waldeinteilung auf Basis von Ortholuftbildern</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./uebung06.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Lerneinheit 06: Erfassung von Fraßschäden in Kiefernbeständen</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -219,7 +225,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Lerneinheit 05: Aktuallisierung der Waldeinteilung auf Basis von Ortholuftbildern</span></h1>
+<h1 class="title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Lerneinheit 05: Aktualisierung der Waldeinteilung auf Basis von Ortholuftbildern</span></h1>
 </div>
 
 
@@ -259,7 +265,7 @@ Lizenz: Creative Commons BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc
 </ul>
 <p><strong>Aufgaben</strong></p>
 <ol type="1">
-<li><p>Beschaffen sie CIR-Ortholoftbilder von Geoportal Thüringen</p></li>
+<li><p>Beschaffen sie CIR-Ortholuftbilder von Geoportal Thüringen</p></li>
 <li><p>Beschaffen sie die Waldeinteilung von Geoportal und filtern Sie dieses auf das FoA Heilligenstadt</p></li>
 <li><p>Beschaffen Sie Informationen zu Waldschäden</p></li>
 <li><p>Erstellen Sie auf Basis dieser Informationen eine aktualisierte Waldeinteilung</p></li>
@@ -317,7 +323,9 @@ Tip
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ot">"FOA"</span><span class="op">=</span><span class="dv">55</span> <span class="kw">AND</span> <span class="ot">"ABT"</span> <span class="kw">IN</span> (<span class="st">'24'</span>,<span class="st">'25'</span>,<span class="st">'26'</span>,<span class="st">'27'</span>,<span class="st">'28'</span>,<span class="st">'29'</span>,<span class="st">'30'</span>,<span class="st">'32'</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Zur Aktivierung der Filterfunktion klicken wir im Layer-Panel rechts auf unser Layer „Baumarten“ und wählen die Option „Filter“. In dem sich öffnenen Fenster können wir unten unter „Datenanbieterspezifischer Filterausdruck“ den oben genannten SQL Filterausdruck eintragen. Anschließend können sie über die Funktion „Testen“ überprüfen, ob der Filter funktioniert. Es sollten 60 Zeilen ausgegeben werden. Ist dies der Fall aktivieren wir den neuen Filter mit „o.k“.</p>
 <p>Für die spätere Bearbeitung der Geometrien legen wir uns eine Kopie der gefilterten Bestände an und speichern diese im Geopackage Format ab. Dazu klicken wir im Layer-Panel rechts auf den Layer <em>„Baumarten“</em> und wählen die Funktion <em>„Export“</em> &gt; <em>„Objekte speichern als“</em>. Wir speichern die Objekte als Geopackage im Ordner „…/vektor/“ unter dem Namen „uebung05.gpkg“ ab und nennen den Layer „Waldeinteilung“.</p>
-<p><img src="images/LE05_export_geopackage.png" class="img-fluid"> Für die weitere Bearbeitung soll die Darstellung der Waldeinteilung so angepasst werden, dass eine Aktualisierung durch die visuelle Interpretation erfolgen kann. Dazu sollen zunächst die Bestandesgrenzen als kontrastreiche Linien vor dem CIR-Luftbild gezeichnet werden. Hier bietet sich als Symbollayertyp <em>„Rand_Einfache Linie“</em> mit einem hellen Blauton an. Wir können die Symbolisierung unter Eigenschaften -&gt; Symbolisierung einstellen.</p>
+<p><img src="images/LE05_export_geopackage.png" class="img-fluid"></p>
+<p>Für die weitere Bearbeitung soll die Darstellung der Waldeinteilung so angepasst werden, dass eine Aktualisierung durch die visuelle Interpretation erfolgen kann. Dazu sollen zunächst die Bestandesgrenzen als kontrastreiche Linien vor dem CIR-Luftbild gezeichnet werden. Hier bietet sich als Symbollayertyp <em>„Rand_Einfache Linie“</em> mit einem hellen Blauton an. Wir können die Symbolisierung unter Eigenschaften -&gt; Symbolisierung einstellen.</p>
+<p>Für die Aktualisierung der Waldeinteilung benötigen wir eine zusätzliche Spalte mit einer Bestandesnummer. Wir können diese hinzufügen, in dem wir die Attributtabelle des neuen Layers öffnen. Nun aktivieren wir den Editiermodus mit dem kleinen Stiftsymbol und wählen „Neue Spalte“ hinzufügen.</p>
 <div style="border: 3px solid #ff8a0b; background-color: #ffffff; padding: 8px;">
 <p><strong>Waldeinteilungsdaten</strong></p>
 <p>1.) Was ist der Stichtag der vorliegenden Waldeinteilung?</p>
@@ -326,8 +334,8 @@ Tip
 </section>
 <section id="aufgabe-03-import-von-informationen-zu-waldschäden" class="level2" data-number="5.5">
 <h2 data-number="5.5" class="anchored" data-anchor-id="aufgabe-03-import-von-informationen-zu-waldschäden"><span class="header-section-number">5.5</span> Aufgabe 03: Import von Informationen zu Waldschäden</h2>
-<p>ThüringenForst stellt außerdem die Ergebnisse einer satellitenbasierten Waldschadenserfassung zur Verfügung. Hierbei werden in einem automatisierten Verfahren Vitalitätsänderungen in Sentinel-2 Satellitebildzeitreihen erfasst. Die räumliche Auflösung der Sentinel-2 Satellitenbilder beträgt 10m. Die Ergebnisse der Waldschadenskartierung werden zusammen mit anderen interessanten Informationen als WMS-Geodatendienst unter folgender URL zur Verfügung gestellt:</p>
-<p><a href="https://www.geoproxy.geoportal-th.de/geoproxy/services/forst/FORST" class="uri">https://www.geoproxy.geoportal-th.de/geoproxy/services/forst/FORST</a></p>
+<p>Thüringen-Forst stellt außerdem die Ergebnisse einer satelliten-basierten Waldschadenserfassung zur Verfügung. Hierbei werden in einem automatisierten Verfahren Vitalitätsänderungen in Sentinel-2 Satellitenbildzeitreihen erfasst. Die räumliche Auflösung der Sentinel-2 Satellitenbilder beträgt 10m. Die Ergebnisse der Waldschadenskartierung werden zusammen mit anderen interessanten Informationen als WMS-Geodatendienst unter folgender URL zur Verfügung gestellt:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>https://www.geoproxy.geoportal-th.de/geoproxy/services/forst/FORST</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Richten sie WMS-Verbindung in QGIS ein und laden sie den Layer “Waldschäden”. Siehe dazu auch <a href="uebung03.html#sec-wms" class="quarto-xref"><span>Section 3.4</span></a> in LE03.</p>
 </section>
 <section id="aufgabe-04-aktualisierung-der-waldeinteilung" class="level2" data-number="5.6">
@@ -819,8 +827,8 @@ Tip
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./references.html" class="pagination-link" aria-label="Referenzen">
-        <span class="nav-page-text">Referenzen</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./uebung06.html" class="pagination-link" aria-label="Lerneinheit 06: Erfassung von Fraßschäden in Kiefernbeständen">
+        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Lerneinheit 06: Erfassung von Fraßschäden in Kiefernbeständen</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
