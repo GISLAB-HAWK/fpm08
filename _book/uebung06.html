@@ -6,10 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Paul Magdon">
 <meta name="description" content="Übungsaufgaben für das Modul FPM08 forstliche Fernerkundung">
 
-<title>Forstliche Fernerkundung</title>
+<title>6&nbsp; Lerneinheit 06: Erfassung von Fraßschäden in Kiefernbeständen – Forstliche Fernerkundung</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -32,7 +31,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./uebung01.html" rel="next">
+<link href="./references.html" rel="next">
+<link href="./uebung05.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -83,7 +83,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Vorwort</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./uebung06.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Lerneinheit 06: Erfassung von Fraßschäden in Kiefernbeständen</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -113,7 +113,7 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Vorwort</span></a>
   </div>
 </li>
@@ -149,7 +149,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./uebung06.html" class="sidebar-item-text sidebar-link">
+  <a href="./uebung06.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Lerneinheit 06: Erfassung von Fraßschäden in Kiefernbeständen</span></span></a>
   </div>
 </li>
@@ -169,7 +169,12 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#vorwort" id="toc-vorwort" class="nav-link active" data-scroll-target="#vorwort">Vorwort</a></li>
+  <li><a href="#lernziele-aufgabenstellung" id="toc-lernziele-aufgabenstellung" class="nav-link active" data-scroll-target="#lernziele-aufgabenstellung"><span class="header-section-number">6.1</span> Lernziele &amp; Aufgabenstellung</a></li>
+  <li><a href="#aufgabe-0-anlegen-eine-neuen-qgis-projektes" id="toc-aufgabe-0-anlegen-eine-neuen-qgis-projektes" class="nav-link" data-scroll-target="#aufgabe-0-anlegen-eine-neuen-qgis-projektes"><span class="header-section-number">6.2</span> Aufgabe 0: Anlegen eine neuen QGIS-Projektes</a></li>
+  <li><a href="#aufgabe-01-download-und-import-der-ortholuftbilder" id="toc-aufgabe-01-download-und-import-der-ortholuftbilder" class="nav-link" data-scroll-target="#aufgabe-01-download-und-import-der-ortholuftbilder"><span class="header-section-number">6.3</span> Aufgabe 01: Download und Import der Ortholuftbilder</a></li>
+  <li><a href="#aufgabe-02-berechnung-des-normalized-vegetation-difference-vegetation-index-ndvi" id="toc-aufgabe-02-berechnung-des-normalized-vegetation-difference-vegetation-index-ndvi" class="nav-link" data-scroll-target="#aufgabe-02-berechnung-des-normalized-vegetation-difference-vegetation-index-ndvi"><span class="header-section-number">6.4</span> Aufgabe 02: Berechnung des Normalized Vegetation Difference Vegetation Index (NDVI)</a></li>
+  <li><a href="#aufgabe-03-digitalisierung-der-schadflächen" id="toc-aufgabe-03-digitalisierung-der-schadflächen" class="nav-link" data-scroll-target="#aufgabe-03-digitalisierung-der-schadflächen"><span class="header-section-number">6.5</span> Aufgabe 03: Digitalisierung der Schadflächen</a></li>
+  <li><a href="#aufgabe-04-entwicklung-der-schadflächen-optional" id="toc-aufgabe-04-entwicklung-der-schadflächen-optional" class="nav-link" data-scroll-target="#aufgabe-04-entwicklung-der-schadflächen-optional"><span class="header-section-number">6.6</span> Aufgabe 04: Entwicklung der Schadflächen (Optional)</a></li>
   </ul>
 </nav>
     </div>
@@ -178,24 +183,13 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Forstliche Fernerkundung</h1>
+<h1 class="title"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Lerneinheit 06: Erfassung von Fraßschäden in Kiefernbeständen</span></h1>
 </div>
 
-<div>
-  <div class="description">
-    Übungsaufgaben für das Modul FPM08 forstliche Fernerkundung
-  </div>
-</div>
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Paul Magdon </p>
-          </div>
-  </div>
     
   
     
@@ -206,9 +200,114 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="vorwort" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="vorwort">Vorwort</h2>
-<p>Hier finden sie die Materialien für das Modul <em>“Einführung in die forstliche Fernerkundung”</em> des B.Sc. Studiengangs Forstwirtschaft an der HAWK in Göttingen.</p>
+<!--
+
+Skripte für die Übungen 06 des Moduls FPM08 Forstliche Fernerkundung im Studiengang
+B.Sc. Forstwirtschaft an der HAWK Göttingen.
+
+Autor: Paul Magdon
+Datum: 2025-11-06
+Lizenz: Creative Commons BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
+
+-->
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/Le06_Kiefernspinner.jpg" class="img-fluid figure-img"></p>
+<figcaption>Kiefernspinner. Quelle: J.-H. Janßen, CC BY-SA 3.0</figcaption>
+</figure>
+</div>
+<section id="lernziele-aufgabenstellung" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="lernziele-aufgabenstellung"><span class="header-section-number">6.1</span> Lernziele &amp; Aufgabenstellung</h2>
+<p>Die Nordwestdeutsche Forstliche Versuchsanstalt (NWFVA) überwacht in Niedersachsen großflächige Fraßschäden des Kiefernspinners (<em>Dendrolimus pini</em>, Abbildung 1) mithilfe von Fernerkundungsverfahren. Im Juli 2013 wurde dazu eine Luftbildbefliegung durchgeführt und digitale Orthophotos (DOP) hergestellt. In dieser Lerneinheit sollen Schwerpunkte der Kiefernspinnerverbreitung in Kiefernwäldern des Wendlandes (Landkreis Lüchow-Dannenberg) kartiert werden. Grundlage der Kartierung verschiedener Fraßintensitäten ist ein DOP mit einer räumlichen Auflösung von 20&nbsp;cm (DOP20).</p>
+<p><strong>Lernziele</strong></p>
+<p>Die Studierenden sollen:</p>
+<ul>
+<li><p>Luftbilder für die Schadenkartierung aufbereiten</p></li>
+<li><p>Vegetationsindizes berechnen</p></li>
+<li><p>Schadflächen digitalisieren</p></li>
+</ul>
+<p><strong>Aufgaben</strong></p>
+<ol type="1">
+<li><p>Rasterdaten importieren und als CIR Darstellen</p></li>
+<li><p>Hintergrundkarte hinzufügen</p></li>
+<li><p>Berechnung der Normalized Vegetation Difference Index (NDVI)</p></li>
+<li><p>Digitalisierung der Schadflächen</p></li>
+</ol>
+</section>
+<section id="aufgabe-0-anlegen-eine-neuen-qgis-projektes" class="level2" data-number="6.2">
+<h2 data-number="6.2" class="anchored" data-anchor-id="aufgabe-0-anlegen-eine-neuen-qgis-projektes"><span class="header-section-number">6.2</span> Aufgabe 0: Anlegen eine neuen QGIS-Projektes</h2>
+<p>Folgen sie der Anleitung aus LE01 <a href="uebung01.html#sec-projekt_management" class="quarto-xref"><span>Section 1.3</span></a> um eine neue Ordnerstruktur und ein neues QGIS-Projekt für LE05 anzulegen. In der Übung bietet es sich an den Ordner “daten” weiter in die Unterordner “vektor” und “raster” zu unterteilen.</p>
+</section>
+<section id="aufgabe-01-download-und-import-der-ortholuftbilder" class="level2" data-number="6.3">
+<h2 data-number="6.3" class="anchored" data-anchor-id="aufgabe-01-download-und-import-der-ortholuftbilder"><span class="header-section-number">6.3</span> Aufgabe 01: Download und Import der Ortholuftbilder</h2>
+<p>Nachdem wir das Projekt angelegt haben, wollen soll das Luftbild aus der Befliegung der NW-FVA importiert werden. Laden Sie zunächst die Geodatensätze für die Übungen herunter. Sie finden diese hier:</p>
+<p><a href="https://cloud.hawk.de/index.php/s/W7GzR6TKK736Cby" class="uri">https://cloud.hawk.de/index.php/s/W7GzR6TKK736Cby</a></p>
+<p>Kopieren &amp; entpacken sie sich diesen Ordner.</p>
+<p>Bei dem Bild handelt es sich um ein Digitales Orthophoto (DOP) mit vier Bändern:</p>
+<ul>
+<li><p>Band 1 (rot)</p></li>
+<li><p>Band 2 (grün)</p></li>
+<li><p>Band 3(blau)</p></li>
+<li><p>Band 4 (Nahes Infrarot, NIR)</p></li>
+</ul>
+<p>Importieren sie die Ortholuftbilder in ihr QGIS-Projekt und erzeugen sie eine CIR-Falschfarbendarstellung (siehe auch LE02 <a href="uebung02.html#sec-CIR_darstellung" class="quarto-xref"><span>Section 2.5</span></a>).</p>
+<p><strong>Fragen:</strong></p>
+<div style="border: 3px solid #ff8a0b; background-color: #ffffff; padding: 8px;">
+<ol type="1">
+<li><p><em>Welche räumliche Auflösung hat das Luftbild?</em></p></li>
+<li><p><em>Welche radiometrische Auflösung hat das Luftbild?</em></p></li>
+</ol>
+</div>
+</section>
+<section id="aufgabe-02-berechnung-des-normalized-vegetation-difference-vegetation-index-ndvi" class="level2" data-number="6.4">
+<h2 data-number="6.4" class="anchored" data-anchor-id="aufgabe-02-berechnung-des-normalized-vegetation-difference-vegetation-index-ndvi"><span class="header-section-number">6.4</span> Aufgabe 02: Berechnung des Normalized Vegetation Difference Vegetation Index (NDVI)</h2>
+<p>Zur besseren Ansprache der Vitalität/des Blattverlusts möchten wir den Vegetationsindex NDVI berechnen. Für die Berechnung nutzen wir die Funktion <em>Radiometric Indices</em> in der Orfeo-Toolbox (OTB). Mit dieser Funktion können unterschiedliche Vegetationsindices berechnet werden. Sie finden die Funktion am einfachsten über die Suche in der Werkzeugkiste. Sollte diese nicht angezeigt werden, können sie die Werkzeugkiste im Menü -&gt; <em>Verarbeitung</em> aktivieren. Sollte ihnen die Funktion nicht angezeigt werden, müssen sie die Pfadeinstellungen zu OTB anpassen (siehe <a href="uebung01.html#sec-otb" class="quarto-xref"><span>Section 1.2.3</span></a>)</p>
+<p>Zur Berechnung des Vegetationsindex muss dem Programm mitgeteilt werden, welches Bild genutzt werden soll (<code>Input Image=sub_prezelle_2013</code>), welche Kanäle im Bild vorhanden sind (siehe oben), welchen Indices berechnet werden sollen (Available Radiometric Indices=Vegetation:NDVI), welche radiometrische Auflösung das Ausgabebild haben soll (Output pixel type= float) und wo das Ausgabebildgespeichert werden soll (Output<br>
+Image=sub_prezelle_2013_ndvi.tif).</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/le06_radiometric_indices.png" class="img-fluid figure-img"></p>
+<figcaption>Einstellungen für die Berechnung des NDVIs mit der OTB Funktion <em>Radiometric Indices</em></figcaption>
+</figure>
+</div>
+<p>Als Ausgabe erhalten wir ein Graustufenbild mit den NDVI Werten (-1≤Pixelwert≤1) wie unten dargestellt:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/le06_NDVI.png" class="img-fluid figure-img"></p>
+<figcaption>NDVI als Graustufenbild für Prezelle 2013</figcaption>
+</figure>
+</div>
+<div style="border: 3px solid #ff8a0b; background-color: #ffffff; padding: 8px;">
+<p><strong>NDVI</strong></p>
+<ul>
+<li><p>Wie unterscheidet sich die CIR-Falschfarbendarstellung vom NDVI?</p></li>
+<li><p>Welche NDVI-Werte haben geschädigte, welche gesunde Kiefern?</p></li>
+<li><p>Sind allen niedrigen NDVI-Werte auf Fraßschäden zurückzuführen?</p></li>
+</ul>
+</div>
+</section>
+<section id="aufgabe-03-digitalisierung-der-schadflächen" class="level2" data-number="6.5">
+<h2 data-number="6.5" class="anchored" data-anchor-id="aufgabe-03-digitalisierung-der-schadflächen"><span class="header-section-number">6.5</span> Aufgabe 03: Digitalisierung der Schadflächen</h2>
+<p>Im nächsten Schritt sollen die vom Kiefernspinner befallen Flächen digitalisiert werden. Legen sie dazu ein neues geopackage im Ordner <em>“daten/vektor”</em> mit dem Namen <em>uebung06.gpkg</em> an. In dem Geopackage soll ein neuer Layer mit dem Namen “Schadflächen” angelegt werden.</p>
+<p>Für die Kartierung der Schadflächen kann es sinnvoll sein, die Darstellung der NDVI-Karte nicht als Graustufenbild darzustellen, sondern dafür ein Farbpalette zu nutzen.</p>
+<p>Stellen Sie dazu die Darstellungsart unter Layereigenschaften -&gt; Symbolisierung auf Einkanalpseudofarben und wählen sie eigneten Farbverlauf aus. Erfassen sie anschließend die Bereiche. die sie eindeutig als befallen erkennen können als Polygone.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/LE06_Schadflaechen.png" class="img-fluid figure-img"></p>
+<figcaption>Erfassung von Schadflächen</figcaption>
+</figure>
+</div>
+</section>
+<section id="aufgabe-04-entwicklung-der-schadflächen-optional" class="level2" data-number="6.6">
+<h2 data-number="6.6" class="anchored" data-anchor-id="aufgabe-04-entwicklung-der-schadflächen-optional"><span class="header-section-number">6.6</span> Aufgabe 04: Entwicklung der Schadflächen (Optional)</h2>
+<p>Die bisherigen bearbeiteten Aufnahmen stammen aus dem Jahr 2013. Im Mai 2024 ist das LGLN erneut Befliegung der Flächen vorgenommen. Laden sie sich die beiden Bilder für das Untersuchungsgebiet vom Geoportal des LGLN und vergleichen sie den Stand 2024 mit dem Stand 2013.</p>
+<div style="border: 3px solid #ff8a0b; background-color: #ffffff; padding: 8px;">
+<p><strong>Zeitliche Änderungen</strong></p>
+<ul>
+<li><p>Lassen sich die Schadflächen auch in 2024 ansprechen?</p></li>
+<li><p>Welche Schlüsse lassen sich aus dem Vergleich 2013 vs 2024 ziehen?</p></li>
+</ul>
+</div>
 
 
 </section>
@@ -615,10 +714,13 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="./uebung05.html" class="pagination-link" aria-label="Lerneinheit 05: Aktualisierung der Waldeinteilung auf Basis von Ortholuftbildern">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Lerneinheit 05: Aktualisierung der Waldeinteilung auf Basis von Ortholuftbildern</span></span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./uebung01.html" class="pagination-link" aria-label="Lerneinheit 01: Erste Schritte in QGIS">
-        <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Lerneinheit 01: Erste Schritte in QGIS</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./references.html" class="pagination-link" aria-label="Referenzen">
+        <span class="nav-page-text">Referenzen</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

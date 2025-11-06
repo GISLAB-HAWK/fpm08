@@ -23,6 +23,7 @@ book:
     - uebung03.qmd
     - uebung04.qmd
     - uebung05.qmd
+    - uebung06.qmd
     - references.qmd
 
 bibliography: references.bib

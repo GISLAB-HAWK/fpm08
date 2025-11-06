@@ -104,7 +104,7 @@ Weitere Informationen zu den QGIS-Nutzerprofilen finden sie hier:
 
 <https://docs.qgis.org/3.40/de/docs/user_manual/introduction/qgis_configuration.html#user-profiles>
 
-### Installation & Einrichtung von OTB in QGIS
+### Installation & Einrichtung von OTB in QGIS {#sec-otb}
 
 Die OTB-Software kann direkt über eine Kommandozeile verwendet werden oder -wie im Kurs- innerhalb
 von QGIS. Dazu steht ein Plugin zur Verfügung, welches wie folgt installiert und konfiguriert werden
