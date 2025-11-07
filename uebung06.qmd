@@ -89,7 +89,7 @@ berechnen. Für die Berechnung nutzen wir die Funktion *Radiometric Indices* in 
 (OTB). Mit dieser Funktion können unterschiedliche Vegetationsindices berechnet werden. Sie finden
 die Funktion am einfachsten über die Suche in der Werkzeugkiste. Sollte diese nicht angezeigt
 werden, können sie die Werkzeugkiste im Menü -\> *Verarbeitung* aktivieren. Sollte ihnen die
-Funktion nicht angezeigt werden, müssen sie die Pfadeinstellungen zu OTB anpassen (siehe @sec-otb)
+Funktion nicht angezeigt werden, müssen sie die Pfadeinstellungen zu OTB anpassen (siehe @sec-otb).
 
 Zur Berechnung des Vegetationsindex muss dem Programm mitgeteilt werden, welches Bild genutzt werden
 soll (`Input Image=sub_prezelle_2013`), welche Kanäle im Bild vorhanden sind (siehe oben), welchen

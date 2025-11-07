@@ -261,7 +261,7 @@ Lizenz: Creative Commons BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc
 </section>
 <section id="aufgabe-02-berechnung-des-normalized-vegetation-difference-vegetation-index-ndvi" class="level2" data-number="6.4">
 <h2 data-number="6.4" class="anchored" data-anchor-id="aufgabe-02-berechnung-des-normalized-vegetation-difference-vegetation-index-ndvi"><span class="header-section-number">6.4</span> Aufgabe 02: Berechnung des Normalized Vegetation Difference Vegetation Index (NDVI)</h2>
-<p>Zur besseren Ansprache der Vitalität/des Blattverlusts möchten wir den Vegetationsindex NDVI berechnen. Für die Berechnung nutzen wir die Funktion <em>Radiometric Indices</em> in der Orfeo-Toolbox (OTB). Mit dieser Funktion können unterschiedliche Vegetationsindices berechnet werden. Sie finden die Funktion am einfachsten über die Suche in der Werkzeugkiste. Sollte diese nicht angezeigt werden, können sie die Werkzeugkiste im Menü -&gt; <em>Verarbeitung</em> aktivieren. Sollte ihnen die Funktion nicht angezeigt werden, müssen sie die Pfadeinstellungen zu OTB anpassen (siehe <a href="uebung01.html#sec-otb" class="quarto-xref"><span>Section 1.2.3</span></a>)</p>
+<p>Zur besseren Ansprache der Vitalität/des Blattverlusts möchten wir den Vegetationsindex NDVI berechnen. Für die Berechnung nutzen wir die Funktion <em>Radiometric Indices</em> in der Orfeo-Toolbox (OTB). Mit dieser Funktion können unterschiedliche Vegetationsindices berechnet werden. Sie finden die Funktion am einfachsten über die Suche in der Werkzeugkiste. Sollte diese nicht angezeigt werden, können sie die Werkzeugkiste im Menü -&gt; <em>Verarbeitung</em> aktivieren. Sollte ihnen die Funktion nicht angezeigt werden, müssen sie die Pfadeinstellungen zu OTB anpassen (siehe <a href="uebung01.html#sec-otb" class="quarto-xref"><span>Section 1.2.3</span></a>).</p>
 <p>Zur Berechnung des Vegetationsindex muss dem Programm mitgeteilt werden, welches Bild genutzt werden soll (<code>Input Image=sub_prezelle_2013</code>), welche Kanäle im Bild vorhanden sind (siehe oben), welchen Indices berechnet werden sollen (Available Radiometric Indices=Vegetation:NDVI), welche radiometrische Auflösung das Ausgabebild haben soll (Output pixel type= float) und wo das Ausgabebildgespeichert werden soll (Output<br>
 Image=sub_prezelle_2013_ndvi.tif).</p>
 <div class="quarto-figure quarto-figure-center">
@@ -289,12 +289,20 @@ Image=sub_prezelle_2013_ndvi.tif).</p>
 <section id="aufgabe-03-digitalisierung-der-schadflächen" class="level2" data-number="6.5">
 <h2 data-number="6.5" class="anchored" data-anchor-id="aufgabe-03-digitalisierung-der-schadflächen"><span class="header-section-number">6.5</span> Aufgabe 03: Digitalisierung der Schadflächen</h2>
 <p>Im nächsten Schritt sollen die vom Kiefernspinner befallen Flächen digitalisiert werden. Legen sie dazu ein neues geopackage im Ordner <em>“daten/vektor”</em> mit dem Namen <em>uebung06.gpkg</em> an. In dem Geopackage soll ein neuer Layer mit dem Namen “Schadflächen” angelegt werden.</p>
-<p>Für die Kartierung der Schadflächen kann es sinnvoll sein, die Darstellung der NDVI-Karte nicht als Graustufenbild darzustellen, sondern dafür ein Farbpalette zu nutzen.</p>
-<p>Stellen Sie dazu die Darstellungsart unter Layereigenschaften -&gt; Symbolisierung auf Einkanalpseudofarben und wählen sie eigneten Farbverlauf aus. Erfassen sie anschließend die Bereiche. die sie eindeutig als befallen erkennen können als Polygone.</p>
+<p>Für die Kartierung der Schadflächen sollte die Bilddarstellung verbessert werden. Dazu soll zunächst das Histogramm des NDVI-Bildes untersucht werden. Das Histogramm können Sie dafür unter Layereigenschaften -&gt; Histogramm anzeigen lassen:</p>
+<p><img src="images/LE06_NDVI_histogramm.png" class="img-fluid" width="390"></p>
+<div style="border: 3px solid #ff8a0b; background-color: #ffffff; padding: 8px;">
+<p>NDVI-Histogramm</p>
+<ul>
+<li><p>Beschreiben sie die Verteilung der NDVI-Werte?</p></li>
+<li><p>Was wären geeignete min. und max. Werte für eine Kontraststreckung?</p></li>
+</ul>
+</div>
+<p>Für die Kartierung kann es sinnvoll sein, die Darstellung der NDVI-Karte nicht als Graustufenbild darzustellen, sondern dafür ein Farbpalette zu nutzen. Stellen Sie dazu die Darstellungsart unter Layereigenschaften -&gt; Symbolisierung auf Einkanalpseudofarben und wählen sie eigneten Farbverlauf aus. Erfassen sie anschließend die Bereiche. die sie eindeutig als befallen erkennen können als Polygone.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/LE06_Schadflaechen.png" class="img-fluid figure-img"></p>
-<figcaption>Erfassung von Schadflächen</figcaption>
+<figcaption>Farbige Darstellung der NDVI-Karte</figcaption>
 </figure>
 </div>
 </section>
@@ -302,10 +310,10 @@ Image=sub_prezelle_2013_ndvi.tif).</p>
 <h2 data-number="6.6" class="anchored" data-anchor-id="aufgabe-04-entwicklung-der-schadflächen-optional"><span class="header-section-number">6.6</span> Aufgabe 04: Entwicklung der Schadflächen (Optional)</h2>
 <p>Die bisherigen bearbeiteten Aufnahmen stammen aus dem Jahr 2013. Im Mai 2024 ist das LGLN erneut Befliegung der Flächen vorgenommen. Laden sie sich die beiden Bilder für das Untersuchungsgebiet vom Geoportal des LGLN und vergleichen sie den Stand 2024 mit dem Stand 2013.</p>
 <div style="border: 3px solid #ff8a0b; background-color: #ffffff; padding: 8px;">
-<p><strong>Zeitliche Änderungen</strong></p>
+<p><a href="https://www.indexdatabase.de"><strong>Zeitliche Änderungen</strong></a></p>
 <ul>
-<li><p>Lassen sich die Schadflächen auch in 2024 ansprechen?</p></li>
-<li><p>Welche Schlüsse lassen sich aus dem Vergleich 2013 vs 2024 ziehen?</p></li>
+<li><p><a href="https://www.indexdatabase.de">Lassen sich die Schadflächen auch in 2024 ansprechen?</a></p></li>
+<li><p><a href="https://www.indexdatabase.de">Welche Schlüsse lassen sich aus dem Vergleich 2013 vs 2024 ziehen?</a></p></li>
 </ul>
 </div>
 
