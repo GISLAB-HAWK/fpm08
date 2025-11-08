@@ -109,29 +109,51 @@ dargestellt:
 ::: {style="border: 3px solid #ff8a0b; background-color: #ffffff; padding: 8px;"}
 **NDVI**
 
--   Wie unterscheidet sich die CIR-Falschfarbendarstellung vom NDVI?
-
--   Welche NDVI-Werte haben geschädigte, welche gesunde Kiefern?
-
--   Sind allen niedrigen NDVI-Werte auf Fraßschäden zurückzuführen?
+-   *Wie unterscheidet sich die CIR-Falschfarbendarstellung vom NDVI?*
+-   *Was ist der kleinste und was der größte NDVI-Wert?*
+-   *Welche NDVI-Werte haben geschädigte, welche gesunde Kiefern?*
+-   *Sind allen niedrigen NDVI-Werte auf Fraßschäden zurückzuführen?*
 :::
 
-## Aufgabe 03: Digitalisierung der Schadflächen
+## Aufgabe 03: Bildverbesserung
+
+### Kontraststreckung
+
+Der NDVI hat einen theoretischen Wertebereich von \[-1;1\]. Ein Histogramm kann genutzt werden um
+die Verteilung der NDVI-Werte zu überprüfen. Zum Erstellen des Histogramms gehen wir auf
+*Layereigenschaften -\> Histogramm -\> Berechnen*
+
+![Histogramm der NDVI-Werte](images/LE06_NDVI_histogramm.png){width="491"}
+
+Das Histogramm zeigt eine typische Verteilung der NDVI-Werte über Vegetationsoberflächen. Es ist
+deutlich zu erkennen, dass der Wertebereich nicht vollständig abgedeckt wird. Die meisten Pixel
+liegen in Wertebereich von 0.1-0.8. Diese Information können wir nutzen um mithilfe einer
+Kontraststreckung die Qualität des Bildes zu erhöhen.
+
+![Einstellung der Kontraststreckung](images/LE06_Kontraststreckung.png)
+
+### Farbpaletten
+
+Für die Kartierung der Schadflächen kann es sinnvoll sein, die Darstellung der NDVI-Karte nicht als
+Graustufenbild darzustellen, sondern dafür ein Farbpalette zu nutzen. Erstellen sie dafür einen
+neuen Stil mit einer kontrastreichen Farbpalette. Stellen Sie dazu die Darstellungsart unter
+*Layereigenschaften -\> Symbolisierung auf Einkanalpseudofarben* und wählen sie eigneten Farbverlauf
+aus.
+
+![Darstellung der NDVI-Karte mit einer Fabpalette](images/LE06_Farbpalette_NDVI.png){width="709"}
+
+## Aufgabe 04: Digitalisierung der Schadflächen
 
 Im nächsten Schritt sollen die vom Kiefernspinner befallen Flächen digitalisiert werden. Legen sie
 dazu ein neues geopackage im Ordner *"daten/vektor"* mit dem Namen *uebung06.gpkg* an. In dem
 Geopackage soll ein neuer Layer mit dem Namen "Schadflächen" angelegt werden.
 
-Für die Kartierung der Schadflächen kann es sinnvoll sein, die Darstellung der NDVI-Karte nicht als
-Graustufenbild darzustellen, sondern dafür ein Farbpalette zu nutzen.
+Erfassen sie anschließend die Bereiche, die sie eindeutig als befallen erkennen können als Polygone
+und bestimmen sie die Flächengröße der Schadflächen.
 
-Stellen Sie dazu die Darstellungsart unter Layereigenschaften -\> Symbolisierung auf
-Einkanalpseudofarben und wählen sie eigneten Farbverlauf aus. Erfassen sie anschließend die
-Bereiche. die sie eindeutig als befallen erkennen können als Polygone.
+![Beispiel Kartierung von zwei Schadflächen](images/LE06_Schadflaechen.png)
 
-![Erfassung von Schadflächen](images/LE06_Schadflaechen.png)
-
-## Aufgabe 04:  Entwicklung der Schadflächen (Optional)
+## Aufgabe 05: Entwicklung der Schadflächen (Optional)
 
 Die bisherigen bearbeiteten Aufnahmen stammen aus dem Jahr 2013. Im Mai 2024 ist das LGLN erneut
 Befliegung der Flächen vorgenommen. Laden sie sich die beiden Bilder für das Untersuchungsgebiet vom
@@ -140,7 +162,8 @@ Geoportal des LGLN und vergleichen sie den Stand 2024 mit dem Stand 2013.
 ::: {style="border: 3px solid #ff8a0b; background-color: #ffffff; padding: 8px;"}
 **Zeitliche Änderungen**
 
--   Lassen sich die Schadflächen auch in 2024 ansprechen?
+-   Lassen sich die Schadflächen von 2013 auch in 2024 ansprechen?
 
--   Welche Schlüsse lassen sich aus dem Vergleich 2013 vs 2024 ziehen?
+-   Welche Schlüsse für die Waldbewirtschaftung lassen sich aus dem Vergleich der Jahre 2013 und
+    2024 ziehen?
 :::
