@@ -36,7 +36,7 @@ Die Studierenden sollen:
 **Aufgaben**
 
 1.  Rasterdaten importieren und als CIR Darstellen
-2.  Berechnung des Normalized Vegetation Difference Index (NDVI)
+2.  Berechnung des Normalized Difference Vegetation Index (NDVI)
 3.  Durchführung einer Kontraststreckung und Erstellen einer Farbpalette
 4.  Digitalisierung der Schadflächen
 
@@ -48,7 +48,7 @@ Unterordner "vektor" und "raster" zu unterteilen.
 
 ## Aufgabe 01: Download und Import der Ortholuftbilder
 
-Nachdem wir das Projekt angelegt haben, wollen soll das Luftbild aus der Befliegung der NW-FVA
+Nachdem wir das Projekt angelegt haben, soll das Luftbild aus der Befliegung der NW-FVA
 importiert werden. Laden Sie zunächst die Geodatensätze für die Übungen herunter. Sie finden diese
 hier:
 
@@ -73,7 +73,7 @@ CIR-Falschfarbendarstellung (siehe auch LE02 @sec-CIR_darstellung).
 2.  *Welche radiometrische Auflösung hat das Luftbild?*
 :::
 
-## Aufgabe 02: Berechnung des Normalized Vegetation Difference Vegetation Index (NDVI)
+## Aufgabe 02: Berechnung des Normalized Difference Vegetation Index (NDVI)
 
 Zur besseren Ansprache der Vitalität/des Blattverlusts möchten wir den Vegetationsindex NDVI
 berechnen. Für die Berechnung nutzen wir die Funktion *Radiometric Indices* in der Orfeo-Toolbox
@@ -147,7 +147,7 @@ und bestimmen sie die Flächengröße der Schadflächen.
 
 ## Aufgabe 05: Entwicklung der Schadflächen (Optional)
 
-Die bisherigen bearbeiteten Aufnahmen stammen aus dem Jahr 2013. Im Mai 2024 ist das LGLN erneut
+Die bisherigen bearbeiteten Aufnahmen stammen aus dem Jahr 2013. Im Mai 2024 hat das LGLN erneut eine
 Befliegung der Flächen vorgenommen. Laden sie sich die beiden Bilder für das Untersuchungsgebiet vom
 Geoportal des LGLN und vergleichen sie den Stand 2024 mit dem Stand 2013.
 
