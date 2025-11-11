@@ -175,7 +175,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#lernziele-aufgabenstellung" id="toc-lernziele-aufgabenstellung" class="nav-link active" data-scroll-target="#lernziele-aufgabenstellung"><span class="header-section-number">6.1</span> Lernziele &amp; Aufgabenstellung</a></li>
   <li><a href="#aufgabe-0-anlegen-eine-neuen-qgis-projektes" id="toc-aufgabe-0-anlegen-eine-neuen-qgis-projektes" class="nav-link" data-scroll-target="#aufgabe-0-anlegen-eine-neuen-qgis-projektes"><span class="header-section-number">6.2</span> Aufgabe 0: Anlegen eine neuen QGIS-Projektes</a></li>
   <li><a href="#aufgabe-01-download-und-import-der-ortholuftbilder" id="toc-aufgabe-01-download-und-import-der-ortholuftbilder" class="nav-link" data-scroll-target="#aufgabe-01-download-und-import-der-ortholuftbilder"><span class="header-section-number">6.3</span> Aufgabe 01: Download und Import der Ortholuftbilder</a></li>
-  <li><a href="#aufgabe-02-berechnung-des-normalized-vegetation-difference-vegetation-index-ndvi" id="toc-aufgabe-02-berechnung-des-normalized-vegetation-difference-vegetation-index-ndvi" class="nav-link" data-scroll-target="#aufgabe-02-berechnung-des-normalized-vegetation-difference-vegetation-index-ndvi"><span class="header-section-number">6.4</span> Aufgabe 02: Berechnung des Normalized Vegetation Difference Vegetation Index (NDVI)</a></li>
+  <li><a href="#aufgabe-02-berechnung-des-normalized-difference-vegetation-index-ndvi" id="toc-aufgabe-02-berechnung-des-normalized-difference-vegetation-index-ndvi" class="nav-link" data-scroll-target="#aufgabe-02-berechnung-des-normalized-difference-vegetation-index-ndvi"><span class="header-section-number">6.4</span> Aufgabe 02: Berechnung des Normalized Difference Vegetation Index (NDVI)</a></li>
   <li><a href="#aufgabe-03-bildverbesserung" id="toc-aufgabe-03-bildverbesserung" class="nav-link" data-scroll-target="#aufgabe-03-bildverbesserung"><span class="header-section-number">6.5</span> Aufgabe 03: Bildverbesserung</a>
   <ul class="collapse">
   <li><a href="#kontraststreckung" id="toc-kontraststreckung" class="nav-link" data-scroll-target="#kontraststreckung"><span class="header-section-number">6.5.1</span> Kontraststreckung</a></li>
@@ -237,7 +237,7 @@ Lizenz: Creative Commons BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc
 <p><strong>Aufgaben</strong></p>
 <ol type="1">
 <li>Rasterdaten importieren und als CIR Darstellen</li>
-<li>Berechnung des Normalized Vegetation Difference Index (NDVI)</li>
+<li>Berechnung des Normalized Difference Vegetation Index (NDVI)</li>
 <li>Durchführung einer Kontraststreckung und Erstellen einer Farbpalette</li>
 <li>Digitalisierung der Schadflächen</li>
 </ol>
@@ -248,7 +248,7 @@ Lizenz: Creative Commons BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc
 </section>
 <section id="aufgabe-01-download-und-import-der-ortholuftbilder" class="level2" data-number="6.3">
 <h2 data-number="6.3" class="anchored" data-anchor-id="aufgabe-01-download-und-import-der-ortholuftbilder"><span class="header-section-number">6.3</span> Aufgabe 01: Download und Import der Ortholuftbilder</h2>
-<p>Nachdem wir das Projekt angelegt haben, wollen soll das Luftbild aus der Befliegung der NW-FVA importiert werden. Laden Sie zunächst die Geodatensätze für die Übungen herunter. Sie finden diese hier:</p>
+<p>Nachdem wir das Projekt angelegt haben, soll das Luftbild aus der Befliegung der NW-FVA importiert werden. Laden Sie zunächst die Geodatensätze für die Übungen herunter. Sie finden diese hier:</p>
 <p><a href="https://cloud.hawk.de/index.php/s/W7GzR6TKK736Cby" class="uri">https://cloud.hawk.de/index.php/s/W7GzR6TKK736Cby</a></p>
 <p>Kopieren &amp; entpacken sie sich diesen Ordner.</p>
 <p>Bei dem Bild handelt es sich um ein Digitales Orthophoto (DOP) mit vier Bändern:</p>
@@ -267,8 +267,8 @@ Lizenz: Creative Commons BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc
 </ol>
 </div>
 </section>
-<section id="aufgabe-02-berechnung-des-normalized-vegetation-difference-vegetation-index-ndvi" class="level2" data-number="6.4">
-<h2 data-number="6.4" class="anchored" data-anchor-id="aufgabe-02-berechnung-des-normalized-vegetation-difference-vegetation-index-ndvi"><span class="header-section-number">6.4</span> Aufgabe 02: Berechnung des Normalized Vegetation Difference Vegetation Index (NDVI)</h2>
+<section id="aufgabe-02-berechnung-des-normalized-difference-vegetation-index-ndvi" class="level2" data-number="6.4">
+<h2 data-number="6.4" class="anchored" data-anchor-id="aufgabe-02-berechnung-des-normalized-difference-vegetation-index-ndvi"><span class="header-section-number">6.4</span> Aufgabe 02: Berechnung des Normalized Difference Vegetation Index (NDVI)</h2>
 <p>Zur besseren Ansprache der Vitalität/des Blattverlusts möchten wir den Vegetationsindex NDVI berechnen. Für die Berechnung nutzen wir die Funktion <em>Radiometric Indices</em> in der Orfeo-Toolbox (OTB). Mit dieser Funktion können unterschiedliche Vegetationsindices berechnet werden. Sie finden die Funktion am einfachsten über die Suche in der Werkzeugkiste. Sollte diese nicht angezeigt werden, können sie die Werkzeugkiste im Menü -&gt; <em>Verarbeitung</em> aktivieren. Sollte ihnen die Funktion nicht angezeigt werden, müssen sie die Pfadeinstellungen zu OTB anpassen (siehe <a href="uebung01.html#sec-otb" class="quarto-xref"><span>Section 1.2.3</span></a>).</p>
 <p>Zur Berechnung des Vegetationsindex muss dem Programm mitgeteilt werden, welches Bild genutzt werden soll (<code>Input Image=sub_prezelle_2013</code>), welche Kanäle im Bild vorhanden sind (siehe oben), welchen Indices berechnet werden sollen (Available Radiometric Indices=Vegetation:NDVI), welche radiometrische Auflösung das Ausgabebild haben soll (Output pixel type= float) und wo das Ausgabebildgespeichert werden soll (Output<br>
 Image=sub_prezelle_2013_ndvi.tif).</p>
@@ -338,7 +338,7 @@ Image=sub_prezelle_2013_ndvi.tif).</p>
 </section>
 <section id="aufgabe-05-entwicklung-der-schadflächen-optional" class="level2" data-number="6.7">
 <h2 data-number="6.7" class="anchored" data-anchor-id="aufgabe-05-entwicklung-der-schadflächen-optional"><span class="header-section-number">6.7</span> Aufgabe 05: Entwicklung der Schadflächen (Optional)</h2>
-<p>Die bisherigen bearbeiteten Aufnahmen stammen aus dem Jahr 2013. Im Mai 2024 ist das LGLN erneut Befliegung der Flächen vorgenommen. Laden sie sich die beiden Bilder für das Untersuchungsgebiet vom Geoportal des LGLN und vergleichen sie den Stand 2024 mit dem Stand 2013.</p>
+<p>Die bisherigen bearbeiteten Aufnahmen stammen aus dem Jahr 2013. Im Mai 2024 hat das LGLN erneut eine Befliegung der Flächen vorgenommen. Laden sie sich die beiden Bilder für das Untersuchungsgebiet vom Geoportal des LGLN und vergleichen sie den Stand 2024 mit dem Stand 2013.</p>
 <div style="border: 3px solid #ff8a0b; background-color: #ffffff; padding: 8px;">
 <p><strong>Zeitliche Änderungen</strong></p>
 <ul>
