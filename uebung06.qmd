@@ -48,9 +48,8 @@ Unterordner "vektor" und "raster" zu unterteilen.
 
 ## Aufgabe 01: Download und Import der Ortholuftbilder
 
-Nachdem wir das Projekt angelegt haben, soll das Luftbild aus der Befliegung der NW-FVA
-importiert werden. Laden Sie zunächst die Geodatensätze für die Übungen herunter. Sie finden diese
-hier:
+Nachdem wir das Projekt angelegt haben, soll das Luftbild aus der Befliegung der NW-FVA importiert
+werden. Laden Sie zunächst die Geodatensätze für die Übungen herunter. Sie finden diese hier:
 
 <https://cloud.hawk.de/index.php/s/W7GzR6TKK736Cby>
 
@@ -119,8 +118,9 @@ Verteilung der NDVI-Werte zu überprüfen. Zum Erstellen des Histogramms gehen w
 Das Histogramm zeigt eine typische Verteilung der NDVI-Werte über Vegetationsoberflächen. Es ist
 deutlich zu erkennen, dass der Wertebereich nicht vollständig abgedeckt wird. Die meisten Pixel
 liegen in Wertebereich von 0.1-0.8. Diese Information können wir nutzen um mithilfe einer
-Kontraststreckung die Qualität des Bildes zu erhöhen. Dazu schneiden wir die unteren und oberen 2%
-der Verteilung ab (Tail-clipping) und strecken den Rest der Werte auf den gesamten Wertebereich.
+Kontraststreckung die Qualität des Bildes zu erhöhen. Dazu schneiden wir die unteren 0.2 % und
+oberen 2% der Verteilung ab (Tail-clipping) und strecken den Rest der Werte auf den gesamten
+Wertebereich.
 
 ![Einstellung der Kontraststreckung](images/LE06_Kontraststreckung.png)
 
@@ -147,9 +147,9 @@ und bestimmen sie die Flächengröße der Schadflächen.
 
 ## Aufgabe 05: Entwicklung der Schadflächen (Optional)
 
-Die bisherigen bearbeiteten Aufnahmen stammen aus dem Jahr 2013. Im Mai 2024 hat das LGLN erneut eine
-Befliegung der Flächen vorgenommen. Laden sie sich die beiden Bilder für das Untersuchungsgebiet vom
-Geoportal des LGLN und vergleichen sie den Stand 2024 mit dem Stand 2013.
+Die bisherigen bearbeiteten Aufnahmen stammen aus dem Jahr 2013. Im Mai 2024 hat das LGLN erneut
+eine Befliegung der Flächen vorgenommen. Laden sie sich die beiden Bilder für das
+Untersuchungsgebiet vom Geoportal des LGLN und vergleichen sie den Stand 2024 mit dem Stand 2013.
 
 ::: {style="border: 3px solid #ff8a0b; background-color: #ffffff; padding: 8px;"}
 **Zeitliche Änderungen**
