@@ -172,9 +172,14 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#lernziele-aufgabenstellung" id="toc-lernziele-aufgabenstellung" class="nav-link active" data-scroll-target="#lernziele-aufgabenstellung"><span class="header-section-number">6.1</span> Lernziele &amp; Aufgabenstellung</a></li>
   <li><a href="#aufgabe-0-anlegen-eine-neuen-qgis-projektes" id="toc-aufgabe-0-anlegen-eine-neuen-qgis-projektes" class="nav-link" data-scroll-target="#aufgabe-0-anlegen-eine-neuen-qgis-projektes"><span class="header-section-number">6.2</span> Aufgabe 0: Anlegen eine neuen QGIS-Projektes</a></li>
   <li><a href="#aufgabe-01-download-und-import-der-ortholuftbilder" id="toc-aufgabe-01-download-und-import-der-ortholuftbilder" class="nav-link" data-scroll-target="#aufgabe-01-download-und-import-der-ortholuftbilder"><span class="header-section-number">6.3</span> Aufgabe 01: Download und Import der Ortholuftbilder</a></li>
-  <li><a href="#aufgabe-02-berechnung-des-normalized-vegetation-difference-vegetation-index-ndvi" id="toc-aufgabe-02-berechnung-des-normalized-vegetation-difference-vegetation-index-ndvi" class="nav-link" data-scroll-target="#aufgabe-02-berechnung-des-normalized-vegetation-difference-vegetation-index-ndvi"><span class="header-section-number">6.4</span> Aufgabe 02: Berechnung des Normalized Vegetation Difference Vegetation Index (NDVI)</a></li>
-  <li><a href="#aufgabe-03-digitalisierung-der-schadflächen" id="toc-aufgabe-03-digitalisierung-der-schadflächen" class="nav-link" data-scroll-target="#aufgabe-03-digitalisierung-der-schadflächen"><span class="header-section-number">6.5</span> Aufgabe 03: Digitalisierung der Schadflächen</a></li>
-  <li><a href="#aufgabe-04-entwicklung-der-schadflächen-optional" id="toc-aufgabe-04-entwicklung-der-schadflächen-optional" class="nav-link" data-scroll-target="#aufgabe-04-entwicklung-der-schadflächen-optional"><span class="header-section-number">6.6</span> Aufgabe 04: Entwicklung der Schadflächen (Optional)</a></li>
+  <li><a href="#aufgabe-02-berechnung-des-normalized-difference-vegetation-index-ndvi" id="toc-aufgabe-02-berechnung-des-normalized-difference-vegetation-index-ndvi" class="nav-link" data-scroll-target="#aufgabe-02-berechnung-des-normalized-difference-vegetation-index-ndvi"><span class="header-section-number">6.4</span> Aufgabe 02: Berechnung des Normalized Difference Vegetation Index (NDVI)</a></li>
+  <li><a href="#aufgabe-03-bildverbesserung" id="toc-aufgabe-03-bildverbesserung" class="nav-link" data-scroll-target="#aufgabe-03-bildverbesserung"><span class="header-section-number">6.5</span> Aufgabe 03: Bildverbesserung</a>
+  <ul class="collapse">
+  <li><a href="#kontraststreckung" id="toc-kontraststreckung" class="nav-link" data-scroll-target="#kontraststreckung"><span class="header-section-number">6.5.1</span> Kontraststreckung</a></li>
+  <li><a href="#farbpaletten" id="toc-farbpaletten" class="nav-link" data-scroll-target="#farbpaletten"><span class="header-section-number">6.5.2</span> Farbpaletten</a></li>
+  </ul></li>
+  <li><a href="#aufgabe-04-digitalisierung-der-schadflächen" id="toc-aufgabe-04-digitalisierung-der-schadflächen" class="nav-link" data-scroll-target="#aufgabe-04-digitalisierung-der-schadflächen"><span class="header-section-number">6.6</span> Aufgabe 04: Digitalisierung der Schadflächen</a></li>
+  <li><a href="#aufgabe-05-entwicklung-der-schadflächen-optional" id="toc-aufgabe-05-entwicklung-der-schadflächen-optional" class="nav-link" data-scroll-target="#aufgabe-05-entwicklung-der-schadflächen-optional"><span class="header-section-number">6.7</span> Aufgabe 05: Entwicklung der Schadflächen (Optional)</a></li>
   </ul>
 </nav>
     </div>
@@ -222,16 +227,16 @@ Lizenz: Creative Commons BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc
 <p><strong>Lernziele</strong></p>
 <p>Die Studierenden sollen:</p>
 <ul>
-<li><p>Luftbilder für die Schadenkartierung aufbereiten</p></li>
-<li><p>Vegetationsindizes berechnen</p></li>
-<li><p>Schadflächen digitalisieren</p></li>
+<li>Luftbilder für die Schadenkartierung aufbereiten</li>
+<li>Vegetationsindizes berechnen</li>
+<li>Schadflächen digitalisieren</li>
 </ul>
 <p><strong>Aufgaben</strong></p>
 <ol type="1">
-<li><p>Rasterdaten importieren und als CIR Darstellen</p></li>
-<li><p>Hintergrundkarte hinzufügen</p></li>
-<li><p>Berechnung der Normalized Vegetation Difference Index (NDVI)</p></li>
-<li><p>Digitalisierung der Schadflächen</p></li>
+<li>Rasterdaten importieren und als CIR Darstellen</li>
+<li>Berechnung des Normalized Difference Vegetation Index (NDVI)</li>
+<li>Durchführung einer Kontraststreckung und Erstellen einer Farbpalette</li>
+<li>Digitalisierung der Schadflächen</li>
 </ol>
 </section>
 <section id="aufgabe-0-anlegen-eine-neuen-qgis-projektes" class="level2" data-number="6.2">
@@ -240,27 +245,27 @@ Lizenz: Creative Commons BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc
 </section>
 <section id="aufgabe-01-download-und-import-der-ortholuftbilder" class="level2" data-number="6.3">
 <h2 data-number="6.3" class="anchored" data-anchor-id="aufgabe-01-download-und-import-der-ortholuftbilder"><span class="header-section-number">6.3</span> Aufgabe 01: Download und Import der Ortholuftbilder</h2>
-<p>Nachdem wir das Projekt angelegt haben, wollen soll das Luftbild aus der Befliegung der NW-FVA importiert werden. Laden Sie zunächst die Geodatensätze für die Übungen herunter. Sie finden diese hier:</p>
+<p>Nachdem wir das Projekt angelegt haben, soll das Luftbild aus der Befliegung der NW-FVA importiert werden. Laden Sie zunächst die Geodatensätze für die Übungen herunter. Sie finden diese hier:</p>
 <p><a href="https://cloud.hawk.de/index.php/s/W7GzR6TKK736Cby" class="uri">https://cloud.hawk.de/index.php/s/W7GzR6TKK736Cby</a></p>
 <p>Kopieren &amp; entpacken sie sich diesen Ordner.</p>
 <p>Bei dem Bild handelt es sich um ein Digitales Orthophoto (DOP) mit vier Bändern:</p>
 <ul>
-<li><p>Band 1 (rot)</p></li>
-<li><p>Band 2 (grün)</p></li>
-<li><p>Band 3(blau)</p></li>
-<li><p>Band 4 (Nahes Infrarot, NIR)</p></li>
+<li>Band 1 (rot)</li>
+<li>Band 2 (grün)</li>
+<li>Band 3(blau)</li>
+<li>Band 4 (Nahes Infrarot, NIR)</li>
 </ul>
 <p>Importieren sie die Ortholuftbilder in ihr QGIS-Projekt und erzeugen sie eine CIR-Falschfarbendarstellung (siehe auch LE02 <a href="uebung02.html#sec-CIR_darstellung" class="quarto-xref"><span>Section 2.5</span></a>).</p>
 <p><strong>Fragen:</strong></p>
 <div style="border: 3px solid #ff8a0b; background-color: #ffffff; padding: 8px;">
 <ol type="1">
-<li><p><em>Welche räumliche Auflösung hat das Luftbild?</em></p></li>
-<li><p><em>Welche radiometrische Auflösung hat das Luftbild?</em></p></li>
+<li><em>Welche räumliche Auflösung hat das Luftbild?</em></li>
+<li><em>Welche radiometrische Auflösung hat das Luftbild?</em></li>
 </ol>
 </div>
 </section>
-<section id="aufgabe-02-berechnung-des-normalized-vegetation-difference-vegetation-index-ndvi" class="level2" data-number="6.4">
-<h2 data-number="6.4" class="anchored" data-anchor-id="aufgabe-02-berechnung-des-normalized-vegetation-difference-vegetation-index-ndvi"><span class="header-section-number">6.4</span> Aufgabe 02: Berechnung des Normalized Vegetation Difference Vegetation Index (NDVI)</h2>
+<section id="aufgabe-02-berechnung-des-normalized-difference-vegetation-index-ndvi" class="level2" data-number="6.4">
+<h2 data-number="6.4" class="anchored" data-anchor-id="aufgabe-02-berechnung-des-normalized-difference-vegetation-index-ndvi"><span class="header-section-number">6.4</span> Aufgabe 02: Berechnung des Normalized Difference Vegetation Index (NDVI)</h2>
 <p>Zur besseren Ansprache der Vitalität/des Blattverlusts möchten wir den Vegetationsindex NDVI berechnen. Für die Berechnung nutzen wir die Funktion <em>Radiometric Indices</em> in der Orfeo-Toolbox (OTB). Mit dieser Funktion können unterschiedliche Vegetationsindices berechnet werden. Sie finden die Funktion am einfachsten über die Suche in der Werkzeugkiste. Sollte diese nicht angezeigt werden, können sie die Werkzeugkiste im Menü -&gt; <em>Verarbeitung</em> aktivieren. Sollte ihnen die Funktion nicht angezeigt werden, müssen sie die Pfadeinstellungen zu OTB anpassen (siehe <a href="uebung01.html#sec-otb" class="quarto-xref"><span>Section 1.2.3</span></a>).</p>
 <p>Zur Berechnung des Vegetationsindex muss dem Programm mitgeteilt werden, welches Bild genutzt werden soll (<code>Input Image=sub_prezelle_2013</code>), welche Kanäle im Bild vorhanden sind (siehe oben), welchen Indices berechnet werden sollen (Available Radiometric Indices=Vegetation:NDVI), welche radiometrische Auflösung das Ausgabebild haben soll (Output pixel type= float) und wo das Ausgabebildgespeichert werden soll (Output<br>
 Image=sub_prezelle_2013_ndvi.tif).</p>
@@ -280,40 +285,62 @@ Image=sub_prezelle_2013_ndvi.tif).</p>
 <div style="border: 3px solid #ff8a0b; background-color: #ffffff; padding: 8px;">
 <p><strong>NDVI</strong></p>
 <ul>
-<li><p>Wie unterscheidet sich die CIR-Falschfarbendarstellung vom NDVI?</p></li>
-<li><p>Welche NDVI-Werte haben geschädigte, welche gesunde Kiefern?</p></li>
-<li><p>Sind allen niedrigen NDVI-Werte auf Fraßschäden zurückzuführen?</p></li>
+<li><em>Wie unterscheidet sich die CIR-Falschfarbendarstellung vom NDVI?</em></li>
+<li><em>Was ist der kleinste und was der größte NDVI-Wert?</em></li>
+<li><em>Welche NDVI-Werte haben geschädigte, welche gesunde Kiefern?</em></li>
+<li><em>Sind allen niedrigen NDVI-Werte auf Fraßschäden zurückzuführen?</em></li>
 </ul>
 </div>
 </section>
-<section id="aufgabe-03-digitalisierung-der-schadflächen" class="level2" data-number="6.5">
-<h2 data-number="6.5" class="anchored" data-anchor-id="aufgabe-03-digitalisierung-der-schadflächen"><span class="header-section-number">6.5</span> Aufgabe 03: Digitalisierung der Schadflächen</h2>
-<p>Im nächsten Schritt sollen die vom Kiefernspinner befallen Flächen digitalisiert werden. Legen sie dazu ein neues geopackage im Ordner <em>“daten/vektor”</em> mit dem Namen <em>uebung06.gpkg</em> an. In dem Geopackage soll ein neuer Layer mit dem Namen “Schadflächen” angelegt werden.</p>
-<p>Für die Kartierung der Schadflächen sollte die Bilddarstellung verbessert werden. Dazu soll zunächst das Histogramm des NDVI-Bildes untersucht werden. Das Histogramm können Sie dafür unter Layereigenschaften -&gt; Histogramm anzeigen lassen:</p>
-<p><img src="images/LE06_NDVI_histogramm.png" class="img-fluid" width="390"></p>
-<div style="border: 3px solid #ff8a0b; background-color: #ffffff; padding: 8px;">
-<p>NDVI-Histogramm</p>
-<ul>
-<li><p>Beschreiben sie die Verteilung der NDVI-Werte?</p></li>
-<li><p>Was wären geeignete min. und max. Werte für eine Kontraststreckung?</p></li>
-</ul>
-</div>
-<p>Für die Kartierung kann es sinnvoll sein, die Darstellung der NDVI-Karte nicht als Graustufenbild darzustellen, sondern dafür ein Farbpalette zu nutzen. Stellen Sie dazu die Darstellungsart unter Layereigenschaften -&gt; Symbolisierung auf Einkanalpseudofarben und wählen sie eigneten Farbverlauf aus. Erfassen sie anschließend die Bereiche. die sie eindeutig als befallen erkennen können als Polygone.</p>
+<section id="aufgabe-03-bildverbesserung" class="level2" data-number="6.5">
+<h2 data-number="6.5" class="anchored" data-anchor-id="aufgabe-03-bildverbesserung"><span class="header-section-number">6.5</span> Aufgabe 03: Bildverbesserung</h2>
+<section id="kontraststreckung" class="level3" data-number="6.5.1">
+<h3 data-number="6.5.1" class="anchored" data-anchor-id="kontraststreckung"><span class="header-section-number">6.5.1</span> Kontraststreckung</h3>
+<p>Der NDVI hat einen theoretischen Wertebereich von [-1;1].Histogramme können genutzt werden, um die Verteilung der NDVI-Werte zu überprüfen. Zum Erstellen des Histogramms gehen wir auf <em>Layereigenschaften -&gt; Histogramm -&gt; Berechnen</em></p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/LE06_Schadflaechen.png" class="img-fluid figure-img"></p>
-<figcaption>Farbige Darstellung der NDVI-Karte</figcaption>
+<p><img src="images/LE06_NDVI_histogramm.png" class="img-fluid figure-img" width="491"></p>
+<figcaption>Histogramm der NDVI-Werte</figcaption>
+</figure>
+</div>
+<p>Das Histogramm zeigt eine typische Verteilung der NDVI-Werte über Vegetationsoberflächen. Es ist deutlich zu erkennen, dass der Wertebereich nicht vollständig abgedeckt wird. Die meisten Pixel liegen in Wertebereich von 0.1-0.8. Diese Information können wir nutzen um mithilfe einer Kontraststreckung die Qualität des Bildes zu erhöhen. Dazu schneiden wir die unteren 0.2 % und oberen 2% der Verteilung ab (Tail-clipping) und strecken den Rest der Werte auf den gesamten Wertebereich.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/LE06_Kontraststreckung.png" class="img-fluid figure-img"></p>
+<figcaption>Einstellung der Kontraststreckung</figcaption>
 </figure>
 </div>
 </section>
-<section id="aufgabe-04-entwicklung-der-schadflächen-optional" class="level2" data-number="6.6">
-<h2 data-number="6.6" class="anchored" data-anchor-id="aufgabe-04-entwicklung-der-schadflächen-optional"><span class="header-section-number">6.6</span> Aufgabe 04: Entwicklung der Schadflächen (Optional)</h2>
-<p>Die bisherigen bearbeiteten Aufnahmen stammen aus dem Jahr 2013. Im Mai 2024 ist das LGLN erneut Befliegung der Flächen vorgenommen. Laden sie sich die beiden Bilder für das Untersuchungsgebiet vom Geoportal des LGLN und vergleichen sie den Stand 2024 mit dem Stand 2013.</p>
+<section id="farbpaletten" class="level3" data-number="6.5.2">
+<h3 data-number="6.5.2" class="anchored" data-anchor-id="farbpaletten"><span class="header-section-number">6.5.2</span> Farbpaletten</h3>
+<p>Für die Kartierung der Schadflächen kann es sinnvoll sein, die Darstellung der NDVI-Karte nicht als Graustufenbild darzustellen, sondern dafür ein Farbpalette zu nutzen. Erstellen sie dafür einen neuen Stil mit einer kontrastreichen Farbpalette. Stellen Sie dazu die Darstellungsart unter <em>Layereigenschaften -&gt; Symbolisierung auf Einkanalpseudofarben</em> und wählen sie eigneten Farbverlauf aus.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/LE06_Farbpalette_NDVI.png" class="img-fluid figure-img" width="709"></p>
+<figcaption>Darstellung der NDVI-Karte mit einer Fabpalette</figcaption>
+</figure>
+</div>
+</section>
+</section>
+<section id="aufgabe-04-digitalisierung-der-schadflächen" class="level2" data-number="6.6">
+<h2 data-number="6.6" class="anchored" data-anchor-id="aufgabe-04-digitalisierung-der-schadflächen"><span class="header-section-number">6.6</span> Aufgabe 04: Digitalisierung der Schadflächen</h2>
+<p>Im nächsten Schritt sollen die vom Kiefernspinner befallen Flächen digitalisiert werden. Legen sie dazu ein neues geopackage im Ordner <em>“daten/vektor”</em> mit dem Namen <em>uebung06.gpkg</em> an. In dem Geopackage soll ein neuer Layer mit dem Namen “Schadflächen” angelegt werden.</p>
+<p>Erfassen sie anschließend die Bereiche, die sie eindeutig als befallen erkennen können als Polygone und bestimmen sie die Flächengröße der Schadflächen.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/LE06_Schadflaechen.png" class="img-fluid figure-img"></p>
+<figcaption>Beispiel Kartierung von zwei Schadflächen</figcaption>
+</figure>
+</div>
+</section>
+<section id="aufgabe-05-entwicklung-der-schadflächen-optional" class="level2" data-number="6.7">
+<h2 data-number="6.7" class="anchored" data-anchor-id="aufgabe-05-entwicklung-der-schadflächen-optional"><span class="header-section-number">6.7</span> Aufgabe 05: Entwicklung der Schadflächen (Optional)</h2>
+<p>Die bisherigen bearbeiteten Aufnahmen stammen aus dem Jahr 2013. Im Mai 2024 hat das LGLN erneut eine Befliegung der Flächen vorgenommen. Laden sie sich die beiden Bilder für das Untersuchungsgebiet vom Geoportal des LGLN und vergleichen sie den Stand 2024 mit dem Stand 2013.</p>
 <div style="border: 3px solid #ff8a0b; background-color: #ffffff; padding: 8px;">
-<p><a href="https://www.indexdatabase.de"><strong>Zeitliche Änderungen</strong></a></p>
+<p>[<strong>Zeitliche Änderungen</strong>]</p>
 <ul>
-<li><p><a href="https://www.indexdatabase.de">Lassen sich die Schadflächen auch in 2024 ansprechen?</a></p></li>
-<li><p><a href="https://www.indexdatabase.de">Welche Schlüsse lassen sich aus dem Vergleich 2013 vs 2024 ziehen?</a></p></li>
+<li><p>Lassen sich die Schadflächen von 2013 auch in 2024 ansprechen?</p></li>
+<li><p>Welche Schlüsse für die Waldbewirtschaftung lassen sich aus dem Vergleich der Jahre 2013 und 2024 ziehen?</p></li>
 </ul>
 </div>
 
