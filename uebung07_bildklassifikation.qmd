@@ -34,7 +34,7 @@ Die Studierenden sollen:
 
 -   Trainingsdaten für Bildklassifikationen anzulegen
 -   Maschinelle Lernverfahren zum Erstellen von Klassifikationsmodellen zu nutzen
--   Mithilfe von trainierten Klassifikationsmodellen Satellitenbilder zu klassifizieren um einfache
+-   Mithilfe von trainierten Klassifikationsmodellen Satellitenbilder klassifizieren um einfache
     Landbedeckungskarten zu erstellen.
 
 **Aufgaben**
@@ -142,7 +142,7 @@ sein:
 | Laubholz          | Lebende, vitale Laubgehölze  | 3   |
 | Freiflächen       | Flächen ohne stehende Bäume  | 4   |
 
-### Aufgabe 02: Trainingsdaten ergänzen
+### Trainingsdaten ergänzen
 
 Um eine überwachte Bildklassifikation durchführen zu können werden Referenzdaten benötigt. Die
 Referenzdaten dienen zur Parametrisierung des Klassifkationsmodells, bzw. bei nicht-parametrischen
