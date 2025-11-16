@@ -260,8 +260,8 @@
     ]
   },
   {
-    "objectID": "uebung04.html#aufgabe-04-zuschneiden-des-satellitenbildmosaiks",
-    "href": "uebung04.html#aufgabe-04-zuschneiden-des-satellitenbildmosaiks",
+    "objectID": "uebung04.html#sec-zuschneiden",
+    "href": "uebung04.html#sec-zuschneiden",
     "title": "4  Lerneinheit 04: Erstellung einer Satellitenbildkarte des Nationalpark Harz",
     "section": "4.6 Aufgabe 04: Zuschneiden des Satellitenbildmosaiks",
     "text": "4.6 Aufgabe 04: Zuschneiden des Satellitenbildmosaiks\nDie beide original S2-Kacheln decken ca. 100 x 100km ab. Der Bereich ist also deutlich größer als der gesamte Harz. Um diesen Bereich zu verkleiner sollen die Satellitenbilder auf den Nationalpark zugeschnitten werden. Um die Grenzen trotzdem gut darstellen zu können, so ein Puffer von 1000 m um die Außengrenzen des Parks gelegt werden.\nAußengrenze Puffern\nSpeichern sie das GeoJSON der Nationalparkgrenze als Geopackage in Unterordner “daten” ab. Achten sie dabei darauf das Koordinatenbezugssystem (kbs) auf EPSG:25832 zu stellen. Führen sie anschließend einen Puffer von 1000 m durch.\nBild zuschneiden und maskieren\nZum Maskieren und zuschneiden nutzen Sie anschließend die Funktion:\n\nRaster →Extraktion → Raster auf Layermaske zuschneiden\n\nSpeichern sie das neue Raster unter dem Namen NP_Harz_2025_06_12 als *tif im Unterordner “daten” ab und laden sie die Satellitenbildkarte als CIR-Falschfarbenbild in QGIS. Überlagern sie das Bild mit den originalen Außengrenzen des Nationalparks.",
