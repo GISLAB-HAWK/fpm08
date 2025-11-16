@@ -156,6 +156,12 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./uebung07_bildklassifikation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Lerneinheit 07: Waldtypenklassifikation im Nationalpark Harz</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./references.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Referenzen</span></a>
   </div>
@@ -175,7 +181,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#aufgabe-01-recherche-und-download-eines-aktuellen-sentinel-2-satellitenbildes" id="toc-aufgabe-01-recherche-und-download-eines-aktuellen-sentinel-2-satellitenbildes" class="nav-link" data-scroll-target="#aufgabe-01-recherche-und-download-eines-aktuellen-sentinel-2-satellitenbildes"><span class="header-section-number">4.3</span> Aufgabe 01: Recherche und Download eines aktuellen Sentinel-2 Satellitenbildes</a></li>
   <li><a href="#aufgabe-02-import-der-satellitendaten-in-qgis" id="toc-aufgabe-02-import-der-satellitendaten-in-qgis" class="nav-link" data-scroll-target="#aufgabe-02-import-der-satellitendaten-in-qgis"><span class="header-section-number">4.4</span> Aufgabe 02: Import der Satellitendaten in QGIS</a></li>
   <li><a href="#aufgabe-03-erstellen-eines-cir-falschfarbenbildes" id="toc-aufgabe-03-erstellen-eines-cir-falschfarbenbildes" class="nav-link" data-scroll-target="#aufgabe-03-erstellen-eines-cir-falschfarbenbildes"><span class="header-section-number">4.5</span> Aufgabe 03: Erstellen eines CIR-Falschfarbenbildes</a></li>
-  <li><a href="#aufgabe-04-zuschneiden-des-satellitenbildmosaiks" id="toc-aufgabe-04-zuschneiden-des-satellitenbildmosaiks" class="nav-link" data-scroll-target="#aufgabe-04-zuschneiden-des-satellitenbildmosaiks"><span class="header-section-number">4.6</span> Aufgabe 04: Zuschneiden des Satellitenbildmosaiks</a></li>
+  <li><a href="#sec-zuschneiden" id="toc-sec-zuschneiden" class="nav-link" data-scroll-target="#sec-zuschneiden"><span class="header-section-number">4.6</span> Aufgabe 04: Zuschneiden des Satellitenbildmosaiks</a></li>
   <li><a href="#aufgabe-05-projekt-bereinigen-und-sichern" id="toc-aufgabe-05-projekt-bereinigen-und-sichern" class="nav-link" data-scroll-target="#aufgabe-05-projekt-bereinigen-und-sichern"><span class="header-section-number">4.7</span> Aufgabe 05: Projekt bereinigen und sichern</a></li>
   </ul>
 </nav>
@@ -185,7 +191,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Lerneinheit 04: Erstellung einer Satellitenbildkarte des Nationalpark Harz</span></h1>
+<h1 class="title"><span id="sec-le04" class="quarto-section-identifier"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Lerneinheit 04: Erstellung einer Satellitenbildkarte des Nationalpark Harz</span></span></h1>
 </div>
 
 
@@ -350,8 +356,8 @@ Caution
 <p>Zur Beantwortung der 2. Frage ist es hilfreich das aktuelle DOP20 Luftbild der LGLN einzubinden. Siehe dazu auch <a href="uebung03.html#sec-wms" class="quarto-xref"><span>Section 3.4</span></a> in LE03.</p>
 </div>
 </section>
-<section id="aufgabe-04-zuschneiden-des-satellitenbildmosaiks" class="level2" data-number="4.6">
-<h2 data-number="4.6" class="anchored" data-anchor-id="aufgabe-04-zuschneiden-des-satellitenbildmosaiks"><span class="header-section-number">4.6</span> Aufgabe 04: Zuschneiden des Satellitenbildmosaiks</h2>
+<section id="sec-zuschneiden" class="level2" data-number="4.6">
+<h2 data-number="4.6" class="anchored" data-anchor-id="sec-zuschneiden"><span class="header-section-number">4.6</span> Aufgabe 04: Zuschneiden des Satellitenbildmosaiks</h2>
 <p>Die beide original S2-Kacheln decken ca. 100 x 100km ab. Der Bereich ist also deutlich größer als der gesamte Harz. Um diesen Bereich zu verkleiner sollen die Satellitenbilder auf den Nationalpark zugeschnitten werden. Um die Grenzen trotzdem gut darstellen zu können, so ein Puffer von 1000 m um die Außengrenzen des Parks gelegt werden.</p>
 <p><strong>Außengrenze Puffern</strong></p>
 <p>Speichern sie das GeoJSON der Nationalparkgrenze als Geopackage in Unterordner “daten” ab. Achten sie dabei darauf das Koordinatenbezugssystem (kbs) auf EPSG:25832 zu stellen. Führen sie anschließend einen Puffer von 1000 m durch.</p>

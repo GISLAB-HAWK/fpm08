@@ -260,8 +260,8 @@
     ]
   },
   {
-    "objectID": "uebung04.html#aufgabe-04-zuschneiden-des-satellitenbildmosaiks",
-    "href": "uebung04.html#aufgabe-04-zuschneiden-des-satellitenbildmosaiks",
+    "objectID": "uebung04.html#sec-zuschneiden",
+    "href": "uebung04.html#sec-zuschneiden",
     "title": "4  Lerneinheit 04: Erstellung einer Satellitenbildkarte des Nationalpark Harz",
     "section": "4.6 Aufgabe 04: Zuschneiden des Satellitenbildmosaiks",
     "text": "4.6 Aufgabe 04: Zuschneiden des Satellitenbildmosaiks\nDie beide original S2-Kacheln decken ca. 100 x 100km ab. Der Bereich ist also deutlich größer als der gesamte Harz. Um diesen Bereich zu verkleiner sollen die Satellitenbilder auf den Nationalpark zugeschnitten werden. Um die Grenzen trotzdem gut darstellen zu können, so ein Puffer von 1000 m um die Außengrenzen des Parks gelegt werden.\nAußengrenze Puffern\nSpeichern sie das GeoJSON der Nationalparkgrenze als Geopackage in Unterordner “daten” ab. Achten sie dabei darauf das Koordinatenbezugssystem (kbs) auf EPSG:25832 zu stellen. Führen sie anschließend einen Puffer von 1000 m durch.\nBild zuschneiden und maskieren\nZum Maskieren und zuschneiden nutzen Sie anschließend die Funktion:\n\nRaster →Extraktion → Raster auf Layermaske zuschneiden\n\nSpeichern sie das neue Raster unter dem Namen NP_Harz_2025_06_12 als *tif im Unterordner “daten” ab und laden sie die Satellitenbildkarte als CIR-Falschfarbenbild in QGIS. Überlagern sie das Bild mit den originalen Außengrenzen des Nationalparks.",
@@ -427,6 +427,76 @@
     "text": "6.7 Aufgabe 05: Entwicklung der Schadflächen (Optional)\nDie bisherigen bearbeiteten Aufnahmen stammen aus dem Jahr 2013. Im Mai 2024 hat das LGLN erneut eine Befliegung der Flächen vorgenommen. Laden sie sich die beiden Bilder für das Untersuchungsgebiet vom Geoportal des LGLN und vergleichen sie den Stand 2024 mit dem Stand 2013.\n\n[Zeitliche Änderungen]\n\nLassen sich die Schadflächen von 2013 auch in 2024 ansprechen?\nWelche Schlüsse für die Waldbewirtschaftung lassen sich aus dem Vergleich der Jahre 2013 und 2024 ziehen?",
     "crumbs": [
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>Lerneinheit 06: Erfassung von Fraßschäden in Kiefernbeständen</span>"
+    ]
+  },
+  {
+    "objectID": "uebung07_bildklassifikation.html",
+    "href": "uebung07_bildklassifikation.html",
+    "title": "7  Lerneinheit 07: Waldtypenklassifikation im Nationalpark Harz",
+    "section": "",
+    "text": "7.1 Lernziele & Aufgabenstellung\nIn dieser Übung soll für den Nationalpark Harz eine einfache Waldtypenkarte für das Jahr 2025 erstellt werden. Dazu werden aktuelle Satellitenbilder des Satellitensystems Sentinel-2 automatisiert mit einem überwachten Klassifikationsverfahren klassifiziert.\nLernziele\nDie Studierenden sollen:\nAufgaben",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Lerneinheit 07: Waldtypenklassifikation im Nationalpark Harz</span>"
+    ]
+  },
+  {
+    "objectID": "uebung07_bildklassifikation.html#lernziele-aufgabenstellung",
+    "href": "uebung07_bildklassifikation.html#lernziele-aufgabenstellung",
+    "title": "7  Lerneinheit 07: Waldtypenklassifikation im Nationalpark Harz",
+    "section": "",
+    "text": "Note\n\n\n\nDie Übung dient der Demonstration der grundlegenden Prinzipien der überwachten Bildklassifikation. Es ist nicht das Ziel eine genaue Waldtypenkarte für spätere Auswertungen zu erstellen. Dies würde ein deutlich höherer Aufwand erfordern, besonders bei der Auswahl von Trainingsgebieten, und somit den zeitlichen Rahmen dieser Übung sprengen.\n\n\n\n\n\nTrainingsdaten für Bildklassifikationen anzulegen\nMaschinelle Lernverfahren zum Erstellen von Klassifikationsmodellen zu nutzen\nMithilfe von trainierten Klassifikationsmodellen Satellitenbilder klassifizieren um einfache Landbedeckungskarten zu erstellen.\n\n\n\nRaster- und Vektordaten importieren\nErgänzung von Trainingsdaten durch visuelle Interpretation von Ortholuftbildern\nTrainings eines RandomForest Klassifikationsmodells\nKlassifikation eines S2-Satellitenbilds zur Erstellung einer Waldtypenkarte",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Lerneinheit 07: Waldtypenklassifikation im Nationalpark Harz</span>"
+    ]
+  },
+  {
+    "objectID": "uebung07_bildklassifikation.html#aufgabe-0-anlegen-eine-neuen-qgis-projektes",
+    "href": "uebung07_bildklassifikation.html#aufgabe-0-anlegen-eine-neuen-qgis-projektes",
+    "title": "7  Lerneinheit 07: Waldtypenklassifikation im Nationalpark Harz",
+    "section": "7.2 Aufgabe 0: Anlegen eine neuen QGIS-Projektes",
+    "text": "7.2 Aufgabe 0: Anlegen eine neuen QGIS-Projektes\nFolgen sie der Anleitung aus LE01 Section 1.3 um eine neue Ordnerstruktur und ein neues QGIS-Projekt für LE07 anzulegen. In der Übung bietet es sich an den Ordner “daten” weiter in die Unterordner “vektor” und “raster” zu unterteilen.",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Lerneinheit 07: Waldtypenklassifikation im Nationalpark Harz</span>"
+    ]
+  },
+  {
+    "objectID": "uebung07_bildklassifikation.html#aufgabe-01-download-und-import-der-geodaten",
+    "href": "uebung07_bildklassifikation.html#aufgabe-01-download-und-import-der-geodaten",
+    "title": "7  Lerneinheit 07: Waldtypenklassifikation im Nationalpark Harz",
+    "section": "7.3 Aufgabe 01: Download und Import der Geodaten",
+    "text": "7.3 Aufgabe 01: Download und Import der Geodaten\n\n7.3.1 Rasterdaten\n\n7.3.1.1 Satellitenbilder\nIn dieser Übung sollen aktuelle Sentinel-2 Satellitenbilder für die Klassifikation verwendet werden. In LE04 Chapter 4 haben wir bereits eine Satellitenbildkarte angelegt und die entsprechenden Sententinel-2 Bilder beschafft und vorbereitet. Kopieren Sie sich das Bild NP_Harz_2025_06_12.tif aus der Übung LE04 in den “daten” Ordner der akuellen Übung (LE07). Sollten sie keinen Zugriff auf dieses Bild mehr haben, können sie es sich alternativ hier herunterladen:\nhttps://cloud.hawk.de/index.php/s/2Hmncq99dxSoE3W\nBei dem Bild handelt es sich um ein Sentine-2 Satellitenbild vom 12.06.2025 mit folgenden vier Bändern:\n\nBand 1 (blau)\nBand 2 (grün)\nBand 3 (rot)\nBand 4 (Nahes Infrarot, NIR)\n\nImportieren sie die Satellitenbild in ihr QGIS-Projekt und erzeugen sie eine CIR-Falschfarbendarstellung (siehe auch LE02 Section 2.5). Achten sie darauf “0” als Nullwert zu setzen. Führen sie anschließend eine Kontraststreckung mit einer zweifachen mittleren Standardabweichung durch.\n\n\n7.3.1.2 Luftbilder\nFür die Erstellung der Trainingsdaten sollen Luftbilder mit einer höheren räumlichen Auflösung genutzt werden. Da der Nationalpark Harz in zwei Bundesländern liegt müssen von beiden Bundesländern entsprechende DOP-Bilder als WMS eingebunden werden (siehe dazu auch LE03 Section 3.4). Nutzen sie hier für folgende Links:\nSachsen-Anhalt:\nDOP-WMS: https://www.geodatenportal.sachsen-anhalt.de/wss/service/ST_LVermGeo_DOP_WMS_OpenData/guest?\nDOP-Aktualität: https://www.geodatenportal.sachsen-anhalt.de/wss/service/ST_LVermGeo_DOP_WMS_Kacheluebersicht/guest?\nNiedersachsen:\nDOP: https://opendata.lgln.niedersachsen.de/doorman/noauth/dop_wms\nFragen:\n\n\nWelche räumliche Auflösung hat das Satellitenbild?\nWelche radiometrische Auflösung hat das Satellitenbild?\nWann wurden das Satellitenbild und wann die Luftbilder in Sachsen-Anhalt und Niedersachsen aufgenommen?\n\n\n\n\n\n7.3.2 Vektordaten\nFür die Übung werden zwei Vektordatensätze benötigt:\n1.) Grenzen des Nationalparkharz die sie hier herunterladen können:\nhttps://cloud.hawk.de/index.php/s/Hs52DFGtPnfKzyN\n2.) Vorbereiteter Referenzdatensatz mit Polygonen der verschiedenen Waldtypen\nhttps://cloud.hawk.de/index.php/s/ox2CsrEDHNjiiyF\nFür die Darstellung der unterschiedlichen Waldtypen wurde bereits eine QGIS-Stylefile angelegt das sie hier herunterladen können:\nhttps://cloud.hawk.de/index.php/s/QZiSkR5Sd9Q5SdH\nImportieren sie die Vektordaten und passen sie die Darstellung der Referenzdaten entsprechend des vorgegeben Stils an.",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Lerneinheit 07: Waldtypenklassifikation im Nationalpark Harz</span>"
+    ]
+  },
+  {
+    "objectID": "uebung07_bildklassifikation.html#aufgabe-02-ergänzung-der-referenzdaten",
+    "href": "uebung07_bildklassifikation.html#aufgabe-02-ergänzung-der-referenzdaten",
+    "title": "7  Lerneinheit 07: Waldtypenklassifikation im Nationalpark Harz",
+    "section": "7.4 Aufgabe 02: Ergänzung der Referenzdaten",
+    "text": "7.4 Aufgabe 02: Ergänzung der Referenzdaten\n\n7.4.1 Klassifikationschlüssel\nDer Klassifikationsschlüssel legt fest, welche Landbedeckungs-/Landnutzungsklassen in der thematischen Karte erfasst werden sollen. Er enthält üblicherweise auch eine detaillierte Beschreibung wie die einzelnen Klassen definiert sind und wie sie erfasst werden sollen. Für diese Übung soll eine einfache Unterscheidung von drei Waldtypen und einer Hintergrundklasse ausreichend sein:\n\n\n\nName\nErläuterung\nID\n\n\n\n\nNadelholz\nLebende, vitale Nadelgehölze\n1\n\n\nstehendes Totholz\nStehende tote Bäume\n2\n\n\nLaubholz\nLebende, vitale Laubgehölze\n3\n\n\nFreiflächen\nFlächen ohne stehende Bäume\n4\n\n\n\n\n\n7.4.2 Trainingsdaten ergänzen\nUm eine überwachte Bildklassifikation durchführen zu können werden Referenzdaten benötigt. Die Referenzdaten dienen zur Parametrisierung des Klassifkationsmodells, bzw. bei nicht-parametrischen Verfahren zum Trainieren des Klassifikationsmodells. Die Anlage der Referenzdaten hat dabei eine enorme Bedeutung für die Qualität der Klassifizierung und der daraus resultierenden thematischen Karte. Es ist daher wichtig eine ausreichende Anzahl qualitativ hochwertiger Referenzdaten vorzubereiten. Für die Übung heute möchten wir uns aus Zeitgründen jedoch auf 25 Flächen pro Klasse beschränken. Die Auswahl und Anlage der Gebiete erfolgt dabei rein subjektiv -visuell.\nDer Layer Referenzdaten im Geopackage uebung07.gpkg enthält bereits für alle vier Klassen des Klassifikationsschlüssels jeweils 20 Polygone als Trainingsdaten. Ergänzen sie den Datensatz um jeweils fünf weitere typische Beispiele der Klassen. Nutzen sie dafür die das Sentinel-2 Bild und die Luftbilder aus den beiden Bundesländern. Achten sie dabei auf folgende Aspekte:\n\ndie Trainingsdaten sollten verteilt über das ganze Gebiet des NP liegen\nals Trainingsdaten sollten Gebiete gewählt werden die eindeutige der jeweiligen Klasse zugeordnet werden können.\ndie Trainingsdaten sollten die Variabillität der Spektralbereiche der jeweiligen Klassen möglichst abdecken",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Lerneinheit 07: Waldtypenklassifikation im Nationalpark Harz</span>"
+    ]
+  },
+  {
+    "objectID": "uebung07_bildklassifikation.html#aufgabe-03-training-eines-klassifikationsmodells",
+    "href": "uebung07_bildklassifikation.html#aufgabe-03-training-eines-klassifikationsmodells",
+    "title": "7  Lerneinheit 07: Waldtypenklassifikation im Nationalpark Harz",
+    "section": "7.5 Aufgabe 03: Training eines Klassifikationsmodells",
+    "text": "7.5 Aufgabe 03: Training eines Klassifikationsmodells\nIm ersten Schritt müssen wir das Klassifikationsmodell mithilfe der Trainingsdaten „anlernen“. OTB stellt dazu die Funktion „TrainImageClassifier“ zur Verfügung, die wir in der Werkzeugkiste der Verarbeitungsfunktionen über die Suche finden können. In dieser Funktion setzen wir die folgenden Optionen:\n\nInput Image List: Hier geben wir unser Sentinel2-Bild des NP-Harz an\nInput Vector Data: Hier wählen wir das geopackage mit den Referenzdaten.\nField containing the class integer label for supervision: Hier wählen wir das Feld “Klasse” aus.\nClassifier to use for the training: OTB bietet sehr viele Klassifikationsverfahren an, die alle mit dieser Funktion trainiert werden können. Für die Übung wählen wir „rf“ für „Random Forests“.\nOutput model: Hier geben wir an wo das trainierte Klassifikationsmodell gespeichert werden soll. Wir wählen „rf_harz_2025.modell“ im Ordner “daten”.\nOutput confusion matrix or contingency table: Hier können wir eine Datei angeben in dem die Fehlermatrix gespeichert wird. Wir wählen „rf_harz_2025.cm“ im Ordner “daten”.\n\n\n\nTrainImageClassifier\n\n\nAlle anderen Optionen lassen wir unverändert und starten das Training. Je nach gewähltem Algorithmus und der Anzahl und Größe der Trainingsdaten kann dieser Prozess einige Minuten dauern. Wenn alles funktioniert hat, werden einige Statistiken zur Beurteilung der Modellgenauigkeit im Protokollfenster ausgegeben:\n\n\nIn Ordner “daten” befinden sich nun zwei neue Dateien: i) die Modelldatei mit dem trainierten Klassifikationsmodell und eine Fehlermatrix. Letzter werden wir in der nächsten Lehreinheit besprechen.",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Lerneinheit 07: Waldtypenklassifikation im Nationalpark Harz</span>"
+    ]
+  },
+  {
+    "objectID": "uebung07_bildklassifikation.html#aufgabe-04-klassifikation-eines-s2-satellitenbilds-zur-erstellung-einer-waldtypenkarte",
+    "href": "uebung07_bildklassifikation.html#aufgabe-04-klassifikation-eines-s2-satellitenbilds-zur-erstellung-einer-waldtypenkarte",
+    "title": "7  Lerneinheit 07: Waldtypenklassifikation im Nationalpark Harz",
+    "section": "7.6 Aufgabe 04: Klassifikation eines S2-Satellitenbilds zur Erstellung einer Waldtypenkarte",
+    "text": "7.6 Aufgabe 04: Klassifikation eines S2-Satellitenbilds zur Erstellung einer Waldtypenkarte\nNachdem wir das RandomForest Klassifikationsmodell trainiert haben, können wir es auf das gesamte Satellitenbild anwenden, um jedem Pixel eine unsere vier thematischen Klassen zuzuweisen. Dazu verwenden wir die OTB-Funktion ImageClassifier die im Werkzeugkasten der Verarbeitungsfunktionen zu finden ist. Hier werden folgende Optionen gewählt.\n\nInput Image List: Hier geben wir unser Sentinel2-Bild\nModel file: Wir geben das vorher trainierte Modell „rf_harz_2025.modell“ an.\nOutput pixel type: uint8\n\nAlle anderen Optionen lassen wir unverändert und starten die Bildklassifikation. Je nach gewähltem Algorithmus und der Bildgröße kann dieser Prozess einige Minuten dauern. Nach erfolgreicher Klassifikation wird das Bild als Graustufenbild im QGIS geladen. Prüfen sie jetzt nochmal, ob das Koordinatenrefenerzsystem des Projektes immer noch korrekt ist. Falls nicht ändern sie es entsprechend.\nAnschließend schneiden wir das klassifizierte Bild auf auf die Grenzen des Nationalparks zu (siehe dazu auch LE04 Section 4.6). Das zugeschnittene Bild wird als GeoTif unter “daten/ NP_Harz_2025_06_12_Waldtypen.tif” gespeichert. Für die bessere Darstellung sollen die Farbwerte der Pixel identisch zu den Farben im Referenzdatensatz sein. Erstellen sie dafür eine entsprechende Symbolisierung.\nFragen:\n\n\nVergleichen sie die thematische Karte mit dem Satellitenbild.  Was fällt Ihnen auf?\nBei welchen thematischen Klassen funktioniert die Klassifikation besser, bei welchen schlechter?\nGibt es Bildbereiche/Regionen, in denen die Klassifikation genauer zu sein scheint?",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Lerneinheit 07: Waldtypenklassifikation im Nationalpark Harz</span>"
     ]
   }
 ]
