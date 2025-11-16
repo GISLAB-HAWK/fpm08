@@ -24,6 +24,7 @@ book:
     - uebung04.qmd
     - uebung05.qmd
     - uebung06.qmd
+    - uebung07_bildklassifikation.qmd
     - references.qmd
 
 bibliography: references.bib

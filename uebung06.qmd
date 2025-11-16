@@ -152,11 +152,10 @@ eine Befliegung der Flächen vorgenommen. Laden sie sich die beiden Bilder für 
 Untersuchungsgebiet vom Geoportal des LGLN und vergleichen sie den Stand 2024 mit dem Stand 2013.
 
 ::: {style="border: 3px solid #ff8a0b; background-color: #ffffff; padding: 8px;"}
-[**Zeitliche Änderungen**]
+\[**Zeitliche Änderungen**\]
 
 -   Lassen sich die Schadflächen von 2013 auch in 2024 ansprechen?
 
 -   Welche Schlüsse für die Waldbewirtschaftung lassen sich aus dem Vergleich der Jahre 2013 und
     2024 ziehen?
-
 :::
