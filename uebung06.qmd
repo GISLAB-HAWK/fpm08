@@ -122,25 +122,39 @@ Im nächsten Schritt sollen die vom Kiefernspinner befallen Flächen digitalisie
 dazu ein neues geopackage im Ordner *"daten/vektor"* mit dem Namen *uebung06.gpkg* an. In dem
 Geopackage soll ein neuer Layer mit dem Namen "Schadflächen" angelegt werden.
 
-Für die Kartierung der Schadflächen kann es sinnvoll sein, die Darstellung der NDVI-Karte nicht als
-Graustufenbild darzustellen, sondern dafür ein Farbpalette zu nutzen.
+Für die Kartierung der Schadflächen sollte die Bilddarstellung verbessert werden. Dazu soll zunächst
+das Histogramm des NDVI-Bildes untersucht werden. Das Histogramm können Sie dafür unter
+Layereigenschaften -\> Histogramm anzeigen lassen:
 
-Stellen Sie dazu die Darstellungsart unter Layereigenschaften -\> Symbolisierung auf
-Einkanalpseudofarben und wählen sie eigneten Farbverlauf aus. Erfassen sie anschließend die
-Bereiche. die sie eindeutig als befallen erkennen können als Polygone.
+![](images/LE06_NDVI_histogramm.png){width="390"}
 
-![Erfassung von Schadflächen](images/LE06_Schadflaechen.png)
+::: {style="border: 3px solid #ff8a0b; background-color: #ffffff; padding: 8px;"}
+NDVI-Histogramm
 
-## Aufgabe 04:  Entwicklung der Schadflächen (Optional)
+-   Beschreiben sie die Verteilung der NDVI-Werte?
+
+-   Was wären geeignete min. und max. Werte für eine Kontraststreckung?
+:::
+
+Für die Kartierung kann es sinnvoll sein, die Darstellung der NDVI-Karte nicht als Graustufenbild
+darzustellen, sondern dafür ein Farbpalette zu nutzen. Stellen Sie dazu die Darstellungsart unter
+Layereigenschaften -\> Symbolisierung auf Einkanalpseudofarben und wählen sie eigneten Farbverlauf
+aus. Erfassen sie anschließend die Bereiche. die sie eindeutig als befallen erkennen können als
+Polygone.
+
+![Farbige Darstellung der NDVI-Karte](images/LE06_Schadflaechen.png)
+
+## Aufgabe 04: Entwicklung der Schadflächen (Optional)
 
 Die bisherigen bearbeiteten Aufnahmen stammen aus dem Jahr 2013. Im Mai 2024 ist das LGLN erneut
 Befliegung der Flächen vorgenommen. Laden sie sich die beiden Bilder für das Untersuchungsgebiet vom
 Geoportal des LGLN und vergleichen sie den Stand 2024 mit dem Stand 2013.
 
 ::: {style="border: 3px solid #ff8a0b; background-color: #ffffff; padding: 8px;"}
-**Zeitliche Änderungen**
+[**Zeitliche Änderungen**](https://www.indexdatabase.de)
 
--   Lassen sich die Schadflächen auch in 2024 ansprechen?
+-   [Lassen sich die Schadflächen auch in 2024 ansprechen?](https://www.indexdatabase.de)
 
--   Welche Schlüsse lassen sich aus dem Vergleich 2013 vs 2024 ziehen?
+-   [Welche Schlüsse lassen sich aus dem Vergleich 2013 vs 2024
+    ziehen?](https://www.indexdatabase.de)
 :::
