@@ -11,7 +11,7 @@ Lizenz: Creative Commons BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc
 -->
 ```
 
-# Lerneinheit 04: Erstellung einer Satellitenbildkarte des Nationalpark Harz
+# Lerneinheit 04: Erstellung einer Satellitenbildkarte des Nationalpark Harz  {#sec-le04}
 
 ![](images/LE04_cover_image.png)
 
@@ -218,7 +218,7 @@ Zur Beantwortung der 2. Frage ist es hilfreich das aktuelle DOP20 Luftbild der L
 Siehe dazu auch @sec-wms in LE03.
 :::
 
-## Aufgabe 04: Zuschneiden des Satellitenbildmosaiks
+## Aufgabe 04: Zuschneiden des Satellitenbildmosaiks{#sec-zuschneiden}
 
 Die beide original S2-Kacheln decken ca. 100 x 100km ab. Der Bereich ist also deutlich größer als
 der gesamte Harz. Um diesen Bereich zu verkleiner sollen die Satellitenbilder auf den Nationalpark
