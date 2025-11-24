@@ -231,7 +231,7 @@ Lizenz: Creative Commons BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc
 <p><img src="images/LE08_cover_image.png" class="img-fluid"></p>
 <section id="lernziele-aufgabenstellung" class="level2" data-number="8.1">
 <h2 data-number="8.1" class="anchored" data-anchor-id="lernziele-aufgabenstellung"><span class="header-section-number">8.1</span> Lernziele &amp; Aufgabenstellung</h2>
-<p>In der letzten Übung (<a href="uebung07_bildklassifikation.html" class="quarto-xref"><span>Chapter 7</span></a>) haben wir mithilfe eines automatischen Bildklassifikationsverfahrens eine einfache Waldtypenkarten für den Nationalpark Harz erstellt. In der vorliegenden Übung wollen wir nun eine Validierung der Landbedeckungskarte mit einem unabhängigen Referenzdatensatz durchführen, um die Kartengenauigkeit zu ermitteln. Außerdem sollen Modell- und Kartengenauigkeit miteinander verglichen werden.</p>
+<p>In der letzten Übung (<a href="uebung07_bildklassifikation.html" class="quarto-xref"><span>Chapter 9</span></a>) haben wir mithilfe eines automatischen Bildklassifikationsverfahrens eine einfache Waldtypenkarten für den Nationalpark Harz erstellt. In der vorliegenden Übung wollen wir nun eine Validierung der Landbedeckungskarte mit einem unabhängigen Referenzdatensatz durchführen, um die Kartengenauigkeit zu ermitteln. Außerdem sollen Modell- und Kartengenauigkeit miteinander verglichen werden.</p>
 <p><strong>Lernziele</strong></p>
 <p>Die Studierenden sollen:</p>
 <ul>
@@ -276,19 +276,19 @@ Lizenz: Creative Commons BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc
 </section>
 <section id="aufgabe-02-erstellen-eines-validierungslayers" class="level2" data-number="8.4">
 <h2 data-number="8.4" class="anchored" data-anchor-id="aufgabe-02-erstellen-eines-validierungslayers"><span class="header-section-number">8.4</span> Aufgabe 02: Erstellen eines Validierungslayers</h2>
-<p>Für die Erstellung eines unabhängigen Validierungsdatensatzes ist es wichtig die Punkte, an denen eine Überprüfung stattfinden soll, nach einem statistischen Verfahren auszuwählen. In der Übung wollen wir ein systematisches Raster mit einer Rasterweite von 2000 m x 2000 m anlegen. QGIS bietet eine entsprechende Funktion unter <code>Vektor-&gt;Forschungswerkzeuge-&gt; Gitter erzeugen</code>. Hier wählen wir:</p>
+<p>Für die Erstellung eines unabhängigen Validierungsdatensatzes ist es wichtig die Punkte, an denen eine Überprüfung stattfinden soll, nach einem statistischen Verfahren auszuwählen. In der Übung wollen wir ein systematisches Punktraster mit einer Rasterweite von 2000 m x 2000 m anlegen. QGIS bietet eine entsprechende Funktion unter <code>Vektor-&gt;Forschungswerkzeuge-&gt; Gitter erzeugen</code>. Hier wählen wir:</p>
 <ul>
 <li>Gittertyp = Punkt</li>
-<li>Gitterausdehnung = Aus Layer berechnen Gemeindegrenzen Stadt Göttingen</li>
+<li>Gitterausdehnung = Aus Layer berechnen Nationalpark Harz</li>
 <li>Horizontaler Abstand = 2000 m</li>
 <li>Vertikaler Abstand = 2000 m</li>
 <li>Gitter-KBS = 25832</li>
 </ul>
-<p>Da das Raster nur auf die Ausdehnung des Polygons zugeschnitten wird, umfasst es noch Punkte außerhalb der Gemeindegrenzen. Um diese zu entfernen nutzen wir die Funktion</p>
+<p>Da das Punktraster nur auf die Ausdehnung des Polygons zugeschnitten wird, umfasst es noch Punkte außerhalb der Grenzen des Nationalparks. Um diese zu entfernen nutzen wir die Funktion</p>
 <p><code>Menü-&gt; Vektor-&gt; Geoverarbeitungswerkzeuge-&gt; Zuschneiden</code> mit folgenden Einstellungen:</p>
 <ul>
-<li>Eingabelayer = Gitter</li>
-<li>Layer überlagern = Gemeinde Grenzen der Stadt Göttingen</li>
+<li>Eingabelayer = Punktraster</li>
+<li>Layer überlagern = Grenzen Nationalpark Harz</li>
 <li>Zugeschnitten = Wir speichern die Punkte als neues Layer (‚Validierungspunkte‘) im geopackage „uebung08.gpkg“</li>
 </ul>
 <p>Sie sollten in diesem Layer jetzt 61 Punkte innerhalb des Nationalparkgebietes haben. Die Attributtabelle enthält aber noch einige automatisch erzeugte Spalten, die wir nicht mehr benötigen. Zum Entfernen der Spalten (left, right, top, bottom, row_index, col_index) öffnen wir die Attributtabelle, wechseln in den Editiermodus und wählen im Werkzeug „Spalte löschen“ die entsprechenden Spalten aus. Anschließende speichern wir das Layer im Geopackage “uebung08.gpkg”.</p>
@@ -341,7 +341,7 @@ Note
 </section>
 <section id="augabe-05-vergleich-modell--und-kartengenauigkeit" class="level2" data-number="8.7">
 <h2 data-number="8.7" class="anchored" data-anchor-id="augabe-05-vergleich-modell--und-kartengenauigkeit"><span class="header-section-number">8.7</span> Augabe 05: Vergleich Modell- und Kartengenauigkeit</h2>
-<p>Bei der Erstellung des <em>RandomForest</em> Klassifikationsmodells (siehe <a href="uebung07_bildklassifikation.html#sec-rf_training" class="quarto-xref"><span>Section 7.5</span></a>) haben wir auch eine Fehlermatrix gespeichert („rf_harz_2025.cm“). Diese wurde auf Basis der Trainingsdaten berechnet, da wir zum Zeitpunkt des Modelltrainings die Validierungsdaten noch nicht erstellt hatten. Insofern beschreibt diese Fehlermatrix die Modellgenauigkeit.</p>
+<p>Bei der Erstellung des <em>RandomForest</em> Klassifikationsmodells (siehe <a href="uebung07_bildklassifikation.html#sec-rf_training" class="quarto-xref"><span>Section 9.5</span></a>) haben wir auch eine Fehlermatrix gespeichert („rf_harz_2025.cm“). Diese wurde auf Basis der Trainingsdaten berechnet, da wir zum Zeitpunkt des Modelltrainings die Validierungsdaten noch nicht erstellt hatten. Insofern beschreibt diese Fehlermatrix die Modellgenauigkeit.</p>
 <p>Erstellen sie äquivalent zu Aufgabe 04 eine Fehlermatrix aus dieser Datei und vergleichen sie beide Fehlermatrizen miteinander um untenstehende Fragen zu beantworten.</p>
 <div style="border: 3px solid #ff8a0b; background-color: #ffffff; padding: 8px;">
 <ol type="1">
