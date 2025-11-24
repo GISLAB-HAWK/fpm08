@@ -8,7 +8,7 @@
 
 <meta name="description" content="Übungsaufgaben für das Modul FPM08 forstliche Fernerkundung">
 
-<title>6&nbsp; Lerneinheit 06: Erfassung von Fraßschäden in Kiefernbeständen – Forstliche Fernerkundung</title>
+<title>8&nbsp; Lerneinheit 08: Validierung einer thematischen Waldtypenkarte des Nationalpark Harz – Forstliche Fernerkundung</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -31,8 +31,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./uebung07_bildklassifikation.html" rel="next">
-<link href="./uebung05.html" rel="prev">
+<link href="./references.html" rel="next">
+<link href="./uebung07_bildklassifikation.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
@@ -84,7 +84,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./uebung06.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Lerneinheit 06: Erfassung von Fraßschäden in Kiefernbeständen</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./uebung08_validierung.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Lerneinheit 08: Validierung einer thematischen Waldtypenkarte des Nationalpark Harz</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -150,7 +150,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./uebung06.html" class="sidebar-item-text sidebar-link active">
+  <a href="./uebung06.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Lerneinheit 06: Erfassung von Fraßschäden in Kiefernbeständen</span></span></a>
   </div>
 </li>
@@ -162,7 +162,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./uebung08_validierung.html" class="sidebar-item-text sidebar-link">
+  <a href="./uebung08_validierung.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Lerneinheit 08: Validierung einer thematischen Waldtypenkarte des Nationalpark Harz</span></span></a>
   </div>
 </li>
@@ -182,17 +182,17 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#lernziele-aufgabenstellung" id="toc-lernziele-aufgabenstellung" class="nav-link active" data-scroll-target="#lernziele-aufgabenstellung"><span class="header-section-number">6.1</span> Lernziele &amp; Aufgabenstellung</a></li>
-  <li><a href="#aufgabe-0-anlegen-eine-neuen-qgis-projektes" id="toc-aufgabe-0-anlegen-eine-neuen-qgis-projektes" class="nav-link" data-scroll-target="#aufgabe-0-anlegen-eine-neuen-qgis-projektes"><span class="header-section-number">6.2</span> Aufgabe 0: Anlegen eine neuen QGIS-Projektes</a></li>
-  <li><a href="#aufgabe-01-download-und-import-der-ortholuftbilder" id="toc-aufgabe-01-download-und-import-der-ortholuftbilder" class="nav-link" data-scroll-target="#aufgabe-01-download-und-import-der-ortholuftbilder"><span class="header-section-number">6.3</span> Aufgabe 01: Download und Import der Ortholuftbilder</a></li>
-  <li><a href="#aufgabe-02-berechnung-des-normalized-difference-vegetation-index-ndvi" id="toc-aufgabe-02-berechnung-des-normalized-difference-vegetation-index-ndvi" class="nav-link" data-scroll-target="#aufgabe-02-berechnung-des-normalized-difference-vegetation-index-ndvi"><span class="header-section-number">6.4</span> Aufgabe 02: Berechnung des Normalized Difference Vegetation Index (NDVI)</a></li>
-  <li><a href="#aufgabe-03-bildverbesserung" id="toc-aufgabe-03-bildverbesserung" class="nav-link" data-scroll-target="#aufgabe-03-bildverbesserung"><span class="header-section-number">6.5</span> Aufgabe 03: Bildverbesserung</a>
+  <li><a href="#lernziele-aufgabenstellung" id="toc-lernziele-aufgabenstellung" class="nav-link active" data-scroll-target="#lernziele-aufgabenstellung"><span class="header-section-number">8.1</span> Lernziele &amp; Aufgabenstellung</a></li>
+  <li><a href="#aufgabe-0-anlegen-eine-neuen-qgis-projektes" id="toc-aufgabe-0-anlegen-eine-neuen-qgis-projektes" class="nav-link" data-scroll-target="#aufgabe-0-anlegen-eine-neuen-qgis-projektes"><span class="header-section-number">8.2</span> Aufgabe 0: Anlegen eine neuen QGIS-Projektes</a></li>
+  <li><a href="#aufgabe-01-download-und-import-der-geodaten" id="toc-aufgabe-01-download-und-import-der-geodaten" class="nav-link" data-scroll-target="#aufgabe-01-download-und-import-der-geodaten"><span class="header-section-number">8.3</span> Aufgabe 01: Download und Import der Geodaten</a>
   <ul class="collapse">
-  <li><a href="#kontraststreckung" id="toc-kontraststreckung" class="nav-link" data-scroll-target="#kontraststreckung"><span class="header-section-number">6.5.1</span> Kontraststreckung</a></li>
-  <li><a href="#farbpaletten" id="toc-farbpaletten" class="nav-link" data-scroll-target="#farbpaletten"><span class="header-section-number">6.5.2</span> Farbpaletten</a></li>
+  <li><a href="#rasterdaten" id="toc-rasterdaten" class="nav-link" data-scroll-target="#rasterdaten"><span class="header-section-number">8.3.1</span> Rasterdaten</a></li>
+  <li><a href="#vektordaten" id="toc-vektordaten" class="nav-link" data-scroll-target="#vektordaten"><span class="header-section-number">8.3.2</span> Vektordaten</a></li>
   </ul></li>
-  <li><a href="#aufgabe-04-digitalisierung-der-schadflächen" id="toc-aufgabe-04-digitalisierung-der-schadflächen" class="nav-link" data-scroll-target="#aufgabe-04-digitalisierung-der-schadflächen"><span class="header-section-number">6.6</span> Aufgabe 04: Digitalisierung der Schadflächen</a></li>
-  <li><a href="#aufgabe-05-entwicklung-der-schadflächen-optional" id="toc-aufgabe-05-entwicklung-der-schadflächen-optional" class="nav-link" data-scroll-target="#aufgabe-05-entwicklung-der-schadflächen-optional"><span class="header-section-number">6.7</span> Aufgabe 05: Entwicklung der Schadflächen (Optional)</a></li>
+  <li><a href="#aufgabe-02-erstellen-eines-validierungslayers" id="toc-aufgabe-02-erstellen-eines-validierungslayers" class="nav-link" data-scroll-target="#aufgabe-02-erstellen-eines-validierungslayers"><span class="header-section-number">8.4</span> Aufgabe 02: Erstellen eines Validierungslayers</a></li>
+  <li><a href="#aufgabe-03-visuelle-interpretation-der-validierungspunkte" id="toc-aufgabe-03-visuelle-interpretation-der-validierungspunkte" class="nav-link" data-scroll-target="#aufgabe-03-visuelle-interpretation-der-validierungspunkte"><span class="header-section-number">8.5</span> Aufgabe 03: Visuelle Interpretation der Validierungspunkte</a></li>
+  <li><a href="#aufgabe-04-erstellen-einer-fehlermatrix" id="toc-aufgabe-04-erstellen-einer-fehlermatrix" class="nav-link" data-scroll-target="#aufgabe-04-erstellen-einer-fehlermatrix"><span class="header-section-number">8.6</span> Aufgabe 04: Erstellen einer Fehlermatrix</a></li>
+  <li><a href="#augabe-05-vergleich-modell--und-kartengenauigkeit" id="toc-augabe-05-vergleich-modell--und-kartengenauigkeit" class="nav-link" data-scroll-target="#augabe-05-vergleich-modell--und-kartengenauigkeit"><span class="header-section-number">8.7</span> Augabe 05: Vergleich Modell- und Kartengenauigkeit</a></li>
   </ul>
 </nav>
     </div>
@@ -201,7 +201,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Lerneinheit 06: Erfassung von Fraßschäden in Kiefernbeständen</span></h1>
+<h1 class="title"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Lerneinheit 08: Validierung einer thematischen Waldtypenkarte des Nationalpark Harz</span></h1>
 </div>
 
 
@@ -220,141 +220,135 @@ ul.task-list li input[type="checkbox"] {
 
 <!--
 
-Skripte für die Übungen 06 des Moduls FPM08 Forstliche Fernerkundung im Studiengang
+Skripte für die Übungen 07 des Moduls FPM08 Forstliche Fernerkundung im Studiengang
 B.Sc. Forstwirtschaft an der HAWK Göttingen.
 
 Autor: Paul Magdon
-Datum: 2025-11-06
+Datum: 2025-11-16
 Lizenz: Creative Commons BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 -->
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/Le06_Kiefernspinner.jpg" class="img-fluid figure-img"></p>
-<figcaption>Kiefernspinner. Quelle: J.-H. Janßen, CC BY-SA 3.0</figcaption>
-</figure>
-</div>
-<section id="lernziele-aufgabenstellung" class="level2" data-number="6.1">
-<h2 data-number="6.1" class="anchored" data-anchor-id="lernziele-aufgabenstellung"><span class="header-section-number">6.1</span> Lernziele &amp; Aufgabenstellung</h2>
-<p>Die Nordwestdeutsche Forstliche Versuchsanstalt (NWFVA) überwacht in Niedersachsen großflächige Fraßschäden des Kiefernspinners (<em>Dendrolimus pini</em>, Abbildung 1) mithilfe von Fernerkundungsverfahren. Im Juli 2013 wurde dazu eine Luftbildbefliegung durchgeführt und digitale Orthophotos (DOP) hergestellt. In dieser Lerneinheit sollen Schwerpunkte der Kiefernspinnerverbreitung in Kiefernwäldern des Wendlandes (Landkreis Lüchow-Dannenberg) kartiert werden. Grundlage der Kartierung verschiedener Fraßintensitäten ist ein DOP mit einer räumlichen Auflösung von 20&nbsp;cm (DOP20).</p>
+<p><img src="images/LE08_cover_image.png" class="img-fluid"></p>
+<section id="lernziele-aufgabenstellung" class="level2" data-number="8.1">
+<h2 data-number="8.1" class="anchored" data-anchor-id="lernziele-aufgabenstellung"><span class="header-section-number">8.1</span> Lernziele &amp; Aufgabenstellung</h2>
+<p>In der letzten Übung (<a href="uebung07_bildklassifikation.html" class="quarto-xref"><span>Chapter 7</span></a>) haben wir mithilfe eines automatischen Bildklassifikationsverfahrens eine einfache Waldtypenkarten für den Nationalpark Harz erstellt. In der vorliegenden Übung wollen wir nun eine Validierung der Landbedeckungskarte mit einem unabhängigen Referenzdatensatz durchführen, um die Kartengenauigkeit zu ermitteln. Außerdem sollen Modell- und Kartengenauigkeit miteinander verglichen werden.</p>
 <p><strong>Lernziele</strong></p>
 <p>Die Studierenden sollen:</p>
 <ul>
-<li>Luftbilder für die Schadenkartierung aufbereiten</li>
-<li>Vegetationsindizes berechnen</li>
-<li>Schadflächen digitalisieren</li>
+<li>Validierungsdaten für die Validierung von thematischen Karten erstellen</li>
+<li>Mithilfe von Fehlermatrizen die Genauigkeit eine thematischen Karte beruteilen</li>
+<li>den Untscheid zwischen der Modell- und der Kartengenauigkeit erläutern können.</li>
 </ul>
 <p><strong>Aufgaben</strong></p>
 <ol type="1">
-<li>Rasterdaten importieren und als CIR Darstellen</li>
-<li>Berechnung des Normalized Difference Vegetation Index (NDVI)</li>
-<li>Durchführung einer Kontraststreckung und Erstellen einer Farbpalette</li>
-<li>Digitalisierung der Schadflächen</li>
+<li>Raster- und Vektordaten importieren</li>
+<li>Erstellen eines Validierungsrasters</li>
+<li>Visuelle Interpretation von Ortholuftbildern</li>
+<li>Berechnung von Fehlerstatistiken aus der Fehlermatrix</li>
+<li>Vergleich der Modell- und Kartengenauigkeit</li>
 </ol>
 </section>
-<section id="aufgabe-0-anlegen-eine-neuen-qgis-projektes" class="level2" data-number="6.2">
-<h2 data-number="6.2" class="anchored" data-anchor-id="aufgabe-0-anlegen-eine-neuen-qgis-projektes"><span class="header-section-number">6.2</span> Aufgabe 0: Anlegen eine neuen QGIS-Projektes</h2>
-<p>Folgen sie der Anleitung aus LE01 <a href="uebung01.html#sec-projekt_management" class="quarto-xref"><span>Section 1.3</span></a> um eine neue Ordnerstruktur und ein neues QGIS-Projekt für LE05 anzulegen. In der Übung bietet es sich an den Ordner “daten” weiter in die Unterordner “vektor” und “raster” zu unterteilen.</p>
+<section id="aufgabe-0-anlegen-eine-neuen-qgis-projektes" class="level2" data-number="8.2">
+<h2 data-number="8.2" class="anchored" data-anchor-id="aufgabe-0-anlegen-eine-neuen-qgis-projektes"><span class="header-section-number">8.2</span> Aufgabe 0: Anlegen eine neuen QGIS-Projektes</h2>
+<p>Folgen sie der Anleitung aus LE01 <a href="uebung01.html#sec-projekt_management" class="quarto-xref"><span>Section 1.3</span></a> um eine neue Ordnerstruktur und ein neues QGIS-Projekt für LE07 anzulegen. In der Übung bietet es sich an den Ordner <em>“daten”</em> weiter in die Unterordner <em>“vektor”</em> und “raster” zu unterteilen.</p>
 </section>
-<section id="aufgabe-01-download-und-import-der-ortholuftbilder" class="level2" data-number="6.3">
-<h2 data-number="6.3" class="anchored" data-anchor-id="aufgabe-01-download-und-import-der-ortholuftbilder"><span class="header-section-number">6.3</span> Aufgabe 01: Download und Import der Ortholuftbilder</h2>
-<p>Nachdem wir das Projekt angelegt haben, soll das Luftbild aus der Befliegung der NW-FVA importiert werden. Laden Sie zunächst die Geodatensätze für die Übungen herunter. Sie finden diese hier:</p>
-<p><a href="https://cloud.hawk.de/index.php/s/W7GzR6TKK736Cby" class="uri">https://cloud.hawk.de/index.php/s/W7GzR6TKK736Cby</a></p>
-<p>Kopieren &amp; entpacken sie sich diesen Ordner.</p>
-<p>Bei dem Bild handelt es sich um ein Digitales Orthophoto (DOP) mit vier Bändern:</p>
+<section id="aufgabe-01-download-und-import-der-geodaten" class="level2" data-number="8.3">
+<h2 data-number="8.3" class="anchored" data-anchor-id="aufgabe-01-download-und-import-der-geodaten"><span class="header-section-number">8.3</span> Aufgabe 01: Download und Import der Geodaten</h2>
+<section id="rasterdaten" class="level3" data-number="8.3.1">
+<h3 data-number="8.3.1" class="anchored" data-anchor-id="rasterdaten"><span class="header-section-number">8.3.1</span> Rasterdaten</h3>
+<section id="luftbilder" class="level4" data-number="8.3.1.1">
+<h4 data-number="8.3.1.1" class="anchored" data-anchor-id="luftbilder"><span class="header-section-number">8.3.1.1</span> <strong>Luftbilder</strong></h4>
+<p>Für die Erstellung der Validierungssdaten sollen Luftbilder mit einer hohen räumlichen Auflösung genutzt werden. Da der Nationalpark Harz in zwei Bundesländern liegt müssen von beiden Bundesländern entsprechende DOP-Bilder als WMS eingebunden werden (siehe dazu auch LE03 <a href="uebung03.html#sec-wms" class="quarto-xref"><span>Section 3.4</span></a>). Nutzen sie hier für folgende Links:</p>
+<p>Sachsen-Anhalt:</p>
+<p>DOP-WMS:</p>
+<p><code>https://www.geodatenportal.sachsen-anhalt.de/wss/service/ST_LVermGeo_DOP_WMS_OpenData/guest?</code></p>
+<p>DOP-Aktualität:</p>
+<p><code>https://www.geodatenportal.sachsen-anhalt.de/wss/service/ST_LVermGeo_DOP_WMS_Kacheluebersicht/guest?</code></p>
+<p>Niedersachsen:</p>
+<p>DOP: <code>https://opendata.lgln.niedersachsen.de/doorman/noauth/dop_wms</code></p>
+</section>
+</section>
+<section id="vektordaten" class="level3" data-number="8.3.2">
+<h3 data-number="8.3.2" class="anchored" data-anchor-id="vektordaten"><span class="header-section-number">8.3.2</span> Vektordaten</h3>
+<p>Da wir die Validierung auf das Gebiet des Nationalparks beschränkt werden soll, benötigen wir das Polygon mit den Außengrenzen des Parks das sie hier herunterladen können:</p>
+<p><a href="https://cloud.hawk.de/index.php/s/Hs52DFGtPnfKzyN" class="uri">https://cloud.hawk.de/index.php/s/Hs52DFGtPnfKzyN</a></p>
+</section>
+</section>
+<section id="aufgabe-02-erstellen-eines-validierungslayers" class="level2" data-number="8.4">
+<h2 data-number="8.4" class="anchored" data-anchor-id="aufgabe-02-erstellen-eines-validierungslayers"><span class="header-section-number">8.4</span> Aufgabe 02: Erstellen eines Validierungslayers</h2>
+<p>Für die Erstellung eines unabhängigen Validierungsdatensatzes ist es wichtig die Punkte, an denen eine Überprüfung stattfinden soll, nach einem statistischen Verfahren auszuwählen. In der Übung wollen wir ein systematisches Raster mit einer Rasterweite von 2000 m x 2000 m anlegen. QGIS bietet eine entsprechende Funktion unter <code>Vektor-&gt;Forschungswerkzeuge-&gt; Gitter erzeugen</code>. Hier wählen wir:</p>
 <ul>
-<li>Band 1 (rot)</li>
-<li>Band 2 (grün)</li>
-<li>Band 3(blau)</li>
-<li>Band 4 (Nahes Infrarot, NIR)</li>
+<li>Gittertyp = Punkt</li>
+<li>Gitterausdehnung = Aus Layer berechnen Gemeindegrenzen Stadt Göttingen</li>
+<li>Horizontaler Abstand = 2000 m</li>
+<li>Vertikaler Abstand = 2000 m</li>
+<li>Gitter-KBS = 25832</li>
 </ul>
-<p>Importieren sie die Ortholuftbilder in ihr QGIS-Projekt und erzeugen sie eine CIR-Falschfarbendarstellung (siehe auch LE02 <a href="uebung02.html#sec-CIR_darstellung" class="quarto-xref"><span>Section 2.5</span></a>).</p>
-<p><strong>Fragen:</strong></p>
+<p>Da das Raster nur auf die Ausdehnung des Polygons zugeschnitten wird, umfasst es noch Punkte außerhalb der Gemeindegrenzen. Um diese zu entfernen nutzen wir die Funktion</p>
+<p><code>Menü-&gt; Vektor-&gt; Geoverarbeitungswerkzeuge-&gt; Zuschneiden</code> mit folgenden Einstellungen:</p>
+<ul>
+<li>Eingabelayer = Gitter</li>
+<li>Layer überlagern = Gemeinde Grenzen der Stadt Göttingen</li>
+<li>Zugeschnitten = Wir speichern die Punkte als neues Layer (‚Validierungspunkte‘) im geopackage „uebung08.gpkg“</li>
+</ul>
+<p>Sie sollten in diesem Layer jetzt 61 Punkte innerhalb des Nationalparkgebietes haben. Die Attributtabelle enthält aber noch einige automatisch erzeugte Spalten, die wir nicht mehr benötigen. Zum Entfernen der Spalten (left, right, top, bottom, row_index, col_index) öffnen wir die Attributtabelle, wechseln in den Editiermodus und wählen im Werkzeug „Spalte löschen“ die entsprechenden Spalten aus. Anschließende speichern wir das Layer im Geopackage “uebung08.gpkg”.</p>
+</section>
+<section id="aufgabe-03-visuelle-interpretation-der-validierungspunkte" class="level2" data-number="8.5">
+<h2 data-number="8.5" class="anchored" data-anchor-id="aufgabe-03-visuelle-interpretation-der-validierungspunkte"><span class="header-section-number">8.5</span> Aufgabe 03: Visuelle Interpretation der Validierungspunkte</h2>
+<p>Die Überprüfung der Genauigkeit erfolgt auf Grundlage einer visuellen Interpretation. Bevor wir mit der Interpretation beginnen können, müssen wir noch eine Spalte mit den beobachteten Klassen anlegen. Dazu öffnen wir die Attributtabelle des Punktlayers, wechseln in den Editiermodus und klicken auf das Symbol „Neue Spalte“. Und wählen folgende Einstellungen:</p>
+<ul>
+<li>Name: Code</li>
+<li>Type: Ganzzahl (integer)</li>
+</ul>
+<p>Für die visuelle Interpretation aktivieren wir den Editiermodus unseres Punktlayers und interpretieren jeden Punkt der systematischen Stichprobe auf Grundlage der Luftbilder. Dabei weisen wir jedem Punkt die Landbedeckungsklasse(Code) des Klassifikationsschemas zu.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Für eine effiziente Interpretation ist es sinnvoll sich die Attributtabelle als Formular anzeigen zu lassen. Dazu öffnen wir die Attributtabelle und schalten die Ansicht von Tabellenansicht auf Formularansicht, unten links, um. Anschließend können wir dieses Fenster an unsere QGIS Hauptfenster andocken. Durch Aktivierung der Funktion „automatisch zum aktuellen Objekt verschieben“, die sich unter der Liste mit den einzelnen Punkten befindet, springt der Kartenausschnitt automatisch zum gewählten Punkt. Wir können nun einzeln die Punkte der Liste von unten nach oben durchgehen und jeweils die beobachtete Klasse eintragen. Am Ende der visuellen Interpretation sollte für jeden Punkt eine der vier Klassen in der Attributtabelle eingetragen sein.</p>
+</div>
+</div>
+</section>
+<section id="aufgabe-04-erstellen-einer-fehlermatrix" class="level2" data-number="8.6">
+<h2 data-number="8.6" class="anchored" data-anchor-id="aufgabe-04-erstellen-einer-fehlermatrix"><span class="header-section-number">8.6</span> Aufgabe 04: Erstellen einer Fehlermatrix</h2>
+<p>Zum Erstellen der Fehlermatrix verwenden wir die OTB-Funktion <code>ComputeConfusionMatrix</code>, die wir in den Verarbeitungswerkzeugen über die Suche finden können. In dem Funktionsfenster wählen wir die folgenden Einstellungen:</p>
+<ul>
+<li><p>Input Image: Waldtypenkarte Harz</p></li>
+<li><p>Output format: confusionmatrix</p></li>
+<li><p>Ground truth: vector •</p></li>
+<li><p>Input reference vector data: Validierungspunkte_Nationalpark_harz</p></li>
+<li><p>Field name: Code</p></li>
+<li><p>Matrix output: fehlermatrix.csv</p></li>
+</ul>
+<p>Anschließend starten wir die Berechnung. Als Ergebnis wird eine Komma-getrennte csv-Datei ausgeschrieben, die wir in Excel öffnen können. Berechnen sie nun folgende Statistiken nach der Anleitung in den Vorlesungsfolien:</p>
+<ul>
+<li><p>Gesamtgenauigkeit</p></li>
+<li><p>Nutzergenauigkeiten für alle vier Klassen</p></li>
+<li><p>Produzentengenauigkeiten für alle vier Klassen</p></li>
+</ul>
 <div style="border: 3px solid #ff8a0b; background-color: #ffffff; padding: 8px;">
 <ol type="1">
-<li><em>Welche räumliche Auflösung hat das Luftbild?</em></li>
-<li><em>Welche radiometrische Auflösung hat das Luftbild?</em></li>
+<li><em>Wie beurteilen sie die Genauigkeit der Klassifikation?</em></li>
+<li><em>Welche Nutzergenauigkeit hat die Klasse „stehendes Totholz“?</em></li>
 </ol>
 </div>
 </section>
-<section id="aufgabe-02-berechnung-des-normalized-difference-vegetation-index-ndvi" class="level2" data-number="6.4">
-<h2 data-number="6.4" class="anchored" data-anchor-id="aufgabe-02-berechnung-des-normalized-difference-vegetation-index-ndvi"><span class="header-section-number">6.4</span> Aufgabe 02: Berechnung des Normalized Difference Vegetation Index (NDVI)</h2>
-<p>Zur besseren Ansprache der Vitalität/des Blattverlusts möchten wir den Vegetationsindex NDVI berechnen. Für die Berechnung nutzen wir die Funktion <em>Radiometric Indices</em> in der Orfeo-Toolbox (OTB). Mit dieser Funktion können unterschiedliche Vegetationsindices berechnet werden. Sie finden die Funktion am einfachsten über die Suche in der Werkzeugkiste. Sollte diese nicht angezeigt werden, können sie die Werkzeugkiste im Menü -&gt; <em>Verarbeitung</em> aktivieren. Sollte ihnen die Funktion nicht angezeigt werden, müssen sie die Pfadeinstellungen zu OTB anpassen (siehe <a href="uebung01.html#sec-otb" class="quarto-xref"><span>Section 1.2.3</span></a>).</p>
-<p>Zur Berechnung des Vegetationsindex muss dem Programm mitgeteilt werden, welches Bild genutzt werden soll (<code>Input Image=sub_prezelle_2013</code>), welche Kanäle im Bild vorhanden sind (siehe oben), welchen Indices berechnet werden sollen (Available Radiometric Indices=Vegetation:NDVI), welche radiometrische Auflösung das Ausgabebild haben soll (Output pixel type= float) und wo das Ausgabebildgespeichert werden soll (Output<br>
-Image=sub_prezelle_2013_ndvi.tif).</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/le06_radiometric_indices.png" class="img-fluid figure-img"></p>
-<figcaption>Einstellungen für die Berechnung des NDVIs mit der OTB Funktion <em>Radiometric Indices</em></figcaption>
-</figure>
-</div>
-<p>Als Ausgabe erhalten wir ein Graustufenbild mit den NDVI Werten (-1≤Pixelwert≤1) wie unten dargestellt:</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/le06_NDVI.png" class="img-fluid figure-img"></p>
-<figcaption>NDVI als Graustufenbild für Prezelle 2013</figcaption>
-</figure>
-</div>
+<section id="augabe-05-vergleich-modell--und-kartengenauigkeit" class="level2" data-number="8.7">
+<h2 data-number="8.7" class="anchored" data-anchor-id="augabe-05-vergleich-modell--und-kartengenauigkeit"><span class="header-section-number">8.7</span> Augabe 05: Vergleich Modell- und Kartengenauigkeit</h2>
+<p>Bei der Erstellung des <em>RandomForest</em> Klassifikationsmodells (siehe <a href="uebung07_bildklassifikation.html#sec-rf_training" class="quarto-xref"><span>Section 7.5</span></a>) haben wir auch eine Fehlermatrix gespeichert („rf_harz_2025.cm“). Diese wurde auf Basis der Trainingsdaten berechnet, da wir zum Zeitpunkt des Modelltrainings die Validierungsdaten noch nicht erstellt hatten. Insofern beschreibt diese Fehlermatrix die Modellgenauigkeit.</p>
+<p>Erstellen sie äquivalent zu Aufgabe 04 eine Fehlermatrix aus dieser Datei und vergleichen sie beide Fehlermatrizen miteinander um untenstehende Fragen zu beantworten.</p>
 <div style="border: 3px solid #ff8a0b; background-color: #ffffff; padding: 8px;">
-<p><strong>NDVI</strong></p>
-<ul>
-<li><em>Wie unterscheidet sich die CIR-Falschfarbendarstellung vom NDVI?</em></li>
-<li><em>Was ist der kleinste und was der größte NDVI-Wert?</em></li>
-<li><em>Welche NDVI-Werte haben geschädigte, welche gesunde Kiefern?</em></li>
-<li><em>Sind allen niedrigen NDVI-Werte auf Fraßschäden zurückzuführen?</em></li>
-</ul>
-</div>
-</section>
-<section id="aufgabe-03-bildverbesserung" class="level2" data-number="6.5">
-<h2 data-number="6.5" class="anchored" data-anchor-id="aufgabe-03-bildverbesserung"><span class="header-section-number">6.5</span> Aufgabe 03: Bildverbesserung</h2>
-<section id="kontraststreckung" class="level3" data-number="6.5.1">
-<h3 data-number="6.5.1" class="anchored" data-anchor-id="kontraststreckung"><span class="header-section-number">6.5.1</span> Kontraststreckung</h3>
-<p>Der NDVI hat einen theoretischen Wertebereich von [-1;1].Histogramme können genutzt werden, um die Verteilung der NDVI-Werte zu überprüfen. Zum Erstellen des Histogramms gehen wir auf <em>Layereigenschaften -&gt; Histogramm -&gt; Berechnen</em></p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/LE06_NDVI_histogramm.png" class="img-fluid figure-img" width="491"></p>
-<figcaption>Histogramm der NDVI-Werte</figcaption>
-</figure>
-</div>
-<p>Das Histogramm zeigt eine typische Verteilung der NDVI-Werte über Vegetationsoberflächen. Es ist deutlich zu erkennen, dass der Wertebereich nicht vollständig abgedeckt wird. Die meisten Pixel liegen in Wertebereich von 0.1-0.8. Diese Information können wir nutzen um mithilfe einer Kontraststreckung die Qualität des Bildes zu erhöhen. Dazu schneiden wir die unteren 0.2 % und oberen 2% der Verteilung ab (Tail-clipping) und strecken den Rest der Werte auf den gesamten Wertebereich.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/LE06_Kontraststreckung.png" class="img-fluid figure-img"></p>
-<figcaption>Einstellung der Kontraststreckung</figcaption>
-</figure>
-</div>
-</section>
-<section id="farbpaletten" class="level3" data-number="6.5.2">
-<h3 data-number="6.5.2" class="anchored" data-anchor-id="farbpaletten"><span class="header-section-number">6.5.2</span> Farbpaletten</h3>
-<p>Für die Kartierung der Schadflächen kann es sinnvoll sein, die Darstellung der NDVI-Karte nicht als Graustufenbild darzustellen, sondern dafür ein Farbpalette zu nutzen. Erstellen sie dafür einen neuen Stil mit einer kontrastreichen Farbpalette. Stellen Sie dazu die Darstellungsart unter <em>Layereigenschaften -&gt; Symbolisierung auf Einkanalpseudofarben</em> und wählen sie eigneten Farbverlauf aus.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/LE06_Farbpalette_NDVI.png" class="img-fluid figure-img" width="709"></p>
-<figcaption>Darstellung der NDVI-Karte mit einer Fabpalette</figcaption>
-</figure>
-</div>
-</section>
-</section>
-<section id="aufgabe-04-digitalisierung-der-schadflächen" class="level2" data-number="6.6">
-<h2 data-number="6.6" class="anchored" data-anchor-id="aufgabe-04-digitalisierung-der-schadflächen"><span class="header-section-number">6.6</span> Aufgabe 04: Digitalisierung der Schadflächen</h2>
-<p>Im nächsten Schritt sollen die vom Kiefernspinner befallen Flächen digitalisiert werden. Legen sie dazu ein neues geopackage im Ordner <em>“daten/vektor”</em> mit dem Namen <em>uebung06.gpkg</em> an. In dem Geopackage soll ein neuer Layer mit dem Namen “Schadflächen” angelegt werden.</p>
-<p>Erfassen sie anschließend die Bereiche, die sie eindeutig als befallen erkennen können als Polygone und bestimmen sie die Flächengröße der Schadflächen.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/LE06_Schadflaechen.png" class="img-fluid figure-img"></p>
-<figcaption>Beispiel Kartierung von zwei Schadflächen</figcaption>
-</figure>
-</div>
-</section>
-<section id="aufgabe-05-entwicklung-der-schadflächen-optional" class="level2" data-number="6.7">
-<h2 data-number="6.7" class="anchored" data-anchor-id="aufgabe-05-entwicklung-der-schadflächen-optional"><span class="header-section-number">6.7</span> Aufgabe 05: Entwicklung der Schadflächen (Optional)</h2>
-<p>Die bisherigen bearbeiteten Aufnahmen stammen aus dem Jahr 2013. Im Mai 2024 hat das LGLN erneut eine Befliegung der Flächen vorgenommen. Laden sie sich die beiden Bilder für das Untersuchungsgebiet vom Geoportal des LGLN und vergleichen sie den Stand 2024 mit dem Stand 2013.</p>
-<div style="border: 3px solid #ff8a0b; background-color: #ffffff; padding: 8px;">
-<p>[<strong>Zeitliche Änderungen</strong>]</p>
-<ul>
-<li><p>Lassen sich die Schadflächen von 2013 auch in 2024 ansprechen?</p></li>
-<li><p>Welche Schlüsse für die Waldbewirtschaftung lassen sich aus dem Vergleich der Jahre 2013 und 2024 ziehen?</p></li>
-</ul>
+<ol type="1">
+<li><em>Welche Fehlermatrix liefert eine höhere Gesamtgenauigkeit?</em></li>
+<li><em>Wie begründen sie die Unterschiede zwischen den beiden Fehlermatrizen?</em></li>
+<li><em>Welche Fehlermatrix würden sie für die Bewertung der praktischen Nutzbarkeit der Karte verwenden?</em></li>
+</ol>
 </div>
 
 
@@ -763,13 +757,13 @@ Image=sub_prezelle_2013_ndvi.tif).</p>
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./uebung05.html" class="pagination-link" aria-label="Lerneinheit 05: Aktualisierung der Waldeinteilung auf Basis von Ortholuftbildern">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Lerneinheit 05: Aktualisierung der Waldeinteilung auf Basis von Ortholuftbildern</span></span>
+      <a href="./uebung07_bildklassifikation.html" class="pagination-link" aria-label="Lerneinheit 07: Waldtypenklassifikation im Nationalpark Harz">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Lerneinheit 07: Waldtypenklassifikation im Nationalpark Harz</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./uebung07_bildklassifikation.html" class="pagination-link" aria-label="Lerneinheit 07: Waldtypenklassifikation im Nationalpark Harz">
-        <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Lerneinheit 07: Waldtypenklassifikation im Nationalpark Harz</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./references.html" class="pagination-link" aria-label="Referenzen">
+        <span class="nav-page-text">Referenzen</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
