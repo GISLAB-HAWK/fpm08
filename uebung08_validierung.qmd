@@ -123,12 +123,14 @@ klicken auf das Symbol „Neue Spalte“. Und wählen folgende Einstellungen:
 
 Für die visuelle Interpretation aktivieren wir den Editiermodus unseres Punktlayers und
 interpretieren jeden Punkt der systematischen Stichprobe auf Grundlage der Luftbilder. Dabei weisen
-wir jedem Punkt die Landbedeckungsklasse(Code) des Klassifikationsschemas zu. Für die visuelle
+wir jedem Punkt die Landbedeckungsklasse (Code) des Klassifikationsschemas zu. Für die visuelle
 Kontrolle bietet es sich außerdem an einen Darstellungsstil mit den gleichen Klassen und Farben wie
 bei der Bildklassifikations zu wählen. Eine entsprechend vorbereiteten Stil für das Punktraster
 können sie unter folgendem Link herunterladen:
 
 <https://cloud.hawk.de/index.php/s/tBqHkG9NxbaoiW5>
+
+![](images/LE08_stil_punktraster.png)
 
 ::: callout-note
 Für eine effiziente Interpretation ist es sinnvoll sich die Attributtabelle als Formular anzeigen zu
