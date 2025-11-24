@@ -11,43 +11,29 @@ Lizenz: Creative Commons BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc
 -->
 ```
 
-# Lerneinheit 07: Waldtypenklassifikation im Nationalpark Harz {#sec-Bildklassifikation}
-
+# Lerneinheit 08: Analyse der Genauigkeit einer thematischen Waldtypenkarte
 ![](images/LE07_cover_image.png){fig-align="center"}
 
 ## Lernziele & Aufgabenstellung
 
-In dieser Übung soll für den Nationalpark Harz eine einfache Waldtypenkarte für das Jahr 2025
-erstellt werden. Dazu werden aktuelle Satellitenbilder des Satellitensystems Sentinel-2
-automatisiert mit einem überwachten Klassifikationsverfahren klassifiziert.
+In der der Übung LE06 (@sec-Bildklassifikation) wurde mithilfe eines automatischen Klassifikationsverfahrens eine einfache Waldtypenkarte für den Nationalpark Harz erstellt. In der vorliegenden Lerneinheit soll diese Karte validiert werden um die Kartengenauigkeit zu ermitteln.
 
-::: callout-note
-Die Übung dient der Demonstration der grundlegenden Prinzipien der überwachten Bildklassifikation.
-Es ist nicht das Ziel eine genaue Waldtypenkarte für spätere Auswertungen zu erstellen. Dies würde
-ein deutlich höherer Aufwand erfordern, besonders bei der Auswahl von Trainingsgebieten, und somit
-den zeitlichen Rahmen dieser Übung sprengen.
-:::
 
 **Lernziele**
 
 Die Studierenden sollen:
 
--   Trainingsdaten für Bildklassifikationen anzulegen
--   Maschinelle Lernverfahren zum Erstellen von Klassifikationsmodellen zu nutzen
--   Mithilfe von trainierten Klassifikationsmodellen Satellitenbilder klassifizieren um einfache
-    Landbedeckungskarten zu erstellen.
+-   Validierungsdaten anlegen
+-   Ein Fehlermatrix erstellen
+-   Mithilfe der Fehlermatrix die Gesamt-, Nutzer- und Produzentengenauigkeit bestimmen. 
 
 **Aufgaben**
 
-1.  Raster- und Vektordaten importieren
-2.  Ergänzung von Trainingsdaten durch visuelle Interpretation von Ortholuftbildern
-3.  Trainings eines RandomForest Klassifikationsmodells
-4.  Klassifikation eines S2-Satellitenbilds zur Erstellung einer Waldtypenkarte
 
 ## Aufgabe 0: Anlegen eine neuen QGIS-Projektes
 
 Folgen sie der Anleitung aus LE01 @sec-projekt_management um eine neue Ordnerstruktur und ein neues
-QGIS-Projekt für LE07 anzulegen. In der Übung bietet es sich an den Ordner *"daten"* weiter in die
+QGIS-Projekt für LE08 anzulegen. In der Übung bietet es sich an den Ordner *"daten"* weiter in die
 Unterordner *"vektor"* und "raster" zu unterteilen.
 
 ## Aufgabe 01: Download und Import der Geodaten
