@@ -11,11 +11,8 @@ Lizenz: Creative Commons BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc
 -->
 ```
 
-<<<<<<< HEAD
-# Lerneinheit 07: Waldtypenklassifikation im Nationalpark Harz {#sec-Bildklassifikation}
-=======
 # Lerneinheit 07: Waldtypenklassifikation im Nationalpark Harz {#sec-le07}
->>>>>>> 3ea409c6be327f8bb4c135b27285692bb05901ef
+
 
 ![](images/LE07_cover_image.png){fig-align="center"}
 
