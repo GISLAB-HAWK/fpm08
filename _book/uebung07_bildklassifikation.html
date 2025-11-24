@@ -31,7 +31,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./references.html" rel="next">
+<link href="./uebung08_validierung.html" rel="next">
 <link href="./uebung06.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -161,6 +161,12 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./uebung08_validierung.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Lerneinheit 08: Validierung einer thematischen Waldtypenkarte des Nationalpark Harz</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./references.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Referenzen</span></a>
   </div>
@@ -187,7 +193,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#klassifikationschlüssel" id="toc-klassifikationschlüssel" class="nav-link" data-scroll-target="#klassifikationschlüssel"><span class="header-section-number">7.4.1</span> Klassifikationschlüssel</a></li>
   <li><a href="#trainingsdaten-ergänzen" id="toc-trainingsdaten-ergänzen" class="nav-link" data-scroll-target="#trainingsdaten-ergänzen"><span class="header-section-number">7.4.2</span> Trainingsdaten ergänzen</a></li>
   </ul></li>
-  <li><a href="#aufgabe-03-training-eines-klassifikationsmodells" id="toc-aufgabe-03-training-eines-klassifikationsmodells" class="nav-link" data-scroll-target="#aufgabe-03-training-eines-klassifikationsmodells"><span class="header-section-number">7.5</span> Aufgabe 03: Training eines Klassifikationsmodells</a></li>
+  <li><a href="#sec-rf_training" id="toc-sec-rf_training" class="nav-link" data-scroll-target="#sec-rf_training"><span class="header-section-number">7.5</span> Aufgabe 03: Training eines Klassifikationsmodells</a></li>
   <li><a href="#aufgabe-04-klassifikation-eines-s2-satellitenbilds-zur-erstellung-einer-waldtypenkarte" id="toc-aufgabe-04-klassifikation-eines-s2-satellitenbilds-zur-erstellung-einer-waldtypenkarte" class="nav-link" data-scroll-target="#aufgabe-04-klassifikation-eines-s2-satellitenbilds-zur-erstellung-einer-waldtypenkarte"><span class="header-section-number">7.6</span> Aufgabe 04: Klassifikation eines S2-Satellitenbilds zur Erstellung einer Waldtypenkarte</a></li>
   </ul>
 </nav>
@@ -197,7 +203,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Lerneinheit 07: Waldtypenklassifikation im Nationalpark Harz</span></h1>
+<h1 class="title"><span id="sec-le07" class="quarto-section-identifier"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Lerneinheit 07: Waldtypenklassifikation im Nationalpark Harz</span></span></h1>
 </div>
 
 
@@ -285,10 +291,13 @@ Note
 <h4 data-number="7.3.1.2" class="anchored" data-anchor-id="luftbilder"><span class="header-section-number">7.3.1.2</span> <strong>Luftbilder</strong></h4>
 <p>Für die Erstellung der Trainingsdaten sollen Luftbilder mit einer höheren räumlichen Auflösung genutzt werden. Da der Nationalpark Harz in zwei Bundesländern liegt müssen von beiden Bundesländern entsprechende DOP-Bilder als WMS eingebunden werden (siehe dazu auch LE03 <a href="uebung03.html#sec-wms" class="quarto-xref"><span>Section 3.4</span></a>). Nutzen sie hier für folgende Links:</p>
 <p>Sachsen-Anhalt:</p>
-<p>DOP-WMS: <a href="https://www.geodatenportal.sachsen-anhalt.de/wss/service/ST_LVermGeo_DOP_WMS_OpenData/guest?" class="uri">https://www.geodatenportal.sachsen-anhalt.de/wss/service/ST_LVermGeo_DOP_WMS_OpenData/guest?</a></p>
-<p>DOP-Aktualität: <a href="https://www.geodatenportal.sachsen-anhalt.de/wss/service/ST_LVermGeo_DOP_WMS_Kacheluebersicht/guest?" class="uri">https://www.geodatenportal.sachsen-anhalt.de/wss/service/ST_LVermGeo_DOP_WMS_Kacheluebersicht/guest?</a></p>
+<p>DOP-WMS:</p>
+<p><code>https://www.geodatenportal.sachsen-anhalt.de/wss/service/ST_LVermGeo_DOP_WMS_OpenData/guest?</code></p>
+<p>DOP-Aktualität:</p>
+<p><code>https://www.geodatenportal.sachsen-anhalt.de/wss/service/ST_LVermGeo_DOP_WMS_Kacheluebersicht/guest?</code></p>
 <p>Niedersachsen:</p>
-<p>DOP: <a href="https://opendata.lgln.niedersachsen.de/doorman/noauth/dop_wms" class="uri">https://opendata.lgln.niedersachsen.de/doorman/noauth/dop_wms</a></p>
+<p>DOP:</p>
+<p><code>https://opendata.lgln.niedersachsen.de/doorman/noauth/dop_wms&gt;</code></p>
 <p><strong>Fragen:</strong></p>
 <div style="border: 3px solid #ff8a0b; background-color: #ffffff; padding: 8px;">
 <ol type="1">
@@ -359,8 +368,8 @@ Note
 </ul>
 </section>
 </section>
-<section id="aufgabe-03-training-eines-klassifikationsmodells" class="level2" data-number="7.5">
-<h2 data-number="7.5" class="anchored" data-anchor-id="aufgabe-03-training-eines-klassifikationsmodells"><span class="header-section-number">7.5</span> Aufgabe 03: Training eines Klassifikationsmodells</h2>
+<section id="sec-rf_training" class="level2" data-number="7.5">
+<h2 data-number="7.5" class="anchored" data-anchor-id="sec-rf_training"><span class="header-section-number">7.5</span> Aufgabe 03: Training eines Klassifikationsmodells</h2>
 <p>Im ersten Schritt müssen wir das Klassifikationsmodell mithilfe der Trainingsdaten „anlernen“. OTB stellt dazu die Funktion <em>„TrainImageClassifier“</em> zur Verfügung, die wir in der Werkzeugkiste der Verarbeitungsfunktionen über die Suche finden können. In dieser Funktion setzen wir die folgenden Optionen:</p>
 <ul>
 <li><p><strong>Input Image List</strong>: Hier geben wir unser Sentinel2-Bild des NP-Harz an</p></li>
@@ -809,8 +818,8 @@ Note
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./references.html" class="pagination-link" aria-label="Referenzen">
-        <span class="nav-page-text">Referenzen</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./uebung08_validierung.html" class="pagination-link" aria-label="Lerneinheit 08: Validierung einer thematischen Waldtypenkarte des Nationalpark Harz">
+        <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Lerneinheit 08: Validierung einer thematischen Waldtypenkarte des Nationalpark Harz</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

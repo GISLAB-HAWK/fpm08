@@ -11,7 +11,7 @@ Lizenz: Creative Commons BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc
 -->
 ```
 
-# Lerneinheit 07: Waldtypenklassifikation im Nationalpark Harz
+# Lerneinheit 07: Waldtypenklassifikation im Nationalpark Harz {#sec-le07}
 
 ![](images/LE07_cover_image.png){fig-align="center"}
 
@@ -87,14 +87,18 @@ für folgende Links:
 Sachsen-Anhalt:
 
 DOP-WMS:
-<https://www.geodatenportal.sachsen-anhalt.de/wss/service/ST_LVermGeo_DOP_WMS_OpenData/guest?>
+
+`https://www.geodatenportal.sachsen-anhalt.de/wss/service/ST_LVermGeo_DOP_WMS_OpenData/guest?`
 
 DOP-Aktualität:
-<https://www.geodatenportal.sachsen-anhalt.de/wss/service/ST_LVermGeo_DOP_WMS_Kacheluebersicht/guest?>
+
+`https://www.geodatenportal.sachsen-anhalt.de/wss/service/ST_LVermGeo_DOP_WMS_Kacheluebersicht/guest?`
 
 Niedersachsen:
 
-DOP: <https://opendata.lgln.niedersachsen.de/doorman/noauth/dop_wms>
+DOP:
+
+`https://opendata.lgln.niedersachsen.de/doorman/noauth/dop_wms>`
 
 **Fragen:**
 
@@ -165,7 +169,7 @@ die Luftbilder aus den beiden Bundesländern. Achten sie dabei auf folgende Aspe
 -   die Trainingsdaten sollten die Variabillität der Spektralbereiche der jeweiligen Klassen
     möglichst abdecken
 
-## Aufgabe 03: Training eines Klassifikationsmodells
+## Aufgabe 03: Training eines Klassifikationsmodells {#sec-rf_training}
 
 Im ersten Schritt müssen wir das Klassifikationsmodell mithilfe der Trainingsdaten „anlernen“. OTB
 stellt dazu die Funktion *„TrainImageClassifier“* zur Verfügung, die wir in der Werkzeugkiste der

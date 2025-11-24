@@ -8,7 +8,7 @@
 
 <meta name="description" content="Übungsaufgaben für das Modul FPM08 forstliche Fernerkundung">
 
-<title>2&nbsp; Lerneinheit 02: Erstellen eines Ortholuftbildmosaiks in der Rfö Kattenbühl – Forstliche Fernerkundung</title>
+<title>8&nbsp; Lerneinheit 08: Validierung einer thematischen Waldtypenkarte des Nationalpark Harz – Forstliche Fernerkundung</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -31,8 +31,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./uebung03.html" rel="next">
-<link href="./uebung01.html" rel="prev">
+<link href="./references.html" rel="next">
+<link href="./uebung07_bildklassifikation.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -83,7 +83,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./uebung02.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Lerneinheit 02: Erstellen eines Ortholuftbildmosaiks in der Rfö Kattenbühl</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./uebung08_validierung.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Lerneinheit 08: Validierung einer thematischen Waldtypenkarte des Nationalpark Harz</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -125,7 +125,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./uebung02.html" class="sidebar-item-text sidebar-link active">
+  <a href="./uebung02.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Lerneinheit 02: Erstellen eines Ortholuftbildmosaiks in der Rfö Kattenbühl</span></span></a>
   </div>
 </li>
@@ -161,7 +161,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./uebung08_validierung.html" class="sidebar-item-text sidebar-link">
+  <a href="./uebung08_validierung.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Lerneinheit 08: Validierung einer thematischen Waldtypenkarte des Nationalpark Harz</span></span></a>
   </div>
 </li>
@@ -181,12 +181,17 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#lernziele-aufgabenstellung" id="toc-lernziele-aufgabenstellung" class="nav-link active" data-scroll-target="#lernziele-aufgabenstellung"><span class="header-section-number">2.1</span> Lernziele &amp; Aufgabenstellung</a></li>
-  <li><a href="#anlegen-eine-neuen-qgis-projektes" id="toc-anlegen-eine-neuen-qgis-projektes" class="nav-link" data-scroll-target="#anlegen-eine-neuen-qgis-projektes"><span class="header-section-number">2.2</span> Anlegen eine neuen QGIS-Projektes</a></li>
-  <li><a href="#import-der-ortholuftbilder" id="toc-import-der-ortholuftbilder" class="nav-link" data-scroll-target="#import-der-ortholuftbilder"><span class="header-section-number">2.3</span> Import der Ortholuftbilder</a></li>
-  <li><a href="#sec-mehrkanalbilder" id="toc-sec-mehrkanalbilder" class="nav-link" data-scroll-target="#sec-mehrkanalbilder"><span class="header-section-number">2.4</span> Erstellen von Mehrkanalbildern</a></li>
-  <li><a href="#sec-CIR_darstellung" id="toc-sec-CIR_darstellung" class="nav-link" data-scroll-target="#sec-CIR_darstellung"><span class="header-section-number">2.5</span> Echt- und falschfarben Darstellungen von Luftbildern</a></li>
-  <li><a href="#sec-mosaikieren" id="toc-sec-mosaikieren" class="nav-link" data-scroll-target="#sec-mosaikieren"><span class="header-section-number">2.6</span> Erstellen eine Ortholuftbildmosaiks</a></li>
+  <li><a href="#lernziele-aufgabenstellung" id="toc-lernziele-aufgabenstellung" class="nav-link active" data-scroll-target="#lernziele-aufgabenstellung"><span class="header-section-number">8.1</span> Lernziele &amp; Aufgabenstellung</a></li>
+  <li><a href="#aufgabe-0-anlegen-eine-neuen-qgis-projektes" id="toc-aufgabe-0-anlegen-eine-neuen-qgis-projektes" class="nav-link" data-scroll-target="#aufgabe-0-anlegen-eine-neuen-qgis-projektes"><span class="header-section-number">8.2</span> Aufgabe 0: Anlegen eine neuen QGIS-Projektes</a></li>
+  <li><a href="#aufgabe-01-download-und-import-der-geodaten" id="toc-aufgabe-01-download-und-import-der-geodaten" class="nav-link" data-scroll-target="#aufgabe-01-download-und-import-der-geodaten"><span class="header-section-number">8.3</span> Aufgabe 01: Download und Import der Geodaten</a>
+  <ul class="collapse">
+  <li><a href="#rasterdaten" id="toc-rasterdaten" class="nav-link" data-scroll-target="#rasterdaten"><span class="header-section-number">8.3.1</span> Rasterdaten</a></li>
+  <li><a href="#vektordaten" id="toc-vektordaten" class="nav-link" data-scroll-target="#vektordaten"><span class="header-section-number">8.3.2</span> Vektordaten</a></li>
+  </ul></li>
+  <li><a href="#aufgabe-02-erstellen-eines-validierungslayers" id="toc-aufgabe-02-erstellen-eines-validierungslayers" class="nav-link" data-scroll-target="#aufgabe-02-erstellen-eines-validierungslayers"><span class="header-section-number">8.4</span> Aufgabe 02: Erstellen eines Validierungslayers</a></li>
+  <li><a href="#aufgabe-03-visuelle-interpretation-der-validierungspunkte" id="toc-aufgabe-03-visuelle-interpretation-der-validierungspunkte" class="nav-link" data-scroll-target="#aufgabe-03-visuelle-interpretation-der-validierungspunkte"><span class="header-section-number">8.5</span> Aufgabe 03: Visuelle Interpretation der Validierungspunkte</a></li>
+  <li><a href="#aufgabe-04-erstellen-einer-fehlermatrix" id="toc-aufgabe-04-erstellen-einer-fehlermatrix" class="nav-link" data-scroll-target="#aufgabe-04-erstellen-einer-fehlermatrix"><span class="header-section-number">8.6</span> Aufgabe 04: Erstellen einer Fehlermatrix</a></li>
+  <li><a href="#augabe-05-vergleich-modell--und-kartengenauigkeit" id="toc-augabe-05-vergleich-modell--und-kartengenauigkeit" class="nav-link" data-scroll-target="#augabe-05-vergleich-modell--und-kartengenauigkeit"><span class="header-section-number">8.7</span> Augabe 05: Vergleich Modell- und Kartengenauigkeit</a></li>
   </ul>
 </nav>
     </div>
@@ -195,7 +200,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Lerneinheit 02: Erstellen eines Ortholuftbildmosaiks in der Rfö Kattenbühl</span></h1>
+<h1 class="title"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Lerneinheit 08: Validierung einer thematischen Waldtypenkarte des Nationalpark Harz</span></h1>
 </div>
 
 
@@ -214,125 +219,136 @@ ul.task-list li input[type="checkbox"] {
 
 <!--
 
-Skripte für die Übungen 02 des Moduls FPM08 Forstliche Fernerkundung im Studiengang
+Skripte für die Übungen 07 des Moduls FPM08 Forstliche Fernerkundung im Studiengang
 B.Sc. Forstwirtschaft an der HAWK Göttingen.
 
 Autor: Paul Magdon
-Datum: 2025-10-12
+Datum: 2025-11-16
 Lizenz: Creative Commons BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 -->
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/LE02_cover.png" class="img-fluid figure-img"></p>
-<figcaption>Falschfarben Orthomosaik Rfö. Kattenbühl</figcaption>
-</figure>
-</div>
-<section id="lernziele-aufgabenstellung" class="level2" data-number="2.1">
-<h2 data-number="2.1" class="anchored" data-anchor-id="lernziele-aufgabenstellung"><span class="header-section-number">2.1</span> Lernziele &amp; Aufgabenstellung</h2>
-<p>Viele Fernerkundungsdaten werden in Form von Rasterdaten gespeichert, welche in einem regelmäßigen Raster aus Zellen/Pixel organisiert sind. In jedem Pixel wird genau ein Zahlenwert gespeichert. Typische Dateiformate für Rastergeodaten sind GeoTIFF (<em>.tif), ArcInfo ASCI (</em>.ascii), Geopackage (*.gpkg) und ERDAS Imagine (*.img).</p>
-<p>In der Übung soll der Umgang mit Rasterdaten vorgestellt und geübt werden. Dazu soll für die Nds. Rfö. Kattenbühl eine Ortholuftbildmosaik erstellt und mit unterschiedlichen Optionen visualisiert werden. In der Übung wird vorgestellt wie Rasterdaten in QGIS importiert werden können. Wie die Eigenschaften von Rasterdaten untersucht werden und wie Rasterdaten visualisiert werden können. Außerdem wird vorgestellt wie aus einzelnen Kanälen Mehrkanalbilder erstellt werden können und wie diese dann in einem virtuellen Bildmosaik zusammengeführt werden.</p>
+<p><img src="images/LE08_cover_image.png" class="img-fluid"></p>
+<section id="lernziele-aufgabenstellung" class="level2" data-number="8.1">
+<h2 data-number="8.1" class="anchored" data-anchor-id="lernziele-aufgabenstellung"><span class="header-section-number">8.1</span> Lernziele &amp; Aufgabenstellung</h2>
+<p>In der letzten Übung (<a href="uebung07_bildklassifikation.html" class="quarto-xref"><span>Chapter 7</span></a>) haben wir mithilfe eines automatischen Bildklassifikationsverfahrens eine einfache Waldtypenkarten für den Nationalpark Harz erstellt. In der vorliegenden Übung wollen wir nun eine Validierung der Landbedeckungskarte mit einem unabhängigen Referenzdatensatz durchführen, um die Kartengenauigkeit zu ermitteln. Außerdem sollen Modell- und Kartengenauigkeit miteinander verglichen werden.</p>
 <p><strong>Lernziele</strong></p>
 <p>Die Studierenden sollen:</p>
 <ul>
-<li>verschiedene Rasterdatenformate kennenlernen</li>
-<li>Rasterdaten in QGIS importieren</li>
-<li>Eigenschaften von Rasterdaten in QGIS untersuchen und manipulieren können</li>
-<li>Mehrkanalbilder und Bildmosaike mithilfe von virtuellen Rastern erstellen können</li>
-<li>unterschiedliche Visualisierungsmethoden für Ein- und Mehrkanalrasterbilder nutzen können</li>
+<li>Validierungsdaten für die Validierung von thematischen Karten erstellen</li>
+<li>Mithilfe von Fehlermatrizen die Genauigkeit eine thematischen Karte beruteilen</li>
+<li>den Untscheid zwischen der Modell- und der Kartengenauigkeit erläutern können.</li>
 </ul>
 <p><strong>Aufgaben</strong></p>
 <ol type="1">
-<li><p>Importieren sie die einzelnen Kanäle der Ortholuftbilder und untersuchen sie die Rastereigenschaften</p></li>
-<li><p>Fügen sie die einzelnen Kanäle zu einem virtuellen Mehrkanalbild zusammen.</p></li>
-<li><p>Erstellen sie ein virtuelles Orthobildmosaik</p></li>
-<li><p>Erstellen sie eine echt- und eine falschfarben Darstellungen</p></li>
+<li>Raster- und Vektordaten importieren</li>
+<li>Erstellen eines Validierungsrasters</li>
+<li>Visuelle Interpretation von Ortholuftbildern</li>
+<li>Berechnung von Fehlerstatistiken aus der Fehlermatrix</li>
+<li>Vergleich der Modell- und Kartengenauigkeit</li>
 </ol>
 </section>
-<section id="anlegen-eine-neuen-qgis-projektes" class="level2" data-number="2.2">
-<h2 data-number="2.2" class="anchored" data-anchor-id="anlegen-eine-neuen-qgis-projektes"><span class="header-section-number">2.2</span> Anlegen eine neuen QGIS-Projektes</h2>
-<p>Folgen sie der Anleitung aus <a href="uebung01.html#sec-projekt_management" class="quarto-xref"><span>Section 1.3</span></a> um eine neue Ordnerstruktur und ein neues QGIS-Projekt für LE02 anzulegen.</p>
+<section id="aufgabe-0-anlegen-eine-neuen-qgis-projektes" class="level2" data-number="8.2">
+<h2 data-number="8.2" class="anchored" data-anchor-id="aufgabe-0-anlegen-eine-neuen-qgis-projektes"><span class="header-section-number">8.2</span> Aufgabe 0: Anlegen eine neuen QGIS-Projektes</h2>
+<p>Folgen sie der Anleitung aus LE01 <a href="uebung01.html#sec-projekt_management" class="quarto-xref"><span>Section 1.3</span></a> um eine neue Ordnerstruktur und ein neues QGIS-Projekt für LE07 anzulegen. In der Übung bietet es sich an den Ordner <em>“daten”</em> weiter in die Unterordner <em>“vektor”</em> und “raster” zu unterteilen.</p>
 </section>
-<section id="import-der-ortholuftbilder" class="level2" data-number="2.3">
-<h2 data-number="2.3" class="anchored" data-anchor-id="import-der-ortholuftbilder"><span class="header-section-number">2.3</span> Import der Ortholuftbilder</h2>
-<p>Die Ortholuftbilder werden als GeoTiff-Dateien getrennt in den einzelnen Bändern (b1-b4) zur Verfügung gestellt. Für die Übung arbeiten wir mit vier Bildern á vier Kanäle, so dass 16 Raster importiert werden. Um den Import übersichtlich zu gestalten, empfiehlt es sich für jedes Bild zunächst im Layer-Panel und im raster-Ordner des Projektes einen Ordner/ Gruppe für jedes Bild (bild_1, bild_2, …) anzulegen. Kopieren Sie sich die Daten der Übung dazu vom Netzlaufwerk in ihren Projektordner. Die einzelnen Rasterdatei können dann entweder per drag &amp; drop aus dem Windows-Explorer oder über das Import-Menü zu den Layer-Gruppen hinzugefügt werden.</p>
-<div style="border: 2px solid #afca0b; background-color: #fafafa; padding: 8px;">
-<p><code>Layer</code> → <code>Datenquellenverwaltung</code> → <code>Raster</code> → <code>File</code></p>
-</div>
-<p>Importieren sie für jedes Bild die vier Kanäle (b1-b4). Nutzen sie anschließend die Layereigenschaften der Raster um folgende Fragen zu beantworten:</p>
-<div style="border: 3px solid #ff8a0b; background-color: #ffffff; padding: 8px;">
-<p><strong>Fragen:</strong></p>
-<ol type="1">
-<li><p><em>Wie viele Pixel hat ein Kanal?</em></p></li>
-<li><p><em>Welche räumlichen Auflösungen haben die Rasterbilder?</em></p></li>
-<li><p><em>Welches Koordinatenreferenzsystem haben die Rasterbilder?</em></p></li>
-<li><p><em>Was ist der kleinste und der größte Zahlenwert der Rasterbilder?</em></p></li>
-</ol>
-</div>
+<section id="aufgabe-01-download-und-import-der-geodaten" class="level2" data-number="8.3">
+<h2 data-number="8.3" class="anchored" data-anchor-id="aufgabe-01-download-und-import-der-geodaten"><span class="header-section-number">8.3</span> Aufgabe 01: Download und Import der Geodaten</h2>
+<section id="rasterdaten" class="level3" data-number="8.3.1">
+<h3 data-number="8.3.1" class="anchored" data-anchor-id="rasterdaten"><span class="header-section-number">8.3.1</span> Rasterdaten</h3>
+<section id="luftbilder" class="level4" data-number="8.3.1.1">
+<h4 data-number="8.3.1.1" class="anchored" data-anchor-id="luftbilder"><span class="header-section-number">8.3.1.1</span> <strong>Luftbilder</strong></h4>
+<p>Für die Erstellung der Validierungssdaten sollen Luftbilder mit einer hohen räumlichen Auflösung genutzt werden. Da der Nationalpark Harz in zwei Bundesländern liegt müssen von beiden Bundesländern entsprechende DOP-Bilder als WMS eingebunden werden (siehe dazu auch LE03 <a href="uebung03.html#sec-wms" class="quarto-xref"><span>Section 3.4</span></a>). Nutzen sie hier für folgende Links:</p>
+<p>Sachsen-Anhalt:</p>
+<p>DOP-WMS:</p>
+<p><code>https://www.geodatenportal.sachsen-anhalt.de/wss/service/ST_LVermGeo_DOP_WMS_OpenData/guest?</code></p>
+<p>DOP-Aktualität:</p>
+<p><code>https://www.geodatenportal.sachsen-anhalt.de/wss/service/ST_LVermGeo_DOP_WMS_Kacheluebersicht/guest?</code></p>
+<p>Niedersachsen:</p>
+<p>DOP: <code>https://opendata.lgln.niedersachsen.de/doorman/noauth/dop_wms</code></p>
 </section>
-<section id="sec-mehrkanalbilder" class="level2" data-number="2.4">
-<h2 data-number="2.4" class="anchored" data-anchor-id="sec-mehrkanalbilder"><span class="header-section-number">2.4</span> Erstellen von Mehrkanalbildern</h2>
-<p>Nach dem Import der einzelnen Kanäle werden diese in QGIS als Graustufenbilder dargestellt. Damit QGIS diese als Farbbilder darstellen kann, müssen alle Kanäle eines Raster zusammengeführt werden. Dafür gibt es unterschiedliche Optionen. Eine Variante wäre das speichern aller Kanäle in eine neue Rasterdatei mit vier Kanälen. In diesem Fall würden wir aber eine Kopie der Daten anlegen und bräuchten den doppelten Speicherplatz. Eine effiziente Methode um das kopieren von Daten zu verhindern ist es mit virtuellen Rastern zu arbeiten. Dazu wird das GDAL-VRT Formate bereitgestellt (siehe: <a href="https://gdal.org/en/stable/drivers/raster/vrt.html" class="uri">https://gdal.org/en/stable/drivers/raster/vrt.html</a>). Ein virtuelles Raster ist eine kleine Textdatei im XML-Format in der die Pfade und Einstellungen der einzelnen Raster hinterlegt sind. QGIS kann diese Textdateien einlesen und diese Raster dann wie ein Mehrkanalbild verarbeiten.</p>
-<p>Erstellen sie für jedes der vier Bilder ein VRT-Datei in dem jeweiligen Bildordner.</p>
-<div style="border: 2px solid #afca0b; background-color: #fafafa; padding: 8px;">
-<p><code>Verarbeitung</code> →<code>Werkzeugkiste</code> → <code>Virtuelles Raster generieren</code> → <code>Raster</code> → <code>File</code></p>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/LE02_vrt_anlegen.png" class="img-fluid figure-img"></p>
-<figcaption>Anlegen eines VRT-Rasters</figcaption>
-</figure>
-</div>
-<p>Im ersten Schritt werden unter Input layers die vier Bänder ausgewählt. wichtig ist hier das die Reihenfolge der Bänder aufsteigend angezeigt wird (b1,b2,b3,b4). Sollte das nicht der Fall sein kann die Reihenfolge per drag&amp;drop in dem Menü entsprechend angepasst werden. Da mehrerer Bänder zusammengeführt werden ist es wichtig, dass die Option <em>“Place each input file into a separate band”</em> aktiviert wird. Unter Virtuell wird die Ausgabedatei angegeben. Diese sollte z.B. <em>LE02/raster/bild_1/bild_1_mehrkanal.vrt</em> heißen.</p>
 </section>
-<section id="sec-CIR_darstellung" class="level2" data-number="2.5">
-<h2 data-number="2.5" class="anchored" data-anchor-id="sec-CIR_darstellung"><span class="header-section-number">2.5</span> Echt- und falschfarben Darstellungen von Luftbildern</h2>
-<p>Nach dem ein Mehrkanalraster als virtuelle Datei angelegt wurde, stellt QGIS diese sofort als Farbbild dar. Dabei nutzt QGIS die Standardeinstellungen für Raster und interpretiert die Bänder wie folgt:</p>
-<p>Band 1: blau; Band 2: grün; Band 3: rot.</p>
-<p><strong>Echtfarben Darstellung</strong></p>
-<p>Wenn die spektralen Bereiche den entsprechenden Farben zugeordnete werden, also blau zu blau, grün zu grün und rot zu rot, wird das Raster in den echten Farben dargestellt. In vorliegenden Fall ist das bereits korrekt und führt automatisch zu einer Echtfarbendarstellung. Dies muss jedoch nicht immer der Fall sein. Daher ist es wichtig, die Zuordnung der Bänder zu den Farben in den Layereigenschaften zu überprüfen. Dazu mit Rechtsklick auf den jeweiligen VRT-Layer:</p>
-<div style="border: 2px solid #afca0b; background-color: #fafafa; padding: 8px;">
-<p><code>Eigenschaften</code> → <code>Symbolisierung</code> → <code>Darstellungsart</code> → <code>Multikanal Farbe</code></p>
-</div>
-<p>Hier wird angezeigt, welcher Kanal für rot, grün und für blau verwendet wird.</p>
-<p><strong>Color-Infrarot (CIR) Darstellung</strong></p>
-<p>Zur Beobachtung von Wäldern und Pflanzen werden häufig falschfarben Darstellungen gewählt. Sie zeigen nicht die Farben wie sie in der Realität vorgefunden werden, sonden machen besonders Unterschiede in der Vegetation sichtbar. Dazu wird häufig der rote Kanal mit den Reflexionsdaten aus dem Nahen Infrarot Spektrum ersetzt.</p>
-<p>QGIS bietet die Möglichkeit für jeden Layer mehrere Symbolisierungen zu hinterlegen. Dadurch ist es dann möglich sehr einfach zwischen unterschiedlichen Ansichten zu wechseln. Um ein weitere Symbolisierung für einen Layer anzulegen klicken wir mit der rechten Maustaste auf einen Layer und wählen:</p>
-<div style="border: 2px solid #afca0b; background-color: #fafafa; padding: 8px;">
-<p><code>Stil</code> → <code>Stil hinzufügen</code> → <code>Name: CIR</code></p>
-</div>
-<p>Anschließend öffnen wie wieder die Symbolisierung des Layers und wählen in der multikanal Darstellung für den roten Kanal das Band 4 (NIR) aus. Dadurch wird nun eine CIR-Falschfarben Darstellung angezeigt.</p>
-<div style="border: 3px solid #ff8a0b; background-color: #ffffff; padding: 8px;">
-<p><strong>Frage:</strong></p>
-<ol type="1">
-<li><p><em>Wie unterscheiden sich die Echtfarben- und die CIR-Darstellung?</em></p></li>
-<li><p><em>Welche Objekte können Sie in der CIR-Darstellung besser erkennen, welche schlechter?</em></p></li>
-</ol>
-</div>
+<section id="vektordaten" class="level3" data-number="8.3.2">
+<h3 data-number="8.3.2" class="anchored" data-anchor-id="vektordaten"><span class="header-section-number">8.3.2</span> Vektordaten</h3>
+<p>Da wir die Validierung auf das Gebiet des Nationalparks beschränkt werden soll, benötigen wir das Polygon mit den Außengrenzen des Parks das sie hier herunterladen können:</p>
+<p><a href="https://cloud.hawk.de/index.php/s/Hs52DFGtPnfKzyN" class="uri">https://cloud.hawk.de/index.php/s/Hs52DFGtPnfKzyN</a></p>
 </section>
-<section id="sec-mosaikieren" class="level2" data-number="2.6">
-<h2 data-number="2.6" class="anchored" data-anchor-id="sec-mosaikieren"><span class="header-section-number">2.6</span> Erstellen eine Ortholuftbildmosaiks</h2>
-<p>Die Ortholuftbilder werden, wie die meisten Rasterdaten, in sogenannten Kacheln (engl. tiles) z.B. mit einer Größe von 2000 m x 2000 m ausgeliefert. In der Übung haben vier solche Kacheln vorliegen. Zur Abdeckung größere Gebiete werden meistens mehrere Kacheln benötigt. Besonders für große Gebiete kann das sehr aufwendig werden, da die Einstellungen z.B. der Darstellung für jede Kachel einzeln angepasst werden muss. Daher ist es sinnvoll die Kacheln eines zusammenhängenden Gebietes zusammenzuführen. Diese Zusammenstellung mehrere Bilder die räumlich benachbart sind, bezeichnet man in der Fernerkundung häufig als Bildmosaik. QGIS bietet unterschiedliche Möglichkeiten Bildmosaike zu erstellen. Ein Option wäre es mehrere Kacheln zusammenzuführen und als neue GeoTiff-Datei abzuspeichern. Diese hätte den Vorteil, dass wir für das jeweilige Gebiet nur noch eine Datei hätten. Es gibt bei diesem Vorgehen allerdings mehrere Nachteile. Je nach Gebietsgröße werden die Dateien sehr groß. Das kann dann zu sehr langen Ladezeiten führen, wenn man in das Bild zoomt. Außerdem würde auch wieder eine Kopie der Daten angelegt, was zu einem größeren Speicherplatzbedarf führt. Alternativ kann auch für dieses Problem ein virtuelles Raster verwendet werden. Anders als im oberen Abschnitt nutzen wir diese Funktion nun um benachbarten Bilder zusammenzuführen. Voraussetzung dafür ist, dass die Bilder das selbe Koordinatenreferenzsystem nutzen, die räumliche Auflösung und die Anzahl der Bänder identisch ist.</p>
-<p>Zum Erstellen eines VRT-Mosaiks nutzen wie wieder:</p>
-<div style="border: 2px solid #afca0b; background-color: #fafafa; padding: 8px;">
-<p><code>Verarbeitung</code> →<code>Werkzeugkiste</code> → <code>Virtuelles Raster generieren</code> → <code>Raster</code> → <code>File</code></p>
-</div>
-<p>Diesmal wählen wir als Input die vier Mehrkanalbilder (VRTs) die wir bereits erzeugt haben. Als Ausgabe definieren wir das VRT le02_Ortholuftbildmosaik.vrt, welches wir im Rasterordner ablegen.</p>
-<p><img src="images/LE02_vrt_mosaik_anlegen.png" class="img-fluid" alt="Ortholuftbildmosaik als VRT anlegen"></p>
-<div class="callout callout-style-default callout-caution callout-titled">
+</section>
+<section id="aufgabe-02-erstellen-eines-validierungslayers" class="level2" data-number="8.4">
+<h2 data-number="8.4" class="anchored" data-anchor-id="aufgabe-02-erstellen-eines-validierungslayers"><span class="header-section-number">8.4</span> Aufgabe 02: Erstellen eines Validierungslayers</h2>
+<p>Für die Erstellung eines unabhängigen Validierungsdatensatzes ist es wichtig die Punkte, an denen eine Überprüfung stattfinden soll, nach einem statistischen Verfahren auszuwählen. In der Übung wollen wir ein systematisches Raster mit einer Rasterweite von 2000 m x 2000 m anlegen. QGIS bietet eine entsprechende Funktion unter <code>Vektor-&gt;Forschungswerkzeuge-&gt; Gitter erzeugen</code>. Hier wählen wir:</p>
+<ul>
+<li>Gittertyp = Punkt</li>
+<li>Gitterausdehnung = Aus Layer berechnen Gemeindegrenzen Stadt Göttingen</li>
+<li>Horizontaler Abstand = 2000 m</li>
+<li>Vertikaler Abstand = 2000 m</li>
+<li>Gitter-KBS = 25832</li>
+</ul>
+<p>Da das Raster nur auf die Ausdehnung des Polygons zugeschnitten wird, umfasst es noch Punkte außerhalb der Gemeindegrenzen. Um diese zu entfernen nutzen wir die Funktion</p>
+<p><code>Menü-&gt; Vektor-&gt; Geoverarbeitungswerkzeuge-&gt; Zuschneiden</code> mit folgenden Einstellungen:</p>
+<ul>
+<li>Eingabelayer = Gitter</li>
+<li>Layer überlagern = Gemeinde Grenzen der Stadt Göttingen</li>
+<li>Zugeschnitten = Wir speichern die Punkte als neues Layer (‚Validierungspunkte‘) im geopackage „uebung08.gpkg“</li>
+</ul>
+<p>Sie sollten in diesem Layer jetzt 61 Punkte innerhalb des Nationalparkgebietes haben. Die Attributtabelle enthält aber noch einige automatisch erzeugte Spalten, die wir nicht mehr benötigen. Zum Entfernen der Spalten (left, right, top, bottom, row_index, col_index) öffnen wir die Attributtabelle, wechseln in den Editiermodus und wählen im Werkzeug „Spalte löschen“ die entsprechenden Spalten aus. Anschließende speichern wir das Layer im Geopackage “uebung08.gpkg”.</p>
+</section>
+<section id="aufgabe-03-visuelle-interpretation-der-validierungspunkte" class="level2" data-number="8.5">
+<h2 data-number="8.5" class="anchored" data-anchor-id="aufgabe-03-visuelle-interpretation-der-validierungspunkte"><span class="header-section-number">8.5</span> Aufgabe 03: Visuelle Interpretation der Validierungspunkte</h2>
+<p>Die Überprüfung der Genauigkeit erfolgt auf Grundlage einer visuellen Interpretation. Bevor wir mit der Interpretation beginnen können, müssen wir noch eine Spalte mit den beobachteten Klassen anlegen. Dazu öffnen wir die Attributtabelle des Punktlayers, wechseln in den Editiermodus und klicken auf das Symbol „Neue Spalte“. Und wählen folgende Einstellungen:</p>
+<ul>
+<li>Name: Code</li>
+<li>Type: Ganzzahl (integer)</li>
+</ul>
+<p>Für die visuelle Interpretation aktivieren wir den Editiermodus unseres Punktlayers und interpretieren jeden Punkt der systematischen Stichprobe auf Grundlage der Luftbilder. Dabei weisen wir jedem Punkt die Landbedeckungsklasse(Code) des Klassifikationsschemas zu.</p>
+<div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Caution
+Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Da wir die einzelnen Bilder nebeneinander anordnen wollen wählen wir hier nicht die Option <em>“Place each input file into a speate band”.</em></p>
+<p>Für eine effiziente Interpretation ist es sinnvoll sich die Attributtabelle als Formular anzeigen zu lassen. Dazu öffnen wir die Attributtabelle und schalten die Ansicht von Tabellenansicht auf Formularansicht, unten links, um. Anschließend können wir dieses Fenster an unsere QGIS Hauptfenster andocken. Durch Aktivierung der Funktion „automatisch zum aktuellen Objekt verschieben“, die sich unter der Liste mit den einzelnen Punkten befindet, springt der Kartenausschnitt automatisch zum gewählten Punkt. Wir können nun einzeln die Punkte der Liste von unten nach oben durchgehen und jeweils die beobachtete Klasse eintragen. Am Ende der visuellen Interpretation sollte für jeden Punkt eine der vier Klassen in der Attributtabelle eingetragen sein.</p>
 </div>
 </div>
-<p>Als Ergebnis haben wir nun eine VRT-Datei mit der wir gleichzeitig alle Kanäle und alle Bilder darstellen können. Dies ermöglicht es nun sehr einfach auch die Darstellung aller Bilder gleichzeitig und einheitlich anzupassen. Legen sie dazu wie oben beschrieben für das Orthomosaik einen neuen Stil <em>‘CIR’</em> an und stellen sie das Mosaik hier als CIR-Abbildung dar.</p>
+</section>
+<section id="aufgabe-04-erstellen-einer-fehlermatrix" class="level2" data-number="8.6">
+<h2 data-number="8.6" class="anchored" data-anchor-id="aufgabe-04-erstellen-einer-fehlermatrix"><span class="header-section-number">8.6</span> Aufgabe 04: Erstellen einer Fehlermatrix</h2>
+<p>Zum Erstellen der Fehlermatrix verwenden wir die OTB-Funktion <code>ComputeConfusionMatrix</code>, die wir in den Verarbeitungswerkzeugen über die Suche finden können. In dem Funktionsfenster wählen wir die folgenden Einstellungen:</p>
+<ul>
+<li><p>Input Image: Waldtypenkarte Harz</p></li>
+<li><p>Output format: confusionmatrix</p></li>
+<li><p>Ground truth: vector •</p></li>
+<li><p>Input reference vector data: Validierungspunkte_Nationalpark_harz</p></li>
+<li><p>Field name: Code</p></li>
+<li><p>Matrix output: fehlermatrix.csv</p></li>
+</ul>
+<p>Anschließend starten wir die Berechnung. Als Ergebnis wird eine Komma-getrennte csv-Datei ausgeschrieben, die wir in Excel öffnen können. Berechnen sie nun folgende Statistiken nach der Anleitung in den Vorlesungsfolien:</p>
+<ul>
+<li><p>Gesamtgenauigkeit</p></li>
+<li><p>Nutzergenauigkeiten für alle vier Klassen</p></li>
+<li><p>Produzentengenauigkeiten für alle vier Klassen</p></li>
+</ul>
+<div style="border: 3px solid #ff8a0b; background-color: #ffffff; padding: 8px;">
+<ol type="1">
+<li>Wie beurteilen sie die Genauigkeit der Klassifikation?</li>
+<li>Welche Nutzergenauigkeit hat die Klasse „stehendes Totholz“?</li>
+</ol>
+</div>
+</section>
+<section id="augabe-05-vergleich-modell--und-kartengenauigkeit" class="level2" data-number="8.7">
+<h2 data-number="8.7" class="anchored" data-anchor-id="augabe-05-vergleich-modell--und-kartengenauigkeit"><span class="header-section-number">8.7</span> Augabe 05: Vergleich Modell- und Kartengenauigkeit</h2>
+<p>Bei der Erstellung des <em>RandomForest</em> Klassifikationsmodells (siehe <a href="uebung07_bildklassifikation.html#sec-rf_training" class="quarto-xref"><span>Section 7.5</span></a>) haben wir auch eine Fehlermatrix gespeichert („rf_harz_2025.cm“). Diese wurde auf Basis der Trainingsdaten berechnet, da wir zum Zeitpunkt des Modelltrainings die Validierungsdaten noch nicht erstellt hatten. Insofern beschreibt diese Fehlermatrix die Modellgenauigkeit.</p>
+<p>Erstellen sie äquivalent zu Aufgabe 04 eine Fehlermatrix aus dieser Datei und vergleichen sie beide Fehlermatrizen miteinander um untenstehende Fragen zu beantworten.</p>
+<div style="border: 3px solid #ff8a0b; background-color: #ffffff; padding: 8px;">
+<ol type="1">
+<li>Welche Fehlermatrix liefert eine höhere Gesamtgenauigkeit?</li>
+<li>Wie begründen sie die Unterschiede zwischen den beiden Fehlermatrizen?</li>
+<li>Welche Fehlermatix würden Sie für die Bewertung der praktischen Nutzbarkeit der Karte verwenden?</li>
+</ol>
+</div>
 
 
 </section>
@@ -739,13 +755,13 @@ Caution
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./uebung01.html" class="pagination-link" aria-label="Lerneinheit 01: Erste Schritte in QGIS">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Lerneinheit 01: Erste Schritte in QGIS</span></span>
+      <a href="./uebung07_bildklassifikation.html" class="pagination-link" aria-label="Lerneinheit 07: Waldtypenklassifikation im Nationalpark Harz">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Lerneinheit 07: Waldtypenklassifikation im Nationalpark Harz</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./uebung03.html" class="pagination-link" aria-label="Lerneinheit 03: Beschaffung von Geodaten für den Nordcampus Göttingen">
-        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Lerneinheit 03: Beschaffung von Geodaten für den Nordcampus Göttingen</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./references.html" class="pagination-link" aria-label="Referenzen">
+        <span class="nav-page-text">Referenzen</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
