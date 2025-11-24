@@ -123,7 +123,12 @@ klicken auf das Symbol „Neue Spalte“. Und wählen folgende Einstellungen:
 
 Für die visuelle Interpretation aktivieren wir den Editiermodus unseres Punktlayers und
 interpretieren jeden Punkt der systematischen Stichprobe auf Grundlage der Luftbilder. Dabei weisen
-wir jedem Punkt die Landbedeckungsklasse(Code) des Klassifikationsschemas zu.
+wir jedem Punkt die Landbedeckungsklasse(Code) des Klassifikationsschemas zu. Für die visuelle
+Kontrolle bietet es sich außerdem an einen Darstellungsstil mit den gleichen Klassen und Farben wie
+bei der Bildklassifikations zu wählen. Eine entsprechend vorbereiteten Stil für das Punktraster
+können sie unter folgendem Link herunterladen:
+
+<https://cloud.hawk.de/index.php/s/tBqHkG9NxbaoiW5>
 
 ::: callout-note
 Für eine effiziente Interpretation ist es sinnvoll sich die Attributtabelle als Formular anzeigen zu
@@ -146,7 +151,7 @@ folgenden Einstellungen:
 
 -   Output format: confusionmatrix
 
--   Ground truth: vector •
+-   Ground truth: vector
 
 -   Input reference vector data: Validierungspunkte_Nationalpark_harz
 
