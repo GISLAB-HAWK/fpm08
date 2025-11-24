@@ -81,22 +81,22 @@ Polygon mit den Außengrenzen des Parks das sie hier herunterladen können:
 
 Für die Erstellung eines unabhängigen Validierungsdatensatzes ist es wichtig die Punkte, an denen
 eine Überprüfung stattfinden soll, nach einem statistischen Verfahren auszuwählen. In der Übung
-wollen wir ein systematisches Raster mit einer Rasterweite von 2000 m x 2000 m anlegen. QGIS bietet
+wollen wir ein systematisches Punktraster mit einer Rasterweite von 2000 m x 2000 m anlegen. QGIS bietet
 eine entsprechende Funktion unter `Vektor->Forschungswerkzeuge-> Gitter erzeugen`. Hier wählen wir:
 
 -   Gittertyp = Punkt
--   Gitterausdehnung = Aus Layer berechnen Gemeindegrenzen Stadt Göttingen
+-   Gitterausdehnung = Aus Layer berechnen Nationalpark Harz
 -   Horizontaler Abstand = 2000 m
 -   Vertikaler Abstand = 2000 m
 -   Gitter-KBS = 25832
 
-Da das Raster nur auf die Ausdehnung des Polygons zugeschnitten wird, umfasst es noch Punkte
-außerhalb der Gemeindegrenzen. Um diese zu entfernen nutzen wir die Funktion
+Da das Punktraster nur auf die Ausdehnung des Polygons zugeschnitten wird, umfasst es noch Punkte
+außerhalb der Grenzen des Nationalparks. Um diese zu entfernen nutzen wir die Funktion
 
 `Menü-> Vektor-> Geoverarbeitungswerkzeuge-> Zuschneiden` mit folgenden Einstellungen:
 
--   Eingabelayer = Gitter
--   Layer überlagern = Gemeinde Grenzen der Stadt Göttingen
+-   Eingabelayer = Punktraster
+-   Layer überlagern = Grenzen Nationalpark Harz
 -   Zugeschnitten = Wir speichern die Punkte als neues Layer (‚Validierungspunkte‘) im geopackage
     „uebung08.gpkg“
 
