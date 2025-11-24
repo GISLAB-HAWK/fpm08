@@ -35,8 +35,10 @@ format:
     theme:
       - cosmo
       - brand
+    lang: de
 #  pdf:
 #    documentclass: scrreprt
+#    lang: de  # Für PDF kannst du hier auch die `lang`-Option setzen, falls notwendig
 
 editor: source
 
