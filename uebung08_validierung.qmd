@@ -28,8 +28,8 @@ Modell- und Kartengenauigkeit miteinander verglichen werden.
 Die Studierenden sollen:
 
 -   Validierungsdaten für die Validierung von thematischen Karten erstellen
--   Mithilfe von Fehlermatrizen die Genauigkeit eine thematischen Karte beruteilen
--   den Untscheid zwischen der Modell- und der Kartengenauigkeit erläutern können.
+-   Mithilfe von Fehlermatrizen die Genauigkeit eine thematischen Karte beurteilen
+-   den Unterscheid zwischen der Modell- und der Kartengenauigkeit erläutern können.
 
 **Aufgaben**
 
@@ -39,11 +39,15 @@ Die Studierenden sollen:
 4.  Berechnung von Fehlerstatistiken aus der Fehlermatrix
 5.  Vergleich der Modell- und Kartengenauigkeit
 
-## Aufgabe 0: Anlegen eine neuen QGIS-Projektes
+## Aufgabe 0: Anlegen eine neuen QGIS-Projektes und Kontrolle des Nutzerprofils
 
 Folgen sie der Anleitung aus LE01 @sec-projekt_management um eine neue Ordnerstruktur und ein neues
 QGIS-Projekt für LE07 anzulegen. In der Übung bietet es sich an den Ordner *"daten"* weiter in die
-Unterordner *"vektor"* und "raster" zu unterteilen.
+Unterordner *"vektor"* und *"raster"* zu unterteilen.
+
+Prüfen sie außerdem ob Ihr Nutzerprofil korrekt geladen wurde und ob die OTB-Funktionen im
+Werkzeugkasten vorhanden sind. Sollte dies nicht der Fall sein stellen sie ihr gesichertes
+Nutzerprofil wieder her (siehe auch LE01 @sec-nutzerprofil).
 
 ## Aufgabe 01: Download und Import der Geodaten
 
@@ -81,8 +85,9 @@ Polygon mit den Außengrenzen des Parks das sie hier herunterladen können:
 
 Für die Erstellung eines unabhängigen Validierungsdatensatzes ist es wichtig die Punkte, an denen
 eine Überprüfung stattfinden soll, nach einem statistischen Verfahren auszuwählen. In der Übung
-wollen wir ein systematisches Punktraster mit einer Rasterweite von 2000 m x 2000 m anlegen. QGIS bietet
-eine entsprechende Funktion unter `Vektor->Forschungswerkzeuge-> Gitter erzeugen`. Hier wählen wir:
+wollen wir ein systematisches Punktraster mit einer Rasterweite von 2000 m x 2000 m anlegen. QGIS
+bietet eine entsprechende Funktion unter `Vektor->Forschungswerkzeuge-> Gitter erzeugen`. Hier
+wählen wir:
 
 -   Gittertyp = Punkt
 -   Gitterausdehnung = Aus Layer berechnen Nationalpark Harz
@@ -97,8 +102,8 @@ außerhalb der Grenzen des Nationalparks. Um diese zu entfernen nutzen wir die F
 
 -   Eingabelayer = Punktraster
 -   Layer überlagern = Grenzen Nationalpark Harz
--   Zugeschnitten = Wir speichern die Punkte als neues Layer (‚Validierungspunkte‘) im geopackage
-    „uebung08.gpkg“
+-   Zugeschnitten = Wir speichern das Punktraster als neues Layer (‚Validierungspunkte‘) im
+    geopackage „uebung08.gpkg“
 
 Sie sollten in diesem Layer jetzt 61 Punkte innerhalb des Nationalparkgebietes haben. Die
 Attributtabelle enthält aber noch einige automatisch erzeugte Spalten, die wir nicht mehr benötigen.
@@ -124,7 +129,7 @@ wir jedem Punkt die Landbedeckungsklasse(Code) des Klassifikationsschemas zu.
 Für eine effiziente Interpretation ist es sinnvoll sich die Attributtabelle als Formular anzeigen zu
 lassen. Dazu öffnen wir die Attributtabelle und schalten die Ansicht von Tabellenansicht auf
 Formularansicht, unten links, um. Anschließend können wir dieses Fenster an unsere QGIS Hauptfenster
-andocken. Durch Aktivierung der Funktion „automatisch zum aktuellen Objekt verschieben“, die sich
+andocken. Durch Aktivierung der Funktion „Automatisch zum aktuellen Objekt verschieben“, die sich
 unter der Liste mit den einzelnen Punkten befindet, springt der Kartenausschnitt automatisch zum
 gewählten Punkt. Wir können nun einzeln die Punkte der Liste von unten nach oben durchgehen und
 jeweils die beobachtete Klasse eintragen. Am Ende der visuellen Interpretation sollte für jeden
