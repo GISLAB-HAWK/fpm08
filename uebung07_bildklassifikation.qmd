@@ -207,7 +207,7 @@ In Ordner "daten" befinden sich nun zwei neue Dateien: i) die Modelldatei mit de
 Klassifikationsmodell und eine Fehlermatrix. Letzter werden wir in der nächsten Lehreinheit
 besprechen.
 
-## Aufgabe 04: Klassifikation eines S2-Satellitenbilds zur Erstellung einer Waldtypenkarte
+## Aufgabe 04: Klassifikation eines S2-Satellitenbilds zur Erstellung einer Waldtypenkarte {#sec-rf_inference}
 
 Nachdem wir das *RandomForest* Klassifikationsmodell trainiert haben, können wir es auf das gesamte
 Satellitenbild anwenden, um jedem Pixel eine unsere vier thematischen Klassen zuzuweisen. Dazu

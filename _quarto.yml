@@ -26,6 +26,7 @@ book:
     - uebung06.qmd
     - uebung07_bildklassifikation.qmd
     - uebung08_validierung.qmd
+    - uebung09_aenderungsanalyse.qmd
     - references.qmd
 
 bibliography: references.bib
