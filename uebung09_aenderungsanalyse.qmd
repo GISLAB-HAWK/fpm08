@@ -11,7 +11,7 @@ Lizenz: Creative Commons BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc
 -->
 ```
 
-# Lerneinheit 09: Satellitenbildbasierte Analyse der Waldflächenänderung im Nationalpark Harz (2017-2022)
+# Lerneinheit 09: Satellitenbildbasierte Analyse der Waldflächenänderung im Nationalpark Harz (2017-2025)
 
 ![](images/LE09_cover_image.png)
 
@@ -53,40 +53,39 @@ Nutzerprofil wieder her (siehe auch LE01 @sec-nutzerprofil).
 
 ## Aufgabe 01: Download und Import der Geodaten
 
-#### **Satellitenbilder & Waldtypenkarten**
+### **Satellitenbilder & Waldtypenkarten**
 
-Laden Sie sich die Waldtypenkarte für das Jahr 2017 (*"NP_Harz_2025_06_12_Waldtypen.tif"*) aus der
-Übung @sec-le07 in ihr Projektordner und QGIS. Falls Sie keinen Zugang zu dieser Karte mehr haben
+Laden sie sich die Waldtypenkarte für das Jahr 2017 (*"NP_Harz_2025_06_12_Waldtypen.tif"*) aus der
+Übung @sec-le07 in ihr Projektordner und QGIS. Falls sie keinen Zugang zu dieser Karte mehr haben
 können sie sich unter folgendem Link eine Kopie herunterladen:
 
 <https://cloud.hawk.de/index.php/s/e8oqsCezoQYft6C>
 
 Der Waldzustand im Jahr 2025 soll mit der Situation vor den großen Kalamitäten im Jahr 2017
 verglichen werden. Für die Erstellung einer Waldtypenkarte in 2025 soll das gleiche RandomForest
-Klassifikationsmodell verwendet werden, Daher ist es wichtig, dass die Satellitenbilder der beiden
+Klassifikationsmodell verwendet werden. Daher ist es wichtig, dass die Satellitenbilder der beiden
 Jahre miteinander vergleichbar sind. Wir nutzen dazu ein Satellitenbild des selben Sensors (S2-MSI),
 welches zu einem ähnlichen phänpologischen Zeitpunkt (Juni) aufgenommen wurde. Sie können das
 vorbereitete Sentinel-2 Satellitenbild hier herunterladen:
 
-<https://cloud.hawk.de/index.php/s/e8oqsCezoQYft6C>
+<https://cloud.hawk.de/index.php/s/DKn5Cg6L8gJNkRd>
 
-#### Modelle
+### Modelle
 
 Für die Klassifikation nutzen wir das RandomForest-Klassifikationsmodell welches in der Übung
 @sec-le07 auf Basis der Trainingsdaten angelegt haben nocheinmal.
 
-https://cloud.hawk.de/index.php/s/XzQHBBzKd83MYwZ
+<https://cloud.hawk.de/index.php/s/XzQHBBzKd83MYwZ>
 
 ## Aufgabe 02: Erstellen der Waldtypenkarte 2017
 
 Laden sie das 2017'er Satellitenbild in das QGIS Projekt. Nutzen sie anschließend die OTB-Funktion
 *"ImageClassifier"* um mithilfe des RF-Modells eine neue Waldtypenkarte für das Jahr 2017 zu
-erstellen. Nutzen Sie dazu auch die Hinweise aus @sec-rf_inference.
+erstellen. Nutzen sie dazu auch die Hinweise aus @sec-rf_inference.
 
 ::: {style="border: 3px solid #ff8a0b; background-color: #ffffff; padding: 8px;"}
 1.  *Wie beurteilen sie die Genauigkeit der Klassifikation für das Jahr 2017?*
-2.  *Welche Klassen haben an Fläche gewonnen und welche verloren?*
-3.  *Welche Probleme sehen sie bei der Übertragen des Klassifikationsmodells aus dem Jahr 2025 auf
+2.  *Welche Probleme sehen sie bei der Übertragen des Klassifikationsmodells aus dem Jahr 2025 auf
     das Jahr 2017?*
 :::
 
@@ -95,9 +94,8 @@ erstellen. Nutzen Sie dazu auch die Hinweise aus @sec-rf_inference.
 Vergleichbar zur Fehlermatrix, werden in der Änderungsmatrix die Klassifikationsergebnisse der
 beiden Jahre in einer Matrix gegenüber gestellt. Da beide Klassifikationen auf den
 S2-Satellitenbildern beruhen, kann der Vergleich direkt auf der Ebene der einzelnen Pixel
-durchgeführt werden. Es muss also kein systematisches Punktraster erstellt werden. Auch der
-Vergleich auf der Ebene der Pixel kann mit der OTB-Funktion *"ComputeConfusionMatrix"* durchgeführt
-werden.
+durchgeführt werden. Es muss also kein systematisches Punktraster erstellt werden. Auch für den
+Vergleich auf Pixelebene kann die OTB-Funktion *"ComputeConfusionMatrix"* genutzt werden.
 
 Hier bei werden folgende Einstellungen gewählt:
 
