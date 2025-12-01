@@ -70,6 +70,15 @@ vorbereitete Sentinel-2 Satellitenbild hier herunterladen:
 
 <https://cloud.hawk.de/index.php/s/QWPY2984sb3jmT9>
 
+Für die farbige Darstellung der thematischen Karte können Sie die Stildatei zusätzlich herunterladen:
+
+<https://cloud.hawk.de/index.php/s/SEtXDSod2dk6syS>
+
+### **Vektrodaten**
+
+Laden Sie sich außerdem die Außengrenzen des Nationalparks herunter:
+
+<https://cloud.hawk.de/index.php/s/Hs52DFGtPnfKzyN>
 
 ### Modelle
 
