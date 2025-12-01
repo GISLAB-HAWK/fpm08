@@ -70,11 +70,12 @@ vorbereitete Sentinel-2 Satellitenbild hier herunterladen:
 
 <https://cloud.hawk.de/index.php/s/QWPY2984sb3jmT9>
 
-Für die farbige Darstellung der thematischen Karte können Sie die Stildatei zusätzlich herunterladen:
+Für die farbige Darstellung der thematischen Karte können Sie die Stildatei zusätzlich
+herunterladen:
 
-<https://cloud.hawk.de/index.php/s/SEtXDSod2dk6syS>
+<https://cloud.hawk.de/index.php/s/HKMseitrK9bHpZY>
 
-### **Vektrodaten**
+### **Vektordaten**
 
 Laden Sie sich außerdem die Außengrenzen des Nationalparks herunter:
 
@@ -91,7 +92,19 @@ Für die Klassifikation nutzen wir das RandomForest-Klassifikationsmodell welche
 
 Laden sie das 2017'er Satellitenbild in das QGIS Projekt. Nutzen sie anschließend die OTB-Funktion
 *"ImageClassifier"* um mithilfe des RF-Modells eine neue Waldtypenkarte für das Jahr 2017 zu
-erstellen. Nutzen sie dazu auch die Hinweise aus @sec-rf_inference.
+erstellen. Speichern sie die neue Waldtypenkarte als Raster unter dem Dateinamen
+*NP_Harz_2017_06_01_Waldtypen.tif* ab. Nutzen sie dazu auch die Hinweise aus @sec-rf_inference.
+
+Stellen sie vor dem nächsten Schritt sicher, dass die Waldtypenkarte des Jahres 2017 auf den NP-Harz
+zugeschnitten sind.
+
+::: callout-tip
+## Tipp
+
+In der OTB-Funktion *imageClassifier* können sie eine Maske angeben. Wenn sie hier das
+Satellitenbild *NP_Harz_2017_06_12.tif* wählen, wir die Klassifikation direkt auf den Bereich des
+NP-Harzes beschränkt und die äußeren Flächen als Leerwerte markiert.
+:::
 
 ::: {style="border: 3px solid #ff8a0b; background-color: #ffffff; padding: 8px;"}
 1.  *Wie beurteilen sie die Genauigkeit der Klassifikation für das Jahr 2017?*
@@ -126,9 +139,12 @@ die Pixel die zu beiden Zeipunkten der gleichen Klasse zugeordnet wurden.
 ## Aufgabe 04: Berechnung der Flächenänderungen
 
 Nutzen sie ein Tabellenkalkulationsprogramm um aus der Textdatei eine Änderungsmatrix für die zwei
-Zeipunkte zu erstellen. Dabei sollten zwei Versionen der Änderungsmatrix erarbeitet werden i) mit
-den Pixelanzahlen, ii) mit den relativen Anteilen. Nutzen sie die beiden Matrizen zum beantworten
-folgender Fragen:
+Zeitpunkte zu erstellen. Dabei sollten zwei Versionen der Änderungsmatrix erarbeitet werden:
+
+i)  mit der ANzahl der Pixel
+ii) mit den ha-Werten.
+
+Nutzen sie die beiden Matrizen zum beantworten folgender Fragen:
 
 ::: {style="border: 3px solid #ff8a0b; background-color: #ffffff; padding: 8px;"}
 1.  *Wie groß ist der Anteil an Verlust von Nadelholzflächen im NP-Harz zwischen 2017-2025?*
