@@ -68,7 +68,8 @@ Jahre miteinander vergleichbar sind. Wir nutzen dazu ein Satellitenbild des selb
 welches zu einem ähnlichen phänpologischen Zeitpunkt (Juni) aufgenommen wurde. Sie können das
 vorbereitete Sentinel-2 Satellitenbild hier herunterladen:
 
-<https://cloud.hawk.de/index.php/s/DKn5Cg6L8gJNkRd>
+<https://cloud.hawk.de/index.php/s/QWPY2984sb3jmT9>
+
 
 ### Modelle
 
