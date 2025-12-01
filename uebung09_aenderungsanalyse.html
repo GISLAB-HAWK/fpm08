@@ -193,7 +193,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#aufgabe-01-download-und-import-der-geodaten" id="toc-aufgabe-01-download-und-import-der-geodaten" class="nav-link" data-scroll-target="#aufgabe-01-download-und-import-der-geodaten"><span class="header-section-number">9.3</span> Aufgabe 01: Download und Import der Geodaten</a>
   <ul class="collapse">
   <li><a href="#satellitenbilder-waldtypenkarten" id="toc-satellitenbilder-waldtypenkarten" class="nav-link" data-scroll-target="#satellitenbilder-waldtypenkarten"><span class="header-section-number">9.3.1</span> <strong>Satellitenbilder &amp; Waldtypenkarten</strong></a></li>
-  <li><a href="#vektrodaten" id="toc-vektrodaten" class="nav-link" data-scroll-target="#vektrodaten"><span class="header-section-number">9.3.2</span> <strong>Vektrodaten</strong></a></li>
+  <li><a href="#vektordaten" id="toc-vektordaten" class="nav-link" data-scroll-target="#vektordaten"><span class="header-section-number">9.3.2</span> <strong>Vektordaten</strong></a></li>
   <li><a href="#modelle" id="toc-modelle" class="nav-link" data-scroll-target="#modelle"><span class="header-section-number">9.3.3</span> Modelle</a></li>
   </ul></li>
   <li><a href="#aufgabe-02-erstellen-der-waldtypenkarte-2017" id="toc-aufgabe-02-erstellen-der-waldtypenkarte-2017" class="nav-link" data-scroll-target="#aufgabe-02-erstellen-der-waldtypenkarte-2017"><span class="header-section-number">9.4</span> Aufgabe 02: Erstellen der Waldtypenkarte 2017</a></li>
@@ -272,10 +272,10 @@ Lizenz: Creative Commons BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc
 <p>Der Waldzustand im Jahr 2025 soll mit der Situation vor den großen Kalamitäten im Jahr 2017 verglichen werden. Für die Erstellung einer Waldtypenkarte in 2025 soll das gleiche RandomForest Klassifikationsmodell verwendet werden. Daher ist es wichtig, dass die Satellitenbilder der beiden Jahre miteinander vergleichbar sind. Wir nutzen dazu ein Satellitenbild des selben Sensors (S2-MSI), welches zu einem ähnlichen phänpologischen Zeitpunkt (Juni) aufgenommen wurde. Sie können das vorbereitete Sentinel-2 Satellitenbild hier herunterladen:</p>
 <p><a href="https://cloud.hawk.de/index.php/s/QWPY2984sb3jmT9" class="uri">https://cloud.hawk.de/index.php/s/QWPY2984sb3jmT9</a></p>
 <p>Für die farbige Darstellung der thematischen Karte können Sie die Stildatei zusätzlich herunterladen:</p>
-<p><a href="https://cloud.hawk.de/index.php/s/SEtXDSod2dk6syS" class="uri">https://cloud.hawk.de/index.php/s/SEtXDSod2dk6syS</a></p>
+<p><a href="https://cloud.hawk.de/index.php/s/HKMseitrK9bHpZY" class="uri">https://cloud.hawk.de/index.php/s/HKMseitrK9bHpZY</a></p>
 </section>
-<section id="vektrodaten" class="level3" data-number="9.3.2">
-<h3 data-number="9.3.2" class="anchored" data-anchor-id="vektrodaten"><span class="header-section-number">9.3.2</span> <strong>Vektrodaten</strong></h3>
+<section id="vektordaten" class="level3" data-number="9.3.2">
+<h3 data-number="9.3.2" class="anchored" data-anchor-id="vektordaten"><span class="header-section-number">9.3.2</span> <strong>Vektordaten</strong></h3>
 <p>Laden Sie sich außerdem die Außengrenzen des Nationalparks herunter:</p>
 <p><a href="https://cloud.hawk.de/index.php/s/Hs52DFGtPnfKzyN" class="uri">https://cloud.hawk.de/index.php/s/Hs52DFGtPnfKzyN</a></p>
 </section>
@@ -287,7 +287,21 @@ Lizenz: Creative Commons BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc
 </section>
 <section id="aufgabe-02-erstellen-der-waldtypenkarte-2017" class="level2" data-number="9.4">
 <h2 data-number="9.4" class="anchored" data-anchor-id="aufgabe-02-erstellen-der-waldtypenkarte-2017"><span class="header-section-number">9.4</span> Aufgabe 02: Erstellen der Waldtypenkarte 2017</h2>
-<p>Laden sie das 2017’er Satellitenbild in das QGIS Projekt. Nutzen sie anschließend die OTB-Funktion <em>“ImageClassifier”</em> um mithilfe des RF-Modells eine neue Waldtypenkarte für das Jahr 2017 zu erstellen. Nutzen sie dazu auch die Hinweise aus <a href="uebung07_bildklassifikation.html#sec-rf_inference" class="quarto-xref"><span>Kapitel 7.6</span></a>.</p>
+<p>Laden sie das 2017’er Satellitenbild in das QGIS Projekt. Nutzen sie anschließend die OTB-Funktion <em>“ImageClassifier”</em> um mithilfe des RF-Modells eine neue Waldtypenkarte für das Jahr 2017 zu erstellen. Speichern sie die neue Waldtypenkarte als Raster unter dem Dateinamen <em>NP_Harz_2017_06_01_Waldtypen.tif</em> ab. Nutzen sie dazu auch die Hinweise aus <a href="uebung07_bildklassifikation.html#sec-rf_inference" class="quarto-xref"><span>Kapitel 7.6</span></a>.</p>
+<p>Stellen sie vor dem nächsten Schritt sicher, dass die Waldtypenkarte des Jahres 2017 auf den NP-Harz zugeschnitten sind.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tipp</span>Tipp
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>In der OTB-Funktion <em>imageClassifier</em> können sie eine Maske angeben. Wenn sie hier das Satellitenbild <em>NP_Harz_2017_06_12.tif</em> wählen, wir die Klassifikation direkt auf den Bereich des NP-Harzes beschränkt und die äußeren Flächen als Leerwerte markiert.</p>
+</div>
+</div>
 <div style="border: 3px solid #ff8a0b; background-color: #ffffff; padding: 8px;">
 <ol type="1">
 <li><em>Wie beurteilen sie die Genauigkeit der Klassifikation für das Jahr 2017?</em></li>
@@ -310,7 +324,12 @@ Lizenz: Creative Commons BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc
 </section>
 <section id="aufgabe-04-berechnung-der-flächenänderungen" class="level2" data-number="9.6">
 <h2 data-number="9.6" class="anchored" data-anchor-id="aufgabe-04-berechnung-der-flächenänderungen"><span class="header-section-number">9.6</span> Aufgabe 04: Berechnung der Flächenänderungen</h2>
-<p>Nutzen sie ein Tabellenkalkulationsprogramm um aus der Textdatei eine Änderungsmatrix für die zwei Zeipunkte zu erstellen. Dabei sollten zwei Versionen der Änderungsmatrix erarbeitet werden i) mit den Pixelanzahlen, ii) mit den relativen Anteilen. Nutzen sie die beiden Matrizen zum beantworten folgender Fragen:</p>
+<p>Nutzen sie ein Tabellenkalkulationsprogramm um aus der Textdatei eine Änderungsmatrix für die zwei Zeitpunkte zu erstellen. Dabei sollten zwei Versionen der Änderungsmatrix erarbeitet werden:</p>
+<ol type="i">
+<li>mit der ANzahl der Pixel</li>
+<li>mit den ha-Werten.</li>
+</ol>
+<p>Nutzen sie die beiden Matrizen zum beantworten folgender Fragen:</p>
 <div style="border: 3px solid #ff8a0b; background-color: #ffffff; padding: 8px;">
 <ol type="1">
 <li><em>Wie groß ist der Anteil an Verlust von Nadelholzflächen im NP-Harz zwischen 2017-2025?</em></li>
