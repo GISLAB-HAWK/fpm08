@@ -11,7 +11,7 @@ Lizenz: Creative Commons BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc
 -->
 ```
 
-# Lerneinheit 09: Satellitenbildbasierte Analyse der Waldflächenänderung im Nationalpark Harz (2017-2025)
+# Lerneinheit 09: Analyse der Waldflächenänderung im Nationalpark Harz (2017-2025)
 
 ![](images/LE09_cover_image.png)
 
@@ -65,7 +65,7 @@ Der Waldzustand im Jahr 2025 soll mit der Situation vor den großen Kalamitäten
 verglichen werden. Für die Erstellung einer Waldtypenkarte in 2025 soll das gleiche RandomForest
 Klassifikationsmodell verwendet werden. Daher ist es wichtig, dass die Satellitenbilder der beiden
 Jahre miteinander vergleichbar sind. Wir nutzen dazu ein Satellitenbild des selben Sensors (S2-MSI),
-welches zu einem ähnlichen phänpologischen Zeitpunkt (Juni) aufgenommen wurde. Sie können das
+welches zu einem ähnlichen phänologischen Zeitpunkt (Juni) aufgenommen wurde. Sie können das
 vorbereitete Sentinel-2 Satellitenbild hier herunterladen:
 
 <https://cloud.hawk.de/index.php/s/QWPY2984sb3jmT9>
@@ -84,7 +84,7 @@ Laden Sie sich außerdem die Außengrenzen des Nationalparks herunter:
 ### Modelle
 
 Für die Klassifikation nutzen wir das RandomForest-Klassifikationsmodell welches in der Übung
-@sec-le07 auf Basis der Trainingsdaten angelegt haben nocheinmal.
+@sec-le07 auf Basis der Trainingsdaten angelegt haben noch einmal.
 
 <https://cloud.hawk.de/index.php/s/XzQHBBzKd83MYwZ>
 
@@ -134,14 +134,14 @@ Hier bei werden folgende Einstellungen gewählt:
 
 Als Ergebnis wird eine Textdatei erzeugt, in der die Pixelwerte aus dem Jahr 2025 in den Spalten und
 die Referenzwerte aus dem Jahr 2017 in den Zeilen aufgetragen sind. In der Diagonale befinden sich
-die Pixel die zu beiden Zeipunkten der gleichen Klasse zugeordnet wurden.
+die Pixel die zu beiden Zeitpunkten der gleichen Klasse zugeordnet wurden.
 
 ## Aufgabe 04: Berechnung der Flächenänderungen
 
 Nutzen sie ein Tabellenkalkulationsprogramm um aus der Textdatei eine Änderungsmatrix für die zwei
 Zeitpunkte zu erstellen. Dabei sollten zwei Versionen der Änderungsmatrix erarbeitet werden:
 
-i)  mit der ANzahl der Pixel
+i)  mit der Anzahl der Pixel
 ii) mit den ha-Werten.
 
 Nutzen sie die beiden Matrizen zum beantworten folgender Fragen:

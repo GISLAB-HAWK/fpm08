@@ -8,7 +8,7 @@
 
 <meta name="description" content="Übungsaufgaben für das Modul FPM08 forstliche Fernerkundung">
 
-<title>9&nbsp; Lerneinheit 09: Satellitenbildbasierte Analyse der Waldflächenänderung im Nationalpark Harz (2017-2025) – Forstliche Fernerkundung</title>
+<title>9&nbsp; Lerneinheit 09: Analyse der Waldflächenänderung im Nationalpark Harz (2017-2025) – Forstliche Fernerkundung</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -82,7 +82,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./uebung09_aenderungsanalyse.html"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Lerneinheit 09: Satellitenbildbasierte Analyse der Waldflächenänderung im Nationalpark Harz (2017-2025)</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./uebung09_aenderungsanalyse.html"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Lerneinheit 09: Analyse der Waldflächenänderung im Nationalpark Harz (2017-2025)</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Suchen" onclick="window.quartoOpenSearch();">
@@ -167,7 +167,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./uebung09_aenderungsanalyse.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Lerneinheit 09: Satellitenbildbasierte Analyse der Waldflächenänderung im Nationalpark Harz (2017-2025)</span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Lerneinheit 09: Analyse der Waldflächenänderung im Nationalpark Harz (2017-2025)</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -205,7 +205,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Lerneinheit 09: Satellitenbildbasierte Analyse der Waldflächenänderung im Nationalpark Harz (2017-2025)</span></h1>
+<h1 class="title"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Lerneinheit 09: Analyse der Waldflächenänderung im Nationalpark Harz (2017-2025)</span></h1>
 </div>
 
 
@@ -267,7 +267,7 @@ Lizenz: Creative Commons BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc
 <h3 data-number="9.3.1" class="anchored" data-anchor-id="satellitenbilder-waldtypenkarten"><span class="header-section-number">9.3.1</span> <strong>Satellitenbilder &amp; Waldtypenkarten</strong></h3>
 <p>Laden sie sich die Waldtypenkarte für das Jahr 2017 (<em>“NP_Harz_2025_06_12_Waldtypen.tif”</em>) aus der Übung <a href="uebung07_bildklassifikation.html" class="quarto-xref"><span>Kapitel 7</span></a> in ihr Projektordner und QGIS. Falls sie keinen Zugang zu dieser Karte mehr haben können sie sich unter folgendem Link eine Kopie herunterladen:</p>
 <p><a href="https://cloud.hawk.de/index.php/s/e8oqsCezoQYft6C" class="uri">https://cloud.hawk.de/index.php/s/e8oqsCezoQYft6C</a></p>
-<p>Der Waldzustand im Jahr 2025 soll mit der Situation vor den großen Kalamitäten im Jahr 2017 verglichen werden. Für die Erstellung einer Waldtypenkarte in 2025 soll das gleiche RandomForest Klassifikationsmodell verwendet werden. Daher ist es wichtig, dass die Satellitenbilder der beiden Jahre miteinander vergleichbar sind. Wir nutzen dazu ein Satellitenbild des selben Sensors (S2-MSI), welches zu einem ähnlichen phänpologischen Zeitpunkt (Juni) aufgenommen wurde. Sie können das vorbereitete Sentinel-2 Satellitenbild hier herunterladen:</p>
+<p>Der Waldzustand im Jahr 2025 soll mit der Situation vor den großen Kalamitäten im Jahr 2017 verglichen werden. Für die Erstellung einer Waldtypenkarte in 2025 soll das gleiche RandomForest Klassifikationsmodell verwendet werden. Daher ist es wichtig, dass die Satellitenbilder der beiden Jahre miteinander vergleichbar sind. Wir nutzen dazu ein Satellitenbild des selben Sensors (S2-MSI), welches zu einem ähnlichen phänologischen Zeitpunkt (Juni) aufgenommen wurde. Sie können das vorbereitete Sentinel-2 Satellitenbild hier herunterladen:</p>
 <p><a href="https://cloud.hawk.de/index.php/s/QWPY2984sb3jmT9" class="uri">https://cloud.hawk.de/index.php/s/QWPY2984sb3jmT9</a></p>
 <p>Für die farbige Darstellung der thematischen Karte können Sie die Stildatei zusätzlich herunterladen:</p>
 <p><a href="https://cloud.hawk.de/index.php/s/HKMseitrK9bHpZY" class="uri">https://cloud.hawk.de/index.php/s/HKMseitrK9bHpZY</a></p>
@@ -279,7 +279,7 @@ Lizenz: Creative Commons BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc
 </section>
 <section id="modelle" class="level3" data-number="9.3.3">
 <h3 data-number="9.3.3" class="anchored" data-anchor-id="modelle"><span class="header-section-number">9.3.3</span> Modelle</h3>
-<p>Für die Klassifikation nutzen wir das RandomForest-Klassifikationsmodell welches in der Übung <a href="uebung07_bildklassifikation.html" class="quarto-xref"><span>Kapitel 7</span></a> auf Basis der Trainingsdaten angelegt haben nocheinmal.</p>
+<p>Für die Klassifikation nutzen wir das RandomForest-Klassifikationsmodell welches in der Übung <a href="uebung07_bildklassifikation.html" class="quarto-xref"><span>Kapitel 7</span></a> auf Basis der Trainingsdaten angelegt haben noch einmal.</p>
 <p><a href="https://cloud.hawk.de/index.php/s/XzQHBBzKd83MYwZ" class="uri">https://cloud.hawk.de/index.php/s/XzQHBBzKd83MYwZ</a></p>
 </section>
 </section>
@@ -318,13 +318,13 @@ Tipp
 <li><p>Input Reference Image: <em>NP_Harz_2025_06_12_Waldtypen.tif</em></p></li>
 <li><p>Matrix output: <em>waldtypen_aenderungs_matrix.cm</em></p></li>
 </ul>
-<p>Als Ergebnis wird eine Textdatei erzeugt, in der die Pixelwerte aus dem Jahr 2025 in den Spalten und die Referenzwerte aus dem Jahr 2017 in den Zeilen aufgetragen sind. In der Diagonale befinden sich die Pixel die zu beiden Zeipunkten der gleichen Klasse zugeordnet wurden.</p>
+<p>Als Ergebnis wird eine Textdatei erzeugt, in der die Pixelwerte aus dem Jahr 2025 in den Spalten und die Referenzwerte aus dem Jahr 2017 in den Zeilen aufgetragen sind. In der Diagonale befinden sich die Pixel die zu beiden Zeitpunkten der gleichen Klasse zugeordnet wurden.</p>
 </section>
 <section id="aufgabe-04-berechnung-der-flächenänderungen" class="level2" data-number="9.6">
 <h2 data-number="9.6" class="anchored" data-anchor-id="aufgabe-04-berechnung-der-flächenänderungen"><span class="header-section-number">9.6</span> Aufgabe 04: Berechnung der Flächenänderungen</h2>
 <p>Nutzen sie ein Tabellenkalkulationsprogramm um aus der Textdatei eine Änderungsmatrix für die zwei Zeitpunkte zu erstellen. Dabei sollten zwei Versionen der Änderungsmatrix erarbeitet werden:</p>
 <ol type="i">
-<li>mit der ANzahl der Pixel</li>
+<li>mit der Anzahl der Pixel</li>
 <li>mit den ha-Werten.</li>
 </ol>
 <p>Nutzen sie die beiden Matrizen zum beantworten folgender Fragen:</p>
