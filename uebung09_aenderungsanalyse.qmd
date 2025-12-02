@@ -132,8 +132,8 @@ Hier bei werden folgende Einstellungen gewählt:
 
 -   Matrix output: *waldtypen_aenderungs_matrix.cm*
 
-Als Ergebnis wird eine Textdatei erzeugt, in der die Pixelwerte aus dem Jahr 2025 in den Spalten und
-die Referenzwerte aus dem Jahr 2017 in den Zeilen aufgetragen sind. In der Diagonale befinden sich
+Als Ergebnis wird eine Textdatei erzeugt, in der die Pixelwerte aus dem Jahr 2017 in den Spalten und
+die Referenzwerte aus dem Jahr 2025 in den Zeilen aufgetragen sind. In der Diagonale befinden sich
 die Pixel die zu beiden Zeitpunkten der gleichen Klasse zugeordnet wurden.
 
 ## Aufgabe 04: Berechnung der Flächenänderungen
