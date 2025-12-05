@@ -1,0 +1,63 @@
+```{=html}
+<!--
+
+Skripte für die Übungen 09 des Moduls FPM08 Forstliche Fernerkundung im Studiengang
+B.Sc. Forstwirtschaft an der HAWK Göttingen.
+
+Autor: Paul Magdon
+Datum: 2025-11-29
+Lizenz: Creative Commons BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
+
+-->
+```
+
+# Lerneinheit 10: Import und Visualisierung von Airborne Laserscanning(ALS) Daten aus dem Solling
+
+![](images/LE10_cover.png){width="1435"}
+
+## Lernziele & Aufgabenstellung
+
+**Lernziele**
+
+Die Studierenden sollen:
+
+-   Ein ALS-Datensatz in QGIS importieren
+-   Eigenschaften des ALS-Datensatzes untersuchen
+-   Eine 3D-Karte zum Visualisieren der Punktwolke anlegen
+-   Eine 2D-Transekt der Punktwolke anlegen
+-   Einzelbaumhöhen bestimmen
+
+**Aufgaben**
+
+1.  Raster- und Vektordaten importieren
+2.  
+
+## Aufgabe 0: Anlegen eine neuen QGIS-Projektes und Kontrolle des Nutzerprofils
+
+Folgen sie der Anleitung aus LE01 @sec-projekt_management um eine neue Ordnerstruktur und ein neues
+QGIS-Projekt für LE10 anzulegen. In der Übung bietet es sich an den Ordner *"daten"* weiter in die
+Unterordner *"vektor"* und *"raster"* zu unterteilen.
+
+Prüfen sie außerdem ob Ihr Nutzerprofil korrekt geladen wurde und ob die OTB-Funktionen im
+Werkzeugkasten vorhanden sind. Sollte dies nicht der Fall sein stellen sie ihr gesichertes
+Nutzerprofil wieder her (siehe auch LE01 @sec-nutzerprofil).
+
+## Aufgabe 01: Download und Import der Geodaten
+
+### **ALS-Daten**
+
+Laden sie sich die ALS-Daten für das Jahr 2023 aus dem Solling (*"*ALS_Solling_2023.copc.laz*"*)
+herunter und legen sie die Datei in ihr Projektordner und QGIS ab.
+
+<https://cloud.hawk.de/index.php/s/Lp4E6kfJKJak7Wq>
+
+### **Luftbilder**
+
+Bei der Befliegung im Sommer 2023 wurden im Flugzeug neben dem LiDAR-Sensor auch eine digitale
+Luftbildkamera verwendet um gleichzeitig LiDAR- und Luftbildaufnahmen anzufertigen. Das digitale
+Orthophoto (DOP) hat eine sehr hohe räumliche Auflösung von 7cm. Sie können es sich als WMS-Layer in
+QGIS einbinden. Die WMS-Adresse zum einbinden des Luftbildes lautet:
+
+https://gislab.hawk.de/public/0X1A4MLEZ27S/RGB
+
+## Aufgabe 02: Untersuchung der Eigenschaften des ALS-Datensatzes
