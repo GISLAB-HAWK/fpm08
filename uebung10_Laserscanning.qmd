@@ -53,7 +53,7 @@ herunter und legen sie die Datei in ihr Projektordner ab.
 
 <https://cloud.hawk.de/index.php/s/Lp4E6kfJKJak7Wq>
 
-Importieren sie die ALS-Daten in ihr QGIS-Projekt. 
+Importieren sie die ALS-Daten in ihr QGIS-Projekt.
 
 ### **Luftbilder**
 
@@ -63,6 +63,13 @@ Orthophoto (DOP) hat eine sehr hohe räumliche Auflösung von 7cm. Sie können e
 QGIS einbinden (siehe dazu: @sec-wms}. Die URL-Adresse des WMS-Layers des Luftbildes ist:
 
 https://gislab.hawk.de/public/0X1A4MLEZ27S/RGB
+
+::: callout-tip
+Sollte der Import des WMS-Layers nicht funktionieren oder der Zugriff zu langsam sein verwenden sie
+alternativ die DOP20 Layer des LGLN aus Niedersachsen mit folgender URL:
+
+https://opendata.lgln.niedersachsen.de/doorman/noauth/dop_wms
+:::
 
 ## Aufgabe 02: Untersuchung der Eigenschaften des ALS-Datensatzes
 
@@ -105,13 +112,17 @@ sie folgende Fragen :
 2.  *Wie groß sind die mittleren Abstände zwischen den Punkten?*
 3.  *Gibt es Unterschiede in den Abständen zwischen den Boden- und den anderen Punkten?*
 4.  *Gibt es Bereiche in denen die Punktwolkendichte sehr niedrig ist? Wenn ja wo?*
-
 :::
 
 Die Punktwolkendichte wird üblicherweise in Punkten/m² angegeben. Da für jeden LiDAR-Puls mehrere
 Punkte registriert werden, sollte bei der Berechnung der Punktdichte nur ein Punkt pro Puls
 berücksichtigt werden. Daher muss die Punktwolke zunächst gefiltert werden, sodass jeweils nur der
 erste Punkt/Return enthalten ist. Dies kann mithilfe der Filterfunktion durchgeführt werden.
+
+::: callout-caution
+AChtung: Sie müssen als Input die Datei *ALS_Solling_2023_UTM32N.copc.laz verwenden.* Sollte die
+noch nicht in Ihrem Projekt sein finden sie sie in ihrem Ordner Daten/Vektor.
+:::
 
 ::: {style="border: 2px solid #afca0b; background-color: #fafafa; padding: 8px;"}
 `Verarbeitungswerkzeuge` → `Punktwolkenentnahme` → `Filter`
@@ -185,9 +196,7 @@ Nach dem das Geopackage mit der Grenze des Bestandes angelegt ist kann die Punkt
 Bereich mit folgendem Werkzeug zugeschnitten werde:
 
 ::: {style="border: 2px solid #afca0b; background-color: #fafafa; padding: 8px;"}
-
 `Verarbeitungswerkzeuge` → `Punktwolkendatenverwaltung` → `zuschneiden`
-
 :::
 
 Der neue ALS-Datensatz enthält nun nur noch die Punkte innerhalb des Fichtenbestands. Erstellen Sie
@@ -201,7 +210,7 @@ Höhen von Beständen oder Einzelbäumen manuell zu vermessen. Ein neues Höhenp
 angelegt werden:
 
 ::: {style="border: 2px solid #afca0b; background-color: #fafafa; padding: 8px;"}
-`Ansicht` → `Geländehöhenprofil` 
+`Ansicht` → `Geländehöhenprofil`
 :::
 
 Dies öffnet ein neues Fenster in QGIS in dem das Profil dargestellt werden kann. Zum anlegen eines
@@ -218,5 +227,4 @@ Nutzen sie im Geländehöhenprofil das Messwerkzeug um folgende Fragen zu bestim
 
 1.  *Wie hoch sind die Fichten in dem Bestand?*
 2.  *Wie viele Bestandesschichten gibt es?*
-
 :::
