@@ -648,5 +648,85 @@
     "crumbs": [
       "<span class='chapter-number'>9</span>  <span class='chapter-title'>Lerneinheit 09: Analyse der Waldflächenänderung im Nationalpark Harz (2017-2025)</span>"
     ]
+  },
+  {
+    "objectID": "uebung10_Laserscanning.html",
+    "href": "uebung10_Laserscanning.html",
+    "title": "10  Lerneinheit 10: Import und Visualisierung von Airborne Laserscanning(ALS) Daten aus dem Solling",
+    "section": "",
+    "text": "10.1 Lernziele & Aufgabenstellung\nLernziele\nDie Studierenden sollen:\nAufgaben",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Lerneinheit 10: Import und Visualisierung von Airborne Laserscanning(ALS) Daten aus dem Solling</span>"
+    ]
+  },
+  {
+    "objectID": "uebung10_Laserscanning.html#lernziele-aufgabenstellung",
+    "href": "uebung10_Laserscanning.html#lernziele-aufgabenstellung",
+    "title": "10  Lerneinheit 10: Import und Visualisierung von Airborne Laserscanning(ALS) Daten aus dem Solling",
+    "section": "",
+    "text": "Ein ALS-Datensatz in QGIS importieren\nEigenschaften des ALS-Datensatzes untersuchen\nEine 3D-Karte zum Visualisieren der Punktwolke anlegen\nEine 2D-Transekt der Punktwolke anlegen und Einzelbaumhöhen bestimmen\n\n\n\nRaster- und Vektordaten importieren\n2D Visualisierung und Untersuchung der ALS-Daten\nErstellen einer 3D-Karte in QGIS\nZuschneiden der Punktwolke für einzelne Bestände\nErstellen eines 2D Profils zur Bestimmung der Bestandeshöhe",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Lerneinheit 10: Import und Visualisierung von Airborne Laserscanning(ALS) Daten aus dem Solling</span>"
+    ]
+  },
+  {
+    "objectID": "uebung10_Laserscanning.html#aufgabe-0-anlegen-eine-neuen-qgis-projektes-und-kontrolle-des-nutzerprofils",
+    "href": "uebung10_Laserscanning.html#aufgabe-0-anlegen-eine-neuen-qgis-projektes-und-kontrolle-des-nutzerprofils",
+    "title": "10  Lerneinheit 10: Import und Visualisierung von Airborne Laserscanning(ALS) Daten aus dem Solling",
+    "section": "10.2 Aufgabe 0: Anlegen eine neuen QGIS-Projektes und Kontrolle des Nutzerprofils",
+    "text": "10.2 Aufgabe 0: Anlegen eine neuen QGIS-Projektes und Kontrolle des Nutzerprofils\nFolgen sie der Anleitung aus LE01 Kapitel 1.3 um eine neue Ordnerstruktur und ein neues QGIS-Projekt für LE10 anzulegen. In der Übung bietet es sich an den Ordner “daten” weiter in die Unterordner “vektor” und “raster” zu unterteilen.\nPrüfen sie außerdem ob Ihr Nutzerprofil korrekt geladen wurde und ob die OTB-Funktionen im Werkzeugkasten vorhanden sind. Sollte dies nicht der Fall sein stellen sie ihr gesichertes Nutzerprofil wieder her (siehe auch LE01 Kapitel 1.2.4).",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Lerneinheit 10: Import und Visualisierung von Airborne Laserscanning(ALS) Daten aus dem Solling</span>"
+    ]
+  },
+  {
+    "objectID": "uebung10_Laserscanning.html#aufgabe-01-download-und-import-der-geodaten",
+    "href": "uebung10_Laserscanning.html#aufgabe-01-download-und-import-der-geodaten",
+    "title": "10  Lerneinheit 10: Import und Visualisierung von Airborne Laserscanning(ALS) Daten aus dem Solling",
+    "section": "10.3 Aufgabe 01: Download und Import der Geodaten",
+    "text": "10.3 Aufgabe 01: Download und Import der Geodaten\n\n10.3.1 ALS-Daten\nLaden sie sich die ALS-Daten für das Jahr 2023 aus dem Solling (“ALS_Solling_2023.copc.laz”) herunter und legen sie die Datei in ihr Projektordner ab.\nhttps://cloud.hawk.de/index.php/s/Lp4E6kfJKJak7Wq\nImportieren sie die ALS-Daten in ihr QGIS-Projekt.\n\n\n10.3.2 Luftbilder\nBei der Befliegung im Sommer 2023 wurden im Flugzeug neben dem LiDAR-Sensor auch eine digitale Luftbildkamera verwendet um gleichzeitig LiDAR- und Luftbildaufnahmen anzufertigen. Das digitale Orthophoto (DOP) hat eine sehr hohe räumliche Auflösung von 7cm. Sie können es sich als WMS-Layer in QGIS einbinden (siehe dazu: Kapitel 3.4}. Die URL-Adresse des WMS-Layers des Luftbildes ist:\nhttps://gislab.hawk.de/public/0X1A4MLEZ27S/RGB",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Lerneinheit 10: Import und Visualisierung von Airborne Laserscanning(ALS) Daten aus dem Solling</span>"
+    ]
+  },
+  {
+    "objectID": "uebung10_Laserscanning.html#aufgabe-02-untersuchung-der-eigenschaften-des-als-datensatzes",
+    "href": "uebung10_Laserscanning.html#aufgabe-02-untersuchung-der-eigenschaften-des-als-datensatzes",
+    "title": "10  Lerneinheit 10: Import und Visualisierung von Airborne Laserscanning(ALS) Daten aus dem Solling",
+    "section": "10.4 Aufgabe 02: Untersuchung der Eigenschaften des ALS-Datensatzes",
+    "text": "10.4 Aufgabe 02: Untersuchung der Eigenschaften des ALS-Datensatzes\n\n10.4.1 2D Darstellung der ALS-Daten\nNach dem Import der ALS-Daten werden diese als einzelne Punkte im QGIS angezeigt. Standardmäßig werden die Punkte nach ihrer Klasse eingefärbt. Unter Layer-&gt;Eigenschaften-&gt;Symbolisierung können auch andere Visualisierung gewählt werden. Test sie die verschiedenen Darstellungsmöglichkeiten.\n\n\n10.4.2 Kontrolle & Korrektur des Koordinatenbezugssystems\nIm ersten Schritt werden die Metadaten der ALS-Daten überprüft. Öffnen sie dazu die Layereigenschaften und betrachten sie die dort angegeben Informationen:\n\nInsgesamt enthält der Datensatz 16,7 Millionen Punkte, allerdings ist kein Koordinatenbezugsystem angegeben. Für die spätere Verarbeitung ist es wichtig, dass ein korrektes KBS zugewiesen wird. Dies kann mit den Punktwolkenverarbeitungswerkzeugen in QGIS wie folgt zugewiesen werden:\n\nVerarbeitungswerkzeuge → Punktwolkendatenverwaltung → Projektion zuweisen\nIn der Funktion wählen wir dann das Koordinatensystem EPSG:25832 und speichern die Punktwolke unter ALS_Solling_2023_UTM32N.laz\n\nNach dem sie die Punktwolke mit den korrekten KBS-Informationen geladen haben, können sie die andere Punktwolke aus dem QGIS-Projekt entfernen.\n\n\n10.4.3 Untersuchung der Punktverteilung und Berechnung der Punktwolkendichte\nZoomen sie in die ALS-Punktwolke soweit, dass sie die einzelnen Punkte sehen können und beantworten sie folgende Fragen :\n\nFragen:\n\nWie stellt sich die räumliche Verteilung der Punkte dar?\nWie groß sind die mittleren Abstände zwischen den Punkten?\nGibt es Unterschiede in den Abständen zwischen den Boden- und den anderen Punkten?\nGibt es Bereiche in denen die Punktwolkendichte sehr niedrig ist? Wenn ja wo?\n\n\nDie Punktwolkendichte wird üblicherweise in Punkten/m² angegeben. Da für jeden LiDAR-Puls mehrere Punkte registriert werden, sollte bei der Berechnung der Punktdichte nur ein Punkt pro Puls berücksichtigt werden. Daher muss die Punktwolke zunächst gefiltert werden, sodass jeweils nur der erste Punkt/Return enthalten ist. Dies kann mithilfe der Filterfunktion durchgeführt werden.\n\nVerarbeitungswerkzeuge → Punktwolkenentnahme → Filter\n\nIn der Funktion kann eine Filterausdruck angegeben werden. Zur Filterung auf die jeweils ersten Returns (First return) setzen wir den Filter ReturnNumber = 1 und speichern die gefilterte Punktwolke temporär.\n\nZur Bestimmung der Punktwolkendichte pro m² muss die Fläche in 1m² große Kacheln geteilt werden und pro Kacheln die Anzahl der Firstreturn-Punkte gezählt werden. QGIS bietet dazu eine Funktion an:\n\nVerarbeitungswerkzeuge → Punktwolkenentnahme → Dichte\n\nWenden sie diese Funktion mit folgenden Einstellungen an und speichern die das Ergebnis in ihrem Projektordner unter punktwolkendichteraster.tif ab:\n\nLaden sie das Punktwolkendichteraster in Ihr Projekt und wählen sie die Darstellung als “Einzelkanalpseudofarbe” mit einer ansprechenden Farbverlauf aus.\n\n\nFrage:\n\nWelche Muster der Punktwolkendichte können sie in der Karte feststellen und wie können diese erklärt werden?\n\n\n\n\n10.4.4 Kontrolle der Einzelpunktinformationen\nZoomen sie anschließend in die Punktwolke rein. Mithilfe des Infotools können sie Informationen zu einzelnen Punkten anzeigen lassen. Beantworten sie folgende Fragen:\n\nFragen:\n\nIn welcher Einheit werden die X-,Y-,Z- Werte angegeben?\nWelchen Wert hat die Klassifikation für Boden- und Andere Punkte?",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Lerneinheit 10: Import und Visualisierung von Airborne Laserscanning(ALS) Daten aus dem Solling</span>"
+    ]
+  },
+  {
+    "objectID": "uebung10_Laserscanning.html#aufgabe-03-erstellen-einer-3d-karte",
+    "href": "uebung10_Laserscanning.html#aufgabe-03-erstellen-einer-3d-karte",
+    "title": "10  Lerneinheit 10: Import und Visualisierung von Airborne Laserscanning(ALS) Daten aus dem Solling",
+    "section": "10.5 Aufgabe 03: Erstellen einer 3D Karte",
+    "text": "10.5 Aufgabe 03: Erstellen einer 3D Karte\nIm nächsten Schritt soll eine 3D-Karte der Punktwolke angefertigt werden. Dazu kann unter Ansicht-&gt; 3D-Kartenansichten-&gt; Neue 3D-Kartenansicht eine 3D Ansicht angelegt werden. Diese erscheint zunächst in einem neuen QGIS-Fenster und enthält die Layer die auch in der 2D Ansicht aktiviert sind. Das Luftbild wird flach und deutlich unterhalb der Punktwolke angezeigt. Das kann in den Konfigurationen (Schraubenschlüsselsymbol) geändert werden. Dort muss der Geländetyp umgestellt werden. Da wir kein eigenen Geländemodell haben, nutzen wir die Option “online”. Zusätzlich können für die Darstellung der Punkte die Effekte: “Schatten anzeigen”, “Eye-Dome-Lightning” und “Umgebungsverdeckung aktiviert” werden, um die Darstellung zu verbessern.\n\n\n\n3D Ansicht der Punktwolke und des Luftbildes",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Lerneinheit 10: Import und Visualisierung von Airborne Laserscanning(ALS) Daten aus dem Solling</span>"
+    ]
+  },
+  {
+    "objectID": "uebung10_Laserscanning.html#aufgabe-04-zuschneiden-der-punktwolke-auf-bestandesgrenzen",
+    "href": "uebung10_Laserscanning.html#aufgabe-04-zuschneiden-der-punktwolke-auf-bestandesgrenzen",
+    "title": "10  Lerneinheit 10: Import und Visualisierung von Airborne Laserscanning(ALS) Daten aus dem Solling",
+    "section": "10.6 Aufgabe 04: Zuschneiden der Punktwolke auf Bestandesgrenzen",
+    "text": "10.6 Aufgabe 04: Zuschneiden der Punktwolke auf Bestandesgrenzen\nIm nächsten Schritt soll die Punktwolke auf die Grenzen eines Bestands zugeschnitten werden. Dazu muss eine neues Geopackage uebung10.gpkg mit einem Polygonlayer “Bestandesgrenzen” und dem KBS 25832 angelegt werden. Anschließen erfassen sie manuell auf Basis des Luftbildes einen Fichtenbestand.\n\n\n\nAusgewählter Fichtenbestand\n\n\nNach dem das Geopackage mit der Grenze des Bestandes angelegt ist kann die Punktwolke auf diesen Bereich mit folgendem Werkzeug zugeschnitten werde:\n\nVerarbeitungswerkzeuge → Punktwolkendatenverwaltung → zuschneiden\n\nDer neue ALS-Datensatz enthält nun nur noch die Punkte innerhalb des Fichtenbestands. Erstellen Sie nun eine neue 3D-Kartenansicht zur Darstellung des Fichtenbestandes.",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Lerneinheit 10: Import und Visualisierung von Airborne Laserscanning(ALS) Daten aus dem Solling</span>"
+    ]
+  },
+  {
+    "objectID": "uebung10_Laserscanning.html#aufgabe-05-erstellen-eines-2d-profils-zur-bestimmung-der-bestandeshöhen",
+    "href": "uebung10_Laserscanning.html#aufgabe-05-erstellen-eines-2d-profils-zur-bestimmung-der-bestandeshöhen",
+    "title": "10  Lerneinheit 10: Import und Visualisierung von Airborne Laserscanning(ALS) Daten aus dem Solling",
+    "section": "10.7 Aufgabe 05: Erstellen eines 2D-Profils zur Bestimmung der Bestandeshöhen",
+    "text": "10.7 Aufgabe 05: Erstellen eines 2D-Profils zur Bestimmung der Bestandeshöhen\nQGIS bietet die Funktion 2D Transkete auch Höhenprofile genannt, für Punktwolkendaten zu erstellen. Diese Funktion ist sehr gut geeignet um Bestandesstrukturen zu analysieren (z.B. Schichtigkeit) oder Höhen von Beständen oder Einzelbäumen manuell zu vermessen. Ein neues Höhenprofil kann wie folgt angelegt werden:\n\nAnsicht → Geländehöhenprofil\n\nDies öffnet ein neues Fenster in QGIS in dem das Profil dargestellt werden kann. Zum anlegen eines neuen Profile muss zunächst die Funktion “Kurve aufnehmen” gewählt werden und anschließend in der Karte eine Linie digitalisiert werden, entlang derer das Höhenprofil gezeichnet werden soll. Legen sie das Profil am besten längst durch den Fichtenbestand.\n\nNutzen sie im Geländehöhenprofil das Messwerkzeug um folgende Fragen zu bestimmen:\n\nFragen:\n\nWie hoch sind die Fichten in dem Bestand?\nWie viele Bestandesschichten gibt es?",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Lerneinheit 10: Import und Visualisierung von Airborne Laserscanning(ALS) Daten aus dem Solling</span>"
+    ]
   }
 ]
