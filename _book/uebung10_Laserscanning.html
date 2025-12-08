@@ -8,7 +8,7 @@
 
 <meta name="description" content="Übungsaufgaben für das Modul FPM08 forstliche Fernerkundung">
 
-<title>3&nbsp; Lerneinheit 03: Beschaffung von Geodaten für den Nordcampus Göttingen – Forstliche Fernerkundung</title>
+<title>10&nbsp; Lerneinheit 10: Import und Visualisierung von Airborne Laserscanning(ALS) Daten aus dem Solling – Forstliche Fernerkundung</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -31,8 +31,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./uebung04.html" rel="next">
-<link href="./uebung02.html" rel="prev">
+<link href="./references.html" rel="next">
+<link href="./uebung09_aenderungsanalyse.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -70,35 +70,6 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 </head>
 
@@ -111,7 +82,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./uebung03.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Lerneinheit 03: Beschaffung von Geodaten für den Nordcampus Göttingen</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./uebung10_Laserscanning.html"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Lerneinheit 10: Import und Visualisierung von Airborne Laserscanning(ALS) Daten aus dem Solling</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Suchen" onclick="window.quartoOpenSearch();">
@@ -159,7 +130,7 @@ window.Quarto = {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./uebung03.html" class="sidebar-item-text sidebar-link active">
+  <a href="./uebung03.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Lerneinheit 03: Beschaffung von Geodaten für den Nordcampus Göttingen</span></span></a>
   </div>
 </li>
@@ -201,7 +172,7 @@ window.Quarto = {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./uebung10_Laserscanning.html" class="sidebar-item-text sidebar-link">
+  <a href="./uebung10_Laserscanning.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Lerneinheit 10: Import und Visualisierung von Airborne Laserscanning(ALS) Daten aus dem Solling</span></span></a>
   </div>
 </li>
@@ -221,13 +192,23 @@ window.Quarto = {
     <h2 id="toc-title">Inhaltsverzeichnis</h2>
    
   <ul>
-  <li><a href="#lernziele-aufgabenstellung" id="toc-lernziele-aufgabenstellung" class="nav-link active" data-scroll-target="#lernziele-aufgabenstellung"><span class="header-section-number">3.1</span> Lernziele &amp; Aufgabenstellung</a></li>
-  <li><a href="#aufgabe-0-anlegen-eine-neuen-qgis-projektes" id="toc-aufgabe-0-anlegen-eine-neuen-qgis-projektes" class="nav-link" data-scroll-target="#aufgabe-0-anlegen-eine-neuen-qgis-projektes"><span class="header-section-number">3.2</span> Aufgabe 0: Anlegen eine neuen QGIS-Projektes</a></li>
-  <li><a href="#aufgabe-01-download-und-cir-darstellung-eines-ortholuftbildes-des-nordcampus" id="toc-aufgabe-01-download-und-cir-darstellung-eines-ortholuftbildes-des-nordcampus" class="nav-link" data-scroll-target="#aufgabe-01-download-und-cir-darstellung-eines-ortholuftbildes-des-nordcampus"><span class="header-section-number">3.3</span> Aufgabe 01: Download und CIR-Darstellung eines Ortholuftbildes des Nordcampus</a></li>
-  <li><a href="#sec-wms" id="toc-sec-wms" class="nav-link" data-scroll-target="#sec-wms"><span class="header-section-number">3.4</span> Aufgabe 02: Einbinden von WMS-Diensten zur Darstellung von Ortholuftbildern</a></li>
-  <li><a href="#aufgabe-03-einbinden-der-flurstücksgrenzen-als-wfs-dienste" id="toc-aufgabe-03-einbinden-der-flurstücksgrenzen-als-wfs-dienste" class="nav-link" data-scroll-target="#aufgabe-03-einbinden-der-flurstücksgrenzen-als-wfs-dienste"><span class="header-section-number">3.5</span> Aufgabe 03: Einbinden der Flurstücksgrenzen als WFS-Dienste</a></li>
-  <li><a href="#aufgabe-04-hintergrundkarte-als-vektor-kacheln" id="toc-aufgabe-04-hintergrundkarte-als-vektor-kacheln" class="nav-link" data-scroll-target="#aufgabe-04-hintergrundkarte-als-vektor-kacheln"><span class="header-section-number">3.6</span> Aufgabe 04: Hintergrundkarte als Vektor-Kacheln</a></li>
-  <li><a href="#aufgabe-05-sicher-des-nutzerprofils" id="toc-aufgabe-05-sicher-des-nutzerprofils" class="nav-link" data-scroll-target="#aufgabe-05-sicher-des-nutzerprofils"><span class="header-section-number">3.7</span> Aufgabe 05: Sicher des Nutzerprofils</a></li>
+  <li><a href="#lernziele-aufgabenstellung" id="toc-lernziele-aufgabenstellung" class="nav-link active" data-scroll-target="#lernziele-aufgabenstellung"><span class="header-section-number">10.1</span> Lernziele &amp; Aufgabenstellung</a></li>
+  <li><a href="#aufgabe-0-anlegen-eine-neuen-qgis-projektes-und-kontrolle-des-nutzerprofils" id="toc-aufgabe-0-anlegen-eine-neuen-qgis-projektes-und-kontrolle-des-nutzerprofils" class="nav-link" data-scroll-target="#aufgabe-0-anlegen-eine-neuen-qgis-projektes-und-kontrolle-des-nutzerprofils"><span class="header-section-number">10.2</span> Aufgabe 0: Anlegen eine neuen QGIS-Projektes und Kontrolle des Nutzerprofils</a></li>
+  <li><a href="#aufgabe-01-download-und-import-der-geodaten" id="toc-aufgabe-01-download-und-import-der-geodaten" class="nav-link" data-scroll-target="#aufgabe-01-download-und-import-der-geodaten"><span class="header-section-number">10.3</span> Aufgabe 01: Download und Import der Geodaten</a>
+  <ul class="collapse">
+  <li><a href="#als-daten" id="toc-als-daten" class="nav-link" data-scroll-target="#als-daten"><span class="header-section-number">10.3.1</span> <strong>ALS-Daten</strong></a></li>
+  <li><a href="#luftbilder" id="toc-luftbilder" class="nav-link" data-scroll-target="#luftbilder"><span class="header-section-number">10.3.2</span> <strong>Luftbilder</strong></a></li>
+  </ul></li>
+  <li><a href="#aufgabe-02-untersuchung-der-eigenschaften-des-als-datensatzes" id="toc-aufgabe-02-untersuchung-der-eigenschaften-des-als-datensatzes" class="nav-link" data-scroll-target="#aufgabe-02-untersuchung-der-eigenschaften-des-als-datensatzes"><span class="header-section-number">10.4</span> Aufgabe 02: Untersuchung der Eigenschaften des ALS-Datensatzes</a>
+  <ul class="collapse">
+  <li><a href="#d-darstellung-der-als-daten" id="toc-d-darstellung-der-als-daten" class="nav-link" data-scroll-target="#d-darstellung-der-als-daten"><span class="header-section-number">10.4.1</span> 2D Darstellung der ALS-Daten</a></li>
+  <li><a href="#kontrolle-korrektur-des-koordinatenbezugssystems" id="toc-kontrolle-korrektur-des-koordinatenbezugssystems" class="nav-link" data-scroll-target="#kontrolle-korrektur-des-koordinatenbezugssystems"><span class="header-section-number">10.4.2</span> Kontrolle &amp; Korrektur des Koordinatenbezugssystems</a></li>
+  <li><a href="#untersuchung-der-punktverteilung-und-berechnung-der-punktwolkendichte" id="toc-untersuchung-der-punktverteilung-und-berechnung-der-punktwolkendichte" class="nav-link" data-scroll-target="#untersuchung-der-punktverteilung-und-berechnung-der-punktwolkendichte"><span class="header-section-number">10.4.3</span> Untersuchung der Punktverteilung und Berechnung der Punktwolkendichte</a></li>
+  <li><a href="#kontrolle-der-einzelpunktinformationen" id="toc-kontrolle-der-einzelpunktinformationen" class="nav-link" data-scroll-target="#kontrolle-der-einzelpunktinformationen"><span class="header-section-number">10.4.4</span> Kontrolle der Einzelpunktinformationen</a></li>
+  </ul></li>
+  <li><a href="#aufgabe-03-erstellen-einer-3d-karte" id="toc-aufgabe-03-erstellen-einer-3d-karte" class="nav-link" data-scroll-target="#aufgabe-03-erstellen-einer-3d-karte"><span class="header-section-number">10.5</span> Aufgabe 03: Erstellen einer 3D Karte</a></li>
+  <li><a href="#aufgabe-04-zuschneiden-der-punktwolke-auf-bestandesgrenzen" id="toc-aufgabe-04-zuschneiden-der-punktwolke-auf-bestandesgrenzen" class="nav-link" data-scroll-target="#aufgabe-04-zuschneiden-der-punktwolke-auf-bestandesgrenzen"><span class="header-section-number">10.6</span> Aufgabe 04: Zuschneiden der Punktwolke auf Bestandesgrenzen</a></li>
+  <li><a href="#aufgabe-05-erstellen-eines-2d-profils-zur-bestimmung-der-bestandeshöhen" id="toc-aufgabe-05-erstellen-eines-2d-profils-zur-bestimmung-der-bestandeshöhen" class="nav-link" data-scroll-target="#aufgabe-05-erstellen-eines-2d-profils-zur-bestimmung-der-bestandeshöhen"><span class="header-section-number">10.7</span> Aufgabe 05: Erstellen eines 2D-Profils zur Bestimmung der Bestandeshöhen</a></li>
   </ul>
 </nav>
     </div>
@@ -236,7 +217,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Lerneinheit 03: Beschaffung von Geodaten für den Nordcampus Göttingen</span></h1>
+<h1 class="title"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Lerneinheit 10: Import und Visualisierung von Airborne Laserscanning(ALS) Daten aus dem Solling</span></h1>
 </div>
 
 
@@ -255,136 +236,156 @@ window.Quarto = {
 
 <!--
 
-Skripte für die Übungen 03 des Moduls FPM08 Forstliche Fernerkundung im Studiengang
+Skripte für die Übungen 09 des Moduls FPM08 Forstliche Fernerkundung im Studiengang
 B.Sc. Forstwirtschaft an der HAWK Göttingen.
 
 Autor: Paul Magdon
-Datum: 2025-10-18
+Datum: 2025-11-29
 Lizenz: Creative Commons BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 -->
-<section id="lernziele-aufgabenstellung" class="level2" data-number="3.1">
-<h2 data-number="3.1" class="anchored" data-anchor-id="lernziele-aufgabenstellung"><span class="header-section-number">3.1</span> Lernziele &amp; Aufgabenstellung</h2>
-<p>In der Lerneinheit 02 haben wir vorgestellt, wie Rasterdaten, welche als GeoTIF-Datei auf der Festplatte vorliegen, in ein QGIS-Projekt importiert und dargestellt werden können. Dazu wurden die Rasterdaten über das lokale Netzlaufwerk zur Verfügung gestellt. In der Lerneinheit 03 wir nun gezeigt wie frei verfügbare Raster- und Vektordaten gesucht, beschafft und in QGIS-Projekte eingebunden werden können. Dazu werden die Datendownload Portale der Landesvermessungsämter am Beispiel von Niedersachsen vorgestellt. Wenn größere Gebiete bearbeitete und / oder sehr hohe räumliche Auflösungen verwendet werden, kann dies sehr schnell zu einem hohen Zeitaufwand und Bedarf an lokalem Speicherplatz -und damit verbunden hohen Kosten für die Hardware- führen. Daher werden im GIS-Bereich zunehmende sogenannte Geodatendienste verwendet. Bei diesen Diensten werden die Daten auf zentralen Servern gespeichert und dem Nutzer einzelne Ausschnitte auf Anfrage ausgeliefert. Dieses Vorgehen bietet mehrere Vorteile:</p>
-<ul>
-<li><p>Nur die in dem jeweiligen Moment notwendigen Daten werden temporär auf dem PC des Nutzers abgelegt</p></li>
-<li><p>Die Datenverwaltung erfolgt zentral durch den Betreiber des Geodatendienstes</p></li>
-<li><p>Alle Nutzer arbeiten mit einem einheitlichen Datensatz</p></li>
-<li><p>Aktualisierungen der Daten können einfach an alle Nutzer ausgespielt werden</p></li>
-</ul>
-<p>In der Übung sollen aktuelle Daten für den Nordcampus, Göttingen beschafft und dargestellt werden. Dazu sollen die unterschiedlichen Angeboten des Open-Data Niedersachsen Portals des LGLN genutzt werden.</p>
+<p><img src="images/LE10_cover.png" class="img-fluid" width="1435"></p>
+<section id="lernziele-aufgabenstellung" class="level2" data-number="10.1">
+<h2 data-number="10.1" class="anchored" data-anchor-id="lernziele-aufgabenstellung"><span class="header-section-number">10.1</span> Lernziele &amp; Aufgabenstellung</h2>
 <p><strong>Lernziele</strong></p>
 <p>Die Studierenden sollen:</p>
 <ul>
-<li>die Geodatenportale der Landesvermessungen kennenlernen</li>
-<li>die unterschiedlichen Schnittstellen von Geodatendienste kennenlernen</li>
-<li>Raster- und Vektordaten als Geodatendienst in QGIS importieren</li>
-<li>Eigenschaften von Geodatendiensten in QGIS untersuchen</li>
+<li>Ein ALS-Datensatz in QGIS importieren</li>
+<li>Eigenschaften des ALS-Datensatzes untersuchen</li>
+<li>Eine 3D-Karte zum Visualisieren der Punktwolke anlegen</li>
+<li>Eine 2D-Transekt der Punktwolke anlegen und Einzelbaumhöhen bestimmen</li>
 </ul>
 <p><strong>Aufgaben</strong></p>
 <ol type="1">
-<li><p>Laden sie ein aktuelles Luftbild des Nordcampus Göttingen vom Geodatenportal des LGLN herunter und visualisieren sie dies als CIR-Darstellung.</p></li>
-<li><p>Binden sie das aktuelle Ortholuftbildmosaik des LGLN als WMS-Service ein.</p></li>
-<li><p>Fügen sie die aktuelle Flurstückskarten aus Niedersachsen als WFS-Dienst ein.</p></li>
-<li><p>Fügen sie als Hintergrundkarte die Basemap.de als Vektor-Kacheln hinzu.</p></li>
+<li>Raster- und Vektordaten importieren</li>
+<li>2D Visualisierung und Untersuchung der ALS-Daten</li>
+<li>Erstellen einer 3D-Karte in QGIS</li>
+<li>Zuschneiden der Punktwolke für einzelne Bestände</li>
+<li>Erstellen eines 2D Profils zur Bestimmung der Bestandeshöhe</li>
 </ol>
 </section>
-<section id="aufgabe-0-anlegen-eine-neuen-qgis-projektes" class="level2" data-number="3.2">
-<h2 data-number="3.2" class="anchored" data-anchor-id="aufgabe-0-anlegen-eine-neuen-qgis-projektes"><span class="header-section-number">3.2</span> Aufgabe 0: Anlegen eine neuen QGIS-Projektes</h2>
-<p>Folgen sie der Anleitung aus <a href="uebung01.html#sec-projekt_management" class="quarto-xref"><span>Kapitel 1.3</span></a> um eine neue Ordnerstruktur und ein neues QGIS-Projekt für LE03 anzulegen.</p>
+<section id="aufgabe-0-anlegen-eine-neuen-qgis-projektes-und-kontrolle-des-nutzerprofils" class="level2" data-number="10.2">
+<h2 data-number="10.2" class="anchored" data-anchor-id="aufgabe-0-anlegen-eine-neuen-qgis-projektes-und-kontrolle-des-nutzerprofils"><span class="header-section-number">10.2</span> Aufgabe 0: Anlegen eine neuen QGIS-Projektes und Kontrolle des Nutzerprofils</h2>
+<p>Folgen sie der Anleitung aus LE01 <a href="uebung01.html#sec-projekt_management" class="quarto-xref"><span>Kapitel 1.3</span></a> um eine neue Ordnerstruktur und ein neues QGIS-Projekt für LE10 anzulegen. In der Übung bietet es sich an den Ordner <em>“daten”</em> weiter in die Unterordner <em>“vektor”</em> und <em>“raster”</em> zu unterteilen.</p>
+<p>Prüfen sie außerdem ob Ihr Nutzerprofil korrekt geladen wurde und ob die OTB-Funktionen im Werkzeugkasten vorhanden sind. Sollte dies nicht der Fall sein stellen sie ihr gesichertes Nutzerprofil wieder her (siehe auch LE01 <a href="uebung01.html#sec-nutzerprofil" class="quarto-xref"><span>Kapitel 1.2.4</span></a>).</p>
 </section>
-<section id="aufgabe-01-download-und-cir-darstellung-eines-ortholuftbildes-des-nordcampus" class="level2" data-number="3.3">
-<h2 data-number="3.3" class="anchored" data-anchor-id="aufgabe-01-download-und-cir-darstellung-eines-ortholuftbildes-des-nordcampus"><span class="header-section-number">3.3</span> Aufgabe 01: Download und CIR-Darstellung eines Ortholuftbildes des Nordcampus</h2>
-<p>Das Landesamt für Geoinformation und Landesvermessung Niedersachsen (LGLN) stellt über die <a href="https://ni-lgln-opengeodata.hub.arcgis.com/pages/opengeodata">OpenGeoDate.NI</a> Plattform offene amtliche Geodaten kostenfrei zur Verfügung. Ein Produkt sind die Digitalen Orthophotos (DOP). Diese können im Viewer des Portals angezeigt und ausgewählt werden.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/LE03_screenshot_LGLN_download.png" class="img-fluid figure-img"></p>
-<figcaption>Screenshot des LGLN OpenData-Viewers mit der hervorgehobenen Kachel des Nordcampus</figcaption>
-</figure>
+<section id="aufgabe-01-download-und-import-der-geodaten" class="level2" data-number="10.3">
+<h2 data-number="10.3" class="anchored" data-anchor-id="aufgabe-01-download-und-import-der-geodaten"><span class="header-section-number">10.3</span> Aufgabe 01: Download und Import der Geodaten</h2>
+<section id="als-daten" class="level3" data-number="10.3.1">
+<h3 data-number="10.3.1" class="anchored" data-anchor-id="als-daten"><span class="header-section-number">10.3.1</span> <strong>ALS-Daten</strong></h3>
+<p>Laden sie sich die ALS-Daten für das Jahr 2023 aus dem Solling (<em>“<em>ALS_Solling_2023.copc.laz</em>”</em>) herunter und legen sie die Datei in ihr Projektordner ab.</p>
+<p><a href="https://cloud.hawk.de/index.php/s/Lp4E6kfJKJak7Wq" class="uri">https://cloud.hawk.de/index.php/s/Lp4E6kfJKJak7Wq</a></p>
+<p>Importieren sie die ALS-Daten in ihr QGIS-Projekt.</p>
+</section>
+<section id="luftbilder" class="level3" data-number="10.3.2">
+<h3 data-number="10.3.2" class="anchored" data-anchor-id="luftbilder"><span class="header-section-number">10.3.2</span> <strong>Luftbilder</strong></h3>
+<p>Bei der Befliegung im Sommer 2023 wurden im Flugzeug neben dem LiDAR-Sensor auch eine digitale Luftbildkamera verwendet um gleichzeitig LiDAR- und Luftbildaufnahmen anzufertigen. Das digitale Orthophoto (DOP) hat eine sehr hohe räumliche Auflösung von 7cm. Sie können es sich als WMS-Layer in QGIS einbinden (siehe dazu: <a href="uebung03.html#sec-wms" class="quarto-xref"><span>Kapitel 3.4</span></a>}. Die URL-Adresse des WMS-Layers des Luftbildes ist:</p>
+<p>https://gislab.hawk.de/public/0X1A4MLEZ27S/RGB</p>
+</section>
+</section>
+<section id="aufgabe-02-untersuchung-der-eigenschaften-des-als-datensatzes" class="level2" data-number="10.4">
+<h2 data-number="10.4" class="anchored" data-anchor-id="aufgabe-02-untersuchung-der-eigenschaften-des-als-datensatzes"><span class="header-section-number">10.4</span> Aufgabe 02: Untersuchung der Eigenschaften des ALS-Datensatzes</h2>
+<section id="d-darstellung-der-als-daten" class="level3" data-number="10.4.1">
+<h3 data-number="10.4.1" class="anchored" data-anchor-id="d-darstellung-der-als-daten"><span class="header-section-number">10.4.1</span> 2D Darstellung der ALS-Daten</h3>
+<p>Nach dem Import der ALS-Daten werden diese als einzelne Punkte im QGIS angezeigt. Standardmäßig werden die Punkte nach ihrer Klasse eingefärbt. Unter Layer-&gt;Eigenschaften-&gt;Symbolisierung können auch andere Visualisierung gewählt werden. Test sie die verschiedenen Darstellungsmöglichkeiten.</p>
+</section>
+<section id="kontrolle-korrektur-des-koordinatenbezugssystems" class="level3" data-number="10.4.2">
+<h3 data-number="10.4.2" class="anchored" data-anchor-id="kontrolle-korrektur-des-koordinatenbezugssystems"><span class="header-section-number">10.4.2</span> Kontrolle &amp; Korrektur des Koordinatenbezugssystems</h3>
+<p>Im ersten Schritt werden die Metadaten der ALS-Daten überprüft. Öffnen sie dazu die Layereigenschaften und betrachten sie die dort angegeben Informationen:</p>
+<p><img src="images/LE10_Layereigenschaften.png" class="img-fluid"></p>
+<p>Insgesamt enthält der Datensatz 16,7 Millionen Punkte, allerdings ist kein Koordinatenbezugsystem angegeben. Für die spätere Verarbeitung ist es wichtig, dass ein korrektes KBS zugewiesen wird. Dies kann mit den Punktwolkenverarbeitungswerkzeugen in QGIS wie folgt zugewiesen werden:</p>
+<div style="border: 2px solid #afca0b; background-color: #fafafa; padding: 8px;">
+<p><code>Verarbeitungswerkzeuge</code> → <code>Punktwolkendatenverwaltung</code> → <code>Projektion zuweisen</code></p>
+<p>In der Funktion wählen wir dann das Koordinatensystem EPSG:25832 und speichern die Punktwolke unter <em>ALS_Solling_2023_UTM32N.laz</em></p>
 </div>
-<p>Nutzen sie den LGLN OpenData-Viewer um die Kachel (325665712), die dieses Gebiet abdeckt auszuwählen und das RGBI Bild herunterzuladen. Laden sie zusätzlich die Metadaten als XML-Datei herunter und speichern sie beides in ihrem Projektordner unter “daten”. Importieren sie die GeoTIF-Datei als Rasterbild in ihr QGIS-Projekt und stellen sie es als CIR-Falschfarbenbild dar (siehe dazu auch LE02 <a href="uebung02.html#sec-CIR_darstellung" class="quarto-xref"><span>Kapitel 2.5</span></a> . Nutzen sie anschließend das Metadatenfile um folgende Fragen zu beantworten:</p>
+<p>Nach dem sie die Punktwolke mit den korrekten KBS-Informationen geladen haben, können sie die andere Punktwolke aus dem QGIS-Projekt entfernen.</p>
+</section>
+<section id="untersuchung-der-punktverteilung-und-berechnung-der-punktwolkendichte" class="level3" data-number="10.4.3">
+<h3 data-number="10.4.3" class="anchored" data-anchor-id="untersuchung-der-punktverteilung-und-berechnung-der-punktwolkendichte"><span class="header-section-number">10.4.3</span> Untersuchung der Punktverteilung und Berechnung der Punktwolkendichte</h3>
+<p>Zoomen sie in die ALS-Punktwolke soweit, dass sie die einzelnen Punkte sehen können und beantworten sie folgende Fragen :</p>
 <div style="border: 3px solid #ff8a0b; background-color: #ffffff; padding: 8px;">
 <p><strong>Fragen:</strong></p>
 <ol type="1">
-<li><p><em>An welchem Tag wurde die Luftbildaufnahme gemacht?</em></p></li>
-<li><p><em>Welche Kamera wurde für die Luftbildaufnahme verwendet?</em></p></li>
-<li><p><em>Welches Koordinatenreferenzsystem haben die Rasterbilder?</em></p></li>
-<li><p><em>Welche räumliche Auflösung haben die Bilder?</em></p></li>
-<li><p><em>Welche radiometrische Auflösung haben die Bilder?</em></p></li>
-<li><p><em>Welche spektrale Auflösung haben die Bilder?</em></p></li>
+<li><em>Wie stellt sich die räumliche Verteilung der Punkte dar?</em></li>
+<li><em>Wie groß sind die mittleren Abstände zwischen den Punkten?</em></li>
+<li><em>Gibt es Unterschiede in den Abständen zwischen den Boden- und den anderen Punkten?</em></li>
+<li><em>Gibt es Bereiche in denen die Punktwolkendichte sehr niedrig ist? Wenn ja wo?</em></li>
+</ol>
+</div>
+<p>Die Punktwolkendichte wird üblicherweise in Punkten/m² angegeben. Da für jeden LiDAR-Puls mehrere Punkte registriert werden, sollte bei der Berechnung der Punktdichte nur ein Punkt pro Puls berücksichtigt werden. Daher muss die Punktwolke zunächst gefiltert werden, sodass jeweils nur der erste Punkt/Return enthalten ist. Dies kann mithilfe der Filterfunktion durchgeführt werden.</p>
+<div style="border: 2px solid #afca0b; background-color: #fafafa; padding: 8px;">
+<p><code>Verarbeitungswerkzeuge</code> → <code>Punktwolkenentnahme</code> → <code>Filter</code></p>
+</div>
+<p>In der Funktion kann eine Filterausdruck angegeben werden. Zur Filterung auf die jeweils ersten Returns (First return) setzen wir den Filter <code>ReturnNumber = 1</code> und speichern die gefilterte Punktwolke temporär.</p>
+<p><img src="images/LE10_punktwolkenfilter.png" class="img-fluid"></p>
+<p>Zur Bestimmung der Punktwolkendichte pro m² muss die Fläche in 1m² große Kacheln geteilt werden und pro Kacheln die Anzahl der Firstreturn-Punkte gezählt werden. QGIS bietet dazu eine Funktion an:</p>
+<div style="border: 2px solid #afca0b; background-color: #fafafa; padding: 8px;">
+<p><code>Verarbeitungswerkzeuge</code> → <code>Punktwolkenentnahme</code> → <code>Dichte</code></p>
+</div>
+<p>Wenden sie diese Funktion mit folgenden Einstellungen an und speichern die das Ergebnis in ihrem Projektordner unter <em>punktwolkendichteraster.tif</em> ab:</p>
+<p><img src="images/LE10_punktwolkendichteraster.png" class="img-fluid"></p>
+<p>Laden sie das Punktwolkendichteraster in Ihr Projekt und wählen sie die Darstellung als “Einzelkanalpseudofarbe” mit einer ansprechenden Farbverlauf aus.</p>
+<p><img src="images/LE10_punktwolkendichteraster_ergebnis.png" class="img-fluid"></p>
+<div style="border: 3px solid #ff8a0b; background-color: #ffffff; padding: 8px;">
+<p><strong>Frage:</strong></p>
+<ol type="1">
+<li><em>Welche Muster der Punktwolkendichte können sie in der Karte feststellen und wie können diese erklärt werden?</em></li>
 </ol>
 </div>
 </section>
-<section id="sec-wms" class="level2" data-number="3.4">
-<h2 data-number="3.4" class="anchored" data-anchor-id="sec-wms"><span class="header-section-number">3.4</span> Aufgabe 02: Einbinden von WMS-Diensten zur Darstellung von Ortholuftbildern</h2>
-<p>Wie sie in dem OpenData-Viewer erkennen können, bräuchte es zur vollständigen Abdeckung des gesamten Göttinger Stadtwaldes über 35 Ortholuftbildkacheln, was einem Downloadvolumen von ca. <span class="math inline">\(35*500=1,7GB\)</span> entsprechen würde. Für eine reine Darstellung z.B. als Hintergrundkarte oder zur Abgrenzung der Waldgrenzen ist das ein erheblicher Aufwand.</p>
-<p>Das LGLN-OpenData Portal bietet neben dem Downloaddienst auch verschiedene Geodatendienste an. Für die reine Darstellung der Bilder kann ein sogenannter Web Mapping Service (WMS) genutzt werden. WMS-Dienste übertragen bereits gerendertet Bilder. Das bedeutet, dass die original Daten auf dem Server verbleiben und dort alle Einstellungen bzgl. der Symbolisierung und der Farbdarstellung zentral festgelegt werden. Der Nutzer erhält dann bereits gerenderte Bildausschnitte und kann die Darstellung z.B. der einzelnen Farbkanäle nicht mehr ändern. Der Vorteil ist, dass so wesentlich kleinere Datenmengen übertragen werden müssen.</p>
-<p>Zum einbinden von Geodatendiensten wird zunächst die URL mit den Geodatendienst benötigt. Sie finden diese URL unter WMS auf der Beschreibung der <a href="https://ni-lgln-opengeodata.hub.arcgis.com/apps/lgln-opengeodata::digitales-orthophoto-dop/about">Ortholuftbildprodukte</a> auf der LGNL-Seite.</p>
-<p>Anschließend nutzen sie in QGIS die Datenquellenverwaltung:</p>
-<div style="border: 2px solid #afca0b; background-color: #fafafa; padding: 8px;">
-<p><code>Layer</code> → <code>Datenquellenverwaltung</code> → <code>WMS</code> → <code>neu</code></p>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/LE03_add_wms_lgln.png" class="img-fluid figure-img" width="407"></p>
-<figcaption>Einbinden des LGLN WMS-Dienst mit aktuellen Luftbildern</figcaption>
-</figure>
-</div>
-<p>Nachdem die Verbindung angelegt wurde, kann QGIS sich mit dem Server verbinden und die Layer können ausgewählt und dem Projekt hinzugefügt werden.</p>
-<p><img src="images/LE03_add_wms_layer_lgln.png" class="img-fluid" alt="WMS-Layer dem Projekt hinzufügen"> <!--
-::: callout-tip
-Wenn sie sich tiefergehend mit den technischen Details der STAC implementierung beim LGLN
-auseinandersetzen möchten empfehle ich den Vortrag von Katrin Pinkert und Ralf Wohlfart auf der
-FOSSGIS 2024:
-
-<https://media.ccc.de/v/fossgis2024-38982-bereitstellung-von-freien-geodaten-opendata-mit-stac-beim-lgln#t=372>
-:::
---></p>
+<section id="kontrolle-der-einzelpunktinformationen" class="level3" data-number="10.4.4">
+<h3 data-number="10.4.4" class="anchored" data-anchor-id="kontrolle-der-einzelpunktinformationen"><span class="header-section-number">10.4.4</span> Kontrolle der Einzelpunktinformationen</h3>
+<p>Zoomen sie anschließend in die Punktwolke rein. Mithilfe des Infotools können sie Informationen zu einzelnen Punkten anzeigen lassen. Beantworten sie folgende Fragen:</p>
 <div style="border: 3px solid #ff8a0b; background-color: #ffffff; padding: 8px;">
-<p><strong>Frage:</strong></p>
-<p>Vergleichen sie die Pixelwerte eines ausgewählten Pixels in dem WMS-DOP und dem Geotiff Layer.</p>
+<p><strong>Fragen:</strong></p>
+<ol type="1">
+<li><em>In welcher Einheit werden die X-,Y-,Z- Werte angegeben?</em></li>
+<li><em>Welchen Wert hat die Klassifikation für Boden- und Andere Punkte?</em></li>
+</ol>
 </div>
 </section>
-<section id="aufgabe-03-einbinden-der-flurstücksgrenzen-als-wfs-dienste" class="level2" data-number="3.5">
-<h2 data-number="3.5" class="anchored" data-anchor-id="aufgabe-03-einbinden-der-flurstücksgrenzen-als-wfs-dienste"><span class="header-section-number">3.5</span> Aufgabe 03: Einbinden der Flurstücksgrenzen als WFS-Dienste</h2>
-<p>Nachdem Einbinden der Ortholuftbilder, sollen weitere Geodaten in Form von Vektordaten in das Projekt eingebunden werden. Als Beispiel möchten wir die amtl. Flurstückgrenzen aus dem Amtlichen Liegenschafts Kataster Informationssystems (ALKIS) nutzen. Diese Daten werden vom LGLN als Web Feature Service (WFS) bereitgestellt. Im Gegensatz zu den WMS-Diensten werden bei WFS keine vorher gerenderten Bilder, sondern die originalen Vektordaten übertragen. Das ermöglicht es den Stil anzupassen und eigenen Geographische Prozessierungen z.B. Puffer, Verschneidungen etc. durchzuführen.</p>
-<p>Auf der <a href="https://ni-lgln-opengeodata.hub.arcgis.com/apps/lgln-opengeodata::alkis/about">ALKIS-Produktseite</a> wird das Produkt vorgestellt. Hier sind auch die URLs für den WFS-Service zu finden. Für die Übung reicht der vereinfachte WFS vollkommen aus.</p>
-<p>Zum Einbinden des WFS gehen wir wie folgt vor:</p>
-<div style="border: 2px solid #afca0b; background-color: #fafafa; padding: 8px;">
-<p><code>Layer</code> → <code>Datenquellenverwaltung</code> → <code>WFS / OGC API</code> → <code>neu</code></p>
-</div>
-<p>In dem Menü kann dann die korrekte URL des Dienstes eingetragen werden</p>
+</section>
+<section id="aufgabe-03-erstellen-einer-3d-karte" class="level2" data-number="10.5">
+<h2 data-number="10.5" class="anchored" data-anchor-id="aufgabe-03-erstellen-einer-3d-karte"><span class="header-section-number">10.5</span> Aufgabe 03: Erstellen einer 3D Karte</h2>
+<p>Im nächsten Schritt soll eine 3D-Karte der Punktwolke angefertigt werden. Dazu kann unter Ansicht-&gt; 3D-Kartenansichten-&gt; Neue 3D-Kartenansicht eine 3D Ansicht angelegt werden. Diese erscheint zunächst in einem neuen QGIS-Fenster und enthält die Layer die auch in der 2D Ansicht aktiviert sind. Das Luftbild wird flach und deutlich unterhalb der Punktwolke angezeigt. Das kann in den Konfigurationen (Schraubenschlüsselsymbol) geändert werden. Dort muss der Geländetyp umgestellt werden. Da wir kein eigenen Geländemodell haben, nutzen wir die Option “online”. Zusätzlich können für die Darstellung der Punkte die Effekte: <em>“Schatten anzeigen”</em>, <em>“Eye-Dome-Lightning”</em> und <em>“Umgebungsverdeckung aktiviert”</em> werden, um die Darstellung zu verbessern.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/LE03_add_wfs_lgln.png" class="img-fluid figure-img" width="448"></p>
-<figcaption>Einbinden eines WFS-Dienstes</figcaption>
+<p><img src="images/LE10_3D_Map.png" class="img-fluid figure-img"></p>
+<figcaption>3D Ansicht der Punktwolke und des Luftbildes</figcaption>
 </figure>
 </div>
-<p>Nachdem die Verbindung angelegt wurde kann QGIS sich mit dem WFS-Server verbinden und die zur Verfügung stehen den Layer abrufen</p>
 </section>
-<section id="aufgabe-04-hintergrundkarte-als-vektor-kacheln" class="level2" data-number="3.6">
-<h2 data-number="3.6" class="anchored" data-anchor-id="aufgabe-04-hintergrundkarte-als-vektor-kacheln"><span class="header-section-number">3.6</span> Aufgabe 04: Hintergrundkarte als Vektor-Kacheln</h2>
-<p>Als Hintergrund Karten wollen wir einen zusätzlichen Geodatendienst in Form von Vektor-Kacheln nutzen. Basemap ist eine Kartengrundlage die auf amtlichen Daten basiert und kostenfrei von der Arbeitsgemeinschaft der Vermessungsverwaltungen der Länder der Bundesrepublik Deutschland (AdV) zur Verfügung gestellt wird. Um diese zu verwenden kann die Verbindungseinstellung per XML-Datei in QGIS importiert werden. Laden sie sich dazu folgende XML-Datei herunter und speichern sie die Datei lokal auf ihrem Rechner:</p>
-<p><a href="https://basemap.de/data/produkte/web_vektor/sonstiges/basemap_de_Web_Vektor_qgis_connection.xml" class="uri">https://basemap.de/data/produkte/web_vektor/sonstiges/basemap_de_Web_Vektor_qgis_connection.xml</a></p>
-<p>Anschließend nutzen sie die XML-Datei um die Verbindung anzulegen:</p>
-<div style="border: 2px solid #afca0b; background-color: #fafafa; padding: 8px;">
-<p><code>Layer</code> → <code>Datenquellenverwaltung</code> → Vektorkachel -&gt; laden</p>
+<section id="aufgabe-04-zuschneiden-der-punktwolke-auf-bestandesgrenzen" class="level2" data-number="10.6">
+<h2 data-number="10.6" class="anchored" data-anchor-id="aufgabe-04-zuschneiden-der-punktwolke-auf-bestandesgrenzen"><span class="header-section-number">10.6</span> Aufgabe 04: Zuschneiden der Punktwolke auf Bestandesgrenzen</h2>
+<p>Im nächsten Schritt soll die Punktwolke auf die Grenzen eines Bestands zugeschnitten werden. Dazu muss eine neues Geopackage uebung10.gpkg mit einem Polygonlayer “<em>Bestandesgrenzen”</em> und dem KBS 25832 angelegt werden. Anschließen erfassen sie manuell auf Basis des Luftbildes einen Fichtenbestand.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/LE10_Fichtenbestand.png" class="img-fluid figure-img"></p>
+<figcaption>Ausgewählter Fichtenbestand</figcaption>
+</figure>
 </div>
-<p>Es wird eine neue Datenquelle “basemap.de Farbe” angelegt, die dem Projekt hinzugefügt werden kann.</p>
-<p>https://basemap.de/produkte-und-dienste/web-vektor/</p>
+<p>Nach dem das Geopackage mit der Grenze des Bestandes angelegt ist kann die Punktwolke auf diesen Bereich mit folgendem Werkzeug zugeschnitten werde:</p>
+<div style="border: 2px solid #afca0b; background-color: #fafafa; padding: 8px;">
+<p><code>Verarbeitungswerkzeuge</code> → <code>Punktwolkendatenverwaltung</code> → <code>zuschneiden</code></p>
+</div>
+<p>Der neue ALS-Datensatz enthält nun nur noch die Punkte innerhalb des Fichtenbestands. Erstellen Sie nun eine neue 3D-Kartenansicht zur Darstellung des Fichtenbestandes.</p>
 </section>
-<section id="aufgabe-05-sicher-des-nutzerprofils" class="level2" data-number="3.7">
-<h2 data-number="3.7" class="anchored" data-anchor-id="aufgabe-05-sicher-des-nutzerprofils"><span class="header-section-number">3.7</span> Aufgabe 05: Sicher des Nutzerprofils</h2>
-<p>Sie haben nun mehrere neue Datenquellen angelegt. QGIS speichert diese Datenquellen in ihrem Nutzerprofil. Beim nächsten Start von QGIS können diese Quellen wieder verwendet werden. Daher ist jetzt ein guter Zeitpunkt die Kopie ihres Nutzerprofils erneut zu sichern. Folgen Sie dazu der Anleitung in LE01 <a href="uebung01.html#sec-nutzerprofil" class="quarto-xref"><span>Kapitel 1.2.4</span></a></p>
-<!--
-## Rettungspunkte als ESRI Shapefile
-
-Das KWF stellt eine Übersicht an Rettungspunkten in Form eines ESRI Shapefiles zur Verfügung. Dieses
-kann hier heruntergeladen werden:
-
-<https://kwf2020.kwf-online.de/rettungspunkte-download-ja/>
-  
--->
+<section id="aufgabe-05-erstellen-eines-2d-profils-zur-bestimmung-der-bestandeshöhen" class="level2" data-number="10.7">
+<h2 data-number="10.7" class="anchored" data-anchor-id="aufgabe-05-erstellen-eines-2d-profils-zur-bestimmung-der-bestandeshöhen"><span class="header-section-number">10.7</span> Aufgabe 05: Erstellen eines 2D-Profils zur Bestimmung der Bestandeshöhen</h2>
+<p>QGIS bietet die Funktion 2D Transkete auch Höhenprofile genannt, für Punktwolkendaten zu erstellen. Diese Funktion ist sehr gut geeignet um Bestandesstrukturen zu analysieren (z.B. Schichtigkeit) oder Höhen von Beständen oder Einzelbäumen manuell zu vermessen. Ein neues Höhenprofil kann wie folgt angelegt werden:</p>
+<div style="border: 2px solid #afca0b; background-color: #fafafa; padding: 8px;">
+<p><code>Ansicht</code> → <code>Geländehöhenprofil</code></p>
+</div>
+<p>Dies öffnet ein neues Fenster in QGIS in dem das Profil dargestellt werden kann. Zum anlegen eines neuen Profile muss zunächst die Funktion “Kurve aufnehmen” gewählt werden und anschließend in der Karte eine Linie digitalisiert werden, entlang derer das Höhenprofil gezeichnet werden soll. Legen sie das Profil am besten längst durch den Fichtenbestand.</p>
+<p><img src="images/LE10_Hoehenprofil.png" class="img-fluid"></p>
+<p>Nutzen sie im Geländehöhenprofil das Messwerkzeug um folgende Fragen zu bestimmen:</p>
+<div style="border: 3px solid #ff8a0b; background-color: #ffffff; padding: 8px;">
+<p><strong>Fragen:</strong></p>
+<ol type="1">
+<li><em>Wie hoch sind die Fichten in dem Bestand?</em></li>
+<li><em>Wie viele Bestandesschichten gibt es?</em></li>
+</ol>
+</div>
 
 
 </section>
@@ -809,13 +810,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./uebung02.html" class="pagination-link" aria-label="Lerneinheit 02: Erstellen eines Ortholuftbildmosaiks in der Rfö Kattenbühl">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Lerneinheit 02: Erstellen eines Ortholuftbildmosaiks in der Rfö Kattenbühl</span></span>
+      <a href="./uebung09_aenderungsanalyse.html" class="pagination-link" aria-label="Lerneinheit 09: Analyse der Waldflächenänderung im Nationalpark Harz (2017-2025)">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Lerneinheit 09: Analyse der Waldflächenänderung im Nationalpark Harz (2017-2025)</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./uebung04.html" class="pagination-link" aria-label="Lerneinheit 04: Erstellung einer Satellitenbildkarte des Nationalpark Harz">
-        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Lerneinheit 04: Erstellung einer Satellitenbildkarte des Nationalpark Harz</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./references.html" class="pagination-link" aria-label="Referenzen">
+        <span class="nav-page-text">Referenzen</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

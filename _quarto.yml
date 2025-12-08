@@ -27,6 +27,7 @@ book:
     - uebung07_bildklassifikation.qmd
     - uebung08_validierung.qmd
     - uebung09_aenderungsanalyse.qmd
+    - uebung10_Laserscanning.qmd
     - references.qmd
 
 bibliography: references.bib

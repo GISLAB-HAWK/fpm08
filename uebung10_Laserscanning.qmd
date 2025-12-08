@@ -24,13 +24,15 @@ Die Studierenden sollen:
 -   Ein ALS-Datensatz in QGIS importieren
 -   Eigenschaften des ALS-Datensatzes untersuchen
 -   Eine 3D-Karte zum Visualisieren der Punktwolke anlegen
--   Eine 2D-Transekt der Punktwolke anlegen
--   Einzelbaumhöhen bestimmen
+-   Eine 2D-Transekt der Punktwolke anlegen und Einzelbaumhöhen bestimmen
 
 **Aufgaben**
 
 1.  Raster- und Vektordaten importieren
-2.  
+2.  2D Visualisierung und Untersuchung der ALS-Daten
+3.  Erstellen einer 3D-Karte in QGIS
+4.  Zuschneiden der Punktwolke für einzelne Bestände
+5.  Erstellen eines 2D Profils zur Bestimmung der Bestandeshöhe
 
 ## Aufgabe 0: Anlegen eine neuen QGIS-Projektes und Kontrolle des Nutzerprofils
 
@@ -47,17 +49,174 @@ Nutzerprofil wieder her (siehe auch LE01 @sec-nutzerprofil).
 ### **ALS-Daten**
 
 Laden sie sich die ALS-Daten für das Jahr 2023 aus dem Solling (*"*ALS_Solling_2023.copc.laz*"*)
-herunter und legen sie die Datei in ihr Projektordner und QGIS ab.
+herunter und legen sie die Datei in ihr Projektordner ab.
 
 <https://cloud.hawk.de/index.php/s/Lp4E6kfJKJak7Wq>
+
+Importieren sie die ALS-Daten in ihr QGIS-Projekt. 
 
 ### **Luftbilder**
 
 Bei der Befliegung im Sommer 2023 wurden im Flugzeug neben dem LiDAR-Sensor auch eine digitale
 Luftbildkamera verwendet um gleichzeitig LiDAR- und Luftbildaufnahmen anzufertigen. Das digitale
 Orthophoto (DOP) hat eine sehr hohe räumliche Auflösung von 7cm. Sie können es sich als WMS-Layer in
-QGIS einbinden. Die WMS-Adresse zum einbinden des Luftbildes lautet:
+QGIS einbinden (siehe dazu: @sec-wms}. Die URL-Adresse des WMS-Layers des Luftbildes ist:
 
 https://gislab.hawk.de/public/0X1A4MLEZ27S/RGB
 
 ## Aufgabe 02: Untersuchung der Eigenschaften des ALS-Datensatzes
+
+### 2D Darstellung der ALS-Daten
+
+Nach dem Import der ALS-Daten werden diese als einzelne Punkte im QGIS angezeigt. Standardmäßig
+werden die Punkte nach ihrer Klasse eingefärbt. Unter Layer-\>Eigenschaften-\>Symbolisierung können
+auch andere Visualisierung gewählt werden. Test sie die verschiedenen Darstellungsmöglichkeiten.
+
+### Kontrolle & Korrektur des Koordinatenbezugssystems
+
+Im ersten Schritt werden die Metadaten der ALS-Daten überprüft. Öffnen sie dazu die
+Layereigenschaften und betrachten sie die dort angegeben Informationen:
+
+![](images/LE10_Layereigenschaften.png)
+
+Insgesamt enthält der Datensatz 16,7 Millionen Punkte, allerdings ist kein Koordinatenbezugsystem
+angegeben. Für die spätere Verarbeitung ist es wichtig, dass ein korrektes KBS zugewiesen wird. Dies
+kann mit den Punktwolkenverarbeitungswerkzeugen in QGIS wie folgt zugewiesen werden:
+
+::: {style="border: 2px solid #afca0b; background-color: #fafafa; padding: 8px;"}
+`Verarbeitungswerkzeuge` → `Punktwolkendatenverwaltung` → `Projektion zuweisen`
+
+In der Funktion wählen wir dann das Koordinatensystem EPSG:25832 und speichern die Punktwolke unter
+*ALS_Solling_2023_UTM32N.laz*
+:::
+
+Nach dem sie die Punktwolke mit den korrekten KBS-Informationen geladen haben, können sie die andere
+Punktwolke aus dem QGIS-Projekt entfernen.
+
+### Untersuchung der Punktverteilung und Berechnung der Punktwolkendichte
+
+Zoomen sie in die ALS-Punktwolke soweit, dass sie die einzelnen Punkte sehen können und beantworten
+sie folgende Fragen :
+
+::: {style="border: 3px solid #ff8a0b; background-color: #ffffff; padding: 8px;"}
+**Fragen:**
+
+1.  *Wie stellt sich die räumliche Verteilung der Punkte dar?*
+2.  *Wie groß sind die mittleren Abstände zwischen den Punkten?*
+3.  *Gibt es Unterschiede in den Abständen zwischen den Boden- und den anderen Punkten?*
+4.  *Gibt es Bereiche in denen die Punktwolkendichte sehr niedrig ist? Wenn ja wo?*
+
+:::
+
+Die Punktwolkendichte wird üblicherweise in Punkten/m² angegeben. Da für jeden LiDAR-Puls mehrere
+Punkte registriert werden, sollte bei der Berechnung der Punktdichte nur ein Punkt pro Puls
+berücksichtigt werden. Daher muss die Punktwolke zunächst gefiltert werden, sodass jeweils nur der
+erste Punkt/Return enthalten ist. Dies kann mithilfe der Filterfunktion durchgeführt werden.
+
+::: {style="border: 2px solid #afca0b; background-color: #fafafa; padding: 8px;"}
+`Verarbeitungswerkzeuge` → `Punktwolkenentnahme` → `Filter`
+:::
+
+In der Funktion kann eine Filterausdruck angegeben werden. Zur Filterung auf die jeweils ersten
+Returns (First return) setzen wir den Filter `ReturnNumber = 1` und speichern die gefilterte
+Punktwolke temporär.
+
+![](images/LE10_punktwolkenfilter.png)
+
+Zur Bestimmung der Punktwolkendichte pro m² muss die Fläche in 1m² große Kacheln geteilt werden und
+pro Kacheln die Anzahl der Firstreturn-Punkte gezählt werden. QGIS bietet dazu eine Funktion an:
+
+::: {style="border: 2px solid #afca0b; background-color: #fafafa; padding: 8px;"}
+`Verarbeitungswerkzeuge` → `Punktwolkenentnahme` → `Dichte`
+:::
+
+Wenden sie diese Funktion mit folgenden Einstellungen an und speichern die das Ergebnis in ihrem
+Projektordner unter *punktwolkendichteraster.tif* ab:
+
+![](images/LE10_punktwolkendichteraster.png)
+
+Laden sie das Punktwolkendichteraster in Ihr Projekt und wählen sie die Darstellung als
+"Einzelkanalpseudofarbe" mit einer ansprechenden Farbverlauf aus.
+
+![](images/LE10_punktwolkendichteraster_ergebnis.png)
+
+::: {style="border: 3px solid #ff8a0b; background-color: #ffffff; padding: 8px;"}
+**Frage:**
+
+1.  *Welche Muster der Punktwolkendichte können sie in der Karte feststellen und wie können diese
+    erklärt werden?*
+:::
+
+### Kontrolle der Einzelpunktinformationen
+
+Zoomen sie anschließend in die Punktwolke rein. Mithilfe des Infotools können sie Informationen zu
+einzelnen Punkten anzeigen lassen. Beantworten sie folgende Fragen:
+
+::: {style="border: 3px solid #ff8a0b; background-color: #ffffff; padding: 8px;"}
+**Fragen:**
+
+1.  *In welcher Einheit werden die X-,Y-,Z- Werte angegeben?*
+2.  *Welchen Wert hat die Klassifikation für Boden- und Andere Punkte?*
+:::
+
+## Aufgabe 03: Erstellen einer 3D Karte
+
+Im nächsten Schritt soll eine 3D-Karte der Punktwolke angefertigt werden. Dazu kann unter Ansicht-\>
+3D-Kartenansichten-\> Neue 3D-Kartenansicht eine 3D Ansicht angelegt werden. Diese erscheint
+zunächst in einem neuen QGIS-Fenster und enthält die Layer die auch in der 2D Ansicht aktiviert
+sind. Das Luftbild wird flach und deutlich unterhalb der Punktwolke angezeigt. Das kann in den
+Konfigurationen (Schraubenschlüsselsymbol) geändert werden. Dort muss der Geländetyp umgestellt
+werden. Da wir kein eigenen Geländemodell haben, nutzen wir die Option "online". Zusätzlich können
+für die Darstellung der Punkte die Effekte: *"Schatten anzeigen"*, *"Eye-Dome-Lightning"* und
+*"Umgebungsverdeckung aktiviert"* werden, um die Darstellung zu verbessern.
+
+![3D Ansicht der Punktwolke und des Luftbildes](images/LE10_3D_Map.png)
+
+## Aufgabe 04: Zuschneiden der Punktwolke auf Bestandesgrenzen
+
+Im nächsten Schritt soll die Punktwolke auf die Grenzen eines Bestands zugeschnitten werden. Dazu
+muss eine neues Geopackage uebung10.gpkg mit einem Polygonlayer "*Bestandesgrenzen"* und dem KBS
+25832 angelegt werden. Anschließen erfassen sie manuell auf Basis des Luftbildes einen
+Fichtenbestand.
+
+![Ausgewählter Fichtenbestand](images/LE10_Fichtenbestand.png)
+
+Nach dem das Geopackage mit der Grenze des Bestandes angelegt ist kann die Punktwolke auf diesen
+Bereich mit folgendem Werkzeug zugeschnitten werde:
+
+::: {style="border: 2px solid #afca0b; background-color: #fafafa; padding: 8px;"}
+
+`Verarbeitungswerkzeuge` → `Punktwolkendatenverwaltung` → `zuschneiden`
+
+:::
+
+Der neue ALS-Datensatz enthält nun nur noch die Punkte innerhalb des Fichtenbestands. Erstellen Sie
+nun eine neue 3D-Kartenansicht zur Darstellung des Fichtenbestandes.
+
+## Aufgabe 05: Erstellen eines 2D-Profils zur Bestimmung der Bestandeshöhen
+
+QGIS bietet die Funktion 2D Transkete auch Höhenprofile genannt, für Punktwolkendaten zu erstellen.
+Diese Funktion ist sehr gut geeignet um Bestandesstrukturen zu analysieren (z.B. Schichtigkeit) oder
+Höhen von Beständen oder Einzelbäumen manuell zu vermessen. Ein neues Höhenprofil kann wie folgt
+angelegt werden:
+
+::: {style="border: 2px solid #afca0b; background-color: #fafafa; padding: 8px;"}
+`Ansicht` → `Geländehöhenprofil` 
+:::
+
+Dies öffnet ein neues Fenster in QGIS in dem das Profil dargestellt werden kann. Zum anlegen eines
+neuen Profile muss zunächst die Funktion "Kurve aufnehmen" gewählt werden und anschließend in der
+Karte eine Linie digitalisiert werden, entlang derer das Höhenprofil gezeichnet werden soll. Legen
+sie das Profil am besten längst durch den Fichtenbestand.
+
+![](images/LE10_Hoehenprofil.png)
+
+Nutzen sie im Geländehöhenprofil das Messwerkzeug um folgende Fragen zu bestimmen:
+
+::: {style="border: 3px solid #ff8a0b; background-color: #ffffff; padding: 8px;"}
+**Fragen:**
+
+1.  *Wie hoch sind die Fichten in dem Bestand?*
+2.  *Wie viele Bestandesschichten gibt es?*
+
+:::
