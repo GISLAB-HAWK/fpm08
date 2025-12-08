@@ -283,6 +283,20 @@ Lizenz: Creative Commons BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc
 <h3 data-number="10.3.2" class="anchored" data-anchor-id="luftbilder"><span class="header-section-number">10.3.2</span> <strong>Luftbilder</strong></h3>
 <p>Bei der Befliegung im Sommer 2023 wurden im Flugzeug neben dem LiDAR-Sensor auch eine digitale Luftbildkamera verwendet um gleichzeitig LiDAR- und Luftbildaufnahmen anzufertigen. Das digitale Orthophoto (DOP) hat eine sehr hohe räumliche Auflösung von 7cm. Sie können es sich als WMS-Layer in QGIS einbinden (siehe dazu: <a href="uebung03.html#sec-wms" class="quarto-xref"><span>Kapitel 3.4</span></a>}. Die URL-Adresse des WMS-Layers des Luftbildes ist:</p>
 <p>https://gislab.hawk.de/public/0X1A4MLEZ27S/RGB</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tipp
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Sollte der Import des WMS-Layers nicht funktionieren oder der Zugriff zu langsam sein verwenden sie alternativ die DOP20 Layer des LGLN aus Niedersachsen mit folgender URL:</p>
+<p>https://opendata.lgln.niedersachsen.de/doorman/noauth/dop_wms</p>
+</div>
+</div>
 </section>
 </section>
 <section id="aufgabe-02-untersuchung-der-eigenschaften-des-als-datensatzes" class="level2" data-number="10.4">
@@ -315,6 +329,19 @@ Lizenz: Creative Commons BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc
 </ol>
 </div>
 <p>Die Punktwolkendichte wird üblicherweise in Punkten/m² angegeben. Da für jeden LiDAR-Puls mehrere Punkte registriert werden, sollte bei der Berechnung der Punktdichte nur ein Punkt pro Puls berücksichtigt werden. Daher muss die Punktwolke zunächst gefiltert werden, sodass jeweils nur der erste Punkt/Return enthalten ist. Dies kann mithilfe der Filterfunktion durchgeführt werden.</p>
+<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Vorsicht
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>AChtung: Sie müssen als Input die Datei <em>ALS_Solling_2023_UTM32N.copc.laz verwenden.</em> Sollte die noch nicht in Ihrem Projekt sein finden sie sie in ihrem Ordner Daten/Vektor.</p>
+</div>
+</div>
 <div style="border: 2px solid #afca0b; background-color: #fafafa; padding: 8px;">
 <p><code>Verarbeitungswerkzeuge</code> → <code>Punktwolkenentnahme</code> → <code>Filter</code></p>
 </div>
