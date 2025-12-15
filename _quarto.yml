@@ -28,6 +28,7 @@ book:
     - uebung08_validierung.qmd
     - uebung09_aenderungsanalyse.qmd
     - uebung10_Laserscanning.qmd
+    - uebung11_Photogrammetrie.qmd
     - references.qmd
 
 bibliography: references.bib

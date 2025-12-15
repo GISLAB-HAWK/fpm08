@@ -202,7 +202,7 @@ Bereich mit folgendem Werkzeug zugeschnitten werde:
 Der neue ALS-Datensatz enthält nun nur noch die Punkte innerhalb des Fichtenbestands. Erstellen Sie
 nun eine neue 3D-Kartenansicht zur Darstellung des Fichtenbestandes.
 
-## Aufgabe 05: Erstellen eines 2D-Profils zur Bestimmung der Bestandeshöhen
+## Aufgabe 05: Erstellen eines 2D-Profils zur Bestimmung der Bestandeshöhen {#sec-hoehenprofile}
 
 QGIS bietet die Funktion 2D Transkete auch Höhenprofile genannt, für Punktwolkendaten zu erstellen.
 Diese Funktion ist sehr gut geeignet um Bestandesstrukturen zu analysieren (z.B. Schichtigkeit) oder
