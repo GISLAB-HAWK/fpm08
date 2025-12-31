@@ -8,7 +8,7 @@
 
 <meta name="description" content="Übungsaufgaben für das Modul FPM08 forstliche Fernerkundung">
 
-<title>10&nbsp; Lerneinheit 10: Import und Visualisierung von Airborne Laserscanning(ALS) Daten aus dem Solling – Forstliche Fernerkundung</title>
+<title>12&nbsp; Lerneinheit 12: Gelände- und Bestandeshöhenmodelle – Forstliche Fernerkundung</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -31,8 +31,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./uebung11_Photogrammetrie.html" rel="next">
-<link href="./uebung09_aenderungsanalyse.html" rel="prev">
+<link href="./references.html" rel="next">
+<link href="./uebung11_Photogrammetrie.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
@@ -84,7 +84,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./uebung10_Laserscanning.html"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Lerneinheit 10: Import und Visualisierung von Airborne Laserscanning(ALS) Daten aus dem Solling</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./uebung12_Hoehenmodelle.html"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Lerneinheit 12: Gelände- und Bestandeshöhenmodelle</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Suchen" onclick="window.quartoOpenSearch();">
@@ -174,7 +174,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./uebung10_Laserscanning.html" class="sidebar-item-text sidebar-link active">
+  <a href="./uebung10_Laserscanning.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Lerneinheit 10: Import und Visualisierung von Airborne Laserscanning(ALS) Daten aus dem Solling</span></span></a>
   </div>
 </li>
@@ -186,7 +186,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./uebung12_Hoehenmodelle.html" class="sidebar-item-text sidebar-link">
+  <a href="./uebung12_Hoehenmodelle.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Lerneinheit 12: Gelände- und Bestandeshöhenmodelle</span></span></a>
   </div>
 </li>
@@ -206,23 +206,25 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Inhaltsverzeichnis</h2>
    
   <ul>
-  <li><a href="#lernziele-aufgabenstellung" id="toc-lernziele-aufgabenstellung" class="nav-link active" data-scroll-target="#lernziele-aufgabenstellung"><span class="header-section-number">10.1</span> Lernziele &amp; Aufgabenstellung</a></li>
-  <li><a href="#aufgabe-0-anlegen-eine-neuen-qgis-projektes-und-kontrolle-des-nutzerprofils" id="toc-aufgabe-0-anlegen-eine-neuen-qgis-projektes-und-kontrolle-des-nutzerprofils" class="nav-link" data-scroll-target="#aufgabe-0-anlegen-eine-neuen-qgis-projektes-und-kontrolle-des-nutzerprofils"><span class="header-section-number">10.2</span> Aufgabe 0: Anlegen eine neuen QGIS-Projektes und Kontrolle des Nutzerprofils</a></li>
-  <li><a href="#aufgabe-01-download-und-import-der-geodaten" id="toc-aufgabe-01-download-und-import-der-geodaten" class="nav-link" data-scroll-target="#aufgabe-01-download-und-import-der-geodaten"><span class="header-section-number">10.3</span> Aufgabe 01: Download und Import der Geodaten</a>
+  <li><a href="#lernziele-aufgabenstellung" id="toc-lernziele-aufgabenstellung" class="nav-link active" data-scroll-target="#lernziele-aufgabenstellung"><span class="header-section-number">12.1</span> Lernziele &amp; Aufgabenstellung</a></li>
+  <li><a href="#aufgabe-0-anlegen-eine-neuen-qgis-projektes-und-kontrolle-des-nutzerprofils" id="toc-aufgabe-0-anlegen-eine-neuen-qgis-projektes-und-kontrolle-des-nutzerprofils" class="nav-link" data-scroll-target="#aufgabe-0-anlegen-eine-neuen-qgis-projektes-und-kontrolle-des-nutzerprofils"><span class="header-section-number">12.2</span> Aufgabe 0: Anlegen eine neuen QGIS-Projektes und Kontrolle des Nutzerprofils</a></li>
+  <li><a href="#aufgabe-01-download-und-import-der-geodaten" id="toc-aufgabe-01-download-und-import-der-geodaten" class="nav-link" data-scroll-target="#aufgabe-01-download-und-import-der-geodaten"><span class="header-section-number">12.3</span> Aufgabe 01: Download und Import der Geodaten</a>
   <ul class="collapse">
-  <li><a href="#als-daten" id="toc-als-daten" class="nav-link" data-scroll-target="#als-daten"><span class="header-section-number">10.3.1</span> <strong>ALS-Daten</strong></a></li>
-  <li><a href="#luftbilder" id="toc-luftbilder" class="nav-link" data-scroll-target="#luftbilder"><span class="header-section-number">10.3.2</span> <strong>Luftbilder</strong></a></li>
+  <li><a href="#als-basierte-punktwolkendaten" id="toc-als-basierte-punktwolkendaten" class="nav-link" data-scroll-target="#als-basierte-punktwolkendaten"><span class="header-section-number">12.3.1</span> <strong>ALS-basierte Punktwolkendaten</strong></a></li>
+  <li><a href="#vektordaten" id="toc-vektordaten" class="nav-link" data-scroll-target="#vektordaten"><span class="header-section-number">12.3.2</span> Vektordaten</a></li>
   </ul></li>
-  <li><a href="#aufgabe-02-untersuchung-der-eigenschaften-des-als-datensatzes" id="toc-aufgabe-02-untersuchung-der-eigenschaften-des-als-datensatzes" class="nav-link" data-scroll-target="#aufgabe-02-untersuchung-der-eigenschaften-des-als-datensatzes"><span class="header-section-number">10.4</span> Aufgabe 02: Untersuchung der Eigenschaften des ALS-Datensatzes</a>
+  <li><a href="#aufgabe-02-kontrolle-der-max.-steigung-für-maschinenwege" id="toc-aufgabe-02-kontrolle-der-max.-steigung-für-maschinenwege" class="nav-link" data-scroll-target="#aufgabe-02-kontrolle-der-max.-steigung-für-maschinenwege"><span class="header-section-number">12.4</span> Aufgabe 02: Kontrolle der max. Steigung für Maschinenwege</a>
   <ul class="collapse">
-  <li><a href="#d-darstellung-der-als-daten" id="toc-d-darstellung-der-als-daten" class="nav-link" data-scroll-target="#d-darstellung-der-als-daten"><span class="header-section-number">10.4.1</span> 2D Darstellung der ALS-Daten</a></li>
-  <li><a href="#kontrolle-korrektur-des-koordinatenbezugssystems" id="toc-kontrolle-korrektur-des-koordinatenbezugssystems" class="nav-link" data-scroll-target="#kontrolle-korrektur-des-koordinatenbezugssystems"><span class="header-section-number">10.4.2</span> Kontrolle &amp; Korrektur des Koordinatenbezugssystems</a></li>
-  <li><a href="#untersuchung-der-punktverteilung-und-berechnung-der-punktwolkendichte" id="toc-untersuchung-der-punktverteilung-und-berechnung-der-punktwolkendichte" class="nav-link" data-scroll-target="#untersuchung-der-punktverteilung-und-berechnung-der-punktwolkendichte"><span class="header-section-number">10.4.3</span> Untersuchung der Punktverteilung und Berechnung der Punktwolkendichte</a></li>
-  <li><a href="#kontrolle-der-einzelpunktinformationen" id="toc-kontrolle-der-einzelpunktinformationen" class="nav-link" data-scroll-target="#kontrolle-der-einzelpunktinformationen"><span class="header-section-number">10.4.4</span> Kontrolle der Einzelpunktinformationen</a></li>
+  <li><a href="#visualisierung-des-geländemodells" id="toc-visualisierung-des-geländemodells" class="nav-link" data-scroll-target="#visualisierung-des-geländemodells"><span class="header-section-number">12.4.1</span> Visualisierung des Geländemodells</a></li>
+  <li><a href="#kartierung-des-maschinenwegs" id="toc-kartierung-des-maschinenwegs" class="nav-link" data-scroll-target="#kartierung-des-maschinenwegs"><span class="header-section-number">12.4.2</span> Kartierung des Maschinenwegs</a></li>
+  <li><a href="#analyse-der-steigung" id="toc-analyse-der-steigung" class="nav-link" data-scroll-target="#analyse-der-steigung"><span class="header-section-number">12.4.3</span> Analyse der Steigung</a></li>
   </ul></li>
-  <li><a href="#aufgabe-03-erstellen-einer-3d-karte" id="toc-aufgabe-03-erstellen-einer-3d-karte" class="nav-link" data-scroll-target="#aufgabe-03-erstellen-einer-3d-karte"><span class="header-section-number">10.5</span> Aufgabe 03: Erstellen einer 3D Karte</a></li>
-  <li><a href="#aufgabe-04-zuschneiden-der-punktwolke-auf-bestandesgrenzen" id="toc-aufgabe-04-zuschneiden-der-punktwolke-auf-bestandesgrenzen" class="nav-link" data-scroll-target="#aufgabe-04-zuschneiden-der-punktwolke-auf-bestandesgrenzen"><span class="header-section-number">10.6</span> Aufgabe 04: Zuschneiden der Punktwolke auf Bestandesgrenzen</a></li>
-  <li><a href="#sec-hoehenprofile" id="toc-sec-hoehenprofile" class="nav-link" data-scroll-target="#sec-hoehenprofile"><span class="header-section-number">10.7</span> Aufgabe 05: Erstellen eines 2D-Profils zur Bestimmung der Bestandeshöhen</a></li>
+  <li><a href="#aufgabe-03-berechnung-der-bestandeshöhen" id="toc-aufgabe-03-berechnung-der-bestandeshöhen" class="nav-link" data-scroll-target="#aufgabe-03-berechnung-der-bestandeshöhen"><span class="header-section-number">12.5</span> Aufgabe 03 Berechnung der Bestandeshöhen</a>
+  <ul class="collapse">
+  <li><a href="#normalisieren-der-höhenmodelle" id="toc-normalisieren-der-höhenmodelle" class="nav-link" data-scroll-target="#normalisieren-der-höhenmodelle"><span class="header-section-number">12.5.1</span> Normalisieren der Höhenmodelle</a></li>
+  <li><a href="#visualisierung-als-bestandeshöhenmodell" id="toc-visualisierung-als-bestandeshöhenmodell" class="nav-link" data-scroll-target="#visualisierung-als-bestandeshöhenmodell"><span class="header-section-number">12.5.2</span> Visualisierung als Bestandeshöhenmodell</a></li>
+  <li><a href="#berechnung-der-bestandesoberhöhe-pro-bestand" id="toc-berechnung-der-bestandesoberhöhe-pro-bestand" class="nav-link" data-scroll-target="#berechnung-der-bestandesoberhöhe-pro-bestand"><span class="header-section-number">12.5.3</span> Berechnung der Bestandesoberhöhe pro Bestand</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -231,7 +233,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Lerneinheit 10: Import und Visualisierung von Airborne Laserscanning(ALS) Daten aus dem Solling</span></h1>
+<h1 class="title"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Lerneinheit 12: Gelände- und Bestandeshöhenmodelle</span></h1>
 </div>
 
 
@@ -250,185 +252,125 @@ ul.task-list li input[type="checkbox"] {
 
 <!--
 
-Skripte für die Übungen 09 des Moduls FPM08 Forstliche Fernerkundung im Studiengang
+Skripte für die Übungen 12 des Moduls FPM08 Forstliche Fernerkundung im Studiengang
 B.Sc. Forstwirtschaft an der HAWK Göttingen.
 
 Autor: Paul Magdon
-Datum: 2025-11-29
+Datum: 2025-12-31
 Lizenz: Creative Commons BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 -->
-<p><img src="images/LE10_cover.png" class="img-fluid" width="1435"></p>
-<section id="lernziele-aufgabenstellung" class="level2" data-number="10.1">
-<h2 data-number="10.1" class="anchored" data-anchor-id="lernziele-aufgabenstellung"><span class="header-section-number">10.1</span> Lernziele &amp; Aufgabenstellung</h2>
+<p><img src="images/LE12_Coverimage.png" class="img-fluid"></p>
+<p>In dieser Lehreinheit werden Höhendaten für zwei forstliche Fragestellungen ausgewertet. Im ersten Teil der Übung wird eine Reliefanalyse durchgeführt. Als Fallbeispiel soll geprüft werden, ob die max. Steigung eines Maschinenwegs eingehalten wird. Im zweiten Teil der Übung soll eine weitere forstliche Anwendung von Punktwolkendaten vorgestellt werden. Hier wird ein Bestandesoberflächenmodell erzeugt und anschließend die Oberhöhe der Bestände bestimmt.</p>
+<section id="lernziele-aufgabenstellung" class="level2" data-number="12.1">
+<h2 data-number="12.1" class="anchored" data-anchor-id="lernziele-aufgabenstellung"><span class="header-section-number">12.1</span> Lernziele &amp; Aufgabenstellung</h2>
 <p><strong>Lernziele</strong></p>
 <p>Die Studierenden sollen:</p>
 <ul>
-<li>Ein ALS-Datensatz in QGIS importieren</li>
-<li>Eigenschaften des ALS-Datensatzes untersuchen</li>
-<li>Eine 3D-Karte zum Visualisieren der Punktwolke anlegen</li>
-<li>Eine 2D-Transekt der Punktwolke anlegen und Einzelbaumhöhen bestimmen</li>
+<li><p>Ein Geländemodell aus den ALS-Daten ableiten und dieses für die Kontrolle eines Maschinenweges nutzen</p></li>
+<li><p>Ein Bestandshöhenmodell aus ALS-Daten erstellen und damit die mittlere Bestandeshöhe für alle Bestände bestimmen.</p></li>
 </ul>
 <p><strong>Aufgaben</strong></p>
 <ol type="1">
-<li>Raster- und Vektordaten importieren</li>
-<li>2D Visualisierung und Untersuchung der ALS-Daten</li>
-<li>Erstellen einer 3D-Karte in QGIS</li>
-<li>Zuschneiden der Punktwolke für einzelne Bestände</li>
-<li>Erstellen eines 2D Profils zur Bestimmung der Bestandeshöhe</li>
+<li><p>Raster- und Vektordaten importieren</p></li>
+<li><p>Kontrolle der max. Steigung eines Maschinenweges</p></li>
+<li><p>Erstellen einen nDSM und Berechnung der Bestandesoberhöhen</p></li>
 </ol>
 </section>
-<section id="aufgabe-0-anlegen-eine-neuen-qgis-projektes-und-kontrolle-des-nutzerprofils" class="level2" data-number="10.2">
-<h2 data-number="10.2" class="anchored" data-anchor-id="aufgabe-0-anlegen-eine-neuen-qgis-projektes-und-kontrolle-des-nutzerprofils"><span class="header-section-number">10.2</span> Aufgabe 0: Anlegen eine neuen QGIS-Projektes und Kontrolle des Nutzerprofils</h2>
-<p>Folgen sie der Anleitung aus LE01 <a href="uebung01.html#sec-projekt_management" class="quarto-xref"><span>Kapitel 1.3</span></a> um eine neue Ordnerstruktur und ein neues QGIS-Projekt für LE10 anzulegen. In der Übung bietet es sich an den Ordner <em>“daten”</em> weiter in die Unterordner <em>“vektor”</em> und <em>“raster”</em> zu unterteilen.</p>
+<section id="aufgabe-0-anlegen-eine-neuen-qgis-projektes-und-kontrolle-des-nutzerprofils" class="level2" data-number="12.2">
+<h2 data-number="12.2" class="anchored" data-anchor-id="aufgabe-0-anlegen-eine-neuen-qgis-projektes-und-kontrolle-des-nutzerprofils"><span class="header-section-number">12.2</span> Aufgabe 0: Anlegen eine neuen QGIS-Projektes und Kontrolle des Nutzerprofils</h2>
+<p>Folgen sie der Anleitung aus LE01 <a href="uebung01.html#sec-projekt_management" class="quarto-xref"><span>Kapitel 1.3</span></a> um eine neue Ordnerstruktur und ein neues QGIS-Projekt anzulegen. In der Übung bietet es sich an den Ordner <em>“daten”</em> weiter in die Unterordner <em>“vektor”</em> und <em>“raster”</em> zu unterteilen.</p>
 <p>Prüfen sie außerdem ob Ihr Nutzerprofil korrekt geladen wurde und ob die OTB-Funktionen im Werkzeugkasten vorhanden sind. Sollte dies nicht der Fall sein stellen sie ihr gesichertes Nutzerprofil wieder her (siehe auch LE01 <a href="uebung01.html#sec-nutzerprofil" class="quarto-xref"><span>Kapitel 1.2.4</span></a>).</p>
 </section>
-<section id="aufgabe-01-download-und-import-der-geodaten" class="level2" data-number="10.3">
-<h2 data-number="10.3" class="anchored" data-anchor-id="aufgabe-01-download-und-import-der-geodaten"><span class="header-section-number">10.3</span> Aufgabe 01: Download und Import der Geodaten</h2>
-<section id="als-daten" class="level3" data-number="10.3.1">
-<h3 data-number="10.3.1" class="anchored" data-anchor-id="als-daten"><span class="header-section-number">10.3.1</span> <strong>ALS-Daten</strong></h3>
-<p>Laden sie sich die ALS-Daten für das Jahr 2023 aus dem Solling (<em>“<em>ALS_Solling_2023.copc.laz</em>”</em>) herunter und legen sie die Datei in ihr Projektordner ab.</p>
-<p><a href="https://cloud.hawk.de/index.php/s/Lp4E6kfJKJak7Wq" class="uri">https://cloud.hawk.de/index.php/s/Lp4E6kfJKJak7Wq</a></p>
-<p>Importieren sie die ALS-Daten in ihr QGIS-Projekt.</p>
+<section id="aufgabe-01-download-und-import-der-geodaten" class="level2" data-number="12.3">
+<h2 data-number="12.3" class="anchored" data-anchor-id="aufgabe-01-download-und-import-der-geodaten"><span class="header-section-number">12.3</span> Aufgabe 01: Download und Import der Geodaten</h2>
+<section id="als-basierte-punktwolkendaten" class="level3" data-number="12.3.1">
+<h3 data-number="12.3.1" class="anchored" data-anchor-id="als-basierte-punktwolkendaten"><span class="header-section-number">12.3.1</span> <strong>ALS-basierte Punktwolkendaten</strong></h3>
+<p>Für die Übung verwenden wir Höhendaten des Thüringer Landesamts für Bodenmanagement und Geoinformation (TLBG). Diese Höhendaten wurden mit Hilfe eines Airborne Laser Scanners (ALS) erfasst. Das TLBG stellt sowohl die Punktinformation (LAZ), als auch bereits gerasterte digitale Geländemodelle (DGM) und digitale Oberflächenmodelle (DOM) mit einer räumlichen Auflösung von 1m zur Verfügung. Für die Übung verwenden wir die bereits erstellten DGM- und DOM-Rasterdatensätze.</p>
+<p>Diese können direkt im Geoportal unter dem Punkt Höhendaten heruntergeladen werden:</p>
+<p><a href="https://geoportal.thueringen.de/gdi-th/download-offene-geodaten" class="uri">https://geoportal.thueringen.de/gdi-th/download-offene-geodaten</a></p>
+<p><br>
+Wir arbeiten wieder in dem Bestand in Heiligenstadt, den wir bereits aus Übung 05 kennen. Dazu benötigen wir die Daten der Kachel 581-5691. Laden sie für diese Kachel das DOM und das DGM als Zip-Datei runter und entpacken sie die Datei in ihren Projektordner unter <em>raster</em>.</p>
 </section>
-<section id="luftbilder" class="level3" data-number="10.3.2">
-<h3 data-number="10.3.2" class="anchored" data-anchor-id="luftbilder"><span class="header-section-number">10.3.2</span> <strong>Luftbilder</strong></h3>
-<p>Bei der Befliegung im Sommer 2023 wurden im Flugzeug neben dem LiDAR-Sensor auch eine digitale Luftbildkamera verwendet um gleichzeitig LiDAR- und Luftbildaufnahmen anzufertigen. Das digitale Orthophoto (DOP) hat eine sehr hohe räumliche Auflösung von 7cm. Sie können es sich als WMS-Layer in QGIS einbinden (siehe dazu: <a href="uebung03.html#sec-wms" class="quarto-xref"><span>Kapitel 3.4</span></a>}. Die URL-Adresse des WMS-Layers des Luftbildes ist:</p>
-<p>https://gislab.hawk.de/public/0X1A4MLEZ27S/RGB</p>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Tipp
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Sollte der Import des WMS-Layers nicht funktionieren oder der Zugriff zu langsam sein verwenden sie alternativ die DOP20 Layer des LGLN aus Niedersachsen mit folgender URL:</p>
-<p>https://opendata.lgln.niedersachsen.de/doorman/noauth/dop_wms</p>
-</div>
-</div>
+<section id="vektordaten" class="level3" data-number="12.3.2">
+<h3 data-number="12.3.2" class="anchored" data-anchor-id="vektordaten"><span class="header-section-number">12.3.2</span> Vektordaten</h3>
+<p>Für die Übung arbeiten wir mit einigen Beständen aus dem FoA Heiligenstadt. Sie finden ein Geopackage mit ausgewählten Beständen unter:</p>
 </section>
 </section>
-<section id="aufgabe-02-untersuchung-der-eigenschaften-des-als-datensatzes" class="level2" data-number="10.4">
-<h2 data-number="10.4" class="anchored" data-anchor-id="aufgabe-02-untersuchung-der-eigenschaften-des-als-datensatzes"><span class="header-section-number">10.4</span> Aufgabe 02: Untersuchung der Eigenschaften des ALS-Datensatzes</h2>
-<section id="d-darstellung-der-als-daten" class="level3" data-number="10.4.1">
-<h3 data-number="10.4.1" class="anchored" data-anchor-id="d-darstellung-der-als-daten"><span class="header-section-number">10.4.1</span> 2D Darstellung der ALS-Daten</h3>
-<p>Nach dem Import der ALS-Daten werden diese als einzelne Punkte im QGIS angezeigt. Standardmäßig werden die Punkte nach ihrer Klasse eingefärbt. Unter Layer-&gt;Eigenschaften-&gt;Symbolisierung können auch andere Visualisierung gewählt werden. Test sie die verschiedenen Darstellungsmöglichkeiten.</p>
-</section>
-<section id="kontrolle-korrektur-des-koordinatenbezugssystems" class="level3" data-number="10.4.2">
-<h3 data-number="10.4.2" class="anchored" data-anchor-id="kontrolle-korrektur-des-koordinatenbezugssystems"><span class="header-section-number">10.4.2</span> Kontrolle &amp; Korrektur des Koordinatenbezugssystems</h3>
-<p>Im ersten Schritt werden die Metadaten der ALS-Daten überprüft. Öffnen sie dazu die Layereigenschaften und betrachten sie die dort angegeben Informationen:</p>
-<p><img src="images/LE10_Layereigenschaften.png" class="img-fluid"></p>
-<p>Insgesamt enthält der Datensatz 16,7 Millionen Punkte, allerdings ist kein Koordinatenbezugsystem angegeben. Für die spätere Verarbeitung ist es wichtig, dass ein korrektes KBS zugewiesen wird. Dies kann mit den Punktwolkenverarbeitungswerkzeugen in QGIS wie folgt zugewiesen werden:</p>
-<div style="border: 2px solid #afca0b; background-color: #fafafa; padding: 8px;">
-<p><code>Verarbeitungswerkzeuge</code> → <code>Punktwolkendatenverwaltung</code> → <code>Projektion zuweisen</code></p>
-<p>In der Funktion wählen wir dann das Koordinatensystem EPSG:25832 und speichern die Punktwolke unter <em>ALS_Solling_2023_UTM32N.laz</em></p>
-</div>
-<p>Nach dem sie die Punktwolke mit den korrekten KBS-Informationen geladen haben, können sie die andere Punktwolke aus dem QGIS-Projekt entfernen.</p>
-</section>
-<section id="untersuchung-der-punktverteilung-und-berechnung-der-punktwolkendichte" class="level3" data-number="10.4.3">
-<h3 data-number="10.4.3" class="anchored" data-anchor-id="untersuchung-der-punktverteilung-und-berechnung-der-punktwolkendichte"><span class="header-section-number">10.4.3</span> Untersuchung der Punktverteilung und Berechnung der Punktwolkendichte</h3>
-<p>Zoomen sie in die ALS-Punktwolke soweit, dass sie die einzelnen Punkte sehen können und beantworten sie folgende Fragen :</p>
-<div style="border: 3px solid #ff8a0b; background-color: #ffffff; padding: 8px;">
-<p><strong>Fragen:</strong></p>
-<ol type="1">
-<li><em>Wie stellt sich die räumliche Verteilung der Punkte dar?</em></li>
-<li><em>Wie groß sind die mittleren Abstände zwischen den Punkten?</em></li>
-<li><em>Gibt es Unterschiede in den Abständen zwischen den Boden- und den anderen Punkten?</em></li>
-<li><em>Gibt es Bereiche in denen die Punktwolkendichte sehr niedrig ist? Wenn ja wo?</em></li>
-</ol>
-</div>
-<p>Die Punktwolkendichte wird üblicherweise in Punkten/m² angegeben. Da für jeden LiDAR-Puls mehrere Punkte registriert werden, sollte bei der Berechnung der Punktdichte nur ein Punkt pro Puls berücksichtigt werden. Daher muss die Punktwolke zunächst gefiltert werden, sodass jeweils nur der erste Punkt/Return enthalten ist. Dies kann mithilfe der Filterfunktion durchgeführt werden.</p>
-<div class="callout callout-style-default callout-caution callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Vorsicht
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>AChtung: Sie müssen als Input die Datei <em>ALS_Solling_2023_UTM32N.copc.laz verwenden.</em> Sollte die noch nicht in Ihrem Projekt sein finden sie sie in ihrem Ordner Daten/Vektor.</p>
-</div>
-</div>
-<div style="border: 2px solid #afca0b; background-color: #fafafa; padding: 8px;">
-<p><code>Verarbeitungswerkzeuge</code> → <code>Punktwolkenentnahme</code> → <code>Filter</code></p>
-</div>
-<p>In der Funktion kann eine Filterausdruck angegeben werden. Zur Filterung auf die jeweils ersten Returns (First return) setzen wir den Filter <code>ReturnNumber = 1</code> und speichern die gefilterte Punktwolke temporär.</p>
-<p><img src="images/LE10_punktwolkenfilter.png" class="img-fluid"></p>
-<p>Zur Bestimmung der Punktwolkendichte pro m² muss die Fläche in 1m² große Kacheln geteilt werden und pro Kacheln die Anzahl der Firstreturn-Punkte gezählt werden. QGIS bietet dazu eine Funktion an:</p>
-<div style="border: 2px solid #afca0b; background-color: #fafafa; padding: 8px;">
-<p><code>Verarbeitungswerkzeuge</code> → <code>Punktwolkenentnahme</code> → <code>Dichte</code></p>
-</div>
-<p>Wenden sie diese Funktion mit folgenden Einstellungen an und speichern die das Ergebnis in ihrem Projektordner unter <em>punktwolkendichteraster.tif</em> ab:</p>
-<p><img src="images/LE10_punktwolkendichteraster.png" class="img-fluid"></p>
-<p>Laden sie das Punktwolkendichteraster in Ihr Projekt und wählen sie die Darstellung als “Einzelkanalpseudofarbe” mit einer ansprechenden Farbverlauf aus.</p>
-<p><img src="images/LE10_punktwolkendichteraster_ergebnis.png" class="img-fluid"></p>
-<div style="border: 3px solid #ff8a0b; background-color: #ffffff; padding: 8px;">
-<p><strong>Frage:</strong></p>
-<ol type="1">
-<li><em>Welche Muster der Punktwolkendichte können sie in der Karte feststellen und wie können diese erklärt werden?</em></li>
-</ol>
-</div>
-</section>
-<section id="kontrolle-der-einzelpunktinformationen" class="level3" data-number="10.4.4">
-<h3 data-number="10.4.4" class="anchored" data-anchor-id="kontrolle-der-einzelpunktinformationen"><span class="header-section-number">10.4.4</span> Kontrolle der Einzelpunktinformationen</h3>
-<p>Zoomen sie anschließend in die Punktwolke rein. Mithilfe des Infotools können sie Informationen zu einzelnen Punkten anzeigen lassen. Beantworten sie folgende Fragen:</p>
-<div style="border: 3px solid #ff8a0b; background-color: #ffffff; padding: 8px;">
-<p><strong>Fragen:</strong></p>
-<ol type="1">
-<li><em>In welcher Einheit werden die X-,Y-,Z- Werte angegeben?</em></li>
-<li><em>Welchen Wert hat die Klassifikation für Boden- und Andere Punkte?</em></li>
-</ol>
-</div>
-</section>
-</section>
-<section id="aufgabe-03-erstellen-einer-3d-karte" class="level2" data-number="10.5">
-<h2 data-number="10.5" class="anchored" data-anchor-id="aufgabe-03-erstellen-einer-3d-karte"><span class="header-section-number">10.5</span> Aufgabe 03: Erstellen einer 3D Karte</h2>
-<p>Im nächsten Schritt soll eine 3D-Karte der Punktwolke angefertigt werden. Dazu kann unter Ansicht-&gt; 3D-Kartenansichten-&gt; Neue 3D-Kartenansicht eine 3D Ansicht angelegt werden. Diese erscheint zunächst in einem neuen QGIS-Fenster und enthält die Layer die auch in der 2D Ansicht aktiviert sind. Das Luftbild wird flach und deutlich unterhalb der Punktwolke angezeigt. Das kann in den Konfigurationen (Schraubenschlüsselsymbol) geändert werden. Dort muss der Geländetyp umgestellt werden. Da wir kein eigenen Geländemodell haben, nutzen wir die Option “online”. Zusätzlich können für die Darstellung der Punkte die Effekte: <em>“Schatten anzeigen”</em>, <em>“Eye-Dome-Lightning”</em> und <em>“Umgebungsverdeckung aktiviert”</em> werden, um die Darstellung zu verbessern.</p>
+<section id="aufgabe-02-kontrolle-der-max.-steigung-für-maschinenwege" class="level2" data-number="12.4">
+<h2 data-number="12.4" class="anchored" data-anchor-id="aufgabe-02-kontrolle-der-max.-steigung-für-maschinenwege"><span class="header-section-number">12.4</span> Aufgabe 02: Kontrolle der max. Steigung für Maschinenwege</h2>
+<p>Bei der Anlage von Maschinenwegen soll die max. Steigung nicht größer als 15% sein. Im ersten Teil der Übung möchten wir auf Grundlage des Geländemodells prüfen, ob und wo die maximale Steigung eines Maschinenweges überschritten wird.</p>
+<section id="visualisierung-des-geländemodells" class="level3" data-number="12.4.1">
+<h3 data-number="12.4.1" class="anchored" data-anchor-id="visualisierung-des-geländemodells"><span class="header-section-number">12.4.1</span> Visualisierung des Geländemodells</h3>
+<p>Nachdem sie das DGM als Raster importiert haben wird es als Grauwertbild im QGIS dargestellt. Dabei werden höhere Geländepunkte hell und niedrige dunkel dargestellt. Da das Geländemodell eine sehr hohe räumliche Auflösung hat und die Höhenmessungen mit einem Laserscanner sehr genau sind, können die Maschinenwege sehr gut visualisiert werden. Am besten geht das mit einer „Schummerung“. Dabei wird ein Schattenwurf/Lichteinfall durch die Sonne simuliert.</p>
+<p><br>
+QGIS bietet die Möglichkeit zur Schummerung direkt unter <code>Layereigenschaften-&gt; Symbolisierung-&gt;Darstellungsart-&gt;Schummerung.</code></p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/LE10_3D_Map.png" class="img-fluid figure-img"></p>
-<figcaption>3D Ansicht der Punktwolke und des Luftbildes</figcaption>
+<p><img src="images/LE12_DGM_heiligenstadt_weg.png" class="img-fluid figure-img"></p>
+<figcaption>Geländemodell mit Schummerung visualisiert. Maschinenweg in blau.</figcaption>
 </figure>
 </div>
 </section>
-<section id="aufgabe-04-zuschneiden-der-punktwolke-auf-bestandesgrenzen" class="level2" data-number="10.6">
-<h2 data-number="10.6" class="anchored" data-anchor-id="aufgabe-04-zuschneiden-der-punktwolke-auf-bestandesgrenzen"><span class="header-section-number">10.6</span> Aufgabe 04: Zuschneiden der Punktwolke auf Bestandesgrenzen</h2>
-<p>Im nächsten Schritt soll die Punktwolke auf die Grenzen eines Bestands zugeschnitten werden. Dazu muss eine neues Geopackage uebung10.gpkg mit einem Polygonlayer “<em>Bestandesgrenzen”</em> und dem KBS 25832 angelegt werden. Anschließen erfassen sie manuell auf Basis des Luftbildes einen Fichtenbestand.</p>
+<section id="kartierung-des-maschinenwegs" class="level3" data-number="12.4.2">
+<h3 data-number="12.4.2" class="anchored" data-anchor-id="kartierung-des-maschinenwegs"><span class="header-section-number">12.4.2</span> Kartierung des Maschinenwegs</h3>
+<p>Zur Kartierung eines Maschinenweges legen sie ein neuen Layer mit dem Namen Weg 1 in einem neuen Geopackage mit dem Namen <em>erschliessung.gpkg</em> in ihrem Projektordner unter vektor an. Kartieren sie den Weg dann als Linie, vergleichbar mit blau eingezeichneten Weg in der Abbildung oben.</p>
+</section>
+<section id="analyse-der-steigung" class="level3" data-number="12.4.3">
+<h3 data-number="12.4.3" class="anchored" data-anchor-id="analyse-der-steigung"><span class="header-section-number">12.4.3</span> Analyse der Steigung</h3>
+<p>Für die Auswertung der Steigung entlang des Weges können wir das „Profile“ Werkzeug von QGIS verwenden. Bei der ersten Verwendung muss dieses zunächst installiert werden. Dazu öffnen sie <code>Menü-&gt;Erweiterungen-&gt;Erweiterungen verwalten</code> und installieren -&gt; und suchen dort nach der Erweiterung “Profile Tool“. Nach der erfolgreichen Installation sollten sie das Profile Tool unter Menü-&gt; Erweiterungen-&gt; Profile Tool -&gt; Terrain Profile finden.</p>
+<p>Wenn sie das „Terrain Profile“ Werkzeug starten öffnet sich ein neues Fenster. Wählen sie im Layer panel das DGM-Raster aus und klicken sie im rechten Abschnitt des Terrain Profile Tool auf „Layer Hinzufügen“. Wählen sie anschließend im Layer Panel den Layer „Weg 1“ aus und verwenden sie die Option „Ausgewählte Layer“ im Profiletool. Danach sollten sie das Höhenprofil des kartierten Weges als Profil angezeigt bekommen.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/LE10_Fichtenbestand.png" class="img-fluid figure-img"></p>
-<figcaption>Ausgewählter Fichtenbestand</figcaption>
+<p><img src="images/Le12_Hoehenprofil_Maschinenweg.png" class="img-fluid figure-img"></p>
+<figcaption>Höhenprofil des kartierten Maschinenweges</figcaption>
 </figure>
 </div>
-<p>Nach dem das Geopackage mit der Grenze des Bestandes angelegt ist kann die Punktwolke auf diesen Bereich mit folgendem Werkzeug zugeschnitten werde:</p>
-<div style="border: 2px solid #afca0b; background-color: #fafafa; padding: 8px;">
-<p><code>Verarbeitungswerkzeuge</code> → <code>Punktwolkendatenverwaltung</code> → <code>zuschneiden</code></p>
+<p>Wie sie der Abbildung entnehmen können, ist der kartierte Maschinenweg ca. 1600&nbsp;m lang und überwindet einen Höhenunterschied von ca. 415&nbsp;m-355&nbsp;m=60&nbsp;m. Daraus ergibt sich eine mittlere Steigung von 60m/1600m = 3,75%. Das Profil zeigt aber, dass die Steigung entlang des Maschinenweges nicht einheitlich ist. Sie müssen also prüfen, ob es Abschnitte mit einer Steigung &gt;15% gibt, um zu gewährleisten, dass die Maschinen den Weg sicher befahren können. Das Profile Tool kann neben der „Höhe“ auch die „Steigung in %“ als Profil darstellen. Dazu müssen sie im Profile Tool unten links von „Height“ auf „Slope %“ umstellen.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/LE12_Steigungsprofil_Maschinenweg.png" class="img-fluid figure-img"></p>
+<figcaption>Steigungsprofil</figcaption>
+</figure>
 </div>
-<p>Der neue ALS-Datensatz enthält nun nur noch die Punkte innerhalb des Fichtenbestands. Erstellen Sie nun eine neue 3D-Kartenansicht zur Darstellung des Fichtenbestandes.</p>
+<p>Das Steigungsprofil zeigt, dass es zwei Punkte gibt, welche kurze Steigungen &gt;20% haben. Wenn sie über diese Gebiete mit der Maus fahren, werden ihnen automatisch in der Karte die entsprechenden Wegabschnitte mit einem roten Punkt markiert. Da die Ausschläge im Neigungsprofil jeweils nur sehr kurz sind, handelt es sich hierbei vermutlich um Artefakte im Geländemodell. Insofern sind die Abschnitte vermutlich für die Maschinen kein Problem. Mit Hilfe des Tools wissen sie aber, welche Bereiche sie evtl. vor der Holzabfuhr nochmal kontrollieren sollten!</p>
 </section>
-<section id="sec-hoehenprofile" class="level2" data-number="10.7">
-<h2 data-number="10.7" class="anchored" data-anchor-id="sec-hoehenprofile"><span class="header-section-number">10.7</span> Aufgabe 05: Erstellen eines 2D-Profils zur Bestimmung der Bestandeshöhen</h2>
-<p>QGIS bietet die Funktion 2D Transkete auch Höhenprofile genannt, für Punktwolkendaten zu erstellen. Diese Funktion ist sehr gut geeignet um Bestandesstrukturen zu analysieren (z.B. Schichtigkeit) oder Höhen von Beständen oder Einzelbäumen manuell zu vermessen. Ein neues Höhenprofil kann wie folgt angelegt werden:</p>
-<div style="border: 2px solid #afca0b; background-color: #fafafa; padding: 8px;">
-<p><code>Ansicht</code> → <code>Geländehöhenprofil</code></p>
+</section>
+<section id="aufgabe-03-berechnung-der-bestandeshöhen" class="level2" data-number="12.5">
+<h2 data-number="12.5" class="anchored" data-anchor-id="aufgabe-03-berechnung-der-bestandeshöhen"><span class="header-section-number">12.5</span> Aufgabe 03 Berechnung der Bestandeshöhen</h2>
+<p>Im zweiten Teil der Übung sollen die Bestandesoberhöhen auf Basis des Gelände- und des Oberflächenmodells ermittelt und die Bestandesstruktur visualisiert werden.</p>
+<section id="normalisieren-der-höhenmodelle" class="level3" data-number="12.5.1">
+<h3 data-number="12.5.1" class="anchored" data-anchor-id="normalisieren-der-höhenmodelle"><span class="header-section-number">12.5.1</span> Normalisieren der Höhenmodelle</h3>
+<p>Das Gelände- und Oberflächenmodell enthält Höhenmessdaten, die sich auf den Geoid, also über Normalnull, beziehen. Für die Ermittlung der Bestandeshöhe müssen wir die Höhendaten normalisieren. Dazu muss die Höhe des Geländemodells von der des Oberflächenmodells abgezogen werden. Zu Berechnung der Differenz verwenden wir den bereits bekannten Rasterrechner:</p>
+<p><em>Menü-&gt;Raster-&gt;Rasterrechner</em></p>
+<p>Mit diesem Werkzeug berechnen wir nDSM=DOM-DGM. Das Ergebnis speichern sie unter dem Namen ndsm.tif in ihrem <em>raster</em> Ordner ab.</p>
+</section>
+<section id="visualisierung-als-bestandeshöhenmodell" class="level3" data-number="12.5.2">
+<h3 data-number="12.5.2" class="anchored" data-anchor-id="visualisierung-als-bestandeshöhenmodell"><span class="header-section-number">12.5.2</span> Visualisierung als Bestandeshöhenmodell</h3>
+<p>Im nDSM sind die Strukturen der Bestände bereits sehr gut sichtbar. Zur einfacheren Interpretation sollen die Bestandeshöhen als Pseudofarben dargestellt werden. Dazu öffnen sie die Layereigenschaften und wählen dort als Symbolisierung „Einkanalpseudofarben“. Da die Bestände keine negative Höhe haben können, setzen sie den Minimumwert auf 0. Den Maximumwert können sie auf 40 m runden. Als Farbverlauf bietet sich die „Viridis“ Palette an. Damit die Farben gut interpretiert werden können, verwenden wir den Modus „Gleiches Intervall“ mit 9 Klassen. Dadurch ergeben sich 5m Höhenklassen.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/LE12_nDSM_Heiligenstadt.png" class="img-fluid figure-img"></p>
+<figcaption>Bestandeshöhenmodell</figcaption>
+</figure>
 </div>
-<p>Dies öffnet ein neues Fenster in QGIS in dem das Profil dargestellt werden kann. Zum anlegen eines neuen Profile muss zunächst die Funktion “Kurve aufnehmen” gewählt werden und anschließend in der Karte eine Linie digitalisiert werden, entlang derer das Höhenprofil gezeichnet werden soll. Legen sie das Profil am besten längst durch den Fichtenbestand.</p>
-<p><img src="images/LE10_Hoehenprofil.png" class="img-fluid"></p>
-<p>Nutzen sie im Geländehöhenprofil das Messwerkzeug um folgende Fragen zu bestimmen:</p>
-<div style="border: 3px solid #ff8a0b; background-color: #ffffff; padding: 8px;">
-<p><strong>Fragen:</strong></p>
-<ol type="1">
-<li><em>Wie hoch sind die Fichten in dem Bestand?</em></li>
-<li><em>Wie viele Bestandesschichten gibt es?</em></li>
-</ol>
-</div>
+</section>
+<section id="berechnung-der-bestandesoberhöhe-pro-bestand" class="level3" data-number="12.5.3">
+<h3 data-number="12.5.3" class="anchored" data-anchor-id="berechnung-der-bestandesoberhöhe-pro-bestand"><span class="header-section-number">12.5.3</span> Berechnung der Bestandesoberhöhe pro Bestand</h3>
+<p>Für die ausgewählten Bestände sollen nun die Bestandesoberhöhen aus dem nDSM bestimmt werden. Dazu müssen alle Pixel, die in einem Bestand liegen, extrahiert und der Maximalwert bestimmt werden. QGIS bietet dafür die Rasteranalysefunktion „Zonenstatistik“ an, die sie in den Verarbeitungswerkzeugen finden können. Wählen sie in dieser Funktion folgende Parameter:</p>
+<ul>
+<li><p>Eingabelayer: Bestandesgrenzen_subset</p></li>
+<li><p>Rasterlayer: chm.tif</p></li>
+<li><p>Rasterkanal: 1</p></li>
+<li><p>Zu berechnende Statistik: wählen sie hier „Mittel“ und „Maximum“</p></li>
+<li><p>Räumliche Statistik: Bestandeshoehen.gpkg (in ihrem <em>vektor</em> Ordner)</p></li>
+</ul>
+<p>Im letzten Schritt können sie das neue geopackage im QGIS so darstellen, dass die Polygone in Abhängigkeit ihrer maximalen Höhe eingefärbt werden. Wählen sie dazu eine passende Symbolisierung.</p>
+<p><strong>Optional:</strong></p>
+<p>Nutzen sie die die Funktion “Geländehöhenprofil” aus der Übung 10 (siehe <a href="uebung10_Laserscanning.html#sec-hoehenprofile" class="quarto-xref"><span>Kapitel 10.7</span></a>) um für einzelnen Bestände zu prüfen ob die angegebenen Maximal- und Mittelwerte der Bestandeshöhen plausibel sind.</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -834,13 +776,13 @@ Vorsicht
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./uebung09_aenderungsanalyse.html" class="pagination-link" aria-label="Lerneinheit 09: Analyse der Waldflächenänderung im Nationalpark Harz (2017-2025)">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Lerneinheit 09: Analyse der Waldflächenänderung im Nationalpark Harz (2017-2025)</span></span>
+      <a href="./uebung11_Photogrammetrie.html" class="pagination-link" aria-label="Lerneinheit 11: Vergleich von ALS- und photogrammetrischen Punktwolken">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Lerneinheit 11: Vergleich von ALS- und photogrammetrischen Punktwolken</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./uebung11_Photogrammetrie.html" class="pagination-link" aria-label="Lerneinheit 11: Vergleich von ALS- und photogrammetrischen Punktwolken">
-        <span class="nav-page-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Lerneinheit 11: Vergleich von ALS- und photogrammetrischen Punktwolken</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./references.html" class="pagination-link" aria-label="Referenzen">
+        <span class="nav-page-text">Referenzen</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
