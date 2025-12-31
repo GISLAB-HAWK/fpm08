@@ -8,7 +8,7 @@
 
 <meta name="description" content="Übungsaufgaben für das Modul FPM08 forstliche Fernerkundung">
 
-<title>3&nbsp; Lerneinheit 03: Beschaffung von Geodaten für den Nordcampus Göttingen – Forstliche Fernerkundung</title>
+<title>12&nbsp; Lerneinheit 12: Gelände- und Bestandeshöhenmodelle – Forstliche Fernerkundung</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -31,8 +31,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./uebung04.html" rel="next">
-<link href="./uebung02.html" rel="prev">
+<link href="./references.html" rel="next">
+<link href="./uebung11_Photogrammetrie.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -70,35 +70,6 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 </head>
 
@@ -111,7 +82,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./uebung03.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Lerneinheit 03: Beschaffung von Geodaten für den Nordcampus Göttingen</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./uebung12_Hoehenmodelle.html"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Lerneinheit 12: Gelände- und Bestandeshöhenmodelle</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Suchen" onclick="window.quartoOpenSearch();">
@@ -159,7 +130,7 @@ window.Quarto = {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./uebung03.html" class="sidebar-item-text sidebar-link active">
+  <a href="./uebung03.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Lerneinheit 03: Beschaffung von Geodaten für den Nordcampus Göttingen</span></span></a>
   </div>
 </li>
@@ -213,7 +184,7 @@ window.Quarto = {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./uebung12_Hoehenmodelle.html" class="sidebar-item-text sidebar-link">
+  <a href="./uebung12_Hoehenmodelle.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Lerneinheit 12: Gelände- und Bestandeshöhenmodelle</span></span></a>
   </div>
 </li>
@@ -233,13 +204,25 @@ window.Quarto = {
     <h2 id="toc-title">Inhaltsverzeichnis</h2>
    
   <ul>
-  <li><a href="#lernziele-aufgabenstellung" id="toc-lernziele-aufgabenstellung" class="nav-link active" data-scroll-target="#lernziele-aufgabenstellung"><span class="header-section-number">3.1</span> Lernziele &amp; Aufgabenstellung</a></li>
-  <li><a href="#aufgabe-0-anlegen-eine-neuen-qgis-projektes" id="toc-aufgabe-0-anlegen-eine-neuen-qgis-projektes" class="nav-link" data-scroll-target="#aufgabe-0-anlegen-eine-neuen-qgis-projektes"><span class="header-section-number">3.2</span> Aufgabe 0: Anlegen eine neuen QGIS-Projektes</a></li>
-  <li><a href="#aufgabe-01-download-und-cir-darstellung-eines-ortholuftbildes-des-nordcampus" id="toc-aufgabe-01-download-und-cir-darstellung-eines-ortholuftbildes-des-nordcampus" class="nav-link" data-scroll-target="#aufgabe-01-download-und-cir-darstellung-eines-ortholuftbildes-des-nordcampus"><span class="header-section-number">3.3</span> Aufgabe 01: Download und CIR-Darstellung eines Ortholuftbildes des Nordcampus</a></li>
-  <li><a href="#sec-wms" id="toc-sec-wms" class="nav-link" data-scroll-target="#sec-wms"><span class="header-section-number">3.4</span> Aufgabe 02: Einbinden von WMS-Diensten zur Darstellung von Ortholuftbildern</a></li>
-  <li><a href="#aufgabe-03-einbinden-der-flurstücksgrenzen-als-wfs-dienste" id="toc-aufgabe-03-einbinden-der-flurstücksgrenzen-als-wfs-dienste" class="nav-link" data-scroll-target="#aufgabe-03-einbinden-der-flurstücksgrenzen-als-wfs-dienste"><span class="header-section-number">3.5</span> Aufgabe 03: Einbinden der Flurstücksgrenzen als WFS-Dienste</a></li>
-  <li><a href="#aufgabe-04-hintergrundkarte-als-vektor-kacheln" id="toc-aufgabe-04-hintergrundkarte-als-vektor-kacheln" class="nav-link" data-scroll-target="#aufgabe-04-hintergrundkarte-als-vektor-kacheln"><span class="header-section-number">3.6</span> Aufgabe 04: Hintergrundkarte als Vektor-Kacheln</a></li>
-  <li><a href="#aufgabe-05-sicher-des-nutzerprofils" id="toc-aufgabe-05-sicher-des-nutzerprofils" class="nav-link" data-scroll-target="#aufgabe-05-sicher-des-nutzerprofils"><span class="header-section-number">3.7</span> Aufgabe 05: Sicher des Nutzerprofils</a></li>
+  <li><a href="#lernziele-aufgabenstellung" id="toc-lernziele-aufgabenstellung" class="nav-link active" data-scroll-target="#lernziele-aufgabenstellung"><span class="header-section-number">12.1</span> Lernziele &amp; Aufgabenstellung</a></li>
+  <li><a href="#aufgabe-0-anlegen-eine-neuen-qgis-projektes-und-kontrolle-des-nutzerprofils" id="toc-aufgabe-0-anlegen-eine-neuen-qgis-projektes-und-kontrolle-des-nutzerprofils" class="nav-link" data-scroll-target="#aufgabe-0-anlegen-eine-neuen-qgis-projektes-und-kontrolle-des-nutzerprofils"><span class="header-section-number">12.2</span> Aufgabe 0: Anlegen eine neuen QGIS-Projektes und Kontrolle des Nutzerprofils</a></li>
+  <li><a href="#aufgabe-01-download-und-import-der-geodaten" id="toc-aufgabe-01-download-und-import-der-geodaten" class="nav-link" data-scroll-target="#aufgabe-01-download-und-import-der-geodaten"><span class="header-section-number">12.3</span> Aufgabe 01: Download und Import der Geodaten</a>
+  <ul class="collapse">
+  <li><a href="#als-basierte-punktwolkendaten" id="toc-als-basierte-punktwolkendaten" class="nav-link" data-scroll-target="#als-basierte-punktwolkendaten"><span class="header-section-number">12.3.1</span> <strong>ALS-basierte Punktwolkendaten</strong></a></li>
+  <li><a href="#vektordaten" id="toc-vektordaten" class="nav-link" data-scroll-target="#vektordaten"><span class="header-section-number">12.3.2</span> Vektordaten</a></li>
+  </ul></li>
+  <li><a href="#aufgabe-02-kontrolle-der-max.-steigung-für-maschinenwege" id="toc-aufgabe-02-kontrolle-der-max.-steigung-für-maschinenwege" class="nav-link" data-scroll-target="#aufgabe-02-kontrolle-der-max.-steigung-für-maschinenwege"><span class="header-section-number">12.4</span> Aufgabe 02: Kontrolle der max. Steigung für Maschinenwege</a>
+  <ul class="collapse">
+  <li><a href="#visualisierung-des-geländemodells" id="toc-visualisierung-des-geländemodells" class="nav-link" data-scroll-target="#visualisierung-des-geländemodells"><span class="header-section-number">12.4.1</span> Visualisierung des Geländemodells</a></li>
+  <li><a href="#kartierung-des-maschinenwegs" id="toc-kartierung-des-maschinenwegs" class="nav-link" data-scroll-target="#kartierung-des-maschinenwegs"><span class="header-section-number">12.4.2</span> Kartierung des Maschinenwegs</a></li>
+  <li><a href="#analyse-der-steigung" id="toc-analyse-der-steigung" class="nav-link" data-scroll-target="#analyse-der-steigung"><span class="header-section-number">12.4.3</span> Analyse der Steigung</a></li>
+  </ul></li>
+  <li><a href="#aufgabe-03-berechnung-der-bestandeshöhen" id="toc-aufgabe-03-berechnung-der-bestandeshöhen" class="nav-link" data-scroll-target="#aufgabe-03-berechnung-der-bestandeshöhen"><span class="header-section-number">12.5</span> Aufgabe 03 Berechnung der Bestandeshöhen</a>
+  <ul class="collapse">
+  <li><a href="#normalisieren-der-höhenmodelle" id="toc-normalisieren-der-höhenmodelle" class="nav-link" data-scroll-target="#normalisieren-der-höhenmodelle"><span class="header-section-number">12.5.1</span> Normalisieren der Höhenmodelle</a></li>
+  <li><a href="#visualisierung-als-bestandeshöhenmodell" id="toc-visualisierung-als-bestandeshöhenmodell" class="nav-link" data-scroll-target="#visualisierung-als-bestandeshöhenmodell"><span class="header-section-number">12.5.2</span> Visualisierung als Bestandeshöhenmodell</a></li>
+  <li><a href="#berechnung-der-bestandesoberhöhe-pro-bestand" id="toc-berechnung-der-bestandesoberhöhe-pro-bestand" class="nav-link" data-scroll-target="#berechnung-der-bestandesoberhöhe-pro-bestand"><span class="header-section-number">12.5.3</span> Berechnung der Bestandesoberhöhe pro Bestand</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -248,7 +231,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Lerneinheit 03: Beschaffung von Geodaten für den Nordcampus Göttingen</span></h1>
+<h1 class="title"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Lerneinheit 12: Gelände- und Bestandeshöhenmodelle</span></h1>
 </div>
 
 
@@ -267,138 +250,125 @@ window.Quarto = {
 
 <!--
 
-Skripte für die Übungen 03 des Moduls FPM08 Forstliche Fernerkundung im Studiengang
+Skripte für die Übungen 12 des Moduls FPM08 Forstliche Fernerkundung im Studiengang
 B.Sc. Forstwirtschaft an der HAWK Göttingen.
 
 Autor: Paul Magdon
-Datum: 2025-10-18
+Datum: 2025-12-31
 Lizenz: Creative Commons BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 -->
-<section id="lernziele-aufgabenstellung" class="level2" data-number="3.1">
-<h2 data-number="3.1" class="anchored" data-anchor-id="lernziele-aufgabenstellung"><span class="header-section-number">3.1</span> Lernziele &amp; Aufgabenstellung</h2>
-<p>In der Lerneinheit 02 haben wir vorgestellt, wie Rasterdaten, welche als GeoTIF-Datei auf der Festplatte vorliegen, in ein QGIS-Projekt importiert und dargestellt werden können. Dazu wurden die Rasterdaten über das lokale Netzlaufwerk zur Verfügung gestellt. In der Lerneinheit 03 wir nun gezeigt wie frei verfügbare Raster- und Vektordaten gesucht, beschafft und in QGIS-Projekte eingebunden werden können. Dazu werden die Datendownload Portale der Landesvermessungsämter am Beispiel von Niedersachsen vorgestellt. Wenn größere Gebiete bearbeitete und / oder sehr hohe räumliche Auflösungen verwendet werden, kann dies sehr schnell zu einem hohen Zeitaufwand und Bedarf an lokalem Speicherplatz -und damit verbunden hohen Kosten für die Hardware- führen. Daher werden im GIS-Bereich zunehmende sogenannte Geodatendienste verwendet. Bei diesen Diensten werden die Daten auf zentralen Servern gespeichert und dem Nutzer einzelne Ausschnitte auf Anfrage ausgeliefert. Dieses Vorgehen bietet mehrere Vorteile:</p>
-<ul>
-<li><p>Nur die in dem jeweiligen Moment notwendigen Daten werden temporär auf dem PC des Nutzers abgelegt</p></li>
-<li><p>Die Datenverwaltung erfolgt zentral durch den Betreiber des Geodatendienstes</p></li>
-<li><p>Alle Nutzer arbeiten mit einem einheitlichen Datensatz</p></li>
-<li><p>Aktualisierungen der Daten können einfach an alle Nutzer ausgespielt werden</p></li>
-</ul>
-<p>In der Übung sollen aktuelle Daten für den Nordcampus, Göttingen beschafft und dargestellt werden. Dazu sollen die unterschiedlichen Angeboten des Open-Data Niedersachsen Portals des LGLN genutzt werden.</p>
+<p><img src="images/LE12_Coverimage.png" class="img-fluid"></p>
+<p>In dieser Lehreinheit werden Höhendaten für zwei forstliche Fragestellungen ausgewertet. Im ersten Teil der Übung wird eine Reliefanalyse durchgeführt. Als Fallbeispiel soll geprüft werden, ob die max. Steigung eines Maschinenwegs eingehalten wird. Im zweiten Teil der Übung soll eine weitere forstliche Anwendung von Punktwolkendaten vorgestellt werden. Hier wird ein Bestandesoberflächenmodell erzeugt und anschließend die Oberhöhe der Bestände bestimmt.</p>
+<section id="lernziele-aufgabenstellung" class="level2" data-number="12.1">
+<h2 data-number="12.1" class="anchored" data-anchor-id="lernziele-aufgabenstellung"><span class="header-section-number">12.1</span> Lernziele &amp; Aufgabenstellung</h2>
 <p><strong>Lernziele</strong></p>
 <p>Die Studierenden sollen:</p>
 <ul>
-<li>die Geodatenportale der Landesvermessungen kennenlernen</li>
-<li>die unterschiedlichen Schnittstellen von Geodatendienste kennenlernen</li>
-<li>Raster- und Vektordaten als Geodatendienst in QGIS importieren</li>
-<li>Eigenschaften von Geodatendiensten in QGIS untersuchen</li>
+<li><p>Ein Geländemodell aus den ALS-Daten ableiten und dieses für die Kontrolle eines Maschinenweges nutzen</p></li>
+<li><p>Ein Bestandshöhenmodell aus ALS-Daten erstellen und damit die mittlere Bestandeshöhe für alle Bestände bestimmen.</p></li>
 </ul>
 <p><strong>Aufgaben</strong></p>
 <ol type="1">
-<li><p>Laden sie ein aktuelles Luftbild des Nordcampus Göttingen vom Geodatenportal des LGLN herunter und visualisieren sie dies als CIR-Darstellung.</p></li>
-<li><p>Binden sie das aktuelle Ortholuftbildmosaik des LGLN als WMS-Service ein.</p></li>
-<li><p>Fügen sie die aktuelle Flurstückskarten aus Niedersachsen als WFS-Dienst ein.</p></li>
-<li><p>Fügen sie als Hintergrundkarte die Basemap.de als Vektor-Kacheln hinzu.</p></li>
+<li><p>Raster- und Vektordaten importieren</p></li>
+<li><p>Kontrolle der max. Steigung eines Maschinenweges</p></li>
+<li><p>Erstellen einen nDSM und Berechnung der Bestandesoberhöhen</p></li>
 </ol>
 </section>
-<section id="aufgabe-0-anlegen-eine-neuen-qgis-projektes" class="level2" data-number="3.2">
-<h2 data-number="3.2" class="anchored" data-anchor-id="aufgabe-0-anlegen-eine-neuen-qgis-projektes"><span class="header-section-number">3.2</span> Aufgabe 0: Anlegen eine neuen QGIS-Projektes</h2>
-<p>Folgen sie der Anleitung aus <a href="uebung01.html#sec-projekt_management" class="quarto-xref"><span>Kapitel 1.3</span></a> um eine neue Ordnerstruktur und ein neues QGIS-Projekt für LE03 anzulegen.</p>
+<section id="aufgabe-0-anlegen-eine-neuen-qgis-projektes-und-kontrolle-des-nutzerprofils" class="level2" data-number="12.2">
+<h2 data-number="12.2" class="anchored" data-anchor-id="aufgabe-0-anlegen-eine-neuen-qgis-projektes-und-kontrolle-des-nutzerprofils"><span class="header-section-number">12.2</span> Aufgabe 0: Anlegen eine neuen QGIS-Projektes und Kontrolle des Nutzerprofils</h2>
+<p>Folgen sie der Anleitung aus LE01 <a href="uebung01.html#sec-projekt_management" class="quarto-xref"><span>Kapitel 1.3</span></a> um eine neue Ordnerstruktur und ein neues QGIS-Projekt anzulegen. In der Übung bietet es sich an den Ordner <em>“daten”</em> weiter in die Unterordner <em>“vektor”</em> und <em>“raster”</em> zu unterteilen.</p>
+<p>Prüfen sie außerdem ob Ihr Nutzerprofil korrekt geladen wurde und ob die OTB-Funktionen im Werkzeugkasten vorhanden sind. Sollte dies nicht der Fall sein stellen sie ihr gesichertes Nutzerprofil wieder her (siehe auch LE01 <a href="uebung01.html#sec-nutzerprofil" class="quarto-xref"><span>Kapitel 1.2.4</span></a>).</p>
 </section>
-<section id="aufgabe-01-download-und-cir-darstellung-eines-ortholuftbildes-des-nordcampus" class="level2" data-number="3.3">
-<h2 data-number="3.3" class="anchored" data-anchor-id="aufgabe-01-download-und-cir-darstellung-eines-ortholuftbildes-des-nordcampus"><span class="header-section-number">3.3</span> Aufgabe 01: Download und CIR-Darstellung eines Ortholuftbildes des Nordcampus</h2>
-<p>Das Landesamt für Geoinformation und Landesvermessung Niedersachsen (LGLN) stellt über die <a href="https://ni-lgln-opengeodata.hub.arcgis.com/pages/opengeodata">OpenGeoDate.NI</a> Plattform offene amtliche Geodaten kostenfrei zur Verfügung. Ein Produkt sind die Digitalen Orthophotos (DOP). Diese können im Viewer des Portals angezeigt und ausgewählt werden.</p>
+<section id="aufgabe-01-download-und-import-der-geodaten" class="level2" data-number="12.3">
+<h2 data-number="12.3" class="anchored" data-anchor-id="aufgabe-01-download-und-import-der-geodaten"><span class="header-section-number">12.3</span> Aufgabe 01: Download und Import der Geodaten</h2>
+<section id="als-basierte-punktwolkendaten" class="level3" data-number="12.3.1">
+<h3 data-number="12.3.1" class="anchored" data-anchor-id="als-basierte-punktwolkendaten"><span class="header-section-number">12.3.1</span> <strong>ALS-basierte Punktwolkendaten</strong></h3>
+<p>Für die Übung verwenden wir Höhendaten des Thüringer Landesamts für Bodenmanagement und Geoinformation (TLBG). Diese Höhendaten wurden mit Hilfe eines Airborne Laser Scanners (ALS) erfasst. Das TLBG stellt sowohl die Punktinformation (LAZ), als auch bereits gerasterte digitale Geländemodelle (DGM) und digitale Oberflächenmodelle (DOM) mit einer räumlichen Auflösung von 1m zur Verfügung. Für die Übung verwenden wir die bereits erstellten DGM- und DOM-Rasterdatensätze.</p>
+<p>Diese können direkt im Geoportal unter dem Punkt Höhendaten heruntergeladen werden:</p>
+<p><a href="https://geoportal.thueringen.de/gdi-th/download-offene-geodaten" class="uri">https://geoportal.thueringen.de/gdi-th/download-offene-geodaten</a></p>
+<p><br>
+Wir arbeiten wieder in dem Bestand in Heiligenstadt, den wir bereits aus Übung 05 kennen. Dazu benötigen wir die Daten der Kachel 581-5691. Laden sie für diese Kachel das DOM und das DGM als Zip-Datei runter und entpacken sie die Datei in ihren Projektordner unter <em>raster</em>.</p>
+</section>
+<section id="vektordaten" class="level3" data-number="12.3.2">
+<h3 data-number="12.3.2" class="anchored" data-anchor-id="vektordaten"><span class="header-section-number">12.3.2</span> Vektordaten</h3>
+<p>Für die Übung arbeiten wir mit einigen Beständen aus dem FoA Heiligenstadt. Sie finden ein Geopackage mit ausgewählten Beständen unter:</p>
+</section>
+</section>
+<section id="aufgabe-02-kontrolle-der-max.-steigung-für-maschinenwege" class="level2" data-number="12.4">
+<h2 data-number="12.4" class="anchored" data-anchor-id="aufgabe-02-kontrolle-der-max.-steigung-für-maschinenwege"><span class="header-section-number">12.4</span> Aufgabe 02: Kontrolle der max. Steigung für Maschinenwege</h2>
+<p>Bei der Anlage von Maschinenwegen soll die max. Steigung nicht größer als 15% sein. Im ersten Teil der Übung möchten wir auf Grundlage des Geländemodells prüfen, ob und wo die maximale Steigung eines Maschinenweges überschritten wird.</p>
+<section id="visualisierung-des-geländemodells" class="level3" data-number="12.4.1">
+<h3 data-number="12.4.1" class="anchored" data-anchor-id="visualisierung-des-geländemodells"><span class="header-section-number">12.4.1</span> Visualisierung des Geländemodells</h3>
+<p>Nachdem sie das DGM als Raster importiert haben wird es als Grauwertbild im QGIS dargestellt. Dabei werden höhere Geländepunkte hell und niedrige dunkel dargestellt. Da das Geländemodell eine sehr hohe räumliche Auflösung hat und die Höhenmessungen mit einem Laserscanner sehr genau sind, können die Maschinenwege sehr gut visualisiert werden. Am besten geht das mit einer „Schummerung“. Dabei wird ein Schattenwurf/Lichteinfall durch die Sonne simuliert.</p>
+<p><br>
+QGIS bietet die Möglichkeit zur Schummerung direkt unter <code>Layereigenschaften-&gt; Symbolisierung-&gt;Darstellungsart-&gt;Schummerung.</code></p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/LE03_screenshot_LGLN_download.png" class="img-fluid figure-img"></p>
-<figcaption>Screenshot des LGLN OpenData-Viewers mit der hervorgehobenen Kachel des Nordcampus</figcaption>
+<p><img src="images/LE12_DGM_heiligenstadt_weg.png" class="img-fluid figure-img"></p>
+<figcaption>Geländemodell mit Schummerung visualisiert. Maschinenweg in blau.</figcaption>
 </figure>
 </div>
-<p>Nutzen sie den LGLN OpenData-Viewer um die Kachel (325665712), die dieses Gebiet abdeckt auszuwählen und das RGBI Bild herunterzuladen. Laden sie zusätzlich die Metadaten als XML-Datei herunter und speichern sie beides in ihrem Projektordner unter “daten”. Importieren sie die GeoTIF-Datei als Rasterbild in ihr QGIS-Projekt und stellen sie es als CIR-Falschfarbenbild dar (siehe dazu auch LE02 <a href="uebung02.html#sec-CIR_darstellung" class="quarto-xref"><span>Kapitel 2.5</span></a> . Nutzen sie anschließend das Metadatenfile um folgende Fragen zu beantworten:</p>
-<div style="border: 3px solid #ff8a0b; background-color: #ffffff; padding: 8px;">
-<p><strong>Fragen:</strong></p>
-<ol type="1">
-<li><p><em>An welchem Tag wurde die Luftbildaufnahme gemacht?</em></p></li>
-<li><p><em>Welche Kamera wurde für die Luftbildaufnahme verwendet?</em></p></li>
-<li><p><em>Welches Koordinatenreferenzsystem haben die Rasterbilder?</em></p></li>
-<li><p><em>Welche räumliche Auflösung haben die Bilder?</em></p></li>
-<li><p><em>Welche radiometrische Auflösung haben die Bilder?</em></p></li>
-<li><p><em>Welche spektrale Auflösung haben die Bilder?</em></p></li>
-</ol>
-</div>
 </section>
-<section id="sec-wms" class="level2" data-number="3.4">
-<h2 data-number="3.4" class="anchored" data-anchor-id="sec-wms"><span class="header-section-number">3.4</span> Aufgabe 02: Einbinden von WMS-Diensten zur Darstellung von Ortholuftbildern</h2>
-<p>Wie sie in dem OpenData-Viewer erkennen können, bräuchte es zur vollständigen Abdeckung des gesamten Göttinger Stadtwaldes über 35 Ortholuftbildkacheln, was einem Downloadvolumen von ca. <span class="math inline">\(35*500=1,7GB\)</span> entsprechen würde. Für eine reine Darstellung z.B. als Hintergrundkarte oder zur Abgrenzung der Waldgrenzen ist das ein erheblicher Aufwand.</p>
-<p>Das LGLN-OpenData Portal bietet neben dem Downloaddienst auch verschiedene Geodatendienste an. Für die reine Darstellung der Bilder kann ein sogenannter Web Mapping Service (WMS) genutzt werden. WMS-Dienste übertragen bereits gerendertet Bilder. Das bedeutet, dass die original Daten auf dem Server verbleiben und dort alle Einstellungen bzgl. der Symbolisierung und der Farbdarstellung zentral festgelegt werden. Der Nutzer erhält dann bereits gerenderte Bildausschnitte und kann die Darstellung z.B. der einzelnen Farbkanäle nicht mehr ändern. Der Vorteil ist, dass so wesentlich kleinere Datenmengen übertragen werden müssen.</p>
-<p>Zum einbinden von Geodatendiensten wird zunächst die URL mit den Geodatendienst benötigt. Sie finden diese URL unter WMS auf der Beschreibung der <a href="https://ni-lgln-opengeodata.hub.arcgis.com/apps/lgln-opengeodata::digitales-orthophoto-dop/about">Ortholuftbildprodukte</a> auf der LGNL-Seite.</p>
-<p>Anschließend nutzen sie in QGIS die Datenquellenverwaltung:</p>
-<div style="border: 2px solid #afca0b; background-color: #fafafa; padding: 8px;">
-<p><code>Layer</code> → <code>Datenquellenverwaltung</code> → <code>WMS</code> → <code>neu</code></p>
-</div>
+<section id="kartierung-des-maschinenwegs" class="level3" data-number="12.4.2">
+<h3 data-number="12.4.2" class="anchored" data-anchor-id="kartierung-des-maschinenwegs"><span class="header-section-number">12.4.2</span> Kartierung des Maschinenwegs</h3>
+<p>Zur Kartierung eines Maschinenweges legen sie ein neuen Layer mit dem Namen Weg 1 in einem neuen Geopackage mit dem Namen <em>erschliessung.gpkg</em> in ihrem Projektordner unter vektor an. Kartieren sie den Weg dann als Linie, vergleichbar mit blau eingezeichneten Weg in der Abbildung oben.</p>
+</section>
+<section id="analyse-der-steigung" class="level3" data-number="12.4.3">
+<h3 data-number="12.4.3" class="anchored" data-anchor-id="analyse-der-steigung"><span class="header-section-number">12.4.3</span> Analyse der Steigung</h3>
+<p>Für die Auswertung der Steigung entlang des Weges können wir das „Profile“ Werkzeug von QGIS verwenden. Bei der ersten Verwendung muss dieses zunächst installiert werden. Dazu öffnen sie <code>Menü-&gt;Erweiterungen-&gt;Erweiterungen verwalten</code> und installieren -&gt; und suchen dort nach der Erweiterung “Profile Tool“. Nach der erfolgreichen Installation sollten sie das Profile Tool unter Menü-&gt; Erweiterungen-&gt; Profile Tool -&gt; Terrain Profile finden.</p>
+<p>Wenn sie das „Terrain Profile“ Werkzeug starten öffnet sich ein neues Fenster. Wählen sie im Layer panel das DGM-Raster aus und klicken sie im rechten Abschnitt des Terrain Profile Tool auf „Layer Hinzufügen“. Wählen sie anschließend im Layer Panel den Layer „Weg 1“ aus und verwenden sie die Option „Ausgewählte Layer“ im Profiletool. Danach sollten sie das Höhenprofil des kartierten Weges als Profil angezeigt bekommen.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/LE03_add_wms_lgln.png" class="img-fluid figure-img" width="407"></p>
-<figcaption>Einbinden des LGLN WMS-Dienst mit aktuellen Luftbildern</figcaption>
+<p><img src="images/Le12_Hoehenprofil_Maschinenweg.png" class="img-fluid figure-img"></p>
+<figcaption>Höhenprofil des kartierten Maschinenweges</figcaption>
 </figure>
 </div>
-<p>Nachdem die Verbindung angelegt wurde, kann QGIS sich mit dem Server verbinden und die Layer können ausgewählt und dem Projekt hinzugefügt werden.</p>
-<p><img src="images/LE03_add_wms_layer_lgln.png" class="img-fluid" alt="WMS-Layer dem Projekt hinzufügen"> <!--
-::: callout-tip
-Wenn sie sich tiefergehend mit den technischen Details der STAC implementierung beim LGLN
-auseinandersetzen möchten empfehle ich den Vortrag von Katrin Pinkert und Ralf Wohlfart auf der
-FOSSGIS 2024:
-
-<https://media.ccc.de/v/fossgis2024-38982-bereitstellung-von-freien-geodaten-opendata-mit-stac-beim-lgln#t=372>
-:::
---></p>
-<div style="border: 3px solid #ff8a0b; background-color: #ffffff; padding: 8px;">
-<p><strong>Frage:</strong></p>
-<p>Vergleichen sie die Pixelwerte eines ausgewählten Pixels in dem WMS-DOP und dem Geotiff Layer.</p>
-</div>
-</section>
-<section id="aufgabe-03-einbinden-der-flurstücksgrenzen-als-wfs-dienste" class="level2" data-number="3.5">
-<h2 data-number="3.5" class="anchored" data-anchor-id="aufgabe-03-einbinden-der-flurstücksgrenzen-als-wfs-dienste"><span class="header-section-number">3.5</span> Aufgabe 03: Einbinden der Flurstücksgrenzen als WFS-Dienste</h2>
-<p>Nachdem Einbinden der Ortholuftbilder, sollen weitere Geodaten in Form von Vektordaten in das Projekt eingebunden werden. Als Beispiel möchten wir die amtl. Flurstückgrenzen aus dem Amtlichen Liegenschafts Kataster Informationssystems (ALKIS) nutzen. Diese Daten werden vom LGLN als Web Feature Service (WFS) bereitgestellt. Im Gegensatz zu den WMS-Diensten werden bei WFS keine vorher gerenderten Bilder, sondern die originalen Vektordaten übertragen. Das ermöglicht es den Stil anzupassen und eigenen Geographische Prozessierungen z.B. Puffer, Verschneidungen etc. durchzuführen.</p>
-<p>Auf der <a href="https://ni-lgln-opengeodata.hub.arcgis.com/apps/lgln-opengeodata::alkis/about">ALKIS-Produktseite</a> wird das Produkt vorgestellt. Hier sind auch die URLs für den WFS-Service zu finden. Für die Übung reicht der vereinfachte WFS vollkommen aus.</p>
-<p>Zum Einbinden des WFS gehen wir wie folgt vor:</p>
-<div style="border: 2px solid #afca0b; background-color: #fafafa; padding: 8px;">
-<p><code>Layer</code> → <code>Datenquellenverwaltung</code> → <code>WFS / OGC API</code> → <code>neu</code></p>
-</div>
-<p>In dem Menü kann dann die korrekte URL des Dienstes eingetragen werden</p>
+<p>Wie sie der Abbildung entnehmen können, ist der kartierte Maschinenweg ca. 1600&nbsp;m lang und überwindet einen Höhenunterschied von ca. 415&nbsp;m-355&nbsp;m=60&nbsp;m. Daraus ergibt sich eine mittlere Steigung von 60m/1600m = 3,75%. Das Profil zeigt aber, dass die Steigung entlang des Maschinenweges nicht einheitlich ist. Sie müssen also prüfen, ob es Abschnitte mit einer Steigung &gt;15% gibt, um zu gewährleisten, dass die Maschinen den Weg sicher befahren können. Das Profile Tool kann neben der „Höhe“ auch die „Steigung in %“ als Profil darstellen. Dazu müssen sie im Profile Tool unten links von „Height“ auf „Slope %“ umstellen.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/LE03_add_wfs_lgln.png" class="img-fluid figure-img" width="448"></p>
-<figcaption>Einbinden eines WFS-Dienstes</figcaption>
+<p><img src="images/LE12_Steigungsprofil_Maschinenweg.png" class="img-fluid figure-img"></p>
+<figcaption>Steigungsprofil</figcaption>
 </figure>
 </div>
-<p>Nachdem die Verbindung angelegt wurde kann QGIS sich mit dem WFS-Server verbinden und die zur Verfügung stehen den Layer abrufen</p>
+<p>Das Steigungsprofil zeigt, dass es zwei Punkte gibt, welche kurze Steigungen &gt;20% haben. Wenn sie über diese Gebiete mit der Maus fahren, werden ihnen automatisch in der Karte die entsprechenden Wegabschnitte mit einem roten Punkt markiert. Da die Ausschläge im Neigungsprofil jeweils nur sehr kurz sind, handelt es sich hierbei vermutlich um Artefakte im Geländemodell. Insofern sind die Abschnitte vermutlich für die Maschinen kein Problem. Mit Hilfe des Tools wissen sie aber, welche Bereiche sie evtl. vor der Holzabfuhr nochmal kontrollieren sollten!</p>
 </section>
-<section id="aufgabe-04-hintergrundkarte-als-vektor-kacheln" class="level2" data-number="3.6">
-<h2 data-number="3.6" class="anchored" data-anchor-id="aufgabe-04-hintergrundkarte-als-vektor-kacheln"><span class="header-section-number">3.6</span> Aufgabe 04: Hintergrundkarte als Vektor-Kacheln</h2>
-<p>Als Hintergrund Karten wollen wir einen zusätzlichen Geodatendienst in Form von Vektor-Kacheln nutzen. Basemap ist eine Kartengrundlage die auf amtlichen Daten basiert und kostenfrei von der Arbeitsgemeinschaft der Vermessungsverwaltungen der Länder der Bundesrepublik Deutschland (AdV) zur Verfügung gestellt wird. Um diese zu verwenden kann die Verbindungseinstellung per XML-Datei in QGIS importiert werden. Laden sie sich dazu folgende XML-Datei herunter und speichern sie die Datei lokal auf ihrem Rechner:</p>
-<p><a href="https://basemap.de/data/produkte/web_vektor/sonstiges/basemap_de_Web_Vektor_qgis_connection.xml" class="uri">https://basemap.de/data/produkte/web_vektor/sonstiges/basemap_de_Web_Vektor_qgis_connection.xml</a></p>
-<p>Anschließend nutzen sie die XML-Datei um die Verbindung anzulegen:</p>
-<div style="border: 2px solid #afca0b; background-color: #fafafa; padding: 8px;">
-<p><code>Layer</code> → <code>Datenquellenverwaltung</code> → Vektorkachel -&gt; laden</p>
+</section>
+<section id="aufgabe-03-berechnung-der-bestandeshöhen" class="level2" data-number="12.5">
+<h2 data-number="12.5" class="anchored" data-anchor-id="aufgabe-03-berechnung-der-bestandeshöhen"><span class="header-section-number">12.5</span> Aufgabe 03 Berechnung der Bestandeshöhen</h2>
+<p>Im zweiten Teil der Übung sollen die Bestandesoberhöhen auf Basis des Gelände- und des Oberflächenmodells ermittelt und die Bestandesstruktur visualisiert werden.</p>
+<section id="normalisieren-der-höhenmodelle" class="level3" data-number="12.5.1">
+<h3 data-number="12.5.1" class="anchored" data-anchor-id="normalisieren-der-höhenmodelle"><span class="header-section-number">12.5.1</span> Normalisieren der Höhenmodelle</h3>
+<p>Das Gelände- und Oberflächenmodell enthält Höhenmessdaten, die sich auf den Geoid, also über Normalnull, beziehen. Für die Ermittlung der Bestandeshöhe müssen wir die Höhendaten normalisieren. Dazu muss die Höhe des Geländemodells von der des Oberflächenmodells abgezogen werden. Zu Berechnung der Differenz verwenden wir den bereits bekannten Rasterrechner:</p>
+<p><em>Menü-&gt;Raster-&gt;Rasterrechner</em></p>
+<p>Mit diesem Werkzeug berechnen wir nDSM=DOM-DGM. Das Ergebnis speichern sie unter dem Namen ndsm.tif in ihrem <em>raster</em> Ordner ab.</p>
+</section>
+<section id="visualisierung-als-bestandeshöhenmodell" class="level3" data-number="12.5.2">
+<h3 data-number="12.5.2" class="anchored" data-anchor-id="visualisierung-als-bestandeshöhenmodell"><span class="header-section-number">12.5.2</span> Visualisierung als Bestandeshöhenmodell</h3>
+<p>Im nDSM sind die Strukturen der Bestände bereits sehr gut sichtbar. Zur einfacheren Interpretation sollen die Bestandeshöhen als Pseudofarben dargestellt werden. Dazu öffnen sie die Layereigenschaften und wählen dort als Symbolisierung „Einkanalpseudofarben“. Da die Bestände keine negative Höhe haben können, setzen sie den Minimumwert auf 0. Den Maximumwert können sie auf 40 m runden. Als Farbverlauf bietet sich die „Viridis“ Palette an. Damit die Farben gut interpretiert werden können, verwenden wir den Modus „Gleiches Intervall“ mit 9 Klassen. Dadurch ergeben sich 5m Höhenklassen.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/LE12_nDSM_Heiligenstadt.png" class="img-fluid figure-img"></p>
+<figcaption>Bestandeshöhenmodell</figcaption>
+</figure>
 </div>
-<p>Es wird eine neue Datenquelle “basemap.de Farbe” angelegt, die dem Projekt hinzugefügt werden kann.</p>
-<p>https://basemap.de/produkte-und-dienste/web-vektor/</p>
 </section>
-<section id="aufgabe-05-sicher-des-nutzerprofils" class="level2" data-number="3.7">
-<h2 data-number="3.7" class="anchored" data-anchor-id="aufgabe-05-sicher-des-nutzerprofils"><span class="header-section-number">3.7</span> Aufgabe 05: Sicher des Nutzerprofils</h2>
-<p>Sie haben nun mehrere neue Datenquellen angelegt. QGIS speichert diese Datenquellen in ihrem Nutzerprofil. Beim nächsten Start von QGIS können diese Quellen wieder verwendet werden. Daher ist jetzt ein guter Zeitpunkt die Kopie ihres Nutzerprofils erneut zu sichern. Folgen Sie dazu der Anleitung in LE01 <a href="uebung01.html#sec-nutzerprofil" class="quarto-xref"><span>Kapitel 1.2.4</span></a></p>
-<!--
-## Rettungspunkte als ESRI Shapefile
+<section id="berechnung-der-bestandesoberhöhe-pro-bestand" class="level3" data-number="12.5.3">
+<h3 data-number="12.5.3" class="anchored" data-anchor-id="berechnung-der-bestandesoberhöhe-pro-bestand"><span class="header-section-number">12.5.3</span> Berechnung der Bestandesoberhöhe pro Bestand</h3>
+<p>Für die ausgewählten Bestände sollen nun die Bestandesoberhöhen aus dem nDSM bestimmt werden. Dazu müssen alle Pixel, die in einem Bestand liegen, extrahiert und der Maximalwert bestimmt werden. QGIS bietet dafür die Rasteranalysefunktion „Zonenstatistik“ an, die sie in den Verarbeitungswerkzeugen finden können. Wählen sie in dieser Funktion folgende Parameter:</p>
+<ul>
+<li><p>Eingabelayer: Bestandesgrenzen_subset</p></li>
+<li><p>Rasterlayer: chm.tif</p></li>
+<li><p>Rasterkanal: 1</p></li>
+<li><p>Zu berechnende Statistik: wählen sie hier „Mittel“ und „Maximum“</p></li>
+<li><p>Räumliche Statistik: Bestandeshoehen.gpkg (in ihrem <em>vektor</em> Ordner)</p></li>
+</ul>
+<p>Im letzten Schritt können sie das neue geopackage im QGIS so darstellen, dass die Polygone in Abhängigkeit ihrer maximalen Höhe eingefärbt werden. Wählen sie dazu eine passende Symbolisierung.</p>
+<p><strong>Optional:</strong></p>
+<p>Nutzen sie die die Funktion “Geländehöhenprofil” aus der Übung 10 (siehe <a href="uebung10_Laserscanning.html#sec-hoehenprofile" class="quarto-xref"><span>Kapitel 10.7</span></a>) um für einzelnen Bestände zu prüfen ob die angegebenen Maximal- und Mittelwerte der Bestandeshöhen plausibel sind.</p>
 
-Das KWF stellt eine Übersicht an Rettungspunkten in Form eines ESRI Shapefiles zur Verfügung. Dieses
-kann hier heruntergeladen werden:
 
-<https://kwf2020.kwf-online.de/rettungspunkte-download-ja/>
-  
--->
-
-
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -821,13 +791,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./uebung02.html" class="pagination-link" aria-label="Lerneinheit 02: Erstellen eines Ortholuftbildmosaiks in der Rfö Kattenbühl">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Lerneinheit 02: Erstellen eines Ortholuftbildmosaiks in der Rfö Kattenbühl</span></span>
+      <a href="./uebung11_Photogrammetrie.html" class="pagination-link" aria-label="Lerneinheit 11: Vergleich von ALS- und photogrammetrischen Punktwolken">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Lerneinheit 11: Vergleich von ALS- und photogrammetrischen Punktwolken</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./uebung04.html" class="pagination-link" aria-label="Lerneinheit 04: Erstellung einer Satellitenbildkarte des Nationalpark Harz">
-        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Lerneinheit 04: Erstellung einer Satellitenbildkarte des Nationalpark Harz</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./references.html" class="pagination-link" aria-label="Referenzen">
+        <span class="nav-page-text">Referenzen</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

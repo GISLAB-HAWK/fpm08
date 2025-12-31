@@ -29,6 +29,7 @@ book:
     - uebung09_aenderungsanalyse.qmd
     - uebung10_Laserscanning.qmd
     - uebung11_Photogrammetrie.qmd
+    - uebung12_Hoehenmodelle.qmd
     - references.qmd
 
 bibliography: references.bib
