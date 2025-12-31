@@ -11,7 +11,7 @@ Lizenz: Creative Commons BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc
 -->
 ```
 
-# Lerneinheit 12: Vergleich von ALS- und photogrammetrischen Punktwolken
+# Lerneinheit 11: Vergleich von ALS- und photogrammetrischen Punktwolken
 
 ![Abb.1: Vergleich ALS- und bild-basierte Punktwolken](images/LE11_cover.png){width="714"}
 
@@ -80,7 +80,7 @@ Datei in ihr Projektordner ab.
 
 Importieren sie die Daten in ihr QGIS-Projekt.
 
-## Aufgabe 02:  Visualisierung und Untersuchung derPunktwolkendaten
+## Aufgabe 02: Visualisierung und Untersuchung derPunktwolkendaten
 
 ### Vergleich in der 2D-Karte
 
@@ -109,7 +109,7 @@ folgende Fragen
 **Fragen:**
 
 1.  *Wie unterscheiden sich die beiden Punktwolken hinsichtlich ihrer Höhenverteilung?*
-2.   *Stimmen die absoluten Höheninformationen der beiden Verfahren überein?*
+2.  *Stimmen die absoluten Höheninformationen der beiden Verfahren überein?*
 3.  *Welche Bestandesbereiche werden durch die bild-basierte Punktwolke kaum angebildet?*
 :::
 
