@@ -11,7 +11,7 @@ Lizenz: Creative Commons BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc
 -->
 ```
 
-# Lerneinheit 12: Gelände- und Bestandeshöhenmodelle
+# Lerneinheit 12: Verwendung von Gelände- und Bestandeshöhenmodellen
 
 ![](images/LE12_Coverimage.png)
 
@@ -19,7 +19,7 @@ In dieser Lehreinheit werden Höhendaten für zwei forstliche Fragestellungen au
 Teil der Übung wird eine Reliefanalyse durchgeführt. Als Fallbeispiel soll geprüft werden, ob die
 max. Steigung eines Maschinenwegs eingehalten wird. Im zweiten Teil der Übung soll eine weitere
 forstliche Anwendung von Punktwolkendaten vorgestellt werden. Hier wird ein
-Bestandesoberflächenmodell erzeugt und anschließend die Oberhöhe der Bestände bestimmt.
+Bestandesoberflächenmodell erzeugt und anschließend die Maximalhöhe der Bestände bestimmt.
 
 ## Lernziele & Aufgabenstellung
 
@@ -39,7 +39,7 @@ Die Studierenden sollen:
 
 2.  Kontrolle der max. Steigung eines Maschinenweges
 
-3.  Erstellen einen nDSM und Berechnung der Bestandesoberhöhen
+3.  Erstellen einen nDSM und Berechnung der maximalen Bestandeshöhe
 
 ## Aufgabe 0: Anlegen eine neuen QGIS-Projektes und Kontrolle des Nutzerprofils
 
@@ -53,7 +53,7 @@ Nutzerprofil wieder her (siehe auch LE01 @sec-nutzerprofil).
 
 ## Aufgabe 01: Download und Import der Geodaten
 
-### **ALS-basierte Punktwolkendaten**
+### **ALS-basierte Höhendaten**
 
 Für die Übung verwenden wir Höhendaten des Thüringer Landesamts für Bodenmanagement und
 Geoinformation (TLBG). Diese Höhendaten wurden mit Hilfe eines Airborne Laser Scanners (ALS)
@@ -137,10 +137,10 @@ kurz sind, handelt es sich hierbei vermutlich um Artefakte im Geländemodell. In
 Abschnitte vermutlich für die Maschinen kein Problem. Mit Hilfe des Tools wissen sie aber, welche
 Bereiche sie evtl. vor der Holzabfuhr nochmal kontrollieren sollten!
 
-## Aufgabe 03 Berechnung der Bestandeshöhen
+## Aufgabe 03 Berechnung von Bestandeshöhen
 
-Im zweiten Teil der Übung sollen die Bestandesoberhöhen auf Basis des Gelände- und des
-Oberflächenmodells ermittelt und die Bestandesstruktur visualisiert werden.
+Im zweiten Teil der Übung sollen Bestandeshöhen auf Basis des Gelände- und des Oberflächenmodells
+ermittelt und die Bestandesstruktur visualisiert werden.
 
 ### Normalisieren der Höhenmodelle
 
@@ -151,7 +151,7 @@ der Differenz verwenden wir den bereits bekannten Rasterrechner:
 
 *Menü-\>Raster-\>Rasterrechner*
 
-Mit diesem Werkzeug berechnen wir nDSM=DOM-DGM. Das Ergebnis speichern sie unter dem Namen
+Mit diesem Werkzeug berechnen wir nDOM=DOM-DGM. Das Ergebnis speichern sie unter dem Namen
 *ndsm.tif* in ihrem *raster* Ordner ab.
 
 ### Visualisierung als Bestandeshöhenmodell
@@ -166,25 +166,38 @@ Höhenklassen.
 
 ![Bestandeshöhenmodell](images/LE12_nDSM_Heiligenstadt.png)
 
-### Berechnung der Bestandesoberhöhe pro Bestand
+### Berechnung der maximalen Baumhöhe pro Bestand
 
-Für die ausgewählten Bestände sollen nun die Bestandesoberhöhen aus dem nDSM bestimmt werden. Dazu
+Für die ausgewählten Bestände sollen nun die maximalen Baumhöhen aus dem nDSM bestimmt werden. Dazu
 müssen alle Pixel, die in einem Bestand liegen, extrahiert und der Maximalwert bestimmt werden. QGIS
 bietet dafür die Rasteranalysefunktion „Zonenstatistik“ an, die sie in den Verarbeitungswerkzeugen
 finden können. Wählen sie in dieser Funktion folgende Parameter:
 
 -   Eingabelayer: Bestandesgrenzen_subset
 
--   Rasterlayer: chm.tif
+-   Rasterlayer: ndom.tif
 
 -   Rasterkanal: 1
 
--   Zu berechnende Statistik: wählen sie hier „Mittel“ und „Maximum“
+-   Zu berechnende Statistik: „Maximum“
 
--   Räumliche Statistik: Bestandeshoehen.gpkg (in ihrem *vektor* Ordner)
+-   Räumliche Statistik: max_Baumhoehen.gpkg (in ihrem *vektor* Ordner)
 
 Im letzten Schritt können sie das neue geopackage im QGIS so darstellen, dass die Polygone in
 Abhängigkeit ihrer maximalen Höhe eingefärbt werden. Wählen sie dazu eine passende Symbolisierung.
+
+::: callout-important
+## Bestandesoberhöhen vs. maximal Baumhöhen
+
+Die Bestandesoberhöhen sind in der Forsteinrichtung klar definierte Werte z.B. als H100 oder
+Weissersche Oberhöhe. Die Bestimmung dieser Höhenwerte erfordert eine Vollaufnahme inkl. Kluppung
+sämtlicher Bäume der jeweiligen Schicht. Das Vorgehen bei der raster-basierten Auswertung von
+ALS-Daten, wie in der Übung vorgestellt, berechnet die maximale Bestandeshöhe anhand des maximalen
+Pixelwertes des nDOM innerhalb der Bestandesgrenzen. Diese ist üblicherweise deutlich höher als die
+H100 und weniger aussagekräftig. Ein geeigneteres Verfahren zur Bestimmung der Oberhöhen aus
+ALS-Daten wäre die Verwendung von Höhenperzentilen z.B. 95%, diese ist jedoch in der aktuellen
+QGIS-Version nicht ohne weiteres möglich.
+:::
 
 **Optional:**
 
