@@ -65,7 +65,7 @@ Diese können direkt im Geoportal unter dem Punkt Höhendaten heruntergeladen we
 
 <https://geoportal.thueringen.de/gdi-th/download-offene-geodaten>
 
-\
+![](images/LE12_Auswahl_Hoehendaten.png)\
 Wir arbeiten wieder in dem Bestand in Heiligenstadt, den wir bereits aus Übung 05 kennen. Dazu
 benötigen wir die Daten der Kachel 581-5691. Laden sie für diese Kachel das DOM und das DGM als
 Zip-Datei runter und entpacken sie die Datei in ihren Projektordner unter *raster*.
@@ -74,6 +74,8 @@ Zip-Datei runter und entpacken sie die Datei in ihren Projektordner unter *raste
 
 Für die Übung arbeiten wir mit einigen Beständen aus dem FoA Heiligenstadt. Sie finden ein
 Geopackage mit ausgewählten Beständen unter:
+
+<https://cloud.hawk.de/index.php/s/K2MGpFCycyroYMK>
 
 ## Aufgabe 02: Kontrolle der max. Steigung für Maschinenwege
 
@@ -106,15 +108,15 @@ den Weg dann als Linie, vergleichbar mit blau eingezeichneten Weg in der Abbildu
 
 Für die Auswertung der Steigung entlang des Weges können wir das „Profile“ Werkzeug von QGIS
 verwenden. Bei der ersten Verwendung muss dieses zunächst installiert werden. Dazu öffnen sie
-`Menü->Erweiterungen->Erweiterungen verwalten` und installieren -\> und suchen dort nach der
-Erweiterung “Profile Tool“. Nach der erfolgreichen Installation sollten sie das Profile Tool unter
-Menü-\> Erweiterungen-\> Profile Tool -\> Terrain Profile finden.
+`Menü->Erweiterungen->Erweiterungen verwalten` und suchen sie dort nach der Erweiterung “Profile
+Tool“. Nach der erfolgreichen Installation sollten sie das Profile Tool unter
+`Menü-> Erweiterungen-> Profile Tool -> Terrain Profile` finden.
 
-Wenn sie das „Terrain Profile“ Werkzeug starten öffnet sich ein neues Fenster. Wählen sie im Layer
-panel das DGM-Raster aus und klicken sie im rechten Abschnitt des Terrain Profile Tool auf „Layer
-Hinzufügen“. Wählen sie anschließend im Layer Panel den Layer „Weg 1“ aus und verwenden sie die
-Option „Ausgewählte Layer“ im Profiletool. Danach sollten sie das Höhenprofil des kartierten Weges
-als Profil angezeigt bekommen.
+Wenn sie das „Terrain Profile“ Werkzeug starten öffnet sich ein neues Fenster. Wählen sie im
+Layer-Panel das DGM-Raster aus und klicken sie im rechten Abschnitt des Terrain Profile Tool auf
+„Layer Hinzufügen“. Wählen sie anschließend im Laye-Panel den Layer „Weg 1“ aus und verwenden sie
+die Option „Ausgewählte Layer“ im Profiletool. Danach sollten sie das Höhenprofil des kartierten
+Weges als Profil angezeigt bekommen.
 
 ![Höhenprofil des kartierten Maschinenweges](images/Le12_Hoehenprofil_Maschinenweg.png)
 
@@ -149,8 +151,8 @@ der Differenz verwenden wir den bereits bekannten Rasterrechner:
 
 *Menü-\>Raster-\>Rasterrechner*
 
-Mit diesem Werkzeug berechnen wir nDSM=DOM-DGM. Das Ergebnis speichern sie unter dem Namen ndsm.tif
-in ihrem *raster* Ordner ab.
+Mit diesem Werkzeug berechnen wir nDSM=DOM-DGM. Das Ergebnis speichern sie unter dem Namen
+*ndsm.tif* in ihrem *raster* Ordner ab.
 
 ### Visualisierung als Bestandeshöhenmodell
 
@@ -186,5 +188,6 @@ Abhängigkeit ihrer maximalen Höhe eingefärbt werden. Wählen sie dazu eine pa
 
 **Optional:**
 
-Nutzen sie die die Funktion "Geländehöhenprofil" aus der Übung 10 (siehe @sec-hoehenprofile) um für einzelnen
-Bestände zu prüfen ob die angegebenen Maximal- und Mittelwerte der Bestandeshöhen plausibel sind.
+Nutzen sie die die Funktion "Geländehöhenprofil" aus der Übung 10 (siehe @sec-hoehenprofile) um für
+einzelnen Bestände zu prüfen ob die angegebenen Maximal- und Mittelwerte der Bestandeshöhen
+plausibel sind.
