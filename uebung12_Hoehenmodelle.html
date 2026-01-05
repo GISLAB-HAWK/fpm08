@@ -8,7 +8,7 @@
 
 <meta name="description" content="Übungsaufgaben für das Modul FPM08 forstliche Fernerkundung">
 
-<title>12&nbsp; Lerneinheit 12: Gelände- und Bestandeshöhenmodelle – Forstliche Fernerkundung</title>
+<title>12&nbsp; Lerneinheit 12: Verwendung von Gelände- und Bestandeshöhenmodellen – Forstliche Fernerkundung</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -84,7 +84,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./uebung12_Hoehenmodelle.html"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Lerneinheit 12: Gelände- und Bestandeshöhenmodelle</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./uebung12_Hoehenmodelle.html"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Lerneinheit 12: Verwendung von Gelände- und Bestandeshöhenmodellen</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Suchen" onclick="window.quartoOpenSearch();">
@@ -187,7 +187,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./uebung12_Hoehenmodelle.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Lerneinheit 12: Gelände- und Bestandeshöhenmodelle</span></span></a>
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Lerneinheit 12: Verwendung von Gelände- und Bestandeshöhenmodellen</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -210,7 +210,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#aufgabe-0-anlegen-eine-neuen-qgis-projektes-und-kontrolle-des-nutzerprofils" id="toc-aufgabe-0-anlegen-eine-neuen-qgis-projektes-und-kontrolle-des-nutzerprofils" class="nav-link" data-scroll-target="#aufgabe-0-anlegen-eine-neuen-qgis-projektes-und-kontrolle-des-nutzerprofils"><span class="header-section-number">12.2</span> Aufgabe 0: Anlegen eine neuen QGIS-Projektes und Kontrolle des Nutzerprofils</a></li>
   <li><a href="#aufgabe-01-download-und-import-der-geodaten" id="toc-aufgabe-01-download-und-import-der-geodaten" class="nav-link" data-scroll-target="#aufgabe-01-download-und-import-der-geodaten"><span class="header-section-number">12.3</span> Aufgabe 01: Download und Import der Geodaten</a>
   <ul class="collapse">
-  <li><a href="#als-basierte-punktwolkendaten" id="toc-als-basierte-punktwolkendaten" class="nav-link" data-scroll-target="#als-basierte-punktwolkendaten"><span class="header-section-number">12.3.1</span> <strong>ALS-basierte Punktwolkendaten</strong></a></li>
+  <li><a href="#als-basierte-höhendaten" id="toc-als-basierte-höhendaten" class="nav-link" data-scroll-target="#als-basierte-höhendaten"><span class="header-section-number">12.3.1</span> <strong>ALS-basierte Höhendaten</strong></a></li>
   <li><a href="#vektordaten" id="toc-vektordaten" class="nav-link" data-scroll-target="#vektordaten"><span class="header-section-number">12.3.2</span> Vektordaten</a></li>
   </ul></li>
   <li><a href="#aufgabe-02-kontrolle-der-max.-steigung-für-maschinenwege" id="toc-aufgabe-02-kontrolle-der-max.-steigung-für-maschinenwege" class="nav-link" data-scroll-target="#aufgabe-02-kontrolle-der-max.-steigung-für-maschinenwege"><span class="header-section-number">12.4</span> Aufgabe 02: Kontrolle der max. Steigung für Maschinenwege</a>
@@ -219,11 +219,11 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#kartierung-des-maschinenwegs" id="toc-kartierung-des-maschinenwegs" class="nav-link" data-scroll-target="#kartierung-des-maschinenwegs"><span class="header-section-number">12.4.2</span> Kartierung des Maschinenwegs</a></li>
   <li><a href="#analyse-der-steigung" id="toc-analyse-der-steigung" class="nav-link" data-scroll-target="#analyse-der-steigung"><span class="header-section-number">12.4.3</span> Analyse der Steigung</a></li>
   </ul></li>
-  <li><a href="#aufgabe-03-berechnung-der-bestandeshöhen" id="toc-aufgabe-03-berechnung-der-bestandeshöhen" class="nav-link" data-scroll-target="#aufgabe-03-berechnung-der-bestandeshöhen"><span class="header-section-number">12.5</span> Aufgabe 03 Berechnung der Bestandeshöhen</a>
+  <li><a href="#aufgabe-03-berechnung-von-bestandeshöhen" id="toc-aufgabe-03-berechnung-von-bestandeshöhen" class="nav-link" data-scroll-target="#aufgabe-03-berechnung-von-bestandeshöhen"><span class="header-section-number">12.5</span> Aufgabe 03 Berechnung von Bestandeshöhen</a>
   <ul class="collapse">
   <li><a href="#normalisieren-der-höhenmodelle" id="toc-normalisieren-der-höhenmodelle" class="nav-link" data-scroll-target="#normalisieren-der-höhenmodelle"><span class="header-section-number">12.5.1</span> Normalisieren der Höhenmodelle</a></li>
   <li><a href="#visualisierung-als-bestandeshöhenmodell" id="toc-visualisierung-als-bestandeshöhenmodell" class="nav-link" data-scroll-target="#visualisierung-als-bestandeshöhenmodell"><span class="header-section-number">12.5.2</span> Visualisierung als Bestandeshöhenmodell</a></li>
-  <li><a href="#berechnung-der-bestandesoberhöhe-pro-bestand" id="toc-berechnung-der-bestandesoberhöhe-pro-bestand" class="nav-link" data-scroll-target="#berechnung-der-bestandesoberhöhe-pro-bestand"><span class="header-section-number">12.5.3</span> Berechnung der Bestandesoberhöhe pro Bestand</a></li>
+  <li><a href="#berechnung-der-maximalen-baumhöhe-pro-bestand" id="toc-berechnung-der-maximalen-baumhöhe-pro-bestand" class="nav-link" data-scroll-target="#berechnung-der-maximalen-baumhöhe-pro-bestand"><span class="header-section-number">12.5.3</span> Berechnung der maximalen Baumhöhe pro Bestand</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -233,7 +233,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Lerneinheit 12: Gelände- und Bestandeshöhenmodelle</span></h1>
+<h1 class="title"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Lerneinheit 12: Verwendung von Gelände- und Bestandeshöhenmodellen</span></h1>
 </div>
 
 
@@ -261,7 +261,7 @@ Lizenz: Creative Commons BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc
 
 -->
 <p><img src="images/LE12_Coverimage.png" class="img-fluid"></p>
-<p>In dieser Lehreinheit werden Höhendaten für zwei forstliche Fragestellungen ausgewertet. Im ersten Teil der Übung wird eine Reliefanalyse durchgeführt. Als Fallbeispiel soll geprüft werden, ob die max. Steigung eines Maschinenwegs eingehalten wird. Im zweiten Teil der Übung soll eine weitere forstliche Anwendung von Punktwolkendaten vorgestellt werden. Hier wird ein Bestandesoberflächenmodell erzeugt und anschließend die Oberhöhe der Bestände bestimmt.</p>
+<p>In dieser Lehreinheit werden Höhendaten für zwei forstliche Fragestellungen ausgewertet. Im ersten Teil der Übung wird eine Reliefanalyse durchgeführt. Als Fallbeispiel soll geprüft werden, ob die max. Steigung eines Maschinenwegs eingehalten wird. Im zweiten Teil der Übung soll eine weitere forstliche Anwendung von Punktwolkendaten vorgestellt werden. Hier wird ein Bestandesoberflächenmodell erzeugt und anschließend die Maximalhöhe der Bestände bestimmt.</p>
 <section id="lernziele-aufgabenstellung" class="level2" data-number="12.1">
 <h2 data-number="12.1" class="anchored" data-anchor-id="lernziele-aufgabenstellung"><span class="header-section-number">12.1</span> Lernziele &amp; Aufgabenstellung</h2>
 <p><strong>Lernziele</strong></p>
@@ -274,7 +274,7 @@ Lizenz: Creative Commons BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc
 <ol type="1">
 <li><p>Raster- und Vektordaten importieren</p></li>
 <li><p>Kontrolle der max. Steigung eines Maschinenweges</p></li>
-<li><p>Erstellen einen nDSM und Berechnung der Bestandesoberhöhen</p></li>
+<li><p>Erstellen einen nDSM und Berechnung der maximalen Bestandeshöhe</p></li>
 </ol>
 </section>
 <section id="aufgabe-0-anlegen-eine-neuen-qgis-projektes-und-kontrolle-des-nutzerprofils" class="level2" data-number="12.2">
@@ -284,8 +284,8 @@ Lizenz: Creative Commons BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc
 </section>
 <section id="aufgabe-01-download-und-import-der-geodaten" class="level2" data-number="12.3">
 <h2 data-number="12.3" class="anchored" data-anchor-id="aufgabe-01-download-und-import-der-geodaten"><span class="header-section-number">12.3</span> Aufgabe 01: Download und Import der Geodaten</h2>
-<section id="als-basierte-punktwolkendaten" class="level3" data-number="12.3.1">
-<h3 data-number="12.3.1" class="anchored" data-anchor-id="als-basierte-punktwolkendaten"><span class="header-section-number">12.3.1</span> <strong>ALS-basierte Punktwolkendaten</strong></h3>
+<section id="als-basierte-höhendaten" class="level3" data-number="12.3.1">
+<h3 data-number="12.3.1" class="anchored" data-anchor-id="als-basierte-höhendaten"><span class="header-section-number">12.3.1</span> <strong>ALS-basierte Höhendaten</strong></h3>
 <p>Für die Übung verwenden wir Höhendaten des Thüringer Landesamts für Bodenmanagement und Geoinformation (TLBG). Diese Höhendaten wurden mit Hilfe eines Airborne Laser Scanners (ALS) erfasst. Das TLBG stellt sowohl die Punktinformation (LAZ), als auch bereits gerasterte digitale Geländemodelle (DGM) und digitale Oberflächenmodelle (DOM) mit einer räumlichen Auflösung von 1m zur Verfügung. Für die Übung verwenden wir die bereits erstellten DGM- und DOM-Rasterdatensätze.</p>
 <p>Diese können direkt im Geoportal unter dem Punkt Höhendaten heruntergeladen werden:</p>
 <p><a href="https://geoportal.thueringen.de/gdi-th/download-offene-geodaten" class="uri">https://geoportal.thueringen.de/gdi-th/download-offene-geodaten</a></p>
@@ -337,14 +337,14 @@ QGIS bietet die Möglichkeit zur Schummerung direkt unter <code>Layereigenschaft
 <p>Das Steigungsprofil zeigt, dass es zwei Punkte gibt, welche kurze Steigungen &gt;20% haben. Wenn sie über diese Gebiete mit der Maus fahren, werden ihnen automatisch in der Karte die entsprechenden Wegabschnitte mit einem roten Punkt markiert. Da die Ausschläge im Neigungsprofil jeweils nur sehr kurz sind, handelt es sich hierbei vermutlich um Artefakte im Geländemodell. Insofern sind die Abschnitte vermutlich für die Maschinen kein Problem. Mit Hilfe des Tools wissen sie aber, welche Bereiche sie evtl. vor der Holzabfuhr nochmal kontrollieren sollten!</p>
 </section>
 </section>
-<section id="aufgabe-03-berechnung-der-bestandeshöhen" class="level2" data-number="12.5">
-<h2 data-number="12.5" class="anchored" data-anchor-id="aufgabe-03-berechnung-der-bestandeshöhen"><span class="header-section-number">12.5</span> Aufgabe 03 Berechnung der Bestandeshöhen</h2>
-<p>Im zweiten Teil der Übung sollen die Bestandesoberhöhen auf Basis des Gelände- und des Oberflächenmodells ermittelt und die Bestandesstruktur visualisiert werden.</p>
+<section id="aufgabe-03-berechnung-von-bestandeshöhen" class="level2" data-number="12.5">
+<h2 data-number="12.5" class="anchored" data-anchor-id="aufgabe-03-berechnung-von-bestandeshöhen"><span class="header-section-number">12.5</span> Aufgabe 03 Berechnung von Bestandeshöhen</h2>
+<p>Im zweiten Teil der Übung sollen Bestandeshöhen auf Basis des Gelände- und des Oberflächenmodells ermittelt und die Bestandesstruktur visualisiert werden.</p>
 <section id="normalisieren-der-höhenmodelle" class="level3" data-number="12.5.1">
 <h3 data-number="12.5.1" class="anchored" data-anchor-id="normalisieren-der-höhenmodelle"><span class="header-section-number">12.5.1</span> Normalisieren der Höhenmodelle</h3>
 <p>Das Gelände- und Oberflächenmodell enthält Höhenmessdaten, die sich auf den Geoid, also über Normalnull, beziehen. Für die Ermittlung der Bestandeshöhe müssen wir die Höhendaten normalisieren. Dazu muss die Höhe des Geländemodells von der des Oberflächenmodells abgezogen werden. Zu Berechnung der Differenz verwenden wir den bereits bekannten Rasterrechner:</p>
 <p><em>Menü-&gt;Raster-&gt;Rasterrechner</em></p>
-<p>Mit diesem Werkzeug berechnen wir nDSM=DOM-DGM. Das Ergebnis speichern sie unter dem Namen <em>ndsm.tif</em> in ihrem <em>raster</em> Ordner ab.</p>
+<p>Mit diesem Werkzeug berechnen wir nDOM=DOM-DGM. Das Ergebnis speichern sie unter dem Namen <em>ndsm.tif</em> in ihrem <em>raster</em> Ordner ab.</p>
 </section>
 <section id="visualisierung-als-bestandeshöhenmodell" class="level3" data-number="12.5.2">
 <h3 data-number="12.5.2" class="anchored" data-anchor-id="visualisierung-als-bestandeshöhenmodell"><span class="header-section-number">12.5.2</span> Visualisierung als Bestandeshöhenmodell</h3>
@@ -356,17 +356,30 @@ QGIS bietet die Möglichkeit zur Schummerung direkt unter <code>Layereigenschaft
 </figure>
 </div>
 </section>
-<section id="berechnung-der-bestandesoberhöhe-pro-bestand" class="level3" data-number="12.5.3">
-<h3 data-number="12.5.3" class="anchored" data-anchor-id="berechnung-der-bestandesoberhöhe-pro-bestand"><span class="header-section-number">12.5.3</span> Berechnung der Bestandesoberhöhe pro Bestand</h3>
-<p>Für die ausgewählten Bestände sollen nun die Bestandesoberhöhen aus dem nDSM bestimmt werden. Dazu müssen alle Pixel, die in einem Bestand liegen, extrahiert und der Maximalwert bestimmt werden. QGIS bietet dafür die Rasteranalysefunktion „Zonenstatistik“ an, die sie in den Verarbeitungswerkzeugen finden können. Wählen sie in dieser Funktion folgende Parameter:</p>
+<section id="berechnung-der-maximalen-baumhöhe-pro-bestand" class="level3" data-number="12.5.3">
+<h3 data-number="12.5.3" class="anchored" data-anchor-id="berechnung-der-maximalen-baumhöhe-pro-bestand"><span class="header-section-number">12.5.3</span> Berechnung der maximalen Baumhöhe pro Bestand</h3>
+<p>Für die ausgewählten Bestände sollen nun die maximalen Baumhöhen aus dem nDSM bestimmt werden. Dazu müssen alle Pixel, die in einem Bestand liegen, extrahiert und der Maximalwert bestimmt werden. QGIS bietet dafür die Rasteranalysefunktion „Zonenstatistik“ an, die sie in den Verarbeitungswerkzeugen finden können. Wählen sie in dieser Funktion folgende Parameter:</p>
 <ul>
 <li><p>Eingabelayer: Bestandesgrenzen_subset</p></li>
-<li><p>Rasterlayer: chm.tif</p></li>
+<li><p>Rasterlayer: ndom.tif</p></li>
 <li><p>Rasterkanal: 1</p></li>
-<li><p>Zu berechnende Statistik: wählen sie hier „Mittel“ und „Maximum“</p></li>
-<li><p>Räumliche Statistik: Bestandeshoehen.gpkg (in ihrem <em>vektor</em> Ordner)</p></li>
+<li><p>Zu berechnende Statistik: „Maximum“</p></li>
+<li><p>Räumliche Statistik: max_Baumhoehen.gpkg (in ihrem <em>vektor</em> Ordner)</p></li>
 </ul>
 <p>Im letzten Schritt können sie das neue geopackage im QGIS so darstellen, dass die Polygone in Abhängigkeit ihrer maximalen Höhe eingefärbt werden. Wählen sie dazu eine passende Symbolisierung.</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Wichtig</span>Bestandesoberhöhen vs.&nbsp;maximal Baumhöhen
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Die Bestandesoberhöhen sind in der Forsteinrichtung klar definierte Werte z.B. als H100 oder Weissersche Oberhöhe. Die Bestimmung dieser Höhenwerte erfordert eine Vollaufnahme inkl. Kluppung sämtlicher Bäume der jeweiligen Schicht. Das Vorgehen bei der raster-basierten Auswertung von ALS-Daten, wie in der Übung vorgestellt, berechnet die maximale Bestandeshöhe anhand des maximalen Pixelwertes des nDOM innerhalb der Bestandesgrenzen. Diese ist üblicherweise deutlich höher als die H100 und weniger aussagekräftig. Ein geeigneteres Verfahren zur Bestimmung der Oberhöhen aus ALS-Daten wäre die Verwendung von Höhenperzentilen z.B. 95%, diese ist jedoch in der aktuellen QGIS-Version nicht ohne weiteres möglich.</p>
+</div>
+</div>
 <p><strong>Optional:</strong></p>
 <p>Nutzen sie die die Funktion “Geländehöhenprofil” aus der Übung 10 (siehe <a href="uebung10_Laserscanning.html#sec-hoehenprofile" class="quarto-xref"><span>Kapitel 10.7</span></a>) um für einzelnen Bestände zu prüfen ob die angegebenen Maximal- und Mittelwerte der Bestandeshöhen plausibel sind.</p>
 
