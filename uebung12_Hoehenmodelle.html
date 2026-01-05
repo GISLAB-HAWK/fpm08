@@ -289,12 +289,13 @@ Lizenz: Creative Commons BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc
 <p>Für die Übung verwenden wir Höhendaten des Thüringer Landesamts für Bodenmanagement und Geoinformation (TLBG). Diese Höhendaten wurden mit Hilfe eines Airborne Laser Scanners (ALS) erfasst. Das TLBG stellt sowohl die Punktinformation (LAZ), als auch bereits gerasterte digitale Geländemodelle (DGM) und digitale Oberflächenmodelle (DOM) mit einer räumlichen Auflösung von 1m zur Verfügung. Für die Übung verwenden wir die bereits erstellten DGM- und DOM-Rasterdatensätze.</p>
 <p>Diese können direkt im Geoportal unter dem Punkt Höhendaten heruntergeladen werden:</p>
 <p><a href="https://geoportal.thueringen.de/gdi-th/download-offene-geodaten" class="uri">https://geoportal.thueringen.de/gdi-th/download-offene-geodaten</a></p>
-<p><br>
+<p><img src="images/LE12_Auswahl_Hoehendaten.png" class="img-fluid"><br>
 Wir arbeiten wieder in dem Bestand in Heiligenstadt, den wir bereits aus Übung 05 kennen. Dazu benötigen wir die Daten der Kachel 581-5691. Laden sie für diese Kachel das DOM und das DGM als Zip-Datei runter und entpacken sie die Datei in ihren Projektordner unter <em>raster</em>.</p>
 </section>
 <section id="vektordaten" class="level3" data-number="12.3.2">
 <h3 data-number="12.3.2" class="anchored" data-anchor-id="vektordaten"><span class="header-section-number">12.3.2</span> Vektordaten</h3>
 <p>Für die Übung arbeiten wir mit einigen Beständen aus dem FoA Heiligenstadt. Sie finden ein Geopackage mit ausgewählten Beständen unter:</p>
+<p><a href="https://cloud.hawk.de/index.php/s/K2MGpFCycyroYMK" class="uri">https://cloud.hawk.de/index.php/s/K2MGpFCycyroYMK</a></p>
 </section>
 </section>
 <section id="aufgabe-02-kontrolle-der-max.-steigung-für-maschinenwege" class="level2" data-number="12.4">
@@ -318,8 +319,8 @@ QGIS bietet die Möglichkeit zur Schummerung direkt unter <code>Layereigenschaft
 </section>
 <section id="analyse-der-steigung" class="level3" data-number="12.4.3">
 <h3 data-number="12.4.3" class="anchored" data-anchor-id="analyse-der-steigung"><span class="header-section-number">12.4.3</span> Analyse der Steigung</h3>
-<p>Für die Auswertung der Steigung entlang des Weges können wir das „Profile“ Werkzeug von QGIS verwenden. Bei der ersten Verwendung muss dieses zunächst installiert werden. Dazu öffnen sie <code>Menü-&gt;Erweiterungen-&gt;Erweiterungen verwalten</code> und installieren -&gt; und suchen dort nach der Erweiterung “Profile Tool“. Nach der erfolgreichen Installation sollten sie das Profile Tool unter Menü-&gt; Erweiterungen-&gt; Profile Tool -&gt; Terrain Profile finden.</p>
-<p>Wenn sie das „Terrain Profile“ Werkzeug starten öffnet sich ein neues Fenster. Wählen sie im Layer panel das DGM-Raster aus und klicken sie im rechten Abschnitt des Terrain Profile Tool auf „Layer Hinzufügen“. Wählen sie anschließend im Layer Panel den Layer „Weg 1“ aus und verwenden sie die Option „Ausgewählte Layer“ im Profiletool. Danach sollten sie das Höhenprofil des kartierten Weges als Profil angezeigt bekommen.</p>
+<p>Für die Auswertung der Steigung entlang des Weges können wir das „Profile“ Werkzeug von QGIS verwenden. Bei der ersten Verwendung muss dieses zunächst installiert werden. Dazu öffnen sie <code>Menü-&gt;Erweiterungen-&gt;Erweiterungen verwalten</code> und suchen sie dort nach der Erweiterung “Profile Tool“. Nach der erfolgreichen Installation sollten sie das Profile Tool unter <code>Menü-&gt; Erweiterungen-&gt; Profile Tool -&gt; Terrain Profile</code> finden.</p>
+<p>Wenn sie das „Terrain Profile“ Werkzeug starten öffnet sich ein neues Fenster. Wählen sie im Layer-Panel das DGM-Raster aus und klicken sie im rechten Abschnitt des Terrain Profile Tool auf „Layer Hinzufügen“. Wählen sie anschließend im Laye-Panel den Layer „Weg 1“ aus und verwenden sie die Option „Ausgewählte Layer“ im Profiletool. Danach sollten sie das Höhenprofil des kartierten Weges als Profil angezeigt bekommen.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/Le12_Hoehenprofil_Maschinenweg.png" class="img-fluid figure-img"></p>
@@ -343,7 +344,7 @@ QGIS bietet die Möglichkeit zur Schummerung direkt unter <code>Layereigenschaft
 <h3 data-number="12.5.1" class="anchored" data-anchor-id="normalisieren-der-höhenmodelle"><span class="header-section-number">12.5.1</span> Normalisieren der Höhenmodelle</h3>
 <p>Das Gelände- und Oberflächenmodell enthält Höhenmessdaten, die sich auf den Geoid, also über Normalnull, beziehen. Für die Ermittlung der Bestandeshöhe müssen wir die Höhendaten normalisieren. Dazu muss die Höhe des Geländemodells von der des Oberflächenmodells abgezogen werden. Zu Berechnung der Differenz verwenden wir den bereits bekannten Rasterrechner:</p>
 <p><em>Menü-&gt;Raster-&gt;Rasterrechner</em></p>
-<p>Mit diesem Werkzeug berechnen wir nDSM=DOM-DGM. Das Ergebnis speichern sie unter dem Namen ndsm.tif in ihrem <em>raster</em> Ordner ab.</p>
+<p>Mit diesem Werkzeug berechnen wir nDSM=DOM-DGM. Das Ergebnis speichern sie unter dem Namen <em>ndsm.tif</em> in ihrem <em>raster</em> Ordner ab.</p>
 </section>
 <section id="visualisierung-als-bestandeshöhenmodell" class="level3" data-number="12.5.2">
 <h3 data-number="12.5.2" class="anchored" data-anchor-id="visualisierung-als-bestandeshöhenmodell"><span class="header-section-number">12.5.2</span> Visualisierung als Bestandeshöhenmodell</h3>
