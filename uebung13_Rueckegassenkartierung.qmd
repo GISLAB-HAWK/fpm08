@@ -201,7 +201,7 @@ aufgenommen:
 ::: {style="border: 3px solid #ff8a0b; background-color: #ffffff; padding: 8px;"}
 **Fragen:**
 
-Wie unterscheiden sich die Qualität der visuellen und der automatisiert Kartieren Rückegassen?
+Wie unterscheidet sich die Qualität der visuellen und der automatisiert Kartieren Rückegassen?
 
 Können im Nachhinein Rückegassen im DTM und MRM gefunden werden, die ohne die automatische
 Kartierung nicht gefunden wurden?
