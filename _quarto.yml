@@ -30,6 +30,7 @@ book:
     - uebung10_Laserscanning.qmd
     - uebung11_Photogrammetrie.qmd
     - uebung12_Hoehenmodelle.qmd
+    - uebung13_Rueckegassenkartierung.qmd
     - references.qmd
 
 bibliography: references.bib
