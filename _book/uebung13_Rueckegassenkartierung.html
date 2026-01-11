@@ -264,7 +264,7 @@ Lizenz: Creative Commons BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc
 
 -->
 <p><img src="images/LE13_cover.png" id="le13_cover" class="img-fluid"></p>
-<p>In dieser Lehreinheit wird vorgestellt, wie ALS-Daten für die digitale Kartierung von forstlichen Rückegassen genutzt werden können. Als Fallbeispiel dient ein Bestand nahe der Ortschaft Menteroda in Thüringen. Hier soll im ersten Schritt eine Kartierung durch visuelle Interpreation der aufbereiteten Geländemodelle erfolgen. Anschließend wird das, von der HAWK entwickelte, <a href="https://github.com/GISLAB-HAWK/TrailScan-QGIS-Plugin">TrailScan-Plugin</a> genutzt, um mithilfe eine CNN-Modells die vorhandenen Rückegassen automatisch zu kartieren.</p>
+<p>In dieser Lehreinheit wird vorgestellt, wie ALS-Daten für die digitale Kartierung von forstlichen Rückegassen genutzt werden können. Als Fallbeispiel dient ein Bestand nahe der Ortschaft Menteroda in Thüringen. Hier soll im ersten Schritt eine Kartierung durch visuelle Interpretation der aufbereiteten Geländemodelle erfolgen. Anschließend wird das, von der HAWK entwickelte, <a href="https://github.com/GISLAB-HAWK/TrailScan-QGIS-Plugin">TrailScan-Plugin</a> genutzt, um mithilfe eine CNN-Modells die vorhandenen Rückegassen automatisch zu kartieren.</p>
 <section id="lernziele-aufgabenstellung" class="level2" data-number="13.1">
 <h2 data-number="13.1" class="anchored" data-anchor-id="lernziele-aufgabenstellung"><span class="header-section-number">13.1</span> Lernziele &amp; Aufgabenstellung</h2>
 <p><strong>Lernziele</strong></p>
@@ -290,12 +290,12 @@ Lizenz: Creative Commons BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc
 <h2 data-number="13.3" class="anchored" data-anchor-id="aufgabe-01-download-und-import-der-geodaten"><span class="header-section-number">13.3</span> Aufgabe 01: Download und Import der Geodaten</h2>
 <section id="als-basierte-höhendaten" class="level3" data-number="13.3.1">
 <h3 data-number="13.3.1" class="anchored" data-anchor-id="als-basierte-höhendaten"><span class="header-section-number">13.3.1</span> <strong>ALS-basierte Höhendaten</strong></h3>
-<p>Für die Übung verwenden wir Höhendaten des Thüringer Landesamts für Bodenmanagement und Geoinformation (TLBG). Diese Höhendaten wurden mit Hilfe eines Airborne Laser Scanners (ALS) im Feburar 2023 erfasst. Das TLBG stellt sowohl die Punktinformation (LAZ), als auch bereits gerasterte digitale Geländemodelle (DGM) und digitale Oberflächenmodelle (DOM) mit einer räumlichen Auflösung von 1m zur Verfügung. Für die Übung verwenden wir Punktwolkendaten. Um die Rechen- und Downloadzeiten zu verkürzen, wurden diese Daten bereits heruntergeladen und auf den Bestand zugeschnitten. Der vorbereitete ALS-Datensatz kann als copc.laz Datei unter folgendem Link heruntergeladen werden:</p>
+<p>Für die Übung verwenden wir Höhendaten des Thüringer Landesamts für Bodenmanagement und Geoinformation (TLBG). Diese Höhendaten wurden mit Hilfe eines Airborne Laser Scanners (ALS) im Februar 2023 erfasst. Das TLBG stellt sowohl die Punktinformation (LAZ), als auch bereits gerasterte digitale Geländemodelle (DGM) und digitale Oberflächenmodelle (DOM) mit einer räumlichen Auflösung von 1m zur Verfügung. Für die Übung verwenden wir Punktwolkendaten. Um die Rechen- und Downloadzeiten zu verkürzen, wurden diese Daten bereits heruntergeladen und auf den Bestand zugeschnitten. Der vorbereitete ALS-Datensatz kann als copc.laz Datei unter folgendem Link heruntergeladen werden:</p>
 <p><a href="https://cloud.hawk.de/index.php/s/xr5ZK5jNEG86qDC" class="uri">https://cloud.hawk.de/index.php/s/xr5ZK5jNEG86qDC</a></p>
 </section>
 <section id="vektordaten" class="level3" data-number="13.3.2">
 <h3 data-number="13.3.2" class="anchored" data-anchor-id="vektordaten"><span class="header-section-number">13.3.2</span> Vektordaten</h3>
-<p>Für die Übung arbeiten wir mit einem Bestanden 84a1. Sie finden ein geopackage mit den Außengrenzen des Bestandes unter folgendem Ling:</p>
+<p>Für die Übung arbeiten wir mit einem Bestanden 84a1. Sie finden ein Geopackage mit den Außengrenzen des Bestandes unter folgendem Link:</p>
 <p><a href="https://cloud.hawk.de/index.php/s/K2MGpFCycyroYMK" class="uri">https://cloud.hawk.de/index.php/s/K2MGpFCycyroYMK</a></p>
 <p>Im Rahmen des <a href="https://www.hawk.de/de/forschung/forschungsprojekte/trailscan">TrailScan-Projektes</a> der HAWK wurden in einer Teilfläche des Bestandes die vorhandenen Rückegassen mit einem differenziellen GNSS-Empfänger eingemessen. Diese Daten sollten zur Validierung genutzt werden und können unter folgendem Link heruntergeladen werden:</p>
 <p><a href="https://cloud.hawk.de/index.php/s/zSwM5wPabEFEkX2" class="uri">https://cloud.hawk.de/index.php/s/zSwM5wPabEFEkX2</a></p>
@@ -312,7 +312,7 @@ Lizenz: Creative Commons BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc
 <figcaption>TrailScan-Logo</figcaption>
 </figure>
 </div>
-<p>Zur Installation des TrailScan-Plugins öffnen sie <code>Menü-&gt;Erweiterungen-&gt;Erweiterungen verwalten</code> und suchen sie dort nach der Erweiterung “TrailScan“. Nach der erfolgreichen Installation sollten sie dasTrailScan Tool unter in den Verarbeitungswerkzeugen angezeigt bekommen.</p>
+<p>Zur Installation des TrailScan-Plugins öffnen sie <code>Menü-&gt;Erweiterungen-&gt;Erweiterungen verwalten</code> und suchen sie dort nach der Erweiterung “TrailScan“. Nach der erfolgreichen Installation sollten sie das TrailScan Tool unter in den Verarbeitungswerkzeugen angezeigt bekommen.</p>
 </section>
 <section id="berechnung-der-als-rasterkarten-pre-processing" class="level3" data-number="13.4.2">
 <h3 data-number="13.4.2" class="anchored" data-anchor-id="berechnung-der-als-rasterkarten-pre-processing"><span class="header-section-number">13.4.2</span> Berechnung der ALS-Rasterkarten /Pre-Processing</h3>
@@ -325,7 +325,7 @@ Lizenz: Creative Commons BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc
 </section>
 <section id="visualisierung-des-geländemodells" class="level3" data-number="13.4.3">
 <h3 data-number="13.4.3" class="anchored" data-anchor-id="visualisierung-des-geländemodells"><span class="header-section-number">13.4.3</span> Visualisierung des Geländemodells</h3>
-<p>Das TrailScan-Plugin erzeugt ein hochauflösendes DGM welches im ersten Band der Datei <em>“abt_84a1_normalized.tif”</em> gespeichert ist. Für die spätere automatisierte Auswertung werden die Pixelwerte auf den Wertebereich 0-1 normiert. Dadurch können die Pixelwerte des DGM nicht direkt als Höhenangabe interpretiert werden. Die relativen Abstufungen sind aber noch erhalten, so dass sich das DGM sehr gut als Schumerungsbild darstellen lässt. Dazu kann die Schummerung direkt unter <code>Layereigenschaften-&gt; Symbolisierung-&gt;Darstellungsart-&gt;Schummerung.</code> ausgewählt werden. Aufgrund der Normierung des Wertebereiches muss der Z-Faktor auf 100 gesetzt werden.</p>
+<p>Das TrailScan-Plugin erzeugt ein hochauflösendes DGM welches im ersten Band der Datei <em>“abt_84a1_normalized.tif”</em> gespeichert ist. Für die spätere automatisierte Auswertung werden die Pixelwerte auf den Wertebereich 0-1 normiert. Dadurch können die Pixelwerte des DGM nicht direkt als Höhenangabe interpretiert werden. Die relativen Abstufungen sind aber noch erhalten, so dass sich das DGM sehr gut als Schummerungsbild darstellen lässt. Dazu kann die Schummerung direkt unter <code>Layereigenschaften-&gt; Symbolisierung-&gt;Darstellungsart-&gt;Schummerung.</code> ausgewählt werden. Aufgrund der Normierung des Wertebereiches muss der Z-Faktor auf 100 gesetzt werden.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/LE13_DTM.png" class="img-fluid figure-img" width="864"></p>
@@ -386,7 +386,7 @@ Lizenz: Creative Commons BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc
 <div style="border: 3px solid #ff8a0b; background-color: #ffffff; padding: 8px;">
 <p><strong>Fragen:</strong></p>
 <p>Wie unterscheiden sich die Qualität der visuellen und der automatisiert Kartieren Rückegassen?</p>
-<p>Können im nachhinein Rückegassen im DTM und MRM gefunden werden, die ohne die automatische Kartierung nicht gefunden wurden?</p>
+<p>Können im Nachhinein Rückegassen im DTM und MRM gefunden werden, die ohne die automatische Kartierung nicht gefunden wurden?</p>
 <p>Welche Zeitersparnis ergibt sich durch die automatisierte Kartierung?</p>
 </div>
 

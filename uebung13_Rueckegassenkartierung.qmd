@@ -17,7 +17,7 @@ Lizenz: Creative Commons BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc
 
 In dieser Lehreinheit wird vorgestellt, wie ALS-Daten für die digitale Kartierung von forstlichen
 Rückegassen genutzt werden können. Als Fallbeispiel dient ein Bestand nahe der Ortschaft Menteroda
-in Thüringen. Hier soll im ersten Schritt eine Kartierung durch visuelle Interpreation der
+in Thüringen. Hier soll im ersten Schritt eine Kartierung durch visuelle Interpretation der
 aufbereiteten Geländemodelle erfolgen. Anschließend wird das, von der HAWK entwickelte,
 [TrailScan-Plugin](https://github.com/GISLAB-HAWK/TrailScan-QGIS-Plugin) genutzt, um mithilfe eine
 CNN-Modells die vorhandenen Rückegassen automatisch zu kartieren.
@@ -60,7 +60,7 @@ ihr gesichertes Nutzerprofil wieder her (siehe auch LE01 @sec-nutzerprofil).
 
 Für die Übung verwenden wir Höhendaten des Thüringer Landesamts für Bodenmanagement und
 Geoinformation (TLBG). Diese Höhendaten wurden mit Hilfe eines Airborne Laser Scanners (ALS) im
-Feburar 2023 erfasst. Das TLBG stellt sowohl die Punktinformation (LAZ), als auch bereits gerasterte
+Februar 2023 erfasst. Das TLBG stellt sowohl die Punktinformation (LAZ), als auch bereits gerasterte
 digitale Geländemodelle (DGM) und digitale Oberflächenmodelle (DOM) mit einer räumlichen Auflösung
 von 1m zur Verfügung. Für die Übung verwenden wir Punktwolkendaten. Um die Rechen- und
 Downloadzeiten zu verkürzen, wurden diese Daten bereits heruntergeladen und auf den Bestand
@@ -71,8 +71,8 @@ heruntergeladen werden:
 
 ### Vektordaten
 
-Für die Übung arbeiten wir mit einem Bestanden 84a1. Sie finden ein geopackage mit den Außengrenzen
-des Bestandes unter folgendem Ling:
+Für die Übung arbeiten wir mit einem Bestanden 84a1. Sie finden ein Geopackage mit den Außengrenzen
+des Bestandes unter folgendem Link:
 
 <https://cloud.hawk.de/index.php/s/K2MGpFCycyroYMK>
 
@@ -96,7 +96,7 @@ dieser Rasterkarten kann mit dem TrailScan-Plugin automatisiert durchgeführt we
 
 Zur Installation des TrailScan-Plugins öffnen sie `Menü->Erweiterungen->Erweiterungen verwalten` und
 suchen sie dort nach der Erweiterung “TrailScan“. Nach der erfolgreichen Installation sollten sie
-dasTrailScan Tool unter in den Verarbeitungswerkzeugen angezeigt bekommen.
+das TrailScan Tool unter in den Verarbeitungswerkzeugen angezeigt bekommen.
 
 ### Berechnung der ALS-Rasterkarten /Pre-Processing
 
@@ -118,7 +118,7 @@ Das TrailScan-Plugin erzeugt ein hochauflösendes DGM welches im ersten Band der
 *"abt_84a1_normalized.tif"* gespeichert ist. Für die spätere automatisierte Auswertung werden die
 Pixelwerte auf den Wertebereich 0-1 normiert. Dadurch können die Pixelwerte des DGM nicht direkt als
 Höhenangabe interpretiert werden. Die relativen Abstufungen sind aber noch erhalten, so dass sich
-das DGM sehr gut als Schumerungsbild darstellen lässt. Dazu kann die Schummerung direkt unter
+das DGM sehr gut als Schummerungsbild darstellen lässt. Dazu kann die Schummerung direkt unter
 `Layereigenschaften-> Symbolisierung->Darstellungsart->Schummerung.` ausgewählt werden. Aufgrund der
 Normierung des Wertebereiches muss der Z-Faktor auf 100 gesetzt werden.
 
@@ -203,7 +203,7 @@ aufgenommen:
 
 Wie unterscheiden sich die Qualität der visuellen und der automatisiert Kartieren Rückegassen?
 
-Können im nachhinein Rückegassen im DTM und MRM gefunden werden, die ohne die automatische
+Können im Nachhinein Rückegassen im DTM und MRM gefunden werden, die ohne die automatische
 Kartierung nicht gefunden wurden?
 
 Welche Zeitersparnis ergibt sich durch die automatisierte Kartierung?
