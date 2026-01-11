@@ -8,7 +8,7 @@
 
 <meta name="description" content="Übungsaufgaben für das Modul FPM08 forstliche Fernerkundung">
 
-<title>12&nbsp; Lerneinheit 12: Verwendung von Gelände- und Bestandeshöhenmodellen – Forstliche Fernerkundung</title>
+<title>13&nbsp; Lerneinheit 13: Kartierung von Rückegassen mit ALS-Daten – Forstliche Fernerkundung</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -31,8 +31,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./uebung13_Rueckegassenkartierung.html" rel="next">
-<link href="./uebung11_Photogrammetrie.html" rel="prev">
+<link href="./references.html" rel="next">
+<link href="./uebung12_Hoehenmodelle.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
@@ -84,7 +84,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./uebung12_Hoehenmodelle.html"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Lerneinheit 12: Verwendung von Gelände- und Bestandeshöhenmodellen</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./uebung13_Rueckegassenkartierung.html"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Lerneinheit 13: Kartierung von Rückegassen mit ALS-Daten</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Suchen" onclick="window.quartoOpenSearch();">
@@ -186,13 +186,13 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./uebung12_Hoehenmodelle.html" class="sidebar-item-text sidebar-link active">
+  <a href="./uebung12_Hoehenmodelle.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Lerneinheit 12: Verwendung von Gelände- und Bestandeshöhenmodellen</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./uebung13_Rueckegassenkartierung.html" class="sidebar-item-text sidebar-link">
+  <a href="./uebung13_Rueckegassenkartierung.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Lerneinheit 13: Kartierung von Rückegassen mit ALS-Daten</span></span></a>
   </div>
 </li>
@@ -212,25 +212,23 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Inhaltsverzeichnis</h2>
    
   <ul>
-  <li><a href="#lernziele-aufgabenstellung" id="toc-lernziele-aufgabenstellung" class="nav-link active" data-scroll-target="#lernziele-aufgabenstellung"><span class="header-section-number">12.1</span> Lernziele &amp; Aufgabenstellung</a></li>
-  <li><a href="#aufgabe-0-anlegen-eine-neuen-qgis-projektes-und-kontrolle-des-nutzerprofils" id="toc-aufgabe-0-anlegen-eine-neuen-qgis-projektes-und-kontrolle-des-nutzerprofils" class="nav-link" data-scroll-target="#aufgabe-0-anlegen-eine-neuen-qgis-projektes-und-kontrolle-des-nutzerprofils"><span class="header-section-number">12.2</span> Aufgabe 0: Anlegen eine neuen QGIS-Projektes und Kontrolle des Nutzerprofils</a></li>
-  <li><a href="#aufgabe-01-download-und-import-der-geodaten" id="toc-aufgabe-01-download-und-import-der-geodaten" class="nav-link" data-scroll-target="#aufgabe-01-download-und-import-der-geodaten"><span class="header-section-number">12.3</span> Aufgabe 01: Download und Import der Geodaten</a>
+  <li><a href="#lernziele-aufgabenstellung" id="toc-lernziele-aufgabenstellung" class="nav-link active" data-scroll-target="#lernziele-aufgabenstellung"><span class="header-section-number">13.1</span> Lernziele &amp; Aufgabenstellung</a></li>
+  <li><a href="#aufgabe-0-anlegen-eine-neuen-qgis-projektes-und-kontrolle-des-nutzerprofils" id="toc-aufgabe-0-anlegen-eine-neuen-qgis-projektes-und-kontrolle-des-nutzerprofils" class="nav-link" data-scroll-target="#aufgabe-0-anlegen-eine-neuen-qgis-projektes-und-kontrolle-des-nutzerprofils"><span class="header-section-number">13.2</span> Aufgabe 0: Anlegen eine neuen QGIS-Projektes und Kontrolle des Nutzerprofils</a></li>
+  <li><a href="#aufgabe-01-download-und-import-der-geodaten" id="toc-aufgabe-01-download-und-import-der-geodaten" class="nav-link" data-scroll-target="#aufgabe-01-download-und-import-der-geodaten"><span class="header-section-number">13.3</span> Aufgabe 01: Download und Import der Geodaten</a>
   <ul class="collapse">
-  <li><a href="#als-basierte-höhendaten" id="toc-als-basierte-höhendaten" class="nav-link" data-scroll-target="#als-basierte-höhendaten"><span class="header-section-number">12.3.1</span> <strong>ALS-basierte Höhendaten</strong></a></li>
-  <li><a href="#vektordaten" id="toc-vektordaten" class="nav-link" data-scroll-target="#vektordaten"><span class="header-section-number">12.3.2</span> Vektordaten</a></li>
+  <li><a href="#als-basierte-höhendaten" id="toc-als-basierte-höhendaten" class="nav-link" data-scroll-target="#als-basierte-höhendaten"><span class="header-section-number">13.3.1</span> <strong>ALS-basierte Höhendaten</strong></a></li>
+  <li><a href="#vektordaten" id="toc-vektordaten" class="nav-link" data-scroll-target="#vektordaten"><span class="header-section-number">13.3.2</span> Vektordaten</a></li>
   </ul></li>
-  <li><a href="#aufgabe-02-kontrolle-der-max.-steigung-für-maschinenwege" id="toc-aufgabe-02-kontrolle-der-max.-steigung-für-maschinenwege" class="nav-link" data-scroll-target="#aufgabe-02-kontrolle-der-max.-steigung-für-maschinenwege"><span class="header-section-number">12.4</span> Aufgabe 02: Kontrolle der max. Steigung für Maschinenwege</a>
+  <li><a href="#aufgabe-02-berechnung-der-als-rasterkarten-für-die-kartierung-der-rückegassen" id="toc-aufgabe-02-berechnung-der-als-rasterkarten-für-die-kartierung-der-rückegassen" class="nav-link" data-scroll-target="#aufgabe-02-berechnung-der-als-rasterkarten-für-die-kartierung-der-rückegassen"><span class="header-section-number">13.4</span> Aufgabe 02: Berechnung der ALS-Rasterkarten für die Kartierung der Rückegassen</a>
   <ul class="collapse">
-  <li><a href="#visualisierung-des-geländemodells" id="toc-visualisierung-des-geländemodells" class="nav-link" data-scroll-target="#visualisierung-des-geländemodells"><span class="header-section-number">12.4.1</span> Visualisierung des Geländemodells</a></li>
-  <li><a href="#kartierung-des-maschinenwegs" id="toc-kartierung-des-maschinenwegs" class="nav-link" data-scroll-target="#kartierung-des-maschinenwegs"><span class="header-section-number">12.4.2</span> Kartierung des Maschinenwegs</a></li>
-  <li><a href="#analyse-der-steigung" id="toc-analyse-der-steigung" class="nav-link" data-scroll-target="#analyse-der-steigung"><span class="header-section-number">12.4.3</span> Analyse der Steigung</a></li>
+  <li><a href="#installation-des-trailscan-plugins" id="toc-installation-des-trailscan-plugins" class="nav-link" data-scroll-target="#installation-des-trailscan-plugins"><span class="header-section-number">13.4.1</span> Installation des TrailScan-Plugins</a></li>
+  <li><a href="#berechnung-der-als-rasterkarten-pre-processing" id="toc-berechnung-der-als-rasterkarten-pre-processing" class="nav-link" data-scroll-target="#berechnung-der-als-rasterkarten-pre-processing"><span class="header-section-number">13.4.2</span> Berechnung der ALS-Rasterkarten /Pre-Processing</a></li>
+  <li><a href="#visualisierung-des-geländemodells" id="toc-visualisierung-des-geländemodells" class="nav-link" data-scroll-target="#visualisierung-des-geländemodells"><span class="header-section-number">13.4.3</span> Visualisierung des Geländemodells</a></li>
+  <li><a href="#visualisierung-des-mikroreliefmodells-mrm" id="toc-visualisierung-des-mikroreliefmodells-mrm" class="nav-link" data-scroll-target="#visualisierung-des-mikroreliefmodells-mrm"><span class="header-section-number">13.4.4</span> Visualisierung des Mikroreliefmodells (MRM)</a></li>
   </ul></li>
-  <li><a href="#aufgabe-03-berechnung-von-bestandeshöhen" id="toc-aufgabe-03-berechnung-von-bestandeshöhen" class="nav-link" data-scroll-target="#aufgabe-03-berechnung-von-bestandeshöhen"><span class="header-section-number">12.5</span> Aufgabe 03 Berechnung von Bestandeshöhen</a>
-  <ul class="collapse">
-  <li><a href="#normalisieren-der-höhenmodelle" id="toc-normalisieren-der-höhenmodelle" class="nav-link" data-scroll-target="#normalisieren-der-höhenmodelle"><span class="header-section-number">12.5.1</span> Normalisieren der Höhenmodelle</a></li>
-  <li><a href="#visualisierung-als-bestandeshöhenmodell" id="toc-visualisierung-als-bestandeshöhenmodell" class="nav-link" data-scroll-target="#visualisierung-als-bestandeshöhenmodell"><span class="header-section-number">12.5.2</span> Visualisierung als Bestandeshöhenmodell</a></li>
-  <li><a href="#berechnung-der-maximalen-baumhöhe-pro-bestand" id="toc-berechnung-der-maximalen-baumhöhe-pro-bestand" class="nav-link" data-scroll-target="#berechnung-der-maximalen-baumhöhe-pro-bestand"><span class="header-section-number">12.5.3</span> Berechnung der maximalen Baumhöhe pro Bestand</a></li>
-  </ul></li>
+  <li><a href="#aufgabe-03-visuelle-kartierung-der-rückegassen" id="toc-aufgabe-03-visuelle-kartierung-der-rückegassen" class="nav-link" data-scroll-target="#aufgabe-03-visuelle-kartierung-der-rückegassen"><span class="header-section-number">13.5</span> Aufgabe 03: Visuelle Kartierung der Rückegassen</a></li>
+  <li><a href="#aufgabe-04-automatisierte-kartierung-der-rückegassen" id="toc-aufgabe-04-automatisierte-kartierung-der-rückegassen" class="nav-link" data-scroll-target="#aufgabe-04-automatisierte-kartierung-der-rückegassen"><span class="header-section-number">13.6</span> Aufgabe 04: Automatisierte Kartierung der Rückegassen</a></li>
+  <li><a href="#aufgabe-05-vergleich-der-beiden-verfahren" id="toc-aufgabe-05-vergleich-der-beiden-verfahren" class="nav-link" data-scroll-target="#aufgabe-05-vergleich-der-beiden-verfahren"><span class="header-section-number">13.7</span> Aufgabe 05: Vergleich der beiden Verfahren</a></li>
   </ul>
 </nav>
     </div>
@@ -239,7 +237,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Lerneinheit 12: Verwendung von Gelände- und Bestandeshöhenmodellen</span></h1>
+<h1 class="title"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Lerneinheit 13: Kartierung von Rückegassen mit ALS-Daten</span></h1>
 </div>
 
 
@@ -258,139 +256,142 @@ ul.task-list li input[type="checkbox"] {
 
 <!--
 
-Skripte für die Übungen 12 des Moduls FPM08 Forstliche Fernerkundung im Studiengang
+Skripte für die Übungen 13 des Moduls FPM08 Forstliche Fernerkundung im Studiengang
 B.Sc. Forstwirtschaft an der HAWK Göttingen.
 
 Autor: Paul Magdon
-Datum: 2025-12-31
+Datum: 2026-01-09
 Lizenz: Creative Commons BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 -->
-<p><img src="images/LE12_Coverimage.png" class="img-fluid"></p>
-<p>In dieser Lehreinheit werden Höhendaten für zwei forstliche Fragestellungen ausgewertet. Im ersten Teil der Übung wird eine Reliefanalyse durchgeführt. Als Fallbeispiel soll geprüft werden, ob die max. Steigung eines Maschinenwegs eingehalten wird. Im zweiten Teil der Übung soll eine weitere forstliche Anwendung von Punktwolkendaten vorgestellt werden. Hier wird ein Bestandesoberflächenmodell erzeugt und anschließend die Maximalhöhe der Bestände bestimmt.</p>
-<section id="lernziele-aufgabenstellung" class="level2" data-number="12.1">
-<h2 data-number="12.1" class="anchored" data-anchor-id="lernziele-aufgabenstellung"><span class="header-section-number">12.1</span> Lernziele &amp; Aufgabenstellung</h2>
+<p><img src="images/LE13_cover.png" id="le13_cover" class="img-fluid"></p>
+<p>In dieser Lehreinheit wird vorgestellt, wie ALS-Daten für die digitale Kartierung von forstlichen Rückegassen genutzt werden können. Als Fallbeispiel dient ein Bestand nahe der Ortschaft Menteroda in Thüringen. Hier soll im ersten Schritt eine Kartierung durch visuelle Interpretation der aufbereiteten Geländemodelle erfolgen. Anschließend wird das, von der HAWK entwickelte, <a href="https://github.com/GISLAB-HAWK/TrailScan-QGIS-Plugin">TrailScan-Plugin</a> genutzt, um mithilfe eine CNN-Modells die vorhandenen Rückegassen automatisch zu kartieren.</p>
+<section id="lernziele-aufgabenstellung" class="level2" data-number="13.1">
+<h2 data-number="13.1" class="anchored" data-anchor-id="lernziele-aufgabenstellung"><span class="header-section-number">13.1</span> Lernziele &amp; Aufgabenstellung</h2>
 <p><strong>Lernziele</strong></p>
 <p>Die Studierenden sollen:</p>
 <ul>
-<li><p>Ein Geländemodell aus den ALS-Daten ableiten und dieses für die Kontrolle eines Maschinenweges nutzen</p></li>
-<li><p>Ein Bestandshöhenmodell aus ALS-Daten erstellen und damit die mittlere Bestandeshöhe für alle Bestände bestimmen.</p></li>
+<li><p>Aus ALS-Daten Gelände- und Mikroreliefmodell ableiten um diese für die visuelle Kartierung von Rückegassen in Waldbeständen zu nutzen</p></li>
+<li><p>Mithilfe eines bereits trainierten KI-Modells die Rückegassen automatisch kartieren.</p></li>
+<li><p>Die Ergebnisse beider Ansätze sollen verglichen und diskutiert werden.</p></li>
 </ul>
 <p><strong>Aufgaben</strong></p>
 <ol type="1">
 <li><p>Raster- und Vektordaten importieren</p></li>
-<li><p>Kontrolle der max. Steigung eines Maschinenweges</p></li>
-<li><p>Erstellen einen nDSM und Berechnung der maximalen Bestandeshöhe</p></li>
+<li><p>Berechnung des Gelände- und Mikroreliefmodells</p></li>
+<li><p>Visuelle Kartierung der Rückegassen</p></li>
+<li><p>Automatisierte Kartierung der Rückegassen</p></li>
 </ol>
 </section>
-<section id="aufgabe-0-anlegen-eine-neuen-qgis-projektes-und-kontrolle-des-nutzerprofils" class="level2" data-number="12.2">
-<h2 data-number="12.2" class="anchored" data-anchor-id="aufgabe-0-anlegen-eine-neuen-qgis-projektes-und-kontrolle-des-nutzerprofils"><span class="header-section-number">12.2</span> Aufgabe 0: Anlegen eine neuen QGIS-Projektes und Kontrolle des Nutzerprofils</h2>
-<p>Folgen sie der Anleitung aus LE01 <a href="uebung01.html#sec-projekt_management" class="quarto-xref"><span>Kapitel 1.3</span></a> um eine neue Ordnerstruktur und ein neues QGIS-Projekt anzulegen. In der Übung bietet es sich an den Ordner <em>“daten”</em> weiter in die Unterordner <em>“vektor”</em> und <em>“raster”</em> zu unterteilen.</p>
-<p>Prüfen sie außerdem ob Ihr Nutzerprofil korrekt geladen wurde und ob die OTB-Funktionen im Werkzeugkasten vorhanden sind. Sollte dies nicht der Fall sein stellen sie ihr gesichertes Nutzerprofil wieder her (siehe auch LE01 <a href="uebung01.html#sec-nutzerprofil" class="quarto-xref"><span>Kapitel 1.2.4</span></a>).</p>
+<section id="aufgabe-0-anlegen-eine-neuen-qgis-projektes-und-kontrolle-des-nutzerprofils" class="level2" data-number="13.2">
+<h2 data-number="13.2" class="anchored" data-anchor-id="aufgabe-0-anlegen-eine-neuen-qgis-projektes-und-kontrolle-des-nutzerprofils"><span class="header-section-number">13.2</span> Aufgabe 0: Anlegen eine neuen QGIS-Projektes und Kontrolle des Nutzerprofils</h2>
+<p>Folgen sie der Anleitung aus LE01 <a href="uebung01.html#sec-projekt_management" class="quarto-xref"><span>Kapitel 1.3</span></a> um eine neue Ordnerstruktur und ein neues QGIS-Projekt anzulegen. In der Übung bietet es sich an den Ordner <em>“daten”</em> weiter in die Unterordner <em>“vektor”</em> und <em>“raster”</em> zu unterteilen. Zusätzlich ist es für diese Übung sinnvoll einen Ordner “modelle” anzulegen. Prüfen sie außerdem ob Ihr Nutzerprofil korrekt geladen wurde und ob die OTB-Funktionen im Werkzeugkasten vorhanden sind. Sollte dies nicht der Fall sein stellen sie ihr gesichertes Nutzerprofil wieder her (siehe auch LE01 <a href="uebung01.html#sec-nutzerprofil" class="quarto-xref"><span>Kapitel 1.2.4</span></a>).</p>
 </section>
-<section id="aufgabe-01-download-und-import-der-geodaten" class="level2" data-number="12.3">
-<h2 data-number="12.3" class="anchored" data-anchor-id="aufgabe-01-download-und-import-der-geodaten"><span class="header-section-number">12.3</span> Aufgabe 01: Download und Import der Geodaten</h2>
-<section id="als-basierte-höhendaten" class="level3" data-number="12.3.1">
-<h3 data-number="12.3.1" class="anchored" data-anchor-id="als-basierte-höhendaten"><span class="header-section-number">12.3.1</span> <strong>ALS-basierte Höhendaten</strong></h3>
-<p>Für die Übung verwenden wir Höhendaten des Thüringer Landesamts für Bodenmanagement und Geoinformation (TLBG). Diese Höhendaten wurden mit Hilfe eines Airborne Laser Scanners (ALS) erfasst. Das TLBG stellt sowohl die Punktinformation (LAZ), als auch bereits gerasterte digitale Geländemodelle (DGM) und digitale Oberflächenmodelle (DOM) mit einer räumlichen Auflösung von 1m zur Verfügung. Für die Übung verwenden wir die bereits erstellten DGM- und DOM-Rasterdatensätze.</p>
-<p>Diese können direkt im Geoportal unter dem Punkt Höhendaten heruntergeladen werden:</p>
-<p><a href="https://geoportal.thueringen.de/gdi-th/download-offene-geodaten" class="uri">https://geoportal.thueringen.de/gdi-th/download-offene-geodaten</a></p>
-<p><img src="images/LE12_Auswahl_Hoehendaten.png" class="img-fluid"><br>
-Wir arbeiten wieder in dem Bestand in Heiligenstadt, den wir bereits aus Übung 05 kennen. Dazu benötigen wir die Daten der Kachel 581-5691. Laden sie für diese Kachel das DOM und das DGM als Zip-Datei runter und entpacken sie die Datei in ihren Projektordner unter <em>raster</em>.</p>
+<section id="aufgabe-01-download-und-import-der-geodaten" class="level2" data-number="13.3">
+<h2 data-number="13.3" class="anchored" data-anchor-id="aufgabe-01-download-und-import-der-geodaten"><span class="header-section-number">13.3</span> Aufgabe 01: Download und Import der Geodaten</h2>
+<section id="als-basierte-höhendaten" class="level3" data-number="13.3.1">
+<h3 data-number="13.3.1" class="anchored" data-anchor-id="als-basierte-höhendaten"><span class="header-section-number">13.3.1</span> <strong>ALS-basierte Höhendaten</strong></h3>
+<p>Für die Übung verwenden wir Höhendaten des Thüringer Landesamts für Bodenmanagement und Geoinformation (TLBG). Diese Höhendaten wurden mit Hilfe eines Airborne Laser Scanners (ALS) im Februar 2023 erfasst. Das TLBG stellt sowohl die Punktinformation (LAZ), als auch bereits gerasterte digitale Geländemodelle (DGM) und digitale Oberflächenmodelle (DOM) mit einer räumlichen Auflösung von 1m zur Verfügung. Für die Übung verwenden wir Punktwolkendaten. Um die Rechen- und Downloadzeiten zu verkürzen, wurden diese Daten bereits heruntergeladen und auf den Bestand zugeschnitten. Der vorbereitete ALS-Datensatz kann als copc.laz Datei unter folgendem Link heruntergeladen werden:</p>
+<p><a href="https://cloud.hawk.de/index.php/s/xr5ZK5jNEG86qDC" class="uri">https://cloud.hawk.de/index.php/s/xr5ZK5jNEG86qDC</a></p>
 </section>
-<section id="vektordaten" class="level3" data-number="12.3.2">
-<h3 data-number="12.3.2" class="anchored" data-anchor-id="vektordaten"><span class="header-section-number">12.3.2</span> Vektordaten</h3>
-<p>Für die Übung arbeiten wir mit einigen Beständen aus dem FoA Heiligenstadt. Sie finden ein Geopackage mit ausgewählten Beständen unter:</p>
+<section id="vektordaten" class="level3" data-number="13.3.2">
+<h3 data-number="13.3.2" class="anchored" data-anchor-id="vektordaten"><span class="header-section-number">13.3.2</span> Vektordaten</h3>
+<p>Für die Übung arbeiten wir mit einem Bestanden 84a1. Sie finden ein Geopackage mit den Außengrenzen des Bestandes unter folgendem Link:</p>
 <p><a href="https://cloud.hawk.de/index.php/s/K2MGpFCycyroYMK" class="uri">https://cloud.hawk.de/index.php/s/K2MGpFCycyroYMK</a></p>
+<p>Im Rahmen des <a href="https://www.hawk.de/de/forschung/forschungsprojekte/trailscan">TrailScan-Projektes</a> der HAWK wurden in einer Teilfläche des Bestandes die vorhandenen Rückegassen mit einem differenziellen GNSS-Empfänger eingemessen. Diese Daten sollten zur Validierung genutzt werden und können unter folgendem Link heruntergeladen werden:</p>
+<p><a href="https://cloud.hawk.de/index.php/s/zSwM5wPabEFEkX2" class="uri">https://cloud.hawk.de/index.php/s/zSwM5wPabEFEkX2</a></p>
 </section>
 </section>
-<section id="aufgabe-02-kontrolle-der-max.-steigung-für-maschinenwege" class="level2" data-number="12.4">
-<h2 data-number="12.4" class="anchored" data-anchor-id="aufgabe-02-kontrolle-der-max.-steigung-für-maschinenwege"><span class="header-section-number">12.4</span> Aufgabe 02: Kontrolle der max. Steigung für Maschinenwege</h2>
-<p>Bei der Anlage von Maschinenwegen soll die max. Steigung nicht größer als 15% sein. Im ersten Teil der Übung möchten wir auf Grundlage des Geländemodells prüfen, ob und wo die maximale Steigung eines Maschinenweges überschritten wird.</p>
-<section id="visualisierung-des-geländemodells" class="level3" data-number="12.4.1">
-<h3 data-number="12.4.1" class="anchored" data-anchor-id="visualisierung-des-geländemodells"><span class="header-section-number">12.4.1</span> Visualisierung des Geländemodells</h3>
-<p>Nachdem sie das DGM als Raster importiert haben wird es als Grauwertbild im QGIS dargestellt. Dabei werden höhere Geländepunkte hell und niedrige dunkel dargestellt. Da das Geländemodell eine sehr hohe räumliche Auflösung hat und die Höhenmessungen mit einem Laserscanner sehr genau sind, können die Maschinenwege sehr gut visualisiert werden. Am besten geht das mit einer „Schummerung“. Dabei wird ein Schattenwurf/Lichteinfall durch die Sonne simuliert.</p>
-<p><br>
-QGIS bietet die Möglichkeit zur Schummerung direkt unter <code>Layereigenschaften-&gt; Symbolisierung-&gt;Darstellungsart-&gt;Schummerung.</code></p>
+<section id="aufgabe-02-berechnung-der-als-rasterkarten-für-die-kartierung-der-rückegassen" class="level2" data-number="13.4">
+<h2 data-number="13.4" class="anchored" data-anchor-id="aufgabe-02-berechnung-der-als-rasterkarten-für-die-kartierung-der-rückegassen"><span class="header-section-number">13.4</span> Aufgabe 02: Berechnung der ALS-Rasterkarten für die Kartierung der Rückegassen</h2>
+<p>Für die visuelle und automatisierte Kartierung der Rückegassen werden aus den ALS-Punktwolken vier Rasterkarten mit einer räumlichen Auflösung von 25cm abgeleitet: Geländemodell (DGM), Vegetationshöhenmodell (VHM), Mikroreliefmodell (MRM) und Vegetationsdichte (VI). Die Berechnung dieser Rasterkarten kann mit dem TrailScan-Plugin automatisiert durchgeführt werden.</p>
+<section id="installation-des-trailscan-plugins" class="level3" data-number="13.4.1">
+<h3 data-number="13.4.1" class="anchored" data-anchor-id="installation-des-trailscan-plugins"><span class="header-section-number">13.4.1</span> Installation des TrailScan-Plugins</h3>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/LE12_DGM_heiligenstadt_weg.png" class="img-fluid figure-img"></p>
-<figcaption>Geländemodell mit Schummerung visualisiert. Maschinenweg in blau.</figcaption>
+<p><img src="images/LE13_TrailScan_Logo.svg" class="img-fluid figure-img" width="301"></p>
+<figcaption>TrailScan-Logo</figcaption>
 </figure>
 </div>
+<p>Zur Installation des TrailScan-Plugins öffnen sie <code>Menü-&gt;Erweiterungen-&gt;Erweiterungen verwalten</code> und suchen sie dort nach der Erweiterung “TrailScan“. Nach der erfolgreichen Installation sollten sie das TrailScan Tool unter in den Verarbeitungswerkzeugen angezeigt bekommen.</p>
 </section>
-<section id="kartierung-des-maschinenwegs" class="level3" data-number="12.4.2">
-<h3 data-number="12.4.2" class="anchored" data-anchor-id="kartierung-des-maschinenwegs"><span class="header-section-number">12.4.2</span> Kartierung des Maschinenwegs</h3>
-<p>Zur Kartierung eines Maschinenweges legen sie ein neuen Layer mit dem Namen Weg 1 in einem neuen Geopackage mit dem Namen <em>erschliessung.gpkg</em> in ihrem Projektordner unter vektor an. Kartieren sie den Weg dann als Linie, vergleichbar mit blau eingezeichneten Weg in der Abbildung oben.</p>
-</section>
-<section id="analyse-der-steigung" class="level3" data-number="12.4.3">
-<h3 data-number="12.4.3" class="anchored" data-anchor-id="analyse-der-steigung"><span class="header-section-number">12.4.3</span> Analyse der Steigung</h3>
-<p>Für die Auswertung der Steigung entlang des Weges können wir das „Profile“ Werkzeug von QGIS verwenden. Bei der ersten Verwendung muss dieses zunächst installiert werden. Dazu öffnen sie <code>Menü-&gt;Erweiterungen-&gt;Erweiterungen verwalten</code> und suchen sie dort nach der Erweiterung “Profile Tool“. Nach der erfolgreichen Installation sollten sie das Profile Tool unter <code>Menü-&gt; Erweiterungen-&gt; Profile Tool -&gt; Terrain Profile</code> finden.</p>
-<p>Wenn sie das „Terrain Profile“ Werkzeug starten öffnet sich ein neues Fenster. Wählen sie im Layer-Panel das DGM-Raster aus und klicken sie im rechten Abschnitt des Terrain Profile Tool auf „Layer Hinzufügen“. Wählen sie anschließend im Laye-Panel den Layer „Weg 1“ aus und verwenden sie die Option „Ausgewählte Layer“ im Profiletool. Danach sollten sie das Höhenprofil des kartierten Weges als Profil angezeigt bekommen.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/Le12_Hoehenprofil_Maschinenweg.png" class="img-fluid figure-img"></p>
-<figcaption>Höhenprofil des kartierten Maschinenweges</figcaption>
-</figure>
-</div>
-<p>Wie sie der Abbildung entnehmen können, ist der kartierte Maschinenweg ca. 1600&nbsp;m lang und überwindet einen Höhenunterschied von ca. 415&nbsp;m-355&nbsp;m=60&nbsp;m. Daraus ergibt sich eine mittlere Steigung von 60m/1600m = 3,75%. Das Profil zeigt aber, dass die Steigung entlang des Maschinenweges nicht einheitlich ist. Sie müssen also prüfen, ob es Abschnitte mit einer Steigung &gt;15% gibt, um zu gewährleisten, dass die Maschinen den Weg sicher befahren können. Das Profile Tool kann neben der „Höhe“ auch die „Steigung in %“ als Profil darstellen. Dazu müssen sie im Profile Tool unten links von „Height“ auf „Slope %“ umstellen.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/LE12_Steigungsprofil_Maschinenweg.png" class="img-fluid figure-img"></p>
-<figcaption>Steigungsprofil</figcaption>
-</figure>
-</div>
-<p>Das Steigungsprofil zeigt, dass es zwei Punkte gibt, welche kurze Steigungen &gt;20% haben. Wenn sie über diese Gebiete mit der Maus fahren, werden ihnen automatisch in der Karte die entsprechenden Wegabschnitte mit einem roten Punkt markiert. Da die Ausschläge im Neigungsprofil jeweils nur sehr kurz sind, handelt es sich hierbei vermutlich um Artefakte im Geländemodell. Insofern sind die Abschnitte vermutlich für die Maschinen kein Problem. Mit Hilfe des Tools wissen sie aber, welche Bereiche sie evtl. vor der Holzabfuhr nochmal kontrollieren sollten!</p>
-</section>
-</section>
-<section id="aufgabe-03-berechnung-von-bestandeshöhen" class="level2" data-number="12.5">
-<h2 data-number="12.5" class="anchored" data-anchor-id="aufgabe-03-berechnung-von-bestandeshöhen"><span class="header-section-number">12.5</span> Aufgabe 03 Berechnung von Bestandeshöhen</h2>
-<p>Im zweiten Teil der Übung sollen Bestandeshöhen auf Basis des Gelände- und des Oberflächenmodells ermittelt und die Bestandesstruktur visualisiert werden.</p>
-<section id="normalisieren-der-höhenmodelle" class="level3" data-number="12.5.1">
-<h3 data-number="12.5.1" class="anchored" data-anchor-id="normalisieren-der-höhenmodelle"><span class="header-section-number">12.5.1</span> Normalisieren der Höhenmodelle</h3>
-<p>Das Gelände- und Oberflächenmodell enthält Höhenmessdaten, die sich auf den Geoid, also über Normalnull, beziehen. Für die Ermittlung der Bestandeshöhe müssen wir die Höhendaten normalisieren. Dazu muss die Höhe des Geländemodells von der des Oberflächenmodells abgezogen werden. Zu Berechnung der Differenz verwenden wir den bereits bekannten Rasterrechner:</p>
-<p><em>Menü-&gt;Raster-&gt;Rasterrechner</em></p>
-<p>Mit diesem Werkzeug berechnen wir nDOM=DOM-DGM. Das Ergebnis speichern sie unter dem Namen <em>ndsm.tif</em> in ihrem <em>raster</em> Ordner ab.</p>
-</section>
-<section id="visualisierung-als-bestandeshöhenmodell" class="level3" data-number="12.5.2">
-<h3 data-number="12.5.2" class="anchored" data-anchor-id="visualisierung-als-bestandeshöhenmodell"><span class="header-section-number">12.5.2</span> Visualisierung als Bestandeshöhenmodell</h3>
-<p>Im nDSM sind die Strukturen der Bestände bereits sehr gut sichtbar. Zur einfacheren Interpretation sollen die Bestandeshöhen als Pseudofarben dargestellt werden. Dazu öffnen sie die Layereigenschaften und wählen dort als Symbolisierung „Einkanalpseudofarben“. Da die Bestände keine negative Höhe haben können, setzen sie den Minimumwert auf 0. Den Maximumwert können sie auf 40 m runden. Als Farbverlauf bietet sich die „Viridis“ Palette an. Damit die Farben gut interpretiert werden können, verwenden wir den Modus „Gleiches Intervall“ mit 9 Klassen. Dadurch ergeben sich 5m Höhenklassen.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/LE12_nDSM_Heiligenstadt.png" class="img-fluid figure-img"></p>
-<figcaption>Bestandeshöhenmodell</figcaption>
-</figure>
-</div>
-</section>
-<section id="berechnung-der-maximalen-baumhöhe-pro-bestand" class="level3" data-number="12.5.3">
-<h3 data-number="12.5.3" class="anchored" data-anchor-id="berechnung-der-maximalen-baumhöhe-pro-bestand"><span class="header-section-number">12.5.3</span> Berechnung der maximalen Baumhöhe pro Bestand</h3>
-<p>Für die ausgewählten Bestände sollen nun die maximalen Baumhöhen aus dem nDSM bestimmt werden. Dazu müssen alle Pixel, die in einem Bestand liegen, extrahiert und der Maximalwert bestimmt werden. QGIS bietet dafür die Rasteranalysefunktion „Zonenstatistik“ an, die sie in den Verarbeitungswerkzeugen finden können. Wählen sie in dieser Funktion folgende Parameter:</p>
+<section id="berechnung-der-als-rasterkarten-pre-processing" class="level3" data-number="13.4.2">
+<h3 data-number="13.4.2" class="anchored" data-anchor-id="berechnung-der-als-rasterkarten-pre-processing"><span class="header-section-number">13.4.2</span> Berechnung der ALS-Rasterkarten /Pre-Processing</h3>
+<p>Das TrailScan-Plugin bietet zwei Funktionen “Pre-Processing Point Cloud” und “Inference”. Mit der ersten Funktion können die genannten Rasterkarten erzeugt werden die sie unter <code>Verarbeitung-&gt;Werkzeugkiste-TrailSCan&gt;01 Preprocessing Point Cloud</code> öffnen können. Hier können folgende Werte gesetzt werden:</p>
 <ul>
-<li><p>Eingabelayer: Bestandesgrenzen_subset</p></li>
-<li><p>Rasterlayer: ndom.tif</p></li>
-<li><p>Rasterkanal: 1</p></li>
-<li><p>Zu berechnende Statistik: „Maximum“</p></li>
-<li><p>Räumliche Statistik: max_Baumhoehen.gpkg (in ihrem <em>vektor</em> Ordner)</p></li>
+<li><p>input point cloud: <em>abt_81_a1.copc”</em></p></li>
+<li><p>Normalized: <em>“abt_84a1_normalized.tif”</em> (Im Ordner raster!)</p></li>
 </ul>
-<p>Im letzten Schritt können sie das neue geopackage im QGIS so darstellen, dass die Polygone in Abhängigkeit ihrer maximalen Höhe eingefärbt werden. Wählen sie dazu eine passende Symbolisierung.</p>
-<div class="callout callout-style-default callout-important callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Wichtig</span>Bestandesoberhöhen vs.&nbsp;maximal Baumhöhen
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Die Bestandesoberhöhen sind in der Forsteinrichtung klar definierte Werte z.B. als H100 oder Weissersche Oberhöhe. Die Bestimmung dieser Höhenwerte erfordert eine Vollaufnahme inkl. Kluppung sämtlicher Bäume der jeweiligen Schicht. Das Vorgehen bei der raster-basierten Auswertung von ALS-Daten, wie in der Übung vorgestellt, berechnet die maximale Bestandeshöhe anhand des maximalen Pixelwertes des nDOM innerhalb der Bestandesgrenzen. Diese ist üblicherweise deutlich höher als die H100 und weniger aussagekräftig. Ein geeigneteres Verfahren zur Bestimmung der Oberhöhen aus ALS-Daten wäre die Verwendung von Höhenperzentilen z.B. 95%, diese ist jedoch in der aktuellen QGIS-Version nicht ohne weiteres möglich.</p>
-</div>
-</div>
-<p><strong>Optional:</strong></p>
-<p>Nutzen sie die die Funktion “Geländehöhenprofil” aus der Übung 10 (siehe <a href="uebung10_Laserscanning.html#sec-hoehenprofile" class="quarto-xref"><span>Kapitel 10.7</span></a>) um für einzelnen Bestände zu prüfen ob die angegebenen Maximal- und Mittelwerte der Bestandeshöhen plausibel sind.</p>
-
-
+<p>Diese Berechnung kann mehrere Minuten dauern. Als Ergebnis wird ein neues Raster mit vier Bändern ausgegeben.</p>
 </section>
+<section id="visualisierung-des-geländemodells" class="level3" data-number="13.4.3">
+<h3 data-number="13.4.3" class="anchored" data-anchor-id="visualisierung-des-geländemodells"><span class="header-section-number">13.4.3</span> Visualisierung des Geländemodells</h3>
+<p>Das TrailScan-Plugin erzeugt ein hochauflösendes DGM welches im ersten Band der Datei <em>“abt_84a1_normalized.tif”</em> gespeichert ist. Für die spätere automatisierte Auswertung werden die Pixelwerte auf den Wertebereich 0-1 normiert. Dadurch können die Pixelwerte des DGM nicht direkt als Höhenangabe interpretiert werden. Die relativen Abstufungen sind aber noch erhalten, so dass sich das DGM sehr gut als Schummerungsbild darstellen lässt. Dazu kann die Schummerung direkt unter <code>Layereigenschaften-&gt; Symbolisierung-&gt;Darstellungsart-&gt;Schummerung.</code> ausgewählt werden. Aufgrund der Normierung des Wertebereiches muss der Z-Faktor auf 100 gesetzt werden.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/LE13_DTM.png" class="img-fluid figure-img" width="864"></p>
+<figcaption>Geländemodell mit Schummerung visualisiert</figcaption>
+</figure>
+</div>
+</section>
+<section id="visualisierung-des-mikroreliefmodells-mrm" class="level3" data-number="13.4.4">
+<h3 data-number="13.4.4" class="anchored" data-anchor-id="visualisierung-des-mikroreliefmodells-mrm"><span class="header-section-number">13.4.4</span> Visualisierung des Mikroreliefmodells (MRM)</h3>
+<p>Neben dem Geländemodell wird auch ein Mikroreliefmodell erzeugt und im Band 2 des Rasters <em>“abt_84a1_normalized.tif” gespeichert.</em> Dieses Raster zeigt die lokalen Unterschiede in der Steigung und hebt dadurch besonders die kleinräumigen Änderungen z.B. Spurrillen hervor. Erstellen sie eine Kopie des Layers “abt_84a1_normalized.tif” und wählen sie für diese Kopie die Darstellung als eine Einkanalgraustufenbild.</p>
+</section>
+</section>
+<section id="aufgabe-03-visuelle-kartierung-der-rückegassen" class="level2" data-number="13.5">
+<h2 data-number="13.5" class="anchored" data-anchor-id="aufgabe-03-visuelle-kartierung-der-rückegassen"><span class="header-section-number">13.5</span> Aufgabe 03: Visuelle Kartierung der Rückegassen</h2>
+<p>Zur visuellen Kartierung der Rückegassen legen sie ein neuen Layer mit dem Namen rueckegassen und dem Geometrietype “Linie” in einem neuen Geopackage mit dem Namen <em>erschliessung.gpkg</em> in ihrem Projektordner unter vektor an. Achten sie darauf das der Layer das korrekte Koordinatenreferenzsystem verwendet.</p>
+<p>Hinweise zur Kartierung:</p>
+<p>Bitte notieren sie die Zeit die sie für die Erfassung benötigen. Kartieren sie alle sichtbaren Rückegassen als Linie mittig zwischen den zwei Fahrspuren. Nutzen sie dafür sowohl das DTM als auch das MRM. Bei der visuellen Kartierung sollten alle sichtbaren Fahrspuren möglichst genau digitalisiert werden. Dabei sollten nur vorhandene Befahrungen kartiert werden und nicht etwa idealisierte Linien. Das heißt es können auch unterbrochene Fahrlinien kartiert werden, oder Linien die im Bestand endet und nicht mit anderen verbunden sind.</p>
+<div style="border: 3px solid #ff8a0b; background-color: #ffffff; padding: 8px;">
+<p><strong>Frage:</strong></p>
+<p>Wie lange haben sie für die Kartierung benötigt?</p>
+<p>Gibt es Bildbereiche in denen die Kartierung einfache oder schwieriger ist?</p>
+<p>Wie beurteilen sie die Erschließung des Bestandes?</p>
+</div>
+</section>
+<section id="aufgabe-04-automatisierte-kartierung-der-rückegassen" class="level2" data-number="13.6">
+<h2 data-number="13.6" class="anchored" data-anchor-id="aufgabe-04-automatisierte-kartierung-der-rückegassen"><span class="header-section-number">13.6</span> Aufgabe 04: Automatisierte Kartierung der Rückegassen</h2>
+<p>Im nächsten Schritt soll für den gleichen Bereich eine automatisierte Kartierung mit dem TrailScan-Plugin erfolgen. Öffnen sie dazu die Funktion “02 Inference” des Plugins in der Werkzeugkiste.</p>
+<p>Damit die Rückegassen automatisiert Klassifiziert werden können benötigt das Plugin ein bereits trainiertes KI-Modell. Dieses wurde bereits für Thüringen erstellt und veröffentlicht und kann auf folgender Seite heruntergeladen werden: <a href="https://doi.org/10.25625/GEIP6T" class="uri">https://doi.org/10.25625/GEIP6T</a>.</p>
+<p>Laden sie die Datei <em>TrailScan_Model_Thueringia.onnx</em> und speicher sie diese in ihrem Projektordner z.B. im Ordner “modelle”. Geben sie im TrailScan-Plugin anschließend den korrekten Pfad zum Model an. Dem Output können sie im “raster” Ordner mit unter <em>ab7_84a1_rueckegassenkarte.tif</em> abspeichern.</p>
+<p><img src="images/LE13_02_inference.png" class="img-fluid"></p>
+<p>Als Output erhalten wir eine Rasterkarte mit dem Wertebereich 0-1. Die Pixelwerte geben dabei die Wahrscheinlichkeit an mit der es sich bei dem Pixel um eine Rückegasse handelt. Ändern sie die Darstellung der Rasterkarte so, dass eine gut sichtbare Farbpalette verwendet wird (siehe Cover-Bild oben).</p>
+</section>
+<section id="aufgabe-05-vergleich-der-beiden-verfahren" class="level2" data-number="13.7">
+<h2 data-number="13.7" class="anchored" data-anchor-id="aufgabe-05-vergleich-der-beiden-verfahren"><span class="header-section-number">13.7</span> Aufgabe 05: Vergleich der beiden Verfahren</h2>
+<p>Im letzten Schritt sollen die beiden Verfahren miteinander verglichen werden. Überlagern sie dazu:</p>
+<p>1) die TrailScan-Rückegassenkarte</p>
+<p>2) die von Ihnen visuell interpretierten Rückegassen</p>
+<p>3) die GNSS-Aufnahmen</p>
+<p>Die GNSS-Aufnahmen wurden im Winter 2025 durchgeführt. Dabei wurden auch Fotos der Rückegassen aufgenommen:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/LE013_20250314123516888.jpg" class="img-fluid figure-img"></p>
+<figcaption>Rückegasse 22. Quelle: Tanja Kempen</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/LE013_20250314122458164.jpg" class="img-fluid figure-img"></p>
+<figcaption>Rückegasse 21. Quelle: Tanja Kempen</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/LE013_20250314121201573.jpg" class="img-fluid figure-img"></p>
+<figcaption>Rückegasse 20. Quelle: Tanja Kempen</figcaption>
+</figure>
+</div>
+<div style="border: 3px solid #ff8a0b; background-color: #ffffff; padding: 8px;">
+<p><strong>Fragen:</strong></p>
+<p>Wie unterscheiden sich die Qualität der visuellen und der automatisiert Kartieren Rückegassen?</p>
+<p>Können im Nachhinein Rückegassen im DTM und MRM gefunden werden, die ohne die automatische Kartierung nicht gefunden wurden?</p>
+<p>Welche Zeitersparnis ergibt sich durch die automatisierte Kartierung?</p>
+</div>
+
+
 </section>
 
 </main> <!-- /main -->
@@ -796,13 +797,13 @@ QGIS bietet die Möglichkeit zur Schummerung direkt unter <code>Layereigenschaft
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./uebung11_Photogrammetrie.html" class="pagination-link" aria-label="Lerneinheit 11: Vergleich von ALS- und photogrammetrischen Punktwolken">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Lerneinheit 11: Vergleich von ALS- und photogrammetrischen Punktwolken</span></span>
+      <a href="./uebung12_Hoehenmodelle.html" class="pagination-link" aria-label="Lerneinheit 12: Verwendung von Gelände- und Bestandeshöhenmodellen">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Lerneinheit 12: Verwendung von Gelände- und Bestandeshöhenmodellen</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./uebung13_Rueckegassenkartierung.html" class="pagination-link" aria-label="Lerneinheit 13: Kartierung von Rückegassen mit ALS-Daten">
-        <span class="nav-page-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Lerneinheit 13: Kartierung von Rückegassen mit ALS-Daten</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./references.html" class="pagination-link" aria-label="Referenzen">
+        <span class="nav-page-text">Referenzen</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
