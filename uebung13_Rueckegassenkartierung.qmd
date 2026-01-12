@@ -142,7 +142,7 @@ Koordinatenreferenzsystem verwendet.
 Hinweise zur Kartierung:
 
 Bitte notieren sie die Zeit die sie für die Erfassung benötigen. Kartieren sie alle sichtbaren
-Rückegassen als Linie mittig zwischen den zwei Fahrspuren. Nutzen sie dafür sowohl das DTM als auch
+Rückegassen als Linie mittig zwischen den zwei Fahrspuren. Nutzen sie dafür sowohl das DGM als auch
 das MRM. Bei der visuellen Kartierung sollten alle sichtbaren Fahrspuren möglichst genau
 digitalisiert werden. Dabei sollten nur vorhandene Befahrungen kartiert werden und nicht etwa
 idealisierte Linien. Das heißt es können auch unterbrochene Fahrlinien kartiert werden, oder Linien
@@ -203,7 +203,7 @@ aufgenommen:
 
 Wie unterscheidet sich die Qualität der visuellen und der automatisiert Kartieren Rückegassen?
 
-Können im Nachhinein Rückegassen im DTM und MRM gefunden werden, die ohne die automatische
+Können im Nachhinein Rückegassen im DGM und MRM gefunden werden, die ohne die automatische
 Kartierung nicht gefunden wurden?
 
 Welche Zeitersparnis ergibt sich durch die automatisierte Kartierung?
