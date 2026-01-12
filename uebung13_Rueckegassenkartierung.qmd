@@ -74,7 +74,7 @@ heruntergeladen werden:
 Für die Übung arbeiten wir mit einem Bestanden 84a1. Sie finden ein Geopackage mit den Außengrenzen
 des Bestandes unter folgendem Link:
 
-<https://cloud.hawk.de/index.php/s/K2MGpFCycyroYMK>
+<https://cloud.hawk.de/index.php/s/jFDLF2NqjA9LWB3>
 
 Im Rahmen des [TrailScan-Projektes](https://www.hawk.de/de/forschung/forschungsprojekte/trailscan)
 der HAWK wurden in einer Teilfläche des Bestandes die vorhandenen Rückegassen mit einem
