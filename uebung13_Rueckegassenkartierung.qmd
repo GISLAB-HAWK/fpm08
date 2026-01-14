@@ -98,6 +98,14 @@ Zur Installation des TrailScan-Plugins öffnen sie `Menü->Erweiterungen->Erweit
 suchen sie dort nach der Erweiterung “TrailScan“. Nach der erfolgreichen Installation sollten sie
 das TrailScan Tool unter in den Verarbeitungswerkzeugen angezeigt bekommen.
 
+::: callout-important
+## Installation einer alternativen Plugin-Version 
+
+Sollten Probleme bei der Installation des Plugins über den Plugin Manager auftreten, kann alternative eine aktualisierte BETA Version des Plugins als ZIP Datei hier heruntergeladen werden: <https://cloud.hawk.de/index.php/s/C5qz8kJErQkZ335> 
+
+Die Zip Datei kann im Plugin manager - Aus ZIP installieren - direkt geladen werden. Nach der Installation ist eventuell ein Neustart von QGIS nötig.  
+:::
+
 ### Berechnung der ALS-Rasterkarten /Pre-Processing
 
 Das TrailScan-Plugin bietet zwei Funktionen "Pre-Processing Point Cloud" und "Inference". Mit der
@@ -105,7 +113,7 @@ ersten Funktion können die genannten Rasterkarten erzeugt werden die sie unter
 `Verarbeitung->Werkzeugkiste-TrailSCan>01 Preprocessing Point Cloud` öffnen können. Hier können
 folgende Werte gesetzt werden:
 
--   input point cloud: *abt_81_a1.copc"*
+-   input point cloud: *abt_84a1.copc.laz"*
 
 -   Normalized: *"abt_84a1_normalized.tif"* (Im Ordner raster!)
 
