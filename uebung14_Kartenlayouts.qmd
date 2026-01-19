@@ -13,10 +13,12 @@ Lizenz: Creative Commons BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc
 
 # Lerneinheit 14: Erstellen von Kartenlayouts
 
-In dieser Übung wird wird vorgestellt wir ansprechendes Kartenlayouts erstellen und als Graphik
-exportiert werden können. Das Kartenlayout soll ein Kartenfeld, einen Titel, eine Legende, einen
-Nordpfeil, Gitterkoordinaten und Metadaten enthalten. QGIS bietet hierzu sehr viele Optionen, die
-wir im Rahmen des Kurses nur kurz anschneiden können.
+In dieser Übung wird vorgestellt wie ansprechendes Kartenlayouts erstellen und als exportiert werden
+können. Das Kartenlayout soll alle wesentliche Kartenelemente enthalten. QGIS bietet hierzu sehr
+viele Optionen, die wir im Rahmen des Kurses nur anschneiden können. Eine detaillierte Beschreibung
+der unterschiedlichen Funktionen finden sie in der QGIS-Dokumentation:
+
+<https://docs.qgis.org/3.40/de/docs/user_manual/print_composer/index.html>
 
 ## Lernziele & Aufgabenstellung
 
@@ -32,11 +34,13 @@ Die Studierenden sollen:
 
 **Aufgaben**
 
-1.  Erstellen eine Luftbildkarte
+1.  Erstellen eines QGIS-Projektes inkl. Datendownload
 
-2.  Erstellen einer Bestandesshöhenkarte
+2.  Erstellen eine Luftbildkarte
 
-3.  Erstellen einer Geländehöhenkarte
+3.  Erstellen einer Bestandesshöhenkarte
+
+4.  Erstellen einer Geländehöhenkarte
 
 ## Aufgabe 0: Anlegen eine neuen QGIS-Projektes und Kontrolle des Nutzerprofils
 
@@ -53,25 +57,29 @@ ihr gesichertes Nutzerprofil wieder her (siehe auch LE01 @sec-nutzerprofil).
 
 Für die Übung verwenden wir Luftbilddaten des Thüringer Landesamts für Bodenmanagement und
 Geoinformation (TLBG) im FoA Heilligenstadt. Kopieren sie sich die Luftbilder aus der LE05. Der Teil
-des FoA, den wir bearbeiten möchten, wird durch folgende Kacheln abgedeckt: - 32580_5691 -
-32580_5692 - 32581_5691 - 32581_5692
+des FoA, den wir bearbeiten möchten, wird durch folgende Kacheln abgedeckt:
+
+-   32580_5691
+-   32580_5692
+-   32581_5691
+-   32581_5692
 
 Sollten sie die Dateien nicht mehr zur Verfügung haben, können sie den Dowload auch wie in in
 @sec-le05_download beschrieben wiederholen.
 
 ### **ALS-basierte Höhendaten**
 
-Für die Übung verwenden wir Höhendaten des Thüringer Landesamts für Bodenmanagement und
+Für die Übung verwenden wir außerdem Höhendaten des Thüringer Landesamts für Bodenmanagement und
 Geoinformation (TLBG). Diese Höhendaten wurden mit Hilfe eines Airborne Laser Scanners (ALS)
-erfasst. Das TLBG stellt sowohl die Punktinformation (LAZ), als auch bereits gerasterte digitale
-Geländemodelle (DGM) und digitale Oberflächenmodelle (DOM) mit einer räumlichen Auflösung von 1m zur
-Verfügung. Für die Übung verwenden wir die bereits erstellten DGM- und DOM-Rasterdatensätze.
+erfasst. Für die Übung verwenden wir die bereits erstellten DGM- und DOM-Rasterdatensätze.
 
 Diese können direkt im Geoportal unter dem Punkt Höhendaten heruntergeladen werden:
 
 <https://geoportal.thueringen.de/gdi-th/download-offene-geodaten>
 
 ![](images/LE14_dowload.png)
+
+Speichern sie die Daten unter "raster".
 
 ### Vektordaten
 
@@ -185,7 +193,7 @@ Elements können sie z.B. die Anzahl an Segmenten steuern.
 Sie sollten der Karte noch einige weitere Metadaten hinzufügen. Dazu legen sie, wie beim Titel, ein
 neues Textfeld an und ergänzen hier ihren Namen und das Koordinatenreferenzsystem.
 
-![Luftbildkarte](images/LE14_Luftbildkarte.png){alt="Luftbildkarte"}
+![Luftbildkarte](images/LE14_Luftbildkarte.png)
 
 ## Aufgabe 04: Erstellen eines Kartenlayouts für eine Bestandeshöhenkarte
 

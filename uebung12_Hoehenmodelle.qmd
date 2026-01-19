@@ -154,7 +154,7 @@ der Differenz verwenden wir den bereits bekannten Rasterrechner:
 Mit diesem Werkzeug berechnen wir nDOM=DOM-DGM. Das Ergebnis speichern sie unter dem Namen
 *ndsm.tif* in ihrem *raster* Ordner ab.
 
-### Visualisierung als Bestandeshöhenmodell
+### Visualisierung als Bestandeshöhenmodell  {#sec-LE12_ndom}
 
 Im nDSM sind die Strukturen der Bestände bereits sehr gut sichtbar. Zur einfacheren Interpretation
 sollen die Bestandeshöhen als Pseudofarben dargestellt werden. Dazu öffnen sie die

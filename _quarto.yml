@@ -31,6 +31,7 @@ book:
     - uebung11_Photogrammetrie.qmd
     - uebung12_Hoehenmodelle.qmd
     - uebung13_Rueckegassenkartierung.qmd
+    - uebung14_Kartenlayouts.qmd
     - references.qmd
 
 bibliography: references.bib

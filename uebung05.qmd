@@ -99,7 +99,7 @@ auf den anderen übertragen.
 2.  *In welchem Koordinatenbezugssystem liegen die Ortholuftbilder vor?*
 :::
 
-## Aufgabe 02: Import und Filterung der bestehenden Waldeinteilung
+## Aufgabe 02: Import und Filterung der bestehenden Waldeinteilung {#sec-le05_filter}
 
 Der Landesbetrieb ThüringenForst stellt umfangreiche forstliche Geodaten kostenfrei zur Verfügung.
 Unter anderem werden Daten zur Waldeinteilung und Bestockung zur Verfügung gestellt, die wir in der
