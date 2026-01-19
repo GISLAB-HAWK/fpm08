@@ -59,7 +59,7 @@ Für die Übung verwenden wir Luftbilddaten des Thüringer Landesamts für Boden
 Geoinformation (TLBG) im FoA Heilligenstadt. Sie können ein entsprechend vorbereitetes
 Ortholuftbildmosaik unter folgendem Link herunterladen:
 
-<https://cloud.hawk.de/index.php/s/PJoEXMtfRsWgTeQ>
+DOP: <https://cloud.hawk.de/index.php/s/PJoEXMtfRsWgTeQ>
 
 Speichern sie die Daten unter "raster".
 
