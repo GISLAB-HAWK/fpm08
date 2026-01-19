@@ -56,28 +56,23 @@ ihr gesichertes Nutzerprofil wieder her (siehe auch LE01 @sec-nutzerprofil).
 ### Luftbilddaten
 
 Für die Übung verwenden wir Luftbilddaten des Thüringer Landesamts für Bodenmanagement und
-Geoinformation (TLBG) im FoA Heilligenstadt. Kopieren sie sich die Luftbilder aus der LE05. Der Teil
-des FoA, den wir bearbeiten möchten, wird durch folgende Kacheln abgedeckt:
+Geoinformation (TLBG) im FoA Heilligenstadt. Sie können ein entsprechend vorbereitetes
+Ortholuftbildmosaik unter folgendem Link herunterladen:
 
--   32580_5691
--   32580_5692
--   32581_5691
--   32581_5692
+<https://cloud.hawk.de/index.php/s/PJoEXMtfRsWgTeQ>
 
-Sollten sie die Dateien nicht mehr zur Verfügung haben, können sie den Dowload auch wie in in
-@sec-le05_download beschrieben wiederholen.
+Speichern sie die Daten unter "raster".
 
 ### **ALS-basierte Höhendaten**
 
 Für die Übung verwenden wir außerdem Höhendaten des Thüringer Landesamts für Bodenmanagement und
 Geoinformation (TLBG). Diese Höhendaten wurden mit Hilfe eines Airborne Laser Scanners (ALS)
-erfasst. Für die Übung verwenden wir die bereits erstellten DGM- und DOM-Rasterdatensätze.
+erfasst. Für die Übung wurde das DOM bereits auf Basis des DGM zu einem nDOM normalisiert (siehe
+@sec-LE12_ndom).
 
-Diese können direkt im Geoportal unter dem Punkt Höhendaten heruntergeladen werden:
+1.) DGM: <https://cloud.hawk.de/index.php/s/ZKnnD8WkYNcEfrk>
 
-<https://geoportal.thueringen.de/gdi-th/download-offene-geodaten>
-
-![](images/LE14_dowload.png)
+2\. )nDOM: <https://cloud.hawk.de/index.php/s/EQQKHgrpwYZWApf>
 
 Speichern sie die Daten unter "raster".
 
@@ -96,14 +91,14 @@ Waldeinteilung in das QGIS-Projekt ein.
 Für die Übung beschränken wir uns auf die Auswertung folgende Abteilungen des FoA Heiligenstadt
 (55):
 
-Abt. 24, 25, 26, 27, 29, und 30.
+Abt. 24, 25, 26, 27, 28,29, und 30.
 
 Filtern sie dazu den Datensatz wie in Übung @sec-le05_filter vorgestellt.
 
-Anschließen wählen sie eine geeingete Symbolisierung für die Außengrenzen der Bestände. Außerdem
-sollen die Bestände nach dem Schema AbtUabtTF (z.B. 30a1) beschriftet werden. Dazu können sie unter
-Eigenschaften-\>Symbolisierung-\>Beschriftung-\>Einzelne Beschriftungen wählen. Da es bisher kein
-Feld in der Attributabelle des Datensatzes gibt das die Beschriftung enthält müssen wir einen
+Anschließen wählen sie eine geeignete Symbolisierung für die Außengrenzen der Bestände. Außerdem
+sollen die Bestände nach dem Schema "AbtUabtTF" (z.B. 30a1) beschriftet werden. Dazu können sie
+unter `Eigenschaften->Symbolisierung->Beschriftung->Einzelne Beschriftungen` wählen. Da es bisher
+kein Feld in der Attributabelle des Datensatzes gibt das die Beschriftung enthält müssen wir einen
 Feldausdruck verwenden. Dazu unter "Wert" auf das Summenzeichen gehen und folgenden Ausdruck
 hinterlegen:
 
@@ -113,20 +108,18 @@ hinterlegen:
 
 ## Aufgabe 02: Vorbereitung der Rasterkarten
 
-Für die Erstellung eines Kartenlayouts müssen zunächst die Rasterdaten entsprechend vorbereitet
-werden. Führen sie dazu folgende Schritte durch:
-
-1.) Erstellen sie jeweils für das DGM, das DOM und das DOP ein virtuelles Rastermosaik mit den vier
-Kacheln. Schauen sie dazu auch unter @sec-mosaikieren.
-
-2.) Berechnen sie ein normalisiertes Oberflächenmodell und speichern sie dieses und dem Namen
-*ndom.tif* ab. Schauen sie dazu auch unter @sec-LE12_ndom.
-
 Passen sie nun die Darstellung der drei Rastermosaike wie folgt an:
 
-1.) Das DGM soll als Schummerungsbild dargestellt werden
+1.) Das DGM soll als Schummerungsbild dargestellt werden. Für eine attraktivere Darstellung können
+sie das Schummerungsbild auch mit einem Pseudofarbkanal überlagern. Erstellen sie dazu zunächst eine
+Kopie des DGM-Layers. Nutzen sie für diese Kopie eine Einkanalpseudofarbendarstellung mit einer
+geeigneten Farbskala (z.B. spektral invertiert). Stellen sie hier unter Transparanz die
+Globaledeckkraft auf 50%. Dadurch wird dieses Layer halbtransparent dargestellt und das
+darunterliegende Schummerungsbild zusätzlich sichtbar.
 
-2.) Dasn nDOM soll als Einkanalpseudofarbe mit der Farbpalette "viridis" dargestellt werden.
+2.) Dasn nDOM soll als Einkanalpseudofarbe mit der Farbpalette "viridis" dargestellt werden. Stellen
+sie sicher das der Wertebereich der Legende bei 0 startet und möglichst in geraden Schritten (z.B.
+5m ) einteilt.
 
 3.) Das DOP soll als CIR-Falschfarbenbild dargestellt sein.
 
