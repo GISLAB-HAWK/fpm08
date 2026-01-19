@@ -292,21 +292,15 @@ Lizenz: Creative Commons BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc
 <h2 data-number="14.3" class="anchored" data-anchor-id="aufgabe-01-download-und-import-der-geodaten"><span class="header-section-number">14.3</span> Aufgabe 01: Download und Import der Geodaten</h2>
 <section id="luftbilddaten" class="level3" data-number="14.3.1">
 <h3 data-number="14.3.1" class="anchored" data-anchor-id="luftbilddaten"><span class="header-section-number">14.3.1</span> Luftbilddaten</h3>
-<p>Für die Übung verwenden wir Luftbilddaten des Thüringer Landesamts für Bodenmanagement und Geoinformation (TLBG) im FoA Heilligenstadt. Kopieren sie sich die Luftbilder aus der LE05. Der Teil des FoA, den wir bearbeiten möchten, wird durch folgende Kacheln abgedeckt:</p>
-<ul>
-<li>32580_5691</li>
-<li>32580_5692</li>
-<li>32581_5691</li>
-<li>32581_5692</li>
-</ul>
-<p>Sollten sie die Dateien nicht mehr zur Verfügung haben, können sie den Dowload auch wie in in <a href="uebung05.html#sec-le05_download" class="quarto-xref"><span>Kapitel 5.3</span></a> beschrieben wiederholen.</p>
+<p>Für die Übung verwenden wir Luftbilddaten des Thüringer Landesamts für Bodenmanagement und Geoinformation (TLBG) im FoA Heilligenstadt. Sie können ein entsprechend vorbereitetes Ortholuftbildmosaik unter folgendem Link herunterladen:</p>
+<p>DOP: <a href="https://cloud.hawk.de/index.php/s/PJoEXMtfRsWgTeQ" class="uri">https://cloud.hawk.de/index.php/s/PJoEXMtfRsWgTeQ</a></p>
+<p>Speichern sie die Daten unter “raster”.</p>
 </section>
 <section id="als-basierte-höhendaten" class="level3" data-number="14.3.2">
 <h3 data-number="14.3.2" class="anchored" data-anchor-id="als-basierte-höhendaten"><span class="header-section-number">14.3.2</span> <strong>ALS-basierte Höhendaten</strong></h3>
-<p>Für die Übung verwenden wir außerdem Höhendaten des Thüringer Landesamts für Bodenmanagement und Geoinformation (TLBG). Diese Höhendaten wurden mit Hilfe eines Airborne Laser Scanners (ALS) erfasst. Für die Übung verwenden wir die bereits erstellten DGM- und DOM-Rasterdatensätze.</p>
-<p>Diese können direkt im Geoportal unter dem Punkt Höhendaten heruntergeladen werden:</p>
-<p><a href="https://geoportal.thueringen.de/gdi-th/download-offene-geodaten" class="uri">https://geoportal.thueringen.de/gdi-th/download-offene-geodaten</a></p>
-<p><img src="images/LE14_dowload.png" class="img-fluid"></p>
+<p>Für die Übung verwenden wir außerdem Höhendaten des Thüringer Landesamts für Bodenmanagement und Geoinformation (TLBG). Diese Höhendaten wurden mit Hilfe eines Airborne Laser Scanners (ALS) erfasst. Für die Übung wurde das DOM bereits auf Basis des DGM zu einem nDOM normalisiert (siehe <a href="uebung12_Hoehenmodelle.html#sec-LE12_ndom" class="quarto-xref"><span>Kapitel 12.5.2</span></a>).</p>
+<p>1.) DGM: <a href="https://cloud.hawk.de/index.php/s/ZKnnD8WkYNcEfrk" class="uri">https://cloud.hawk.de/index.php/s/ZKnnD8WkYNcEfrk</a></p>
+<p>2. )nDOM: <a href="https://cloud.hawk.de/index.php/s/EQQKHgrpwYZWApf" class="uri">https://cloud.hawk.de/index.php/s/EQQKHgrpwYZWApf</a></p>
 <p>Speichern sie die Daten unter “raster”.</p>
 </section>
 <section id="vektordaten" class="level3" data-number="14.3.3">
@@ -315,21 +309,18 @@ Lizenz: Creative Commons BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc
 <p><a href="https://geomis.geoportal-th.de/geonetwork/srv/ger/catalog.search#/metadata/1f690892-d1c3-436a-819e-a26d207e17d7" class="uri">https://geomis.geoportal-th.de/geonetwork/srv/ger/catalog.search#/metadata/1f690892-d1c3-436a-819e-a26d207e17d7</a></p>
 <p>Entpacken sie die Dateien dieses shapefiles in den Ordner <em>“../daten/vektor/”</em> und fügen sie die Waldeinteilung in das QGIS-Projekt ein.</p>
 <p>Für die Übung beschränken wir uns auf die Auswertung folgende Abteilungen des FoA Heiligenstadt (55):</p>
-<p>Abt. 24, 25, 26, 27, 29, und 30.</p>
+<p>Abt. 24, 25, 26, 27, 28,29, und 30.</p>
 <p>Filtern sie dazu den Datensatz wie in Übung <a href="uebung05.html#sec-le05_filter" class="quarto-xref"><span>Kapitel 5.4</span></a> vorgestellt.</p>
-<p>Anschließen wählen sie eine geeingete Symbolisierung für die Außengrenzen der Bestände. Außerdem sollen die Bestände nach dem Schema AbtUabtTF (z.B. 30a1) beschriftet werden. Dazu können sie unter Eigenschaften-&gt;Symbolisierung-&gt;Beschriftung-&gt;Einzelne Beschriftungen wählen. Da es bisher kein Feld in der Attributabelle des Datensatzes gibt das die Beschriftung enthält müssen wir einen Feldausdruck verwenden. Dazu unter “Wert” auf das Summenzeichen gehen und folgenden Ausdruck hinterlegen:</p>
+<p>Anschließen wählen sie eine geeignete Symbolisierung für die Außengrenzen der Bestände. Außerdem sollen die Bestände nach dem Schema “AbtUabtTF” (z.B. 30a1) beschriftet werden. Dazu können sie unter <code>Eigenschaften-&gt;Symbolisierung-&gt;Beschriftung-&gt;Einzelne Beschriftungen</code> wählen. Da es bisher kein Feld in der Attributabelle des Datensatzes gibt das die Beschriftung enthält müssen wir einen Feldausdruck verwenden. Dazu unter “Wert” auf das Summenzeichen gehen und folgenden Ausdruck hinterlegen:</p>
 <p>“ABT” ||“UABT” || “TFL”</p>
 <p><img src="images/LE14_feldausdruck.png" class="img-fluid"></p>
 </section>
 </section>
 <section id="aufgabe-02-vorbereitung-der-rasterkarten" class="level2" data-number="14.4">
 <h2 data-number="14.4" class="anchored" data-anchor-id="aufgabe-02-vorbereitung-der-rasterkarten"><span class="header-section-number">14.4</span> Aufgabe 02: Vorbereitung der Rasterkarten</h2>
-<p>Für die Erstellung eines Kartenlayouts müssen zunächst die Rasterdaten entsprechend vorbereitet werden. Führen sie dazu folgende Schritte durch:</p>
-<p>1.) Erstellen sie jeweils für das DGM, das DOM und das DOP ein virtuelles Rastermosaik mit den vier Kacheln. Schauen sie dazu auch unter <a href="uebung02.html#sec-mosaikieren" class="quarto-xref"><span>Kapitel 2.6</span></a>.</p>
-<p>2.) Berechnen sie ein normalisiertes Oberflächenmodell und speichern sie dieses und dem Namen <em>ndom.tif</em> ab. Schauen sie dazu auch unter <a href="uebung12_Hoehenmodelle.html#sec-LE12_ndom" class="quarto-xref"><span>Kapitel 12.5.2</span></a>.</p>
 <p>Passen sie nun die Darstellung der drei Rastermosaike wie folgt an:</p>
-<p>1.) Das DGM soll als Schummerungsbild dargestellt werden</p>
-<p>2.) Dasn nDOM soll als Einkanalpseudofarbe mit der Farbpalette “viridis” dargestellt werden.</p>
+<p>1.) Das DGM soll als Schummerungsbild dargestellt werden. Für eine attraktivere Darstellung können sie das Schummerungsbild auch mit einem Pseudofarbkanal überlagern. Erstellen sie dazu zunächst eine Kopie des DGM-Layers. Nutzen sie für diese Kopie eine Einkanalpseudofarbendarstellung mit einer geeigneten Farbskala (z.B. spektral invertiert). Stellen sie hier unter Transparanz die Globaledeckkraft auf 50%. Dadurch wird dieses Layer halbtransparent dargestellt und das darunterliegende Schummerungsbild zusätzlich sichtbar.</p>
+<p>2.) Dasn nDOM soll als Einkanalpseudofarbe mit der Farbpalette “viridis” dargestellt werden. Stellen sie sicher das der Wertebereich der Legende bei 0 startet und möglichst in geraden Schritten (z.B. 5m ) einteilt.</p>
 <p>3.) Das DOP soll als CIR-Falschfarbenbild dargestellt sein.</p>
 </section>
 <section id="aufgabe-03-erstellen-eines-kartenlayouts-für-eine-luftbildkarte" class="level2" data-number="14.5">
