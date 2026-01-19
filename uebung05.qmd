@@ -53,7 +53,7 @@ Folgen sie der Anleitung aus LE01 @sec-projekt_management um eine neue Ordnerstr
 QGIS-Projekt für LE05 anzulegen. In der Übung bietet es sich an den Ordner "daten" weiter in die
 Unterordner "vektor" und "raster" zu unterteilen.
 
-## Aufgabe 01: Recherche und Download aktueller Ortholuftbilder
+## Aufgabe 01: Recherche und Download aktueller Ortholuftbilder {#sec-le05_download}
 
 Im ersten Schritt laden wir aktuelle Luftbilder vom Geoportal Thüringen unter folgendemLink
 herunter:
