@@ -6,10 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Paul Magdon">
 <meta name="description" content="Übungsaufgaben für das Modul FPM08 forstliche Fernerkundung">
 
-<title>Forstliche Fernerkundung</title>
+<title>14&nbsp; Lerneinheit 14: Erstellen von Kartenlayouts – Forstliche Fernerkundung</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -32,7 +31,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./uebung01.html" rel="next">
+<link href="./references.html" rel="next">
+<link href="./uebung13_Rueckegassenkartierung.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
@@ -84,7 +84,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Vorwort</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./uebung14_Kartenlayouts.html"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Lerneinheit 14: Erstellen von Kartenlayouts</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Suchen" onclick="window.quartoOpenSearch();">
@@ -114,7 +114,7 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Vorwort</span></a>
   </div>
 </li>
@@ -198,7 +198,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./uebung14_Kartenlayouts.html" class="sidebar-item-text sidebar-link">
+  <a href="./uebung14_Kartenlayouts.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Lerneinheit 14: Erstellen von Kartenlayouts</span></span></a>
   </div>
 </li>
@@ -218,7 +218,18 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Inhaltsverzeichnis</h2>
    
   <ul>
-  <li><a href="#vorwort" id="toc-vorwort" class="nav-link active" data-scroll-target="#vorwort">Vorwort</a></li>
+  <li><a href="#lernziele-aufgabenstellung" id="toc-lernziele-aufgabenstellung" class="nav-link active" data-scroll-target="#lernziele-aufgabenstellung"><span class="header-section-number">14.1</span> Lernziele &amp; Aufgabenstellung</a></li>
+  <li><a href="#aufgabe-0-anlegen-eine-neuen-qgis-projektes-und-kontrolle-des-nutzerprofils" id="toc-aufgabe-0-anlegen-eine-neuen-qgis-projektes-und-kontrolle-des-nutzerprofils" class="nav-link" data-scroll-target="#aufgabe-0-anlegen-eine-neuen-qgis-projektes-und-kontrolle-des-nutzerprofils"><span class="header-section-number">14.2</span> Aufgabe 0: Anlegen eine neuen QGIS-Projektes und Kontrolle des Nutzerprofils</a></li>
+  <li><a href="#aufgabe-01-download-und-import-der-geodaten" id="toc-aufgabe-01-download-und-import-der-geodaten" class="nav-link" data-scroll-target="#aufgabe-01-download-und-import-der-geodaten"><span class="header-section-number">14.3</span> Aufgabe 01: Download und Import der Geodaten</a>
+  <ul class="collapse">
+  <li><a href="#luftbilddaten" id="toc-luftbilddaten" class="nav-link" data-scroll-target="#luftbilddaten"><span class="header-section-number">14.3.1</span> Luftbilddaten</a></li>
+  <li><a href="#als-basierte-höhendaten" id="toc-als-basierte-höhendaten" class="nav-link" data-scroll-target="#als-basierte-höhendaten"><span class="header-section-number">14.3.2</span> <strong>ALS-basierte Höhendaten</strong></a></li>
+  <li><a href="#vektordaten" id="toc-vektordaten" class="nav-link" data-scroll-target="#vektordaten"><span class="header-section-number">14.3.3</span> Vektordaten</a></li>
+  </ul></li>
+  <li><a href="#aufgabe-02-vorbereitung-der-rasterkarten" id="toc-aufgabe-02-vorbereitung-der-rasterkarten" class="nav-link" data-scroll-target="#aufgabe-02-vorbereitung-der-rasterkarten"><span class="header-section-number">14.4</span> Aufgabe 02: Vorbereitung der Rasterkarten</a></li>
+  <li><a href="#aufgabe-03-erstellen-eines-kartenlayouts-für-eine-luftbildkarte" id="toc-aufgabe-03-erstellen-eines-kartenlayouts-für-eine-luftbildkarte" class="nav-link" data-scroll-target="#aufgabe-03-erstellen-eines-kartenlayouts-für-eine-luftbildkarte"><span class="header-section-number">14.5</span> Aufgabe 03: Erstellen eines Kartenlayouts für eine Luftbildkarte</a></li>
+  <li><a href="#aufgabe-04-erstellen-eines-kartenlayouts-für-eine-bestandeshöhenkarte" id="toc-aufgabe-04-erstellen-eines-kartenlayouts-für-eine-bestandeshöhenkarte" class="nav-link" data-scroll-target="#aufgabe-04-erstellen-eines-kartenlayouts-für-eine-bestandeshöhenkarte"><span class="header-section-number">14.6</span> Aufgabe 04: Erstellen eines Kartenlayouts für eine Bestandeshöhenkarte</a></li>
+  <li><a href="#aufgabe-05-erstellen-eines-kartenlayouts-für-eine-geländemodellkarte" id="toc-aufgabe-05-erstellen-eines-kartenlayouts-für-eine-geländemodellkarte" class="nav-link" data-scroll-target="#aufgabe-05-erstellen-eines-kartenlayouts-für-eine-geländemodellkarte"><span class="header-section-number">14.7</span> Aufgabe 05: Erstellen eines Kartenlayouts für eine Geländemodellkarte</a></li>
   </ul>
 </nav>
     </div>
@@ -227,24 +238,13 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Forstliche Fernerkundung</h1>
+<h1 class="title"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Lerneinheit 14: Erstellen von Kartenlayouts</span></h1>
 </div>
 
-<div>
-  <div class="description">
-    Übungsaufgaben für das Modul FPM08 forstliche Fernerkundung
-  </div>
-</div>
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Autor:in</div>
-    <div class="quarto-title-meta-contents">
-             <p>Paul Magdon </p>
-          </div>
-  </div>
     
   
     
@@ -255,9 +255,136 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="vorwort" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="vorwort">Vorwort</h2>
-<p>Hier finden sie die Materialien für das Modul <em>“Einführung in die forstliche Fernerkundung”</em> des B.Sc. Studiengangs Forstwirtschaft an der HAWK in Göttingen.</p>
+<!--
+
+Skripte für die Übungen 14 des Moduls FPM08 Forstliche Fernerkundung im Studiengang
+B.Sc. Forstwirtschaft an der HAWK Göttingen.
+
+Autor: Paul Magdon
+Datum: 2026-01-19
+Lizenz: Creative Commons BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
+
+-->
+<p>In dieser Übung wird vorgestellt wie ansprechendes Kartenlayouts erstellen und als exportiert werden können. Das Kartenlayout soll alle wesentliche Kartenelemente enthalten. QGIS bietet hierzu sehr viele Optionen, die wir im Rahmen des Kurses nur anschneiden können. Eine detaillierte Beschreibung der unterschiedlichen Funktionen finden sie in der QGIS-Dokumentation:</p>
+<p><a href="https://docs.qgis.org/3.40/de/docs/user_manual/print_composer/index.html" class="uri">https://docs.qgis.org/3.40/de/docs/user_manual/print_composer/index.html</a></p>
+<section id="lernziele-aufgabenstellung" class="level2" data-number="14.1">
+<h2 data-number="14.1" class="anchored" data-anchor-id="lernziele-aufgabenstellung"><span class="header-section-number">14.1</span> Lernziele &amp; Aufgabenstellung</h2>
+<p><strong>Lernziele</strong></p>
+<p>Die Studierenden sollen:</p>
+<ul>
+<li><p>Mithilfe der Layoutverwaltung Karten erstellen und verwalten können</p></li>
+<li><p>Alle wichtigen Kartenelemente kennen und erstellen können</p></li>
+<li><p>Unterschiedliche Daten Visualisierungstechniken einsetzen können</p></li>
+</ul>
+<p><strong>Aufgaben</strong></p>
+<ol type="1">
+<li><p>Erstellen eines QGIS-Projektes inkl. Datendownload</p></li>
+<li><p>Erstellen eine Luftbildkarte</p></li>
+<li><p>Erstellen einer Bestandesshöhenkarte</p></li>
+<li><p>Erstellen einer Geländehöhenkarte</p></li>
+</ol>
+</section>
+<section id="aufgabe-0-anlegen-eine-neuen-qgis-projektes-und-kontrolle-des-nutzerprofils" class="level2" data-number="14.2">
+<h2 data-number="14.2" class="anchored" data-anchor-id="aufgabe-0-anlegen-eine-neuen-qgis-projektes-und-kontrolle-des-nutzerprofils"><span class="header-section-number">14.2</span> Aufgabe 0: Anlegen eine neuen QGIS-Projektes und Kontrolle des Nutzerprofils</h2>
+<p>Folgen sie der Anleitung aus LE01 <a href="uebung01.html#sec-projekt_management" class="quarto-xref"><span>Kapitel 1.3</span></a> um eine neue Ordnerstruktur und ein neues QGIS-Projekt anzulegen. In der Übung bietet es sich an den Ordner <em>“daten”</em> weiter in die Unterordner <em>“vektor”</em> und <em>“raster”</em> zu unterteilen. Zusätzlich ist es für diese Übung sinnvoll einen Ordner “modelle” anzulegen. Prüfen sie außerdem ob Ihr Nutzerprofil korrekt geladen wurde und ob die OTB-Funktionen im Werkzeugkasten vorhanden sind. Sollte dies nicht der Fall sein stellen sie ihr gesichertes Nutzerprofil wieder her (siehe auch LE01 <a href="uebung01.html#sec-nutzerprofil" class="quarto-xref"><span>Kapitel 1.2.4</span></a>).</p>
+</section>
+<section id="aufgabe-01-download-und-import-der-geodaten" class="level2" data-number="14.3">
+<h2 data-number="14.3" class="anchored" data-anchor-id="aufgabe-01-download-und-import-der-geodaten"><span class="header-section-number">14.3</span> Aufgabe 01: Download und Import der Geodaten</h2>
+<section id="luftbilddaten" class="level3" data-number="14.3.1">
+<h3 data-number="14.3.1" class="anchored" data-anchor-id="luftbilddaten"><span class="header-section-number">14.3.1</span> Luftbilddaten</h3>
+<p>Für die Übung verwenden wir Luftbilddaten des Thüringer Landesamts für Bodenmanagement und Geoinformation (TLBG) im FoA Heilligenstadt. Kopieren sie sich die Luftbilder aus der LE05. Der Teil des FoA, den wir bearbeiten möchten, wird durch folgende Kacheln abgedeckt:</p>
+<ul>
+<li>32580_5691</li>
+<li>32580_5692</li>
+<li>32581_5691</li>
+<li>32581_5692</li>
+</ul>
+<p>Sollten sie die Dateien nicht mehr zur Verfügung haben, können sie den Dowload auch wie in in <a href="uebung05.html#sec-le05_download" class="quarto-xref"><span>Kapitel 5.3</span></a> beschrieben wiederholen.</p>
+</section>
+<section id="als-basierte-höhendaten" class="level3" data-number="14.3.2">
+<h3 data-number="14.3.2" class="anchored" data-anchor-id="als-basierte-höhendaten"><span class="header-section-number">14.3.2</span> <strong>ALS-basierte Höhendaten</strong></h3>
+<p>Für die Übung verwenden wir außerdem Höhendaten des Thüringer Landesamts für Bodenmanagement und Geoinformation (TLBG). Diese Höhendaten wurden mit Hilfe eines Airborne Laser Scanners (ALS) erfasst. Für die Übung verwenden wir die bereits erstellten DGM- und DOM-Rasterdatensätze.</p>
+<p>Diese können direkt im Geoportal unter dem Punkt Höhendaten heruntergeladen werden:</p>
+<p><a href="https://geoportal.thueringen.de/gdi-th/download-offene-geodaten" class="uri">https://geoportal.thueringen.de/gdi-th/download-offene-geodaten</a></p>
+<p><img src="images/LE14_dowload.png" class="img-fluid"></p>
+<p>Speichern sie die Daten unter “raster”.</p>
+</section>
+<section id="vektordaten" class="level3" data-number="14.3.3">
+<h3 data-number="14.3.3" class="anchored" data-anchor-id="vektordaten"><span class="header-section-number">14.3.3</span> Vektordaten</h3>
+<p>Der Landesbetrieb ThüringenForst stellt umfangreiche forstliche Geodaten kostenfrei zur Verfügung. Unter anderem werden Daten zur Waldeinteilung und Bestockung zur Verfügung gestellt, die wir in der Übung verwenden wollen. Diese Daten können im ESRI-Shapefile Format unter folgendem Link für ganz Thüringen heruntergeladen werden:</p>
+<p><a href="https://geomis.geoportal-th.de/geonetwork/srv/ger/catalog.search#/metadata/1f690892-d1c3-436a-819e-a26d207e17d7" class="uri">https://geomis.geoportal-th.de/geonetwork/srv/ger/catalog.search#/metadata/1f690892-d1c3-436a-819e-a26d207e17d7</a></p>
+<p>Entpacken sie die Dateien dieses shapefiles in den Ordner <em>“../daten/vektor/”</em> und fügen sie die Waldeinteilung in das QGIS-Projekt ein.</p>
+<p>Für die Übung beschränken wir uns auf die Auswertung folgende Abteilungen des FoA Heiligenstadt (55):</p>
+<p>Abt. 24, 25, 26, 27, 29, und 30.</p>
+<p>Filtern sie dazu den Datensatz wie in Übung <a href="uebung05.html#sec-le05_filter" class="quarto-xref"><span>Kapitel 5.4</span></a> vorgestellt.</p>
+<p>Anschließen wählen sie eine geeingete Symbolisierung für die Außengrenzen der Bestände. Außerdem sollen die Bestände nach dem Schema AbtUabtTF (z.B. 30a1) beschriftet werden. Dazu können sie unter Eigenschaften-&gt;Symbolisierung-&gt;Beschriftung-&gt;Einzelne Beschriftungen wählen. Da es bisher kein Feld in der Attributabelle des Datensatzes gibt das die Beschriftung enthält müssen wir einen Feldausdruck verwenden. Dazu unter “Wert” auf das Summenzeichen gehen und folgenden Ausdruck hinterlegen:</p>
+<p>“ABT” ||“UABT” || “TFL”</p>
+<p><img src="images/LE14_feldausdruck.png" class="img-fluid"></p>
+</section>
+</section>
+<section id="aufgabe-02-vorbereitung-der-rasterkarten" class="level2" data-number="14.4">
+<h2 data-number="14.4" class="anchored" data-anchor-id="aufgabe-02-vorbereitung-der-rasterkarten"><span class="header-section-number">14.4</span> Aufgabe 02: Vorbereitung der Rasterkarten</h2>
+<p>Für die Erstellung eines Kartenlayouts müssen zunächst die Rasterdaten entsprechend vorbereitet werden. Führen sie dazu folgende Schritte durch:</p>
+<p>1.) Erstellen sie jeweils für das DGM, das DOM und das DOP ein virtuelles Rastermosaik mit den vier Kacheln. Schauen sie dazu auch unter <a href="uebung02.html#sec-mosaikieren" class="quarto-xref"><span>Kapitel 2.6</span></a>.</p>
+<p>2.) Berechnen sie ein normalisiertes Oberflächenmodell und speichern sie dieses und dem Namen <em>ndom.tif</em> ab. Schauen sie dazu auch unter <a href="uebung12_Hoehenmodelle.html#sec-LE12_ndom" class="quarto-xref"><span>Kapitel 12.5.2</span></a>.</p>
+<p>Passen sie nun die Darstellung der drei Rastermosaike wie folgt an:</p>
+<p>1.) Das DGM soll als Schummerungsbild dargestellt werden</p>
+<p>2.) Dasn nDOM soll als Einkanalpseudofarbe mit der Farbpalette “viridis” dargestellt werden.</p>
+<p>3.) Das DOP soll als CIR-Falschfarbenbild dargestellt sein.</p>
+</section>
+<section id="aufgabe-03-erstellen-eines-kartenlayouts-für-eine-luftbildkarte" class="level2" data-number="14.5">
+<h2 data-number="14.5" class="anchored" data-anchor-id="aufgabe-03-erstellen-eines-kartenlayouts-für-eine-luftbildkarte"><span class="header-section-number">14.5</span> Aufgabe 03: Erstellen eines Kartenlayouts für eine Luftbildkarte</h2>
+<p>In einem QGIS Projekt können mehrere Karten erstellt und gespeichert werden. Zur Verwaltung der verschiedenen Karten wird der Kartenlayout-Manager verwendet. Sie finden diesen im Menü unter Datei. Hier können sie ein neues Kartenlayout „Luftbild“ anlegen.</p>
+<p>Nachdem sie ein Kartenlayout im Manager angelegt haben öffnet sich ein neues Fenster mit dem noch leeren Kartenlayout. Um ein erstes Layout zu erstellen gehen wir folgende Schritte durch:</p>
+<p>1.)&nbsp; Hinzufügen eines Kartenfelds.</p>
+<p>Dazu wählen sie links das Werkzeug “Karte hinzufügen” und ziehen anschließend in ihrem Layout ein Kartenfeld auf. QGIS stellt danach automatisch die Layer aus dem Hauptfenster dar.</p>
+<p>2.) Hinzufügen eines Titels</p>
+<p>Dazu wählen sie links das Werkzeug “Beschriftung hinzufügen” und ziehen anschließend ein Textfeld oberhalb ihrer Karte auf. Geben sie dann im Feld rechts unter „Beschriftung“ einen sinnvollen Titel (z.b. Luftbildkarte FoA Heiligenstadt) ein und wählen sie eine passende Schriftgröße aus.</p>
+<p>3.) Hinzufügen einer Legende</p>
+<p>Dazu wählen sie links das Werkzeug “Legende hinzufügen” aus und ziehen anschließend ein Legendenfeld rechts neben ihren Kartenfeld auf. QGIS übernimmt für die Legende dann automatisch die Symbolisierung aller Layer des Projektes. Wenn sie rechts unter Legendenelemente die Funktion „Automatisch aktualisieren“ entfernen, können sie Einträge manuell hinzufügen und entfernen.</p>
+<p>4.)&nbsp;Hinzufügen eine Nordpfeils</p>
+<p>Dazu wählen sie links das Werkzeug “Nordpfeil hinzufügen” und ziehen anschließend ein Fenster für den Nordpfeil auf.</p>
+<p>5.) Koordinatengitter hinzufügen</p>
+<p>Um ein Koordinatengitter hinzuzufügen selektieren sie zunächst das Kartenfenster in dem sie darauf klicken. Anschließend öffnen sie die Option „Gitter“, die ihnen im rechten Teil unter den Haupteigenschaften des Kartenfelds angezeigt wird. Über das grüne Plus Symbol legen sie ein neues Gitter an. Anschließend wählen sie dieses Gitter aus, und klicken auf „Gitter ändern“. Hier ändern wir folgende Optionen:</p>
+<ul>
+<li><p>Gittertype: „Nur Rahmen und Beschriftungen“</p></li>
+<li><p>Intervall: X=500m, Y=500m</p></li>
+<li><p>Rahmenstil: „Äußere Markierung“</p></li>
+<li><p>Koordinaten zeichnen: „ja“</p></li>
+<li><p>Koordinaten nur “links” und “unten”. “Oben und”rechts” deaktivieren</p></li>
+<li><p>Koordinatengenauigkeit: 0</p></li>
+</ul>
+<p>6.)&nbsp;Maßstab</p>
+<p>Fügen sie ein graphischen Maßstabsbalken hinzu. Dazu wählen sie links das Werkzeug “Maßstab hinzufügen” und ziehen anschließend ein Fenster für den Maßstab auf. Über die Eigenschaften dieses Elements können sie z.B. die Anzahl an Segmenten steuern.</p>
+<p>7.)&nbsp;Kartenfeld</p>
+<p>Sie sollten der Karte noch einige weitere Metadaten hinzufügen. Dazu legen sie, wie beim Titel, ein neues Textfeld an und ergänzen hier ihren Namen und das Koordinatenreferenzsystem.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/LE14_Luftbildkarte.png" class="img-fluid figure-img"></p>
+<figcaption>Luftbildkarte</figcaption>
+</figure>
+</div>
+</section>
+<section id="aufgabe-04-erstellen-eines-kartenlayouts-für-eine-bestandeshöhenkarte" class="level2" data-number="14.6">
+<h2 data-number="14.6" class="anchored" data-anchor-id="aufgabe-04-erstellen-eines-kartenlayouts-für-eine-bestandeshöhenkarte"><span class="header-section-number">14.6</span> Aufgabe 04: Erstellen eines Kartenlayouts für eine Bestandeshöhenkarte</h2>
+<p>Im nächsten Schritt soll eine Bestandeshöhenkarte erstellt werden. Damit nicht alle Layout-Elemente neu erstellt werden müssen, bietet es sich an das bestehende Layout als Vorlage zu verwenden. Dazu kann unter <code>Projekte -&gt; Layout-Verwaltung</code> das bestehende Layout dupliziert und eines neues Layout mit dem Namen “Bestandeshöhenkarte” angelegt werden.</p>
+<p>Im neuen Layout müssen nun Titel, Legende und Kartenfeld entsprechend angepasst werden.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/LE14_Bestandeshoehenkarte.png" class="img-fluid figure-img"></p>
+<figcaption>Bestandehöhenkarte</figcaption>
+</figure>
+</div>
+</section>
+<section id="aufgabe-05-erstellen-eines-kartenlayouts-für-eine-geländemodellkarte" class="level2" data-number="14.7">
+<h2 data-number="14.7" class="anchored" data-anchor-id="aufgabe-05-erstellen-eines-kartenlayouts-für-eine-geländemodellkarte"><span class="header-section-number">14.7</span> Aufgabe 05: Erstellen eines Kartenlayouts für eine Geländemodellkarte</h2>
+<p>Als dritte Karte soll eine Karte mit dem Geländemodell erstellt werden. Dazu soll eine Schummerungskarte mit einer Pseudofarbkarte überblendet werden. Außerdem soll eine zweites Kartenfeld mit einer Übersichtkarte hinzugefügt werden. Die Übersichtskarte soll den Maßstab 1:500000 haben und Openstreetmap Daten darstellen. Außerdem soll ein Indikator den Ausschnitt der Hautkarte anzeigen.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/LE14_gelaendemodellkarte.png" class="img-fluid figure-img"></p>
+<figcaption>Geländemodellkarte</figcaption>
+</figure>
+</div>
 
 
 </section>
@@ -665,10 +792,13 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="./uebung13_Rueckegassenkartierung.html" class="pagination-link" aria-label="Lerneinheit 13: Kartierung von Rückegassen mit ALS-Daten">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Lerneinheit 13: Kartierung von Rückegassen mit ALS-Daten</span></span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./uebung01.html" class="pagination-link" aria-label="Lerneinheit 01: Erste Schritte in QGIS">
-        <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Lerneinheit 01: Erste Schritte in QGIS</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./references.html" class="pagination-link" aria-label="Referenzen">
+        <span class="nav-page-text">Referenzen</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

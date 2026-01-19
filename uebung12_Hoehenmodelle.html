@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="de" xml:lang="de"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.26">
+<meta name="generator" content="quarto-1.8.27">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -40,7 +40,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap-0dd2bd5de344125cf763a379ddc3eb04.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
@@ -198,6 +198,12 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./uebung14_Kartenlayouts.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Lerneinheit 14: Erstellen von Kartenlayouts</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./references.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Referenzen</span></a>
   </div>
@@ -228,7 +234,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#aufgabe-03-berechnung-von-bestandeshöhen" id="toc-aufgabe-03-berechnung-von-bestandeshöhen" class="nav-link" data-scroll-target="#aufgabe-03-berechnung-von-bestandeshöhen"><span class="header-section-number">12.5</span> Aufgabe 03 Berechnung von Bestandeshöhen</a>
   <ul class="collapse">
   <li><a href="#normalisieren-der-höhenmodelle" id="toc-normalisieren-der-höhenmodelle" class="nav-link" data-scroll-target="#normalisieren-der-höhenmodelle"><span class="header-section-number">12.5.1</span> Normalisieren der Höhenmodelle</a></li>
-  <li><a href="#visualisierung-als-bestandeshöhenmodell" id="toc-visualisierung-als-bestandeshöhenmodell" class="nav-link" data-scroll-target="#visualisierung-als-bestandeshöhenmodell"><span class="header-section-number">12.5.2</span> Visualisierung als Bestandeshöhenmodell</a></li>
+  <li><a href="#sec-LE12_ndom" id="toc-sec-LE12_ndom" class="nav-link" data-scroll-target="#sec-LE12_ndom"><span class="header-section-number">12.5.2</span> Visualisierung als Bestandeshöhenmodell</a></li>
   <li><a href="#berechnung-der-maximalen-baumhöhe-pro-bestand" id="toc-berechnung-der-maximalen-baumhöhe-pro-bestand" class="nav-link" data-scroll-target="#berechnung-der-maximalen-baumhöhe-pro-bestand"><span class="header-section-number">12.5.3</span> Berechnung der maximalen Baumhöhe pro Bestand</a></li>
   </ul></li>
   </ul>
@@ -352,8 +358,8 @@ QGIS bietet die Möglichkeit zur Schummerung direkt unter <code>Layereigenschaft
 <p><em>Menü-&gt;Raster-&gt;Rasterrechner</em></p>
 <p>Mit diesem Werkzeug berechnen wir nDOM=DOM-DGM. Das Ergebnis speichern sie unter dem Namen <em>ndsm.tif</em> in ihrem <em>raster</em> Ordner ab.</p>
 </section>
-<section id="visualisierung-als-bestandeshöhenmodell" class="level3" data-number="12.5.2">
-<h3 data-number="12.5.2" class="anchored" data-anchor-id="visualisierung-als-bestandeshöhenmodell"><span class="header-section-number">12.5.2</span> Visualisierung als Bestandeshöhenmodell</h3>
+<section id="sec-LE12_ndom" class="level3" data-number="12.5.2">
+<h3 data-number="12.5.2" class="anchored" data-anchor-id="sec-LE12_ndom"><span class="header-section-number">12.5.2</span> Visualisierung als Bestandeshöhenmodell</h3>
 <p>Im nDSM sind die Strukturen der Bestände bereits sehr gut sichtbar. Zur einfacheren Interpretation sollen die Bestandeshöhen als Pseudofarben dargestellt werden. Dazu öffnen sie die Layereigenschaften und wählen dort als Symbolisierung „Einkanalpseudofarben“. Da die Bestände keine negative Höhe haben können, setzen sie den Minimumwert auf 0. Den Maximumwert können sie auf 40 m runden. Als Farbverlauf bietet sich die „Viridis“ Palette an. Damit die Farben gut interpretiert werden können, verwenden wir den Modus „Gleiches Intervall“ mit 9 Klassen. Dadurch ergeben sich 5m Höhenklassen.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">

@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="de" xml:lang="de"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.26">
+<meta name="generator" content="quarto-1.8.27">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -75,7 +75,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap-0dd2bd5de344125cf763a379ddc3eb04.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
@@ -233,6 +233,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./uebung14_Kartenlayouts.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Lerneinheit 14: Erstellen von Kartenlayouts</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./references.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Referenzen</span></a>
   </div>
@@ -249,8 +255,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul>
   <li><a href="#lernziele-aufgabenstellung" id="toc-lernziele-aufgabenstellung" class="nav-link active" data-scroll-target="#lernziele-aufgabenstellung"><span class="header-section-number">5.1</span> Lernziele &amp; Aufgabenstellung</a></li>
   <li><a href="#aufgabe-0-anlegen-eine-neuen-qgis-projektes" id="toc-aufgabe-0-anlegen-eine-neuen-qgis-projektes" class="nav-link" data-scroll-target="#aufgabe-0-anlegen-eine-neuen-qgis-projektes"><span class="header-section-number">5.2</span> Aufgabe 0: Anlegen eine neuen QGIS-Projektes</a></li>
-  <li><a href="#aufgabe-01-recherche-und-download-aktueller-ortholuftbilder" id="toc-aufgabe-01-recherche-und-download-aktueller-ortholuftbilder" class="nav-link" data-scroll-target="#aufgabe-01-recherche-und-download-aktueller-ortholuftbilder"><span class="header-section-number">5.3</span> Aufgabe 01: Recherche und Download aktueller Ortholuftbilder</a></li>
-  <li><a href="#aufgabe-02-import-und-filterung-der-bestehenden-waldeinteilung" id="toc-aufgabe-02-import-und-filterung-der-bestehenden-waldeinteilung" class="nav-link" data-scroll-target="#aufgabe-02-import-und-filterung-der-bestehenden-waldeinteilung"><span class="header-section-number">5.4</span> Aufgabe 02: Import und Filterung der bestehenden Waldeinteilung</a></li>
+  <li><a href="#sec-le05_download" id="toc-sec-le05_download" class="nav-link" data-scroll-target="#sec-le05_download"><span class="header-section-number">5.3</span> Aufgabe 01: Recherche und Download aktueller Ortholuftbilder</a></li>
+  <li><a href="#sec-le05_filter" id="toc-sec-le05_filter" class="nav-link" data-scroll-target="#sec-le05_filter"><span class="header-section-number">5.4</span> Aufgabe 02: Import und Filterung der bestehenden Waldeinteilung</a></li>
   <li><a href="#aufgabe-03-import-von-informationen-zu-waldschäden" id="toc-aufgabe-03-import-von-informationen-zu-waldschäden" class="nav-link" data-scroll-target="#aufgabe-03-import-von-informationen-zu-waldschäden"><span class="header-section-number">5.5</span> Aufgabe 03: Import von Informationen zu Waldschäden</a></li>
   <li><a href="#aufgabe-04-aktualisierung-der-waldeinteilung" id="toc-aufgabe-04-aktualisierung-der-waldeinteilung" class="nav-link" data-scroll-target="#aufgabe-04-aktualisierung-der-waldeinteilung"><span class="header-section-number">5.6</span> Aufgabe 04: Aktualisierung der Waldeinteilung</a>
   <ul class="collapse">
@@ -315,8 +321,8 @@ Lizenz: Creative Commons BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc
 <h2 data-number="5.2" class="anchored" data-anchor-id="aufgabe-0-anlegen-eine-neuen-qgis-projektes"><span class="header-section-number">5.2</span> Aufgabe 0: Anlegen eine neuen QGIS-Projektes</h2>
 <p>Folgen sie der Anleitung aus LE01 <a href="uebung01.html#sec-projekt_management" class="quarto-xref"><span>Kapitel 1.3</span></a> um eine neue Ordnerstruktur und ein neues QGIS-Projekt für LE05 anzulegen. In der Übung bietet es sich an den Ordner “daten” weiter in die Unterordner “vektor” und “raster” zu unterteilen.</p>
 </section>
-<section id="aufgabe-01-recherche-und-download-aktueller-ortholuftbilder" class="level2" data-number="5.3">
-<h2 data-number="5.3" class="anchored" data-anchor-id="aufgabe-01-recherche-und-download-aktueller-ortholuftbilder"><span class="header-section-number">5.3</span> Aufgabe 01: Recherche und Download aktueller Ortholuftbilder</h2>
+<section id="sec-le05_download" class="level2" data-number="5.3">
+<h2 data-number="5.3" class="anchored" data-anchor-id="sec-le05_download"><span class="header-section-number">5.3</span> Aufgabe 01: Recherche und Download aktueller Ortholuftbilder</h2>
 <p>Im ersten Schritt laden wir aktuelle Luftbilder vom Geoportal Thüringen unter folgendemLink herunter:</p>
 <p><a href="https://geoportal.thueringen.de/gdi-th/download-offene-geodaten/download-luftbilder-und-orthophotos" class="uri">https://geoportal.thueringen.de/gdi-th/download-offene-geodaten/download-luftbilder-und-orthophotos</a></p>
 <p>Der Teil des FoA, den wir bearbeiten möchten, wird durch folgende Kacheln abgedeckt:</p>
@@ -352,8 +358,8 @@ Tipp
 </ol>
 </div>
 </section>
-<section id="aufgabe-02-import-und-filterung-der-bestehenden-waldeinteilung" class="level2" data-number="5.4">
-<h2 data-number="5.4" class="anchored" data-anchor-id="aufgabe-02-import-und-filterung-der-bestehenden-waldeinteilung"><span class="header-section-number">5.4</span> Aufgabe 02: Import und Filterung der bestehenden Waldeinteilung</h2>
+<section id="sec-le05_filter" class="level2" data-number="5.4">
+<h2 data-number="5.4" class="anchored" data-anchor-id="sec-le05_filter"><span class="header-section-number">5.4</span> Aufgabe 02: Import und Filterung der bestehenden Waldeinteilung</h2>
 <p>Der Landesbetrieb ThüringenForst stellt umfangreiche forstliche Geodaten kostenfrei zur Verfügung. Unter anderem werden Daten zur Waldeinteilung und Bestockung zur Verfügung gestellt, die wir in der Übung verwenden wollen. Diese Daten können im ESRI-Shapefile Format unter folgendem Link für ganz Thüringen heruntergeladen werden:</p>
 <p><a href="https://geomis.geoportal-th.de/geonetwork/srv/ger/catalog.search#/metadata/1f690892-d1c3-436a-819e-a26d207e17d7" class="uri">https://geomis.geoportal-th.de/geonetwork/srv/ger/catalog.search#/metadata/1f690892-d1c3-436a-819e-a26d207e17d7</a></p>
 <p>Entpacken sie die Dateien dieses shapefiles in den Ordner <em>“../daten/vektor/”</em> und fügen sie die Waldeinteilung in das QGIS-Projekt ein.</p>
