@@ -126,8 +126,8 @@ sie sicher das der Wertebereich der Legende bei 0 startet und möglichst in gera
 ## Aufgabe 03: Erstellen eines Kartenlayouts für eine Luftbildkarte
 
 In einem QGIS Projekt können mehrere Karten erstellt und gespeichert werden. Zur Verwaltung der
-verschiedenen Karten wird der Kartenlayout-Manager verwendet. Sie finden diesen im Menü unter Datei.
-Hier können sie ein neues Kartenlayout „Luftbild“ anlegen.
+verschiedenen Karten wird der Kartenlayout-Manager verwendet. Sie finden diesen im Menü unter Projekt.
+Hier können sie ein neues Drucklayout „Luftbild“ anlegen.
 
 Nachdem sie ein Kartenlayout im Manager angelegt haben öffnet sich ein neues Fenster mit dem noch
 leeren Kartenlayout. Um ein erstes Layout zu erstellen gehen wir folgende Schritte durch:
