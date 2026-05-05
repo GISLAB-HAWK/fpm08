@@ -175,7 +175,7 @@ finden können. Wählen sie in dieser Funktion folgende Parameter:
 
 -   Eingabelayer: Bestandesgrenzen_subset
 
--   Rasterlayer: ndom.tif
+-   Rasterlayer: ndsm.tif
 
 -   Rasterkanal: 1
 
