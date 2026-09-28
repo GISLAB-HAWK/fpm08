@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="de" xml:lang="de"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.37">
+<meta name="generator" content="quarto-1.10.18">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -13,16 +13,54 @@
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
 */
-code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -42,10 +80,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-36bf55b16c7cb4b1420f41495cb5446a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-fd0503e23dce65854c81c5baaade3bdf.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -221,11 +259,11 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#lernziele-aufgabenstellung" id="toc-lernziele-aufgabenstellung" class="nav-link active" data-scroll-target="#lernziele-aufgabenstellung"><span class="header-section-number">1.1</span> Lernziele &amp; Aufgabenstellung</a></li>
-  <li><a href="#qgis-otb-installation-und-konfiguration" id="toc-qgis-otb-installation-und-konfiguration" class="nav-link" data-scroll-target="#qgis-otb-installation-und-konfiguration"><span class="header-section-number">1.2</span> QGIS &amp; OTB Installation und Konfiguration</a>
+  <li><a href="#qgis-enmap-box-installation-und-konfiguration" id="toc-qgis-enmap-box-installation-und-konfiguration" class="nav-link" data-scroll-target="#qgis-enmap-box-installation-und-konfiguration"><span class="header-section-number">1.2</span> QGIS &amp; EnMAP-Box Installation und Konfiguration</a>
   <ul class="collapse">
-  <li><a href="#installation-von-qgis-und-otb" id="toc-installation-von-qgis-und-otb" class="nav-link" data-scroll-target="#installation-von-qgis-und-otb"><span class="header-section-number">1.2.1</span> Installation von QGIS und OTB</a></li>
+  <li><a href="#sec-qgisinstall" id="toc-sec-qgisinstall" class="nav-link" data-scroll-target="#sec-qgisinstall"><span class="header-section-number">1.2.1</span> Installation von QGIS</a></li>
   <li><a href="#anlegen-eines-persönlichen-qgis-nutzerprofils" id="toc-anlegen-eines-persönlichen-qgis-nutzerprofils" class="nav-link" data-scroll-target="#anlegen-eines-persönlichen-qgis-nutzerprofils"><span class="header-section-number">1.2.2</span> Anlegen eines persönlichen QGIS-Nutzerprofils</a></li>
-  <li><a href="#sec-otb" id="toc-sec-otb" class="nav-link" data-scroll-target="#sec-otb"><span class="header-section-number">1.2.3</span> Installation &amp; Einrichtung von OTB in QGIS</a></li>
+  <li><a href="#sec-enmap" id="toc-sec-enmap" class="nav-link" data-scroll-target="#sec-enmap"><span class="header-section-number">1.2.3</span> Installation des EnMAP-Box Plugins und zusätzlicher Python Module</a></li>
   <li><a href="#sec-nutzerprofil" id="toc-sec-nutzerprofil" class="nav-link" data-scroll-target="#sec-nutzerprofil"><span class="header-section-number">1.2.4</span> Sichern des persönlichen Nutzerprofils</a></li>
   </ul></li>
   <li><a href="#sec-projekt_management" id="toc-sec-projekt_management" class="nav-link" data-scroll-target="#sec-projekt_management"><span class="header-section-number">1.3</span> Projekt- und Datenmanagement mit QGIS</a>
@@ -275,24 +313,24 @@ Lizenz: Creative Commons BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc
 <p>Die Studierenden sollen:</p>
 <ul>
 <li>QGIS installieren können bzw. überprüfen können welche Version installiert ist.</li>
-<li>die Funktionsweise von Nutzerprofilen verstehen und anwenden können</li>
+<li>die Funktionsweise von Benutzerprofilen verstehen und anwenden können</li>
 <li>eine sinnvolle Ordnerstruktur zur Verwaltung von QGIS-Projekten kennen und anlegen können</li>
 <li>Projekte in QGIS anlegen können</li>
 </ul>
 <p><strong>Aufgabenstellung</strong></p>
 <ol type="1">
-<li><p>Überprüfen sie die Installation von QGIS und OTB.</p></li>
+<li><p>Überprüfen sie die Installation von QGIS und EnMAP-Box.</p></li>
 <li><p>Legen sie ein neues Nutzerprofil mit ihrem Namen an.</p></li>
-<li><p>Installieren sie das OTB-Plugin und hinterlegen sie die korrekten Pfade für die OTB-Programmbibliotheken.</p></li>
-<li><p>Sichern sie ihr Nutzerprofil an einem permanenten Speicherort.</p></li>
+<li><p>Installieren sie das EnMAP-Box-Plugin und zusätzliche Python Module.</p></li>
+<li><p>Sichern sie ihr QGIS Benutzerprofil an einem permanenten Speicherort.</p></li>
 <li><p>Legen sie eine Ordnerstruktur für das Projekt uebung01 an.</p></li>
 <li><p>Legen sie innerhalb der Ordnerstruktur eine neues QGIS-Projekt <em>‘uebung01.qgz’</em> an.</p></li>
 </ol>
 </section>
-<section id="qgis-otb-installation-und-konfiguration" class="level2" data-number="1.2">
-<h2 data-number="1.2" class="anchored" data-anchor-id="qgis-otb-installation-und-konfiguration"><span class="header-section-number">1.2</span> QGIS &amp; OTB Installation und Konfiguration</h2>
-<section id="installation-von-qgis-und-otb" class="level3" data-number="1.2.1">
-<h3 data-number="1.2.1" class="anchored" data-anchor-id="installation-von-qgis-und-otb"><span class="header-section-number">1.2.1</span> Installation von QGIS und OTB</h3>
+<section id="qgis-enmap-box-installation-und-konfiguration" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="qgis-enmap-box-installation-und-konfiguration"><span class="header-section-number">1.2</span> QGIS &amp; EnMAP-Box Installation und Konfiguration</h2>
+<section id="sec-qgisinstall" class="level3" data-number="1.2.1">
+<h3 data-number="1.2.1" class="anchored" data-anchor-id="sec-qgisinstall"><span class="header-section-number">1.2.1</span> Installation von QGIS</h3>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -303,17 +341,15 @@ Hinweis
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Im PC-Pool der HAWK sind die notwendigen Programme bereits auf den Computern installiert. Die Installation ist also nur notwendig, wenn sie die Übungen auf einem eigenen Computer durchführen wollen. Die vorgestellten Programme funktionieren grundsätzlich unter Windows, Linux und MacOS Betriebssystemen. Für die Übungen wird aber nur auf Windows-Betriebssystemen getestet.</p>
+<p>Im PC-Pool der HAWK ist QGIS bereits auf den Computern installiert. Das EnMAP-Box-Plugin muss zusätzlich in das persönliche Nutzerprofil installiert werden. Eine vollständige Installation von QGIS und EnMAP-Box ist notwendig, wenn Sie die Übungen auf einem eigenen Computer durchführen wollen. Die vorgestellten Programme funktionieren grundsätzlich unter Windows, Linux und MacOS Betriebssystemen. Für die Übungen wird aber nur auf Windows-Betriebssystemen getestet.</p>
 </div>
 </div>
-<p>In diesem Kurs wird die Software QGIS in der Version 3.40.x verwendet. Sie können die Software hier herunterladen:</p>
-<p><a href="https://qgis.org/downloads/QGIS-OSGeo4W-3.40.10-1.msi" class="uri">https://qgis.org/downloads/QGIS-OSGeo4W-3.40.10-1.msi</a></p>
-<p>Weiter Hinweise zu den unterschiedlichen Installationsmöglichkeiten finden sie hier:</p>
-<p><a href="https://docs.qgis.org/3.40/de/docs/user_manual/introduction/getting_started.html#installing-qgis" class="uri">https://docs.qgis.org/3.40/de/docs/user_manual/introduction/getting_started.html#installing-qgis</a></p>
-<p>Neben QGIS nutzen wir für die fernerkundlichen Auswertungen die open-source Software <a href="https://www.orfeo-toolbox.org/">Orfeo Toolbox</a> V.9.1.1. welche hier heruntergeladen werden kann:</p>
-<p><a href="https://www.orfeo-toolbox.org/download/" class="uri">https://www.orfeo-toolbox.org/download/</a></p>
-<p>Weiter Hinweise zu den unterschiedlichen Installationsmöglichkeiten finden sie hier:</p>
-<p><a href="https://www.orfeo-toolbox.org/CookBook/Installation.html" class="uri">https://www.orfeo-toolbox.org/CookBook/Installation.html</a></p>
+<p>In diesem Kurs wird die Software QGIS in der Version 3.40.8 verwendet. Sie können die Software hier herunterladen:</p>
+<p><a href="https://qgis.org/downloads/QGIS-OSGeo4W-3.40.8-1.msi" class="uri">https://qgis.org/downloads/QGIS-OSGeo4W-3.40.8-1.msi</a></p>
+<p>Weiter Hinweise zu unterschiedlichen Installationsmöglichkeiten von QGIS finden sie hier:</p>
+<p><a href="https://qgis.org/download/" class="uri">https://qgis.org/download/</a></p>
+<p>Neben QGIS nutzen wir für die fernerkundlichen Auswertungen das open-source QGIS Plugin <a href="https://enmap-box.readthedocs.io/en/latest/general/about.html">EnMAP-Box</a> in der Version 3.17.9. Weitere Hinweise zu unterschiedlichen Installationsmöglichkeiten der EnMAP-Box finden Sie hier:</p>
+<p><a href="https://enmap-box.readthedocs.io/en/latest/usr_section/usr_installation.html" class="uri">https://enmap-box.readthedocs.io/en/latest/usr_section/usr_installation.html</a></p>
 </section>
 <section id="anlegen-eines-persönlichen-qgis-nutzerprofils" class="level3" data-number="1.2.2">
 <h3 data-number="1.2.2" class="anchored" data-anchor-id="anlegen-eines-persönlichen-qgis-nutzerprofils"><span class="header-section-number">1.2.2</span> Anlegen eines persönlichen QGIS-Nutzerprofils</h3>
@@ -335,43 +371,48 @@ Hinweis
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Das Anlegen persönlicher Nutzerprofile geschieht in der Regel vollständig automatisch. Im PC-Pool werden diese Profile aber nicht zwischen den PC-Arbeitsplätzen synchronisiert. Außerdem werden die lokalen Nutzerdaten in unregelmäßigen Abständen gelöscht. Daher kann es für die Arbeit im PC-Pool sinnvoll sein, ein eigenes Profil anzulegen und in einem persönlichen Ordner zu sichern.</p>
+<p>Das Anlegen persönlicher Benutzerprofile geschieht in der Regel vollständig automatisch. Im PC-Pool werden diese Profile aber nicht zwischen den PC-Arbeitsplätzen synchronisiert. Außerdem werden die lokalen Benutzerdaten in unregelmäßigen Abständen gelöscht. Daher kann es für die Arbeit im PC-Pool sinnvoll sein, ein eigenes Profil anzulegen und in einem persönlichen Ordner zu sichern.</p>
 </div>
 </div>
-<p>QGIS speicher die Nutzerprofile automatisch lokalen im jeweiligen Nutzerordner <code>C:\Users\???\AppData\Roaming\QGIS\QGIS3\profiles\</code>. Standardmäßig gibt es in QGIS nur das Benutzerprofil <em>default</em>. Es können aber beliebig viele weitere angelegt werden.</p>
-<div style="border: 2px solid #afca0b; background-color: #fafafa; padding: 8px;">
-<p>Legen sie ein neues Nutzerprofile mit ihrem Namen (z.B. mueller) an:</p>
-<p><code>Einstellungen</code> → <code>Nutzerprofile</code> → <code>Neues Profil anlegen</code></p>
+<p>QGIS speichert Benutzerprofile automatisch im lokalen Profilordner.</p>
+<p><code>C:\Users\USERNAME\AppData\Roaming\QGIS\QGIS3\profiles\</code> USERNAME steht hier als Platzhalter für Ihren Benutzernamen, also den aktuellen Windows-Benutzernamen des angemeldeten Users. Das Verzeichnis, in dem die QGIS Benutzerprofile gespeichert werden, lässt sich im Dateimanager öffnen mit</p>
+<p><code>Einstellungen</code> → <code>Benutzerprofile</code> → <code>Aktuelles Profilverzeichnis öffnen</code></p>
+<p>Standardmäßig gibt es in QGIS nur das Benutzerprofil <em>default</em>. Es können aber beliebig viele weitere angelegt werden.</p>
+<div style="border: 2px solid #afca0b; background-color: ; padding: 8px;">
+<p>Legen sie ein neues Nutzerprofile mit Ihrem Namen (z.B. mueller) an:</p>
+<p><code>Einstellungen</code> → <code>Benutzerprofile</code> → <code>Neues Profil anlegen</code></p>
 </div>
-<p>Weitere Informationen zu den QGIS-Nutzerprofilen finden sie hier:</p>
+<p>Weitere Informationen zu den QGIS-Benutzerprofilen finden sie hier:</p>
 <p><a href="https://docs.qgis.org/3.40/de/docs/user_manual/introduction/qgis_configuration.html#user-profiles" class="uri">https://docs.qgis.org/3.40/de/docs/user_manual/introduction/qgis_configuration.html#user-profiles</a></p>
 </section>
-<section id="sec-otb" class="level3" data-number="1.2.3">
-<h3 data-number="1.2.3" class="anchored" data-anchor-id="sec-otb"><span class="header-section-number">1.2.3</span> Installation &amp; Einrichtung von OTB in QGIS</h3>
-<p>Die OTB-Software kann direkt über eine Kommandozeile verwendet werden oder -wie im Kurs- innerhalb von QGIS. Dazu steht ein Plugin zur Verfügung, welches wie folgt installiert und konfiguriert werden muss:</p>
-<p>1.) Installation des Orfeo Toolbox Plugins in QGIS</p>
+<section id="sec-enmap" class="level3" data-number="1.2.3">
+<h3 data-number="1.2.3" class="anchored" data-anchor-id="sec-enmap"><span class="header-section-number">1.2.3</span> Installation des EnMAP-Box Plugins und zusätzlicher Python Module</h3>
+<p>1.) Installation des EnMAP-Box Plugins</p>
 <div style="border: 2px solid #afca0b; background-color: #fafafa; padding: 8px;">
-<p><code>Erweiterung</code> → <code>Erweiterungen verwalten und installieren</code> Im Suchfenster <code>OrfeoToolboxProvider</code> das Plugin auswählen und installieren.</p>
+<p><code>Erweiterungen</code> → <code>Erweiterungen verwalten und installieren</code> Im Suchfenster <code>EnMAP Box</code> eingeben, das angezeigte Plugin auswählen und installieren.</p>
 </div>
-<p>2.) Konfiguration des OTB-Plugins</p>
-<p>Nachdem das Plugin Installiert ist, muss es noch konfiguriert werden. Dazu müssen die Pfade zu der OTB-Software eingetragen werden.</p>
-<div style="border: 2px solid #afca0b; background-color: #fafafa; padding: 8px;">
-<p><strong>Starten der Werkzeugkiste</strong>: <code>Verarbeitung</code> → <code>Werkzeugkiste</code></p>
-<p>In der Werkzeugkiste das Schraubenschlüsselsymbol (Optionen) wählen und dort unter <code>Datenanbieter</code> –&gt; <code>OTB</code> zwei Eintragungen vornehmen:</p>
-<p><strong>OTB application folder:</strong> <code>C:/OTB/lib/otb/applications</code></p>
-<p><strong>OTB folder:</strong> <code>C:/OTB</code></p>
+<p>2.) Installation von Python Abhängigkeiten auf Windows (andere Betriebssysteme s. <a href="#sec-qgisinstall">QGIS Installation</a>)</p>
+<p>Nachdem das Plugin Installiert ist, müssen noch zusätzliche Python Module installiert werden bevor es gestartet werden kann.</p>
+<ul>
+<li><p>Laden Sie das Installationskript <a href="https://cloud.hawk.de/index.php/s/BLGZ5ssdPHGH9Ea">installation_qgis_dependencies.py</a> herunter und speichern Sie es in in ein lokales Verzeichnis.</p></li>
+<li><p>Öffen Sie die QGIS Python Konsole: <code>Erweiterungen</code> → <code>Python Konsole</code></p></li>
+<li><p>Kopieren und Einfügen des folgenden Einzeilers in die Python Konsole, nur den Pfad des heruntergeladenen Skriptes editieren, dann Enter drücken zum Ausführen des Skriptes.</p></li>
+</ul>
+<div style="border: 2px solid #afca0b; background-color: #e0e0e0; padding: 8px;">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>script = Path(r"C:/users/USERNAME/Downloads/install_qgis_dependencies.py"); exec(script.read_text(encoding="utf-8")); main(<span class="co">[</span><span class="ot">"--plugin", "enmap-box-base"</span><span class="co">]</span>)</span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<p>Nach korrekter Eingabe der Pfade und dem Schließen des Optionsmenüs sollte nach kurzer Zeit bei den Verarbeitungswerkzeugen in der Werkzeugkiste die OTB-Werkzeuge angezeigt werden.</p>
-<p>Weitere Anleitungen zur Konfiguration des OTB-Plugins können sie hier finden:</p>
-<p><a href="https://www.orfeo-toolbox.org/CookBook-9.1/QGISInterface.html" class="uri">https://www.orfeo-toolbox.org/CookBook-9.1/QGISInterface.html</a></p>
+<ul>
+<li>QGIS schliessen und neustarten.</li>
+<li>Starten Sie das EnMAP-Box Plugin (s. <a href="https://enmap-box.readthedocs.io/en/latest/usr_section/usr_gettingstarted.html#launching-the-enmap-box">Launching the EnMAP-Box</a>)</li>
+</ul>
 </section>
 <section id="sec-nutzerprofil" class="level3" data-number="1.2.4">
 <h3 data-number="1.2.4" class="anchored" data-anchor-id="sec-nutzerprofil"><span class="header-section-number">1.2.4</span> Sichern des persönlichen Nutzerprofils</h3>
-<p>Nach dem nun die wichtigsten Einstellungen vorgenommen und im QGIS-Nutzerprofil hinterlegt wurden, ist es sinnvoll dieses für die spätere Verwendung zu sichern.</p>
+<p>Nach dem nun die wichtigsten Einstellungen vorgenommen und im QGIS-Benutzerprofil hinterlegt wurden, ist es sinnvoll dieses für die spätere Verwendung zu sichern.</p>
 <div style="border: 2px solid #afca0b; background-color: #fafafa; padding: 8px;">
-<p>Sichern sie den Ordner mit ihrem Profil (<code>C:\Users\???\AppData\Roaming\QGIS\QGIS3\profiles\???</code>.) in ihr persönliches Laufwerk unter <code>U:</code></p>
+<p>Sichern sie den Ordner mit Ihren persönlichen Profilen (<code>C:\Users\USERNAME\AppData\Roaming\QGIS\QGIS3</code>) in ihr persönliches Laufwerk unter <code>U:</code></p>
 </div>
-<p>Sollten sie im späteren Verlauf des Kurses ihr Profile wiederherstellen wollen, können sie diesen Ordner von <code>U:</code> wieder in den QGIS-Profil Ordner kopieren.</p>
+<p>Sollten sie im späteren Verlauf des Kurses ihre Profile wiederherstellen wollen, können sie diesen Ordner von <code>U:</code> wieder in den QGIS-Profil Ordner kopieren.</p>
 </section>
 </section>
 <section id="sec-projekt_management" class="level2" data-number="1.3">
@@ -389,21 +430,6 @@ Hinweis
 │   └── baumartenkarte.pdf
 └── projekt_XY.qgz</code></pre>
 <p>Diese Ordnerstruktur kann an die eigenen Präferenzen und die Notwendigkeiten im Projekt angepasst werden. Weitere wesentlicher Vorteil einer solchen Ordnerstruktur ist, dass die Ordner im ganzen verschoben, kopiert oder mit anderen geteilt werden können. Dies ist möglich, da die Projektdatei die relativen Pfade, ausgehend von dem Ordner in dem die <em>*.qgz</em> Datei liegt speichert. Also z.B. ./<em>daten/raster_1.tif</em></p>
-<div class="callout callout-style-default callout-caution callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Vorsicht
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Der Dateipfad in dem die Ordnerstruktur angelegt wird darf keine Umlaute oder (ä,ö,ü), Sonderzeichen (!,?, .,etc..) oder Leerzeichen enthalten. Dies kann bei der Verarbeitung zu Fehlern führen. Daher sollten bei der Anlage der gesamte Pfad kontrolliert werden.</p>
-<p>Beispiel:</p>
-<p><code>'C:\Users\Max Müller\Documents\Übung.01' -&gt; 'C:\Users\mmueller\Documents\uebung01'</code></p>
-</div>
-</div>
 </section>
 <section id="anlegen-eines-neuen-qgis-projektes" class="level3" data-number="1.3.2">
 <h3 data-number="1.3.2" class="anchored" data-anchor-id="anlegen-eines-neuen-qgis-projektes"><span class="header-section-number">1.3.2</span> Anlegen eines neuen QGIS-Projektes</h3>

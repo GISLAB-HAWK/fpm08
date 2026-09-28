@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="de" xml:lang="de"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.37">
+<meta name="generator" content="quarto-1.10.18">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -13,10 +13,13 @@
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
 */
-code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -42,10 +45,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-36bf55b16c7cb4b1420f41495cb5446a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-fd0503e23dce65854c81c5baaade3bdf.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -317,7 +320,7 @@ Lizenz: Creative Commons BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc
 </section>
 <section id="aufgabe-02-berechnung-des-normalized-difference-vegetation-index-ndvi" class="level2" data-number="6.4">
 <h2 data-number="6.4" class="anchored" data-anchor-id="aufgabe-02-berechnung-des-normalized-difference-vegetation-index-ndvi"><span class="header-section-number">6.4</span> Aufgabe 02: Berechnung des Normalized Difference Vegetation Index (NDVI)</h2>
-<p>Zur besseren Ansprache der Vitalität/des Blattverlusts möchten wir den Vegetationsindex NDVI berechnen. Für die Berechnung nutzen wir die Funktion <em>Radiometric Indices</em> in der Orfeo-Toolbox (OTB). Mit dieser Funktion können unterschiedliche Vegetationsindices berechnet werden. Sie finden die Funktion am einfachsten über die Suche in der Werkzeugkiste. Sollte diese nicht angezeigt werden, können sie die Werkzeugkiste im Menü -&gt; <em>Verarbeitung</em> aktivieren. Sollte ihnen die Funktion nicht angezeigt werden, müssen sie die Pfadeinstellungen zu OTB anpassen (siehe <a href="uebung01.html#sec-otb" class="quarto-xref"><span>Kapitel 1.2.3</span></a>).</p>
+<p>Zur besseren Ansprache der Vitalität/des Blattverlusts möchten wir den Vegetationsindex NDVI berechnen. Für die Berechnung nutzen wir die Funktion <em>Radiometric Indices</em> in der Orfeo-Toolbox (OTB). Mit dieser Funktion können unterschiedliche Vegetationsindices berechnet werden. Sie finden die Funktion am einfachsten über die Suche in der Werkzeugkiste. Sollte diese nicht angezeigt werden, können sie die Werkzeugkiste im Menü -&gt; <em>Verarbeitung</em> aktivieren. Sollte ihnen die Funktion nicht angezeigt werden, müssen sie die Pfadeinstellungen zu OTB anpassen (siehe <span class="quarto-unresolved-ref">?sec-otb</span>).</p>
 <p>Zur Berechnung des Vegetationsindex muss dem Programm mitgeteilt werden, welches Bild genutzt werden soll (<code>Input Image=sub_prezelle_2013</code>), welche Kanäle im Bild vorhanden sind (siehe oben), welchen Indices berechnet werden sollen (Available Radiometric Indices=Vegetation:NDVI), welche radiometrische Auflösung das Ausgabebild haben soll (Output pixel type= float) und wo das Ausgabebildgespeichert werden soll (Output<br>
 Image=sub_prezelle_2013_ndvi.tif).</p>
 <div class="quarto-figure quarto-figure-center">
