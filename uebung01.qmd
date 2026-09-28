@@ -24,53 +24,48 @@ QGIS-Erweiterungen installiert werden können.
 Die Studierenden sollen:
 
 -   QGIS installieren können bzw. überprüfen können welche Version installiert ist.
--   die Funktionsweise von Nutzerprofilen verstehen und anwenden können
+-   die Funktionsweise von Benutzerprofilen verstehen und anwenden können
 -   eine sinnvolle Ordnerstruktur zur Verwaltung von QGIS-Projekten kennen und anlegen können
 -   Projekte in QGIS anlegen können
 
 **Aufgabenstellung**
 
-1.  Überprüfen sie die Installation von QGIS und OTB.
+1.  Überprüfen sie die Installation von QGIS und EnMAP-Box.
 
 2.  Legen sie ein neues Nutzerprofil mit ihrem Namen an.
 
-3.  Installieren sie das OTB-Plugin und hinterlegen sie die korrekten Pfade für die
-    OTB-Programmbibliotheken.
+3.  Installieren sie das EnMAP-Box-Plugin und zusätzliche Python Module.
 
-4.  Sichern sie ihr Nutzerprofil an einem permanenten Speicherort.
+4.  Sichern sie ihr QGIS Benutzerprofil an einem permanenten Speicherort.
 
 5.  Legen sie eine Ordnerstruktur für das Projekt uebung01 an.
 
 6.  Legen sie innerhalb der Ordnerstruktur eine neues QGIS-Projekt *'uebung01.qgz'* an.
 
-## QGIS & OTB Installation und Konfiguration
+## QGIS & EnMAP-Box Installation und Konfiguration
 
-### Installation von QGIS und OTB
+### Installation von QGIS {#sec-qgisinstall}
 
 ::: callout-note
-Im PC-Pool der HAWK sind die notwendigen Programme bereits auf den Computern installiert. Die
-Installation ist also nur notwendig, wenn sie die Übungen auf einem eigenen Computer durchführen
+Im PC-Pool der HAWK ist QGIS bereits auf den Computern installiert. Das EnMAP-Box-Plugin muss zusätzlich in das persönliche Nutzerprofil installiert werden.
+Eine vollständige Installation von QGIS und EnMAP-Box ist notwendig, wenn Sie die Übungen auf einem eigenen Computer durchführen
 wollen. Die vorgestellten Programme funktionieren grundsätzlich unter Windows, Linux und MacOS
 Betriebssystemen. Für die Übungen wird aber nur auf Windows-Betriebssystemen getestet.
 :::
 
-In diesem Kurs wird die Software QGIS in der Version 3.40.x verwendet. Sie können die Software hier
+In diesem Kurs wird die Software QGIS in der Version 3.40.8 verwendet. Sie können die Software hier
 herunterladen:
 
-<https://qgis.org/downloads/QGIS-OSGeo4W-3.40.10-1.msi>
+<https://qgis.org/downloads/QGIS-OSGeo4W-3.40.8-1.msi>
 
-Weiter Hinweise zu den unterschiedlichen Installationsmöglichkeiten finden sie hier:
+Weiter Hinweise zu unterschiedlichen Installationsmöglichkeiten von QGIS finden sie hier:
 
-<https://docs.qgis.org/3.40/de/docs/user_manual/introduction/getting_started.html#installing-qgis>
+<https://qgis.org/download/>
 
-Neben QGIS nutzen wir für die fernerkundlichen Auswertungen die open-source Software [Orfeo
-Toolbox](https://www.orfeo-toolbox.org/) V.9.1.1. welche hier heruntergeladen werden kann:
+Neben QGIS nutzen wir für die fernerkundlichen Auswertungen das open-source QGIS Plugin [EnMAP-Box](https://enmap-box.readthedocs.io/en/latest/general/about.html) in der Version 3.17.9.
+Weitere Hinweise zu unterschiedlichen Installationsmöglichkeiten der EnMAP-Box finden Sie hier:
 
-<https://www.orfeo-toolbox.org/download/>
-
-Weiter Hinweise zu den unterschiedlichen Installationsmöglichkeiten finden sie hier:
-
-<https://www.orfeo-toolbox.org/CookBook/Installation.html>
+<https://enmap-box.readthedocs.io/en/latest/usr_section/usr_installation.html>
 
 ### Anlegen eines persönlichen QGIS-Nutzerprofils
 
@@ -84,73 +79,72 @@ Einstellungen:
 -   Installationen und Konfigurationen von Plugins
 
 ::: callout-note
-Das Anlegen persönlicher Nutzerprofile geschieht in der Regel vollständig automatisch. Im PC-Pool
+Das Anlegen persönlicher Benutzerprofile geschieht in der Regel vollständig automatisch. Im PC-Pool
 werden diese Profile aber nicht zwischen den PC-Arbeitsplätzen synchronisiert. Außerdem werden die
-lokalen Nutzerdaten in unregelmäßigen Abständen gelöscht. Daher kann es für die Arbeit im PC-Pool
+lokalen Benutzerdaten in unregelmäßigen Abständen gelöscht. Daher kann es für die Arbeit im PC-Pool
 sinnvoll sein, ein eigenes Profil anzulegen und in einem persönlichen Ordner zu sichern.
 :::
 
-QGIS speicher die Nutzerprofile automatisch lokalen im jeweiligen Nutzerordner
-`C:\Users\???\AppData\Roaming\QGIS\QGIS3\profiles\`. Standardmäßig gibt es in QGIS nur das
-Benutzerprofil *default*. Es können aber beliebig viele weitere angelegt werden.
+QGIS speichert Benutzerprofile automatisch im lokalen Profilordner.
 
-::: {style="border: 2px solid #afca0b; background-color: #fafafa; padding: 8px;"}
-Legen sie ein neues Nutzerprofile mit ihrem Namen (z.B. mueller) an:
+`C:\Users\USERNAME\AppData\Roaming\QGIS\QGIS3\profiles\` 
+USERNAME steht hier als Platzhalter für Ihren Benutzernamen, also den aktuellen Windows-Benutzernamen des angemeldeten Users.
+Das Verzeichnis, in dem die QGIS Benutzerprofile gespeichert werden, lässt sich im Dateimanager öffnen mit
 
-`Einstellungen` → `Nutzerprofile` → `Neues Profil anlegen`
+`Einstellungen` → `Benutzerprofile` → `Aktuelles Profilverzeichnis öffnen`
+
+Standardmäßig gibt es in QGIS nur das Benutzerprofil *default*. Es können aber beliebig viele weitere angelegt werden.
+
+::: {style="border: 2px solid #afca0b; background-color: ; padding: 8px;"}
+Legen sie ein neues Nutzerprofile mit Ihrem Namen (z.B. mueller) an:
+
+`Einstellungen` → `Benutzerprofile` → `Neues Profil anlegen`
 :::
 
-Weitere Informationen zu den QGIS-Nutzerprofilen finden sie hier:
+Weitere Informationen zu den QGIS-Benutzerprofilen finden sie hier:
 
 <https://docs.qgis.org/3.40/de/docs/user_manual/introduction/qgis_configuration.html#user-profiles>
 
-### Installation & Einrichtung von OTB in QGIS {#sec-otb}
+### Installation des EnMAP-Box Plugins und zusätzlicher Python Module {#sec-enmap}
 
-Die OTB-Software kann direkt über eine Kommandozeile verwendet werden oder -wie im Kurs- innerhalb
-von QGIS. Dazu steht ein Plugin zur Verfügung, welches wie folgt installiert und konfiguriert werden
-muss:
-
-1.) Installation des Orfeo Toolbox Plugins in QGIS
+1.) Installation des EnMAP-Box Plugins
 
 ::: {style="border: 2px solid #afca0b; background-color: #fafafa; padding: 8px;"}
-`Erweiterung` → `Erweiterungen verwalten und installieren` Im Suchfenster `OrfeoToolboxProvider` das
-Plugin auswählen und installieren.
+`Erweiterungen` → `Erweiterungen verwalten und installieren` Im Suchfenster `EnMAP Box` eingeben, das angezeigte Plugin auswählen und installieren.
 :::
 
-2.) Konfiguration des OTB-Plugins
+2.) Installation von Python Abhängigkeiten auf Windows (andere Betriebssysteme s. [QGIS Installation](#sec-qgisinstall))
 
-Nachdem das Plugin Installiert ist, muss es noch konfiguriert werden. Dazu müssen die Pfade zu der
-OTB-Software eingetragen werden.
+Nachdem das Plugin Installiert ist, müssen noch zusätzliche Python Module installiert werden bevor es gestartet werden kann. 
 
-::: {style="border: 2px solid #afca0b; background-color: #fafafa; padding: 8px;"}
-**Starten der Werkzeugkiste**: `Verarbeitung` → `Werkzeugkiste`
+- Laden Sie das Installationskript 
+[installation_qgis_dependencies.py](https://cloud.hawk.de/index.php/s/BLGZ5ssdPHGH9Ea)
+herunter und speichern Sie es in in ein lokales Verzeichnis.
 
-In der Werkzeugkiste das Schraubenschlüsselsymbol (Optionen) wählen und dort unter `Datenanbieter`
---\> `OTB` zwei Eintragungen vornehmen:
+- Öffen Sie die QGIS Python Konsole: `Erweiterungen` → `Python Konsole`
 
-**OTB application folder:** `C:/OTB/lib/otb/applications`
+- Kopieren und Einfügen des folgenden Einzeilers in die Python Konsole, nur den Pfad des heruntergeladenen Skriptes editieren,  dann Enter drücken zum Ausführen des Skriptes.
 
-**OTB folder:** `C:/OTB`
+::: {style="border: 2px solid #afca0b; background-color: #e0e0e0; padding: 8px;"}
+```markdown
+script = Path(r"C:/users/USERNAME/Downloads/install_qgis_dependencies.py"); exec(script.read_text(encoding="utf-8")); main(["--plugin", "enmap-box-base"])
+```
 :::
 
-Nach korrekter Eingabe der Pfade und dem Schließen des Optionsmenüs sollte nach kurzer Zeit bei den
-Verarbeitungswerkzeugen in der Werkzeugkiste die OTB-Werkzeuge angezeigt werden.
-
-Weitere Anleitungen zur Konfiguration des OTB-Plugins können sie hier finden:
-
-<https://www.orfeo-toolbox.org/CookBook-9.1/QGISInterface.html>
+- QGIS schliessen und neustarten.
+- Starten Sie das EnMAP-Box Plugin (s. [Launching the EnMAP-Box](https://enmap-box.readthedocs.io/en/latest/usr_section/usr_gettingstarted.html#launching-the-enmap-box))
 
 ### Sichern des persönlichen Nutzerprofils {#sec-nutzerprofil}
 
-Nach dem nun die wichtigsten Einstellungen vorgenommen und im QGIS-Nutzerprofil hinterlegt wurden,
+Nach dem nun die wichtigsten Einstellungen vorgenommen und im QGIS-Benutzerprofil hinterlegt wurden,
 ist es sinnvoll dieses für die spätere Verwendung zu sichern.
 
 ::: {style="border: 2px solid #afca0b; background-color: #fafafa; padding: 8px;"}
-Sichern sie den Ordner mit ihrem Profil (`C:\Users\???\AppData\Roaming\QGIS\QGIS3\profiles\???`.) in
+Sichern sie den Ordner mit Ihren persönlichen Profilen (`C:\Users\USERNAME\AppData\Roaming\QGIS\QGIS3`) in
 ihr persönliches Laufwerk unter `U:`
 :::
 
-Sollten sie im späteren Verlauf des Kurses ihr Profile wiederherstellen wollen, können sie diesen
+Sollten sie im späteren Verlauf des Kurses ihre Profile wiederherstellen wollen, können sie diesen
 Ordner von `U:` wieder in den QGIS-Profil Ordner kopieren.
 
 ## Projekt- und Datenmanagement mit QGIS {#sec-projekt_management}
@@ -173,33 +167,14 @@ projekt_xy/
 └── projekt_XY.qgz
 ```
 
-Diese Ordnerstruktur kann an die eigenen Präferenzen und die Notwendigkeiten im Projekt angepasst
-werden. Weitere wesentlicher Vorteil einer solchen Ordnerstruktur ist, dass die Ordner im ganzen
-verschoben, kopiert oder mit anderen geteilt werden können. Dies ist möglich, da die Projektdatei
-die relativen Pfade, ausgehend von dem Ordner in dem die *\*.qgz* Datei liegt speichert. Also z.B.
+Diese Ordnerstruktur kann an die eigenen Präferenzen und die Notwendigkeiten im Projekt angepasst werden. Weitere wesentlicher Vorteil einer solchen Ordnerstruktur ist, dass die Ordner im ganzen verschoben, kopiert oder mit anderen geteilt werden können. Dies ist möglich, da die Projektdatei die relativen Pfade, ausgehend von dem Ordner in dem die *\*.qgz* Datei liegt speichert. Also z.B.
 ./*daten/raster_1.tif*
-
-::: callout-caution
-Der Dateipfad in dem die Ordnerstruktur angelegt wird darf keine Umlaute oder (ä,ö,ü), Sonderzeichen
-(!,?, .,etc..) oder Leerzeichen enthalten. Dies kann bei der Verarbeitung zu Fehlern führen. Daher
-sollten bei der Anlage der gesamte Pfad kontrolliert werden.
-
-Beispiel:
-
-`'C:\Users\Max Müller\Documents\Übung.01' -> 'C:\Users\mmueller\Documents\uebung01'`
-:::
 
 ### Anlegen eines neuen QGIS-Projektes
 
 In QGIS können einzelne Projekte z.B. eine Lehreinheit als Projekte angelegt und gespeichert werden.
-Dabei werden sämtliche Einstellungen und Darstellungen (z.B. Kartenlayouts, Symbologien, Layer),
-Bearbeitungsstand und vieles mehr gespeichert. Das ist vor allem sinnvoll wenn man seine Arbeit
-unterbrechen und zu einem späteren Zeitpunkt fortsetzen möchte. Die Projekte werden in einer Datei
-mit der Endung \*.qgz gespeichert.
+Dabei werden sämtliche Einstellungen und Darstellungen (z.B. Kartenlayouts, Symbologien, Layer), Bearbeitungsstand und vieles mehr gespeichert. Das ist vor allem sinnvoll wenn man seine Arbeit unterbrechen und zu einem späteren Zeitpunkt fortsetzen möchte. Die Projekte werden in einer Datei mit der Endung \*.qgz gespeichert.
 
 ::: callout-note
-Die Projektdatei \*.qgz enthält nicht die Geodaten, des Projektes. Es werden lediglich die Pfade zu
-den Dateien mit den Geodaten gespeichert. Beim Laden des Projektes werden die Geodaten an den
-hinterlegten Datenpfaden gesucht und geladen. Sollten diese nicht mehr an dem Ort gespeichert sein,
-wir QGIS einen Fehler melden. Eine klare Ordnerstruktur kann solche Fehler vermeiden helfen.
+Die Projektdatei \*.qgz enthält nicht die Geodaten, des Projektes. Es werden lediglich die Pfade zu den Dateien mit den Geodaten gespeichert. Beim Laden des Projektes werden die Geodaten an den hinterlegten Datenpfaden gesucht und geladen. Sollten diese nicht mehr an dem Ort gespeichert sein, wir QGIS einen Fehler melden. Eine klare Ordnerstruktur kann solche Fehler vermeiden helfen.
 :::
