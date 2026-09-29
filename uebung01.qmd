@@ -6,6 +6,7 @@ B.Sc. Forstwirtschaft an der HAWK Göttingen.
 
 Autor: Paul Magdon
 Datum: 2025-10-12
+Letztes Update: 2026-09-29 (Hans Fuchs)
 Lizenz: Creative Commons BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 -->
@@ -30,17 +31,17 @@ Die Studierenden sollen:
 
 **Aufgabenstellung**
 
-1.  Überprüfen sie die Installation von QGIS und EnMAP-Box.
+1.  Überprüfen Sie die Installation von QGIS und EnMAP-Box.
 
-2.  Legen sie ein neues Nutzerprofil mit ihrem Namen an.
+2.  Legen Sie ein neues Nutzerprofil mit ihrem Namen an.
 
-3.  Installieren sie das EnMAP-Box-Plugin und zusätzliche Python Module.
+3.  Installieren Sie das EnMAP-Box-Plugin und zusätzliche Python Module.
 
-4.  Sichern sie ihr QGIS Benutzerprofil an einem permanenten Speicherort.
+4.  Sichern Sie ihr QGIS Benutzerprofil an einem permanenten Speicherort.
 
-5.  Legen sie eine Ordnerstruktur für das Projekt uebung01 an.
+5.  Legen Sie eine Ordnerstruktur für das Projekt uebung01 an.
 
-6.  Legen sie innerhalb der Ordnerstruktur eine neues QGIS-Projekt *'uebung01.qgz'* an.
+6.  Legen Sie innerhalb der Ordnerstruktur eine neues QGIS-Projekt *'uebung01.qgz'* an.
 
 ## QGIS & EnMAP-Box Installation und Konfiguration
 
@@ -69,19 +70,19 @@ Weitere Hinweise zu unterschiedlichen Installationsmöglichkeiten der EnMAP-Box 
 
 ### Anlegen eines persönlichen QGIS-Nutzerprofils
 
-QGIS kann auf die eigenen Bedürfnisse umfangreich angepasst werden. Dazu zählen z.B. folgende
+QGIS kann auf eigene Bedürfnisse umfangreich angepasst werden. Dazu zählen z.B. folgende
 Einstellungen:
 
 -   Sprache
 -   Projektionen und Koordinatensysteme
 -   Passwörter für Datenbankzugänge
 -   Anpassungen des Erscheinungsbildes und der dargestellten Werkzeuge
--   Installationen und Konfigurationen von Plugins
+-   Installation und Konfiguration von Plugins
 
 ::: callout-note
 Das Anlegen persönlicher Benutzerprofile geschieht in der Regel vollständig automatisch. Im PC-Pool
 werden diese Profile aber nicht zwischen den PC-Arbeitsplätzen synchronisiert. Außerdem werden die
-lokalen Benutzerdaten in unregelmäßigen Abständen gelöscht. Daher kann es für die Arbeit im PC-Pool
+lokalen Benutzerdaten in regelmäßigen Abständen gelöscht. Daher kann es für die Arbeit im PC-Pool
 sinnvoll sein, ein eigenes Profil anzulegen und in einem persönlichen Ordner zu sichern.
 :::
 
@@ -89,14 +90,14 @@ QGIS speichert Benutzerprofile automatisch im lokalen Profilordner.
 
 `C:\Users\USERNAME\AppData\Roaming\QGIS\QGIS3\profiles\` 
 USERNAME steht hier als Platzhalter für Ihren Benutzernamen, also den aktuellen Windows-Benutzernamen des angemeldeten Users.
-Das Verzeichnis, in dem die QGIS Benutzerprofile gespeichert werden, lässt sich im Dateimanager öffnen mit
+Das Verzeichnis, in dem die QGIS Benutzerprofile gespeichert werden, lässt sich direkt im QGIS Hauptmenü öffnen mit
 
 `Einstellungen` → `Benutzerprofile` → `Aktuelles Profilverzeichnis öffnen`
 
 Standardmäßig gibt es in QGIS nur das Benutzerprofil *default*. Es können aber beliebig viele weitere angelegt werden.
 
 ::: {style="border: 2px solid #afca0b; background-color: ; padding: 8px;"}
-Legen sie ein neues Nutzerprofile mit Ihrem Namen (z.B. mueller) an:
+Legen Sie ein neues Nutzerprofile mit Ihrem Namen (z.B. mueller) an:
 
 `Einstellungen` → `Benutzerprofile` → `Neues Profil anlegen`
 :::
@@ -115,11 +116,11 @@ Weitere Informationen zu den QGIS-Benutzerprofilen finden sie hier:
 
 2.) Installation von Python Abhängigkeiten auf Windows (andere Betriebssysteme s. [QGIS Installation](#sec-qgisinstall))
 
-Nachdem das Plugin Installiert ist, müssen noch zusätzliche Python Module installiert werden bevor es gestartet werden kann. 
+Nachdem das Plugin installiert ist, müssen noch zusätzliche Python Module installiert werden bevor es gestartet werden kann. 
 
 - Laden Sie das Installationskript 
-[installation_qgis_dependencies.py](https://cloud.hawk.de/index.php/s/BLGZ5ssdPHGH9Ea)
-herunter und speichern Sie es in in ein lokales Verzeichnis.
+[installation_qgis_dependencies_base.py](https://cloud.hawk.de/index.php/s/CwTKje2HLo2RZHX)
+herunter und speichern Sie es direkt in das lokale Verzeichnis D:/
 
 - Öffen Sie die QGIS Python Konsole: `Erweiterungen` → `Python Konsole`
 
@@ -127,7 +128,7 @@ herunter und speichern Sie es in in ein lokales Verzeichnis.
 
 ::: {style="border: 2px solid #afca0b; background-color: #e0e0e0; padding: 8px;"}
 ```markdown
-script = Path(r"C:/users/USERNAME/Downloads/install_qgis_dependencies.py"); exec(script.read_text(encoding="utf-8")); main(["--plugin", "enmap-box-base"])
+script=r"D:/install_qgis_dependencies_base.py"; exec(open(script,encoding="utf-8").read()); main([])
 ```
 :::
 
@@ -140,12 +141,12 @@ Nach dem nun die wichtigsten Einstellungen vorgenommen und im QGIS-Benutzerprofi
 ist es sinnvoll dieses für die spätere Verwendung zu sichern.
 
 ::: {style="border: 2px solid #afca0b; background-color: #fafafa; padding: 8px;"}
-Sichern sie den Ordner mit Ihren persönlichen Profilen (`C:\Users\USERNAME\AppData\Roaming\QGIS\QGIS3`) in
+Sichern sie den gesamten Ordner `QGIS3` mit Ihren persönlichen Profildaten (`C:\Users\USERNAME\AppData\Roaming\QGIS\QGIS3`) in
 ihr persönliches Laufwerk unter `U:`
 :::
 
-Sollten sie im späteren Verlauf des Kurses ihre Profile wiederherstellen wollen, können sie diesen
-Ordner von `U:` wieder in den QGIS-Profil Ordner kopieren.
+Sollten sie im späteren Verlauf des Kurses ihre Profile wiederherstellen wollen, können sie den
+Ordner `QGIS3` von `U:` wieder in den QGIS-Profil Ordner kopieren.
 
 ## Projekt- und Datenmanagement mit QGIS {#sec-projekt_management}
 
@@ -160,14 +161,12 @@ projekt_xy/
 ├── daten/
 │   └── raster_1.tif
 |   └── raster_2.tif
-├── skripte/
-│   └── analyse.R
 ├── karten/
 │   └── baumartenkarte.pdf
 └── projekt_XY.qgz
 ```
 
-Diese Ordnerstruktur kann an die eigenen Präferenzen und die Notwendigkeiten im Projekt angepasst werden. Weitere wesentlicher Vorteil einer solchen Ordnerstruktur ist, dass die Ordner im ganzen verschoben, kopiert oder mit anderen geteilt werden können. Dies ist möglich, da die Projektdatei die relativen Pfade, ausgehend von dem Ordner in dem die *\*.qgz* Datei liegt speichert. Also z.B.
+Diese Ordnerstruktur kann an die eigenen Präferenzen und die Notwendigkeiten im Projekt angepasst werden. Ein wesentlicher Vorteil einer solchen Ordnerstruktur: der Ordner kann im Ganzen verschoben, kopiert oder mit anderen geteilt werden. Dies ist möglich, da die Projektdatei die relativen Pfade, ausgehend von dem Ordner in dem die *\*.qgz* Datei liegt speichert. Also z.B.
 ./*daten/raster_1.tif*
 
 ### Anlegen eines neuen QGIS-Projektes
