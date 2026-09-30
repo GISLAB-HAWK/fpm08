@@ -64,7 +64,7 @@ Weitere Hinweise zu unterschiedlichen Installationsmöglichkeiten der EnMAP-Box 
 
 <https://enmap-box.readthedocs.io/en/latest/usr_section/usr_installation.html>
 
-### Anlegen eines persönlichen QGIS-Nutzerprofils
+### Anlegen eines persönlichen QGIS-Benutzerprofils
 
 QGIS kann auf eigene Bedürfnisse umfangreich angepasst werden. Dazu zählen z.B. folgende
 Einstellungen:
