@@ -259,11 +259,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
    
   <ul>
   <li><a href="#lernziele-aufgabenstellung" id="toc-lernziele-aufgabenstellung" class="nav-link active" data-scroll-target="#lernziele-aufgabenstellung"><span class="header-section-number">1.1</span> Lernziele &amp; Aufgabenstellung</a></li>
-  <li><a href="#qgis-enmap-box-installation-und-konfiguration" id="toc-qgis-enmap-box-installation-und-konfiguration" class="nav-link" data-scroll-target="#qgis-enmap-box-installation-und-konfiguration"><span class="header-section-number">1.2</span> QGIS &amp; EnMAP-Box Installation und Konfiguration</a>
+  <li><a href="#qgis-und-enmap-box-installation" id="toc-qgis-und-enmap-box-installation" class="nav-link" data-scroll-target="#qgis-und-enmap-box-installation"><span class="header-section-number">1.2</span> QGIS und EnMAP-Box Installation</a>
   <ul class="collapse">
   <li><a href="#sec-qgisinstall" id="toc-sec-qgisinstall" class="nav-link" data-scroll-target="#sec-qgisinstall"><span class="header-section-number">1.2.1</span> Installation von QGIS</a></li>
   <li><a href="#anlegen-eines-persönlichen-qgis-nutzerprofils" id="toc-anlegen-eines-persönlichen-qgis-nutzerprofils" class="nav-link" data-scroll-target="#anlegen-eines-persönlichen-qgis-nutzerprofils"><span class="header-section-number">1.2.2</span> Anlegen eines persönlichen QGIS-Nutzerprofils</a></li>
-  <li><a href="#sec-enmap" id="toc-sec-enmap" class="nav-link" data-scroll-target="#sec-enmap"><span class="header-section-number">1.2.3</span> Installation des EnMAP-Box Plugins und zusätzlicher Python Module</a></li>
+  <li><a href="#sec-enmap" id="toc-sec-enmap" class="nav-link" data-scroll-target="#sec-enmap"><span class="header-section-number">1.2.3</span> Installation des EnMAP-Box Plugins und zusätzlicher Module</a></li>
   <li><a href="#sec-nutzerprofil" id="toc-sec-nutzerprofil" class="nav-link" data-scroll-target="#sec-nutzerprofil"><span class="header-section-number">1.2.4</span> Sichern des persönlichen Nutzerprofils</a></li>
   </ul></li>
   <li><a href="#sec-projekt_management" id="toc-sec-projekt_management" class="nav-link" data-scroll-target="#sec-projekt_management"><span class="header-section-number">1.3</span> Projekt- und Datenmanagement mit QGIS</a>
@@ -309,27 +309,27 @@ Lizenz: Creative Commons BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc
 -->
 <section id="lernziele-aufgabenstellung" class="level2" data-number="1.1">
 <h2 data-number="1.1" class="anchored" data-anchor-id="lernziele-aufgabenstellung"><span class="header-section-number">1.1</span> Lernziele &amp; Aufgabenstellung</h2>
-<p>Die erste Lerneinheit dient der Einrichtung einer Arbeitsumgebung und der Wiederholung der wesentlichen QGIS-Funktionen. Wir prüfen die Installation der notwendigen Programme und konfigurieren diese für die spätere Verwendung. Es wird außerdem gezeigt, wie wir diese Einstellungen über die QGIS-Profile speichern und sichern können. Außerdem wird vorgestellt wie QGIS-Erweiterungen installiert werden können.</p>
+<p>Die erste Lerneinheit dient der Einrichtung einer Arbeitsumgebung und Wiederholung wesentlicher QGIS-Funktionen. Wir prüfen die Installation der Programme und QGIS-Erweiterungen. Es wird außerdem gezeigt, wie wir Einstellungen in den persönlichen QGIS-Profilen speichern und sichern können.</p>
 <p><strong>Lernziele</strong></p>
 <p>Die Studierenden sollen:</p>
 <ul>
-<li>QGIS installieren können bzw. überprüfen können welche Version installiert ist.</li>
-<li>die Funktionsweise von Benutzerprofilen verstehen und anwenden können</li>
-<li>eine sinnvolle Ordnerstruktur zur Verwaltung von QGIS-Projekten kennen und anlegen können</li>
-<li>Projekte in QGIS anlegen können</li>
+<li>QGIS installieren und überprüfen welche Version installiert ist</li>
+<li>die Funktionsweise von Benutzerprofilen verstehen und anwenden</li>
+<li>eine sinnvolle Ordnerstruktur zur Verwaltung von QGIS-Projekten kennen und anlegen</li>
+<li>Projekte in QGIS anlegen</li>
 </ul>
 <p><strong>Aufgabenstellung</strong></p>
 <ol type="1">
-<li><p>Überprüfen Sie die Installation von QGIS und EnMAP-Box.</p></li>
-<li><p>Legen Sie ein neues Nutzerprofil mit ihrem Namen an.</p></li>
-<li><p>Installieren Sie das EnMAP-Box-Plugin und zusätzliche Python Module.</p></li>
+<li><p>Überprüfen Sie die Installation von QGIS und EnMAP-Box Plugin.</p></li>
+<li><p>Legen Sie ein neues QGIS Benutzerprofil mit ihrem Namen an.</p></li>
+<li><p>Installieren Sie das EnMAP-Box-Plugin und zusätzliche Module.</p></li>
 <li><p>Sichern Sie ihr QGIS Benutzerprofil an einem permanenten Speicherort.</p></li>
 <li><p>Legen Sie eine Ordnerstruktur für das Projekt uebung01 an.</p></li>
-<li><p>Legen Sie innerhalb der Ordnerstruktur eine neues QGIS-Projekt <em>‘uebung01.qgz’</em> an.</p></li>
+<li><p>Legen Sie innerhalb der Ordnerstruktur eine neues QGIS-Projekt <em><code>uebung01.qgz</code></em> an.</p></li>
 </ol>
 </section>
-<section id="qgis-enmap-box-installation-und-konfiguration" class="level2" data-number="1.2">
-<h2 data-number="1.2" class="anchored" data-anchor-id="qgis-enmap-box-installation-und-konfiguration"><span class="header-section-number">1.2</span> QGIS &amp; EnMAP-Box Installation und Konfiguration</h2>
+<section id="qgis-und-enmap-box-installation" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="qgis-und-enmap-box-installation"><span class="header-section-number">1.2</span> QGIS und EnMAP-Box Installation</h2>
 <section id="sec-qgisinstall" class="level3" data-number="1.2.1">
 <h3 data-number="1.2.1" class="anchored" data-anchor-id="sec-qgisinstall"><span class="header-section-number">1.2.1</span> Installation von QGIS</h3>
 <div class="callout callout-style-default callout-note callout-titled">
@@ -342,14 +342,14 @@ Hinweis
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Im PC-Pool der HAWK ist QGIS bereits auf den Computern installiert. Das EnMAP-Box-Plugin muss zusätzlich in das persönliche Nutzerprofil installiert werden. Eine vollständige Installation von QGIS und EnMAP-Box ist notwendig, wenn Sie die Übungen auf einem eigenen Computer durchführen wollen. Die vorgestellten Programme funktionieren grundsätzlich unter Windows, Linux und MacOS Betriebssystemen. Für die Übungen wird aber nur auf Windows-Betriebssystemen getestet.</p>
+<p>Im PC-Pool der HAWK ist QGIS bereits auf den Computern installiert. Das EnMAP-Box-Plugin muss zusätzlich in das persönliche QGIS Benutzerprofil installiert werden. Eine vollständige Installation von QGIS und EnMAP-Box ist notwendig, wenn Sie die Übungen auf einem eigenen Computer durchführen wollen. Die vorgestellten Programme funktionieren grundsätzlich unter Windows, Linux und MacOS Betriebssystemen.</p>
 </div>
 </div>
 <p>In diesem Kurs wird die Software QGIS in der Version 3.40.8 verwendet. Sie können die Software hier herunterladen:</p>
 <p><a href="https://qgis.org/downloads/QGIS-OSGeo4W-3.40.8-1.msi" class="uri">https://qgis.org/downloads/QGIS-OSGeo4W-3.40.8-1.msi</a></p>
-<p>Weiter Hinweise zu unterschiedlichen Installationsmöglichkeiten von QGIS finden sie hier:</p>
+<p>Weitere Hinweise zu unterschiedlichen Installationsmöglichkeiten von QGIS finden sie hier:</p>
 <p><a href="https://qgis.org/download/" class="uri">https://qgis.org/download/</a></p>
-<p>Neben QGIS nutzen wir für die fernerkundlichen Auswertungen das open-source QGIS Plugin <a href="https://enmap-box.readthedocs.io/en/latest/general/about.html">EnMAP-Box</a> in der Version 3.17.9. Weitere Hinweise zu unterschiedlichen Installationsmöglichkeiten der EnMAP-Box finden Sie hier:</p>
+<p>Neben QGIS nutzen wir für die fernerkundlichen Auswertungen das quelloffene QGIS Plugin <a href="https://enmap-box.readthedocs.io/en/latest/general/about.html">EnMAP-Box</a> in der Version 3.17.9. Weitere Hinweise zu unterschiedlichen Installationsmöglichkeiten der EnMAP-Box finden Sie hier:</p>
 <p><a href="https://enmap-box.readthedocs.io/en/latest/usr_section/usr_installation.html" class="uri">https://enmap-box.readthedocs.io/en/latest/usr_section/usr_installation.html</a></p>
 </section>
 <section id="anlegen-eines-persönlichen-qgis-nutzerprofils" class="level3" data-number="1.2.2">
@@ -376,9 +376,10 @@ Hinweis
 </div>
 </div>
 <p>QGIS speichert Benutzerprofile automatisch im lokalen Profilordner.</p>
-<p><code>C:\Users\USERNAME\AppData\Roaming\QGIS\QGIS3\profiles\</code> USERNAME steht hier als Platzhalter für Ihren Benutzernamen, also den aktuellen Windows-Benutzernamen des angemeldeten Users. Das Verzeichnis, in dem die QGIS Benutzerprofile gespeichert werden, lässt sich direkt im QGIS Hauptmenü öffnen mit</p>
+<p><code>C:\Users\USERNAME\AppData\Roaming\QGIS\QGIS3\profiles\</code></p>
+<p>USERNAME steht hier als Platzhalter für Ihren Benutzernamen, also den aktuell angemeldeten Windows-Benutzernamen. Das Verzeichnis, in dem die QGIS Benutzerprofile gespeichert werden, lässt sich direkt im QGIS Hauptmenü öffnen mit</p>
 <p><code>Einstellungen</code> → <code>Benutzerprofile</code> → <code>Aktuelles Profilverzeichnis öffnen</code></p>
-<p>Standardmäßig gibt es in QGIS nur das Benutzerprofil <em>default</em>. Es können aber beliebig viele weitere angelegt werden.</p>
+<p>Standardmäßig gibt es in QGIS nur das Benutzerprofil <em>default</em>. Es können aber beliebig viele zusätzlich angelegt werden.</p>
 <div style="border: 2px solid #afca0b; background-color: ; padding: 8px;">
 <p>Legen Sie ein neues Nutzerprofile mit Ihrem Namen (z.B. mueller) an:</p>
 <p><code>Einstellungen</code> → <code>Benutzerprofile</code> → <code>Neues Profil anlegen</code></p>
@@ -387,40 +388,41 @@ Hinweis
 <p><a href="https://docs.qgis.org/3.40/de/docs/user_manual/introduction/qgis_configuration.html#user-profiles" class="uri">https://docs.qgis.org/3.40/de/docs/user_manual/introduction/qgis_configuration.html#user-profiles</a></p>
 </section>
 <section id="sec-enmap" class="level3" data-number="1.2.3">
-<h3 data-number="1.2.3" class="anchored" data-anchor-id="sec-enmap"><span class="header-section-number">1.2.3</span> Installation des EnMAP-Box Plugins und zusätzlicher Python Module</h3>
+<h3 data-number="1.2.3" class="anchored" data-anchor-id="sec-enmap"><span class="header-section-number">1.2.3</span> Installation des EnMAP-Box Plugins und zusätzlicher Module</h3>
 <p>1.) Installation des EnMAP-Box Plugins</p>
 <div style="border: 2px solid #afca0b; background-color: #fafafa; padding: 8px;">
-<p><code>Erweiterungen</code> → <code>Erweiterungen verwalten und installieren</code> Im Suchfenster <code>EnMAP Box</code> eingeben, das angezeigte Plugin auswählen und installieren.</p>
+<p><code>Erweiterungen</code> → <code>Erweiterungen verwalten und installieren</code></p>
+<p>Im Suchfenster <code>enmap</code> eingeben, das angezeigte Plugin <code>EnMAP-Box 3</code>auswählen und installieren.</p>
 </div>
 <p>2.) Installation von Python Abhängigkeiten auf Windows (andere Betriebssysteme s. <a href="#sec-qgisinstall">QGIS Installation</a>)</p>
-<p>Nachdem das Plugin installiert ist, müssen noch zusätzliche Python Module installiert werden bevor es gestartet werden kann.</p>
+<p>Nachdem das Plugin installiert ist, müssen noch zusätzliche Module installiert werden bevor es gestartet werden kann.</p>
 <ul>
-<li><p>Laden Sie das Installationskript <a href="https://cloud.hawk.de/index.php/s/CwTKje2HLo2RZHX">installation_qgis_dependencies_base.py</a> herunter und speichern Sie es direkt in das lokale Verzeichnis D:/</p></li>
+<li><p>Laden Sie das Installationskript <a href="https://cloud.hawk.de/index.php/s/CwTKje2HLo2RZHX">installation_qgis_dependencies_base.py</a> herunter und speichern Sie es direkt in das lokale Verzeichnis <code>D:\</code></p></li>
 <li><p>Öffen Sie die QGIS Python Konsole: <code>Erweiterungen</code> → <code>Python Konsole</code></p></li>
-<li><p>Kopieren und Einfügen des folgenden Einzeilers in die Python Konsole, nur den Pfad des heruntergeladenen Skriptes editieren, dann Enter drücken zum Ausführen des Skriptes.</p></li>
+<li><p>Kopieren und Einfügen des folgenden Einzeilers in die Python Konsole, eventuell nur den Pfad zum heruntergeladenen Skript editieren, dann Enter drücken zum Ausführen des Skriptes.</p></li>
 </ul>
 <div style="border: 2px solid #afca0b; background-color: #e0e0e0; padding: 8px;">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>script=r"D:/install_qgis_dependencies_base.py"; exec(open(script,encoding="utf-8").read()); main([])</span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <ul>
-<li>QGIS schliessen und neustarten.</li>
-<li>Starten Sie das EnMAP-Box Plugin (s. <a href="https://enmap-box.readthedocs.io/en/latest/usr_section/usr_gettingstarted.html#launching-the-enmap-box">Launching the EnMAP-Box</a>)</li>
+<li><p>QGIS schliessen und neustarten.</p></li>
+<li><p>Starten Sie die EnMAP-Box: <code>Raster</code> → <code>EnMAP-Box</code> → <code>EnMAP-Box</code></p></li>
 </ul>
 </section>
 <section id="sec-nutzerprofil" class="level3" data-number="1.2.4">
 <h3 data-number="1.2.4" class="anchored" data-anchor-id="sec-nutzerprofil"><span class="header-section-number">1.2.4</span> Sichern des persönlichen Nutzerprofils</h3>
 <p>Nach dem nun die wichtigsten Einstellungen vorgenommen und im QGIS-Benutzerprofil hinterlegt wurden, ist es sinnvoll dieses für die spätere Verwendung zu sichern.</p>
 <div style="border: 2px solid #afca0b; background-color: #fafafa; padding: 8px;">
-<p>Sichern sie den gesamten Ordner <code>QGIS3</code> mit Ihren persönlichen Profildaten (<code>C:\Users\USERNAME\AppData\Roaming\QGIS\QGIS3</code>) in ihr persönliches Laufwerk unter <code>U:</code></p>
+<p>Sichern sie den gesamten Ordner <code>QGIS3</code> mit Ihren persönlichen Profildaten (<code>C:\Users\USERNAME\AppData\Roaming\QGIS\QGIS3</code>) in ihr persönliches Laufwerk unter <code>U:\</code></p>
 </div>
-<p>Sollten sie im späteren Verlauf des Kurses ihre Profile wiederherstellen wollen, können sie den Ordner <code>QGIS3</code> von <code>U:</code> wieder in den QGIS-Profil Ordner kopieren.</p>
+<p>Sollten sie im späteren Verlauf des Kurses ihre Profile wiederherstellen wollen, können sie den Ordner <code>QGIS3</code> von <code>U:\</code> wieder in den QGIS-Profil Ordner <code>C:\Users\USERNAME\AppData\Roaming\QGIS\</code> kopieren.</p>
 </section>
 </section>
 <section id="sec-projekt_management" class="level2" data-number="1.3">
 <h2 data-number="1.3" class="anchored" data-anchor-id="sec-projekt_management"><span class="header-section-number">1.3</span> Projekt- und Datenmanagement mit QGIS</h2>
 <section id="anlegen-einer-ordnerstruktur" class="level3" data-number="1.3.1">
 <h3 data-number="1.3.1" class="anchored" data-anchor-id="anlegen-einer-ordnerstruktur"><span class="header-section-number">1.3.1</span> Anlegen einer Ordnerstruktur</h3>
-<p>Eine gute Ordnerstruktur ist für das Datenmanagement sehr hilfreich. Daher wird empfohlen für jedes Projekt / jede Lerneinheit eine eigene Ordnerstruktur nach einheitlichem Muster anzulegen. Die Struktur könnte so aussehen:</p>
+<p>Eine gute Ordnerstruktur ist für das Datenmanagement sehr hilfreich. Daher wird empfohlen für jedes Projekt bzw. jede Lerneinheit eine eigene Ordnerstruktur nach einheitlichem Muster anzulegen. Die Struktur könnte so aussehen:</p>
 <pre class="plaintext"><code>projekt_xy/
 ├── daten/
 │   └── raster_1.tif
@@ -428,7 +430,7 @@ Hinweis
 ├── karten/
 │   └── baumartenkarte.pdf
 └── projekt_XY.qgz</code></pre>
-<p>Diese Ordnerstruktur kann an die eigenen Präferenzen und die Notwendigkeiten im Projekt angepasst werden. Ein wesentlicher Vorteil einer solchen Ordnerstruktur: der Ordner kann im Ganzen verschoben, kopiert oder mit anderen geteilt werden. Dies ist möglich, da die Projektdatei die relativen Pfade, ausgehend von dem Ordner in dem die <em>*.qgz</em> Datei liegt speichert. Also z.B. ./<em>daten/raster_1.tif</em></p>
+<p>Diese Ordnerstruktur kann an die eigenen Präferenzen und die Notwendigkeiten im Projekt angepasst werden. Diese Struktur ist vorteilhaft, weil der gesamte Ordner verschoben, kopiert oder mit anderen geteilt werden kann. Dies ist möglich, da die Projektdatei relative Pfade speichert, ausgehend von dem Ordner in dem die <em>*.qgz</em> Datei liegt, also z.B. <em><code>./daten/raster_1.tif</code></em></p>
 </section>
 <section id="anlegen-eines-neuen-qgis-projektes" class="level3" data-number="1.3.2">
 <h3 data-number="1.3.2" class="anchored" data-anchor-id="anlegen-eines-neuen-qgis-projektes"><span class="header-section-number">1.3.2</span> Anlegen eines neuen QGIS-Projektes</h3>
@@ -443,7 +445,7 @@ Hinweis
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Die Projektdatei *.qgz enthält nicht die Geodaten, des Projektes. Es werden lediglich die Pfade zu den Dateien mit den Geodaten gespeichert. Beim Laden des Projektes werden die Geodaten an den hinterlegten Datenpfaden gesucht und geladen. Sollten diese nicht mehr an dem Ort gespeichert sein, wir QGIS einen Fehler melden. Eine klare Ordnerstruktur kann solche Fehler vermeiden helfen.</p>
+<p>Die Projektdatei *.qgz enthält nicht die Geodaten, des Projektes. Es werden lediglich die Pfade zu den Dateien mit den Geodaten gespeichert. Beim Laden des Projektes werden die Geodaten an den hinterlegten Datenpfaden gesucht und geladen. Sollten diese nicht mehr an dem Ort gespeichert sein, erscheint in QGIS eine Fehlermeldung. Eine klare Ordnerstruktur kann solche Fehler vermeiden helfen.</p>
 </div>
 </div>
 
