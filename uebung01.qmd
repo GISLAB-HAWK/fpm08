@@ -14,44 +14,40 @@ Lizenz: Creative Commons BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc
 # Lerneinheit 01: Erste Schritte in QGIS
 ## Lernziele & Aufgabenstellung
 
-Die erste Lerneinheit dient der Einrichtung einer Arbeitsumgebung und der Wiederholung der
-wesentlichen QGIS-Funktionen. Wir prüfen die Installation der notwendigen Programme und
-konfigurieren diese für die spätere Verwendung. Es wird außerdem gezeigt, wie wir diese
-Einstellungen über die QGIS-Profile speichern und sichern können. Außerdem wird vorgestellt wie
-QGIS-Erweiterungen installiert werden können.
+Die erste Lerneinheit dient der Einrichtung einer Arbeitsumgebung und Wiederholung wesentlicher QGIS-Funktionen. 
+Wir prüfen die Installation der Programme und QGIS-Erweiterungen. Es wird außerdem gezeigt, wie wir 
+Einstellungen in den persönlichen QGIS-Profilen speichern und sichern können. 
 
 **Lernziele**
 
 Die Studierenden sollen:
 
--   QGIS installieren können bzw. überprüfen können welche Version installiert ist.
--   die Funktionsweise von Benutzerprofilen verstehen und anwenden können
--   eine sinnvolle Ordnerstruktur zur Verwaltung von QGIS-Projekten kennen und anlegen können
--   Projekte in QGIS anlegen können
+-   QGIS installieren und überprüfen welche Version installiert ist
+-   die Funktionsweise von Benutzerprofilen verstehen und anwenden
+-   eine sinnvolle Ordnerstruktur zur Verwaltung von QGIS-Projekten kennen und anlegen
+-   Projekte in QGIS anlegen
 
 **Aufgabenstellung**
 
-1.  Überprüfen Sie die Installation von QGIS und EnMAP-Box.
+1.  Überprüfen Sie die Installation von QGIS und EnMAP-Box Plugin.
 
-2.  Legen Sie ein neues Nutzerprofil mit ihrem Namen an.
+2.  Legen Sie ein neues QGIS Benutzerprofil mit ihrem Namen an.
 
-3.  Installieren Sie das EnMAP-Box-Plugin und zusätzliche Python Module.
+3.  Installieren Sie das EnMAP-Box-Plugin und zusätzliche Module.
 
 4.  Sichern Sie ihr QGIS Benutzerprofil an einem permanenten Speicherort.
 
 5.  Legen Sie eine Ordnerstruktur für das Projekt uebung01 an.
 
-6.  Legen Sie innerhalb der Ordnerstruktur eine neues QGIS-Projekt *'uebung01.qgz'* an.
+6.  Legen Sie innerhalb der Ordnerstruktur eine neues QGIS-Projekt *`uebung01.qgz`* an.
 
-## QGIS & EnMAP-Box Installation und Konfiguration
+## QGIS und EnMAP-Box Installation
 
 ### Installation von QGIS {#sec-qgisinstall}
 
 ::: callout-note
-Im PC-Pool der HAWK ist QGIS bereits auf den Computern installiert. Das EnMAP-Box-Plugin muss zusätzlich in das persönliche Nutzerprofil installiert werden.
-Eine vollständige Installation von QGIS und EnMAP-Box ist notwendig, wenn Sie die Übungen auf einem eigenen Computer durchführen
-wollen. Die vorgestellten Programme funktionieren grundsätzlich unter Windows, Linux und MacOS
-Betriebssystemen. Für die Übungen wird aber nur auf Windows-Betriebssystemen getestet.
+Im PC-Pool der HAWK ist QGIS bereits auf den Computern installiert. Das EnMAP-Box-Plugin muss zusätzlich in das persönliche QGIS Benutzerprofil installiert werden. Eine vollständige Installation von QGIS und EnMAP-Box ist notwendig, wenn Sie die Übungen auf einem eigenen Computer durchführen
+wollen. Die vorgestellten Programme funktionieren grundsätzlich unter Windows, Linux und MacOS Betriebssystemen.
 :::
 
 In diesem Kurs wird die Software QGIS in der Version 3.40.8 verwendet. Sie können die Software hier
@@ -59,11 +55,11 @@ herunterladen:
 
 <https://qgis.org/downloads/QGIS-OSGeo4W-3.40.8-1.msi>
 
-Weiter Hinweise zu unterschiedlichen Installationsmöglichkeiten von QGIS finden sie hier:
+Weitere Hinweise zu unterschiedlichen Installationsmöglichkeiten von QGIS finden sie hier:
 
 <https://qgis.org/download/>
 
-Neben QGIS nutzen wir für die fernerkundlichen Auswertungen das open-source QGIS Plugin [EnMAP-Box](https://enmap-box.readthedocs.io/en/latest/general/about.html) in der Version 3.17.9.
+Neben QGIS nutzen wir für die fernerkundlichen Auswertungen das quelloffene QGIS Plugin [EnMAP-Box](https://enmap-box.readthedocs.io/en/latest/general/about.html) in der Version 3.17.9.
 Weitere Hinweise zu unterschiedlichen Installationsmöglichkeiten der EnMAP-Box finden Sie hier:
 
 <https://enmap-box.readthedocs.io/en/latest/usr_section/usr_installation.html>
@@ -88,13 +84,14 @@ sinnvoll sein, ein eigenes Profil anzulegen und in einem persönlichen Ordner zu
 
 QGIS speichert Benutzerprofile automatisch im lokalen Profilordner.
 
-`C:\Users\USERNAME\AppData\Roaming\QGIS\QGIS3\profiles\` 
-USERNAME steht hier als Platzhalter für Ihren Benutzernamen, also den aktuellen Windows-Benutzernamen des angemeldeten Users.
+`C:\Users\USERNAME\AppData\Roaming\QGIS\QGIS3\profiles\`
+
+USERNAME steht hier als Platzhalter für Ihren Benutzernamen, also den aktuell angemeldeten Windows-Benutzernamen.
 Das Verzeichnis, in dem die QGIS Benutzerprofile gespeichert werden, lässt sich direkt im QGIS Hauptmenü öffnen mit
 
 `Einstellungen` → `Benutzerprofile` → `Aktuelles Profilverzeichnis öffnen`
 
-Standardmäßig gibt es in QGIS nur das Benutzerprofil *default*. Es können aber beliebig viele weitere angelegt werden.
+Standardmäßig gibt es in QGIS nur das Benutzerprofil *default*. Es können aber beliebig viele zusätzlich angelegt werden.
 
 ::: {style="border: 2px solid #afca0b; background-color: ; padding: 8px;"}
 Legen Sie ein neues Nutzerprofile mit Ihrem Namen (z.B. mueller) an:
@@ -106,25 +103,27 @@ Weitere Informationen zu den QGIS-Benutzerprofilen finden sie hier:
 
 <https://docs.qgis.org/3.40/de/docs/user_manual/introduction/qgis_configuration.html#user-profiles>
 
-### Installation des EnMAP-Box Plugins und zusätzlicher Python Module {#sec-enmap}
+### Installation des EnMAP-Box Plugins und zusätzlicher Module {#sec-enmap}
 
 1.) Installation des EnMAP-Box Plugins
 
 ::: {style="border: 2px solid #afca0b; background-color: #fafafa; padding: 8px;"}
-`Erweiterungen` → `Erweiterungen verwalten und installieren` Im Suchfenster `EnMAP Box` eingeben, das angezeigte Plugin auswählen und installieren.
+`Erweiterungen` → `Erweiterungen verwalten und installieren`
+
+Im Suchfenster `enmap`  eingeben, das angezeigte Plugin `EnMAP-Box 3`auswählen und installieren.
 :::
+
 
 2.) Installation von Python Abhängigkeiten auf Windows (andere Betriebssysteme s. [QGIS Installation](#sec-qgisinstall))
 
-Nachdem das Plugin installiert ist, müssen noch zusätzliche Python Module installiert werden bevor es gestartet werden kann. 
+Nachdem das Plugin installiert ist, müssen noch zusätzliche Module installiert werden bevor es gestartet werden kann. 
 
-- Laden Sie das Installationskript 
-[installation_qgis_dependencies_base.py](https://cloud.hawk.de/index.php/s/CwTKje2HLo2RZHX)
-herunter und speichern Sie es direkt in das lokale Verzeichnis D:/
+- Laden Sie das Installationskript [installation_qgis_dependencies_base.py](https://cloud.hawk.de/index.php/s/CwTKje2HLo2RZHX)
+herunter und speichern Sie es direkt in das lokale Verzeichnis `D:\`
 
 - Öffen Sie die QGIS Python Konsole: `Erweiterungen` → `Python Konsole`
 
-- Kopieren und Einfügen des folgenden Einzeilers in die Python Konsole, nur den Pfad des heruntergeladenen Skriptes editieren,  dann Enter drücken zum Ausführen des Skriptes.
+- Kopieren und Einfügen des folgenden Einzeilers in die Python Konsole, eventuell nur den Pfad zum heruntergeladenen Skript editieren,  dann Enter drücken zum Ausführen des Skriptes.
 
 ::: {style="border: 2px solid #afca0b; background-color: #e0e0e0; padding: 8px;"}
 ```markdown
@@ -133,7 +132,8 @@ script=r"D:/install_qgis_dependencies_base.py"; exec(open(script,encoding="utf-8
 :::
 
 - QGIS schliessen und neustarten.
-- Starten Sie das EnMAP-Box Plugin (s. [Launching the EnMAP-Box](https://enmap-box.readthedocs.io/en/latest/usr_section/usr_gettingstarted.html#launching-the-enmap-box))
+
+- Starten Sie die EnMAP-Box: `Raster` → `EnMAP-Box` →  `EnMAP-Box`
 
 ### Sichern des persönlichen Nutzerprofils {#sec-nutzerprofil}
 
@@ -142,18 +142,18 @@ ist es sinnvoll dieses für die spätere Verwendung zu sichern.
 
 ::: {style="border: 2px solid #afca0b; background-color: #fafafa; padding: 8px;"}
 Sichern sie den gesamten Ordner `QGIS3` mit Ihren persönlichen Profildaten (`C:\Users\USERNAME\AppData\Roaming\QGIS\QGIS3`) in
-ihr persönliches Laufwerk unter `U:`
+ihr persönliches Laufwerk unter `U:\`
 :::
 
 Sollten sie im späteren Verlauf des Kurses ihre Profile wiederherstellen wollen, können sie den
-Ordner `QGIS3` von `U:` wieder in den QGIS-Profil Ordner kopieren.
+Ordner `QGIS3` von `U:\` wieder in den QGIS-Profil Ordner `C:\Users\USERNAME\AppData\Roaming\QGIS\` kopieren.
 
 ## Projekt- und Datenmanagement mit QGIS {#sec-projekt_management}
 
 ### Anlegen einer Ordnerstruktur
 
 Eine gute Ordnerstruktur ist für das Datenmanagement sehr hilfreich. Daher wird empfohlen für jedes
-Projekt / jede Lerneinheit eine eigene Ordnerstruktur nach einheitlichem Muster anzulegen. Die
+Projekt bzw. jede Lerneinheit eine eigene Ordnerstruktur nach einheitlichem Muster anzulegen. Die
 Struktur könnte so aussehen:
 
 ``` plaintext
@@ -166,14 +166,12 @@ projekt_xy/
 └── projekt_XY.qgz
 ```
 
-Diese Ordnerstruktur kann an die eigenen Präferenzen und die Notwendigkeiten im Projekt angepasst werden. Ein wesentlicher Vorteil einer solchen Ordnerstruktur: der Ordner kann im Ganzen verschoben, kopiert oder mit anderen geteilt werden. Dies ist möglich, da die Projektdatei die relativen Pfade, ausgehend von dem Ordner in dem die *\*.qgz* Datei liegt speichert. Also z.B.
-./*daten/raster_1.tif*
+Diese Ordnerstruktur kann an die eigenen Präferenzen und die Notwendigkeiten im Projekt angepasst werden. Diese Struktur ist vorteilhaft, weil der gesamte Ordner verschoben, kopiert oder mit anderen geteilt werden kann. Dies ist möglich, da die Projektdatei relative Pfade speichert, ausgehend von dem Ordner in dem die *\*.qgz* Datei liegt, also z.B. *`./daten/raster_1.tif`*
 
 ### Anlegen eines neuen QGIS-Projektes
 
-In QGIS können einzelne Projekte z.B. eine Lehreinheit als Projekte angelegt und gespeichert werden.
-Dabei werden sämtliche Einstellungen und Darstellungen (z.B. Kartenlayouts, Symbologien, Layer), Bearbeitungsstand und vieles mehr gespeichert. Das ist vor allem sinnvoll wenn man seine Arbeit unterbrechen und zu einem späteren Zeitpunkt fortsetzen möchte. Die Projekte werden in einer Datei mit der Endung \*.qgz gespeichert.
+In QGIS können einzelne Projekte z.B. eine Lehreinheit als Projekte angelegt und gespeichert werden. Dabei werden sämtliche Einstellungen und Darstellungen (z.B. Kartenlayouts, Symbologien, Layer), Bearbeitungsstand und vieles mehr gespeichert. Das ist vor allem sinnvoll wenn man seine Arbeit unterbrechen und zu einem späteren Zeitpunkt fortsetzen möchte. Die Projekte werden in einer Datei mit der Endung \*.qgz gespeichert.
 
 ::: callout-note
-Die Projektdatei \*.qgz enthält nicht die Geodaten, des Projektes. Es werden lediglich die Pfade zu den Dateien mit den Geodaten gespeichert. Beim Laden des Projektes werden die Geodaten an den hinterlegten Datenpfaden gesucht und geladen. Sollten diese nicht mehr an dem Ort gespeichert sein, wir QGIS einen Fehler melden. Eine klare Ordnerstruktur kann solche Fehler vermeiden helfen.
+Die Projektdatei \*.qgz enthält nicht die Geodaten, des Projektes. Es werden lediglich die Pfade zu den Dateien mit den Geodaten gespeichert. Beim Laden des Projektes werden die Geodaten an den hinterlegten Datenpfaden gesucht und geladen. Sollten diese nicht mehr an dem Ort gespeichert sein, erscheint in QGIS eine Fehlermeldung. Eine klare Ordnerstruktur kann solche Fehler vermeiden helfen.
 :::
