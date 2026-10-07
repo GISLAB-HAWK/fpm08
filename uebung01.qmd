@@ -6,7 +6,7 @@ B.Sc. Forstwirtschaft an der HAWK Göttingen.
 
 Autor: Paul Magdon
 Datum: 2025-10-12
-Letztes Update: 2026-09-29 (Hans Fuchs)
+Letztes Update: 2026-10-07 (Hans Fuchs)
 Lizenz: Creative Commons BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 -->
@@ -44,7 +44,7 @@ Die Studierenden sollen:
 ## QGIS und EnMAP-Box Installation
 
 ### Installation von QGIS {#sec-qgisinstall}
-
+#### QGIS auf Windows 11
 ::: callout-note
 Im PC-Pool der HAWK ist QGIS bereits auf den Computern installiert. Das EnMAP-Box-Plugin muss zusätzlich in das persönliche QGIS Benutzerprofil installiert werden. Eine vollständige Installation von QGIS und EnMAP-Box ist notwendig, wenn Sie die Übungen auf einem eigenen Computer durchführen
 wollen. Die vorgestellten Programme funktionieren grundsätzlich unter Windows, Linux und MacOS Betriebssystemen.
@@ -55,14 +55,11 @@ herunterladen:
 
 <https://qgis.org/downloads/QGIS-OSGeo4W-3.40.8-1.msi>
 
-Weitere Hinweise zu unterschiedlichen Installationsmöglichkeiten von QGIS finden sie hier:
-
+Der aktuelle Windows Standalone Installer für QGIS LTR (Long Term Release) 3.44 sollte auch funktionieren und kann hier heruntergeladen werden:
 <https://qgis.org/download/>
 
-Neben QGIS nutzen wir für die fernerkundlichen Auswertungen das quelloffene QGIS Plugin [EnMAP-Box](https://enmap-box.readthedocs.io/en/latest/general/about.html) in der Version 3.17.9.
-Weitere Hinweise zu unterschiedlichen Installationsmöglichkeiten der EnMAP-Box finden Sie hier:
-
-<https://enmap-box.readthedocs.io/en/latest/usr_section/usr_installation.html>
+#### QGIS auf MacOS
+Auf Apple Laptops mit MacOS High Sierra (10.14) oder neuere Versionen können Sie den offiziellen MacOS installer für QGIS LTR 3.44 von der [QGIS Download Seite](https://qgis.org/download/) verwenden. Laden Sie die `.dmg` Datei herunter, öffnen Sie sie und ziehen Sie QGIS in den Applications Ordner.
 
 ### Anlegen eines persönlichen QGIS-Benutzerprofils
 
@@ -82,11 +79,13 @@ lokalen Benutzerdaten in regelmäßigen Abständen gelöscht. Daher kann es für
 sinnvoll sein, ein eigenes Profil anzulegen und in einem persönlichen Ordner zu sichern.
 :::
 
-QGIS speichert Benutzerprofile automatisch im lokalen Profilordner.
+QGIS speichert Benutzerprofile automatisch im lokalen Profilordner, 
 
-`C:\Users\USERNAME\AppData\Roaming\QGIS\QGIS3\profiles\`
+- unter Windows: `C:\Users\USERNAME\AppData\Roaming\QGIS\QGIS3\profiles\`
 
-USERNAME steht hier als Platzhalter für Ihren Benutzernamen, also den aktuell angemeldeten Windows-Benutzernamen.
+- unter MacOS: `/Users/USERNAME/Library/Application Support/QGIS/QGIS3/profiles/`
+
+USERNAME steht hier als Platzhalter für Ihren Benutzernamen, also den aktuell angemeldeten Benutzernamen.
 Das Verzeichnis, in dem die QGIS Benutzerprofile gespeichert werden, lässt sich direkt im QGIS Hauptmenü öffnen mit
 
 `Einstellungen` → `Benutzerprofile` → `Aktuelles Profilverzeichnis öffnen`
@@ -105,7 +104,9 @@ Weitere Informationen zu den QGIS-Benutzerprofilen finden sie hier:
 
 ### Installation des EnMAP-Box Plugins und zusätzlicher Module {#sec-enmap}
 
-1.) Installation des EnMAP-Box Plugins
+Neben QGIS nutzen wir für die fernerkundlichen Auswertungen das quelloffene QGIS Plugin [EnMAP-Box](https://enmap-box.readthedocs.io/en/latest/general/about.html) in der Version 3.17.9.
+
+#### Installation der EnMAP-Box Erweiterung
 
 ::: {style="border: 2px solid #afca0b; background-color: #fafafa; padding: 8px;"}
 `Erweiterungen` → `Erweiterungen verwalten und installieren`
@@ -113,12 +114,11 @@ Weitere Informationen zu den QGIS-Benutzerprofilen finden sie hier:
 Im Suchfenster `enmap`  eingeben, das angezeigte Plugin `EnMAP-Box 3`auswählen und installieren.
 :::
 
-
-2.) Installation von Python Abhängigkeiten auf Windows (andere Betriebssysteme s. [QGIS Installation](#sec-qgisinstall))
+#### Installation zusätzlicher EnMAP-Box Module auf Windows 11
 
 Nachdem das Plugin installiert ist, müssen noch zusätzliche Module installiert werden bevor es gestartet werden kann. 
 
-- Laden Sie das Installationskript [installation_qgis_dependencies_base.py](https://cloud.hawk.de/index.php/s/CwTKje2HLo2RZHX)
+- Laden Sie das Installationskript [installation_qgis_dependencies_base_win.py](https://cloud.hawk.de/index.php/s/N3Y8ESY4D8JTYnG)
 herunter und speichern Sie es direkt in das lokale Verzeichnis `D:\`
 
 - Öffen Sie die QGIS Python Konsole: `Erweiterungen` → `Python Konsole`
@@ -127,7 +127,28 @@ herunter und speichern Sie es direkt in das lokale Verzeichnis `D:\`
 
 ::: {style="border: 2px solid #afca0b; background-color: #e0e0e0; padding: 8px;"}
 ```markdown
-script=r"D:/install_qgis_dependencies_base.py"; exec(open(script,encoding="utf-8").read()); main([])
+script=r"D:/install_qgis_dependencies_base_win.py"; exec(open(script,encoding="utf-8").read()); main([])
+```
+:::
+
+- QGIS schliessen und neustarten.
+
+- Starten Sie die EnMAP-Box: `Raster` → `EnMAP-Box` →  `EnMAP-Box`
+
+#### Installation zusätzlicher EnMAP-Box Module auf MacOS
+
+Nachdem das Plugin installiert ist, müssen auch auf Apple MacOS Laptops noch zusätzliche Module installiert werden bevor es gestartet werden kann.
+
+- Laden Sie das Installationskript [installation_qgis_dependencies_base_macos.py](https://cloud.hawk.de/index.php/s/534mzszwXjjCFkD)
+herunter und speichern Sie es in ihr lokales Downloads Verzeichnis `/Users/USERNAME/Downloads`
+
+- Öffen Sie die QGIS Python Konsole: `Erweiterungen` → `Python Konsole`
+
+- Kopieren und Einfügen des folgenden Einzeilers in die Python Konsole, editieren Sie den Pfad zum heruntergeladenen Skript indem Sie USERNAME mit Ihrem Benutzernamen ersetzen, dann Enter drücken zum Ausführen des Skriptes.
+
+::: {style="border: 2px solid #afca0b; background-color: #e0e0e0; padding: 8px;"}
+```markdown
+script="/Users/USERNAME/Downloads/install_qgis_dependencies_base_macos.py"; exec(open(script,encoding="utf-8").read()); main([])
 ```
 :::
 
@@ -138,7 +159,7 @@ script=r"D:/install_qgis_dependencies_base.py"; exec(open(script,encoding="utf-8
 ### Sichern des persönlichen Nutzerprofils {#sec-nutzerprofil}
 
 Nach dem nun die wichtigsten Einstellungen vorgenommen und im QGIS-Benutzerprofil hinterlegt wurden,
-ist es sinnvoll dieses für die spätere Verwendung zu sichern.
+ist es sinnvoll dieses für die spätere Verwendung im **PC-Pool der HAWK** zu sichern. Auf ihren persönlichen Laptops brauchen Sie diesen Schritt nicht durchzuführen. 
 
 ::: {style="border: 2px solid #afca0b; background-color: #fafafa; padding: 8px;"}
 Sichern sie den gesamten Ordner `QGIS3` mit Ihren persönlichen Profildaten (`C:\Users\USERNAME\AppData\Roaming\QGIS\QGIS3`) in

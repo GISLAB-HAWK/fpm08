@@ -300,7 +300,7 @@ B.Sc. Forstwirtschaft an der HAWK Göttingen.
 
 Autor: Paul Magdon
 Datum: 2025-10-12
-Letztes Update: 2026-09-29 (Hans Fuchs)
+Letztes Update: 2026-10-07 (Hans Fuchs)
 Lizenz: Creative Commons BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 -->
@@ -329,6 +329,8 @@ Lizenz: Creative Commons BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc
 <h2 data-number="1.2" class="anchored" data-anchor-id="qgis-und-enmap-box-installation"><span class="header-section-number">1.2</span> QGIS und EnMAP-Box Installation</h2>
 <section id="sec-qgisinstall" class="level3" data-number="1.2.1">
 <h3 data-number="1.2.1" class="anchored" data-anchor-id="sec-qgisinstall"><span class="header-section-number">1.2.1</span> Installation von QGIS</h3>
+<section id="qgis-auf-windows-11" class="level4" data-number="1.2.1.1">
+<h4 data-number="1.2.1.1" class="anchored" data-anchor-id="qgis-auf-windows-11"><span class="header-section-number">1.2.1.1</span> QGIS auf Windows 11</h4>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -344,10 +346,12 @@ Hinweis
 </div>
 <p>In diesem Kurs wird die Software QGIS in der Version 3.40.8 verwendet. Sie können die Software hier herunterladen:</p>
 <p><a href="https://qgis.org/downloads/QGIS-OSGeo4W-3.40.8-1.msi" class="uri">https://qgis.org/downloads/QGIS-OSGeo4W-3.40.8-1.msi</a></p>
-<p>Weitere Hinweise zu unterschiedlichen Installationsmöglichkeiten von QGIS finden sie hier:</p>
-<p><a href="https://qgis.org/download/" class="uri">https://qgis.org/download/</a></p>
-<p>Neben QGIS nutzen wir für die fernerkundlichen Auswertungen das quelloffene QGIS Plugin <a href="https://enmap-box.readthedocs.io/en/latest/general/about.html">EnMAP-Box</a> in der Version 3.17.9. Weitere Hinweise zu unterschiedlichen Installationsmöglichkeiten der EnMAP-Box finden Sie hier:</p>
-<p><a href="https://enmap-box.readthedocs.io/en/latest/usr_section/usr_installation.html" class="uri">https://enmap-box.readthedocs.io/en/latest/usr_section/usr_installation.html</a></p>
+<p>Der aktuelle Windows Standalone Installer für QGIS LTR (Long Term Release) 3.44 sollte auch funktionieren und kann hier heruntergeladen werden: <a href="https://qgis.org/download/" class="uri">https://qgis.org/download/</a></p>
+</section>
+<section id="qgis-auf-macos" class="level4" data-number="1.2.1.2">
+<h4 data-number="1.2.1.2" class="anchored" data-anchor-id="qgis-auf-macos"><span class="header-section-number">1.2.1.2</span> QGIS auf MacOS</h4>
+<p>Auf Apple Laptops mit MacOS High Sierra (10.14) oder neuere Versionen können Sie den offiziellen MacOS installer für QGIS LTR 3.44 von der <a href="https://qgis.org/download/">QGIS Download Seite</a> verwenden. Laden Sie die <code>.dmg</code> Datei herunter, öffnen Sie sie und ziehen Sie QGIS in den Applications Ordner.</p>
+</section>
 </section>
 <section id="anlegen-eines-persönlichen-qgis-benutzerprofils" class="level3" data-number="1.2.2">
 <h3 data-number="1.2.2" class="anchored" data-anchor-id="anlegen-eines-persönlichen-qgis-benutzerprofils"><span class="header-section-number">1.2.2</span> Anlegen eines persönlichen QGIS-Benutzerprofils</h3>
@@ -372,9 +376,12 @@ Hinweis
 <p>Das Anlegen persönlicher Benutzerprofile geschieht in der Regel vollständig automatisch. Im PC-Pool werden diese Profile aber nicht zwischen den PC-Arbeitsplätzen synchronisiert. Außerdem werden die lokalen Benutzerdaten in regelmäßigen Abständen gelöscht. Daher kann es für die Arbeit im PC-Pool sinnvoll sein, ein eigenes Profil anzulegen und in einem persönlichen Ordner zu sichern.</p>
 </div>
 </div>
-<p>QGIS speichert Benutzerprofile automatisch im lokalen Profilordner.</p>
-<p><code>C:\Users\USERNAME\AppData\Roaming\QGIS\QGIS3\profiles\</code></p>
-<p>USERNAME steht hier als Platzhalter für Ihren Benutzernamen, also den aktuell angemeldeten Windows-Benutzernamen. Das Verzeichnis, in dem die QGIS Benutzerprofile gespeichert werden, lässt sich direkt im QGIS Hauptmenü öffnen mit</p>
+<p>QGIS speichert Benutzerprofile automatisch im lokalen Profilordner,</p>
+<ul>
+<li><p>unter Windows: <code>C:\Users\USERNAME\AppData\Roaming\QGIS\QGIS3\profiles\</code></p></li>
+<li><p>unter MacOS: <code>/Users/USERNAME/Library/Application Support/QGIS/QGIS3/profiles/</code></p></li>
+</ul>
+<p>USERNAME steht hier als Platzhalter für Ihren Benutzernamen, also den aktuell angemeldeten Benutzernamen. Das Verzeichnis, in dem die QGIS Benutzerprofile gespeichert werden, lässt sich direkt im QGIS Hauptmenü öffnen mit</p>
 <p><code>Einstellungen</code> → <code>Benutzerprofile</code> → <code>Aktuelles Profilverzeichnis öffnen</code></p>
 <p>Standardmäßig gibt es in QGIS nur das Benutzerprofil <em>default</em>. Es können aber beliebig viele zusätzlich angelegt werden.</p>
 <div style="border: 2px solid #afca0b; background-color: ; padding: 8px;">
@@ -386,29 +393,50 @@ Hinweis
 </section>
 <section id="sec-enmap" class="level3" data-number="1.2.3">
 <h3 data-number="1.2.3" class="anchored" data-anchor-id="sec-enmap"><span class="header-section-number">1.2.3</span> Installation des EnMAP-Box Plugins und zusätzlicher Module</h3>
-<p>1.) Installation des EnMAP-Box Plugins</p>
+<p>Neben QGIS nutzen wir für die fernerkundlichen Auswertungen das quelloffene QGIS Plugin <a href="https://enmap-box.readthedocs.io/en/latest/general/about.html">EnMAP-Box</a> in der Version 3.17.9.</p>
+<section id="installation-der-enmap-box-erweiterung" class="level4" data-number="1.2.3.1">
+<h4 data-number="1.2.3.1" class="anchored" data-anchor-id="installation-der-enmap-box-erweiterung"><span class="header-section-number">1.2.3.1</span> Installation der EnMAP-Box Erweiterung</h4>
 <div style="border: 2px solid #afca0b; background-color: #fafafa; padding: 8px;">
 <p><code>Erweiterungen</code> → <code>Erweiterungen verwalten und installieren</code></p>
 <p>Im Suchfenster <code>enmap</code> eingeben, das angezeigte Plugin <code>EnMAP-Box 3</code>auswählen und installieren.</p>
 </div>
-<p>2.) Installation von Python Abhängigkeiten auf Windows (andere Betriebssysteme s. <a href="#sec-qgisinstall">QGIS Installation</a>)</p>
+</section>
+<section id="installation-zusätzlicher-enmap-box-module-auf-windows-11" class="level4" data-number="1.2.3.2">
+<h4 data-number="1.2.3.2" class="anchored" data-anchor-id="installation-zusätzlicher-enmap-box-module-auf-windows-11"><span class="header-section-number">1.2.3.2</span> Installation zusätzlicher EnMAP-Box Module auf Windows 11</h4>
 <p>Nachdem das Plugin installiert ist, müssen noch zusätzliche Module installiert werden bevor es gestartet werden kann.</p>
 <ul>
-<li><p>Laden Sie das Installationskript <a href="https://cloud.hawk.de/index.php/s/CwTKje2HLo2RZHX">installation_qgis_dependencies_base.py</a> herunter und speichern Sie es direkt in das lokale Verzeichnis <code>D:\</code></p></li>
+<li><p>Laden Sie das Installationskript <a href="https://cloud.hawk.de/index.php/s/N3Y8ESY4D8JTYnG">installation_qgis_dependencies_base_win.py</a> herunter und speichern Sie es direkt in das lokale Verzeichnis <code>D:\</code></p></li>
 <li><p>Öffen Sie die QGIS Python Konsole: <code>Erweiterungen</code> → <code>Python Konsole</code></p></li>
 <li><p>Kopieren und Einfügen des folgenden Einzeilers in die Python Konsole, eventuell nur den Pfad zum heruntergeladenen Skript editieren, dann Enter drücken zum Ausführen des Skriptes.</p></li>
 </ul>
 <div style="border: 2px solid #afca0b; background-color: #e0e0e0; padding: 8px;">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>script=r"D:/install_qgis_dependencies_base.py"; exec(open(script,encoding="utf-8").read()); main([])</span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>script=r"D:/install_qgis_dependencies_base_win.py"; exec(open(script,encoding="utf-8").read()); main([])</span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <ul>
 <li><p>QGIS schliessen und neustarten.</p></li>
 <li><p>Starten Sie die EnMAP-Box: <code>Raster</code> → <code>EnMAP-Box</code> → <code>EnMAP-Box</code></p></li>
 </ul>
 </section>
+<section id="installation-zusätzlicher-enmap-box-module-auf-macos" class="level4" data-number="1.2.3.3">
+<h4 data-number="1.2.3.3" class="anchored" data-anchor-id="installation-zusätzlicher-enmap-box-module-auf-macos"><span class="header-section-number">1.2.3.3</span> Installation zusätzlicher EnMAP-Box Module auf MacOS</h4>
+<p>Nachdem das Plugin installiert ist, müssen auch auf Apple MacOS Laptops noch zusätzliche Module installiert werden bevor es gestartet werden kann.</p>
+<ul>
+<li><p>Laden Sie das Installationskript <a href="https://cloud.hawk.de/index.php/s/534mzszwXjjCFkD">installation_qgis_dependencies_base_macos.py</a> herunter und speichern Sie es in ihr lokales Downloads Verzeichnis <code>/Users/USERNAME/Downloads</code></p></li>
+<li><p>Öffen Sie die QGIS Python Konsole: <code>Erweiterungen</code> → <code>Python Konsole</code></p></li>
+<li><p>Kopieren und Einfügen des folgenden Einzeilers in die Python Konsole, editieren Sie den Pfad zum heruntergeladenen Skript indem Sie USERNAME mit Ihrem Benutzernamen ersetzen, dann Enter drücken zum Ausführen des Skriptes.</p></li>
+</ul>
+<div style="border: 2px solid #afca0b; background-color: #e0e0e0; padding: 8px;">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>script="/Users/USERNAME/Downloads/install_qgis_dependencies_base_macos.py"; exec(open(script,encoding="utf-8").read()); main([])</span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<ul>
+<li><p>QGIS schliessen und neustarten.</p></li>
+<li><p>Starten Sie die EnMAP-Box: <code>Raster</code> → <code>EnMAP-Box</code> → <code>EnMAP-Box</code></p></li>
+</ul>
+</section>
+</section>
 <section id="sec-nutzerprofil" class="level3" data-number="1.2.4">
 <h3 data-number="1.2.4" class="anchored" data-anchor-id="sec-nutzerprofil"><span class="header-section-number">1.2.4</span> Sichern des persönlichen Nutzerprofils</h3>
-<p>Nach dem nun die wichtigsten Einstellungen vorgenommen und im QGIS-Benutzerprofil hinterlegt wurden, ist es sinnvoll dieses für die spätere Verwendung zu sichern.</p>
+<p>Nach dem nun die wichtigsten Einstellungen vorgenommen und im QGIS-Benutzerprofil hinterlegt wurden, ist es sinnvoll dieses für die spätere Verwendung im <strong>PC-Pool der HAWK</strong> zu sichern. Auf ihren persönlichen Laptops brauchen Sie diesen Schritt nicht durchzuführen.</p>
 <div style="border: 2px solid #afca0b; background-color: #fafafa; padding: 8px;">
 <p>Sichern sie den gesamten Ordner <code>QGIS3</code> mit Ihren persönlichen Profildaten (<code>C:\Users\USERNAME\AppData\Roaming\QGIS\QGIS3</code>) in ihr persönliches Laufwerk unter <code>U:\</code></p>
 </div>
