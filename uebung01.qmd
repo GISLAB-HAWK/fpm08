@@ -6,7 +6,7 @@ B.Sc. Forstwirtschaft an der HAWK Göttingen.
 
 Autor: Paul Magdon
 Datum: 2025-10-12
-Letztes Update: 2026-10-07 (Hans Fuchs)
+Letztes Update: 2026-10-08 (Hans Fuchs)
 Lizenz: Creative Commons BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 -->
@@ -44,10 +44,13 @@ Die Studierenden sollen:
 ## QGIS und EnMAP-Box Installation
 
 ### Installation von QGIS {#sec-qgisinstall}
-#### QGIS auf Windows 11
+Die vorgestellten Programme funktionieren grundsätzlich unter Windows, MacOS und Linux Betriebssystemen.
+
+::: {.panel-tabset}
+
+## Windows
 ::: callout-note
-Im PC-Pool der HAWK ist QGIS bereits auf den Computern installiert. Das EnMAP-Box-Plugin muss zusätzlich in das persönliche QGIS Benutzerprofil installiert werden. Eine vollständige Installation von QGIS und EnMAP-Box ist notwendig, wenn Sie die Übungen auf einem eigenen Computer durchführen
-wollen. Die vorgestellten Programme funktionieren grundsätzlich unter Windows, Linux und MacOS Betriebssystemen.
+Im PC-Pool der HAWK ist QGIS bereits auf den Computern installiert. Das EnMAP-Box-Plugin muss zusätzlich in das persönliche QGIS Benutzerprofil installiert werden. Eine vollständige Installation von QGIS und EnMAP-Box ist notwendig, wenn Sie die Übungen auf einem eigenen Computer durchführen wollen. 
 :::
 
 In diesem Kurs wird die Software QGIS in der Version 3.40.8 verwendet. Sie können die Software hier
@@ -55,11 +58,15 @@ herunterladen:
 
 <https://qgis.org/downloads/QGIS-OSGeo4W-3.40.8-1.msi>
 
-Der aktuelle Windows Standalone Installer für QGIS LTR (Long Term Release) 3.44 sollte auch funktionieren und kann hier heruntergeladen werden:
-<https://qgis.org/download/>
+Der aktuelle Windows Standalone Installer für QGIS LTR (Long Term Release) 3.44 sollte auch funktionieren und kann hier heruntergeladen werden: <https://qgis.org/download/>
 
-#### QGIS auf MacOS
+## MacOS
+
 Auf Apple Laptops mit MacOS High Sierra (10.14) oder neuere Versionen können Sie den offiziellen MacOS installer für QGIS LTR 3.44 von der [QGIS Download Seite](https://qgis.org/download/) verwenden. Laden Sie die `.dmg` Datei herunter, öffnen Sie sie und ziehen Sie QGIS in den Applications Ordner.
+
+## Linux
+Ausführliche QGIS Installationsanweisungen für verschiedene Linux Distributionen finden Sie auf <https://qgis.org/resources/installation-guide/>. Wählen Sie ein Long Term Release Repository mit der QGIS Version 3.44. 
+:::
 
 ### Anlegen eines persönlichen QGIS-Benutzerprofils
 
@@ -79,11 +86,13 @@ lokalen Benutzerdaten in regelmäßigen Abständen gelöscht. Daher kann es für
 sinnvoll sein, ein eigenes Profil anzulegen und in einem persönlichen Ordner zu sichern.
 :::
 
-QGIS speichert Benutzerprofile automatisch im lokalen Profilordner, 
+QGIS speichert Benutzerprofile automatisch im lokalen Profilordner:
 
-- unter Windows: `C:\Users\USERNAME\AppData\Roaming\QGIS\QGIS3\profiles\`
+- auf Windows: `C:\Users\USERNAME\AppData\Roaming\QGIS\QGIS3\profiles\`
 
-- unter MacOS: `/Users/USERNAME/Library/Application Support/QGIS/QGIS3/profiles/`
+- auf MacOS: `/Users/USERNAME/Library/Application Support/QGIS/QGIS3/profiles/`
+
+- auf Linux: `/home/USERNAME/.local/share/QGIS/QGIS3/profiles/`
 
 USERNAME steht hier als Platzhalter für Ihren Benutzernamen, also den aktuell angemeldeten Benutzernamen.
 Das Verzeichnis, in dem die QGIS Benutzerprofile gespeichert werden, lässt sich direkt im QGIS Hauptmenü öffnen mit
@@ -99,7 +108,6 @@ Legen Sie ein neues Nutzerprofile mit Ihrem Namen (z.B. mueller) an:
 :::
 
 Weitere Informationen zu den QGIS-Benutzerprofilen finden sie hier:
-
 <https://docs.qgis.org/3.40/de/docs/user_manual/introduction/qgis_configuration.html#user-profiles>
 
 ### Installation des EnMAP-Box Plugins und zusätzlicher Module {#sec-enmap}
@@ -112,13 +120,17 @@ Neben QGIS nutzen wir für die fernerkundlichen Auswertungen das quelloffene QGI
 `Erweiterungen` → `Erweiterungen verwalten und installieren`
 
 Im Suchfenster `enmap`  eingeben, das angezeigte Plugin `EnMAP-Box 3`auswählen und installieren.
+
 :::
 
-#### Installation zusätzlicher EnMAP-Box Module auf Windows 11
+#### Installation zusätzlicher EnMAP-Box Module
 
+::: {.panel-tabset}
+
+## Windows
 Nachdem das Plugin installiert ist, müssen noch zusätzliche Module installiert werden bevor es gestartet werden kann. 
 
-- Laden Sie das Installationskript [installation_qgis_dependencies_base_win.py](https://cloud.hawk.de/index.php/s/N3Y8ESY4D8JTYnG)
+- Laden Sie das Installationskript [installation_qgis_dependencies_base.py](https://cloud.hawk.de/index.php/s/CwTKje2HLo2RZHX)
 herunter und speichern Sie es direkt in das lokale Verzeichnis `D:\`
 
 - Öffen Sie die QGIS Python Konsole: `Erweiterungen` → `Python Konsole`
@@ -127,7 +139,7 @@ herunter und speichern Sie es direkt in das lokale Verzeichnis `D:\`
 
 ::: {style="border: 2px solid #afca0b; background-color: #e0e0e0; padding: 8px;"}
 ```markdown
-script=r"D:/install_qgis_dependencies_base_win.py"; exec(open(script,encoding="utf-8").read()); main([])
+script=r"D:/install_qgis_dependencies_base.py"; exec(open(script,encoding="utf-8").read()); main([])
 ```
 :::
 
@@ -135,26 +147,98 @@ script=r"D:/install_qgis_dependencies_base_win.py"; exec(open(script,encoding="u
 
 - Starten Sie die EnMAP-Box: `Raster` → `EnMAP-Box` →  `EnMAP-Box`
 
-#### Installation zusätzlicher EnMAP-Box Module auf MacOS
+## MacOS
 
 Nachdem das Plugin installiert ist, müssen auch auf Apple MacOS Laptops noch zusätzliche Module installiert werden bevor es gestartet werden kann.
 
-- Laden Sie das Installationskript [installation_qgis_dependencies_base_macos.py](https://cloud.hawk.de/index.php/s/534mzszwXjjCFkD)
-herunter und speichern Sie es in ihr lokales Downloads Verzeichnis `/Users/USERNAME/Downloads`
-
 - Öffen Sie die QGIS Python Konsole: `Erweiterungen` → `Python Konsole`
 
-- Kopieren und Einfügen des folgenden Einzeilers in die Python Konsole, editieren Sie den Pfad zum heruntergeladenen Skript indem Sie USERNAME mit Ihrem Benutzernamen ersetzen, dann Enter drücken zum Ausführen des Skriptes.
+- Öffnen Sie den Editor innerhalb der Python Konsole um mehrzeiligen Code auf einmal auszuführen.
+
+- Kopieren und Einfügen des gesamten folgenden Code Blocks in den Editor der Python Konsole.
 
 ::: {style="border: 2px solid #afca0b; background-color: #e0e0e0; padding: 8px;"}
 ```markdown
-script="/Users/USERNAME/Downloads/install_qgis_dependencies_base_macos.py"; exec(open(script,encoding="utf-8").read()); main([])
+import sys
+import os
+import runpy
+
+# Create the missing bin directory (otherwise pip aborts on console-script packages)
+broken_bin_path = "/Applications/QGIS.app/Contents/Frameworks/bin"
+os.makedirs(broken_bin_path, exist_ok=True)
+print("Created missing bin directory. Starting installation...")
+
+original_argv = sys.argv
+
+enmap_packages = [
+    # Command 1 - basic packages
+    "colorama",
+    "astropy",
+    "PyOpenGL",
+    "xgboost",
+    "lightgbm",
+    "catboost",
+    "sympy",
+    "numba>=0.57",
+    "scikit-learn>=1.0",
+    "defusedxml",
+    "pyqtgraph",
+    "skops",
+    "netCDF4",
+]
+
+# Install all packages in one go
+sys.argv = [
+    "pip",
+    "install",
+    "-U",
+    "--no-warn-script-location",
+] + enmap_packages
+
+try:
+    runpy.run_module("pip", run_name="__main__")
+except SystemExit:
+    pass
+except Exception as e:
+    print(f"An error occurred: {e}")
+finally:
+    sys.argv = original_argv
+    print("=========================================")
+    print("All packages are now fully installed!")
+    print("You can safely activate EnMAP-Box 3.")
+    print("=========================================")
+```
+:::
+- Auf auf den grünen Pfeil des Editors klicken zum Ausführen.
+
+- QGIS schliessen und neustarten.
+
+- Starten Sie die EnMAP-Box: `Raster` → `EnMAP-Box` →  `EnMAP-Box`
+
+Falls diese Installation auf Ihrem Macbook nicht funktioniert, können Sie alternativ QGIS und EnMap-Box auch in einer `Conda` Umgebung nach dieser Anleitung installieren: <https://enmap-box.readthedocs.io/en/latest/usr_section/usr_installation.html>
+
+## Linux
+Nachdem das Plugin installiert ist, müssen noch zusätzliche Module installiert werden bevor es gestartet werden kann. 
+
+- Laden Sie das Installationskript [installation_qgis_dependencies_base.py](https://cloud.hawk.de/index.php/s/CwTKje2HLo2RZHX)
+herunter und speichern Sie es in ein lokales Verzeichnis z.B. unter Downloads.
+
+- Öffen Sie die QGIS Python Konsole: `Erweiterungen` → `Python Konsole`
+
+- Kopieren und Einfügen des folgenden Einzeilers in die Python Konsole, passen Sie den Pfad zum heruntergeladenen Skript an, dann Enter drücken zum Ausführen des Skriptes.
+
+::: {style="border: 2px solid #afca0b; background-color: #e0e0e0; padding: 8px;"}
+```markdown
+script=r"/home/USERNAME/Downloads/install_qgis_dependencies_base.py"; exec(open(script,encoding="utf-8").read()); main([])
 ```
 :::
 
 - QGIS schliessen und neustarten.
 
 - Starten Sie die EnMAP-Box: `Raster` → `EnMAP-Box` →  `EnMAP-Box`
+
+:::
+
 
 ### Sichern des persönlichen Nutzerprofils {#sec-nutzerprofil}
 
