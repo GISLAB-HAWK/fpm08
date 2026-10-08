@@ -153,7 +153,7 @@ Nachdem das Plugin installiert ist, müssen auch auf Apple MacOS Laptops noch zu
 
 - Öffen Sie die QGIS Python Konsole: `Erweiterungen` → `Python Konsole`
 
-- Öffnen Sie den Editor innerhalb der Python Konsole um mehrzeiligen Code auf einmal auszuführen.
+- Klicken Sie auf ![](images/LE01_python_console_editor.png) um den Editor innerhalb der Python Konsole zu öffnen um mehrzeiligen Code auf einmal auszuführen.
 
 - Kopieren und Einfügen des gesamten folgenden Code Blocks in den Editor der Python Konsole.
 
@@ -209,7 +209,7 @@ finally:
     print("=========================================")
 ```
 :::
-- Auf auf den grünen Pfeil des Editors klicken zum Ausführen.
+- Auf auf den grünen Pfeil des Editors ![](images/LE01_script_ausfuehren.png) klicken zum Ausführen.
 
 - QGIS schliessen und neustarten.
 
