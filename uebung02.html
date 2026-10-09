@@ -276,22 +276,23 @@ Lizenz: Creative Commons BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc
 <section id="lernziele-aufgabenstellung" class="level2" data-number="2.1">
 <h2 data-number="2.1" class="anchored" data-anchor-id="lernziele-aufgabenstellung"><span class="header-section-number">2.1</span> Lernziele &amp; Aufgabenstellung</h2>
 <p>Viele Fernerkundungsdaten werden in Form von Rasterdaten gespeichert, welche in einem regelmäßigen Raster aus Zellen (Pixel) organisiert sind. In jedem Pixel wird genau ein Zahlenwert gespeichert. Typische Dateiformate für Rastergeodaten sind GeoTIFF (*.tif), ArcInfo ASCI (*.ascii), Geopackage (*.gpkg) und ERDAS Imagine (*.img).</p>
-<p>In der Übung soll der Umgang mit Rasterdaten vorgestellt und geübt werden. Dazu wird für die Niedersächsische Revierförsterei Kattenbühl ein Ortholuftbildmosaik erstellt, mit unterschiedlichen Optionen visualisiert und eine Luftbildkarte ausgegeben. Es wird vorgestellt wie Rasterdaten in QGIS importiert, Eigenschaften von Rasterdaten untersucht und Rasterdaten visualisiert werden können. Außerdem werden aus einzelnen Kanälen Mehrkanalbilder erstellt und diese dann in einem virtuellen Bildmosaik zusammengeführt.</p>
+<p>In der Übung soll der Umgang mit Rasterdaten vorgestellt und geübt werden. Dazu wird für die Niedersächsische Revierförsterei Kattenbühl ein Ortholuftbildmosaik erstellt, mit unterschiedlichen Optionen visualisiert und eine Luftbildkarte ausgegeben. Es wird vorgestellt wie Rasterdaten in QGIS importiert, Eigenschaften von Rasterdaten untersucht und visualisiert werden. Außerdem werden aus einzelnen Kanälen Mehrkanalbilder erstellt und diese dann in einem virtuellen Bildmosaik zusammengeführt.</p>
 <p><strong>Lernziele</strong></p>
 <p>Die Studierenden sollen:</p>
 <ul>
 <li>verschiedene Rasterdatenformate kennenlernen</li>
 <li>Rasterdaten in QGIS importieren</li>
-<li>Eigenschaften von Rasterdaten in QGIS untersuchen und manipulieren können</li>
-<li>Mehrkanalbilder und Bildmosaike mithilfe von virtuellen Rastern erstellen können</li>
-<li>unterschiedliche Visualisierungsmethoden für Ein- und Mehrkanalrasterbilder nutzen können</li>
+<li>Eigenschaften von Rasterdaten in QGIS untersuchen und manipulieren</li>
+<li>Mehrkanalbilder und Bildmosaike mithilfe von virtuellen Rastern erstellen</li>
+<li>unterschiedliche Visualisierungsmethoden für Ein- und Mehrkanalrasterbilder nutzen</li>
 </ul>
 <p><strong>Aufgaben</strong></p>
 <ol type="1">
-<li><p>Importieren sie einzelne Kanäle eines Ortholuftbildes und untersuchen sie die Rastereigenschaften</p></li>
-<li><p>Fügen sie einzelne Kanäle zu einem virtuellen Mehrkanalbild zusammen</p></li>
-<li><p>Erstellen sie ein virtuelles Orthobildmosaik</p></li>
-<li><p>Erstellen sie eine Echt- und eine Falschfarben-Darstellung</p></li>
+<li><p>Importieren Sie einzelne Kanäle eines Ortholuftbildes und untersuchen sie die Rastereigenschaften</p></li>
+<li><p>Fügen Sie einzelne Kanäle zu einem virtuellen Mehrkanalbild zusammen</p></li>
+<li><p>Erstellen Sie ein virtuelles Orthobildmosaik</p></li>
+<li><p>Erstellen Sie eine Echt- und eine Falschfarben-Darstellung</p></li>
+<li><p>Erstellen Sie ein Kartenlayout für eine Luftbildkarte</p></li>
 </ol>
 </section>
 <section id="anlegen-eine-neuen-qgis-projektes" class="level2" data-number="2.2">
@@ -300,7 +301,9 @@ Lizenz: Creative Commons BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc
 </section>
 <section id="import-der-ortholuftbilder" class="level2" data-number="2.3">
 <h2 data-number="2.3" class="anchored" data-anchor-id="import-der-ortholuftbilder"><span class="header-section-number">2.3</span> Import der Ortholuftbilder</h2>
-<p>Die Ortholuftbilder werden als GeoTiff-Dateien getrennt in den einzelnen Bändern (b1, b2, b3, b4) zur Verfügung gestellt. Für die Übung arbeiten wir mit vier Luftbildkacheln á vier Bänder, so dass 16 Raster Layer importiert werden. Um den Import übersichtlich zu gestalten, empfiehlt es sich für jede Kachel zunächst im Layer-Panel und im raster Ordner des Projektes einen Ordner/ Gruppe für jede Kachel (bild_1, bild_2, …) anzulegen. Kopieren Sie sich die Daten der Übung dazu vom Netzlaufwerk in ihren Projektordner. Die einzelnen Rasterdateien können dann entweder per drag &amp; drop aus dem Windows-Explorer oder über das Import-Menü zu den Layer-Gruppen hinzugefügt werden.</p>
+<p>Die Ortholuftbilder werden als GeoTiff-Dateien getrennt in den einzelnen Bändern (b1, b2, b3, b4) zur Verfügung gestellt. Für die Übung arbeiten wir mit vier Luftbildkacheln á vier Bänder, so dass 16 Einkanal-Raster importiert werden. Um den Import übersichtlich zu gestalten, empfiehlt es sich für jede Kachel zunächst im QGIS Layer-Panel und im raster Ordner des Projektes einen Ordner/ Gruppe für jede Kachel (bild_1, bild_2, …) anzulegen.</p>
+<p>Kopieren Sie sich die Daten der Übung - im PC-Pool vom Netzlaufwerk <code>R:\Lehre\GOR\Fuchs\uebung02</code> - oder von diesem <a href="https://cloud.hawk.de/index.php/s/psxYN3qyP3NCZdr">NextCloud Verzeichnis</a> in ihren persönlichen Projektordner.</p>
+<p>Die einzelnen Rasterdateien können dann entweder per drag und drop vom Windows-Dateimanager in den QGIS Viewer oder über das Import-Menü zu den Layer-Gruppen hinzugefügt werden.</p>
 <div style="border: 2px solid #afca0b; background-color: #fafafa; padding: 8px;">
 <p><code>Layer</code> → <code>Datenquellenverwaltung</code> → <code>Raster</code> → <code>File</code></p>
 </div>
@@ -317,7 +320,7 @@ Lizenz: Creative Commons BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc
 </section>
 <section id="sec-mehrkanalbilder" class="level2" data-number="2.4">
 <h2 data-number="2.4" class="anchored" data-anchor-id="sec-mehrkanalbilder"><span class="header-section-number">2.4</span> Erstellen von Mehrkanalbildern</h2>
-<p>Nach dem Import der einzelnen Kanäle werden diese in QGIS als Graustufenbilder dargestellt. Damit QGIS diese als Farbbilder darstellen kann, müssen alle Bänder eines Raster zusammengeführt werden. Dafür gibt es unterschiedliche Optionen. Eine Variante ist das Speichern aller Bänder in eine neue Vierkanal-Rasterdatei. In diesem Fall würden wir aber eine Kopie der Daten anlegen und brauchten den doppelten Speicherplatz. Eine effizientere Methode, um das Kopieren der Daten zu vermeiden, sind virtuelle Raster im GDAL-VRT Format (siehe: <a href="https://gdal.org/en/stable/drivers/raster/vrt.html" class="uri">https://gdal.org/en/stable/drivers/raster/vrt.html</a>). Ein virtuelles Raster ist eine Textdatei im XML-Format, in dem nur die Pfade und Einstellungen der einzelnen Raster hinterlegt sind. QGIS kann diese Textdateien lesen und die einzelnen Raster dann wie ein Mehrkanalbild verarbeiten.</p>
+<p>Nach dem Import der einzelnen Kanäle werden diese in QGIS als Graustufenbilder dargestellt. Damit QGIS diese als Farbbilder darstellen kann, müssen alle Bänder eines Raster zusammengeführt werden. Dafür gibt es unterschiedliche Optionen. Eine Variante ist das Speichern aller Bänder in eine neue Vierkanal-Rasterdatei. In diesem Fall würden wir aber eine Kopie der Daten anlegen und brauchen den doppelten Speicherplatz. Eine effizientere Methode, um das Kopieren der Daten zu vermeiden, sind virtuelle Raster im GDAL-VRT Format (siehe: <a href="https://gdal.org/en/stable/drivers/raster/vrt.html" class="uri">https://gdal.org/en/stable/drivers/raster/vrt.html</a>). Ein virtuelles Raster ist eine Textdatei im XML-Format, in dem nur die Pfade und Einstellungen der einzelnen Raster hinterlegt sind. QGIS kann diese Textdateien lesen und einzelne Raster dann wie ein Mehrkanalbild verarbeiten.</p>
 <p>Erstellen sie für jedes der vier Bänder eine VRT-Datei in dem jeweiligen Bildordner.</p>
 <div style="border: 2px solid #afca0b; background-color: #fafafa; padding: 8px;">
 <p><code>Raster</code> →<code>Sonstiges</code> → <code>Virtuelles Raster generieren</code></p>
@@ -328,17 +331,17 @@ Lizenz: Creative Commons BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc
 <figcaption>Anlegen eines VRT-Rasters</figcaption>
 </figure>
 </div>
-<p>Im ersten Schritt werden unter Input layers die vier Bänder ausgewählt. wichtig ist hier das die Reihenfolge der Bänder aufsteigend angezeigt wird (b1, b2, b3, b4). Sollte das nicht der Fall sein kann die Reihenfolge per drag &amp; drop in dem Menü entsprechend angepasst werden. Da mehrerere Bänder zusammengeführt werden ist es wichtig, dass die Option <em>“Jeder Datei einen eigenen Kanal zuordnen”</em> aktiviert wird. Unter Virtuell wird die Ausgabedatei angegeben. Diese sollte z.B. <em>LE02/raster/bild_1/bild_1_mehrkanal.vrt</em> heißen.</p>
+<p>Im ersten Schritt werden unter “Eingabelayer” die vier Bänder ausgewählt. Wichtig ist hier das die Reihenfolge der Bänder aufsteigend angezeigt wird (b1, b2, b3, b4). Sollte das nicht der Fall sein, kann die Reihenfolge per drag &amp; drop in dem Menü entsprechend angepasst werden. Da mehrerere Bänder zusammengeführt werden, ist es wichtig, dass die Option <em>“Jeder Datei einen eigenen Kanal zuordnen”</em> aktiviert wird. Unter “Virtuell” wird die Ausgabedatei angegeben. Diese sollte z.B. <em>LE02/raster/bild_1/bild_1_mehrkanal.vrt</em> heißen.</p>
 </section>
 <section id="editieren-der-raster-metadaten" class="level2" data-number="2.5">
 <h2 data-number="2.5" class="anchored" data-anchor-id="editieren-der-raster-metadaten"><span class="header-section-number">2.5</span> Editieren der Raster Metadaten</h2>
-<p>Wenn Rasterdaten weitergegeben, visualisiert oder in der EnMAP-Box weiterverarbeitet werden, ist es wichtig korrekte Bandnamen und zentrale Wellenlängen (in der Einheit Nanometer) in den Metadaten zu speichern. In der Werkzeugkiste finden Sie dafür</p>
+<p>Wenn Rasterdaten weitergegeben, visualisiert oder in der EnMAP-Box weiterverarbeitet werden, ist es wichtig korrekte Bandnamen und zentrale Wellenlängen (in der Einheit <strong>Nanometer</strong>) in den Metadaten zu speichern. In der Werkzeugkiste finden Sie dafür</p>
 <p><code>Verarbeitung → Werkzeugkiste → EnMAP-Box → Raster → Raster miscellaneous → Edit raster source band properties.</code></p>
 <p>Da das Modul direkte Änderungen in die Datei einfügt, also keine neue Datei anlegt, sollten Sie die Rasterdatei vorher in QGIS schliessen. Markieren Sie den Rasterlayer-Namen, Rechtsklick → Layer löschen.</p>
 <ul>
 <li><strong>GDAL raster source:</strong> Wählen Sie die vrt Datei <code>bild_1_mehrkanal.vrt</code> aus.</li>
 <li><strong>Band names</strong>:“rot”, “grün”, “blau”, “nir”</li>
-<li><strong>Center wavelenght</strong>: 665, 560, 490, 850</li>
+<li><strong>Center wavelenght values</strong>: 665, 560, 490, 850</li>
 </ul>
 <p>Auf <code>Starte</code> klicken.</p>
 <p><img src="images/LE02_edit_bandnames.png" class="img-fluid"></p>
@@ -354,12 +357,12 @@ Lizenz: Creative Commons BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc
 </div>
 <p>Hier wird angezeigt, welches Band für welchen Farbkanal verwendet wird.</p>
 <p><strong>Color-Infrarot (CIR) Darstellung</strong></p>
-<p>Zur Beobachtung von Wäldern und Pflanzen werden häufig falschfarben Darstellungen gewählt. Sie zeigen nicht die Farben wie sie in der Realität vorgefunden werden, sonden machen besonders Unterschiede in der Vegetation sichtbar. Dazu wird häufig der rote Kanal mit den Reflexionsdaten aus dem Nahen Infrarot Spektrum ersetzt.</p>
-<p>QGIS bietet die Möglichkeit für jeden Layer mehrere Symbolisierungen zu hinterlegen. Dadurch ist es dann möglich sehr einfach zwischen unterschiedlichen Ansichten zu wechseln. Um ein weitere Symbolisierung für einen Layer anzulegen klicken wir mit der rechten Maustaste auf einen Layer und wählen:</p>
+<p>Zur Beobachtung von Wäldern und Pflanzen werden häufig Falschfarben Darstellungen gewählt. Sie zeigen nicht die Farben wie sie in der Realität vorgefunden werden, sonden machen besonders Unterschiede in der Vegetation sichtbar. Dazu wird häufig der rote Kanal mit den Reflexionsdaten aus dem Nahen Infrarot Spektrum ersetzt.</p>
+<p>QGIS bietet die Möglichkeit für jeden Layer mehrere Symbolisierungen zu hinterlegen. Dadurch ist es dann möglich sehr einfach zwischen unterschiedlichen Ansichten zu wechseln. Um eine weitere Symbolisierung für einen Layer anzulegen, klicken wir mit der rechten Maustaste auf einen Layer und wählen:</p>
 <div style="border: 2px solid #afca0b; background-color: #fafafa; padding: 8px;">
 <p><code>Stil</code> → <code>Stil hinzufügen</code> → <code>Name: CIR</code></p>
 </div>
-<p>Anschließend öffnen wie wieder die Symbolisierung des Layers und wählen in der Darstellungsart Multikanalfarbe für den Roten Farbkanal Band 4: nir, für den Grünen Farbkanal Band 1: rot und den Blauen Farbkanal Band 2: grün. Dadurch wird nun eine CIR-Falschfarben Darstellung angezeigt.</p>
+<p>Anschließend öffnen wir wieder die Symbolisierung des Layers und wählen in der Darstellungsart Multikanalfarbe für den Roten Farbkanal Band 4: nir, für den Grünen Farbkanal Band 1: rot und den Blauen Farbkanal Band 2: grün. Dadurch wird nun eine Standard CIR-Falschfarben Darstellung angezeigt.</p>
 <div style="border: 3px solid #ff8a0b; background-color: #ffffff; padding: 8px;">
 <p><strong>Frage:</strong></p>
 <ol type="1">
@@ -370,12 +373,16 @@ Lizenz: Creative Commons BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc
 </section>
 <section id="sec-mosaikieren" class="level2" data-number="2.7">
 <h2 data-number="2.7" class="anchored" data-anchor-id="sec-mosaikieren"><span class="header-section-number">2.7</span> Erstellen eine Ortholuftbildmosaiks</h2>
-<p>Die Ortholuftbilder werden, wie die meisten Rasterdaten, in sogenannten Kacheln (engl. tiles) z.B. mit einer Größe von 2000 m x 2000 m ausgeliefert. In der Übung haben vier solche Kacheln vorliegen. Zur Abdeckung größere Gebiete werden meistens mehrere Kacheln benötigt. Besonders für große Gebiete kann das sehr aufwendig werden, da die Einstellungen z.B. der Darstellung für jede Kachel einzeln angepasst werden muss. Daher ist es sinnvoll die Kacheln eines zusammenhängenden Gebietes zusammenzuführen. Diese Zusammenstellung mehrere Bilder die räumlich benachbart sind, bezeichnet man in der Fernerkundung häufig als Bildmosaik. QGIS bietet unterschiedliche Möglichkeiten Bildmosaike zu erstellen. Ein Option wäre es mehrere Kacheln zusammenzuführen und als neue GeoTiff-Datei abzuspeichern. Diese hätte den Vorteil, dass wir für das jeweilige Gebiet nur noch eine Datei hätten. Es gibt bei diesem Vorgehen allerdings mehrere Nachteile. Je nach Gebietsgröße werden die Dateien sehr groß. Das kann dann zu sehr langen Ladezeiten führen, wenn man in das Bild zoomt. Außerdem würde auch wieder eine Kopie der Daten angelegt, was zu einem größeren Speicherplatzbedarf führt. Alternativ kann auch für dieses Problem ein virtuelles Raster verwendet werden. Anders als im oberen Abschnitt nutzen wir diese Funktion nun um benachbarten Bilder zusammenzuführen. Voraussetzung dafür ist, dass die Bilder das selbe Koordinatenreferenzsystem nutzen, die räumliche Auflösung und die Anzahl der Bänder identisch ist.</p>
+<p>Die Ortholuftbilder werden, wie die meisten Rasterdaten, in sogenannten Kacheln (engl. tiles) z.B. mit einer Größe von 2000 m x 2000 m ausgeliefert. In der Übung haben wir vier solcher Kacheln vorliegen. Zur Abdeckung größerer Gebiete werden meistens mehrere Kacheln benötigt. Das kann sehr aufwendig werden, da die Einstellungen z.B. der Darstellung für jede Kachel einzeln angepasst werden muss. Daher ist es sinnvoll die Kacheln eines zusammenhängenden Gebietes zusammenzuführen. Eine Zusammenstellung mehrerer Bilder, die räumlich benachbart sind, wird in in der Fernerkundung als Bildmosaik bezeichnet. QGIS bietet zwei unterschiedliche Möglichkeiten Bildmosaike zu erstellen.</p>
+<ol type="1">
+<li><p>Zusammenführen mehrerer Kacheln und abspeichern in einer neuen GeoTiff-Datei. Dieses hat den Vorteil, dass wir für das jeweilige Gebiet nur noch eine Datei haben. Es gibt bei diesem Vorgehen allerdings Nachteile. Je nach Gebietsgröße werden die Dateien sehr groß was beim Zoomen zu sehr langen Ladezeiten führt. Außerdem würde auch wieder eine Kopie der Daten angelegt, was zu einem größeren Speicherplatzbedarf führt.</p></li>
+<li><p>Zusammenführen mehrerer Kacheln in einem virtuelles Raster. Anders als in <a href="#sec-mehrkanalbilder" class="quarto-xref"><span>Kapitel 2.4</span></a> nutzen wir diese Funktion nun, um benachbarte Mehrkanalbilder zusammenzuführen. Voraussetzung dafür ist, dass die Bilder dasselbe Koordinatenreferenzsystem nutzen, die räumliche Auflösung und die Anzahl der Bänder identisch ist.</p></li>
+</ol>
 <p>Zum Erstellen eines VRT-Mosaiks nutzen wir wieder:</p>
 <div style="border: 2px solid #afca0b; background-color: #fafafa; padding: 8px;">
-<p><code>Verarbeitung</code> →<code>Werkzeugkiste</code> → <code>Virtuelles Raster generieren</code> → <code>Raster</code> → <code>File</code></p>
+<p><code>Raster</code> →<code>Sonstiges</code> → <code>Virtuelles Raster generieren</code></p>
 </div>
-<p>Diesmal wählen wir als Input die vier virtuellen Mehrkanalbilder (VRTs) die wir bereits erzeugt haben. Als Ausgabe definieren wir das VRT le02_Ortholuftbildmosaik.vrt, welches wir im Rasterordner ablegen.</p>
+<p>Diesmal wählen wir als Eingabelayer die vier virtuellen Mehrkanalbilder (VRTs) die wir bereits erzeugt haben. Als Ausgabe definieren wir das VRT le02_Ortholuftbildmosaik.vrt, welches wir im Rasterordner ablegen.</p>
 <p><img src="images/LE02_vrt_mosaik_anlegen.png" class="img-fluid" alt="Ortholuftbildmosaik als VRT anlegen"></p>
 <div class="callout callout-style-default callout-caution callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -390,23 +397,23 @@ Vorsicht
 <p>Da wir die einzelnen Bilder nebeneinander anordnen wollen wählen wir hier <strong>nicht</strong> die Option <em>“Jeder Datei einen eigenen Kanal zuordnen”</em></p>
 </div>
 </div>
-<p>Als Ergebnis haben wir nun eine VRT-Datei, mit der wir gleichzeitig alle Bänder und alle Kacheln darstellen können. Dies ermöglicht es nun auch die Darstellung aller Bilder gleichzeitig und einheitlich anzupassen. Legen sie dazu wie oben beschrieben für das Orthomosaik einen neuen Stil <em>‘CIR’</em> an und stellen sie das Mosaik als CIR-Abbildung dar.</p>
+<p>Als Ergebnis haben wir nun eine VRT-Datei, mit der wir gleichzeitig alle Bänder und alle Kacheln darstellen können. Dies ermöglicht es nun auch die Darstellung aller Bilder gleichzeitig und einheitlich anzupassen. Legen sie dazu wie oben beschrieben für das Orthomosaik einen neuen Stil <em><code>CIR</code></em> an und stellen sie das Mosaik als CIR-Abbildung dar.</p>
 </section>
 <section id="erstellen-eines-kartenlayouts-zur-ausgabe-einer-luftbildkarte" class="level2" data-number="2.8">
 <h2 data-number="2.8" class="anchored" data-anchor-id="erstellen-eines-kartenlayouts-zur-ausgabe-einer-luftbildkarte"><span class="header-section-number">2.8</span> Erstellen eines Kartenlayouts zur Ausgabe einer Luftbildkarte</h2>
-<p>Wir können das Orthobildmosaik als Luftbildkarte im Format PDF ausgeben, ein wichtiges Produkt für die Übersicht in einem Forstrevier und zur Erstellung detaillierter Arbeitskarten.</p>
-<p>In einem QGIS Projekt können mehrere Karten erstellt und gespeichert werden. Zur Verwaltung der verschiedenen Karten wird der Kartenlayout-Manager verwendet. Sie finden dieses im Menü unter Projekt. Hier können sie ein neues Drucklayout „Luftbild“ anlegen.</p>
-<p>Nachdem sie ein Kartenlayout im Manager angelegt haben öffnet sich ein neues Fenster mit dem noch leeren Kartenlayout. Um ein erstes Layout zu erstellen gehen wir schrttweise vor:</p>
+<p>Wir können das Orthobildmosaik als Luftbildkarte im Format PDF ausgeben, ein wichtiges Produkt für Übersicht und Orientierung in einem Forstrevier oder zur Erstellung detaillierter Arbeitskarten.</p>
+<p>In einem QGIS Projekt können mehrere Karten erstellt und gespeichert werden. Zur Verwaltung der verschiedenen Karten wird der Kartenlayout-Manager verwendet. Sie finden dieses im Menü unter Projekt. Hier können sie ein neues Drucklayout °Luftbildkarte” anlegen.</p>
+<p>Nachdem Sie ein Kartenlayout im Manager angelegt haben öffnet sich ein neues Fenster mit dem noch leeren Kartenlayout. Um ein erstes Layout zu erstellen gehen wir schrttweise vor:</p>
 <p>1.)&nbsp; Hinzufügen eines Kartenfelds.</p>
-<p>Dazu wählen sie links das Werkzeug “Karte hinzufügen” und ziehen anschließend in ihrem Layout ein Kartenfeld auf. QGIS stellt danach automatisch die Layer aus dem Hauptfenster dar.</p>
+<p>Dazu wählen Sie links das Werkzeug “Karte hinzufügen” und ziehen anschließend in ihrem Layout ein Kartenfeld auf. QGIS stellt danach automatisch die Layer aus dem Hauptfenster dar.</p>
 <p>2.) Hinzufügen eines Titels</p>
-<p>Dazu wählen sie links das Werkzeug “Beschriftung hinzufügen” und ziehen anschließend ein Textfeld oberhalb ihrer Karte auf. Geben sie dann im Feld rechts unter „Beschriftung“ einen sinnvollen Titel (z.b. Luftbildkarte FoA Heiligenstadt) ein und wählen sie eine passende Schriftgröße aus.</p>
+<p>Dazu wählen Sie links das Werkzeug “Beschriftung hinzufügen” und ziehen anschließend ein Textfeld oberhalb Ihrer Karte auf. Geben sie dann im Feld rechts unter „Beschriftung“ einen sinnvollen Titel (z.b. Luftbildkarte FoA Heiligenstadt) ein und wählen Sie eine passende Schriftgröße aus.</p>
 <p>3.) Hinzufügen einer Legende</p>
-<p>Dazu wählen sie links das Werkzeug “Legende hinzufügen” aus und ziehen anschließend ein Legendenfeld rechts neben ihren Kartenfeld auf. QGIS übernimmt für die Legende dann automatisch die Symbolisierung aller Layer des Projektes. Wenn sie rechts unter Legendenelemente die Funktion „Automatisch aktualisieren“ entfernen, können sie Einträge manuell hinzufügen und entfernen.</p>
+<p>Dazu wählen Sie links das Werkzeug “Legende hinzufügen” aus und ziehen anschließend ein Legendenfeld rechts neben ihren Kartenfeld auf. QGIS übernimmt für die Legende dann automatisch die Symbolisierung aller Layer des Projektes. Wenn Sie rechts unter Legendenelemente die Funktion „Automatisch aktualisieren“ entfernen, können Sie Einträge manuell hinzufügen und entfernen.</p>
 <p>4.)&nbsp;Hinzufügen eine Nordpfeils</p>
-<p>Dazu wählen sie links das Werkzeug “Nordpfeil hinzufügen” und ziehen anschließend ein Fenster für den Nordpfeil auf.</p>
+<p>Dazu wählen Sie links das Werkzeug “Nordpfeil hinzufügen” und ziehen anschließend ein Fenster für den Nordpfeil auf.</p>
 <p>5.) Koordinatengitter hinzufügen</p>
-<p>Um ein Koordinatengitter hinzuzufügen selektieren sie zunächst das Kartenfenster in dem sie darauf klicken. Anschließend öffnen sie die Option „Gitter“, die ihnen im rechten Teil unter den Haupteigenschaften des Kartenfelds angezeigt wird. Über das grüne Plus Symbol legen sie ein neues Gitter an. Anschließend wählen sie dieses Gitter aus, und klicken auf „Gitter ändern“. Hier ändern wir folgende Optionen:</p>
+<p>Um ein Koordinatengitter hinzuzufügen, selektieren Sie zunächst das Kartenfenster in dem Sie darauf klicken. Anschließend öffnen Sie die Option „Gitter“, die ihnen im rechten Teil unter den Haupteigenschaften des Kartenfelds angezeigt wird. Über das grüne Plus Symbol legen Sie ein neues Gitter an. Anschließend wählen Sie dieses Gitter aus, und klicken auf „Gitter ändern“. Hier ändern wir folgende Optionen:</p>
 <ul>
 <li><p>Gittertype: „Nur Rahmen und Beschriftungen“</p></li>
 <li><p>Intervall: X=500m, Y=500m</p></li>
@@ -416,13 +423,13 @@ Vorsicht
 <li><p>Koordinatengenauigkeit: 0</p></li>
 </ul>
 <p>6.)&nbsp;Maßstab</p>
-<p>Fügen sie ein graphischen Maßstabsbalken hinzu. Dazu wählen sie links das Werkzeug “Maßstab hinzufügen” und ziehen anschließend ein Fenster für den Maßstab auf. Über die Eigenschaften dieses Elements können sie z.B. die Anzahl an Segmenten steuern.</p>
+<p>Fügen Sie einen graphischen Maßstabsbalken hinzu. Dazu wählen Sie links das Werkzeug “Maßstab hinzufügen” und ziehen anschließend ein Fenster für den Maßstab auf. Über die Eigenschaften dieses Elements können Sie z.B. die Anzahl der Segmente steuern.</p>
 <p>7.)&nbsp;Kartenfeld</p>
-<p>Sie sollten der Karte noch einige weitere Metadaten hinzufügen. Dazu legen sie, wie beim Titel, ein neues Textfeld an und ergänzen hier ihren Namen und das Koordinatenreferenzsystem.</p>
+<p>Sie sollten der Karte noch weitere Metadaten hinzufügen. Dazu legen Sie, wie beim Titel, ein neues Textfeld an und ergänzen hier ihren Namen, Datum, Quellen, Maßstab und Koordinatenreferenzsystem.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/LE14_Luftbildkarte.png" class="img-fluid figure-img"></p>
-<figcaption>Luftbildkarte</figcaption>
+<p><img src="images/LE02_luftbildkarte.png" class="img-fluid figure-img"></p>
+<figcaption>Beispiel einer Luftbildkarte</figcaption>
 </figure>
 </div>
 
