@@ -1,0 +1,1032 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Forstliche Fernerkundung",
+    "section": "",
+    "text": "Vorwort\nHier finden Sie die Materialien für das Modul “Einführung in die forstliche Fernerkundung” des B.Sc. Studiengangs Forstwirtschaft an der HAWK in Göttingen.",
+    "crumbs": [
+      "Vorwort"
+    ]
+  },
+  {
+    "objectID": "uebung01.html",
+    "href": "uebung01.html",
+    "title": "1  Lerneinheit 01: Erste Schritte in QGIS",
+    "section": "",
+    "text": "1.1 Lernziele & Aufgabenstellung\nDie erste Lerneinheit dient der Einrichtung einer Arbeitsumgebung und Wiederholung wesentlicher QGIS-Funktionen. Wir prüfen die Installation der Programme und QGIS-Erweiterungen. Es wird außerdem gezeigt, wie wir Einstellungen in den persönlichen QGIS-Profilen speichern und sichern können.\nLernziele\nDie Studierenden sollen:\nAufgabenstellung",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Lerneinheit 01: Erste Schritte in QGIS</span>"
+    ]
+  },
+  {
+    "objectID": "uebung01.html#lernziele-aufgabenstellung",
+    "href": "uebung01.html#lernziele-aufgabenstellung",
+    "title": "1  Lerneinheit 01: Erste Schritte in QGIS",
+    "section": "",
+    "text": "QGIS installieren und überprüfen welche Version installiert ist\ndie Funktionsweise von Benutzerprofilen verstehen und anwenden\neine sinnvolle Ordnerstruktur zur Verwaltung von QGIS-Projekten kennen und anlegen\nProjekte in QGIS anlegen\n\n\n\nÜberprüfen Sie die Installation von QGIS und EnMAP-Box Plugin.\nLegen Sie ein neues QGIS Benutzerprofil mit ihrem Namen an.\nInstallieren Sie das EnMAP-Box-Plugin und zusätzliche Module.\nSichern Sie ihr QGIS Benutzerprofil an einem permanenten Speicherort.\nLegen Sie eine Ordnerstruktur für das Projekt uebung01 an.\nLegen Sie innerhalb der Ordnerstruktur eine neues QGIS-Projekt uebung01.qgz an.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Lerneinheit 01: Erste Schritte in QGIS</span>"
+    ]
+  },
+  {
+    "objectID": "uebung01.html#qgis-und-enmap-box-installation",
+    "href": "uebung01.html#qgis-und-enmap-box-installation",
+    "title": "1  Lerneinheit 01: Erste Schritte in QGIS",
+    "section": "1.2 QGIS und EnMAP-Box Installation",
+    "text": "1.2 QGIS und EnMAP-Box Installation\n\n1.2.1 Installation von QGIS\nDie vorgestellten Programme funktionieren grundsätzlich unter Windows, MacOS und Linux Betriebssystemen.\n\nWindowsMacOSLinux\n\n\n\n\n\n\n\n\nHinweis\n\n\n\nIm PC-Pool der HAWK ist QGIS bereits auf den Computern installiert. Das EnMAP-Box-Plugin muss zusätzlich in das persönliche QGIS Benutzerprofil installiert werden. Eine vollständige Installation von QGIS und EnMAP-Box ist notwendig, wenn Sie die Übungen auf einem eigenen Computer durchführen wollen.\n\n\nIn diesem Kurs wird die Software QGIS in der Version 3.40.8 verwendet. Sie können die Software hier herunterladen:\nhttps://qgis.org/downloads/QGIS-OSGeo4W-3.40.8-1.msi\nDer aktuelle Windows Standalone Installer für QGIS LTR (Long Term Release) 3.44 sollte auch funktionieren und kann hier heruntergeladen werden: https://qgis.org/download/\n\n\nAuf Apple Laptops mit MacOS High Sierra (10.14) oder neuere Versionen können Sie den offiziellen MacOS installer für QGIS LTR 3.44 von der QGIS Download Seite verwenden. Laden Sie die .dmg Datei herunter, öffnen Sie sie und ziehen Sie QGIS in den Applications Ordner.\n\n\nAusführliche QGIS Installationsanweisungen für verschiedene Linux Distributionen finden Sie auf https://qgis.org/resources/installation-guide/. Wählen Sie ein Long Term Release Repository mit der QGIS Version 3.44.\n\n\n\n\n\n1.2.2 Anlegen eines persönlichen QGIS-Benutzerprofils\nQGIS kann auf eigene Bedürfnisse umfangreich angepasst werden. Dazu zählen z.B. folgende Einstellungen:\n\nSprache\nProjektionen und Koordinatensysteme\nPasswörter für Datenbankzugänge\nAnpassungen des Erscheinungsbildes und der dargestellten Werkzeuge\nInstallation und Konfiguration von Plugins\n\n\n\n\n\n\n\nHinweis\n\n\n\nDas Anlegen persönlicher Benutzerprofile geschieht in der Regel vollständig automatisch. Im PC-Pool werden diese Profile aber nicht zwischen den PC-Arbeitsplätzen synchronisiert. Außerdem werden die lokalen Benutzerdaten in regelmäßigen Abständen gelöscht. Daher kann es für die Arbeit im PC-Pool sinnvoll sein, ein eigenes Profil anzulegen und in einem persönlichen Ordner zu sichern.\n\n\nQGIS speichert Benutzerprofile automatisch im lokalen Profilordner:\n\nauf Windows: C:\\Users\\USERNAME\\AppData\\Roaming\\QGIS\\QGIS3\\profiles\\\nauf MacOS: /Users/USERNAME/Library/Application Support/QGIS/QGIS3/profiles/\nauf Linux: /home/USERNAME/.local/share/QGIS/QGIS3/profiles/\n\nUSERNAME steht hier als Platzhalter für Ihren Benutzernamen, also den aktuell angemeldeten Benutzernamen. Das Verzeichnis, in dem die QGIS Benutzerprofile gespeichert werden, lässt sich direkt im QGIS Hauptmenü öffnen mit\nEinstellungen → Benutzerprofile → Aktuelles Profilverzeichnis öffnen\nStandardmäßig gibt es in QGIS nur das Benutzerprofil default. Es können aber beliebig viele zusätzlich angelegt werden.\n\nLegen Sie ein neues Nutzerprofile mit Ihrem Namen (z.B. mueller) an:\nEinstellungen → Benutzerprofile → Neues Profil anlegen\n\nWeitere Informationen zu den QGIS-Benutzerprofilen finden sie hier: https://docs.qgis.org/3.40/de/docs/user_manual/introduction/qgis_configuration.html#user-profiles\n\n\n1.2.3 Installation des EnMAP-Box Plugins und zusätzlicher Module\nNeben QGIS nutzen wir für die fernerkundlichen Auswertungen das quelloffene QGIS Plugin EnMAP-Box in der Version 3.17.9.\n\n1.2.3.1 Installation der EnMAP-Box Erweiterung\n\nErweiterungen → Erweiterungen verwalten und installieren\nIm Suchfenster enmap eingeben, das angezeigte Plugin EnMAP-Box 3auswählen und installieren.\n\n\n\n1.2.3.2 Installation zusätzlicher EnMAP-Box Module\n\nWindowsMacOSLinux\n\n\nNachdem das Plugin installiert ist, müssen noch zusätzliche Module installiert werden bevor es gestartet werden kann.\n\nLaden Sie das Installationskript installation_qgis_dependencies_base.py herunter und speichern Sie es direkt in das lokale Verzeichnis D:\\\nÖffen Sie die QGIS Python Konsole: Erweiterungen → Python Konsole\nKopieren und Einfügen des folgenden Einzeilers in die Python Konsole, eventuell nur den Pfad zum heruntergeladenen Skript editieren, dann Enter drücken zum Ausführen des Skriptes.\n\n\nscript=r\"D:/install_qgis_dependencies_base.py\"; exec(open(script,encoding=\"utf-8\").read()); main([])\n\n\nQGIS schliessen und neustarten.\nStarten Sie die EnMAP-Box: Raster → EnMAP-Box → EnMAP-Box\n\n\n\nNachdem das Plugin installiert ist, müssen auch auf Apple MacOS Laptops noch zusätzliche Module installiert werden bevor es gestartet werden kann.\n\nÖffen Sie die QGIS Python Konsole: Erweiterungen → Python Konsole\nKlicken Sie auf  um den Editor innerhalb der Python Konsole zu öffnen um mehrzeiligen Code auf einmal auszuführen.\nKopieren und Einfügen des gesamten folgenden Code Blocks in den Editor der Python Konsole.\n\n\nimport sys\nimport os\nimport runpy\n\n# Create the missing bin directory (otherwise pip aborts on console-script packages)\nbroken_bin_path = \"/Applications/QGIS.app/Contents/Frameworks/bin\"\nos.makedirs(broken_bin_path, exist_ok=True)\nprint(\"Created missing bin directory. Starting installation...\")\n\noriginal_argv = sys.argv\n\nenmap_packages = [\n    # Command 1 - basic packages\n    \"colorama\",\n    \"astropy\",\n    \"PyOpenGL\",\n    \"xgboost\",\n    \"lightgbm\",\n    \"catboost\",\n    \"sympy\",\n    \"numba&gt;=0.57\",\n    \"scikit-learn&gt;=1.0\",\n    \"defusedxml\",\n    \"pyqtgraph\",\n    \"skops\",\n    \"netCDF4\",\n]\n\n# Install all packages in one go\nsys.argv = [\n    \"pip\",\n    \"install\",\n    \"-U\",\n    \"--no-warn-script-location\",\n] + enmap_packages\n\ntry:\n    runpy.run_module(\"pip\", run_name=\"__main__\")\nexcept SystemExit:\n    pass\nexcept Exception as e:\n    print(f\"An error occurred: {e}\")\nfinally:\n    sys.argv = original_argv\n    print(\"=========================================\")\n    print(\"All packages are now fully installed!\")\n    print(\"You can safely activate EnMAP-Box 3.\")\n    print(\"=========================================\")\n\n\nAuf auf den grünen Pfeil des Editors  klicken zum Ausführen.\nQGIS schliessen und neustarten.\nStarten Sie die EnMAP-Box: Raster → EnMAP-Box → EnMAP-Box\n\nFalls diese Installation auf Ihrem Macbook nicht funktioniert, können Sie alternativ QGIS und EnMap-Box auch in einer Conda Umgebung nach dieser Anleitung installieren: https://enmap-box.readthedocs.io/en/latest/usr_section/usr_installation.html\n\n\nNachdem das Plugin installiert ist, müssen noch zusätzliche Module installiert werden bevor es gestartet werden kann.\n\nLaden Sie das Installationskript installation_qgis_dependencies_base.py herunter und speichern Sie es in ein lokales Verzeichnis z.B. unter Downloads.\nÖffen Sie die QGIS Python Konsole: Erweiterungen → Python Konsole\nKopieren und Einfügen des folgenden Einzeilers in die Python Konsole, passen Sie den Pfad zum heruntergeladenen Skript an, dann Enter drücken zum Ausführen des Skriptes.\n\n\nscript=r\"/home/USERNAME/Downloads/install_qgis_dependencies_base.py\"; exec(open(script,encoding=\"utf-8\").read()); main([])\n\n\nQGIS schliessen und neustarten.\nStarten Sie die EnMAP-Box: Raster → EnMAP-Box → EnMAP-Box\n\n\n\n\n\n\n\n1.2.4 Sichern des persönlichen Nutzerprofils\nNach dem nun die wichtigsten Einstellungen vorgenommen und im QGIS-Benutzerprofil hinterlegt wurden, ist es sinnvoll dieses für die spätere Verwendung im PC-Pool der HAWK zu sichern. Auf ihren persönlichen Laptops brauchen Sie diesen Schritt nicht durchzuführen.\n\nSichern sie den gesamten Ordner QGIS3 mit Ihren persönlichen Profildaten (C:\\Users\\USERNAME\\AppData\\Roaming\\QGIS\\QGIS3) in ihr persönliches Laufwerk unter U:\\\n\nSollten sie im späteren Verlauf des Kurses ihre Profile wiederherstellen wollen, können sie den Ordner QGIS3 von U:\\ wieder in den QGIS-Profil Ordner C:\\Users\\USERNAME\\AppData\\Roaming\\QGIS\\ kopieren.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Lerneinheit 01: Erste Schritte in QGIS</span>"
+    ]
+  },
+  {
+    "objectID": "uebung01.html#sec-projekt_management",
+    "href": "uebung01.html#sec-projekt_management",
+    "title": "1  Lerneinheit 01: Erste Schritte in QGIS",
+    "section": "1.3 Projekt- und Datenmanagement mit QGIS",
+    "text": "1.3 Projekt- und Datenmanagement mit QGIS\n\n1.3.1 Anlegen einer Ordnerstruktur\nEine gute Ordnerstruktur ist für das Datenmanagement sehr hilfreich. Daher wird empfohlen für jedes Projekt bzw. jede Lerneinheit eine eigene Ordnerstruktur nach einheitlichem Muster anzulegen. Die Struktur könnte so aussehen:\nprojekt_xy/\n├── daten/\n│   └── raster_1.tif\n|   └── raster_2.tif\n├── karten/\n│   └── baumartenkarte.pdf\n└── projekt_XY.qgz\nDiese Ordnerstruktur kann an die eigenen Präferenzen und die Notwendigkeiten im Projekt angepasst werden. Diese Struktur ist vorteilhaft, weil der gesamte Ordner verschoben, kopiert oder mit anderen geteilt werden kann. Dies ist möglich, da die Projektdatei relative Pfade speichert, ausgehend von dem Ordner in dem die *.qgz Datei liegt, also z.B. ./daten/raster_1.tif\n\n\n1.3.2 Anlegen eines neuen QGIS-Projektes\nIn QGIS können einzelne Projekte z.B. eine Lehreinheit als Projekte angelegt und gespeichert werden. Dabei werden sämtliche Einstellungen und Darstellungen (z.B. Kartenlayouts, Symbologien, Layer), Bearbeitungsstand und vieles mehr gespeichert. Das ist vor allem sinnvoll wenn man seine Arbeit unterbrechen und zu einem späteren Zeitpunkt fortsetzen möchte. Die Projekte werden in einer Datei mit der Endung *.qgz gespeichert.\n\n\n\n\n\n\nHinweis\n\n\n\nDie Projektdatei *.qgz enthält nicht die Geodaten, des Projektes. Es werden lediglich die Pfade zu den Dateien mit den Geodaten gespeichert. Beim Laden des Projektes werden die Geodaten an den hinterlegten Datenpfaden gesucht und geladen. Sollten diese nicht mehr an dem Ort gespeichert sein, erscheint in QGIS eine Fehlermeldung. Eine klare Ordnerstruktur kann solche Fehler vermeiden helfen.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Lerneinheit 01: Erste Schritte in QGIS</span>"
+    ]
+  },
+  {
+    "objectID": "uebung02.html",
+    "href": "uebung02.html",
+    "title": "2  Lerneinheit 02: Erstellen eines Ortholuftbildmosaiks in der Revierförsterei Kattenbühl",
+    "section": "",
+    "text": "2.1 Lernziele & Aufgabenstellung\nViele Fernerkundungsdaten werden in Form von Rasterdaten gespeichert, welche in einem regelmäßigen Raster aus Zellen (Pixel) organisiert sind. In jedem Pixel wird genau ein Zahlenwert gespeichert. Typische Dateiformate für Rastergeodaten sind GeoTIFF (*.tif), ArcInfo ASCI (*.ascii), Geopackage (*.gpkg) und ERDAS Imagine (*.img).\nIn der Übung soll der Umgang mit Rasterdaten vorgestellt und geübt werden. Dazu wird für die Niedersächsische Revierförsterei Kattenbühl ein Ortholuftbildmosaik erstellt, mit unterschiedlichen Optionen visualisiert und eine Luftbildkarte ausgegeben. Es wird vorgestellt wie Rasterdaten in QGIS importiert, Eigenschaften von Rasterdaten untersucht und visualisiert werden. Außerdem werden aus einzelnen Kanälen Mehrkanalbilder erstellt und diese dann in einem virtuellen Bildmosaik zusammengeführt.\nLernziele\nDie Studierenden sollen:\nAufgaben",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Lerneinheit 02: Erstellen eines Ortholuftbildmosaiks in der Revierförsterei Kattenbühl</span>"
+    ]
+  },
+  {
+    "objectID": "uebung02.html#lernziele-aufgabenstellung",
+    "href": "uebung02.html#lernziele-aufgabenstellung",
+    "title": "2  Lerneinheit 02: Erstellen eines Ortholuftbildmosaiks in der Revierförsterei Kattenbühl",
+    "section": "",
+    "text": "verschiedene Rasterdatenformate kennenlernen\nRasterdaten in QGIS importieren\nEigenschaften von Rasterdaten in QGIS untersuchen und manipulieren\nMehrkanalbilder und Bildmosaike mithilfe von virtuellen Rastern erstellen\nunterschiedliche Visualisierungsmethoden für Ein- und Mehrkanalrasterbilder nutzen\n\n\n\nImportieren Sie einzelne Kanäle eines Ortholuftbildes und untersuchen sie die Rastereigenschaften\nFügen Sie einzelne Kanäle zu einem virtuellen Mehrkanalbild zusammen\nErstellen Sie ein virtuelles Orthobildmosaik\nErstellen Sie eine Echt- und eine Falschfarben-Darstellung\nErstellen Sie ein Kartenlayout für eine Luftbildkarte",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Lerneinheit 02: Erstellen eines Ortholuftbildmosaiks in der Revierförsterei Kattenbühl</span>"
+    ]
+  },
+  {
+    "objectID": "uebung02.html#anlegen-eine-neuen-qgis-projektes",
+    "href": "uebung02.html#anlegen-eine-neuen-qgis-projektes",
+    "title": "2  Lerneinheit 02: Erstellen eines Ortholuftbildmosaiks in der Revierförsterei Kattenbühl",
+    "section": "2.2 Anlegen eine neuen QGIS-Projektes",
+    "text": "2.2 Anlegen eine neuen QGIS-Projektes\nFolgen sie der Anleitung aus Kapitel 1.3 um eine neue Ordnerstruktur und ein neues QGIS-Projekt für LE02 anzulegen.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Lerneinheit 02: Erstellen eines Ortholuftbildmosaiks in der Revierförsterei Kattenbühl</span>"
+    ]
+  },
+  {
+    "objectID": "uebung02.html#import-der-ortholuftbilder",
+    "href": "uebung02.html#import-der-ortholuftbilder",
+    "title": "2  Lerneinheit 02: Erstellen eines Ortholuftbildmosaiks in der Revierförsterei Kattenbühl",
+    "section": "2.3 Import der Ortholuftbilder",
+    "text": "2.3 Import der Ortholuftbilder\nDie Ortholuftbilder werden als GeoTiff-Dateien getrennt in den einzelnen Bändern (b1, b2, b3, b4) zur Verfügung gestellt. Für die Übung arbeiten wir mit vier Luftbildkacheln á vier Bänder, so dass 16 Einkanal-Raster importiert werden. Um den Import übersichtlich zu gestalten, empfiehlt es sich für jede Kachel zunächst im QGIS Layer-Panel und im raster Ordner des Projektes einen Ordner/ Gruppe für jede Kachel (bild_1, bild_2, …) anzulegen.\nKopieren Sie sich die Daten der Übung - im PC-Pool vom Netzlaufwerk R:\\Lehre\\GOR\\Fuchs\\uebung02 - oder von diesem NextCloud Verzeichnis in ihren persönlichen Projektordner.\nDie einzelnen Rasterdateien können dann entweder per drag und drop vom Windows-Dateimanager in den QGIS Viewer oder über das Import-Menü zu den Layer-Gruppen hinzugefügt werden.\n\nLayer → Datenquellenverwaltung → Raster → File\n\nImportieren sie für jede Luftbildkachel vier Bänder (b1, b2, b3, b4). Nutzen sie anschließend die Layereigenschaften, um folgende Fragen zu beantworten:\n\nFragen:\n\nWieviele Pixel hat ein Band?\nWelche räumliche Auflösung haben die Rasterbilder?\nWelches Koordinatenreferenzsystem haben die Rasterbilder?\nWas ist der kleinste und der größte Zahlenwert der Rasterbilder?",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Lerneinheit 02: Erstellen eines Ortholuftbildmosaiks in der Revierförsterei Kattenbühl</span>"
+    ]
+  },
+  {
+    "objectID": "uebung02.html#sec-mehrkanalbilder",
+    "href": "uebung02.html#sec-mehrkanalbilder",
+    "title": "2  Lerneinheit 02: Erstellen eines Ortholuftbildmosaiks in der Revierförsterei Kattenbühl",
+    "section": "2.4 Erstellen von Mehrkanalbildern",
+    "text": "2.4 Erstellen von Mehrkanalbildern\nNach dem Import der einzelnen Kanäle werden diese in QGIS als Graustufenbilder dargestellt. Damit QGIS diese als Farbbilder darstellen kann, müssen alle Bänder eines Raster zusammengeführt werden. Dafür gibt es unterschiedliche Optionen. Eine Variante ist das Speichern aller Bänder in eine neue Vierkanal-Rasterdatei. In diesem Fall würden wir aber eine Kopie der Daten anlegen und brauchen den doppelten Speicherplatz. Eine effizientere Methode, um das Kopieren der Daten zu vermeiden, sind virtuelle Raster im GDAL-VRT Format (siehe: https://gdal.org/en/stable/drivers/raster/vrt.html). Ein virtuelles Raster ist eine Textdatei im XML-Format, in dem nur die Pfade und Einstellungen der einzelnen Raster hinterlegt sind. QGIS kann diese Textdateien lesen und einzelne Raster dann wie ein Mehrkanalbild verarbeiten.\nErstellen sie für jedes der vier Bänder eine VRT-Datei in dem jeweiligen Bildordner.\n\nRaster →Sonstiges → Virtuelles Raster generieren\n\n\n\n\nAnlegen eines VRT-Rasters\n\n\nIm ersten Schritt werden unter “Eingabelayer” die vier Bänder ausgewählt. Wichtig ist hier das die Reihenfolge der Bänder aufsteigend angezeigt wird (b1, b2, b3, b4). Sollte das nicht der Fall sein, kann die Reihenfolge per drag & drop in dem Menü entsprechend angepasst werden. Da mehrerere Bänder zusammengeführt werden, ist es wichtig, dass die Option “Jeder Datei einen eigenen Kanal zuordnen” aktiviert wird. Unter “Virtuell” wird die Ausgabedatei angegeben. Diese sollte z.B. LE02/raster/bild_1/bild_1_mehrkanal.vrt heißen.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Lerneinheit 02: Erstellen eines Ortholuftbildmosaiks in der Revierförsterei Kattenbühl</span>"
+    ]
+  },
+  {
+    "objectID": "uebung02.html#editieren-der-raster-metadaten",
+    "href": "uebung02.html#editieren-der-raster-metadaten",
+    "title": "2  Lerneinheit 02: Erstellen eines Ortholuftbildmosaiks in der Revierförsterei Kattenbühl",
+    "section": "2.5 Editieren der Raster Metadaten",
+    "text": "2.5 Editieren der Raster Metadaten\nWenn Rasterdaten weitergegeben, visualisiert oder in der EnMAP-Box weiterverarbeitet werden, ist es wichtig korrekte Bandnamen und zentrale Wellenlängen (in der Einheit Nanometer) in den Metadaten zu speichern. In der Werkzeugkiste finden Sie dafür\nVerarbeitung → Werkzeugkiste → EnMAP-Box → Raster → Raster miscellaneous → Edit raster source band properties.\nDa das Modul direkte Änderungen in die Datei einfügt, also keine neue Datei anlegt, sollten Sie die Rasterdatei vorher in QGIS schliessen. Markieren Sie den Rasterlayer-Namen, Rechtsklick → Layer löschen.\n\nGDAL raster source: Wählen Sie die vrt Datei bild_1_mehrkanal.vrt aus.\nBand names:“rot”, “grün”, “blau”, “nir”\nCenter wavelenght values: 665, 560, 490, 850\n\nAuf Starte klicken.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Lerneinheit 02: Erstellen eines Ortholuftbildmosaiks in der Revierförsterei Kattenbühl</span>"
+    ]
+  },
+  {
+    "objectID": "uebung02.html#sec-CIR_darstellung",
+    "href": "uebung02.html#sec-CIR_darstellung",
+    "title": "2  Lerneinheit 02: Erstellen eines Ortholuftbildmosaiks in der Revierförsterei Kattenbühl",
+    "section": "2.6 Echt- und Falschfarben-Darstellungen von Luftbildern",
+    "text": "2.6 Echt- und Falschfarben-Darstellungen von Luftbildern\nNach dem ein Mehrkanalraster als virtuelle Datei angelegt wurde, stellt QGIS diese sofort als Farbbild dar. Dabei nutzt QGIS die Standardeinstellungen für Raster und interpretiert die Bänder wie folgt:\nBand 1: rot; Band 2: grün; Band 3: blau.\nEchtfarben Darstellung\nWenn die spektralen Bereiche der Bänder den primären Farbkanälen zugeordnet werden, also Kanal (Band) 1: rot zum Roten Kanal, Kanal (Band) 2: grün zum grünen Kanal und Kanal (Band) 3: blau zum blauen Kanal wird das Raster in den echten Farben dargestellt. In vorliegenden Fall ist das bereits korrekt und führt automatisch zu einer Echtfarbendarstellung. Dies muss jedoch nicht immer der Fall sein. Daher ist es wichtig, die Zuordnung der Bänder zu den Farben in den Layereigenschaften zu überprüfen. Dazu mit Rechtsklick auf den jeweiligen VRT-Layer:\n\nEigenschaften → Symbolisierung → Darstellungsart → Multikanalfarbe\n\nHier wird angezeigt, welches Band für welchen Farbkanal verwendet wird.\nColor-Infrarot (CIR) Darstellung\nZur Beobachtung von Wäldern und Pflanzen werden häufig Falschfarben Darstellungen gewählt. Sie zeigen nicht die Farben wie sie in der Realität vorgefunden werden, sonden machen besonders Unterschiede in der Vegetation sichtbar. Dazu wird häufig der rote Kanal mit den Reflexionsdaten aus dem Nahen Infrarot Spektrum ersetzt.\nQGIS bietet die Möglichkeit für jeden Layer mehrere Symbolisierungen zu hinterlegen. Dadurch ist es dann möglich sehr einfach zwischen unterschiedlichen Ansichten zu wechseln. Um eine weitere Symbolisierung für einen Layer anzulegen, klicken wir mit der rechten Maustaste auf einen Layer und wählen:\n\nStil → Stil hinzufügen → Name: CIR\n\nAnschließend öffnen wir wieder die Symbolisierung des Layers und wählen in der Darstellungsart Multikanalfarbe für den Roten Farbkanal Band 4: nir, für den Grünen Farbkanal Band 1: rot und den Blauen Farbkanal Band 2: grün. Dadurch wird nun eine Standard CIR-Falschfarben Darstellung angezeigt.\n\nFrage:\n\nWie unterscheiden sich die Echtfarben- und die CIR-Darstellung?\nWelche Objekte können Sie in der CIR-Darstellung besser erkennen, welche schlechter?",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Lerneinheit 02: Erstellen eines Ortholuftbildmosaiks in der Revierförsterei Kattenbühl</span>"
+    ]
+  },
+  {
+    "objectID": "uebung02.html#sec-mosaikieren",
+    "href": "uebung02.html#sec-mosaikieren",
+    "title": "2  Lerneinheit 02: Erstellen eines Ortholuftbildmosaiks in der Revierförsterei Kattenbühl",
+    "section": "2.7 Erstellen eine Ortholuftbildmosaiks",
+    "text": "2.7 Erstellen eine Ortholuftbildmosaiks\nDie Ortholuftbilder werden, wie die meisten Rasterdaten, in sogenannten Kacheln (engl. tiles) z.B. mit einer Größe von 2000 m x 2000 m ausgeliefert. In der Übung haben wir vier solcher Kacheln vorliegen. Zur Abdeckung größerer Gebiete werden meistens mehrere Kacheln benötigt. Das kann sehr aufwendig werden, da die Einstellungen z.B. der Darstellung für jede Kachel einzeln angepasst werden muss. Daher ist es sinnvoll die Kacheln eines zusammenhängenden Gebietes zusammenzuführen. Eine Zusammenstellung mehrerer Bilder, die räumlich benachbart sind, wird in in der Fernerkundung als Bildmosaik bezeichnet. QGIS bietet zwei unterschiedliche Möglichkeiten Bildmosaike zu erstellen.\n\nZusammenführen mehrerer Kacheln und abspeichern in einer neuen GeoTiff-Datei. Dieses hat den Vorteil, dass wir für das jeweilige Gebiet nur noch eine Datei haben. Es gibt bei diesem Vorgehen allerdings Nachteile. Je nach Gebietsgröße werden die Dateien sehr groß was beim Zoomen zu sehr langen Ladezeiten führt. Außerdem würde auch wieder eine Kopie der Daten angelegt, was zu einem größeren Speicherplatzbedarf führt.\nZusammenführen mehrerer Kacheln in einem virtuelles Raster. Anders als in Kapitel 2.4 nutzen wir diese Funktion nun, um benachbarte Mehrkanalbilder zusammenzuführen. Voraussetzung dafür ist, dass die Bilder dasselbe Koordinatenreferenzsystem nutzen, die räumliche Auflösung und die Anzahl der Bänder identisch ist.\n\nZum Erstellen eines VRT-Mosaiks nutzen wir wieder:\n\nRaster →Sonstiges → Virtuelles Raster generieren\n\nDiesmal wählen wir als Eingabelayer die vier virtuellen Mehrkanalbilder (VRTs) die wir bereits erzeugt haben. Als Ausgabe definieren wir das VRT le02_Ortholuftbildmosaik.vrt, welches wir im Rasterordner ablegen.\n\n\n\n\n\n\n\nVorsicht\n\n\n\nDa wir die einzelnen Bilder nebeneinander anordnen wollen wählen wir hier nicht die Option “Jeder Datei einen eigenen Kanal zuordnen”\n\n\nAls Ergebnis haben wir nun eine VRT-Datei, mit der wir gleichzeitig alle Bänder und alle Kacheln darstellen können. Dies ermöglicht es nun auch die Darstellung aller Bilder gleichzeitig und einheitlich anzupassen. Legen sie dazu wie oben beschrieben für das Orthomosaik einen neuen Stil CIR an und stellen sie das Mosaik als CIR-Abbildung dar.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Lerneinheit 02: Erstellen eines Ortholuftbildmosaiks in der Revierförsterei Kattenbühl</span>"
+    ]
+  },
+  {
+    "objectID": "uebung02.html#erstellen-eines-kartenlayouts-zur-ausgabe-einer-luftbildkarte",
+    "href": "uebung02.html#erstellen-eines-kartenlayouts-zur-ausgabe-einer-luftbildkarte",
+    "title": "2  Lerneinheit 02: Erstellen eines Ortholuftbildmosaiks in der Revierförsterei Kattenbühl",
+    "section": "2.8 Erstellen eines Kartenlayouts zur Ausgabe einer Luftbildkarte",
+    "text": "2.8 Erstellen eines Kartenlayouts zur Ausgabe einer Luftbildkarte\nWir können das Orthobildmosaik als Luftbildkarte im Format PDF ausgeben, ein wichtiges Produkt für Übersicht und Orientierung in einem Forstrevier oder zur Erstellung detaillierter Arbeitskarten.\nIn einem QGIS Projekt können mehrere Karten erstellt und gespeichert werden. Zur Verwaltung der verschiedenen Karten wird der Kartenlayout-Manager verwendet. Sie finden dieses im Menü unter Projekt. Hier können sie ein neues Drucklayout °Luftbildkarte” anlegen.\nNachdem Sie ein Kartenlayout im Manager angelegt haben öffnet sich ein neues Fenster mit dem noch leeren Kartenlayout. Um ein erstes Layout zu erstellen gehen wir schrttweise vor:\n1.)  Hinzufügen eines Kartenfelds.\nDazu wählen Sie links das Werkzeug “Karte hinzufügen” und ziehen anschließend in ihrem Layout ein Kartenfeld auf. QGIS stellt danach automatisch die Layer aus dem Hauptfenster dar.\n2.) Hinzufügen eines Titels\nDazu wählen Sie links das Werkzeug “Beschriftung hinzufügen” und ziehen anschließend ein Textfeld oberhalb Ihrer Karte auf. Geben sie dann im Feld rechts unter „Beschriftung“ einen sinnvollen Titel (z.b. Luftbildkarte FoA Heiligenstadt) ein und wählen Sie eine passende Schriftgröße aus.\n3.) Hinzufügen einer Legende\nDazu wählen Sie links das Werkzeug “Legende hinzufügen” aus und ziehen anschließend ein Legendenfeld rechts neben ihren Kartenfeld auf. QGIS übernimmt für die Legende dann automatisch die Symbolisierung aller Layer des Projektes. Wenn Sie rechts unter Legendenelemente die Funktion „Automatisch aktualisieren“ entfernen, können Sie Einträge manuell hinzufügen und entfernen.\n4.) Hinzufügen eine Nordpfeils\nDazu wählen Sie links das Werkzeug “Nordpfeil hinzufügen” und ziehen anschließend ein Fenster für den Nordpfeil auf.\n5.) Koordinatengitter hinzufügen\nUm ein Koordinatengitter hinzuzufügen, selektieren Sie zunächst das Kartenfenster in dem Sie darauf klicken. Anschließend öffnen Sie die Option „Gitter“, die ihnen im rechten Teil unter den Haupteigenschaften des Kartenfelds angezeigt wird. Über das grüne Plus Symbol legen Sie ein neues Gitter an. Anschließend wählen Sie dieses Gitter aus, und klicken auf „Gitter ändern“. Hier ändern wir folgende Optionen:\n\nGittertype: „Nur Rahmen und Beschriftungen“\nIntervall: X=500m, Y=500m\nRahmenstil: „Äußere Markierung“\nKoordinaten zeichnen: „ja“\nKoordinaten nur “links” und “unten”. “Oben und”rechts” deaktivieren\nKoordinatengenauigkeit: 0\n\n6.) Maßstab\nFügen Sie einen graphischen Maßstabsbalken hinzu. Dazu wählen Sie links das Werkzeug “Maßstab hinzufügen” und ziehen anschließend ein Fenster für den Maßstab auf. Über die Eigenschaften dieses Elements können Sie z.B. die Anzahl der Segmente steuern.\n7.) Kartenfeld\nSie sollten der Karte noch weitere Metadaten hinzufügen. Dazu legen Sie, wie beim Titel, ein neues Textfeld an und ergänzen hier ihren Namen, Datum, Quellen, Maßstab und Koordinatenreferenzsystem.\n\n\n\nBeispiel einer Luftbildkarte",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Lerneinheit 02: Erstellen eines Ortholuftbildmosaiks in der Revierförsterei Kattenbühl</span>"
+    ]
+  },
+  {
+    "objectID": "uebung03.html",
+    "href": "uebung03.html",
+    "title": "3  Lerneinheit 03: Beschaffung von Geodaten für den Nordcampus Göttingen",
+    "section": "",
+    "text": "3.1 Lernziele & Aufgabenstellung\nIn der Lerneinheit 02 haben wir vorgestellt, wie Rasterdaten, welche als GeoTIF-Datei auf der Festplatte vorliegen, in ein QGIS-Projekt importiert und dargestellt werden können. Dazu wurden die Rasterdaten über das lokale Netzlaufwerk zur Verfügung gestellt. In der Lerneinheit 03 wir nun gezeigt wie frei verfügbare Raster- und Vektordaten gesucht, beschafft und in QGIS-Projekte eingebunden werden können. Dazu werden die Datendownload Portale der Landesvermessungsämter am Beispiel von Niedersachsen vorgestellt. Wenn größere Gebiete bearbeitete und / oder sehr hohe räumliche Auflösungen verwendet werden, kann dies sehr schnell zu einem hohen Zeitaufwand und Bedarf an lokalem Speicherplatz -und damit verbunden hohen Kosten für die Hardware- führen. Daher werden im GIS-Bereich zunehmende sogenannte Geodatendienste verwendet. Bei diesen Diensten werden die Daten auf zentralen Servern gespeichert und dem Nutzer einzelne Ausschnitte auf Anfrage ausgeliefert. Dieses Vorgehen bietet mehrere Vorteile:\nIn der Übung sollen aktuelle Daten für den Nordcampus, Göttingen beschafft und dargestellt werden. Dazu sollen die unterschiedlichen Angeboten des Open-Data Niedersachsen Portals des LGLN genutzt werden.\nLernziele\nDie Studierenden sollen:\nAufgaben",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Lerneinheit 03: Beschaffung von Geodaten für den Nordcampus Göttingen</span>"
+    ]
+  },
+  {
+    "objectID": "uebung03.html#lernziele-aufgabenstellung",
+    "href": "uebung03.html#lernziele-aufgabenstellung",
+    "title": "3  Lerneinheit 03: Beschaffung von Geodaten für den Nordcampus Göttingen",
+    "section": "",
+    "text": "Nur die in dem jeweiligen Moment notwendigen Daten werden temporär auf dem PC des Nutzers abgelegt\nDie Datenverwaltung erfolgt zentral durch den Betreiber des Geodatendienstes\nAlle Nutzer arbeiten mit einem einheitlichen Datensatz\nAktualisierungen der Daten können einfach an alle Nutzer ausgespielt werden\n\n\n\n\n\ndie Geodatenportale der Landesvermessungen kennenlernen\ndie unterschiedlichen Schnittstellen von Geodatendienste kennenlernen\nRaster- und Vektordaten als Geodatendienst in QGIS importieren\nEigenschaften von Geodatendiensten in QGIS untersuchen\n\n\n\nLaden sie ein aktuelles Luftbild des Nordcampus Göttingen vom Geodatenportal des LGLN herunter und visualisieren sie dies als CIR-Darstellung.\nBinden sie das aktuelle Ortholuftbildmosaik des LGLN als WMS-Service ein.\nFügen sie die aktuelle Flurstückskarten aus Niedersachsen als WFS-Dienst ein.\nFügen sie als Hintergrundkarte die Basemap.de als Vektor-Kacheln hinzu.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Lerneinheit 03: Beschaffung von Geodaten für den Nordcampus Göttingen</span>"
+    ]
+  },
+  {
+    "objectID": "uebung03.html#aufgabe-0-anlegen-eine-neuen-qgis-projektes",
+    "href": "uebung03.html#aufgabe-0-anlegen-eine-neuen-qgis-projektes",
+    "title": "3  Lerneinheit 03: Beschaffung von Geodaten für den Nordcampus Göttingen",
+    "section": "3.2 Aufgabe 0: Anlegen eine neuen QGIS-Projektes",
+    "text": "3.2 Aufgabe 0: Anlegen eine neuen QGIS-Projektes\nFolgen sie der Anleitung aus Kapitel 1.3 um eine neue Ordnerstruktur und ein neues QGIS-Projekt für LE03 anzulegen.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Lerneinheit 03: Beschaffung von Geodaten für den Nordcampus Göttingen</span>"
+    ]
+  },
+  {
+    "objectID": "uebung03.html#aufgabe-01-download-und-cir-darstellung-eines-ortholuftbildes-des-nordcampus",
+    "href": "uebung03.html#aufgabe-01-download-und-cir-darstellung-eines-ortholuftbildes-des-nordcampus",
+    "title": "3  Lerneinheit 03: Beschaffung von Geodaten für den Nordcampus Göttingen",
+    "section": "3.3 Aufgabe 01: Download und CIR-Darstellung eines Ortholuftbildes des Nordcampus",
+    "text": "3.3 Aufgabe 01: Download und CIR-Darstellung eines Ortholuftbildes des Nordcampus\nDas Landesamt für Geoinformation und Landesvermessung Niedersachsen (LGLN) stellt über die OpenGeoDate.NI Plattform offene amtliche Geodaten kostenfrei zur Verfügung. Ein Produkt sind die Digitalen Orthophotos (DOP). Diese können im Viewer des Portals angezeigt und ausgewählt werden.\n\n\n\nScreenshot des LGLN OpenData-Viewers mit der hervorgehobenen Kachel des Nordcampus\n\n\nNutzen sie den LGLN OpenData-Viewer um die Kachel (325665712), die dieses Gebiet abdeckt auszuwählen und das RGBI Bild herunterzuladen. Laden sie zusätzlich die Metadaten als XML-Datei herunter und speichern sie beides in ihrem Projektordner unter “daten”. Importieren sie die GeoTIF-Datei als Rasterbild in ihr QGIS-Projekt und stellen sie es als CIR-Falschfarbenbild dar (siehe dazu auch LE02 Kapitel 2.6 . Nutzen sie anschließend das Metadatenfile um folgende Fragen zu beantworten:\n\nFragen:\n\nAn welchem Tag wurde die Luftbildaufnahme gemacht?\nWelche Kamera wurde für die Luftbildaufnahme verwendet?\nWelches Koordinatenreferenzsystem haben die Rasterbilder?\nWelche räumliche Auflösung haben die Bilder?\nWelche radiometrische Auflösung haben die Bilder?\nWelche spektrale Auflösung haben die Bilder?",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Lerneinheit 03: Beschaffung von Geodaten für den Nordcampus Göttingen</span>"
+    ]
+  },
+  {
+    "objectID": "uebung03.html#sec-wms",
+    "href": "uebung03.html#sec-wms",
+    "title": "3  Lerneinheit 03: Beschaffung von Geodaten für den Nordcampus Göttingen",
+    "section": "3.4 Aufgabe 02: Einbinden von WMS-Diensten zur Darstellung von Ortholuftbildern",
+    "text": "3.4 Aufgabe 02: Einbinden von WMS-Diensten zur Darstellung von Ortholuftbildern\nWie sie in dem OpenData-Viewer erkennen können, bräuchte es zur vollständigen Abdeckung des gesamten Göttinger Stadtwaldes über 35 Ortholuftbildkacheln, was einem Downloadvolumen von ca. \\(35*500=1,7GB\\) entsprechen würde. Für eine reine Darstellung z.B. als Hintergrundkarte oder zur Abgrenzung der Waldgrenzen ist das ein erheblicher Aufwand.\nDas LGLN-OpenData Portal bietet neben dem Downloaddienst auch verschiedene Geodatendienste an. Für die reine Darstellung der Bilder kann ein sogenannter Web Mapping Service (WMS) genutzt werden. WMS-Dienste übertragen bereits gerendertet Bilder. Das bedeutet, dass die original Daten auf dem Server verbleiben und dort alle Einstellungen bzgl. der Symbolisierung und der Farbdarstellung zentral festgelegt werden. Der Nutzer erhält dann bereits gerenderte Bildausschnitte und kann die Darstellung z.B. der einzelnen Farbkanäle nicht mehr ändern. Der Vorteil ist, dass so wesentlich kleinere Datenmengen übertragen werden müssen.\nZum einbinden von Geodatendiensten wird zunächst die URL mit den Geodatendienst benötigt. Sie finden diese URL unter WMS auf der Beschreibung der Ortholuftbildprodukte auf der LGNL-Seite.\nAnschließend nutzen sie in QGIS die Datenquellenverwaltung:\n\nLayer → Datenquellenverwaltung → WMS → neu\n\n\n\n\nEinbinden des LGLN WMS-Dienst mit aktuellen Luftbildern\n\n\nNachdem die Verbindung angelegt wurde, kann QGIS sich mit dem Server verbinden und die Layer können ausgewählt und dem Projekt hinzugefügt werden.\n \n\nFrage:\nVergleichen sie die Pixelwerte eines ausgewählten Pixels in dem WMS-DOP und dem Geotiff Layer.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Lerneinheit 03: Beschaffung von Geodaten für den Nordcampus Göttingen</span>"
+    ]
+  },
+  {
+    "objectID": "uebung03.html#aufgabe-03-einbinden-der-flurstücksgrenzen-als-wfs-dienste",
+    "href": "uebung03.html#aufgabe-03-einbinden-der-flurstücksgrenzen-als-wfs-dienste",
+    "title": "3  Lerneinheit 03: Beschaffung von Geodaten für den Nordcampus Göttingen",
+    "section": "3.5 Aufgabe 03: Einbinden der Flurstücksgrenzen als WFS-Dienste",
+    "text": "3.5 Aufgabe 03: Einbinden der Flurstücksgrenzen als WFS-Dienste\nNachdem Einbinden der Ortholuftbilder, sollen weitere Geodaten in Form von Vektordaten in das Projekt eingebunden werden. Als Beispiel möchten wir die amtl. Flurstückgrenzen aus dem Amtlichen Liegenschafts Kataster Informationssystems (ALKIS) nutzen. Diese Daten werden vom LGLN als Web Feature Service (WFS) bereitgestellt. Im Gegensatz zu den WMS-Diensten werden bei WFS keine vorher gerenderten Bilder, sondern die originalen Vektordaten übertragen. Das ermöglicht es den Stil anzupassen und eigenen Geographische Prozessierungen z.B. Puffer, Verschneidungen etc. durchzuführen.\nAuf der ALKIS-Produktseite wird das Produkt vorgestellt. Hier sind auch die URLs für den WFS-Service zu finden. Für die Übung reicht der vereinfachte WFS vollkommen aus.\nZum Einbinden des WFS gehen wir wie folgt vor:\n\nLayer → Datenquellenverwaltung → WFS / OGC API → neu\n\nIn dem Menü kann dann die korrekte URL des Dienstes eingetragen werden\n\n\n\nEinbinden eines WFS-Dienstes\n\n\nNachdem die Verbindung angelegt wurde kann QGIS sich mit dem WFS-Server verbinden und die zur Verfügung stehen den Layer abrufen",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Lerneinheit 03: Beschaffung von Geodaten für den Nordcampus Göttingen</span>"
+    ]
+  },
+  {
+    "objectID": "uebung03.html#aufgabe-04-hintergrundkarte-als-vektor-kacheln",
+    "href": "uebung03.html#aufgabe-04-hintergrundkarte-als-vektor-kacheln",
+    "title": "3  Lerneinheit 03: Beschaffung von Geodaten für den Nordcampus Göttingen",
+    "section": "3.6 Aufgabe 04: Hintergrundkarte als Vektor-Kacheln",
+    "text": "3.6 Aufgabe 04: Hintergrundkarte als Vektor-Kacheln\nAls Hintergrund Karten wollen wir einen zusätzlichen Geodatendienst in Form von Vektor-Kacheln nutzen. Basemap ist eine Kartengrundlage die auf amtlichen Daten basiert und kostenfrei von der Arbeitsgemeinschaft der Vermessungsverwaltungen der Länder der Bundesrepublik Deutschland (AdV) zur Verfügung gestellt wird. Um diese zu verwenden kann die Verbindungseinstellung per XML-Datei in QGIS importiert werden. Laden sie sich dazu folgende XML-Datei herunter und speichern sie die Datei lokal auf ihrem Rechner:\nhttps://basemap.de/data/produkte/web_vektor/sonstiges/basemap_de_Web_Vektor_qgis_connection.xml\nAnschließend nutzen sie die XML-Datei um die Verbindung anzulegen:\n\nLayer → Datenquellenverwaltung → Vektorkachel -&gt; laden\n\nEs wird eine neue Datenquelle “basemap.de Farbe” angelegt, die dem Projekt hinzugefügt werden kann.\nhttps://basemap.de/produkte-und-dienste/web-vektor/",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Lerneinheit 03: Beschaffung von Geodaten für den Nordcampus Göttingen</span>"
+    ]
+  },
+  {
+    "objectID": "uebung03.html#aufgabe-05-sicher-des-nutzerprofils",
+    "href": "uebung03.html#aufgabe-05-sicher-des-nutzerprofils",
+    "title": "3  Lerneinheit 03: Beschaffung von Geodaten für den Nordcampus Göttingen",
+    "section": "3.7 Aufgabe 05: Sicher des Nutzerprofils",
+    "text": "3.7 Aufgabe 05: Sicher des Nutzerprofils\nSie haben nun mehrere neue Datenquellen angelegt. QGIS speichert diese Datenquellen in ihrem Nutzerprofil. Beim nächsten Start von QGIS können diese Quellen wieder verwendet werden. Daher ist jetzt ein guter Zeitpunkt die Kopie ihres Nutzerprofils erneut zu sichern. Folgen Sie dazu der Anleitung in LE01 Kapitel 1.2.4",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Lerneinheit 03: Beschaffung von Geodaten für den Nordcampus Göttingen</span>"
+    ]
+  },
+  {
+    "objectID": "uebung04.html",
+    "href": "uebung04.html",
+    "title": "4  Lerneinheit 04: Erstellung einer Satellitenbildkarte des Nationalpark Harz",
+    "section": "",
+    "text": "4.1 Lernziele & Aufgabenstellung\nSatellitenbilder stellen eine wichtige Grundlage in Fernerkundungsprojekten dar. Das Copernicus-Programm der Europäischen Union betreibt eine Flotte von Erdbeobachtungssatelliten, die zunehmend im forstlichen Monitoring verwendet werden. In dieser Einheit werden wir das Sentinel-2 Satellitensystem vorstellen und die Eigenschaften der verfügbaren Produkte diskutieren. Dazu soll eine Satellitenbildkarte des Nationalpark Harz erstellt werden. Die Grenzen des NP Harz sollen für die Internet-Präsenz auf aktuellen Satellitenbildkarten dargestellt werden. Diese können auch z.B. als Grundlage für die Planung von Feldaufnahmen oder für die visuelle Erfassung einzelner Waldteile dienen.\nLernziele\nDie Studierenden sollen:\nAufgaben",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Lerneinheit 04: Erstellung einer Satellitenbildkarte des Nationalpark Harz</span>"
+    ]
+  },
+  {
+    "objectID": "uebung04.html#lernziele-aufgabenstellung",
+    "href": "uebung04.html#lernziele-aufgabenstellung",
+    "title": "4  Lerneinheit 04: Erstellung einer Satellitenbildkarte des Nationalpark Harz",
+    "section": "",
+    "text": "den Dataspace des Copernicus-Programms der Europäischen Raumfahrt Agentur (ESA) kennen lernen\nlernen nach Sentinel-2 Satellitenbilder für bestimmte Regionen und Zeitpunkte zu suchen und herunterzuladen\ndie Ordnerstrukturen von Sentinel-2 Datenprodukten kennen lernen und die Satellitenbilder in QGIS importieren können.\nRasterdaten auf Untersuchungsgebiete zuschneiden können.\n\n\n\nSuchen sie im Copernicus Dataspace nach einer geeigneten Sentinel-2 Aufnahme aus dem 06-2025 und laden sie diese S2-Kachel herunter.\nUntersuchen sie die Ordnerstruktur des Satellitenproduktes und importieren sie die Bänder B02, B03, B04 und B08 mit einer räumlichen Auflösung von 10 m.\nErstellen Sie ein CIR-Satellitenbildmosaik des NP-Harzes\nSchneiden Sie das Satellitenbildmosaik auf die Außengrenzen des NP Harz +1000m Pufffer zu und maskieren sie alle Werte außerhalb des Puffers.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Lerneinheit 04: Erstellung einer Satellitenbildkarte des Nationalpark Harz</span>"
+    ]
+  },
+  {
+    "objectID": "uebung04.html#aufgabe-0-anlegen-eine-neuen-qgis-projektes",
+    "href": "uebung04.html#aufgabe-0-anlegen-eine-neuen-qgis-projektes",
+    "title": "4  Lerneinheit 04: Erstellung einer Satellitenbildkarte des Nationalpark Harz",
+    "section": "4.2 Aufgabe 0: Anlegen eine neuen QGIS-Projektes",
+    "text": "4.2 Aufgabe 0: Anlegen eine neuen QGIS-Projektes\nFolgen sie der Anleitung aus LE01 Kapitel 1.3 um eine neue Ordnerstruktur und ein neues QGIS-Projekt für LE04 anzulegen.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Lerneinheit 04: Erstellung einer Satellitenbildkarte des Nationalpark Harz</span>"
+    ]
+  },
+  {
+    "objectID": "uebung04.html#aufgabe-01-recherche-und-download-eines-aktuellen-sentinel-2-satellitenbildes",
+    "href": "uebung04.html#aufgabe-01-recherche-und-download-eines-aktuellen-sentinel-2-satellitenbildes",
+    "title": "4  Lerneinheit 04: Erstellung einer Satellitenbildkarte des Nationalpark Harz",
+    "section": "4.3 Aufgabe 01: Recherche und Download eines aktuellen Sentinel-2 Satellitenbildes",
+    "text": "4.3 Aufgabe 01: Recherche und Download eines aktuellen Sentinel-2 Satellitenbildes\nDie Europäische Raumfahrt Agentur (ESA) stellt das gesamte Archiv der Copernicus Daten kostenfrei als offenen Datensatz zur Verfügung. Zur Suche und für den Download solcher Daten wird das online Datenportal https://dataspace.copernicus.eu/ betrieben. Für die Nutzung des Portals ist eine einmalige kostenfreie Registrierung notwendig um einen Nutzernamen und ein Passwort zu erhalten.\nNach der erfolgreichen Registrierung kann ein Login auf der Homepage erfolgen. Für die Suche nach Daten wird der Copernicus-Browser unter folgender URL angeboten:\nhttps://browser.dataspace.copernicus.eu\nDer Browser bietet umfangreiche Möglichkeiten nach Geodatenprodukten zu suchen.\nFestlegen der Area of Interest (AOI)\nDazu kann eine Geometrien des Untersuchungsgebietes verwendet werden. Als mögliches Datenformat für die Definition der Geometrie akzeptiert der Copernicus-Browser GeoJSON. Das ist ein Text-basiertes Format zum speichern von Vektordaten (siehe auch https://de.wikipedia.org/wiki/GeoJSON). Für die Übung soll die Außengrenze des NP-Harz genutzt werden. Das entsprechende GeoJSON kann hier heruntergeladen werden:\nhttps://cloud.hawk.de/index.php/s/2Zg8raN2qsHMyZf\nSpeichern sie diese Datei in ihrem Projektordner im Unterordner “daten”. Diese Datei kann sowohl mit QGIS als auch mit einem Texteditor (z.B. Editor, WordPad, Notepad++) geöffnet werden. Öffen sie die Datei in einem Texteditor und kopieren sie alle Zeilen des GeoJSON-Datei.\nIm Copernicus-Browser kann nun eine Area of Interest (AOI) mit diesen Informationen angelegt werden. Dazu rechts oben auf das Polygonsymbol klicken und den Upload Icon auswählen. In das Textfeld des Dialogs den kopierten Inhalte des GeoJSON einfügen.\n\n\n\nUpload der Gebietsgrenzen als GeoJSON in den Copernicus-Browser.\n\n\nNach dem erfolgreichen Upload werden die Außengrenzen des Nationalparks Harz im Browser angezeigt.\nAuswahl und Download der gewünschten Produkte\nAuf der linken Seite des Browsers können die gesuchten Produkte spezifiziert werden. In der Lerneinheit arbeiten wir mit Produkten des Sentinel-2 Systems. Zusätzlich können Filter gesetzt werden:\n\nSensor: MSI (Multispectral Instrument)\nCloud Cover: &lt;10 %\nProdukttyp: L2A\n\nIm Abschnitt “Time Range” kann festgelegt werden, in welchem Zeitraum Bilder gesucht werden. Für die Übung möchten wir eine Aufnahme aus dem Juni 2025 suchen und setzen daher folgende Werte:\nTime Range:\n\nFrom: 2025-06-01\nUntil: 2025-06-30\n\nNachdem die Suche gestartet wurde wird eine Ergebnisliste angezeigt die alle Aufnahmen, welche unseren Kriterien entsprechen, enthält. Aufgrund der Aufteilung der S2-Kacheln deckt keine der Aufnahmen den gesamten Bereich des Nationalparks ab. Für die Übung wählen wir daher die beiden Kacheln vom 12.6.2025 welche den Nationalpark abdecken:\n\nS2B_MSIL2A_20250612T102559_N0511_R108_T32UNC_20250612T131505.SAFE\nS2B_MSIL2A_20250612T102559_N0511_R108_T32UPC_20250612T131505.SAFE\n\nWählen sie diese Aufnahmen aus und beantworten sie mithilfe des Copernicus-Browsers folgende Fragen:\n\nFragen:\n\nUm welche Uhrzeit wurde die Aufnahme gemacht?\nWie hoch ist der Wolkenanteil der gesamten S2-Kachel?\nWelcher der drei Sentinel-2 Satelliten hat die Aufnahme gemacht?\nWelche Dateigröße hat eine der beiden S2-Kacheln?\n\n\nLaden sie anschließend jeweils die gesamte Szene als Datei herunter und speicher sie die ZIP-Datei in ihrem Projektordner unter “daten”.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Lerneinheit 04: Erstellung einer Satellitenbildkarte des Nationalpark Harz</span>"
+    ]
+  },
+  {
+    "objectID": "uebung04.html#aufgabe-02-import-der-satellitendaten-in-qgis",
+    "href": "uebung04.html#aufgabe-02-import-der-satellitendaten-in-qgis",
+    "title": "4  Lerneinheit 04: Erstellung einer Satellitenbildkarte des Nationalpark Harz",
+    "section": "4.4 Aufgabe 02: Import der Satellitendaten in QGIS",
+    "text": "4.4 Aufgabe 02: Import der Satellitendaten in QGIS\nDie Satellitenprodukte werden von der ESA in einer standardisierten Struktur gespeichert und ausgeliefert. Eine detailierte Beschreibung der Produkte finden sie in der Dokumentation unter: https://sentiwiki.copernicus.eu/web/s2-products. Nach dem Entpacken der ZIP-Datei finden sie folgende Ordnerstruktur:\nS2B_MSIL2A_20250612T102559_N0511_R108_T32UNC_20250612T131505.SAFE/\n├── DATASTRIP/\n│   └── DATASTRIP/\n|   └── DS_2BPS_20250612T131505_S20250612T103519/\n├── GRANULE/\n│   └── L2A_T32UNC_20250612T103519\n|   |    └──AUX_DATA\n|   |    └──IMG_DATA\n|   |    |   └──R10m \n|   |    |   |   └──T32UNC_20250612T102559_AOT_10m.jp2\n|   |    |   |   └──T32UNC_20250612T102559_B02_10m.jp2\n|   |    |   |   └──T32UNC_20250612T102559_B03_10m.jp2\n|   |    |   |   └──T32UNC_20250612T102559_B04_10m.jp2\n|   |    |   |   └──T32UNC_20250612T102559_B08_10m.jp2\n|   |    |   |   └──T32UNC_20250612T102559_TCI_10m.jp2\n|   |    |   |   └──T32UNC_20250612T102559_WVP_10m.jp2\n|   |    |   └──R20m \n|   |    |   └──R60m \n|   |    └──QI_DATA\n|   &lt;    └──MTD_TL.xml\n├── HTML/\n├── rep_Info/\n├── inspire.xml\n├── manifest.safe\n├── MTD_MSIL2A.xml\n├── S2B_MSIL2A_20250612T102559_N0511_R108_T32UNC_20250612T131505-ql.jpg  \n\n\n\n\n\n\nVorsicht\n\n\n\nIn einigen Fällen kommt es beim Entpacken zur Fehlermeldung “Dateiname zu lang”. In diesem Fall benennen sie die beiden ZIP-Ordner vor dem Entpacken in “bild_1” und “bild_2” um.\n\n\nFügen sie die Bänder B02, B03,B04 und B08 mit einer räumlichen Auflösung von 10m zu ihrem QGIS-Projekt hinzu.\n\nOrdnen sie die Bandnummern des Sentinel-2 MSI den Spektralbereichen zu (z.B. rot):\nB02 =\nB03 =\nB04 =\nB08 =",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Lerneinheit 04: Erstellung einer Satellitenbildkarte des Nationalpark Harz</span>"
+    ]
+  },
+  {
+    "objectID": "uebung04.html#aufgabe-03-erstellen-eines-cir-falschfarbenbildes",
+    "href": "uebung04.html#aufgabe-03-erstellen-eines-cir-falschfarbenbildes",
+    "title": "4  Lerneinheit 04: Erstellung einer Satellitenbildkarte des Nationalpark Harz",
+    "section": "4.5 Aufgabe 03: Erstellen eines CIR-Falschfarbenbildes",
+    "text": "4.5 Aufgabe 03: Erstellen eines CIR-Falschfarbenbildes\nNachdem Inport der einzelnen Bänder werden diese als Graustufenbilder dargestellt. Um eine Farbdarstellung zur ermöglichen, müssen die Bänder als Mehrkanalfarbild zusammengestellt werden. Siehe auch LE02 Kapitel 2.4. Erstellen sie für beide Kacheln ein virtuelles Mehrkanalraster und speichern sie diese unter:\n\nS2B_MSIL2A_20250612T102559_N0511_R108_T32UNC_20250612T131505.vrt\nS2B_MSIL2A_20250612T102559_N0511_R108_T32UPC_20250612T131505.vrt\n\nErstellen sie anschließend ein virtuellles Satellitenbildmosaik und stellen sie es in QGIS als CIR-Bild dar. Folgen sie dazu auch der Anleitung aus der LE02 Kapitel 2.7.\n\nVergleichen sie die CIR-Darstellung innerhalb und außerhalb des Nationalparks:\n1.) Welche Unterschiede in den Farben/Reflexion können sie feststellen?\n2.) Wie interpretieren Sie diese Unterschiede im Bezug auf die Bewirtschaftungskonzepte der beiden Betriebe?\nZur Beantwortung der 2. Frage ist es hilfreich das aktuelle DOP20 Luftbild der LGLN einzubinden. Siehe dazu auch Kapitel 3.4 in LE03.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Lerneinheit 04: Erstellung einer Satellitenbildkarte des Nationalpark Harz</span>"
+    ]
+  },
+  {
+    "objectID": "uebung04.html#sec-zuschneiden",
+    "href": "uebung04.html#sec-zuschneiden",
+    "title": "4  Lerneinheit 04: Erstellung einer Satellitenbildkarte des Nationalpark Harz",
+    "section": "4.6 Aufgabe 04: Zuschneiden des Satellitenbildmosaiks",
+    "text": "4.6 Aufgabe 04: Zuschneiden des Satellitenbildmosaiks\nDie beide original S2-Kacheln decken ca. 100 x 100km ab. Der Bereich ist also deutlich größer als der gesamte Harz. Um diesen Bereich zu verkleiner sollen die Satellitenbilder auf den Nationalpark zugeschnitten werden. Um die Grenzen trotzdem gut darstellen zu können, so ein Puffer von 1000 m um die Außengrenzen des Parks gelegt werden.\nAußengrenze Puffern\nSpeichern sie das GeoJSON der Nationalparkgrenze als Geopackage in Unterordner “daten” ab. Achten sie dabei darauf das Koordinatenbezugssystem (kbs) auf EPSG:25832 zu stellen. Führen sie anschließend einen Puffer von 1000 m durch.\nBild zuschneiden und maskieren\nZum Maskieren und zuschneiden nutzen Sie anschließend die Funktion:\n\nRaster →Extraktion → Raster auf Layermaske zuschneiden\n\nSpeichern sie das neue Raster unter dem Namen NP_Harz_2025_06_12 als *tif im Unterordner “daten” ab und laden sie die Satellitenbildkarte als CIR-Falschfarbenbild in QGIS. Überlagern sie das Bild mit den originalen Außengrenzen des Nationalparks.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Lerneinheit 04: Erstellung einer Satellitenbildkarte des Nationalpark Harz</span>"
+    ]
+  },
+  {
+    "objectID": "uebung04.html#aufgabe-05-projekt-bereinigen-und-sichern",
+    "href": "uebung04.html#aufgabe-05-projekt-bereinigen-und-sichern",
+    "title": "4  Lerneinheit 04: Erstellung einer Satellitenbildkarte des Nationalpark Harz",
+    "section": "4.7 Aufgabe 05: Projekt bereinigen und sichern",
+    "text": "4.7 Aufgabe 05: Projekt bereinigen und sichern\nNachdem wir das Satellitenbild mosaikiert und zugeschnitten haben können wir die original Satellitenbilder aus dem Projekt entfernen und auch aus dem Ordner “daten” löschen. Sie brauchen nur die Geopackages und die Datei NP_Harz_2025_06_12.tif behalten. Speichern sie dann das QGIS-Projekt, schließen sie QGIS und kopieren sie den Projektordner von D: in Ihr persönliches Laufwerk.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Lerneinheit 04: Erstellung einer Satellitenbildkarte des Nationalpark Harz</span>"
+    ]
+  },
+  {
+    "objectID": "uebung05.html",
+    "href": "uebung05.html",
+    "title": "5  Lerneinheit 05: Aktualisierung der Waldeinteilung auf Basis von Ortholuftbildern",
+    "section": "",
+    "text": "5.1 Lernziele & Aufgabenstellung\nAufgrund der langanhaltenden und ausgeprägten Trockenheit in den Jahren 2017 und 2018 ist es in vielen Waldbeständen zu Schäden gekommen. Davon betroffen ist auch das Forstamt Heiligenstadt in Thüringen. Im Rahmen der regelmäßigen Forsteinrichtung werden die aktuellen Bestandesgrenzen und die Waldeinteilung mithilfe von Luftbildern und im Gelände überprüft. Aufgrund der Schäden haben sich im FoA Heiligenstadt - gegenüber der letzten Einrichtung im Jahr 2012- einige Änderungen in der Bestockung der Bestände ergeben. In der Übung sollen anhand von aktuellen Luftbildern diese Änderungen erfassen und die Waldeinteilung des Forstbetriebes aktualisieren.\nLernziele\nDie Studierenden sollen:\nAufgaben",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Lerneinheit 05: Aktualisierung der Waldeinteilung auf Basis von Ortholuftbildern</span>"
+    ]
+  },
+  {
+    "objectID": "uebung05.html#lernziele-aufgabenstellung",
+    "href": "uebung05.html#lernziele-aufgabenstellung",
+    "title": "5  Lerneinheit 05: Aktualisierung der Waldeinteilung auf Basis von Ortholuftbildern",
+    "section": "",
+    "text": "Passende Luftbilder des FoA Heiligenstadt in Thüringen beschaffen\nPrinzipien des Digitalisierens von Geoobjekten kennen\nFortgeschrittene Editierfunktionen Nutzen um die Waldeinteilung unter Einhaltung einer sauberen Vektortopologie zu aktualisieren\n\n\n\nBeschaffen sie CIR-Ortholuftbilder von Geoportal Thüringen\nBeschaffen sie die Waldeinteilung von Geoportal und filtern Sie dieses auf das FoA Heilligenstadt\nBeschaffen Sie Informationen zu Waldschäden\nErstellen Sie auf Basis dieser Informationen eine aktualisierte Waldeinteilung",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Lerneinheit 05: Aktualisierung der Waldeinteilung auf Basis von Ortholuftbildern</span>"
+    ]
+  },
+  {
+    "objectID": "uebung05.html#aufgabe-0-anlegen-eine-neuen-qgis-projektes",
+    "href": "uebung05.html#aufgabe-0-anlegen-eine-neuen-qgis-projektes",
+    "title": "5  Lerneinheit 05: Aktualisierung der Waldeinteilung auf Basis von Ortholuftbildern",
+    "section": "5.2 Aufgabe 0: Anlegen eine neuen QGIS-Projektes",
+    "text": "5.2 Aufgabe 0: Anlegen eine neuen QGIS-Projektes\nFolgen sie der Anleitung aus LE01 Kapitel 1.3 um eine neue Ordnerstruktur und ein neues QGIS-Projekt für LE05 anzulegen. In der Übung bietet es sich an den Ordner “daten” weiter in die Unterordner “vektor” und “raster” zu unterteilen.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Lerneinheit 05: Aktualisierung der Waldeinteilung auf Basis von Ortholuftbildern</span>"
+    ]
+  },
+  {
+    "objectID": "uebung05.html#sec-le05_download",
+    "href": "uebung05.html#sec-le05_download",
+    "title": "5  Lerneinheit 05: Aktualisierung der Waldeinteilung auf Basis von Ortholuftbildern",
+    "section": "5.3 Aufgabe 01: Recherche und Download aktueller Ortholuftbilder",
+    "text": "5.3 Aufgabe 01: Recherche und Download aktueller Ortholuftbilder\nIm ersten Schritt laden wir aktuelle Luftbilder vom Geoportal Thüringen unter folgendemLink herunter:\nhttps://geoportal.thueringen.de/gdi-th/download-offene-geodaten/download-luftbilder-und-orthophotos\nDer Teil des FoA, den wir bearbeiten möchten, wird durch folgende Kacheln abgedeckt:\n\n32580_5691\n32580_5692\n32581_5691\n32581_5692\n\nFür diese Kacheln liegen digitale Orthophotos (DOP) aus einer Befliegung vom 28.4.2021 vor. Die Waldeinteilung die momentan vorliegt fand zum Stichtag 1.1.2012 statt. Insofern wäre eine Befliegung aus dem Jahr 2022 im zehnjährigen Rhythmus. Trotz der Abweichung von einem Jahr zum nächsten Stichtag (1.1.2022) sind die Daten für die Aktualisierung der Waldeinteilung geeignet.\n\nNach dem Download können sie die ZIP-Ordner entpacken und die vier Luftbilder in den Ordner ./daten/raster kopieren. Nach dem erfolgreichen Entpacken können die ZIP-Ordner aus dem Projektverzeichnis gelöscht werden.\nImportieren sie die Ortholuftbilder und erzeugen sie eine CIR-Falschfarbendarstellung (siehe auch LE02 Kapitel 2.6).\n\n\n\n\n\n\nTipp\n\n\n\nStil kopieren\nMit den Funktionen „Stil kopieren“/“Stil einfügen“ können sie die Symbolisierung von einem Layer auf den anderen übertragen.\n\n\n\nFragen:\n\nAn welchem Tag wurden die Luftbildaufnahmen gemacht?\nIn welchem Koordinatenbezugssystem liegen die Ortholuftbilder vor?",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Lerneinheit 05: Aktualisierung der Waldeinteilung auf Basis von Ortholuftbildern</span>"
+    ]
+  },
+  {
+    "objectID": "uebung05.html#sec-le05_filter",
+    "href": "uebung05.html#sec-le05_filter",
+    "title": "5  Lerneinheit 05: Aktualisierung der Waldeinteilung auf Basis von Ortholuftbildern",
+    "section": "5.4 Aufgabe 02: Import und Filterung der bestehenden Waldeinteilung",
+    "text": "5.4 Aufgabe 02: Import und Filterung der bestehenden Waldeinteilung\nDer Landesbetrieb ThüringenForst stellt umfangreiche forstliche Geodaten kostenfrei zur Verfügung. Unter anderem werden Daten zur Waldeinteilung und Bestockung zur Verfügung gestellt, die wir in der Übung verwenden wollen. Diese Daten können im ESRI-Shapefile Format unter folgendem Link für ganz Thüringen heruntergeladen werden:\nhttps://geomis.geoportal-th.de/geonetwork/srv/ger/catalog.search#/metadata/1f690892-d1c3-436a-819e-a26d207e17d7\nEntpacken sie die Dateien dieses shapefiles in den Ordner “../daten/vektor/” und fügen sie die Waldeinteilung in das QGIS-Projekt ein.\nFür die Übung beschränken wir uns auf die Auswertung folgende Abteilungen des FoA Heiligenstadt (55):\nAbt. 24, 25, 26, 27, 29, 30, 32.\nDaher werden die Vektordatensätze entsprechend ausgewählt und gefiltert. QGIS bietet für die Selektion & Filterung unterschiedliche Werkzeuge an. In der Übung verwenden wir das „Filter“ Werkzeug. Mit diesem Werkzeug können Vektordaten über ihre Attribute gefiltert werden. Als Syntax für den Filteraufruf wird die Datenbankprogrammiersprache Structured Query Language (SQL) verwendet. Da wir die Auswertung auf oben genannte Abt. beschränken wollen, können wir folgenden SQL-Befehl für die Filterung verwenden:\n\"FOA\"=55 AND \"ABT\" IN ('24','25','26','27','28','29','30','32')\nZur Aktivierung der Filterfunktion klicken wir im Layer-Panel rechts auf unser Layer „Baumarten“ und wählen die Option „Filter“. In dem sich öffnenen Fenster können wir unten unter „Datenanbieterspezifischer Filterausdruck“ den oben genannten SQL Filterausdruck eintragen. Anschließend können sie über die Funktion „Testen“ überprüfen, ob der Filter funktioniert. Es sollten 60 Zeilen ausgegeben werden. Ist dies der Fall aktivieren wir den neuen Filter mit „o.k“.\nFür die spätere Bearbeitung der Geometrien legen wir uns eine Kopie der gefilterten Bestände an und speichern diese im Geopackage Format ab. Dazu klicken wir im Layer-Panel rechts auf den Layer „Baumarten“ und wählen die Funktion „Export“ &gt; „Objekte speichern als“. Wir speichern die Objekte als Geopackage im Ordner „…/vektor/“ unter dem Namen „uebung05.gpkg“ ab und nennen den Layer „Waldeinteilung“.\n\nFür die weitere Bearbeitung soll die Darstellung der Waldeinteilung so angepasst werden, dass eine Aktualisierung durch die visuelle Interpretation erfolgen kann. Dazu sollen zunächst die Bestandesgrenzen als kontrastreiche Linien vor dem CIR-Luftbild gezeichnet werden. Hier bietet sich als Symbollayertyp „Rand_Einfache Linie“ mit einem hellen Blauton an. Wir können die Symbolisierung unter Eigenschaften -&gt; Symbolisierung einstellen.\nFür die Aktualisierung der Waldeinteilung benötigen wir eine zusätzliche Spalte mit einer Bestandesnummer. Wir können diese hinzufügen, in dem wir die Attributtabelle des neuen Layers öffnen. Nun aktivieren wir den Editiermodus mit dem kleinen Stiftsymbol und wählen „Neue Spalte“ hinzufügen.\n\nWaldeinteilungsdaten\n1.) Was ist der Stichtag der vorliegenden Waldeinteilung?\n2.) Welche Informationen zu den Waldflächen enthält der Datensatz?",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Lerneinheit 05: Aktualisierung der Waldeinteilung auf Basis von Ortholuftbildern</span>"
+    ]
+  },
+  {
+    "objectID": "uebung05.html#aufgabe-03-import-von-informationen-zu-waldschäden",
+    "href": "uebung05.html#aufgabe-03-import-von-informationen-zu-waldschäden",
+    "title": "5  Lerneinheit 05: Aktualisierung der Waldeinteilung auf Basis von Ortholuftbildern",
+    "section": "5.5 Aufgabe 03: Import von Informationen zu Waldschäden",
+    "text": "5.5 Aufgabe 03: Import von Informationen zu Waldschäden\nThüringen-Forst stellt außerdem die Ergebnisse einer satelliten-basierten Waldschadenserfassung zur Verfügung. Hierbei werden in einem automatisierten Verfahren Vitalitätsänderungen in Sentinel-2 Satellitenbildzeitreihen erfasst. Die räumliche Auflösung der Sentinel-2 Satellitenbilder beträgt 10m. Die Ergebnisse der Waldschadenskartierung werden zusammen mit anderen interessanten Informationen als WMS-Geodatendienst unter folgender URL zur Verfügung gestellt:\nhttps://www.geoproxy.geoportal-th.de/geoproxy/services/forst/FORST\nRichten sie WMS-Verbindung in QGIS ein und laden sie den Layer “Waldschäden”. Siehe dazu auch Kapitel 3.4 in LE03.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Lerneinheit 05: Aktualisierung der Waldeinteilung auf Basis von Ortholuftbildern</span>"
+    ]
+  },
+  {
+    "objectID": "uebung05.html#aufgabe-04-aktualisierung-der-waldeinteilung",
+    "href": "uebung05.html#aufgabe-04-aktualisierung-der-waldeinteilung",
+    "title": "5  Lerneinheit 05: Aktualisierung der Waldeinteilung auf Basis von Ortholuftbildern",
+    "section": "5.6 Aufgabe 04: Aktualisierung der Waldeinteilung",
+    "text": "5.6 Aufgabe 04: Aktualisierung der Waldeinteilung\n\n5.6.1 Editieren von Vektordaten\nBevor wir mit der Aktualisierung der Bestandesgrenzen beginnen können, müssen wir zunächst die verschiedenen Werkzeuge zum Editieren von Polygonen kennenlernen. Um topologische Fehler beim Editieren der Geometrien zu reduzieren verwenden wir die „Einrastwerkzeuge“(snapping) in QGIS. Bei der ersten Verwendung müssen diese zunächst aktiviert/sichtbar gemacht werden. Dazu wählen wir:\n\nMenü → Ansicht → Werkzeugleisten → Einrastewerkzeugleiste\n\nIn der Werkzeugleiste erscheint nun ein kleines Magnetsymbol. Wir aktivieren die Einrastfunktion durch Klick auf das Magnet-Symbol und wählen folgende Einstellungen:\n\nZusätzlich möchten wir die erweiterten Digitalisierungswerkzeuge in QGIS nutzen. Bei der ersten Verwendung müssen wir diese wie folgt aktivieren:\n\nMenü → Ansicht → Werkzeugleisten → Erweiterte Digitalisierungswerkzeugleiste\n\nQGIS bietet vielfältige Funktionen zum Editieren von Geometrien an. In dieser Übung wollen wir nur die wichtigsten vorstellen:\n\n5.6.1.1 Polygon teilen\nWir können bestehende Polygone in zwei oder mehrere Teile zerschneiden. Diese Funktion ist immer dann sinnvoll, wenn z.B. ein schon kartierter Bestand aufgrund von Störungen weiter aufgeteilt werden soll. Dazu wählen wir das Tool „Objekte zerteilen“ in der Werkzeugleiste „Erweiterte Digitalisierungswerkzeuge“.\n\n\n\n\n\n\nVorsicht\n\n\n\nBevor sie mit dem Zerteilen starten, achten Sie darauf das kein Polygon ausgewählt ist.\n\n\n\n\n\n\n\n\nHinweis\n\n\n\nWenn sie die Funktion „Teile zerlegen“ wählen wird ein Polygon in ein Multi-Polygon aufgeteilt und keine neue Zeile in der Attributtabelle angelegt!\n\n\nAnschließend können wir ein Polygon zerteilen, in dem wir mit der Maus eine Trennlinie einzeichnen und diese nach dem letzten Stützpunkt mit einem Rechtsklick bestätigen. Vorteil dieses Verfahrens ist, dass keine Zwischenräume oder Selbstschneidungen entstehen. In der Attributtabelle wird eine neue Zeile mit den gleichen Werten angelegt. Hier müssen wir noch die Bestandsnummer ändern und in die neue Spalte „Bestand“ eine Zahl eintragen. Dies geht am einfachsten mit dem Attribut Editierwerkzeug, das sich in der Werkzeugleiste befindet.\n\nNach der Aktivierung des Werkzeugs können sie in das neue Polygon klicken und die Attribute anpassen.\n\n\n5.6.1.2 Polygongrenzen verschieben\nUm die Grenzen eines bestehenden Polygons zu ändern, verwenden wir das Stützpunktwerkzeug. Nach Auswahl des Werkzeuges klicken wir einmal in das zu ändernde Polygon. Daraufhin erscheinen die Grenzen und Stützpunkte dieses Polygons. Durch Rechtsklick können die Stützpunkte ausgewählt und mit der Maus verschoben werden. Durch Doppelklick auf die Grenzlinie können neue Stützpunkte hinzugefügt werden. Stützpunkte können mit der Taste „Enf“ oder mit dem Mülleimer-Symbol gelöscht werden.\n\n\n\n5.6.1.3 Polygone vereinen\nIn Fällen, in denen Bestandesgrenzen aufgelöst werden müssen, können die Bestände vereint werden. Dazu werden zunächst die Polygone, die vereint werden sollen, mit dem Auswahlwerkzeug in der Werkzeugleiste selektiert. Zum Selektieren mehrerer Polygone halten sie die Shift-Taste beim Klicken gedrückt! Anschließend können wir das Werkzeug „Objekte verschmelzen“ wählen und das Dialogfeld mit den Attributtabellen bestätigen.\n\n\n\n\n5.6.2 Aktualisierung der Waldeinteilung im FoA-Heiligenstadt\nNachdem wir nun die wichtigsten Funktionen zum Editieren von Geometrien kennengelernt haben, sollen sie den Umgang mit diesen Funktionen üben und die Waldeinteilung der ausgewählten Bestände aktualisieren. Gehen sie dabei systematisch vor, in dem Sie jede Abteilung einzeln bearbeiten.\n\n\n\n\n\n\nTipp\n\n\n\nErstellen sie sich eine Kopie des Waldeinteilungslayers und setzen sie den Symbolisierungswert auf „Abt“. Dann sehen sie sofort welche Bestände zu einer Abteilung gehören. Alternativ können sie auch mit Filtern arbeiten.\n\n\nThüringenForst veröffentlicht Anweisungen für die Forsteinrichtung. Im Kapitel 4.1 „Flächengliederung des Forstbetriebes“ sind Hinweise für die Aktualisierung der Waldeinteilung enthalten. Zum Beispiel werden Mindestgrößen für Bestände (0.1ha) angegeben. Sie finden diese Anweisung im StudIP im Ordner „Literatur“. Konsultieren sie die Anweisungen, wenn sie Entscheidungen beim Digitalisieren treffen müssen.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Lerneinheit 05: Aktualisierung der Waldeinteilung auf Basis von Ortholuftbildern</span>"
+    ]
+  },
+  {
+    "objectID": "uebung06.html",
+    "href": "uebung06.html",
+    "title": "6  Lerneinheit 06: Erfassung von Fraßschäden in Kiefernbeständen",
+    "section": "",
+    "text": "6.1 Lernziele & Aufgabenstellung\nDie Nordwestdeutsche Forstliche Versuchsanstalt (NWFVA) überwacht in Niedersachsen großflächige Fraßschäden des Kiefernspinners (Dendrolimus pini, Abbildung 1) mithilfe von Fernerkundungsverfahren. Im Juli 2013 wurde dazu eine Luftbildbefliegung durchgeführt und digitale Orthophotos (DOP) hergestellt. In dieser Lerneinheit sollen Schwerpunkte der Kiefernspinnerverbreitung in Kiefernwäldern des Wendlandes (Landkreis Lüchow-Dannenberg) kartiert werden. Grundlage der Kartierung verschiedener Fraßintensitäten ist ein DOP mit einer räumlichen Auflösung von 20 cm (DOP20).\nLernziele\nDie Studierenden sollen:\nAufgaben",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Lerneinheit 06: Erfassung von Fraßschäden in Kiefernbeständen</span>"
+    ]
+  },
+  {
+    "objectID": "uebung06.html#lernziele-aufgabenstellung",
+    "href": "uebung06.html#lernziele-aufgabenstellung",
+    "title": "6  Lerneinheit 06: Erfassung von Fraßschäden in Kiefernbeständen",
+    "section": "",
+    "text": "Luftbilder für die Schadenkartierung aufbereiten\nVegetationsindizes berechnen\nSchadflächen digitalisieren\n\n\n\nRasterdaten importieren und als CIR Darstellen\nBerechnung des Normalized Difference Vegetation Index (NDVI)\nDurchführung einer Kontraststreckung und Erstellen einer Farbpalette\nDigitalisierung der Schadflächen",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Lerneinheit 06: Erfassung von Fraßschäden in Kiefernbeständen</span>"
+    ]
+  },
+  {
+    "objectID": "uebung06.html#aufgabe-0-anlegen-eine-neuen-qgis-projektes",
+    "href": "uebung06.html#aufgabe-0-anlegen-eine-neuen-qgis-projektes",
+    "title": "6  Lerneinheit 06: Erfassung von Fraßschäden in Kiefernbeständen",
+    "section": "6.2 Aufgabe 0: Anlegen eine neuen QGIS-Projektes",
+    "text": "6.2 Aufgabe 0: Anlegen eine neuen QGIS-Projektes\nFolgen sie der Anleitung aus LE01 Kapitel 1.3 um eine neue Ordnerstruktur und ein neues QGIS-Projekt für LE05 anzulegen. In der Übung bietet es sich an den Ordner “daten” weiter in die Unterordner “vektor” und “raster” zu unterteilen.",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Lerneinheit 06: Erfassung von Fraßschäden in Kiefernbeständen</span>"
+    ]
+  },
+  {
+    "objectID": "uebung06.html#aufgabe-01-download-und-import-der-ortholuftbilder",
+    "href": "uebung06.html#aufgabe-01-download-und-import-der-ortholuftbilder",
+    "title": "6  Lerneinheit 06: Erfassung von Fraßschäden in Kiefernbeständen",
+    "section": "6.3 Aufgabe 01: Download und Import der Ortholuftbilder",
+    "text": "6.3 Aufgabe 01: Download und Import der Ortholuftbilder\nNachdem wir das Projekt angelegt haben, soll das Luftbild aus der Befliegung der NW-FVA importiert werden. Laden Sie zunächst die Geodatensätze für die Übungen herunter. Sie finden diese hier:\nhttps://cloud.hawk.de/index.php/s/W7GzR6TKK736Cby\nKopieren & entpacken sie sich diesen Ordner.\nBei dem Bild handelt es sich um ein Digitales Orthophoto (DOP) mit vier Bändern:\n\nBand 1 (rot)\nBand 2 (grün)\nBand 3(blau)\nBand 4 (Nahes Infrarot, NIR)\n\nImportieren sie die Ortholuftbilder in ihr QGIS-Projekt und erzeugen sie eine CIR-Falschfarbendarstellung (siehe auch LE02 Kapitel 2.6).\nFragen:\n\n\nWelche räumliche Auflösung hat das Luftbild?\nWelche radiometrische Auflösung hat das Luftbild?",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Lerneinheit 06: Erfassung von Fraßschäden in Kiefernbeständen</span>"
+    ]
+  },
+  {
+    "objectID": "uebung06.html#aufgabe-02-berechnung-des-normalized-difference-vegetation-index-ndvi",
+    "href": "uebung06.html#aufgabe-02-berechnung-des-normalized-difference-vegetation-index-ndvi",
+    "title": "6  Lerneinheit 06: Erfassung von Fraßschäden in Kiefernbeständen",
+    "section": "6.4 Aufgabe 02: Berechnung des Normalized Difference Vegetation Index (NDVI)",
+    "text": "6.4 Aufgabe 02: Berechnung des Normalized Difference Vegetation Index (NDVI)\nZur besseren Ansprache der Vitalität/des Blattverlusts möchten wir den Vegetationsindex NDVI berechnen. Für die Berechnung nutzen wir die Funktion Radiometric Indices in der Orfeo-Toolbox (OTB). Mit dieser Funktion können unterschiedliche Vegetationsindices berechnet werden. Sie finden die Funktion am einfachsten über die Suche in der Werkzeugkiste. Sollte diese nicht angezeigt werden, können sie die Werkzeugkiste im Menü -&gt; Verarbeitung aktivieren. Sollte ihnen die Funktion nicht angezeigt werden, müssen sie die Pfadeinstellungen zu OTB anpassen.\nZur Berechnung des Vegetationsindex muss dem Programm mitgeteilt werden, welches Bild genutzt werden soll (Input Image=sub_prezelle_2013), welche Kanäle im Bild vorhanden sind (siehe oben), welchen Indices berechnet werden sollen (Available Radiometric Indices=Vegetation:NDVI), welche radiometrische Auflösung das Ausgabebild haben soll (Output pixel type= float) und wo das Ausgabebildgespeichert werden soll (Output\nImage=sub_prezelle_2013_ndvi.tif).\n\n\n\nEinstellungen für die Berechnung des NDVIs mit der OTB Funktion Radiometric Indices\n\n\nAls Ausgabe erhalten wir ein Graustufenbild mit den NDVI Werten (-1≤Pixelwert≤1) wie unten dargestellt:\n\n\n\nNDVI als Graustufenbild für Prezelle 2013\n\n\n\nNDVI\n\nWie unterscheidet sich die CIR-Falschfarbendarstellung vom NDVI?\nWas ist der kleinste und was der größte NDVI-Wert?\nWelche NDVI-Werte haben geschädigte, welche gesunde Kiefern?\nSind allen niedrigen NDVI-Werte auf Fraßschäden zurückzuführen?",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Lerneinheit 06: Erfassung von Fraßschäden in Kiefernbeständen</span>"
+    ]
+  },
+  {
+    "objectID": "uebung06.html#aufgabe-03-bildverbesserung",
+    "href": "uebung06.html#aufgabe-03-bildverbesserung",
+    "title": "6  Lerneinheit 06: Erfassung von Fraßschäden in Kiefernbeständen",
+    "section": "6.5 Aufgabe 03: Bildverbesserung",
+    "text": "6.5 Aufgabe 03: Bildverbesserung\n\n6.5.1 Kontraststreckung\nDer NDVI hat einen theoretischen Wertebereich von [-1;1].Histogramme können genutzt werden, um die Verteilung der NDVI-Werte zu überprüfen. Zum Erstellen des Histogramms gehen wir auf Layereigenschaften -&gt; Histogramm -&gt; Berechnen\n\n\n\nHistogramm der NDVI-Werte\n\n\nDas Histogramm zeigt eine typische Verteilung der NDVI-Werte über Vegetationsoberflächen. Es ist deutlich zu erkennen, dass der Wertebereich nicht vollständig abgedeckt wird. Die meisten Pixel liegen in Wertebereich von 0.1-0.8. Diese Information können wir nutzen um mithilfe einer Kontraststreckung die Qualität des Bildes zu erhöhen. Dazu schneiden wir die unteren 0.2 % und oberen 2% der Verteilung ab (Tail-clipping) und strecken den Rest der Werte auf den gesamten Wertebereich.\n\n\n\nEinstellung der Kontraststreckung\n\n\n\n\n6.5.2 Farbpaletten\nFür die Kartierung der Schadflächen kann es sinnvoll sein, die Darstellung der NDVI-Karte nicht als Graustufenbild darzustellen, sondern dafür ein Farbpalette zu nutzen. Erstellen sie dafür einen neuen Stil mit einer kontrastreichen Farbpalette. Stellen Sie dazu die Darstellungsart unter Layereigenschaften -&gt; Symbolisierung auf Einkanalpseudofarben und wählen sie eigneten Farbverlauf aus.\n\n\n\nDarstellung der NDVI-Karte mit einer Fabpalette",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Lerneinheit 06: Erfassung von Fraßschäden in Kiefernbeständen</span>"
+    ]
+  },
+  {
+    "objectID": "uebung06.html#aufgabe-04-digitalisierung-der-schadflächen",
+    "href": "uebung06.html#aufgabe-04-digitalisierung-der-schadflächen",
+    "title": "6  Lerneinheit 06: Erfassung von Fraßschäden in Kiefernbeständen",
+    "section": "6.6 Aufgabe 04: Digitalisierung der Schadflächen",
+    "text": "6.6 Aufgabe 04: Digitalisierung der Schadflächen\nIm nächsten Schritt sollen die vom Kiefernspinner befallen Flächen digitalisiert werden. Legen sie dazu ein neues geopackage im Ordner “daten/vektor” mit dem Namen uebung06.gpkg an. In dem Geopackage soll ein neuer Layer mit dem Namen “Schadflächen” angelegt werden.\nErfassen sie anschließend die Bereiche, die sie eindeutig als befallen erkennen können als Polygone und bestimmen sie die Flächengröße der Schadflächen.\n\n\n\nBeispiel Kartierung von zwei Schadflächen",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Lerneinheit 06: Erfassung von Fraßschäden in Kiefernbeständen</span>"
+    ]
+  },
+  {
+    "objectID": "uebung06.html#aufgabe-05-entwicklung-der-schadflächen-optional",
+    "href": "uebung06.html#aufgabe-05-entwicklung-der-schadflächen-optional",
+    "title": "6  Lerneinheit 06: Erfassung von Fraßschäden in Kiefernbeständen",
+    "section": "6.7 Aufgabe 05: Entwicklung der Schadflächen (Optional)",
+    "text": "6.7 Aufgabe 05: Entwicklung der Schadflächen (Optional)\nDie bisherigen bearbeiteten Aufnahmen stammen aus dem Jahr 2013. Im Mai 2024 hat das LGLN erneut eine Befliegung der Flächen vorgenommen. Laden sie sich die beiden Bilder für das Untersuchungsgebiet vom Geoportal des LGLN und vergleichen sie den Stand 2024 mit dem Stand 2013.\n\n[Zeitliche Änderungen]\n\nLassen sich die Schadflächen von 2013 auch in 2024 ansprechen?\nWelche Schlüsse für die Waldbewirtschaftung lassen sich aus dem Vergleich der Jahre 2013 und 2024 ziehen?",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Lerneinheit 06: Erfassung von Fraßschäden in Kiefernbeständen</span>"
+    ]
+  },
+  {
+    "objectID": "uebung07_bildklassifikation.html",
+    "href": "uebung07_bildklassifikation.html",
+    "title": "7  Lerneinheit 07: Waldtypenklassifikation im Nationalpark Harz",
+    "section": "",
+    "text": "7.1 Lernziele & Aufgabenstellung\nIn dieser Übung soll für den Nationalpark Harz eine einfache Waldtypenkarte für das Jahr 2025 erstellt werden. Dazu werden aktuelle Satellitenbilder des Satellitensystems Sentinel-2 automatisiert mit einem überwachten Klassifikationsverfahren klassifiziert.\nLernziele\nDie Studierenden sollen:\nAufgaben",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Lerneinheit 07: Waldtypenklassifikation im Nationalpark Harz</span>"
+    ]
+  },
+  {
+    "objectID": "uebung07_bildklassifikation.html#lernziele-aufgabenstellung",
+    "href": "uebung07_bildklassifikation.html#lernziele-aufgabenstellung",
+    "title": "7  Lerneinheit 07: Waldtypenklassifikation im Nationalpark Harz",
+    "section": "",
+    "text": "Hinweis\n\n\n\nDie Übung dient der Demonstration der grundlegenden Prinzipien der überwachten Bildklassifikation. Es ist nicht das Ziel eine genaue Waldtypenkarte für spätere Auswertungen zu erstellen. Dies würde ein deutlich höherer Aufwand erfordern, besonders bei der Auswahl von Trainingsgebieten, und somit den zeitlichen Rahmen dieser Übung sprengen.\n\n\n\n\n\nTrainingsdaten für Bildklassifikationen anzulegen\nMaschinelle Lernverfahren zum Erstellen von Klassifikationsmodellen zu nutzen\nMithilfe von trainierten Klassifikationsmodellen Satellitenbilder klassifizieren um einfache Landbedeckungskarten zu erstellen.\n\n\n\nRaster- und Vektordaten importieren\nErgänzung von Trainingsdaten durch visuelle Interpretation von Ortholuftbildern\nTrainings eines RandomForest Klassifikationsmodells\nKlassifikation eines S2-Satellitenbilds zur Erstellung einer Waldtypenkarte",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Lerneinheit 07: Waldtypenklassifikation im Nationalpark Harz</span>"
+    ]
+  },
+  {
+    "objectID": "uebung07_bildklassifikation.html#aufgabe-0-anlegen-eine-neuen-qgis-projektes",
+    "href": "uebung07_bildklassifikation.html#aufgabe-0-anlegen-eine-neuen-qgis-projektes",
+    "title": "7  Lerneinheit 07: Waldtypenklassifikation im Nationalpark Harz",
+    "section": "7.2 Aufgabe 0: Anlegen eine neuen QGIS-Projektes",
+    "text": "7.2 Aufgabe 0: Anlegen eine neuen QGIS-Projektes\nFolgen sie der Anleitung aus LE01 Kapitel 1.3 um eine neue Ordnerstruktur und ein neues QGIS-Projekt für LE07 anzulegen. In der Übung bietet es sich an den Ordner “daten” weiter in die Unterordner “vektor” und “raster” zu unterteilen.",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Lerneinheit 07: Waldtypenklassifikation im Nationalpark Harz</span>"
+    ]
+  },
+  {
+    "objectID": "uebung07_bildklassifikation.html#aufgabe-01-download-und-import-der-geodaten",
+    "href": "uebung07_bildklassifikation.html#aufgabe-01-download-und-import-der-geodaten",
+    "title": "7  Lerneinheit 07: Waldtypenklassifikation im Nationalpark Harz",
+    "section": "7.3 Aufgabe 01: Download und Import der Geodaten",
+    "text": "7.3 Aufgabe 01: Download und Import der Geodaten\n\n7.3.1 Rasterdaten\n\n7.3.1.1 Satellitenbilder\nIn dieser Übung sollen aktuelle Sentinel-2 Satellitenbilder für die Klassifikation verwendet werden. In LE04 Kapitel 4 haben wir bereits eine Satellitenbildkarte angelegt und die entsprechenden Sententinel-2 Bilder beschafft und vorbereitet. Kopieren Sie sich das Bild NP_Harz_2025_06_12.tif aus der Übung LE04 in den “daten” Ordner der akuellen Übung (LE07). Sollten sie keinen Zugriff auf dieses Bild mehr haben, können sie es sich alternativ hier herunterladen:\nhttps://cloud.hawk.de/index.php/s/2Hmncq99dxSoE3W\nBei dem Bild handelt es sich um ein Sentine-2 Satellitenbild vom 12.06.2025 mit folgenden vier Bändern:\n\nBand 1 (blau)\nBand 2 (grün)\nBand 3 (rot)\nBand 4 (Nahes Infrarot, NIR)\n\nImportieren sie die Satellitenbild in ihr QGIS-Projekt und erzeugen sie eine CIR-Falschfarbendarstellung (siehe auch LE02 Kapitel 2.6). Achten sie darauf “0” als Nullwert zu setzen. Führen sie anschließend eine Kontraststreckung mit einer zweifachen mittleren Standardabweichung durch.\n\n\n7.3.1.2 Luftbilder\nFür die Erstellung der Trainingsdaten sollen Luftbilder mit einer höheren räumlichen Auflösung genutzt werden. Da der Nationalpark Harz in zwei Bundesländern liegt müssen von beiden Bundesländern entsprechende DOP-Bilder als WMS eingebunden werden (siehe dazu auch LE03 Kapitel 3.4). Nutzen sie hier für folgende Links:\nSachsen-Anhalt:\nDOP-WMS:\nhttps://www.geodatenportal.sachsen-anhalt.de/wss/service/ST_LVermGeo_DOP_WMS_OpenData/guest?\nDOP-Aktualität:\nhttps://www.geodatenportal.sachsen-anhalt.de/wss/service/ST_LVermGeo_DOP_WMS_Kacheluebersicht/guest?\nNiedersachsen:\nDOP:\nhttps://opendata.lgln.niedersachsen.de/doorman/noauth/dop_wms&gt;\nFragen:\n\n\nWelche räumliche Auflösung hat das Satellitenbild?\nWelche radiometrische Auflösung hat das Satellitenbild?\nWann wurden das Satellitenbild und wann die Luftbilder in Sachsen-Anhalt und Niedersachsen aufgenommen?\n\n\n\n\n\n7.3.2 Vektordaten\nFür die Übung werden zwei Vektordatensätze benötigt:\n1.) Grenzen des Nationalparkharz die sie hier herunterladen können:\nhttps://cloud.hawk.de/index.php/s/Hs52DFGtPnfKzyN\n2.) Vorbereiteter Referenzdatensatz mit Polygonen der verschiedenen Waldtypen\nhttps://cloud.hawk.de/index.php/s/ox2CsrEDHNjiiyF\nFür die Darstellung der unterschiedlichen Waldtypen wurde bereits eine QGIS-Stylefile angelegt das sie hier herunterladen können:\nhttps://cloud.hawk.de/index.php/s/QZiSkR5Sd9Q5SdH\nImportieren sie die Vektordaten und passen sie die Darstellung der Referenzdaten entsprechend des vorgegeben Stils an.",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Lerneinheit 07: Waldtypenklassifikation im Nationalpark Harz</span>"
+    ]
+  },
+  {
+    "objectID": "uebung07_bildklassifikation.html#aufgabe-02-ergänzung-der-referenzdaten",
+    "href": "uebung07_bildklassifikation.html#aufgabe-02-ergänzung-der-referenzdaten",
+    "title": "7  Lerneinheit 07: Waldtypenklassifikation im Nationalpark Harz",
+    "section": "7.4 Aufgabe 02: Ergänzung der Referenzdaten",
+    "text": "7.4 Aufgabe 02: Ergänzung der Referenzdaten\n\n7.4.1 Klassifikationschlüssel\nDer Klassifikationsschlüssel legt fest, welche Landbedeckungs-/Landnutzungsklassen in der thematischen Karte erfasst werden sollen. Er enthält üblicherweise auch eine detaillierte Beschreibung wie die einzelnen Klassen definiert sind und wie sie erfasst werden sollen. Für diese Übung soll eine einfache Unterscheidung von drei Waldtypen und einer Hintergrundklasse ausreichend sein:\n\n\n\nName\nErläuterung\nID\n\n\n\n\nNadelholz\nLebende, vitale Nadelgehölze\n1\n\n\nstehendes Totholz\nStehende tote Bäume\n2\n\n\nLaubholz\nLebende, vitale Laubgehölze\n3\n\n\nFreiflächen\nFlächen ohne stehende Bäume\n4\n\n\n\n\n\n7.4.2 Trainingsdaten ergänzen\nUm eine überwachte Bildklassifikation durchführen zu können werden Referenzdaten benötigt. Die Referenzdaten dienen zur Parametrisierung des Klassifkationsmodells, bzw. bei nicht-parametrischen Verfahren zum Trainieren des Klassifikationsmodells. Die Anlage der Referenzdaten hat dabei eine enorme Bedeutung für die Qualität der Klassifizierung und der daraus resultierenden thematischen Karte. Es ist daher wichtig eine ausreichende Anzahl qualitativ hochwertiger Referenzdaten vorzubereiten. Für die Übung heute möchten wir uns aus Zeitgründen jedoch auf 25 Flächen pro Klasse beschränken. Die Auswahl und Anlage der Gebiete erfolgt dabei rein subjektiv -visuell.\nDer Layer Referenzdaten im Geopackage uebung07.gpkg enthält bereits für alle vier Klassen des Klassifikationsschlüssels jeweils 20 Polygone als Trainingsdaten. Ergänzen sie den Datensatz um jeweils fünf weitere typische Beispiele der Klassen. Nutzen sie dafür die das Sentinel-2 Bild und die Luftbilder aus den beiden Bundesländern. Achten sie dabei auf folgende Aspekte:\n\ndie Trainingsdaten sollten verteilt über das ganze Gebiet des NP liegen\nals Trainingsdaten sollten Gebiete gewählt werden die eindeutige der jeweiligen Klasse zugeordnet werden können.\ndie Trainingsdaten sollten die Variabillität der Spektralbereiche der jeweiligen Klassen möglichst abdecken",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Lerneinheit 07: Waldtypenklassifikation im Nationalpark Harz</span>"
+    ]
+  },
+  {
+    "objectID": "uebung07_bildklassifikation.html#sec-rf_training",
+    "href": "uebung07_bildklassifikation.html#sec-rf_training",
+    "title": "7  Lerneinheit 07: Waldtypenklassifikation im Nationalpark Harz",
+    "section": "7.5 Aufgabe 03: Training eines Klassifikationsmodells",
+    "text": "7.5 Aufgabe 03: Training eines Klassifikationsmodells\nIm ersten Schritt müssen wir das Klassifikationsmodell mithilfe der Trainingsdaten „anlernen“. OTB stellt dazu die Funktion „TrainImageClassifier“ zur Verfügung, die wir in der Werkzeugkiste der Verarbeitungsfunktionen über die Suche finden können. In dieser Funktion setzen wir die folgenden Optionen:\n\nInput Image List: Hier geben wir unser Sentinel2-Bild des NP-Harz an\nInput Vector Data: Hier wählen wir das geopackage mit den Referenzdaten.\nField containing the class integer label for supervision: Hier wählen wir das Feld “Klasse” aus.\nClassifier to use for the training: OTB bietet sehr viele Klassifikationsverfahren an, die alle mit dieser Funktion trainiert werden können. Für die Übung wählen wir „rf“ für „Random Forests“.\nOutput model: Hier geben wir an wo das trainierte Klassifikationsmodell gespeichert werden soll. Wir wählen „rf_harz_2025.modell“ im Ordner “daten”.\nOutput confusion matrix or contingency table: Hier können wir eine Datei angeben in dem die Fehlermatrix gespeichert wird. Wir wählen „rf_harz_2025.cm“ im Ordner “daten”.\n\n\n\nTrainImageClassifier\n\n\nAlle anderen Optionen lassen wir unverändert und starten das Training. Je nach gewähltem Algorithmus und der Anzahl und Größe der Trainingsdaten kann dieser Prozess einige Minuten dauern. Wenn alles funktioniert hat, werden einige Statistiken zur Beurteilung der Modellgenauigkeit im Protokollfenster ausgegeben:\n\n\nIn Ordner “daten” befinden sich nun zwei neue Dateien: i) die Modelldatei mit dem trainierten Klassifikationsmodell und eine Fehlermatrix. Letzter werden wir in der nächsten Lehreinheit besprechen.",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Lerneinheit 07: Waldtypenklassifikation im Nationalpark Harz</span>"
+    ]
+  },
+  {
+    "objectID": "uebung07_bildklassifikation.html#sec-rf_inference",
+    "href": "uebung07_bildklassifikation.html#sec-rf_inference",
+    "title": "7  Lerneinheit 07: Waldtypenklassifikation im Nationalpark Harz",
+    "section": "7.6 Aufgabe 04: Klassifikation eines S2-Satellitenbilds zur Erstellung einer Waldtypenkarte",
+    "text": "7.6 Aufgabe 04: Klassifikation eines S2-Satellitenbilds zur Erstellung einer Waldtypenkarte\nNachdem wir das RandomForest Klassifikationsmodell trainiert haben, können wir es auf das gesamte Satellitenbild anwenden, um jedem Pixel eine unsere vier thematischen Klassen zuzuweisen. Dazu verwenden wir die OTB-Funktion ImageClassifier die im Werkzeugkasten der Verarbeitungsfunktionen zu finden ist. Hier werden folgende Optionen gewählt.\n\nInput Image List: Hier geben wir unser Sentinel2-Bild\nModel file: Wir geben das vorher trainierte Modell „rf_harz_2025.modell“ an.\nOutput pixel type: uint8\n\nAlle anderen Optionen lassen wir unverändert und starten die Bildklassifikation. Je nach gewähltem Algorithmus und der Bildgröße kann dieser Prozess einige Minuten dauern. Nach erfolgreicher Klassifikation wird das Bild als Graustufenbild im QGIS geladen. Prüfen sie jetzt nochmal, ob das Koordinatenrefenerzsystem des Projektes immer noch korrekt ist. Falls nicht ändern sie es entsprechend.\nAnschließend schneiden wir das klassifizierte Bild auf auf die Grenzen des Nationalparks zu (siehe dazu auch LE04 Kapitel 4.6). Das zugeschnittene Bild wird als GeoTif unter “daten/ NP_Harz_2025_06_12_Waldtypen.tif” gespeichert. Für die bessere Darstellung sollen die Farbwerte der Pixel identisch zu den Farben im Referenzdatensatz sein. Erstellen sie dafür eine entsprechende Symbolisierung.\nFragen:\n\n\nVergleichen sie die thematische Karte mit dem Satellitenbild.  Was fällt Ihnen auf?\nBei welchen thematischen Klassen funktioniert die Klassifikation besser, bei welchen schlechter?\nGibt es Bildbereiche/Regionen, in denen die Klassifikation genauer zu sein scheint?",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Lerneinheit 07: Waldtypenklassifikation im Nationalpark Harz</span>"
+    ]
+  },
+  {
+    "objectID": "uebung08_validierung.html",
+    "href": "uebung08_validierung.html",
+    "title": "8  Lerneinheit 08: Validierung einer thematischen Waldtypenkarte des Nationalpark Harz",
+    "section": "",
+    "text": "8.1 Lernziele & Aufgabenstellung\nIn der letzten Übung (Kapitel 7) haben wir mithilfe eines automatischen Bildklassifikationsverfahrens eine einfache Waldtypenkarten für den Nationalpark Harz erstellt. In der vorliegenden Übung wollen wir nun eine Validierung der Landbedeckungskarte mit einem unabhängigen Referenzdatensatz durchführen, um die Kartengenauigkeit zu ermitteln. Außerdem sollen Modell- und Kartengenauigkeit miteinander verglichen werden.\nLernziele\nDie Studierenden sollen:\nAufgaben",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Lerneinheit 08: Validierung einer thematischen Waldtypenkarte des Nationalpark Harz</span>"
+    ]
+  },
+  {
+    "objectID": "uebung08_validierung.html#lernziele-aufgabenstellung",
+    "href": "uebung08_validierung.html#lernziele-aufgabenstellung",
+    "title": "8  Lerneinheit 08: Validierung einer thematischen Waldtypenkarte des Nationalpark Harz",
+    "section": "",
+    "text": "Validierungsdaten für die Validierung von thematischen Karten erstellen\nMithilfe von Fehlermatrizen die Genauigkeit eine thematischen Karte beurteilen\nden Unterscheid zwischen der Modell- und der Kartengenauigkeit erläutern können.\n\n\n\nRaster- und Vektordaten importieren\nErstellen eines Validierungsrasters\nVisuelle Interpretation von Ortholuftbildern\nBerechnung von Fehlerstatistiken aus der Fehlermatrix\nVergleich der Modell- und Kartengenauigkeit",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Lerneinheit 08: Validierung einer thematischen Waldtypenkarte des Nationalpark Harz</span>"
+    ]
+  },
+  {
+    "objectID": "uebung08_validierung.html#aufgabe-0-anlegen-eine-neuen-qgis-projektes-und-kontrolle-des-nutzerprofils",
+    "href": "uebung08_validierung.html#aufgabe-0-anlegen-eine-neuen-qgis-projektes-und-kontrolle-des-nutzerprofils",
+    "title": "8  Lerneinheit 08: Validierung einer thematischen Waldtypenkarte des Nationalpark Harz",
+    "section": "8.2 Aufgabe 0: Anlegen eine neuen QGIS-Projektes und Kontrolle des Nutzerprofils",
+    "text": "8.2 Aufgabe 0: Anlegen eine neuen QGIS-Projektes und Kontrolle des Nutzerprofils\nFolgen sie der Anleitung aus LE01 Kapitel 1.3 um eine neue Ordnerstruktur und ein neues QGIS-Projekt für LE07 anzulegen. In der Übung bietet es sich an den Ordner “daten” weiter in die Unterordner “vektor” und “raster” zu unterteilen.\nPrüfen sie außerdem ob Ihr Nutzerprofil korrekt geladen wurde und ob die OTB-Funktionen im Werkzeugkasten vorhanden sind. Sollte dies nicht der Fall sein stellen sie ihr gesichertes Nutzerprofil wieder her (siehe auch LE01 Kapitel 1.2.4).",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Lerneinheit 08: Validierung einer thematischen Waldtypenkarte des Nationalpark Harz</span>"
+    ]
+  },
+  {
+    "objectID": "uebung08_validierung.html#aufgabe-01-download-und-import-der-geodaten",
+    "href": "uebung08_validierung.html#aufgabe-01-download-und-import-der-geodaten",
+    "title": "8  Lerneinheit 08: Validierung einer thematischen Waldtypenkarte des Nationalpark Harz",
+    "section": "8.3 Aufgabe 01: Download und Import der Geodaten",
+    "text": "8.3 Aufgabe 01: Download und Import der Geodaten\n\n8.3.1 Rasterdaten\n\n8.3.1.1 Luftbilder\nFür die Erstellung der Validierungssdaten sollen Luftbilder mit einer hohen räumlichen Auflösung genutzt werden. Da der Nationalpark Harz in zwei Bundesländern liegt müssen von beiden Bundesländern entsprechende DOP-Bilder als WMS eingebunden werden (siehe dazu auch LE03 Kapitel 3.4). Nutzen sie hier für folgende Links:\nSachsen-Anhalt:\nDOP-WMS:\nhttps://www.geodatenportal.sachsen-anhalt.de/wss/service/ST_LVermGeo_DOP_WMS_OpenData/guest?\nDOP-Aktualität:\nhttps://www.geodatenportal.sachsen-anhalt.de/wss/service/ST_LVermGeo_DOP_WMS_Kacheluebersicht/guest?\nNiedersachsen:\nDOP: https://opendata.lgln.niedersachsen.de/doorman/noauth/dop_wms\n\n\n\n8.3.2 Vektordaten\nDa wir die Validierung auf das Gebiet des Nationalparks beschränkt werden soll, benötigen wir das Polygon mit den Außengrenzen des Parks das sie hier herunterladen können:\nhttps://cloud.hawk.de/index.php/s/Hs52DFGtPnfKzyN",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Lerneinheit 08: Validierung einer thematischen Waldtypenkarte des Nationalpark Harz</span>"
+    ]
+  },
+  {
+    "objectID": "uebung08_validierung.html#aufgabe-02-erstellen-eines-validierungslayers",
+    "href": "uebung08_validierung.html#aufgabe-02-erstellen-eines-validierungslayers",
+    "title": "8  Lerneinheit 08: Validierung einer thematischen Waldtypenkarte des Nationalpark Harz",
+    "section": "8.4 Aufgabe 02: Erstellen eines Validierungslayers",
+    "text": "8.4 Aufgabe 02: Erstellen eines Validierungslayers\nFür die Erstellung eines unabhängigen Validierungsdatensatzes ist es wichtig die Punkte, an denen eine Überprüfung stattfinden soll, nach einem statistischen Verfahren auszuwählen. In der Übung wollen wir ein systematisches Punktraster mit einer Rasterweite von 2000 m x 2000 m anlegen. QGIS bietet eine entsprechende Funktion unter Vektor-&gt;Forschungswerkzeuge-&gt; Gitter erzeugen. Hier wählen wir:\n\nGittertyp = Punkt\nGitterausdehnung = Aus Layer berechnen Nationalpark Harz\nHorizontaler Abstand = 2000 m\nVertikaler Abstand = 2000 m\nGitter-KBS = 25832\n\nDa das Punktraster nur auf die Ausdehnung des Polygons zugeschnitten wird, umfasst es noch Punkte außerhalb der Grenzen des Nationalparks. Um diese zu entfernen nutzen wir die Funktion\nMenü-&gt; Vektor-&gt; Geoverarbeitungswerkzeuge-&gt; Zuschneiden mit folgenden Einstellungen:\n\nEingabelayer = Punktraster\nLayer überlagern = Grenzen Nationalpark Harz\nZugeschnitten = Wir speichern das Punktraster als neues Layer (‚Validierungspunkte‘) im geopackage „uebung08.gpkg“\n\nSie sollten in diesem Layer jetzt 61 Punkte innerhalb des Nationalparkgebietes haben. Die Attributtabelle enthält aber noch einige automatisch erzeugte Spalten, die wir nicht mehr benötigen. Zum Entfernen der Spalten (left, right, top, bottom, row_index, col_index) öffnen wir die Attributtabelle, wechseln in den Editiermodus und wählen im Werkzeug „Spalte löschen“ die entsprechenden Spalten aus. Anschließende speichern wir das Layer im Geopackage “uebung08.gpkg”.",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Lerneinheit 08: Validierung einer thematischen Waldtypenkarte des Nationalpark Harz</span>"
+    ]
+  },
+  {
+    "objectID": "uebung08_validierung.html#aufgabe-03-visuelle-interpretation-der-validierungspunkte",
+    "href": "uebung08_validierung.html#aufgabe-03-visuelle-interpretation-der-validierungspunkte",
+    "title": "8  Lerneinheit 08: Validierung einer thematischen Waldtypenkarte des Nationalpark Harz",
+    "section": "8.5 Aufgabe 03: Visuelle Interpretation der Validierungspunkte",
+    "text": "8.5 Aufgabe 03: Visuelle Interpretation der Validierungspunkte\nDie Überprüfung der Genauigkeit erfolgt auf Grundlage einer visuellen Interpretation. Bevor wir mit der Interpretation beginnen können, müssen wir noch eine Spalte mit den beobachteten Klassen anlegen. Dazu öffnen wir die Attributtabelle des Punktlayers, wechseln in den Editiermodus und klicken auf das Symbol „Neue Spalte“. Und wählen folgende Einstellungen:\n\nName: Code\nType: Ganzzahl (integer)\n\nFür die visuelle Interpretation aktivieren wir den Editiermodus unseres Punktlayers und interpretieren jeden Punkt der systematischen Stichprobe auf Grundlage der Luftbilder. Dabei weisen wir jedem Punkt die Landbedeckungsklasse (Code) des Klassifikationsschemas zu. Für die visuelle Kontrolle bietet es sich außerdem an einen Darstellungsstil mit den gleichen Klassen und Farben wie bei der Bildklassifikation zu wählen. Eine entsprechend vorbereiteten Stil für das Punktraster können sie unter folgendem Link herunterladen:\nhttps://cloud.hawk.de/index.php/s/tBqHkG9NxbaoiW5\nZum laden des neuen Stils gehen öffnen sie: Layereigenschaften -&gt; Symbolisierung -&gt; Stil -&gt;Stil laden -&gt; aus Datei Dort wählen sie dann die *.qml Datei aus.\n\n\n\n\n\n\n\nHinweis\n\n\n\nFür eine effiziente Interpretation ist es sinnvoll sich die Attributtabelle als Formular anzeigen zu lassen. Dazu öffnen wir die Attributtabelle und schalten die Ansicht von Tabellenansicht auf Formularansicht, unten links, um. Anschließend können wir dieses Fenster an unsere QGIS Hauptfenster andocken. Durch Aktivierung der Funktion „Automatisch zum aktuellen Objekt verschieben“, die sich unter der Liste mit den einzelnen Punkten befindet, springt der Kartenausschnitt automatisch zum gewählten Punkt. Wir können nun einzeln die Punkte der Liste von unten nach oben durchgehen und jeweils die beobachtete Klasse eintragen. Am Ende der visuellen Interpretation sollte für jeden Punkt eine der vier Klassen in der Attributtabelle eingetragen sein.",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Lerneinheit 08: Validierung einer thematischen Waldtypenkarte des Nationalpark Harz</span>"
+    ]
+  },
+  {
+    "objectID": "uebung08_validierung.html#aufgabe-04-erstellen-einer-fehlermatrix",
+    "href": "uebung08_validierung.html#aufgabe-04-erstellen-einer-fehlermatrix",
+    "title": "8  Lerneinheit 08: Validierung einer thematischen Waldtypenkarte des Nationalpark Harz",
+    "section": "8.6 Aufgabe 04: Erstellen einer Fehlermatrix",
+    "text": "8.6 Aufgabe 04: Erstellen einer Fehlermatrix\nZum Erstellen der Fehlermatrix verwenden wir die OTB-Funktion ComputeConfusionMatrix, die wir in den Verarbeitungswerkzeugen über die Suche finden können. In dem Funktionsfenster wählen wir die folgenden Einstellungen:\n\nInput Image: Waldtypenkarte Harz\nOutput format: confusionmatrix\nGround truth: vector\nInput reference vector data: Validierungspunkte_Nationalpark_harz\nField name: Code\nMatrix output: fehlermatrix.csv\n\nAnschließend starten wir die Berechnung. Als Ergebnis wird eine Komma-getrennte csv-Datei ausgeschrieben, die wir in Excel öffnen können. Berechnen sie nun folgende Statistiken nach der Anleitung in den Vorlesungsfolien:\n\nGesamtgenauigkeit\nNutzergenauigkeiten für alle vier Klassen\nProduzentengenauigkeiten für alle vier Klassen\n\n\n\nWie beurteilen sie die Genauigkeit der Klassifikation?\nWelche Nutzergenauigkeit hat die Klasse „stehendes Totholz“?",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Lerneinheit 08: Validierung einer thematischen Waldtypenkarte des Nationalpark Harz</span>"
+    ]
+  },
+  {
+    "objectID": "uebung08_validierung.html#augabe-05-vergleich-modell--und-kartengenauigkeit",
+    "href": "uebung08_validierung.html#augabe-05-vergleich-modell--und-kartengenauigkeit",
+    "title": "8  Lerneinheit 08: Validierung einer thematischen Waldtypenkarte des Nationalpark Harz",
+    "section": "8.7 Augabe 05: Vergleich Modell- und Kartengenauigkeit",
+    "text": "8.7 Augabe 05: Vergleich Modell- und Kartengenauigkeit\nBei der Erstellung des RandomForest Klassifikationsmodells (siehe Kapitel 7.5) haben wir auch eine Fehlermatrix gespeichert („rf_harz_2025.cm“). Diese wurde auf Basis der Trainingsdaten berechnet, da wir zum Zeitpunkt des Modelltrainings die Validierungsdaten noch nicht erstellt hatten. Insofern beschreibt diese Fehlermatrix die Modellgenauigkeit.\nErstellen sie äquivalent zu Aufgabe 04 eine Fehlermatrix aus dieser Datei und vergleichen sie beide Fehlermatrizen miteinander um untenstehende Fragen zu beantworten.\n\n\nWelche Fehlermatrix liefert eine höhere Gesamtgenauigkeit?\nWie begründen sie die Unterschiede zwischen den beiden Fehlermatrizen?\nWelche Fehlermatrix würden sie für die Bewertung der praktischen Nutzbarkeit der Karte verwenden?",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Lerneinheit 08: Validierung einer thematischen Waldtypenkarte des Nationalpark Harz</span>"
+    ]
+  },
+  {
+    "objectID": "uebung09_aenderungsanalyse.html",
+    "href": "uebung09_aenderungsanalyse.html",
+    "title": "9  Lerneinheit 09: Analyse der Waldflächenänderung im Nationalpark Harz (2017-2025)",
+    "section": "",
+    "text": "9.1 Lernziele & Aufgabenstellung\nIn der der Übung (Kapitel 7) haben wir mithilfe eines automatischen Bildklassifikationsverfahrens eine einfache Waldtypenkarten für den Nationalpark Harz erstellt. Dafür wurden Trainingsdaten erhoben und ein RandomForest Klassifikationsmodell erstellt. In der vorliegenden Übung wollen dieses Modell verwenden um ein älteres Satellitenbild zu klassifizieren und eine Waldtypenkarte für das Jahr 2017 zu erstellen. Anschließend sollen die Waldtypenkarten mit einander verglichen und die Änderungen der Waldflächen bestimmt werden.\nLernziele\nDie Studierenden sollen:\nAufgaben",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Lerneinheit 09: Analyse der Waldflächenänderung im Nationalpark Harz (2017-2025)</span>"
+    ]
+  },
+  {
+    "objectID": "uebung09_aenderungsanalyse.html#lernziele-aufgabenstellung",
+    "href": "uebung09_aenderungsanalyse.html#lernziele-aufgabenstellung",
+    "title": "9  Lerneinheit 09: Analyse der Waldflächenänderung im Nationalpark Harz (2017-2025)",
+    "section": "",
+    "text": "Ein bestehendes Klassifikationsmodell auf einen weiteres Satellitenbild anwenden.\nZwei Waldtypenkarten mithilfe einer Änderungsmatrix vergleichen.\nDie Waldflächenänderungen bestimmen.\n\n\n\nRaster- und Vektordaten importieren\nErstellen einer Waldtypenkarte für das Jahr 2017\nErstellen einer Änderungsmatrix\nAuswertung der Änderungsmatrix zur Bestimmung der Waldflächenänderungen",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Lerneinheit 09: Analyse der Waldflächenänderung im Nationalpark Harz (2017-2025)</span>"
+    ]
+  },
+  {
+    "objectID": "uebung09_aenderungsanalyse.html#aufgabe-0-anlegen-eine-neuen-qgis-projektes-und-kontrolle-des-nutzerprofils",
+    "href": "uebung09_aenderungsanalyse.html#aufgabe-0-anlegen-eine-neuen-qgis-projektes-und-kontrolle-des-nutzerprofils",
+    "title": "9  Lerneinheit 09: Analyse der Waldflächenänderung im Nationalpark Harz (2017-2025)",
+    "section": "9.2 Aufgabe 0: Anlegen eine neuen QGIS-Projektes und Kontrolle des Nutzerprofils",
+    "text": "9.2 Aufgabe 0: Anlegen eine neuen QGIS-Projektes und Kontrolle des Nutzerprofils\nFolgen sie der Anleitung aus LE01 Kapitel 1.3 um eine neue Ordnerstruktur und ein neues QGIS-Projekt für LE09 anzulegen. In der Übung bietet es sich an den Ordner “daten” weiter in die Unterordner “vektor” und “raster” zu unterteilen.\nPrüfen sie außerdem ob Ihr Nutzerprofil korrekt geladen wurde und ob die OTB-Funktionen im Werkzeugkasten vorhanden sind. Sollte dies nicht der Fall sein stellen sie ihr gesichertes Nutzerprofil wieder her (siehe auch LE01 Kapitel 1.2.4).",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Lerneinheit 09: Analyse der Waldflächenänderung im Nationalpark Harz (2017-2025)</span>"
+    ]
+  },
+  {
+    "objectID": "uebung09_aenderungsanalyse.html#aufgabe-01-download-und-import-der-geodaten",
+    "href": "uebung09_aenderungsanalyse.html#aufgabe-01-download-und-import-der-geodaten",
+    "title": "9  Lerneinheit 09: Analyse der Waldflächenänderung im Nationalpark Harz (2017-2025)",
+    "section": "9.3 Aufgabe 01: Download und Import der Geodaten",
+    "text": "9.3 Aufgabe 01: Download und Import der Geodaten\n\n9.3.1 Satellitenbilder & Waldtypenkarten\nLaden sie sich die Waldtypenkarte für das Jahr 2017 (“NP_Harz_2025_06_12_Waldtypen.tif”) aus der Übung Kapitel 7 in ihr Projektordner und QGIS. Falls sie keinen Zugang zu dieser Karte mehr haben können sie sich unter folgendem Link eine Kopie herunterladen:\nhttps://cloud.hawk.de/index.php/s/e8oqsCezoQYft6C\nDer Waldzustand im Jahr 2025 soll mit der Situation vor den großen Kalamitäten im Jahr 2017 verglichen werden. Für die Erstellung einer Waldtypenkarte in 2025 soll das gleiche RandomForest Klassifikationsmodell verwendet werden. Daher ist es wichtig, dass die Satellitenbilder der beiden Jahre miteinander vergleichbar sind. Wir nutzen dazu ein Satellitenbild des selben Sensors (S2-MSI), welches zu einem ähnlichen phänologischen Zeitpunkt (Juni) aufgenommen wurde. Sie können das vorbereitete Sentinel-2 Satellitenbild hier herunterladen:\nhttps://cloud.hawk.de/index.php/s/QWPY2984sb3jmT9\nFür die farbige Darstellung der thematischen Karte können Sie die Stildatei zusätzlich herunterladen:\nhttps://cloud.hawk.de/index.php/s/HKMseitrK9bHpZY\n\n\n9.3.2 Vektordaten\nLaden Sie sich außerdem die Außengrenzen des Nationalparks herunter:\nhttps://cloud.hawk.de/index.php/s/Hs52DFGtPnfKzyN\n\n\n9.3.3 Modelle\nFür die Klassifikation nutzen wir das RandomForest-Klassifikationsmodell welches in der Übung Kapitel 7 auf Basis der Trainingsdaten angelegt haben noch einmal.\nhttps://cloud.hawk.de/index.php/s/XzQHBBzKd83MYwZ",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Lerneinheit 09: Analyse der Waldflächenänderung im Nationalpark Harz (2017-2025)</span>"
+    ]
+  },
+  {
+    "objectID": "uebung09_aenderungsanalyse.html#aufgabe-02-erstellen-der-waldtypenkarte-2017",
+    "href": "uebung09_aenderungsanalyse.html#aufgabe-02-erstellen-der-waldtypenkarte-2017",
+    "title": "9  Lerneinheit 09: Analyse der Waldflächenänderung im Nationalpark Harz (2017-2025)",
+    "section": "9.4 Aufgabe 02: Erstellen der Waldtypenkarte 2017",
+    "text": "9.4 Aufgabe 02: Erstellen der Waldtypenkarte 2017\nLaden sie das 2017’er Satellitenbild in das QGIS Projekt. Nutzen sie anschließend die OTB-Funktion “ImageClassifier” um mithilfe des RF-Modells eine neue Waldtypenkarte für das Jahr 2017 zu erstellen. Speichern sie die neue Waldtypenkarte als Raster unter dem Dateinamen NP_Harz_2017_06_01_Waldtypen.tif ab. Nutzen sie dazu auch die Hinweise aus Kapitel 7.6.\nStellen sie vor dem nächsten Schritt sicher, dass die Waldtypenkarte des Jahres 2017 auf den NP-Harz zugeschnitten sind.\n\n\n\n\n\n\nTippTipp\n\n\n\nIn der OTB-Funktion imageClassifier können sie eine Maske angeben. Wenn sie hier das Satellitenbild NP_Harz_2017_06_12.tif wählen, wir die Klassifikation direkt auf den Bereich des NP-Harzes beschränkt und die äußeren Flächen als Leerwerte markiert.\n\n\n\n\nWie beurteilen sie die Genauigkeit der Klassifikation für das Jahr 2017?\nWelche Probleme sehen sie bei der Übertragen des Klassifikationsmodells aus dem Jahr 2025 auf das Jahr 2017?",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Lerneinheit 09: Analyse der Waldflächenänderung im Nationalpark Harz (2017-2025)</span>"
+    ]
+  },
+  {
+    "objectID": "uebung09_aenderungsanalyse.html#aufgabe-03-erstellen-einer-änderungsmatrix",
+    "href": "uebung09_aenderungsanalyse.html#aufgabe-03-erstellen-einer-änderungsmatrix",
+    "title": "9  Lerneinheit 09: Analyse der Waldflächenänderung im Nationalpark Harz (2017-2025)",
+    "section": "9.5 Aufgabe 03: Erstellen einer Änderungsmatrix",
+    "text": "9.5 Aufgabe 03: Erstellen einer Änderungsmatrix\nVergleichbar zur Fehlermatrix, werden in der Änderungsmatrix die Klassifikationsergebnisse der beiden Jahre in einer Matrix gegenüber gestellt. Da beide Klassifikationen auf den S2-Satellitenbildern beruhen, kann der Vergleich direkt auf der Ebene der einzelnen Pixel durchgeführt werden. Es muss also kein systematisches Punktraster erstellt werden. Auch für den Vergleich auf Pixelebene kann die OTB-Funktion “ComputeConfusionMatrix” genutzt werden.\nHier bei werden folgende Einstellungen gewählt:\n\nInput Image: NP_Harz_2017_06_01_Waldtypen.tif\nOutput format: confusionmatrix\nGround Truth: raster\nInput Reference Image: NP_Harz_2025_06_12_Waldtypen.tif\nMatrix output: waldtypen_aenderungs_matrix.cm\n\nAls Ergebnis wird eine Textdatei erzeugt, in der die Pixelwerte aus dem Jahr 2017 in den Spalten und die Referenzwerte aus dem Jahr 2025 in den Zeilen aufgetragen sind. In der Diagonale befinden sich die Pixel die zu beiden Zeitpunkten der gleichen Klasse zugeordnet wurden.",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Lerneinheit 09: Analyse der Waldflächenänderung im Nationalpark Harz (2017-2025)</span>"
+    ]
+  },
+  {
+    "objectID": "uebung09_aenderungsanalyse.html#aufgabe-04-berechnung-der-flächenänderungen",
+    "href": "uebung09_aenderungsanalyse.html#aufgabe-04-berechnung-der-flächenänderungen",
+    "title": "9  Lerneinheit 09: Analyse der Waldflächenänderung im Nationalpark Harz (2017-2025)",
+    "section": "9.6 Aufgabe 04: Berechnung der Flächenänderungen",
+    "text": "9.6 Aufgabe 04: Berechnung der Flächenänderungen\nNutzen sie ein Tabellenkalkulationsprogramm um aus der Textdatei eine Änderungsmatrix für die zwei Zeitpunkte zu erstellen. Dabei sollten zwei Versionen der Änderungsmatrix erarbeitet werden:\n\nmit der Anzahl der Pixel\nmit den ha-Werten.\n\nNutzen sie die beiden Matrizen zum beantworten folgender Fragen:\n\n\nWie groß ist der Anteil an Verlust von Nadelholzflächen im NP-Harz zwischen 2017-2025?\nWie viel ha Freiflächen gibt es im NP-Harz im Jahr 2025?\nWie hat sich der Anteil der stehenden Totholzflächen von 2017-2025 geändert?",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Lerneinheit 09: Analyse der Waldflächenänderung im Nationalpark Harz (2017-2025)</span>"
+    ]
+  },
+  {
+    "objectID": "uebung10_Laserscanning.html",
+    "href": "uebung10_Laserscanning.html",
+    "title": "10  Lerneinheit 10: Import und Visualisierung von Airborne Laserscanning(ALS) Daten aus dem Solling",
+    "section": "",
+    "text": "10.1 Lernziele & Aufgabenstellung\nLernziele\nDie Studierenden sollen:\nAufgaben",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Lerneinheit 10: Import und Visualisierung von Airborne Laserscanning(ALS) Daten aus dem Solling</span>"
+    ]
+  },
+  {
+    "objectID": "uebung10_Laserscanning.html#lernziele-aufgabenstellung",
+    "href": "uebung10_Laserscanning.html#lernziele-aufgabenstellung",
+    "title": "10  Lerneinheit 10: Import und Visualisierung von Airborne Laserscanning(ALS) Daten aus dem Solling",
+    "section": "",
+    "text": "Ein ALS-Datensatz in QGIS importieren\nEigenschaften des ALS-Datensatzes untersuchen\nEine 3D-Karte zum Visualisieren der Punktwolke anlegen\nEine 2D-Transekt der Punktwolke anlegen und Einzelbaumhöhen bestimmen\n\n\n\nRaster- und Vektordaten importieren\n2D Visualisierung und Untersuchung der ALS-Daten\nErstellen einer 3D-Karte in QGIS\nZuschneiden der Punktwolke für einzelne Bestände\nErstellen eines 2D Profils zur Bestimmung der Bestandeshöhe",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Lerneinheit 10: Import und Visualisierung von Airborne Laserscanning(ALS) Daten aus dem Solling</span>"
+    ]
+  },
+  {
+    "objectID": "uebung10_Laserscanning.html#aufgabe-0-anlegen-eine-neuen-qgis-projektes-und-kontrolle-des-nutzerprofils",
+    "href": "uebung10_Laserscanning.html#aufgabe-0-anlegen-eine-neuen-qgis-projektes-und-kontrolle-des-nutzerprofils",
+    "title": "10  Lerneinheit 10: Import und Visualisierung von Airborne Laserscanning(ALS) Daten aus dem Solling",
+    "section": "10.2 Aufgabe 0: Anlegen eine neuen QGIS-Projektes und Kontrolle des Nutzerprofils",
+    "text": "10.2 Aufgabe 0: Anlegen eine neuen QGIS-Projektes und Kontrolle des Nutzerprofils\nFolgen sie der Anleitung aus LE01 Kapitel 1.3 um eine neue Ordnerstruktur und ein neues QGIS-Projekt für LE10 anzulegen. In der Übung bietet es sich an den Ordner “daten” weiter in die Unterordner “vektor” und “raster” zu unterteilen.\nPrüfen sie außerdem ob Ihr Nutzerprofil korrekt geladen wurde und ob die OTB-Funktionen im Werkzeugkasten vorhanden sind. Sollte dies nicht der Fall sein stellen sie ihr gesichertes Nutzerprofil wieder her (siehe auch LE01 Kapitel 1.2.4).",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Lerneinheit 10: Import und Visualisierung von Airborne Laserscanning(ALS) Daten aus dem Solling</span>"
+    ]
+  },
+  {
+    "objectID": "uebung10_Laserscanning.html#aufgabe-01-download-und-import-der-geodaten",
+    "href": "uebung10_Laserscanning.html#aufgabe-01-download-und-import-der-geodaten",
+    "title": "10  Lerneinheit 10: Import und Visualisierung von Airborne Laserscanning(ALS) Daten aus dem Solling",
+    "section": "10.3 Aufgabe 01: Download und Import der Geodaten",
+    "text": "10.3 Aufgabe 01: Download und Import der Geodaten\n\n10.3.1 ALS-Daten\nLaden sie sich die ALS-Daten für das Jahr 2023 aus dem Solling (“ALS_Solling_2023.copc.laz”) herunter und legen sie die Datei in ihr Projektordner ab.\nhttps://cloud.hawk.de/index.php/s/Lp4E6kfJKJak7Wq\nImportieren sie die ALS-Daten in ihr QGIS-Projekt.\n\n\n10.3.2 Luftbilder\nBei der Befliegung im Sommer 2023 wurden im Flugzeug neben dem LiDAR-Sensor auch eine digitale Luftbildkamera verwendet um gleichzeitig LiDAR- und Luftbildaufnahmen anzufertigen. Das digitale Orthophoto (DOP) hat eine sehr hohe räumliche Auflösung von 7cm. Sie können es sich als WMS-Layer in QGIS einbinden (siehe dazu: Kapitel 3.4}. Die URL-Adresse des WMS-Layers des Luftbildes ist:\nhttps://gislab.hawk.de/public/0X1A4MLEZ27S/RGB\n\n\n\n\n\n\nTipp\n\n\n\nSollte der Import des WMS-Layers nicht funktionieren oder der Zugriff zu langsam sein verwenden sie alternativ die DOP20 Layer des LGLN aus Niedersachsen mit folgender URL:\nhttps://opendata.lgln.niedersachsen.de/doorman/noauth/dop_wms",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Lerneinheit 10: Import und Visualisierung von Airborne Laserscanning(ALS) Daten aus dem Solling</span>"
+    ]
+  },
+  {
+    "objectID": "uebung10_Laserscanning.html#aufgabe-02-untersuchung-der-eigenschaften-des-als-datensatzes",
+    "href": "uebung10_Laserscanning.html#aufgabe-02-untersuchung-der-eigenschaften-des-als-datensatzes",
+    "title": "10  Lerneinheit 10: Import und Visualisierung von Airborne Laserscanning(ALS) Daten aus dem Solling",
+    "section": "10.4 Aufgabe 02: Untersuchung der Eigenschaften des ALS-Datensatzes",
+    "text": "10.4 Aufgabe 02: Untersuchung der Eigenschaften des ALS-Datensatzes\n\n10.4.1 2D Darstellung der ALS-Daten\nNach dem Import der ALS-Daten werden diese als einzelne Punkte im QGIS angezeigt. Standardmäßig werden die Punkte nach ihrer Klasse eingefärbt. Unter Layer-&gt;Eigenschaften-&gt;Symbolisierung können auch andere Visualisierung gewählt werden. Test sie die verschiedenen Darstellungsmöglichkeiten.\n\n\n10.4.2 Kontrolle & Korrektur des Koordinatenbezugssystems\nIm ersten Schritt werden die Metadaten der ALS-Daten überprüft. Öffnen sie dazu die Layereigenschaften und betrachten sie die dort angegeben Informationen:\n\nInsgesamt enthält der Datensatz 16,7 Millionen Punkte, allerdings ist kein Koordinatenbezugsystem angegeben. Für die spätere Verarbeitung ist es wichtig, dass ein korrektes KBS zugewiesen wird. Dies kann mit den Punktwolkenverarbeitungswerkzeugen in QGIS wie folgt zugewiesen werden:\n\nVerarbeitungswerkzeuge → Punktwolkendatenverwaltung → Projektion zuweisen\nIn der Funktion wählen wir dann das Koordinatensystem EPSG:25832 und speichern die Punktwolke unter ALS_Solling_2023_UTM32N.laz\n\nNach dem sie die Punktwolke mit den korrekten KBS-Informationen geladen haben, können sie die andere Punktwolke aus dem QGIS-Projekt entfernen.\n\n\n10.4.3 Untersuchung der Punktverteilung und Berechnung der Punktwolkendichte\nZoomen sie in die ALS-Punktwolke soweit, dass sie die einzelnen Punkte sehen können und beantworten sie folgende Fragen :\n\nFragen:\n\nWie stellt sich die räumliche Verteilung der Punkte dar?\nWie groß sind die mittleren Abstände zwischen den Punkten?\nGibt es Unterschiede in den Abständen zwischen den Boden- und den anderen Punkten?\nGibt es Bereiche in denen die Punktwolkendichte sehr niedrig ist? Wenn ja wo?\n\n\nDie Punktwolkendichte wird üblicherweise in Punkten/m² angegeben. Da für jeden LiDAR-Puls mehrere Punkte registriert werden, sollte bei der Berechnung der Punktdichte nur ein Punkt pro Puls berücksichtigt werden. Daher muss die Punktwolke zunächst gefiltert werden, sodass jeweils nur der erste Punkt/Return enthalten ist. Dies kann mithilfe der Filterfunktion durchgeführt werden.\n\n\n\n\n\n\nVorsicht\n\n\n\nAChtung: Sie müssen als Input die Datei ALS_Solling_2023_UTM32N.copc.laz verwenden. Sollte die noch nicht in Ihrem Projekt sein finden sie sie in ihrem Ordner Daten/Vektor.\n\n\n\nVerarbeitungswerkzeuge → Punktwolkenentnahme → Filter\n\nIn der Funktion kann eine Filterausdruck angegeben werden. Zur Filterung auf die jeweils ersten Returns (First return) setzen wir den Filter ReturnNumber = 1 und speichern die gefilterte Punktwolke temporär.\n\nZur Bestimmung der Punktwolkendichte pro m² muss die Fläche in 1m² große Kacheln geteilt werden und pro Kacheln die Anzahl der Firstreturn-Punkte gezählt werden. QGIS bietet dazu eine Funktion an:\n\nVerarbeitungswerkzeuge → Punktwolkenentnahme → Dichte\n\nWenden sie diese Funktion mit folgenden Einstellungen an und speichern die das Ergebnis in ihrem Projektordner unter punktwolkendichteraster.tif ab:\n\nLaden sie das Punktwolkendichteraster in Ihr Projekt und wählen sie die Darstellung als “Einzelkanalpseudofarbe” mit einer ansprechenden Farbverlauf aus.\n\n\nFrage:\n\nWelche Muster der Punktwolkendichte können sie in der Karte feststellen und wie können diese erklärt werden?\n\n\n\n\n10.4.4 Kontrolle der Einzelpunktinformationen\nZoomen sie anschließend in die Punktwolke rein. Mithilfe des Infotools können sie Informationen zu einzelnen Punkten anzeigen lassen. Beantworten sie folgende Fragen:\n\nFragen:\n\nIn welcher Einheit werden die X-,Y-,Z- Werte angegeben?\nWelchen Wert hat die Klassifikation für Boden- und Andere Punkte?",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Lerneinheit 10: Import und Visualisierung von Airborne Laserscanning(ALS) Daten aus dem Solling</span>"
+    ]
+  },
+  {
+    "objectID": "uebung10_Laserscanning.html#aufgabe-03-erstellen-einer-3d-karte",
+    "href": "uebung10_Laserscanning.html#aufgabe-03-erstellen-einer-3d-karte",
+    "title": "10  Lerneinheit 10: Import und Visualisierung von Airborne Laserscanning(ALS) Daten aus dem Solling",
+    "section": "10.5 Aufgabe 03: Erstellen einer 3D Karte",
+    "text": "10.5 Aufgabe 03: Erstellen einer 3D Karte\nIm nächsten Schritt soll eine 3D-Karte der Punktwolke angefertigt werden. Dazu kann unter Ansicht-&gt; 3D-Kartenansichten-&gt; Neue 3D-Kartenansicht eine 3D Ansicht angelegt werden. Diese erscheint zunächst in einem neuen QGIS-Fenster und enthält die Layer die auch in der 2D Ansicht aktiviert sind. Das Luftbild wird flach und deutlich unterhalb der Punktwolke angezeigt. Das kann in den Konfigurationen (Schraubenschlüsselsymbol) geändert werden. Dort muss der Geländetyp umgestellt werden. Da wir kein eigenen Geländemodell haben, nutzen wir die Option “online”. Zusätzlich können für die Darstellung der Punkte die Effekte: “Schatten anzeigen”, “Eye-Dome-Lightning” und “Umgebungsverdeckung aktiviert” werden, um die Darstellung zu verbessern.\n\n\n\n3D Ansicht der Punktwolke und des Luftbildes",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Lerneinheit 10: Import und Visualisierung von Airborne Laserscanning(ALS) Daten aus dem Solling</span>"
+    ]
+  },
+  {
+    "objectID": "uebung10_Laserscanning.html#aufgabe-04-zuschneiden-der-punktwolke-auf-bestandesgrenzen",
+    "href": "uebung10_Laserscanning.html#aufgabe-04-zuschneiden-der-punktwolke-auf-bestandesgrenzen",
+    "title": "10  Lerneinheit 10: Import und Visualisierung von Airborne Laserscanning(ALS) Daten aus dem Solling",
+    "section": "10.6 Aufgabe 04: Zuschneiden der Punktwolke auf Bestandesgrenzen",
+    "text": "10.6 Aufgabe 04: Zuschneiden der Punktwolke auf Bestandesgrenzen\nIm nächsten Schritt soll die Punktwolke auf die Grenzen eines Bestands zugeschnitten werden. Dazu muss eine neues Geopackage uebung10.gpkg mit einem Polygonlayer “Bestandesgrenzen” und dem KBS 25832 angelegt werden. Anschließen erfassen sie manuell auf Basis des Luftbildes einen Fichtenbestand.\n\n\n\nAusgewählter Fichtenbestand\n\n\nNach dem das Geopackage mit der Grenze des Bestandes angelegt ist kann die Punktwolke auf diesen Bereich mit folgendem Werkzeug zugeschnitten werde:\n\nVerarbeitungswerkzeuge → Punktwolkendatenverwaltung → zuschneiden\n\nDer neue ALS-Datensatz enthält nun nur noch die Punkte innerhalb des Fichtenbestands. Erstellen Sie nun eine neue 3D-Kartenansicht zur Darstellung des Fichtenbestandes.",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Lerneinheit 10: Import und Visualisierung von Airborne Laserscanning(ALS) Daten aus dem Solling</span>"
+    ]
+  },
+  {
+    "objectID": "uebung10_Laserscanning.html#sec-hoehenprofile",
+    "href": "uebung10_Laserscanning.html#sec-hoehenprofile",
+    "title": "10  Lerneinheit 10: Import und Visualisierung von Airborne Laserscanning(ALS) Daten aus dem Solling",
+    "section": "10.7 Aufgabe 05: Erstellen eines 2D-Profils zur Bestimmung der Bestandeshöhen",
+    "text": "10.7 Aufgabe 05: Erstellen eines 2D-Profils zur Bestimmung der Bestandeshöhen\nQGIS bietet die Funktion 2D Transkete auch Höhenprofile genannt, für Punktwolkendaten zu erstellen. Diese Funktion ist sehr gut geeignet um Bestandesstrukturen zu analysieren (z.B. Schichtigkeit) oder Höhen von Beständen oder Einzelbäumen manuell zu vermessen. Ein neues Höhenprofil kann wie folgt angelegt werden:\n\nAnsicht → Geländehöhenprofil\n\nDies öffnet ein neues Fenster in QGIS in dem das Profil dargestellt werden kann. Zum anlegen eines neuen Profile muss zunächst die Funktion “Kurve aufnehmen” gewählt werden und anschließend in der Karte eine Linie digitalisiert werden, entlang derer das Höhenprofil gezeichnet werden soll. Legen sie das Profil am besten längst durch den Fichtenbestand.\n\nNutzen sie im Geländehöhenprofil das Messwerkzeug um folgende Fragen zu bestimmen:\n\nFragen:\n\nWie hoch sind die Fichten in dem Bestand?\nWie viele Bestandesschichten gibt es?",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Lerneinheit 10: Import und Visualisierung von Airborne Laserscanning(ALS) Daten aus dem Solling</span>"
+    ]
+  },
+  {
+    "objectID": "uebung11_Photogrammetrie.html",
+    "href": "uebung11_Photogrammetrie.html",
+    "title": "11  Lerneinheit 11: Vergleich von ALS- und photogrammetrischen Punktwolken",
+    "section": "",
+    "text": "11.1 Lernziele & Aufgabenstellung\nLernziele\nDie Studierenden sollen:\nAufgaben",
+    "crumbs": [
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Lerneinheit 11: Vergleich von ALS- und photogrammetrischen Punktwolken</span>"
+    ]
+  },
+  {
+    "objectID": "uebung11_Photogrammetrie.html#lernziele-aufgabenstellung",
+    "href": "uebung11_Photogrammetrie.html#lernziele-aufgabenstellung",
+    "title": "11  Lerneinheit 11: Vergleich von ALS- und photogrammetrischen Punktwolken",
+    "section": "",
+    "text": "Unterschiedliche Punktwolkendatensätze in QGIS importieren\nEigenschaften der Punktwolken vergleichen\nEin Geländemodell aus den ALS-Daten ableiten\n\n\n\nRaster- und Vektordaten importieren\nVisualisierung und Untersuchung der ALS-Daten\nErstellen und Visualisieren eines Digitalen Geländemodells (DGM)",
+    "crumbs": [
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Lerneinheit 11: Vergleich von ALS- und photogrammetrischen Punktwolken</span>"
+    ]
+  },
+  {
+    "objectID": "uebung11_Photogrammetrie.html#aufgabe-0-anlegen-eine-neuen-qgis-projektes-und-kontrolle-des-nutzerprofils",
+    "href": "uebung11_Photogrammetrie.html#aufgabe-0-anlegen-eine-neuen-qgis-projektes-und-kontrolle-des-nutzerprofils",
+    "title": "11  Lerneinheit 11: Vergleich von ALS- und photogrammetrischen Punktwolken",
+    "section": "11.2 Aufgabe 0: Anlegen eine neuen QGIS-Projektes und Kontrolle des Nutzerprofils",
+    "text": "11.2 Aufgabe 0: Anlegen eine neuen QGIS-Projektes und Kontrolle des Nutzerprofils\nFolgen sie der Anleitung aus LE01 Kapitel 1.3 um eine neue Ordnerstruktur und ein neues QGIS-Projekt anzulegen. In der Übung bietet es sich an den Ordner “daten” weiter in die Unterordner “vektor” und “raster” zu unterteilen.\nPrüfen sie außerdem ob Ihr Nutzerprofil korrekt geladen wurde und ob die OTB-Funktionen im Werkzeugkasten vorhanden sind. Sollte dies nicht der Fall sein stellen sie ihr gesichertes Nutzerprofil wieder her (siehe auch LE01 Kapitel 1.2.4).",
+    "crumbs": [
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Lerneinheit 11: Vergleich von ALS- und photogrammetrischen Punktwolken</span>"
+    ]
+  },
+  {
+    "objectID": "uebung11_Photogrammetrie.html#aufgabe-01-download-und-import-der-geodaten",
+    "href": "uebung11_Photogrammetrie.html#aufgabe-01-download-und-import-der-geodaten",
+    "title": "11  Lerneinheit 11: Vergleich von ALS- und photogrammetrischen Punktwolken",
+    "section": "11.3 Aufgabe 01: Download und Import der Geodaten",
+    "text": "11.3 Aufgabe 01: Download und Import der Geodaten\n\n11.3.1 ALS-basierte Punktwolkendaten\nLaden sie sich die ALS-Daten für das Jahr 2023 aus dem Solling (“als_punktwolke_solling_2023.copc.laz”) herunter und legen sie die Datei in ihr Projektordner ab.\nhttps://cloud.hawk.de/index.php/s/pSG7J97Kw75y8ia\nImportieren sie die ALS-Daten in ihr QGIS-Projekt.\n\n\n11.3.2 Ortholuftbilder\nBei der Befliegung im Sommer 2023 wurden im Flugzeug neben dem LiDAR-Sensor auch eine digitale Luftbildkamera verwendet um gleichzeitig LiDAR- und Luftbildaufnahmen anzufertigen. Das digitale Orthophoto (DOP) hat eine sehr hohe räumliche Auflösung von 7cm. Sie können den Ausschnitt mit dem Untersuchungsgebiet als GeoTIFF-Datei unter folgendem Link herunterladen:\nhttps://cloud.hawk.de/index.php/s/SFNm8K9gwce9y9S\nImportieren sie das Luftbild in ihr QGIS-Projek und passen sie die Darstellung so an, dass ein Echtfarben Bild mit guten Kontrasten dargestellt wird.\n\n\n11.3.3 Bild-basierte Punktwolkendaten\nAus den Luftbilddaten der Befliegung 2023 wurde mihilfe von steroskopischen Verfahren Punktwolkendaten abgeleietet. Laden sie sich die bild-basierten 3D Punktwolken für das Jahr 2023 aus dem Solling (“photorammetrische_punktwolke_solling_2023.copc.laz”) herunter und legen sie die Datei in ihr Projektordner ab.\nhttps://cloud.hawk.de/index.php/s/dgSMMF9JCcsfXDc\nImportieren sie die Daten in ihr QGIS-Projekt.",
+    "crumbs": [
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Lerneinheit 11: Vergleich von ALS- und photogrammetrischen Punktwolken</span>"
+    ]
+  },
+  {
+    "objectID": "uebung11_Photogrammetrie.html#aufgabe-02-visualisierung-und-untersuchung-derpunktwolkendaten",
+    "href": "uebung11_Photogrammetrie.html#aufgabe-02-visualisierung-und-untersuchung-derpunktwolkendaten",
+    "title": "11  Lerneinheit 11: Vergleich von ALS- und photogrammetrischen Punktwolken",
+    "section": "11.4 Aufgabe 02: Visualisierung und Untersuchung derPunktwolkendaten",
+    "text": "11.4 Aufgabe 02: Visualisierung und Untersuchung derPunktwolkendaten\n\n11.4.1 Vergleich in der 2D-Karte\nVergleichen sie das Luftbild sowie die bild-basierte und ALS-Punktwolke in der 2D-Karte und beantworten sie folgende Fragen:\n\nFragen:\n\nWie stellt sich die räumliche Verteilung der Punkte der bild-basierten Punktwolke dar?\nWie groß sind die mittleren Abstände zwischen den Punkten der bild-basierten Punktwolke?\nWelche der beiden Punktwolken hat eine höhere Punktdichte?\n\n\n\n\n11.4.2 Vergleich im 2D-Höhenprofil\nLegen sie ein neues Höhenprofil an (siehe dazu auch Kapitel 10.7), in der beide Punktwolken dargestellt werden. Stellen sie dazu die beiden Punktwolken mit unterschiedlichen Farben dar (siehe Abbildung 1). Die einfarbige Darstellung kann wie folgt eingestellt werden:\nLayer -&gt; Eigenschaften -&gt; Höhe -&gt; Profildiagrammerscheinungsbild: Dort die Option “Layerfärbung berücksichtigen” deaktivieren und eine passende Farbe auswählen. Beantworten sie anhand der Profile folgende Fragen\n\nFragen:\n\nWie unterscheiden sich die beiden Punktwolken hinsichtlich ihrer Höhenverteilung?\nStimmen die absoluten Höheninformationen der beiden Verfahren überein?\nWelche Bestandesbereiche werden durch die bild-basierte Punktwolke kaum angebildet?",
+    "crumbs": [
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Lerneinheit 11: Vergleich von ALS- und photogrammetrischen Punktwolken</span>"
+    ]
+  },
+  {
+    "objectID": "uebung11_Photogrammetrie.html#aufgabe-03-erstellen-und-visualisieren-eines-digitalen-geländemodells-dgm",
+    "href": "uebung11_Photogrammetrie.html#aufgabe-03-erstellen-und-visualisieren-eines-digitalen-geländemodells-dgm",
+    "title": "11  Lerneinheit 11: Vergleich von ALS- und photogrammetrischen Punktwolken",
+    "section": "11.5 Aufgabe 03 Erstellen und Visualisieren eines Digitalen Geländemodells (DGM)",
+    "text": "11.5 Aufgabe 03 Erstellen und Visualisieren eines Digitalen Geländemodells (DGM)\n\n11.5.1 Erstellen des DGM\nIm nächsten Schritt soll ein Digtiales Geländemodell (DGM) erstellt werden. Dabei handelst es sich um ein regelmäßiges Raster in dem in jeder Zelle als Pixelwert die Geländehöhe eingetragen ist. Dies kann erreicht werden, in dem die Bodenpunkte interpoliert und in ein regelmäßiges Raster überführt werden. QGIS bietet dazu folgende Funktion an:\n\nVerarbeitungswerkzeuge → Punktwolkenkonvertierung -&gt; Als Raster exportieren (mit Triangulation)\n\nIn diesem Werkzeug wählen wir eine räumliche Auflösung von 0.5 m für das Raster. Damit nur die Bodenpunkte berücksichtigt werden verwenden wir die Filterausdruck “Classification = 2”. Das Geländemodell speichern wir als GeoTiff-Datei in unserem Projektordner unter “dgm_als_solling_2023.tif” ab.\n\nAls Ergebnis erhalten wir eine Rasterdatei mit dem digitalen Geländemodell.\n\n\n11.5.2 Visualisierung des DGM\nFür die Darstellung des DGM bietet es sich an eine Schummerung zu nutzen. Dabei wird eine Beleuchtung simuliert die in Abhängigkeit des Beleuchtungswinkels (Sonnenstand) einen Schattenwurf verursacht. Dadurch können Geländeunterschiede deutlich sichtbar gemacht werden.\n\nLayereigenschaften → Symbolisierung -&gt; Schummerung\n\nSie erhalten nun eine Darstellung des DGM das sehr gut auch kleinere Artefakte im Gelände darstellt. Durch die Kombination und Überlagerung unterschiedlicher Darstellungen können ansprechende Visualisierungen der Topographie erstellt werden:\n\n\n\nGeländemodell des Untersuchungsgebietes\n\n\n\n\n11.5.3 Historische Spuren\nBei der Betrachtung des Schummerungsmodells fallen bestimmte kreisförmige Strukturen auf:\n\n\n\nHistorische Spuren der Landnutzung im Geländemodell\n\n\n\nFrage:\nWoher könnten diese Spuren im Wald kommen?",
+    "crumbs": [
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Lerneinheit 11: Vergleich von ALS- und photogrammetrischen Punktwolken</span>"
+    ]
+  },
+  {
+    "objectID": "uebung12_Hoehenmodelle.html",
+    "href": "uebung12_Hoehenmodelle.html",
+    "title": "12  Lerneinheit 12: Verwendung von Gelände- und Bestandeshöhenmodellen",
+    "section": "",
+    "text": "12.1 Lernziele & Aufgabenstellung\nIn dieser Lehreinheit werden Höhendaten für zwei forstliche Fragestellungen ausgewertet. Im ersten Teil der Übung wird eine Reliefanalyse durchgeführt. Als Fallbeispiel soll geprüft werden, ob die max. Steigung eines Maschinenwegs eingehalten wird. Im zweiten Teil der Übung soll eine weitere forstliche Anwendung von Punktwolkendaten vorgestellt werden. Hier wird ein Bestandesoberflächenmodell erzeugt und anschließend die Maximalhöhe der Bestände bestimmt.\nLernziele\nDie Studierenden sollen:\nAufgaben",
+    "crumbs": [
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Lerneinheit 12: Verwendung von Gelände- und Bestandeshöhenmodellen</span>"
+    ]
+  },
+  {
+    "objectID": "uebung12_Hoehenmodelle.html#lernziele-aufgabenstellung",
+    "href": "uebung12_Hoehenmodelle.html#lernziele-aufgabenstellung",
+    "title": "12  Lerneinheit 12: Verwendung von Gelände- und Bestandeshöhenmodellen",
+    "section": "",
+    "text": "Ein Geländemodell aus den ALS-Daten ableiten und dieses für die Kontrolle eines Maschinenweges nutzen\nEin Bestandshöhenmodell aus ALS-Daten erstellen und damit die mittlere Bestandeshöhe für alle Bestände bestimmen.\n\n\n\nRaster- und Vektordaten importieren\nKontrolle der max. Steigung eines Maschinenweges\nErstellen einen nDSM und Berechnung der maximalen Bestandeshöhe",
+    "crumbs": [
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Lerneinheit 12: Verwendung von Gelände- und Bestandeshöhenmodellen</span>"
+    ]
+  },
+  {
+    "objectID": "uebung12_Hoehenmodelle.html#aufgabe-0-anlegen-eine-neuen-qgis-projektes-und-kontrolle-des-nutzerprofils",
+    "href": "uebung12_Hoehenmodelle.html#aufgabe-0-anlegen-eine-neuen-qgis-projektes-und-kontrolle-des-nutzerprofils",
+    "title": "12  Lerneinheit 12: Verwendung von Gelände- und Bestandeshöhenmodellen",
+    "section": "12.2 Aufgabe 0: Anlegen eine neuen QGIS-Projektes und Kontrolle des Nutzerprofils",
+    "text": "12.2 Aufgabe 0: Anlegen eine neuen QGIS-Projektes und Kontrolle des Nutzerprofils\nFolgen sie der Anleitung aus LE01 Kapitel 1.3 um eine neue Ordnerstruktur und ein neues QGIS-Projekt anzulegen. In der Übung bietet es sich an den Ordner “daten” weiter in die Unterordner “vektor” und “raster” zu unterteilen.\nPrüfen sie außerdem ob Ihr Nutzerprofil korrekt geladen wurde und ob die OTB-Funktionen im Werkzeugkasten vorhanden sind. Sollte dies nicht der Fall sein stellen sie ihr gesichertes Nutzerprofil wieder her (siehe auch LE01 Kapitel 1.2.4).",
+    "crumbs": [
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Lerneinheit 12: Verwendung von Gelände- und Bestandeshöhenmodellen</span>"
+    ]
+  },
+  {
+    "objectID": "uebung12_Hoehenmodelle.html#aufgabe-01-download-und-import-der-geodaten",
+    "href": "uebung12_Hoehenmodelle.html#aufgabe-01-download-und-import-der-geodaten",
+    "title": "12  Lerneinheit 12: Verwendung von Gelände- und Bestandeshöhenmodellen",
+    "section": "12.3 Aufgabe 01: Download und Import der Geodaten",
+    "text": "12.3 Aufgabe 01: Download und Import der Geodaten\n\n12.3.1 ALS-basierte Höhendaten\nFür die Übung verwenden wir Höhendaten des Thüringer Landesamts für Bodenmanagement und Geoinformation (TLBG). Diese Höhendaten wurden mit Hilfe eines Airborne Laser Scanners (ALS) erfasst. Das TLBG stellt sowohl die Punktinformation (LAZ), als auch bereits gerasterte digitale Geländemodelle (DGM) und digitale Oberflächenmodelle (DOM) mit einer räumlichen Auflösung von 1m zur Verfügung. Für die Übung verwenden wir die bereits erstellten DGM- und DOM-Rasterdatensätze.\nDiese können direkt im Geoportal unter dem Punkt Höhendaten heruntergeladen werden:\nhttps://geoportal.thueringen.de/gdi-th/download-offene-geodaten\n\nWir arbeiten wieder in dem Bestand in Heiligenstadt, den wir bereits aus Übung 05 kennen. Dazu benötigen wir die Daten der Kachel 581-5691. Laden sie für diese Kachel das DOM und das DGM als Zip-Datei runter und entpacken sie die Datei in ihren Projektordner unter raster.\n\n\n12.3.2 Vektordaten\nFür die Übung arbeiten wir mit einigen Beständen aus dem FoA Heiligenstadt. Sie finden ein Geopackage mit ausgewählten Beständen unter:\nhttps://cloud.hawk.de/index.php/s/K2MGpFCycyroYMK",
+    "crumbs": [
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Lerneinheit 12: Verwendung von Gelände- und Bestandeshöhenmodellen</span>"
+    ]
+  },
+  {
+    "objectID": "uebung12_Hoehenmodelle.html#aufgabe-02-kontrolle-der-max.-steigung-für-maschinenwege",
+    "href": "uebung12_Hoehenmodelle.html#aufgabe-02-kontrolle-der-max.-steigung-für-maschinenwege",
+    "title": "12  Lerneinheit 12: Verwendung von Gelände- und Bestandeshöhenmodellen",
+    "section": "12.4 Aufgabe 02: Kontrolle der max. Steigung für Maschinenwege",
+    "text": "12.4 Aufgabe 02: Kontrolle der max. Steigung für Maschinenwege\nBei der Anlage von Maschinenwegen soll die max. Steigung nicht größer als 15% sein. Im ersten Teil der Übung möchten wir auf Grundlage des Geländemodells prüfen, ob und wo die maximale Steigung eines Maschinenweges überschritten wird.\n\n12.4.1 Visualisierung des Geländemodells\nNachdem sie das DGM als Raster importiert haben wird es als Grauwertbild im QGIS dargestellt. Dabei werden höhere Geländepunkte hell und niedrige dunkel dargestellt. Da das Geländemodell eine sehr hohe räumliche Auflösung hat und die Höhenmessungen mit einem Laserscanner sehr genau sind, können die Maschinenwege sehr gut visualisiert werden. Am besten geht das mit einer „Schummerung“. Dabei wird ein Schattenwurf/Lichteinfall durch die Sonne simuliert.\n\nQGIS bietet die Möglichkeit zur Schummerung direkt unter Layereigenschaften-&gt; Symbolisierung-&gt;Darstellungsart-&gt;Schummerung.\n\n\n\nGeländemodell mit Schummerung visualisiert. Maschinenweg in blau.\n\n\n\n\n12.4.2 Kartierung des Maschinenwegs\nZur Kartierung eines Maschinenweges legen sie ein neuen Layer mit dem Namen Weg 1 in einem neuen Geopackage mit dem Namen erschliessung.gpkg in ihrem Projektordner unter vektor an. Kartieren sie den Weg dann als Linie, vergleichbar mit blau eingezeichneten Weg in der Abbildung oben.\n\n\n12.4.3 Analyse der Steigung\nFür die Auswertung der Steigung entlang des Weges können wir das „Profile“ Werkzeug von QGIS verwenden. Bei der ersten Verwendung muss dieses zunächst installiert werden. Dazu öffnen sie Menü-&gt;Erweiterungen-&gt;Erweiterungen verwalten und suchen sie dort nach der Erweiterung “Profile Tool“. Nach der erfolgreichen Installation sollten sie das Profile Tool unter Menü-&gt; Erweiterungen-&gt; Profile Tool -&gt; Terrain Profile finden.\nWenn sie das „Terrain Profile“ Werkzeug starten öffnet sich ein neues Fenster. Wählen sie im Layer-Panel das DGM-Raster aus und klicken sie im rechten Abschnitt des Terrain Profile Tool auf „Layer Hinzufügen“. Wählen sie anschließend im Laye-Panel den Layer „Weg 1“ aus und verwenden sie die Option „Ausgewählte Layer“ im Profiletool. Danach sollten sie das Höhenprofil des kartierten Weges als Profil angezeigt bekommen.\n\n\n\nHöhenprofil des kartierten Maschinenweges\n\n\nWie sie der Abbildung entnehmen können, ist der kartierte Maschinenweg ca. 1600 m lang und überwindet einen Höhenunterschied von ca. 415 m-355 m=60 m. Daraus ergibt sich eine mittlere Steigung von 60m/1600m = 3,75%. Das Profil zeigt aber, dass die Steigung entlang des Maschinenweges nicht einheitlich ist. Sie müssen also prüfen, ob es Abschnitte mit einer Steigung &gt;15% gibt, um zu gewährleisten, dass die Maschinen den Weg sicher befahren können. Das Profile Tool kann neben der „Höhe“ auch die „Steigung in %“ als Profil darstellen. Dazu müssen sie im Profile Tool unten links von „Height“ auf „Slope %“ umstellen.\n\n\n\nSteigungsprofil\n\n\nDas Steigungsprofil zeigt, dass es zwei Punkte gibt, welche kurze Steigungen &gt;20% haben. Wenn sie über diese Gebiete mit der Maus fahren, werden ihnen automatisch in der Karte die entsprechenden Wegabschnitte mit einem roten Punkt markiert. Da die Ausschläge im Neigungsprofil jeweils nur sehr kurz sind, handelt es sich hierbei vermutlich um Artefakte im Geländemodell. Insofern sind die Abschnitte vermutlich für die Maschinen kein Problem. Mit Hilfe des Tools wissen sie aber, welche Bereiche sie evtl. vor der Holzabfuhr nochmal kontrollieren sollten!",
+    "crumbs": [
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Lerneinheit 12: Verwendung von Gelände- und Bestandeshöhenmodellen</span>"
+    ]
+  },
+  {
+    "objectID": "uebung12_Hoehenmodelle.html#aufgabe-03-berechnung-von-bestandeshöhen",
+    "href": "uebung12_Hoehenmodelle.html#aufgabe-03-berechnung-von-bestandeshöhen",
+    "title": "12  Lerneinheit 12: Verwendung von Gelände- und Bestandeshöhenmodellen",
+    "section": "12.5 Aufgabe 03 Berechnung von Bestandeshöhen",
+    "text": "12.5 Aufgabe 03 Berechnung von Bestandeshöhen\nIm zweiten Teil der Übung sollen Bestandeshöhen auf Basis des Gelände- und des Oberflächenmodells ermittelt und die Bestandesstruktur visualisiert werden.\n\n12.5.1 Normalisieren der Höhenmodelle\nDas Gelände- und Oberflächenmodell enthält Höhenmessdaten, die sich auf den Geoid, also über Normalnull, beziehen. Für die Ermittlung der Bestandeshöhe müssen wir die Höhendaten normalisieren. Dazu muss die Höhe des Geländemodells von der des Oberflächenmodells abgezogen werden. Zu Berechnung der Differenz verwenden wir den bereits bekannten Rasterrechner:\nMenü-&gt;Raster-&gt;Rasterrechner\nMit diesem Werkzeug berechnen wir nDOM=DOM-DGM. Das Ergebnis speichern sie unter dem Namen ndsm.tif in ihrem raster Ordner ab.\n\n\n12.5.2 Visualisierung als Bestandeshöhenmodell\nIm nDSM sind die Strukturen der Bestände bereits sehr gut sichtbar. Zur einfacheren Interpretation sollen die Bestandeshöhen als Pseudofarben dargestellt werden. Dazu öffnen sie die Layereigenschaften und wählen dort als Symbolisierung „Einkanalpseudofarben“. Da die Bestände keine negative Höhe haben können, setzen sie den Minimumwert auf 0. Den Maximumwert können sie auf 40 m runden. Als Farbverlauf bietet sich die „Viridis“ Palette an. Damit die Farben gut interpretiert werden können, verwenden wir den Modus „Gleiches Intervall“ mit 9 Klassen. Dadurch ergeben sich 5m Höhenklassen.\n\n\n\nBestandeshöhenmodell\n\n\n\n\n12.5.3 Berechnung der maximalen Baumhöhe pro Bestand\nFür die ausgewählten Bestände sollen nun die maximalen Baumhöhen aus dem nDSM bestimmt werden. Dazu müssen alle Pixel, die in einem Bestand liegen, extrahiert und der Maximalwert bestimmt werden. QGIS bietet dafür die Rasteranalysefunktion „Zonenstatistik“ an, die sie in den Verarbeitungswerkzeugen finden können. Wählen sie in dieser Funktion folgende Parameter:\n\nEingabelayer: Bestandesgrenzen_subset\nRasterlayer: ndsm.tif\nRasterkanal: 1\nZu berechnende Statistik: „Maximum“\nRäumliche Statistik: max_Baumhoehen.gpkg (in ihrem vektor Ordner)\n\nIm letzten Schritt können sie das neue geopackage im QGIS so darstellen, dass die Polygone in Abhängigkeit ihrer maximalen Höhe eingefärbt werden. Wählen sie dazu eine passende Symbolisierung.\n\n\n\n\n\n\nWichtigBestandesoberhöhen vs. maximal Baumhöhen\n\n\n\nDie Bestandesoberhöhen sind in der Forsteinrichtung klar definierte Werte z.B. als H100 oder Weissersche Oberhöhe. Die Bestimmung dieser Höhenwerte erfordert eine Vollaufnahme inkl. Kluppung sämtlicher Bäume der jeweiligen Schicht. Das Vorgehen bei der raster-basierten Auswertung von ALS-Daten, wie in der Übung vorgestellt, berechnet die maximale Bestandeshöhe anhand des maximalen Pixelwertes des nDOM innerhalb der Bestandesgrenzen. Diese ist üblicherweise deutlich höher als die H100 und weniger aussagekräftig. Ein geeigneteres Verfahren zur Bestimmung der Oberhöhen aus ALS-Daten wäre die Verwendung von Höhenperzentilen z.B. 95%, diese ist jedoch in der aktuellen QGIS-Version nicht ohne weiteres möglich.\n\n\nOptional:\nNutzen sie die die Funktion “Geländehöhenprofil” aus der Übung 10 (siehe Kapitel 10.7) um für einzelnen Bestände zu prüfen ob die angegebenen Maximal- und Mittelwerte der Bestandeshöhen plausibel sind.",
+    "crumbs": [
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Lerneinheit 12: Verwendung von Gelände- und Bestandeshöhenmodellen</span>"
+    ]
+  },
+  {
+    "objectID": "uebung13_Rueckegassenkartierung.html",
+    "href": "uebung13_Rueckegassenkartierung.html",
+    "title": "13  Lerneinheit 13: Kartierung von Rückegassen mit ALS-Daten",
+    "section": "",
+    "text": "13.1 Lernziele & Aufgabenstellung\nIn dieser Lehreinheit wird vorgestellt, wie ALS-Daten für die digitale Kartierung von forstlichen Rückegassen genutzt werden können. Als Fallbeispiel dient ein Bestand nahe der Ortschaft Menteroda in Thüringen. Hier soll im ersten Schritt eine Kartierung durch visuelle Interpretation der aufbereiteten Geländemodelle erfolgen. Anschließend wird das, von der HAWK entwickelte, TrailScan-Plugin genutzt, um mithilfe eine CNN-Modells die vorhandenen Rückegassen automatisch zu kartieren.\nLernziele\nDie Studierenden sollen:\nAufgaben",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Lerneinheit 13: Kartierung von Rückegassen mit ALS-Daten</span>"
+    ]
+  },
+  {
+    "objectID": "uebung13_Rueckegassenkartierung.html#lernziele-aufgabenstellung",
+    "href": "uebung13_Rueckegassenkartierung.html#lernziele-aufgabenstellung",
+    "title": "13  Lerneinheit 13: Kartierung von Rückegassen mit ALS-Daten",
+    "section": "",
+    "text": "Aus ALS-Daten Gelände- und Mikroreliefmodell ableiten um diese für die visuelle Kartierung von Rückegassen in Waldbeständen zu nutzen\nMithilfe eines bereits trainierten KI-Modells die Rückegassen automatisch kartieren.\nDie Ergebnisse beider Ansätze sollen verglichen und diskutiert werden.\n\n\n\nRaster- und Vektordaten importieren\nBerechnung des Gelände- und Mikroreliefmodells\nVisuelle Kartierung der Rückegassen\nAutomatisierte Kartierung der Rückegassen",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Lerneinheit 13: Kartierung von Rückegassen mit ALS-Daten</span>"
+    ]
+  },
+  {
+    "objectID": "uebung13_Rueckegassenkartierung.html#aufgabe-0-anlegen-eine-neuen-qgis-projektes-und-kontrolle-des-nutzerprofils",
+    "href": "uebung13_Rueckegassenkartierung.html#aufgabe-0-anlegen-eine-neuen-qgis-projektes-und-kontrolle-des-nutzerprofils",
+    "title": "13  Lerneinheit 13: Kartierung von Rückegassen mit ALS-Daten",
+    "section": "13.2 Aufgabe 0: Anlegen eine neuen QGIS-Projektes und Kontrolle des Nutzerprofils",
+    "text": "13.2 Aufgabe 0: Anlegen eine neuen QGIS-Projektes und Kontrolle des Nutzerprofils\nFolgen sie der Anleitung aus LE01 Kapitel 1.3 um eine neue Ordnerstruktur und ein neues QGIS-Projekt anzulegen. In der Übung bietet es sich an den Ordner “daten” weiter in die Unterordner “vektor” und “raster” zu unterteilen. Zusätzlich ist es für diese Übung sinnvoll einen Ordner “modelle” anzulegen. Prüfen sie außerdem ob Ihr Nutzerprofil korrekt geladen wurde und ob die OTB-Funktionen im Werkzeugkasten vorhanden sind. Sollte dies nicht der Fall sein stellen sie ihr gesichertes Nutzerprofil wieder her (siehe auch LE01 Kapitel 1.2.4).",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Lerneinheit 13: Kartierung von Rückegassen mit ALS-Daten</span>"
+    ]
+  },
+  {
+    "objectID": "uebung13_Rueckegassenkartierung.html#aufgabe-01-download-und-import-der-geodaten",
+    "href": "uebung13_Rueckegassenkartierung.html#aufgabe-01-download-und-import-der-geodaten",
+    "title": "13  Lerneinheit 13: Kartierung von Rückegassen mit ALS-Daten",
+    "section": "13.3 Aufgabe 01: Download und Import der Geodaten",
+    "text": "13.3 Aufgabe 01: Download und Import der Geodaten\n\n13.3.1 ALS-basierte Höhendaten\nFür die Übung verwenden wir Höhendaten des Thüringer Landesamts für Bodenmanagement und Geoinformation (TLBG). Diese Höhendaten wurden mit Hilfe eines Airborne Laser Scanners (ALS) im Februar 2023 erfasst. Das TLBG stellt sowohl die Punktinformation (LAZ), als auch bereits gerasterte digitale Geländemodelle (DGM) und digitale Oberflächenmodelle (DOM) mit einer räumlichen Auflösung von 1m zur Verfügung. Für die Übung verwenden wir Punktwolkendaten. Um die Rechen- und Downloadzeiten zu verkürzen, wurden diese Daten bereits heruntergeladen und auf den Bestand zugeschnitten. Der vorbereitete ALS-Datensatz kann als copc.laz Datei unter folgendem Link heruntergeladen werden:\nhttps://cloud.hawk.de/index.php/s/xr5ZK5jNEG86qDC\n\n\n13.3.2 Vektordaten\nFür die Übung arbeiten wir mit einem Bestanden 84a1. Sie finden ein Geopackage mit den Außengrenzen des Bestandes unter folgendem Link:\nhttps://cloud.hawk.de/index.php/s/jFDLF2NqjA9LWB3\nIm Rahmen des TrailScan-Projektes der HAWK wurden in einer Teilfläche des Bestandes die vorhandenen Rückegassen mit einem differenziellen GNSS-Empfänger eingemessen. Diese Daten sollten zur Validierung genutzt werden und können unter folgendem Link heruntergeladen werden:\nhttps://cloud.hawk.de/index.php/s/zSwM5wPabEFEkX2",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Lerneinheit 13: Kartierung von Rückegassen mit ALS-Daten</span>"
+    ]
+  },
+  {
+    "objectID": "uebung13_Rueckegassenkartierung.html#aufgabe-02-berechnung-der-als-rasterkarten-für-die-kartierung-der-rückegassen",
+    "href": "uebung13_Rueckegassenkartierung.html#aufgabe-02-berechnung-der-als-rasterkarten-für-die-kartierung-der-rückegassen",
+    "title": "13  Lerneinheit 13: Kartierung von Rückegassen mit ALS-Daten",
+    "section": "13.4 Aufgabe 02: Berechnung der ALS-Rasterkarten für die Kartierung der Rückegassen",
+    "text": "13.4 Aufgabe 02: Berechnung der ALS-Rasterkarten für die Kartierung der Rückegassen\nFür die visuelle und automatisierte Kartierung der Rückegassen werden aus den ALS-Punktwolken vier Rasterkarten mit einer räumlichen Auflösung von 25cm abgeleitet: Geländemodell (DGM), Vegetationshöhenmodell (VHM), Mikroreliefmodell (MRM) und Vegetationsdichte (VI). Die Berechnung dieser Rasterkarten kann mit dem TrailScan-Plugin automatisiert durchgeführt werden.\n\n13.4.1 Installation des TrailScan-Plugins\n\n\n\nTrailScan-Logo\n\n\nZur Installation des TrailScan-Plugins öffnen sie Menü-&gt;Erweiterungen-&gt;Erweiterungen verwalten und suchen sie dort nach der Erweiterung “TrailScan“. Nach der erfolgreichen Installation sollten sie das TrailScan Tool unter in den Verarbeitungswerkzeugen angezeigt bekommen.\n\n\n\n\n\n\nWichtigInstallation einer alternativen Plugin-Version\n\n\n\nSollten Probleme bei der Installation des Plugins über den Plugin Manager auftreten, kann alternative eine aktualisierte BETA Version des Plugins als ZIP Datei hier heruntergeladen werden: https://cloud.hawk.de/index.php/s/C5qz8kJErQkZ335\nDie Zip Datei kann im Plugin manager - Aus ZIP installieren - direkt geladen werden. Nach der Installation ist eventuell ein Neustart von QGIS nötig.\n\n\n\n\n13.4.2 Berechnung der ALS-Rasterkarten /Pre-Processing\nDas TrailScan-Plugin bietet zwei Funktionen “Pre-Processing Point Cloud” und “Inference”. Mit der ersten Funktion können die genannten Rasterkarten erzeugt werden die sie unter Verarbeitung-&gt;Werkzeugkiste-TrailSCan&gt;01 Preprocessing Point Cloud öffnen können. Hier können folgende Werte gesetzt werden:\n\ninput point cloud: abt_84a1.copc.laz”\nNormalized: “abt_84a1_normalized.tif” (Im Ordner raster!)\n\nDiese Berechnung kann mehrere Minuten dauern. Als Ergebnis wird ein neues Raster mit vier Bändern ausgegeben.\n\n\n13.4.3 Visualisierung des Geländemodells\nDas TrailScan-Plugin erzeugt ein hochauflösendes DGM welches im ersten Band der Datei “abt_84a1_normalized.tif” gespeichert ist. Für die spätere automatisierte Auswertung werden die Pixelwerte auf den Wertebereich 0-1 normiert. Dadurch können die Pixelwerte des DGM nicht direkt als Höhenangabe interpretiert werden. Die relativen Abstufungen sind aber noch erhalten, so dass sich das DGM sehr gut als Schummerungsbild darstellen lässt. Dazu kann die Schummerung direkt unter Layereigenschaften-&gt; Symbolisierung-&gt;Darstellungsart-&gt;Schummerung. ausgewählt werden. Aufgrund der Normierung des Wertebereiches muss der Z-Faktor auf 100 gesetzt werden.\n\n\n\nGeländemodell mit Schummerung visualisiert\n\n\n\n\n13.4.4 Visualisierung des Mikroreliefmodells (MRM)\nNeben dem Geländemodell wird auch ein Mikroreliefmodell erzeugt und im Band 2 des Rasters “abt_84a1_normalized.tif” gespeichert. Dieses Raster zeigt die lokalen Unterschiede in der Steigung und hebt dadurch besonders die kleinräumigen Änderungen z.B. Spurrillen hervor. Erstellen sie eine Kopie des Layers “abt_84a1_normalized.tif” und wählen sie für diese Kopie die Darstellung als eine Einkanalgraustufenbild.",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Lerneinheit 13: Kartierung von Rückegassen mit ALS-Daten</span>"
+    ]
+  },
+  {
+    "objectID": "uebung13_Rueckegassenkartierung.html#aufgabe-03-visuelle-kartierung-der-rückegassen",
+    "href": "uebung13_Rueckegassenkartierung.html#aufgabe-03-visuelle-kartierung-der-rückegassen",
+    "title": "13  Lerneinheit 13: Kartierung von Rückegassen mit ALS-Daten",
+    "section": "13.5 Aufgabe 03: Visuelle Kartierung der Rückegassen",
+    "text": "13.5 Aufgabe 03: Visuelle Kartierung der Rückegassen\nZur visuellen Kartierung der Rückegassen legen sie ein neuen Layer mit dem Namen rueckegassen und dem Geometrietype “Linie” in einem neuen Geopackage mit dem Namen erschliessung.gpkg in ihrem Projektordner unter vektor an. Achten sie darauf das der Layer das korrekte Koordinatenreferenzsystem verwendet.\nHinweise zur Kartierung:\nBitte notieren sie die Zeit die sie für die Erfassung benötigen. Kartieren sie alle sichtbaren Rückegassen als Linie mittig zwischen den zwei Fahrspuren. Nutzen sie dafür sowohl das DGM als auch das MRM. Bei der visuellen Kartierung sollten alle sichtbaren Fahrspuren möglichst genau digitalisiert werden. Dabei sollten nur vorhandene Befahrungen kartiert werden und nicht etwa idealisierte Linien. Das heißt es können auch unterbrochene Fahrlinien kartiert werden, oder Linien die im Bestand endet und nicht mit anderen verbunden sind.\n\nFrage:\nWie lange haben sie für die Kartierung benötigt?\nGibt es Bildbereiche in denen die Kartierung einfache oder schwieriger ist?\nWie beurteilen sie die Erschließung des Bestandes?",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Lerneinheit 13: Kartierung von Rückegassen mit ALS-Daten</span>"
+    ]
+  },
+  {
+    "objectID": "uebung13_Rueckegassenkartierung.html#aufgabe-04-automatisierte-kartierung-der-rückegassen",
+    "href": "uebung13_Rueckegassenkartierung.html#aufgabe-04-automatisierte-kartierung-der-rückegassen",
+    "title": "13  Lerneinheit 13: Kartierung von Rückegassen mit ALS-Daten",
+    "section": "13.6 Aufgabe 04: Automatisierte Kartierung der Rückegassen",
+    "text": "13.6 Aufgabe 04: Automatisierte Kartierung der Rückegassen\nIm nächsten Schritt soll für den gleichen Bereich eine automatisierte Kartierung mit dem TrailScan-Plugin erfolgen. Öffnen sie dazu die Funktion “02 Inference” des Plugins in der Werkzeugkiste.\nDamit die Rückegassen automatisiert Klassifiziert werden können benötigt das Plugin ein bereits trainiertes KI-Modell. Dieses wurde bereits für Thüringen erstellt und veröffentlicht und kann auf folgender Seite heruntergeladen werden: https://doi.org/10.25625/GEIP6T.\nLaden sie die Datei TrailScan_Model_Thueringia.onnx und speicher sie diese in ihrem Projektordner z.B. im Ordner “modelle”. Geben sie im TrailScan-Plugin anschließend den korrekten Pfad zum Model an. Dem Output können sie im “raster” Ordner mit unter ab7_84a1_rueckegassenkarte.tif abspeichern.\n\nAls Output erhalten wir eine Rasterkarte mit dem Wertebereich 0-1. Die Pixelwerte geben dabei die Wahrscheinlichkeit an mit der es sich bei dem Pixel um eine Rückegasse handelt. Ändern sie die Darstellung der Rasterkarte so, dass eine gut sichtbare Farbpalette verwendet wird (siehe Cover-Bild oben).",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Lerneinheit 13: Kartierung von Rückegassen mit ALS-Daten</span>"
+    ]
+  },
+  {
+    "objectID": "uebung13_Rueckegassenkartierung.html#aufgabe-05-vergleich-der-beiden-verfahren",
+    "href": "uebung13_Rueckegassenkartierung.html#aufgabe-05-vergleich-der-beiden-verfahren",
+    "title": "13  Lerneinheit 13: Kartierung von Rückegassen mit ALS-Daten",
+    "section": "13.7 Aufgabe 05: Vergleich der beiden Verfahren",
+    "text": "13.7 Aufgabe 05: Vergleich der beiden Verfahren\nIm letzten Schritt sollen die beiden Verfahren miteinander verglichen werden. Überlagern sie dazu:\n1) die TrailScan-Rückegassenkarte\n2) die von Ihnen visuell interpretierten Rückegassen\n3) die GNSS-Aufnahmen\nDie GNSS-Aufnahmen wurden im Winter 2025 durchgeführt. Dabei wurden auch Fotos der Rückegassen aufgenommen:\n\n\n\nRückegasse 22. Quelle: Tanja Kempen\n\n\n\n\n\nRückegasse 21. Quelle: Tanja Kempen\n\n\n\n\n\nRückegasse 20. Quelle: Tanja Kempen\n\n\n\nFragen:\nWie unterscheidet sich die Qualität der visuellen und der automatisiert Kartieren Rückegassen?\nKönnen im Nachhinein Rückegassen im DGM und MRM gefunden werden, die ohne die automatische Kartierung nicht gefunden wurden?\nWelche Zeitersparnis ergibt sich durch die automatisierte Kartierung?",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Lerneinheit 13: Kartierung von Rückegassen mit ALS-Daten</span>"
+    ]
+  },
+  {
+    "objectID": "uebung14_Kartenlayouts.html",
+    "href": "uebung14_Kartenlayouts.html",
+    "title": "14  Lerneinheit 14: Erstellen von Kartenlayouts",
+    "section": "",
+    "text": "14.1 Lernziele & Aufgabenstellung\nIn dieser Übung wird vorgestellt wie ansprechendes Kartenlayouts erstellen und als exportiert werden können. Das Kartenlayout soll alle wesentliche Kartenelemente enthalten. QGIS bietet hierzu sehr viele Optionen, die wir im Rahmen des Kurses nur anschneiden können. Eine detaillierte Beschreibung der unterschiedlichen Funktionen finden sie in der QGIS-Dokumentation:\nhttps://docs.qgis.org/3.40/de/docs/user_manual/print_composer/index.html\nLernziele\nDie Studierenden sollen:\nAufgaben",
+    "crumbs": [
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Lerneinheit 14: Erstellen von Kartenlayouts</span>"
+    ]
+  },
+  {
+    "objectID": "uebung14_Kartenlayouts.html#lernziele-aufgabenstellung",
+    "href": "uebung14_Kartenlayouts.html#lernziele-aufgabenstellung",
+    "title": "14  Lerneinheit 14: Erstellen von Kartenlayouts",
+    "section": "",
+    "text": "Mithilfe der Layoutverwaltung Karten erstellen und verwalten können\nAlle wichtigen Kartenelemente kennen und erstellen können\nUnterschiedliche Daten Visualisierungstechniken einsetzen können\n\n\n\nErstellen eines QGIS-Projektes inkl. Datendownload\nErstellen eine Luftbildkarte\nErstellen einer Bestandesshöhenkarte\nErstellen einer Geländehöhenkarte",
+    "crumbs": [
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Lerneinheit 14: Erstellen von Kartenlayouts</span>"
+    ]
+  },
+  {
+    "objectID": "uebung14_Kartenlayouts.html#aufgabe-0-anlegen-eine-neuen-qgis-projektes-und-kontrolle-des-nutzerprofils",
+    "href": "uebung14_Kartenlayouts.html#aufgabe-0-anlegen-eine-neuen-qgis-projektes-und-kontrolle-des-nutzerprofils",
+    "title": "14  Lerneinheit 14: Erstellen von Kartenlayouts",
+    "section": "14.2 Aufgabe 0: Anlegen eine neuen QGIS-Projektes und Kontrolle des Nutzerprofils",
+    "text": "14.2 Aufgabe 0: Anlegen eine neuen QGIS-Projektes und Kontrolle des Nutzerprofils\nFolgen sie der Anleitung aus LE01 Kapitel 1.3 um eine neue Ordnerstruktur und ein neues QGIS-Projekt anzulegen. In der Übung bietet es sich an den Ordner “daten” weiter in die Unterordner “vektor” und “raster” zu unterteilen. Zusätzlich ist es für diese Übung sinnvoll einen Ordner “modelle” anzulegen. Prüfen sie außerdem ob Ihr Nutzerprofil korrekt geladen wurde und ob die OTB-Funktionen im Werkzeugkasten vorhanden sind. Sollte dies nicht der Fall sein stellen sie ihr gesichertes Nutzerprofil wieder her (siehe auch LE01 Kapitel 1.2.4).",
+    "crumbs": [
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Lerneinheit 14: Erstellen von Kartenlayouts</span>"
+    ]
+  },
+  {
+    "objectID": "uebung14_Kartenlayouts.html#aufgabe-01-download-und-import-der-geodaten",
+    "href": "uebung14_Kartenlayouts.html#aufgabe-01-download-und-import-der-geodaten",
+    "title": "14  Lerneinheit 14: Erstellen von Kartenlayouts",
+    "section": "14.3 Aufgabe 01: Download und Import der Geodaten",
+    "text": "14.3 Aufgabe 01: Download und Import der Geodaten\n\n14.3.1 Luftbilddaten\nFür die Übung verwenden wir Luftbilddaten des Thüringer Landesamts für Bodenmanagement und Geoinformation (TLBG) im FoA Heilligenstadt. Sie können ein entsprechend vorbereitetes Ortholuftbildmosaik unter folgendem Link herunterladen:\nDOP: https://cloud.hawk.de/index.php/s/PJoEXMtfRsWgTeQ\nSpeichern sie die Daten unter “raster”.\n\n\n14.3.2 ALS-basierte Höhendaten\nFür die Übung verwenden wir außerdem Höhendaten des Thüringer Landesamts für Bodenmanagement und Geoinformation (TLBG). Diese Höhendaten wurden mit Hilfe eines Airborne Laser Scanners (ALS) erfasst. Für die Übung wurde das DOM bereits auf Basis des DGM zu einem nDOM normalisiert (siehe Kapitel 12.5.2).\n1.) DGM: https://cloud.hawk.de/index.php/s/ZKnnD8WkYNcEfrk\n2. )nDOM: https://cloud.hawk.de/index.php/s/EQQKHgrpwYZWApf\nSpeichern sie die Daten unter “raster”.\n\n\n14.3.3 Vektordaten\nDer Landesbetrieb ThüringenForst stellt umfangreiche forstliche Geodaten kostenfrei zur Verfügung. Unter anderem werden Daten zur Waldeinteilung und Bestockung zur Verfügung gestellt, die wir in der Übung verwenden wollen. Diese Daten können im ESRI-Shapefile Format unter folgendem Link für ganz Thüringen heruntergeladen werden:\nhttps://geomis.geoportal-th.de/geonetwork/srv/ger/catalog.search#/metadata/1f690892-d1c3-436a-819e-a26d207e17d7\nEntpacken sie die Dateien dieses shapefiles in den Ordner “../daten/vektor/” und fügen sie die Waldeinteilung in das QGIS-Projekt ein.\nFür die Übung beschränken wir uns auf die Auswertung folgende Abteilungen des FoA Heiligenstadt (55):\nAbt. 24, 25, 26, 27, 28,29, und 30.\nFiltern sie dazu den Datensatz wie in Übung Kapitel 5.4 vorgestellt.\nAnschließen wählen sie eine geeignete Symbolisierung für die Außengrenzen der Bestände. Außerdem sollen die Bestände nach dem Schema “AbtUabtTF” (z.B. 30a1) beschriftet werden. Dazu können sie unter Eigenschaften-&gt;Symbolisierung-&gt;Beschriftung-&gt;Einzelne Beschriftungen wählen. Da es bisher kein Feld in der Attributabelle des Datensatzes gibt das die Beschriftung enthält müssen wir einen Feldausdruck verwenden. Dazu unter “Wert” auf das Summenzeichen gehen und folgenden Ausdruck hinterlegen:\n“ABT” ||“UABT” || “TFL”",
+    "crumbs": [
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Lerneinheit 14: Erstellen von Kartenlayouts</span>"
+    ]
+  },
+  {
+    "objectID": "uebung14_Kartenlayouts.html#aufgabe-02-vorbereitung-der-rasterkarten",
+    "href": "uebung14_Kartenlayouts.html#aufgabe-02-vorbereitung-der-rasterkarten",
+    "title": "14  Lerneinheit 14: Erstellen von Kartenlayouts",
+    "section": "14.4 Aufgabe 02: Vorbereitung der Rasterkarten",
+    "text": "14.4 Aufgabe 02: Vorbereitung der Rasterkarten\nPassen sie nun die Darstellung der drei Rastermosaike wie folgt an:\n1.) Das DGM soll als Schummerungsbild dargestellt werden. Für eine attraktivere Darstellung können sie das Schummerungsbild auch mit einem Pseudofarbkanal überlagern. Erstellen sie dazu zunächst eine Kopie des DGM-Layers. Nutzen sie für diese Kopie eine Einkanalpseudofarbendarstellung mit einer geeigneten Farbskala (z.B. spektral invertiert). Stellen sie hier unter Transparanz die Globaledeckkraft auf 50%. Dadurch wird dieses Layer halbtransparent dargestellt und das darunterliegende Schummerungsbild zusätzlich sichtbar.\n2.) Dasn nDOM soll als Einkanalpseudofarbe mit der Farbpalette “viridis” dargestellt werden. Stellen sie sicher das der Wertebereich der Legende bei 0 startet und möglichst in geraden Schritten (z.B. 5m ) einteilt.\n3.) Das DOP soll als CIR-Falschfarbenbild dargestellt sein.",
+    "crumbs": [
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Lerneinheit 14: Erstellen von Kartenlayouts</span>"
+    ]
+  },
+  {
+    "objectID": "uebung14_Kartenlayouts.html#aufgabe-03-erstellen-eines-kartenlayouts-für-eine-luftbildkarte",
+    "href": "uebung14_Kartenlayouts.html#aufgabe-03-erstellen-eines-kartenlayouts-für-eine-luftbildkarte",
+    "title": "14  Lerneinheit 14: Erstellen von Kartenlayouts",
+    "section": "14.5 Aufgabe 03: Erstellen eines Kartenlayouts für eine Luftbildkarte",
+    "text": "14.5 Aufgabe 03: Erstellen eines Kartenlayouts für eine Luftbildkarte\nIn einem QGIS Projekt können mehrere Karten erstellt und gespeichert werden. Zur Verwaltung der verschiedenen Karten wird der Kartenlayout-Manager verwendet. Sie finden diesen im Menü unter Projekt. Hier können sie ein neues Drucklayout „Luftbild“ anlegen.\nNachdem sie ein Kartenlayout im Manager angelegt haben öffnet sich ein neues Fenster mit dem noch leeren Kartenlayout. Um ein erstes Layout zu erstellen gehen wir folgende Schritte durch:\n1.)  Hinzufügen eines Kartenfelds.\nDazu wählen sie links das Werkzeug “Karte hinzufügen” und ziehen anschließend in ihrem Layout ein Kartenfeld auf. QGIS stellt danach automatisch die Layer aus dem Hauptfenster dar.\n2.) Hinzufügen eines Titels\nDazu wählen sie links das Werkzeug “Beschriftung hinzufügen” und ziehen anschließend ein Textfeld oberhalb ihrer Karte auf. Geben sie dann im Feld rechts unter „Beschriftung“ einen sinnvollen Titel (z.b. Luftbildkarte FoA Heiligenstadt) ein und wählen sie eine passende Schriftgröße aus.\n3.) Hinzufügen einer Legende\nDazu wählen sie links das Werkzeug “Legende hinzufügen” aus und ziehen anschließend ein Legendenfeld rechts neben ihren Kartenfeld auf. QGIS übernimmt für die Legende dann automatisch die Symbolisierung aller Layer des Projektes. Wenn sie rechts unter Legendenelemente die Funktion „Automatisch aktualisieren“ entfernen, können sie Einträge manuell hinzufügen und entfernen.\n4.) Hinzufügen eine Nordpfeils\nDazu wählen sie links das Werkzeug “Nordpfeil hinzufügen” und ziehen anschließend ein Fenster für den Nordpfeil auf.\n5.) Koordinatengitter hinzufügen\nUm ein Koordinatengitter hinzuzufügen selektieren sie zunächst das Kartenfenster in dem sie darauf klicken. Anschließend öffnen sie die Option „Gitter“, die ihnen im rechten Teil unter den Haupteigenschaften des Kartenfelds angezeigt wird. Über das grüne Plus Symbol legen sie ein neues Gitter an. Anschließend wählen sie dieses Gitter aus, und klicken auf „Gitter ändern“. Hier ändern wir folgende Optionen:\n\nGittertype: „Nur Rahmen und Beschriftungen“\nIntervall: X=500m, Y=500m\nRahmenstil: „Äußere Markierung“\nKoordinaten zeichnen: „ja“\nKoordinaten nur “links” und “unten”. “Oben und”rechts” deaktivieren\nKoordinatengenauigkeit: 0\n\n6.) Maßstab\nFügen sie ein graphischen Maßstabsbalken hinzu. Dazu wählen sie links das Werkzeug “Maßstab hinzufügen” und ziehen anschließend ein Fenster für den Maßstab auf. Über die Eigenschaften dieses Elements können sie z.B. die Anzahl an Segmenten steuern.\n7.) Kartenfeld\nSie sollten der Karte noch einige weitere Metadaten hinzufügen. Dazu legen sie, wie beim Titel, ein neues Textfeld an und ergänzen hier ihren Namen und das Koordinatenreferenzsystem.\n\n\n\nLuftbildkarte",
+    "crumbs": [
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Lerneinheit 14: Erstellen von Kartenlayouts</span>"
+    ]
+  },
+  {
+    "objectID": "uebung14_Kartenlayouts.html#aufgabe-04-erstellen-eines-kartenlayouts-für-eine-bestandeshöhenkarte",
+    "href": "uebung14_Kartenlayouts.html#aufgabe-04-erstellen-eines-kartenlayouts-für-eine-bestandeshöhenkarte",
+    "title": "14  Lerneinheit 14: Erstellen von Kartenlayouts",
+    "section": "14.6 Aufgabe 04: Erstellen eines Kartenlayouts für eine Bestandeshöhenkarte",
+    "text": "14.6 Aufgabe 04: Erstellen eines Kartenlayouts für eine Bestandeshöhenkarte\nIm nächsten Schritt soll eine Bestandeshöhenkarte erstellt werden. Damit nicht alle Layout-Elemente neu erstellt werden müssen, bietet es sich an das bestehende Layout als Vorlage zu verwenden. Dazu kann unter Projekte -&gt; Layout-Verwaltung das bestehende Layout dupliziert und eines neues Layout mit dem Namen “Bestandeshöhenkarte” angelegt werden.\nIm neuen Layout müssen nun Titel, Legende und Kartenfeld entsprechend angepasst werden.\n\n\n\nBestandehöhenkarte",
+    "crumbs": [
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Lerneinheit 14: Erstellen von Kartenlayouts</span>"
+    ]
+  },
+  {
+    "objectID": "uebung14_Kartenlayouts.html#aufgabe-05-erstellen-eines-kartenlayouts-für-eine-geländemodellkarte",
+    "href": "uebung14_Kartenlayouts.html#aufgabe-05-erstellen-eines-kartenlayouts-für-eine-geländemodellkarte",
+    "title": "14  Lerneinheit 14: Erstellen von Kartenlayouts",
+    "section": "14.7 Aufgabe 05: Erstellen eines Kartenlayouts für eine Geländemodellkarte",
+    "text": "14.7 Aufgabe 05: Erstellen eines Kartenlayouts für eine Geländemodellkarte\nAls dritte Karte soll eine Karte mit dem Geländemodell erstellt werden. Dazu soll eine Schummerungskarte mit einer Pseudofarbkarte überblendet werden. Außerdem soll eine zweites Kartenfeld mit einer Übersichtkarte hinzugefügt werden. Die Übersichtskarte soll den Maßstab 1:500000 haben und Openstreetmap Daten darstellen. Außerdem soll ein Indikator den Ausschnitt der Hautkarte anzeigen.\n\n\n\nGeländemodellkarte",
+    "crumbs": [
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Lerneinheit 14: Erstellen von Kartenlayouts</span>"
+    ]
+  }
+]

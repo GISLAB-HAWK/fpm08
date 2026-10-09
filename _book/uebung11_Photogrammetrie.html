@@ -8,7 +8,7 @@
 
 <meta name="description" content="Übungsaufgaben für das Modul FPM08 forstliche Fernerkundung">
 
-<title>8&nbsp; Lerneinheit 08: Validierung einer thematischen Waldtypenkarte des Nationalpark Harz – Forstliche Fernerkundung</title>
+<title>11&nbsp; Lerneinheit 11: Vergleich von ALS- und photogrammetrischen Punktwolken – Forstliche Fernerkundung</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -34,8 +34,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./uebung09_aenderungsanalyse.html" rel="next">
-<link href="./uebung07_bildklassifikation.html" rel="prev">
+<link href="./uebung12_Hoehenmodelle.html" rel="next">
+<link href="./uebung10_Laserscanning.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -86,7 +86,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./uebung08_validierung.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Lerneinheit 08: Validierung einer thematischen Waldtypenkarte des Nationalpark Harz</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./uebung11_Photogrammetrie.html"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Lerneinheit 11: Vergleich von ALS- und photogrammetrischen Punktwolken</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Suchen" onclick="window.quartoOpenSearch();">
@@ -164,7 +164,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./uebung08_validierung.html" class="sidebar-item-text sidebar-link active">
+  <a href="./uebung08_validierung.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Lerneinheit 08: Validierung einer thematischen Waldtypenkarte des Nationalpark Harz</span></span></a>
   </div>
 </li>
@@ -182,7 +182,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./uebung11_Photogrammetrie.html" class="sidebar-item-text sidebar-link">
+  <a href="./uebung11_Photogrammetrie.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Lerneinheit 11: Vergleich von ALS- und photogrammetrischen Punktwolken</span></span></a>
   </div>
 </li>
@@ -220,17 +220,25 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Inhaltsverzeichnis</h2>
    
   <ul>
-  <li><a href="#lernziele-aufgabenstellung" id="toc-lernziele-aufgabenstellung" class="nav-link active" data-scroll-target="#lernziele-aufgabenstellung"><span class="header-section-number">8.1</span> Lernziele &amp; Aufgabenstellung</a></li>
-  <li><a href="#aufgabe-0-anlegen-eine-neuen-qgis-projektes-und-kontrolle-des-nutzerprofils" id="toc-aufgabe-0-anlegen-eine-neuen-qgis-projektes-und-kontrolle-des-nutzerprofils" class="nav-link" data-scroll-target="#aufgabe-0-anlegen-eine-neuen-qgis-projektes-und-kontrolle-des-nutzerprofils"><span class="header-section-number">8.2</span> Aufgabe 0: Anlegen eine neuen QGIS-Projektes und Kontrolle des Nutzerprofils</a></li>
-  <li><a href="#aufgabe-01-download-und-import-der-geodaten" id="toc-aufgabe-01-download-und-import-der-geodaten" class="nav-link" data-scroll-target="#aufgabe-01-download-und-import-der-geodaten"><span class="header-section-number">8.3</span> Aufgabe 01: Download und Import der Geodaten</a>
+  <li><a href="#lernziele-aufgabenstellung" id="toc-lernziele-aufgabenstellung" class="nav-link active" data-scroll-target="#lernziele-aufgabenstellung"><span class="header-section-number">11.1</span> Lernziele &amp; Aufgabenstellung</a></li>
+  <li><a href="#aufgabe-0-anlegen-eine-neuen-qgis-projektes-und-kontrolle-des-nutzerprofils" id="toc-aufgabe-0-anlegen-eine-neuen-qgis-projektes-und-kontrolle-des-nutzerprofils" class="nav-link" data-scroll-target="#aufgabe-0-anlegen-eine-neuen-qgis-projektes-und-kontrolle-des-nutzerprofils"><span class="header-section-number">11.2</span> Aufgabe 0: Anlegen eine neuen QGIS-Projektes und Kontrolle des Nutzerprofils</a></li>
+  <li><a href="#aufgabe-01-download-und-import-der-geodaten" id="toc-aufgabe-01-download-und-import-der-geodaten" class="nav-link" data-scroll-target="#aufgabe-01-download-und-import-der-geodaten"><span class="header-section-number">11.3</span> Aufgabe 01: Download und Import der Geodaten</a>
   <ul class="collapse">
-  <li><a href="#rasterdaten" id="toc-rasterdaten" class="nav-link" data-scroll-target="#rasterdaten"><span class="header-section-number">8.3.1</span> Rasterdaten</a></li>
-  <li><a href="#vektordaten" id="toc-vektordaten" class="nav-link" data-scroll-target="#vektordaten"><span class="header-section-number">8.3.2</span> Vektordaten</a></li>
+  <li><a href="#als-basierte-punktwolkendaten" id="toc-als-basierte-punktwolkendaten" class="nav-link" data-scroll-target="#als-basierte-punktwolkendaten"><span class="header-section-number">11.3.1</span> <strong>ALS-basierte Punktwolkendaten</strong></a></li>
+  <li><a href="#ortholuftbilder" id="toc-ortholuftbilder" class="nav-link" data-scroll-target="#ortholuftbilder"><span class="header-section-number">11.3.2</span> <strong>Ortholuftbilder</strong></a></li>
+  <li><a href="#bild-basierte-punktwolkendaten" id="toc-bild-basierte-punktwolkendaten" class="nav-link" data-scroll-target="#bild-basierte-punktwolkendaten"><span class="header-section-number">11.3.3</span> <strong>Bild-basierte Punktwolkendaten</strong></a></li>
   </ul></li>
-  <li><a href="#aufgabe-02-erstellen-eines-validierungslayers" id="toc-aufgabe-02-erstellen-eines-validierungslayers" class="nav-link" data-scroll-target="#aufgabe-02-erstellen-eines-validierungslayers"><span class="header-section-number">8.4</span> Aufgabe 02: Erstellen eines Validierungslayers</a></li>
-  <li><a href="#aufgabe-03-visuelle-interpretation-der-validierungspunkte" id="toc-aufgabe-03-visuelle-interpretation-der-validierungspunkte" class="nav-link" data-scroll-target="#aufgabe-03-visuelle-interpretation-der-validierungspunkte"><span class="header-section-number">8.5</span> Aufgabe 03: Visuelle Interpretation der Validierungspunkte</a></li>
-  <li><a href="#aufgabe-04-erstellen-einer-fehlermatrix" id="toc-aufgabe-04-erstellen-einer-fehlermatrix" class="nav-link" data-scroll-target="#aufgabe-04-erstellen-einer-fehlermatrix"><span class="header-section-number">8.6</span> Aufgabe 04: Erstellen einer Fehlermatrix</a></li>
-  <li><a href="#augabe-05-vergleich-modell--und-kartengenauigkeit" id="toc-augabe-05-vergleich-modell--und-kartengenauigkeit" class="nav-link" data-scroll-target="#augabe-05-vergleich-modell--und-kartengenauigkeit"><span class="header-section-number">8.7</span> Augabe 05: Vergleich Modell- und Kartengenauigkeit</a></li>
+  <li><a href="#aufgabe-02-visualisierung-und-untersuchung-derpunktwolkendaten" id="toc-aufgabe-02-visualisierung-und-untersuchung-derpunktwolkendaten" class="nav-link" data-scroll-target="#aufgabe-02-visualisierung-und-untersuchung-derpunktwolkendaten"><span class="header-section-number">11.4</span> Aufgabe 02: Visualisierung und Untersuchung derPunktwolkendaten</a>
+  <ul class="collapse">
+  <li><a href="#vergleich-in-der-2d-karte" id="toc-vergleich-in-der-2d-karte" class="nav-link" data-scroll-target="#vergleich-in-der-2d-karte"><span class="header-section-number">11.4.1</span> Vergleich in der 2D-Karte</a></li>
+  <li><a href="#vergleich-im-2d-höhenprofil" id="toc-vergleich-im-2d-höhenprofil" class="nav-link" data-scroll-target="#vergleich-im-2d-höhenprofil"><span class="header-section-number">11.4.2</span> Vergleich im 2D-Höhenprofil</a></li>
+  </ul></li>
+  <li><a href="#aufgabe-03-erstellen-und-visualisieren-eines-digitalen-geländemodells-dgm" id="toc-aufgabe-03-erstellen-und-visualisieren-eines-digitalen-geländemodells-dgm" class="nav-link" data-scroll-target="#aufgabe-03-erstellen-und-visualisieren-eines-digitalen-geländemodells-dgm"><span class="header-section-number">11.5</span> Aufgabe 03 Erstellen und Visualisieren eines Digitalen Geländemodells (DGM)</a>
+  <ul class="collapse">
+  <li><a href="#erstellen-des-dgm" id="toc-erstellen-des-dgm" class="nav-link" data-scroll-target="#erstellen-des-dgm"><span class="header-section-number">11.5.1</span> Erstellen des DGM</a></li>
+  <li><a href="#visualisierung-des-dgm" id="toc-visualisierung-des-dgm" class="nav-link" data-scroll-target="#visualisierung-des-dgm"><span class="header-section-number">11.5.2</span> Visualisierung des DGM</a></li>
+  <li><a href="#historische-spuren" id="toc-historische-spuren" class="nav-link" data-scroll-target="#historische-spuren"><span class="header-section-number">11.5.3</span> Historische Spuren</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -239,7 +247,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Lerneinheit 08: Validierung einer thematischen Waldtypenkarte des Nationalpark Harz</span></h1>
+<h1 class="title"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Lerneinheit 11: Vergleich von ALS- und photogrammetrischen Punktwolken</span></h1>
 </div>
 
 
@@ -258,142 +266,132 @@ ul.task-list li input[type="checkbox"] {
 
 <!--
 
-Skripte für die Übungen 07 des Moduls FPM08 Forstliche Fernerkundung im Studiengang
+Skripte für die Übungen 11 des Moduls FPM08 Forstliche Fernerkundung im Studiengang
 B.Sc. Forstwirtschaft an der HAWK Göttingen.
 
 Autor: Paul Magdon
-Datum: 2025-11-16
+Datum: 2025-11-29
 Lizenz: Creative Commons BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 -->
-<p><img src="images/LE08_cover_image.png" class="img-fluid"></p>
-<section id="lernziele-aufgabenstellung" class="level2" data-number="8.1">
-<h2 data-number="8.1" class="anchored" data-anchor-id="lernziele-aufgabenstellung"><span class="header-section-number">8.1</span> Lernziele &amp; Aufgabenstellung</h2>
-<p>In der letzten Übung (<a href="#sec-le07" class="quarto-xref"><span class="quarto-unresolved-ref">sec-le07</span></a>) haben wir mithilfe eines automatischen Bildklassifikationsverfahrens eine einfache Waldtypenkarten für den Nationalpark Harz erstellt. In der vorliegenden Übung wollen wir nun eine Validierung der Landbedeckungskarte mit einem unabhängigen Referenzdatensatz durchführen, um die Kartengenauigkeit zu ermitteln. Außerdem sollen Modell- und Kartengenauigkeit miteinander verglichen werden.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/LE11_cover.png" class="img-fluid figure-img" width="714"></p>
+<figcaption>Abb.1: Vergleich ALS- und bild-basierte Punktwolken</figcaption>
+</figure>
+</div>
+<section id="lernziele-aufgabenstellung" class="level2" data-number="11.1">
+<h2 data-number="11.1" class="anchored" data-anchor-id="lernziele-aufgabenstellung"><span class="header-section-number">11.1</span> Lernziele &amp; Aufgabenstellung</h2>
 <p><strong>Lernziele</strong></p>
 <p>Die Studierenden sollen:</p>
 <ul>
-<li>Validierungsdaten für die Validierung von thematischen Karten erstellen</li>
-<li>Mithilfe von Fehlermatrizen die Genauigkeit eine thematischen Karte beurteilen</li>
-<li>den Unterscheid zwischen der Modell- und der Kartengenauigkeit erläutern können.</li>
+<li><p>Unterschiedliche Punktwolkendatensätze in QGIS importieren</p></li>
+<li><p>Eigenschaften der Punktwolken vergleichen</p></li>
+<li><p>Ein Geländemodell aus den ALS-Daten ableiten</p></li>
 </ul>
 <p><strong>Aufgaben</strong></p>
 <ol type="1">
-<li>Raster- und Vektordaten importieren</li>
-<li>Erstellen eines Validierungsrasters</li>
-<li>Visuelle Interpretation von Ortholuftbildern</li>
-<li>Berechnung von Fehlerstatistiken aus der Fehlermatrix</li>
-<li>Vergleich der Modell- und Kartengenauigkeit</li>
+<li><p>Raster- und Vektordaten importieren</p></li>
+<li><p>Visualisierung und Untersuchung der ALS-Daten</p></li>
+<li><p>Erstellen und Visualisieren eines Digitalen Geländemodells (DGM)</p></li>
 </ol>
 </section>
-<section id="aufgabe-0-anlegen-eine-neuen-qgis-projektes-und-kontrolle-des-nutzerprofils" class="level2" data-number="8.2">
-<h2 data-number="8.2" class="anchored" data-anchor-id="aufgabe-0-anlegen-eine-neuen-qgis-projektes-und-kontrolle-des-nutzerprofils"><span class="header-section-number">8.2</span> Aufgabe 0: Anlegen eine neuen QGIS-Projektes und Kontrolle des Nutzerprofils</h2>
-<p>Folgen sie der Anleitung aus LE01 <a href="#sec-projekt_management" class="quarto-xref"><span class="quarto-unresolved-ref">sec-projekt_management</span></a> um eine neue Ordnerstruktur und ein neues QGIS-Projekt für LE07 anzulegen. In der Übung bietet es sich an den Ordner <em>“daten”</em> weiter in die Unterordner <em>“vektor”</em> und <em>“raster”</em> zu unterteilen.</p>
-<p>Prüfen sie außerdem ob Ihr Nutzerprofil korrekt geladen wurde und ob die OTB-Funktionen im Werkzeugkasten vorhanden sind. Sollte dies nicht der Fall sein stellen sie ihr gesichertes Nutzerprofil wieder her (siehe auch LE01 <a href="#sec-nutzerprofil" class="quarto-xref"><span class="quarto-unresolved-ref">sec-nutzerprofil</span></a>).</p>
+<section id="aufgabe-0-anlegen-eine-neuen-qgis-projektes-und-kontrolle-des-nutzerprofils" class="level2" data-number="11.2">
+<h2 data-number="11.2" class="anchored" data-anchor-id="aufgabe-0-anlegen-eine-neuen-qgis-projektes-und-kontrolle-des-nutzerprofils"><span class="header-section-number">11.2</span> Aufgabe 0: Anlegen eine neuen QGIS-Projektes und Kontrolle des Nutzerprofils</h2>
+<p>Folgen sie der Anleitung aus LE01 <a href="uebung01.html#sec-projekt_management" class="quarto-xref"><span>Kapitel 1.3</span></a> um eine neue Ordnerstruktur und ein neues QGIS-Projekt anzulegen. In der Übung bietet es sich an den Ordner <em>“daten”</em> weiter in die Unterordner <em>“vektor”</em> und <em>“raster”</em> zu unterteilen.</p>
+<p>Prüfen sie außerdem ob Ihr Nutzerprofil korrekt geladen wurde und ob die OTB-Funktionen im Werkzeugkasten vorhanden sind. Sollte dies nicht der Fall sein stellen sie ihr gesichertes Nutzerprofil wieder her (siehe auch LE01 <a href="uebung01.html#sec-nutzerprofil" class="quarto-xref"><span>Kapitel 1.2.4</span></a>).</p>
 </section>
-<section id="aufgabe-01-download-und-import-der-geodaten" class="level2" data-number="8.3">
-<h2 data-number="8.3" class="anchored" data-anchor-id="aufgabe-01-download-und-import-der-geodaten"><span class="header-section-number">8.3</span> Aufgabe 01: Download und Import der Geodaten</h2>
-<section id="rasterdaten" class="level3" data-number="8.3.1">
-<h3 data-number="8.3.1" class="anchored" data-anchor-id="rasterdaten"><span class="header-section-number">8.3.1</span> Rasterdaten</h3>
-<section id="luftbilder" class="level4" data-number="8.3.1.1">
-<h4 data-number="8.3.1.1" class="anchored" data-anchor-id="luftbilder"><span class="header-section-number">8.3.1.1</span> <strong>Luftbilder</strong></h4>
-<p>Für die Erstellung der Validierungssdaten sollen Luftbilder mit einer hohen räumlichen Auflösung genutzt werden. Da der Nationalpark Harz in zwei Bundesländern liegt müssen von beiden Bundesländern entsprechende DOP-Bilder als WMS eingebunden werden (siehe dazu auch LE03 <a href="#sec-wms" class="quarto-xref"><span class="quarto-unresolved-ref">sec-wms</span></a>). Nutzen sie hier für folgende Links:</p>
-<p>Sachsen-Anhalt:</p>
-<p>DOP-WMS:</p>
-<p><code>https://www.geodatenportal.sachsen-anhalt.de/wss/service/ST_LVermGeo_DOP_WMS_OpenData/guest?</code></p>
-<p>DOP-Aktualität:</p>
-<p><code>https://www.geodatenportal.sachsen-anhalt.de/wss/service/ST_LVermGeo_DOP_WMS_Kacheluebersicht/guest?</code></p>
-<p>Niedersachsen:</p>
-<p>DOP: <code>https://opendata.lgln.niedersachsen.de/doorman/noauth/dop_wms</code></p>
+<section id="aufgabe-01-download-und-import-der-geodaten" class="level2" data-number="11.3">
+<h2 data-number="11.3" class="anchored" data-anchor-id="aufgabe-01-download-und-import-der-geodaten"><span class="header-section-number">11.3</span> Aufgabe 01: Download und Import der Geodaten</h2>
+<section id="als-basierte-punktwolkendaten" class="level3" data-number="11.3.1">
+<h3 data-number="11.3.1" class="anchored" data-anchor-id="als-basierte-punktwolkendaten"><span class="header-section-number">11.3.1</span> <strong>ALS-basierte Punktwolkendaten</strong></h3>
+<p>Laden sie sich die ALS-Daten für das Jahr 2023 aus dem Solling (<em>“<em>als_punktwolke_solling_2023.copc.laz</em>”</em>) herunter und legen sie die Datei in ihr Projektordner ab.</p>
+<p><a href="https://cloud.hawk.de/index.php/s/pSG7J97Kw75y8ia" class="uri">https://cloud.hawk.de/index.php/s/pSG7J97Kw75y8ia</a></p>
+<p>Importieren sie die ALS-Daten in ihr QGIS-Projekt.</p>
+</section>
+<section id="ortholuftbilder" class="level3" data-number="11.3.2">
+<h3 data-number="11.3.2" class="anchored" data-anchor-id="ortholuftbilder"><span class="header-section-number">11.3.2</span> <strong>Ortholuftbilder</strong></h3>
+<p>Bei der Befliegung im Sommer 2023 wurden im Flugzeug neben dem LiDAR-Sensor auch eine digitale Luftbildkamera verwendet um gleichzeitig LiDAR- und Luftbildaufnahmen anzufertigen. Das digitale Orthophoto (DOP) hat eine sehr hohe räumliche Auflösung von 7cm. Sie können den Ausschnitt mit dem Untersuchungsgebiet als GeoTIFF-Datei unter folgendem Link herunterladen:</p>
+<p><a href="https://cloud.hawk.de/index.php/s/SFNm8K9gwce9y9S" class="uri">https://cloud.hawk.de/index.php/s/SFNm8K9gwce9y9S</a></p>
+<p>Importieren sie das Luftbild in ihr QGIS-Projek und passen sie die Darstellung so an, dass ein Echtfarben Bild mit guten Kontrasten dargestellt wird.</p>
+</section>
+<section id="bild-basierte-punktwolkendaten" class="level3" data-number="11.3.3">
+<h3 data-number="11.3.3" class="anchored" data-anchor-id="bild-basierte-punktwolkendaten"><span class="header-section-number">11.3.3</span> <strong>Bild-basierte Punktwolkendaten</strong></h3>
+<p>Aus den Luftbilddaten der Befliegung 2023 wurde mihilfe von steroskopischen Verfahren Punktwolkendaten abgeleietet. Laden sie sich die bild-basierten 3D Punktwolken für das Jahr 2023 aus dem Solling (<em>“<em>photorammetrische_punktwolke_solling_2023.copc.laz</em>”</em>) herunter und legen sie die Datei in ihr Projektordner ab.</p>
+<p><a href="https://cloud.hawk.de/index.php/s/dgSMMF9JCcsfXDc" class="uri">https://cloud.hawk.de/index.php/s/dgSMMF9JCcsfXDc</a></p>
+<p>Importieren sie die Daten in ihr QGIS-Projekt.</p>
 </section>
 </section>
-<section id="vektordaten" class="level3" data-number="8.3.2">
-<h3 data-number="8.3.2" class="anchored" data-anchor-id="vektordaten"><span class="header-section-number">8.3.2</span> Vektordaten</h3>
-<p>Da wir die Validierung auf das Gebiet des Nationalparks beschränkt werden soll, benötigen wir das Polygon mit den Außengrenzen des Parks das sie hier herunterladen können:</p>
-<p><a href="https://cloud.hawk.de/index.php/s/Hs52DFGtPnfKzyN" class="uri">https://cloud.hawk.de/index.php/s/Hs52DFGtPnfKzyN</a></p>
-</section>
-</section>
-<section id="aufgabe-02-erstellen-eines-validierungslayers" class="level2" data-number="8.4">
-<h2 data-number="8.4" class="anchored" data-anchor-id="aufgabe-02-erstellen-eines-validierungslayers"><span class="header-section-number">8.4</span> Aufgabe 02: Erstellen eines Validierungslayers</h2>
-<p>Für die Erstellung eines unabhängigen Validierungsdatensatzes ist es wichtig die Punkte, an denen eine Überprüfung stattfinden soll, nach einem statistischen Verfahren auszuwählen. In der Übung wollen wir ein systematisches Punktraster mit einer Rasterweite von 2000 m x 2000 m anlegen. QGIS bietet eine entsprechende Funktion unter <code>Vektor-&gt;Forschungswerkzeuge-&gt; Gitter erzeugen</code>. Hier wählen wir:</p>
-<ul>
-<li>Gittertyp = Punkt</li>
-<li>Gitterausdehnung = Aus Layer berechnen Nationalpark Harz</li>
-<li>Horizontaler Abstand = 2000 m</li>
-<li>Vertikaler Abstand = 2000 m</li>
-<li>Gitter-KBS = 25832</li>
-</ul>
-<p>Da das Punktraster nur auf die Ausdehnung des Polygons zugeschnitten wird, umfasst es noch Punkte außerhalb der Grenzen des Nationalparks. Um diese zu entfernen nutzen wir die Funktion</p>
-<p><code>Menü-&gt; Vektor-&gt; Geoverarbeitungswerkzeuge-&gt; Zuschneiden</code> mit folgenden Einstellungen:</p>
-<ul>
-<li>Eingabelayer = Punktraster</li>
-<li>Layer überlagern = Grenzen Nationalpark Harz</li>
-<li>Zugeschnitten = Wir speichern das Punktraster als neues Layer (‚Validierungspunkte‘) im geopackage „uebung08.gpkg“</li>
-</ul>
-<p>Sie sollten in diesem Layer jetzt 61 Punkte innerhalb des Nationalparkgebietes haben. Die Attributtabelle enthält aber noch einige automatisch erzeugte Spalten, die wir nicht mehr benötigen. Zum Entfernen der Spalten (left, right, top, bottom, row_index, col_index) öffnen wir die Attributtabelle, wechseln in den Editiermodus und wählen im Werkzeug „Spalte löschen“ die entsprechenden Spalten aus. Anschließende speichern wir das Layer im Geopackage “uebung08.gpkg”.</p>
-</section>
-<section id="aufgabe-03-visuelle-interpretation-der-validierungspunkte" class="level2" data-number="8.5">
-<h2 data-number="8.5" class="anchored" data-anchor-id="aufgabe-03-visuelle-interpretation-der-validierungspunkte"><span class="header-section-number">8.5</span> Aufgabe 03: Visuelle Interpretation der Validierungspunkte</h2>
-<p>Die Überprüfung der Genauigkeit erfolgt auf Grundlage einer visuellen Interpretation. Bevor wir mit der Interpretation beginnen können, müssen wir noch eine Spalte mit den beobachteten Klassen anlegen. Dazu öffnen wir die Attributtabelle des Punktlayers, wechseln in den Editiermodus und klicken auf das Symbol „Neue Spalte“. Und wählen folgende Einstellungen:</p>
-<ul>
-<li>Name: Code</li>
-<li>Type: Ganzzahl (integer)</li>
-</ul>
-<p>Für die visuelle Interpretation aktivieren wir den Editiermodus unseres Punktlayers und interpretieren jeden Punkt der systematischen Stichprobe auf Grundlage der Luftbilder. Dabei weisen wir jedem Punkt die Landbedeckungsklasse (Code) des Klassifikationsschemas zu. Für die visuelle Kontrolle bietet es sich außerdem an einen Darstellungsstil mit den gleichen Klassen und Farben wie bei der Bildklassifikation zu wählen. Eine entsprechend vorbereiteten Stil für das Punktraster können sie unter folgendem Link herunterladen:</p>
-<p><a href="https://cloud.hawk.de/index.php/s/tBqHkG9NxbaoiW5" class="uri">https://cloud.hawk.de/index.php/s/tBqHkG9NxbaoiW5</a></p>
-<p>Zum laden des neuen Stils gehen öffnen sie: <code>Layereigenschaften -&gt; Symbolisierung -&gt; Stil -&gt;Stil laden -&gt; aus Datei</code> Dort wählen sie dann die *.qml Datei aus.</p>
-<p><img src="images/LE08_stil_punktraster.png" class="img-fluid"></p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Hinweis
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Für eine effiziente Interpretation ist es sinnvoll sich die Attributtabelle als Formular anzeigen zu lassen. Dazu öffnen wir die Attributtabelle und schalten die Ansicht von Tabellenansicht auf Formularansicht, unten links, um. Anschließend können wir dieses Fenster an unsere QGIS Hauptfenster andocken. Durch Aktivierung der Funktion „Automatisch zum aktuellen Objekt verschieben“, die sich unter der Liste mit den einzelnen Punkten befindet, springt der Kartenausschnitt automatisch zum gewählten Punkt. Wir können nun einzeln die Punkte der Liste von unten nach oben durchgehen und jeweils die beobachtete Klasse eintragen. Am Ende der visuellen Interpretation sollte für jeden Punkt eine der vier Klassen in der Attributtabelle eingetragen sein.</p>
-</div>
-</div>
-</section>
-<section id="aufgabe-04-erstellen-einer-fehlermatrix" class="level2" data-number="8.6">
-<h2 data-number="8.6" class="anchored" data-anchor-id="aufgabe-04-erstellen-einer-fehlermatrix"><span class="header-section-number">8.6</span> Aufgabe 04: Erstellen einer Fehlermatrix</h2>
-<p>Zum Erstellen der Fehlermatrix verwenden wir die OTB-Funktion <code>ComputeConfusionMatrix</code>, die wir in den Verarbeitungswerkzeugen über die Suche finden können. In dem Funktionsfenster wählen wir die folgenden Einstellungen:</p>
-<ul>
-<li><p>Input Image: Waldtypenkarte Harz</p></li>
-<li><p>Output format: confusionmatrix</p></li>
-<li><p>Ground truth: vector</p></li>
-<li><p>Input reference vector data: Validierungspunkte_Nationalpark_harz</p></li>
-<li><p>Field name: Code</p></li>
-<li><p>Matrix output: fehlermatrix.csv</p></li>
-</ul>
-<p>Anschließend starten wir die Berechnung. Als Ergebnis wird eine Komma-getrennte csv-Datei ausgeschrieben, die wir in Excel öffnen können. Berechnen sie nun folgende Statistiken nach der Anleitung in den Vorlesungsfolien:</p>
-<ul>
-<li><p>Gesamtgenauigkeit</p></li>
-<li><p>Nutzergenauigkeiten für alle vier Klassen</p></li>
-<li><p>Produzentengenauigkeiten für alle vier Klassen</p></li>
-</ul>
+<section id="aufgabe-02-visualisierung-und-untersuchung-derpunktwolkendaten" class="level2" data-number="11.4">
+<h2 data-number="11.4" class="anchored" data-anchor-id="aufgabe-02-visualisierung-und-untersuchung-derpunktwolkendaten"><span class="header-section-number">11.4</span> Aufgabe 02: Visualisierung und Untersuchung derPunktwolkendaten</h2>
+<section id="vergleich-in-der-2d-karte" class="level3" data-number="11.4.1">
+<h3 data-number="11.4.1" class="anchored" data-anchor-id="vergleich-in-der-2d-karte"><span class="header-section-number">11.4.1</span> Vergleich in der 2D-Karte</h3>
+<p>Vergleichen sie das Luftbild sowie die bild-basierte und ALS-Punktwolke in der 2D-Karte und beantworten sie folgende Fragen:</p>
 <div style="border: 3px solid #ff8a0b; background-color: #ffffff; padding: 8px;">
+<p><strong>Fragen:</strong></p>
 <ol type="1">
-<li><em>Wie beurteilen sie die Genauigkeit der Klassifikation?</em></li>
-<li><em>Welche Nutzergenauigkeit hat die Klasse „stehendes Totholz“?</em></li>
+<li><em>Wie stellt sich die räumliche Verteilung der Punkte der bild-basierten Punktwolke dar?</em></li>
+<li><em>Wie groß sind die mittleren Abstände zwischen den Punkten der bild-basierten Punktwolke?</em></li>
+<li><em>Welche der beiden Punktwolken hat eine höhere Punktdichte?</em></li>
 </ol>
 </div>
 </section>
-<section id="augabe-05-vergleich-modell--und-kartengenauigkeit" class="level2" data-number="8.7">
-<h2 data-number="8.7" class="anchored" data-anchor-id="augabe-05-vergleich-modell--und-kartengenauigkeit"><span class="header-section-number">8.7</span> Augabe 05: Vergleich Modell- und Kartengenauigkeit</h2>
-<p>Bei der Erstellung des <em>RandomForest</em> Klassifikationsmodells (siehe <a href="#sec-rf_training" class="quarto-xref"><span class="quarto-unresolved-ref">sec-rf_training</span></a>) haben wir auch eine Fehlermatrix gespeichert („rf_harz_2025.cm“). Diese wurde auf Basis der Trainingsdaten berechnet, da wir zum Zeitpunkt des Modelltrainings die Validierungsdaten noch nicht erstellt hatten. Insofern beschreibt diese Fehlermatrix die Modellgenauigkeit.</p>
-<p>Erstellen sie äquivalent zu Aufgabe 04 eine Fehlermatrix aus dieser Datei und vergleichen sie beide Fehlermatrizen miteinander um untenstehende Fragen zu beantworten.</p>
+<section id="vergleich-im-2d-höhenprofil" class="level3" data-number="11.4.2">
+<h3 data-number="11.4.2" class="anchored" data-anchor-id="vergleich-im-2d-höhenprofil"><span class="header-section-number">11.4.2</span> Vergleich im 2D-Höhenprofil</h3>
+<p>Legen sie ein neues Höhenprofil an (siehe dazu auch <a href="uebung10_Laserscanning.html#sec-hoehenprofile" class="quarto-xref"><span>Kapitel 10.7</span></a>), in der beide Punktwolken dargestellt werden. Stellen sie dazu die beiden Punktwolken mit unterschiedlichen Farben dar (siehe Abbildung 1). Die einfarbige Darstellung kann wie folgt eingestellt werden:</p>
+<p><code>Layer -&gt; Eigenschaften -&gt; Höhe -&gt; Profildiagrammerscheinungsbild</code>: Dort die Option <em>“Layerfärbung berücksichtigen”</em> deaktivieren und eine passende Farbe auswählen. Beantworten sie anhand der Profile folgende Fragen</p>
 <div style="border: 3px solid #ff8a0b; background-color: #ffffff; padding: 8px;">
+<p><strong>Fragen:</strong></p>
 <ol type="1">
-<li><em>Welche Fehlermatrix liefert eine höhere Gesamtgenauigkeit?</em></li>
-<li><em>Wie begründen sie die Unterschiede zwischen den beiden Fehlermatrizen?</em></li>
-<li><em>Welche Fehlermatrix würden sie für die Bewertung der praktischen Nutzbarkeit der Karte verwenden?</em></li>
+<li><em>Wie unterscheiden sich die beiden Punktwolken hinsichtlich ihrer Höhenverteilung?</em></li>
+<li><em>Stimmen die absoluten Höheninformationen der beiden Verfahren überein?</em></li>
+<li><em>Welche Bestandesbereiche werden durch die bild-basierte Punktwolke kaum angebildet?</em></li>
 </ol>
+</div>
+</section>
+</section>
+<section id="aufgabe-03-erstellen-und-visualisieren-eines-digitalen-geländemodells-dgm" class="level2" data-number="11.5">
+<h2 data-number="11.5" class="anchored" data-anchor-id="aufgabe-03-erstellen-und-visualisieren-eines-digitalen-geländemodells-dgm"><span class="header-section-number">11.5</span> Aufgabe 03 Erstellen und Visualisieren eines Digitalen Geländemodells (DGM)</h2>
+<section id="erstellen-des-dgm" class="level3" data-number="11.5.1">
+<h3 data-number="11.5.1" class="anchored" data-anchor-id="erstellen-des-dgm"><span class="header-section-number">11.5.1</span> Erstellen des DGM</h3>
+<p>Im nächsten Schritt soll ein Digtiales Geländemodell (DGM) erstellt werden. Dabei handelst es sich um ein regelmäßiges Raster in dem in jeder Zelle als Pixelwert die Geländehöhe eingetragen ist. Dies kann erreicht werden, in dem die Bodenpunkte interpoliert und in ein regelmäßiges Raster überführt werden. QGIS bietet dazu folgende Funktion an:</p>
+<div style="border: 2px solid #afca0b; background-color: #fafafa; padding: 8px;">
+<p><code>Verarbeitungswerkzeuge</code> → Punktwolkenkonvertierung -&gt; Als Raster exportieren (mit Triangulation)</p>
+</div>
+<p>In diesem Werkzeug wählen wir eine räumliche Auflösung von 0.5 m für das Raster. Damit nur die Bodenpunkte berücksichtigt werden verwenden wir die Filterausdruck “Classification = 2”. Das Geländemodell speichern wir als GeoTiff-Datei in unserem Projektordner unter <em>“dgm_als_solling_2023.tif”</em> ab.</p>
+<p><img src="images/LE11_dgm_processing.png" class="img-fluid"></p>
+<p>Als Ergebnis erhalten wir eine Rasterdatei mit dem digitalen Geländemodell.</p>
+</section>
+<section id="visualisierung-des-dgm" class="level3" data-number="11.5.2">
+<h3 data-number="11.5.2" class="anchored" data-anchor-id="visualisierung-des-dgm"><span class="header-section-number">11.5.2</span> Visualisierung des DGM</h3>
+<p>Für die Darstellung des DGM bietet es sich an eine Schummerung zu nutzen. Dabei wird eine Beleuchtung simuliert die in Abhängigkeit des Beleuchtungswinkels (Sonnenstand) einen Schattenwurf verursacht. Dadurch können Geländeunterschiede deutlich sichtbar gemacht werden.</p>
+<div style="border: 2px solid #afca0b; background-color: #fafafa; padding: 8px;">
+<p><code>Layereigenschaften</code> → Symbolisierung -&gt; Schummerung</p>
+</div>
+<p>Sie erhalten nun eine Darstellung des DGM das sehr gut auch kleinere Artefakte im Gelände darstellt. Durch die Kombination und Überlagerung unterschiedlicher Darstellungen können ansprechende Visualisierungen der Topographie erstellt werden:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/LE11_dgm_darstellungen.png" class="img-fluid figure-img"></p>
+<figcaption>Geländemodell des Untersuchungsgebietes</figcaption>
+</figure>
+</div>
+</section>
+<section id="historische-spuren" class="level3" data-number="11.5.3">
+<h3 data-number="11.5.3" class="anchored" data-anchor-id="historische-spuren"><span class="header-section-number">11.5.3</span> Historische Spuren</h3>
+<p>Bei der Betrachtung des Schummerungsmodells fallen bestimmte kreisförmige Strukturen auf:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/LE11_meilerplatten.png" class="img-fluid figure-img"></p>
+<figcaption>Historische Spuren der Landnutzung im Geländemodell</figcaption>
+</figure>
+</div>
+<div style="border: 3px solid #ff8a0b; background-color: #ffffff; padding: 8px;">
+<p><strong>Frage:</strong></p>
+<p>Woher könnten diese Spuren im Wald kommen?</p>
 </div>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -799,13 +797,13 @@ Hinweis
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./uebung07_bildklassifikation.html" class="pagination-link" aria-label="Lerneinheit 07: Waldtypenklassifikation im Nationalpark Harz">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Lerneinheit 07: Waldtypenklassifikation im Nationalpark Harz</span></span>
+      <a href="./uebung10_Laserscanning.html" class="pagination-link" aria-label="Lerneinheit 10: Import und Visualisierung von Airborne Laserscanning(ALS) Daten aus dem Solling">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Lerneinheit 10: Import und Visualisierung von Airborne Laserscanning(ALS) Daten aus dem Solling</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./uebung09_aenderungsanalyse.html" class="pagination-link" aria-label="Lerneinheit 09: Analyse der Waldflächenänderung im Nationalpark Harz (2017-2025)">
-        <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Lerneinheit 09: Analyse der Waldflächenänderung im Nationalpark Harz (2017-2025)</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./uebung12_Hoehenmodelle.html" class="pagination-link" aria-label="Lerneinheit 12: Verwendung von Gelände- und Bestandeshöhenmodellen">
+        <span class="nav-page-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Lerneinheit 12: Verwendung von Gelände- und Bestandeshöhenmodellen</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
