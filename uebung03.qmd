@@ -17,10 +17,10 @@ In der Lerneinheit 02 haben wir vorgestellt, wie Rasterdaten, welche als GeoTIF-
 Festplatte vorliegen, in ein QGIS-Projekt importiert und dargestellt werden können. Dazu wurden die
 Rasterdaten über das lokale Netzlaufwerk zur Verfügung gestellt. In der Lerneinheit 03 wir nun
 gezeigt wie frei verfügbare Raster- und Vektordaten gesucht, beschafft und in QGIS-Projekte
-eingebunden werden können. Dazu werden die Datendownload Portale der Landesvermessungsämter am
-Beispiel von Niedersachsen vorgestellt. Wenn größere Gebiete bearbeitete und / oder sehr hohe
+eingebunden werden können. Dazu werden Daten-Download-Portale der Landesvermessungsämter am
+Beispiel von Niedersachsen vorgestellt. Wenn größere Gebiete bearbeitet und / oder sehr hohe
 räumliche Auflösungen verwendet werden, kann dies sehr schnell zu einem hohen Zeitaufwand und Bedarf
-an lokalem Speicherplatz -und damit verbunden hohen Kosten für die Hardware- führen. Daher werden im
+an lokalem Speicherplatz - und damit verbunden hohen Kosten für die Hardware - führen. Daher werden im
 GIS-Bereich zunehmende sogenannte Geodatendienste verwendet. Bei diesen Diensten werden die Daten
 auf zentralen Servern gespeichert und dem Nutzer einzelne Ausschnitte auf Anfrage ausgeliefert.
 Dieses Vorgehen bietet mehrere Vorteile:
@@ -34,8 +34,8 @@ Dieses Vorgehen bietet mehrere Vorteile:
 
 -   Aktualisierungen der Daten können einfach an alle Nutzer ausgespielt werden
 
-In der Übung sollen aktuelle Daten für den Nordcampus, Göttingen beschafft und dargestellt werden.
-Dazu sollen die unterschiedlichen Angeboten des Open-Data Niedersachsen Portals des LGLN genutzt
+In der Übung sollen aktuelle Daten für den Nordcampus Göttingen beschafft und dargestellt werden.
+Dazu sollen Angebote des Open-Data Portals des Landesamtes für Geoinformation und Landesvermessung Niedersachsen (LGLN) genutzt
 werden.
 
 **Lernziele**
@@ -43,7 +43,7 @@ werden.
 Die Studierenden sollen:
 
 -   die Geodatenportale der Landesvermessungen kennenlernen
--   die unterschiedlichen Schnittstellen von Geodatendienste kennenlernen
+-   verschiedene Schnittstellen von Geodatendiensten kennenlernen
 -   Raster- und Vektordaten als Geodatendienst in QGIS importieren
 -   Eigenschaften von Geodatendiensten in QGIS untersuchen
 
@@ -53,9 +53,9 @@ Die Studierenden sollen:
 
 2.  Binden sie das aktuelle Ortholuftbildmosaik des LGLN als WMS-Service ein.
 
-3.  Fügen sie die aktuelle Flurstückskarten aus Niedersachsen als WFS-Dienst ein.
+3.  Fügen sie aktuelle Liegenschaftskarten aus Niedersachsen als WFS-Dienst ein.
 
-4.  Fügen sie als Hintergrundkarte die Basemap.de als Vektor-Kacheln hinzu.
+4.  Fügen sie als Hintergrundkarte amtliche Karten von Deutschland (Basemap.de) als Vektor-Kacheln hinzu.
 
 ## Aufgabe 0: Anlegen eine neuen QGIS-Projektes
 
@@ -69,19 +69,19 @@ Das Landesamt für Geoinformation und Landesvermessung Niedersachsen (LGLN) stel
 amtliche Geodaten kostenfrei zur Verfügung. Ein Produkt sind die Digitalen Orthophotos (DOP). Diese
 können im Viewer des Portals angezeigt und ausgewählt werden.
 
-![Screenshot des LGLN OpenData-Viewers mit der hervorgehobenen Kachel des
+![LGLN OpenData-Viewer mit der hervorgehobenen Kachel des
 Nordcampus](images/LE03_screenshot_LGLN_download.png)
 
-Nutzen sie den LGLN OpenData-Viewer um die Kachel (325665712), die dieses Gebiet abdeckt auszuwählen
-und das RGBI Bild herunterzuladen. Laden sie zusätzlich die Metadaten als XML-Datei herunter und
-speichern sie beides in ihrem Projektordner unter "daten". Importieren sie die GeoTIF-Datei als
-Rasterbild in ihr QGIS-Projekt und stellen sie es als CIR-Falschfarbenbild dar (siehe dazu auch LE02
-@sec-CIR_darstellung . Nutzen sie anschließend das Metadatenfile um folgende Fragen zu beantworten:
+Nutzen Sie den LGLN OpenData-Viewer, um die Kachel (325665712), die dieses Gebiet abdeckt, auszuwählen
+und das RGBI Bild herunterzuladen. Laden Sie zusätzlich die Metadaten als XML-Datei herunter und
+speichern Sie beides in ihrem Projektordner unter "daten". Importieren Sie die GeoTIF-Datei als
+Rasterbild in ihr QGIS-Projekt und stellen Sie es als CIR-Falschfarbenbild dar (siehe dazu auch LE02
+@sec-CIR_darstellung . Nutzen Sie anschließend das Metadatenfile, um folgende Fragen zu beantworten:
 
 ::: {style="border: 3px solid #ff8a0b; background-color: #ffffff; padding: 8px;"}
 **Fragen:**
 
-1.  *An welchem Tag wurde die Luftbildaufnahme gemacht?*
+1.  *An welchem Datum wurde die Luftbildaufnahme gemacht?*
 
 2.  *Welche Kamera wurde für die Luftbildaufnahme verwendet?*
 
@@ -103,13 +103,13 @@ Waldgrenzen ist das ein erheblicher Aufwand.
 
 Das LGLN-OpenData Portal bietet neben dem Downloaddienst auch verschiedene Geodatendienste an. Für
 die reine Darstellung der Bilder kann ein sogenannter Web Mapping Service (WMS) genutzt werden.
-WMS-Dienste übertragen bereits gerendertet Bilder. Das bedeutet, dass die original Daten auf dem
+WMS-Dienste übertragen bereits gerenderte Bilder. Das bedeutet, dass die Originaldaten auf dem
 Server verbleiben und dort alle Einstellungen bzgl. der Symbolisierung und der Farbdarstellung
 zentral festgelegt werden. Der Nutzer erhält dann bereits gerenderte Bildausschnitte und kann die
 Darstellung z.B. der einzelnen Farbkanäle nicht mehr ändern. Der Vorteil ist, dass so wesentlich
 kleinere Datenmengen übertragen werden müssen.
 
-Zum einbinden von Geodatendiensten wird zunächst die URL mit den Geodatendienst benötigt. Sie finden
+Zum Einbinden von Geodatendiensten wird zunächst die URL mit den Geodatendienst benötigt. Sie finden
 diese URL unter WMS auf der Beschreibung der
 [Ortholuftbildprodukte](https://ni-lgln-opengeodata.hub.arcgis.com/apps/lgln-opengeodata::digitales-orthophoto-dop/about)
 auf der LGNL-Seite.

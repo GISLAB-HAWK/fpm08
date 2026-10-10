@@ -60,7 +60,7 @@ zunächst im QGIS Layer-Panel und im raster Ordner des Projektes einen Ordner/ G
 (bild_1, bild_2, ...) anzulegen. 
 
 Kopieren Sie sich die Daten der Übung 
-- im PC-Pool vom Netzlaufwerk `R:\Lehre\GOR\Fuchs\uebung02`
+- im PC-Pool vom Netzlaufwerk `R:\Lehre\GOR\Magdon\uebung02`
 - oder von diesem [NextCloud Verzeichnis](https://cloud.hawk.de/index.php/s/psxYN3qyP3NCZdr)
 in ihren persönlichen Projektordner.
 
