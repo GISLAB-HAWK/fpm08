@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="de" xml:lang="de"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.38">
+<meta name="generator" content="quarto-1.10.18">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -13,10 +13,13 @@
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
 */
-code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -42,10 +45,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-c1ac5ceca7a3d2815e625db92de944b1.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-b04df3be2e5e302e3ea93ca300ce7128.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -261,6 +264,7 @@ B.Sc. Forstwirtschaft an der HAWK Göttingen.
 Autor: Paul Magdon
 Datum: 2025-10-12
 Letztes Update: 2026-10-08 (Hans Fuchs)
+Letztes Update: 2026-10-12 (Paul Magdon)
 Lizenz: Creative Commons BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 -->
@@ -332,13 +336,25 @@ Lizenz: Creative Commons BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc
 </section>
 <section id="editieren-der-raster-metadaten" class="level2" data-number="2.5">
 <h2 data-number="2.5" class="anchored" data-anchor-id="editieren-der-raster-metadaten"><span class="header-section-number">2.5</span> Editieren der Raster Metadaten</h2>
-<p>Wenn Rasterdaten weitergegeben, visualisiert oder in der EnMAP-Box weiterverarbeitet werden, ist es wichtig korrekte Bandnamen und zentrale Wellenlängen (in der Einheit <strong>Nanometer</strong>) in den Metadaten zu speichern. In der Werkzeugkiste finden Sie dafür</p>
+<p>Wenn Rasterdaten weitergegeben, visualisiert oder in der EnMAP-Box weiterverarbeitet werden, ist es wichtig korrekte Bandnamen und zentrale Wellenlängen (in der Einheit <strong>Nanometer</strong>) in den Metadaten zu speichern. In der Werkzeugkiste finden Sie dafür:</p>
 <p><code>Verarbeitung → Werkzeugkiste → EnMAP-Box → Raster → Raster miscellaneous → Edit raster source band properties.</code></p>
-<p>Da das Modul direkte Änderungen in die Datei einfügt, also keine neue Datei anlegt, sollten Sie die Rasterdatei vorher in QGIS schliessen. Markieren Sie den Rasterlayer-Namen, Rechtsklick → Layer löschen.</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Wichtig
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Da das Modul direkte Änderungen in die Datei einfügt, also keine neue Datei anlegt, sollten Sie die Rasterdatei vorher aus QGIS entfernen! Markieren Sie den Rasterlayer-Namen, Rechtsklick → Layer löschen.</p>
+</div>
+</div>
+<p><strong>GDAL raster source:</strong> Wählen Sie die vrt Datei <code>bild_1_mehrkanal.vrt</code> aus.</p>
 <ul>
-<li><strong>GDAL raster source:</strong> Wählen Sie die vrt Datei <code>bild_1_mehrkanal.vrt</code> aus.</li>
-<li><strong>Band names</strong>:“rot”, “grün”, “blau”, “nir”</li>
-<li><strong>Center wavelenght values</strong>: 665, 560, 490, 850</li>
+<li><p><strong>Band names</strong>: <code>"rot", "grün", "blau", "nir"</code></p></li>
+<li><p><strong>Center wavelenght values</strong>: 665, 560, 490, 850</p></li>
 </ul>
 <p>Auf <code>Starte</code> klicken.</p>
 <p><img src="images/LE02_edit_bandnames.png" class="img-fluid"></p>
