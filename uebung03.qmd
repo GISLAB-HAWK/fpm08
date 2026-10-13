@@ -5,6 +5,7 @@ B.Sc. Forstwirtschaft an der HAWK Göttingen.
 
 Autor: Paul Magdon
 Datum: 2025-10-18
+Letztes Update: 2026-10-13 (Hans Fuchs)
 Lizenz: Creative Commons BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 -->
@@ -49,7 +50,7 @@ Die Studierenden sollen:
 
 **Aufgaben**
 
-1.  Laden Sie ein aktuelles Luftbild des Nordcampus Göttingen vom Geodatenportal des LGLN herunter und visualisieren sie dieses als CIR-Darstellung.
+1.  Laden Sie ein aktuelles Luftbild des Nordcampus Göttingen vom Geodatenportal des LGLN herunter und visualisieren Sie dieses als CIR-Darstellung.
 
 2.  Binden Sie das aktuelle Ortholuftbildmosaik des LGLN als WMS-Service ein.
 
@@ -59,12 +60,12 @@ Die Studierenden sollen:
 
 ## Aufgabe 0: Anlegen eine neuen QGIS-Projektes
 
-Folgen sie der Anleitung aus @sec-projekt_management, um eine neue Ordnerstruktur und ein neues
+Folgen Sie der Anleitung aus @sec-projekt_management, um eine neue Ordnerstruktur und ein neues
 QGIS-Projekt für LE03 anzulegen.
 
 ## Aufgabe 01: Download und CIR-Darstellung eines Ortholuftbildes des Nordcampus
 
-Das Landesamt für Geoinformation und Landesvermessung Niedersachsen (LGLN) stellt über die [OpenGeoData.NI](https://ni-lgln-opengeodata.hub.arcgis.com/pages/opengeodata) Plattform amtliche Geodaten kostenfrei zur Verfügung. Ein Produkt sind die Digitalen Orthophotos (DOP), die Sie unter Geotopographie finden. Gehen Sie zum `Zum Produkt` und klicken Sie auf `Daten auswählen`. Sie können nun DOP20 Kacheln im Viewer anzeigen und auswählen.
+Das Landesamt für Geoinformation und Landesvermessung Niedersachsen (LGLN) stellt über die [OpenGeoData.NI](https://ni-lgln-opengeodata.hub.arcgis.com/pages/opengeodata) Plattform amtliche Geodaten kostenfrei zur Verfügung. Ein Produkt sind die Digitalen Orthophotos (DOP), die Sie unter "Geotopographie" finden. Gehen Sie `Zum Produkt` und klicken Sie auf `Daten auswählen`. Sie können nun DOP20 Kacheln im Viewer anzeigen und auswählen.
 
 ![LGLN OpenData-Viewer mit der hervorgehobenen Kachel des Nordcampus](images/LE03_screenshot_LGLN_download.png)
 
@@ -94,7 +95,7 @@ speichern Sie beides in ihrem Projektordner unter "daten".
 
 ## Aufgabe 02: Einbinden von WMS-Diensten zur Darstellung von Ortholuftbildern{#sec-wms}
 
-Wie sie in dem OpenData-Viewer erkennen können, bräuchte es zur vollständigen Abdeckung des gesamten
+Wie Sie in dem OpenData-Viewer erkennen können, bräuchte es zur vollständigen Abdeckung des gesamten
 Göttinger Stadtwaldes über 35 Ortholuftbildkacheln, was einem Downloadvolumen von ca. $35*500=1,7GB$
 entsprechen würde. Für eine reine Darstellung z.B. als Hintergrundkarte oder zur Abgrenzung der
 Waldgrenzen ist das ein erheblicher Aufwand.
@@ -113,7 +114,7 @@ diese URL unter WMS auf der Beschreibung der
 [Ortholuftbildprodukte](https://ni-lgln-opengeodata.hub.arcgis.com/apps/lgln-opengeodata::digitales-orthophoto-dop/about)
 auf der LGNL-Seite.
 
-Anschließend nutzen sie in QGIS die Datenquellenverwaltung:
+Anschließend nutzen Sie in QGIS die Datenquellenverwaltung:
 
 ::: {style="border: 2px solid #afca0b; background-color: #fafafa; padding: 8px;"}
 `Layer` → `Datenquellenverwaltung` → `WMS` → `neu`
@@ -175,12 +176,12 @@ Als Hintergrundkarten wollen wir einen [Geodatendienst in Form von Vektor-Kachel
 nutzen. Basemap ist eine Kartengrundlage, die auf amtlichen Daten basiert und kostenfrei von der
 Arbeitsgemeinschaft der Vermessungsverwaltungen der Länder der Bundesrepublik Deutschland (AdV) zur
 Verfügung gestellt wird. Um diese zu verwenden, kann die Verbindungseinstellung per XML-Datei in QGIS
-importiert werden. Laden sie sich dazu folgende XML-Datei herunter und speichern sie die Datei lokal
+importiert werden. Laden Sie sich dazu folgende XML-Datei herunter und speichern Sie die Datei lokal
 auf ihrem Rechner:
 
 <https://basemap.de/data/produkte/web_vektor/sonstiges/basemap_de_Web_Vektor_qgis_connection.xml>
 
-Anschließend nutzen sie die XML-Datei um die Verbindung anzulegen:
+Anschließend nutzen Sie die XML-Datei um die Verbindung anzulegen:
 
 ::: {style="border: 2px solid #afca0b; background-color: #fafafa; padding: 8px;"}
 `Layer` → `Datenquellenverwaltung` → Vektorkachel -\> laden
