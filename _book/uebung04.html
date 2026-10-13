@@ -223,7 +223,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#lernziele-und-aufgabenstellung" id="toc-lernziele-und-aufgabenstellung" class="nav-link active" data-scroll-target="#lernziele-und-aufgabenstellung"><span class="header-section-number">4.1</span> Lernziele und Aufgabenstellung</a></li>
   <li><a href="#aufgabe-0-anlegen-eine-neuen-qgis-projektes" id="toc-aufgabe-0-anlegen-eine-neuen-qgis-projektes" class="nav-link" data-scroll-target="#aufgabe-0-anlegen-eine-neuen-qgis-projektes"><span class="header-section-number">4.2</span> Aufgabe 0: Anlegen eine neuen QGIS-Projektes</a></li>
   <li><a href="#aufgabe-01-recherche-und-download-eines-aktuellen-sentinel-2-satellitenbildes" id="toc-aufgabe-01-recherche-und-download-eines-aktuellen-sentinel-2-satellitenbildes" class="nav-link" data-scroll-target="#aufgabe-01-recherche-und-download-eines-aktuellen-sentinel-2-satellitenbildes"><span class="header-section-number">4.3</span> Aufgabe 01: Recherche und Download eines aktuellen Sentinel-2 Satellitenbildes</a></li>
-  <li><a href="#aufgabe-02-import-der-satellitendaten-in-qgis" id="toc-aufgabe-02-import-der-satellitendaten-in-qgis" class="nav-link" data-scroll-target="#aufgabe-02-import-der-satellitendaten-in-qgis"><span class="header-section-number">4.4</span> Aufgabe 02: Import der Satellitendaten in QGIS</a></li>
+  <li><a href="#sec-import-S2" id="toc-sec-import-S2" class="nav-link" data-scroll-target="#sec-import-S2"><span class="header-section-number">4.4</span> Aufgabe 02: Import der Satellitendaten in QGIS</a></li>
   <li><a href="#aufgabe-03-erstellen-eines-cir-falschfarbenbildes" id="toc-aufgabe-03-erstellen-eines-cir-falschfarbenbildes" class="nav-link" data-scroll-target="#aufgabe-03-erstellen-eines-cir-falschfarbenbildes"><span class="header-section-number">4.5</span> Aufgabe 03: Erstellen eines CIR-Falschfarbenbildes</a></li>
   <li><a href="#sec-zuschneiden" id="toc-sec-zuschneiden" class="nav-link" data-scroll-target="#sec-zuschneiden"><span class="header-section-number">4.6</span> Aufgabe 04: Zuschneiden des Satellitenbildmosaiks</a></li>
   <li><a href="#aufgabe-05-import-von-sentinel-satellitenbilder-mit-der-enmap-box" id="toc-aufgabe-05-import-von-sentinel-satellitenbilder-mit-der-enmap-box" class="nav-link" data-scroll-target="#aufgabe-05-import-von-sentinel-satellitenbilder-mit-der-enmap-box"><span class="header-section-number">4.7</span> Aufgabe 05: Import von Sentinel Satellitenbilder mit der EnMAP-Box</a></li>
@@ -356,8 +356,8 @@ Vorsicht
 </div>
 <p>Laden Sie anschließend die beiden Kacheln herunter und speichern Sie die ZIP-Dateien in Ihrem Projektordner unter “daten”.</p>
 </section>
-<section id="aufgabe-02-import-der-satellitendaten-in-qgis" class="level2" data-number="4.4">
-<h2 data-number="4.4" class="anchored" data-anchor-id="aufgabe-02-import-der-satellitendaten-in-qgis"><span class="header-section-number">4.4</span> Aufgabe 02: Import der Satellitendaten in QGIS</h2>
+<section id="sec-import-S2" class="level2" data-number="4.4">
+<h2 data-number="4.4" class="anchored" data-anchor-id="sec-import-S2"><span class="header-section-number">4.4</span> Aufgabe 02: Import der Satellitendaten in QGIS</h2>
 <p>Die Satellitenprodukte werden von der ESA in einer standardisierten Struktur gespeichert und ausgeliefert. Eine detaillierte Beschreibung der Produkte finden Sie in der Dokumentation unter: <a href="https://sentiwiki.copernicus.eu/web/s2-products" class="uri">https://sentiwiki.copernicus.eu/web/s2-products</a>. Nach dem Entpacken der ZIP-Datei finden Sie folgende Ordnerstruktur:</p>
 <pre class="plaintext"><code>S2B_MSIL2A_20250612T102559_N0511_R108_T32UNC_20250612T131505.SAFE/
 ├── DATASTRIP/
@@ -400,7 +400,7 @@ Vorsicht
 </div>
 <p>Fügen Sie die Bänder <strong>B02, B03, B04 und B08</strong> mit einer räumlichen Auflösung von 10m zu ihrem QGIS-Projekt hinzu.</p>
 <div style="border: 3px solid #ff8a0b; background-color: #ffffff; padding: 8px;">
-<p><strong>Ordnen sie den folgenden Bandnummern des Sentinel-2 MSI eine der Beschreibungen der Spektralbereiche zu: </strong>’Coastal Aerosol, Blue, Green, Red, Red Edge1, Red Edge2 Red Edge3, Narrow NIR, Water Vapour, Cirrus, SWIR1, SWIR 2`**</p>
+<p><strong>Ordnen sie den folgenden Bandnummern des Sentinel-2 MSI eine der Beschreibungen der Spektralbereiche zu: </strong>’Coastal aerosol, Blue, Green, Red, Red edge1, Red edge2, Red edge3, Narrow NIR, NIR, Water vapour, SWIR1, SWIR 2`**</p>
 <p>B02 =</p>
 <p>B03 =</p>
 <p>B04 =</p>
@@ -409,7 +409,7 @@ Vorsicht
 </section>
 <section id="aufgabe-03-erstellen-eines-cir-falschfarbenbildes" class="level2" data-number="4.5">
 <h2 data-number="4.5" class="anchored" data-anchor-id="aufgabe-03-erstellen-eines-cir-falschfarbenbildes"><span class="header-section-number">4.5</span> Aufgabe 03: Erstellen eines CIR-Falschfarbenbildes</h2>
-<p>Nachdem Inport der einzelnen Bänder werden diese als Graustufenbilder dargestellt. Um eine Farbdarstellung zur ermöglichen, müssen die Bänder als Mehrkanalfarbild zusammengestellt werden (s. auch LE02 <a href="uebung02.html#sec-mehrkanalbilder" class="quarto-xref"><span>Kapitel 2.4</span></a>). Erstellen Sie für beide Kacheln ein virtuelles Mehrkanalraster und speichern sie diese unter:</p>
+<p>Nach dem Inport der einzelnen Bänder werden diese als Graustufenbilder dargestellt. Um eine Farbdarstellung zur ermöglichen, müssen die Bänder als Mehrkanalfarbild zusammengestellt werden (s. auch LE02 <a href="uebung02.html#sec-mehrkanalbilder" class="quarto-xref"><span>Kapitel 2.4</span></a>). Erstellen Sie für beide Kacheln ein virtuelles Mehrkanalraster und speichern sie diese unter:</p>
 <ul>
 <li><p><em>S2B_MSIL2A_20250612T102559_N0511_R108_T32<strong>UNC</strong>_20250612T131505.vrt</em></p></li>
 <li><p><em>S2B_MSIL2A_20250612T102559_N0511_R108_T32<strong>UPC</strong>_20250612T131505.vrt</em></p></li>
@@ -438,12 +438,19 @@ Vorsicht
 <h2 data-number="4.7" class="anchored" data-anchor-id="aufgabe-05-import-von-sentinel-satellitenbilder-mit-der-enmap-box"><span class="header-section-number">4.7</span> Aufgabe 05: Import von Sentinel Satellitenbilder mit der EnMAP-Box</h2>
 <p>Die EnMap-Box enthält die praktische Funktion</p>
 <p><code>Verarbeitung</code> -&gt; <code>Werkzeugkiste</code> -&gt; <code>Import data</code> -&gt; <code>Ìmport Sentinel-2 L2A product</code>,</p>
-<p>die die Aufgabe 02 stark vereinfacht. Es braucht nur eine ZIP-Datei mit L2A-Daten oder eine MTD_MSIL2A.xml Metadaten-Datei definiert werden.</p>
-<p>Aus einer Liste lassen sich verschiedene Bänder auswählen, die in einem Mehrkanalbild zusammengeführt werden. Die ausgewählten Bänder werden mit der kleinsten Pixelgröße der ausgewählten Bänder resampled. Wellenlängenbereiche und Bandnamen werden als Metadaten gleich automatisch in die Ausgabe-Rasterdatei geschrieben.</p>
+<p>die Aufgabe 02 <a href="#sec-import-S2" class="quarto-xref"><span>Kapitel 4.4</span></a> vereinfacht. Es braucht nur die ZIP-Datei mit den originalen L2A-Daten ausgepackt werden. Im <code>.SAFE</code> Ordner befindet sich die Metadaten-Datei <em>MTD_MSIL2A.xml</em>, die ausgewählt oder direkt mit drag &amp; drop vom Dateimanager auf das <code>Import Sentinel-2 L2A product</code> Panel gezogen werden kann. Aus einer Liste lassen sich dann verschiedene Bänder auswählen, die in einem Mehrkanalbild zusammengeführt werden.</p>
+<ul>
+<li><p>Wählen Sie aus der <strong>Band list</strong> die Bänder B2, B3, B4, B8.</p></li>
+<li><p>Als <strong>Output raster layer</strong> definieren Sie zum Speichern eine virtuelle VRT Datei.</p></li>
+</ul>
+<p>Die ausgewählten Bänder werden mit der kleinsten Pixelgröße der ausgewählten Bänder resampled. Wellenlängenbereiche und Bandnamen werden als Metadaten gleich automatisch in die Ausgabe-Rasterdatei geschrieben.</p>
+<ul>
+<li>Stellen Sie das virtuelle Mehrkanalbild als CIR Falschfarbenbild dar.</li>
+</ul>
 </section>
 <section id="aufgabe-06-projekt-bereinigen-und-sichern" class="level2" data-number="4.8">
 <h2 data-number="4.8" class="anchored" data-anchor-id="aufgabe-06-projekt-bereinigen-und-sichern"><span class="header-section-number">4.8</span> Aufgabe 06: Projekt bereinigen und sichern</h2>
-<p>Nachdem wir das Satellitenbild mosaikiert und zugeschnitten haben können wir die originalen Satellitenbilder aus dem Projekt entfernen und auch aus dem Ordner “daten” löschen. Sie brauchen nur die Geopackages und die Datei <em>NP_Harz_2025_06_12.tif</em> behalten. Speichern sie dann das QGIS-Projekt, schließen sie QGIS und kopieren sie den Projektordner von <code>D:\</code> in Ihr persönliches Laufwerk.</p>
+<p>Nachdem wir das Satellitenbild mosaikiert und zugeschnitten haben, können wir die originalen Satellitenbilder aus dem Projekt entfernen und auch aus dem Ordner “daten” löschen. Sie brauchen nur die Geopackages und die Datei <em>NP_Harz_2025_06_12.tif</em> behalten. Speichern sie dann das QGIS-Projekt, schließen sie QGIS und kopieren sie den Projektordner von <code>D:\</code> in Ihr persönliches Laufwerk.</p>
 
 
 </section>
