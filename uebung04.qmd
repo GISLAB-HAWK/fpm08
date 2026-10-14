@@ -78,23 +78,25 @@ Speichern Sie die Datei in Ihrem Projektordner im Unterordner *"daten"*. Sie kan
 mit QGIS als auch mit einem Texteditor (z.B. Editor, WordPad, Notepad++) geöffnet werden.
 
 Im Copernicus-Browser kann nun eine Area of Interest (AOI) angelegt werden.
-Dazu rechts oben auf das Polygonsymbol klicken und das Upload Icon auswählen.
+Dazu rechts oben auf das Polygonsymbol ![](images/LE04_cb_poly_icon.png) klicken und das Upload Icon ![](images/LE04_cb_upload_file.png) auswählen.
 Mit Drag & Drop die GeoJSON Datei direkt von Dateimanager in den Browserbereich "Drop a file ..." ziehen.
 
-![Upload der Gebietsgrenzen als GeoJSON in den
+![Upload des Gebietsgrenzenpolygons als GeoJSON in den
 Copernicus-Browser.](images/LE04_dataspace_area_definition.png){width="719"}
 
-Nach dem erfolgreichen Upload werden die Außengrenzen des Nationalparks Harz im Browser angezeigt.
+Nach dem erfolgreichen Upload wird die Außengrenze des Nationalparks Harz im Browser angezeigt.
 
 ::: callout-caution
 Wenn die Dateigröße der GeoJON Datei 10MB überschreitet, wird die Datei nicht akzeptiert. In diesem Fall können
-1. die Geometrien vereinfacht werden mit `Vektor` -> `Geometrie Tools` -> `Vereinfachen` oder
-2. eine Bounding Box berechnet werden mit `Verarbeitung` -> `Werkzeugkiste` -> `Layerwerkzeuge` -> `Layerausdehnung extrahieren`
+
+1.    die Geometrien vereinfacht werden mit `Vektor` -> `Geometrie Tools` -> `Vereinfachen` oder
+
+2.    eine Bounding Box berechnet werden mit `Verarbeitung` -> `Werkzeugkiste` -> `Layerwerkzeuge` -> `Layerausdehnung extrahieren`
 :::
 
 **Auswahl und Download der gewünschten Produkte**
 
-Auf der linken Seite des Browsers können die gesuchten Produkte spezifiziert werden. Ändern Sie eventuell die Spracheinstellung im Copernicus Browser oben links von EN auf DE. In der Lerneinheit arbeiten wir mit Produkten des Sentinel-2 Systems. Zusätzlich können Filter gesetzt werden.
+Auf der linken Seite des Browsers können die gesuchten Produkte spezifiziert werden. In der Lerneinheit arbeiten wir mit Produkten des Sentinel-2 Satelliten. Zusätzlich können Filter gesetzt werden.
 
 -    Klicken Sie auf "Suche"
 
@@ -108,7 +110,7 @@ Nutzen Sie den Slider um eine maximale Wolkenbedeckung zu definieren.
 
 - Max. Cloud Cover = **10%**
 
- Für die Übung suchen wir nach einer Aufnahme aus dem Juni 2025. Als Zeitraum, in welchem Bilder gesucht werden, setzen wir folgende Werte:
+ Für die Übung suchen wir nach einer Aufnahme aus dem Juni 2025. Als Zeitraum, in welchem Bilder gesucht werden. Nach unten scrollen und im Abschnitt "Zeitraum:" setzen wir folgende Werte:
 
 -   Von: *2025-06-01*
 
@@ -184,7 +186,7 @@ Fügen Sie die Bänder **B02, B03, B04 und B08** mit einer räumlichen Auflösun
 QGIS-Projekt hinzu.
 
 ::: {style="border: 3px solid #ff8a0b; background-color: #ffffff; padding: 8px;"}
-**Ordnen sie den folgenden Bandnummern des Sentinel-2 MSI eine der Beschreibungen der Spektralbereiche zu:  **'Coastal aerosol, Blue, Green, Red, Red edge1, Red edge2, Red edge3, Narrow NIR, NIR, Water vapour, SWIR1, SWIR 2`**
+**Ordnen sie den folgenden Bandnummern des Sentinel-2 MSI eine der Beschreibungen der Spektralbereiche zu:  `Coastal aerosol, Blue, Green, Red, Red edge1, Red edge2, Red edge3, Narrow NIR, NIR, Water vapour, SWIR1, SWIR 2`
 
 B02 =
 
@@ -221,9 +223,7 @@ Siehe dazu auch @sec-wms in LE03.
 
 ## Aufgabe 04: Zuschneiden des Satellitenbildmosaiks{#sec-zuschneiden}
 
-Die beide originalen S2-Kacheln decken ca. 100 x 100km ab. Der Bereich ist also deutlich größer als
-der gesamte Harz. Um diesen Bereich zu verkleiner sollen die Satellitenbilder auf den Nationalpark
-zugeschnitten werden. Um die Grenzen trotzdem gut darstellen zu können, soll ein Puffer mit der Breite von 1000m um die Außengrenzen des Parks gelegt werden.
+Die beiden originalen S2-Kacheln decken jeweils ca. 100 x 100km ab. Der Bereich ist also deutlich größer als der gesamte Harz. Um diesen Bereich zu verkleinern sollen die Satellitenbilder auf den Nationalpark zugeschnitten werden. Um die Grenzbereiche trotzdem gut darstellen zu können, soll ein Puffer mit der Breite von 1000m um die Außengrenze des Parks gelegt werden.
 
 **Außengrenze Puffern**
 
@@ -237,9 +237,7 @@ Zum Maskieren und zuschneiden nutzen Sie anschließend die Funktion:
 `Raster` →`Extraktion` → `Raster auf Layermaske zuschneiden`
 :::
 
-Speichern Sie das neue Raster unter dem Namen *NP_Harz_2025_06_12* als \*tif im Unterordner "daten" ab
-und laden Sie die Satellitenbildkarte als CIR-Falschfarbenbild in QGIS. Überlagern Sie das Bild mit
-den originalen Außengrenzen des Nationalparks.
+Speichern Sie das neue Raster unter dem Namen *NP_Harz_2025_06_12* als \*tif im Unterordner "daten" ab und laden Sie die Satellitenbildkarte als CIR-Falschfarbenbild in QGIS. Überlagern Sie das Bild mit der Außengrenze des Nationalparks.
 
 ## Aufgabe 05: Import von Sentinel Satellitenbilder mit der EnMAP-Box
 
@@ -247,17 +245,22 @@ Die EnMap-Box enthält die praktische Funktion
 
 `Verarbeitung` -> `Werkzeugkiste` -> `Import data` -> `Ìmport Sentinel-2 L2A product`,
 
-die Aufgabe 02 @sec-import-S2 vereinfacht. Es braucht nur die ZIP-Datei mit den originalen L2A-Daten ausgepackt werden. Im `.SAFE` Ordner befindet  sich die Metadaten-Datei *MTD_MSIL2A.xml*, die ausgewählt oder direkt mit drag & drop vom Dateimanager auf das `Import Sentinel-2 L2A product` Panel gezogen werden kann.
+die Aufgabe 02 @sec-import-S2 vereinfacht. Es braucht nur die ZIP-Datei mit den originalen L2A-Daten entpackt werden. Im `.SAFE` Ordner befindet  sich die Metadaten-Datei `*MTD_MSIL2A.xml*`, die ausgewählt oder direkt mit drag & drop vom Dateimanager auf das `Import Sentinel-2 L2A product` Panel gezogen werden kann.
 Aus einer Liste lassen sich dann verschiedene Bänder auswählen, die in einem Mehrkanalbild zusammengeführt werden.
 
 - Wählen Sie aus der **Band list** die Bänder B2, B3, B4, B8.
 
-- Als **Output raster layer** definieren Sie zum Speichern eine virtuelle VRT-Datei.
+- Als **Output raster layer** definieren Sie eine Datei zum Speichern als im Format VRT.
 
-::: {layout-ncol=2}
-![](images/LE04_import_enmap_s2_a.png)
-![](images/LE04_import_enmap_s2_b.png)
+::: {#fig-import_s2 layout-ncol=2}
+![](images/LE04_eb_import_s2a.png){#fig-a width="100%"}
+
+![](images/LE04_eb_import_s2b.png){#fig-b width="80%"}
+
+Import von Sentinel-2 Daten in der EnMAP-Box 
 :::
+
+- Als **Output raster layer** definieren Sie eine Datei zum Speichern als im Format **VRT**. 
 
 Die ausgewählten Bänder werden mit der kleinsten Pixelgröße der ausgewählten Bänder resampled. Wellenlängenbereiche und Bandnamen werden als Metadaten gleich automatisch in die Ausgabe-Rasterdatei geschrieben.
 

@@ -290,22 +290,22 @@ Lizenz: Creative Commons BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc
 </section>
 <section id="aufgabe-01-recherche-und-download-eines-aktuellen-sentinel-2-satellitenbildes" class="level2" data-number="4.3">
 <h2 data-number="4.3" class="anchored" data-anchor-id="aufgabe-01-recherche-und-download-eines-aktuellen-sentinel-2-satellitenbildes"><span class="header-section-number">4.3</span> Aufgabe 01: Recherche und Download eines aktuellen Sentinel-2 Satellitenbildes</h2>
-<p>Die Europäische Raumfahrt Agentur (ESA) stellt das gesamte Archiv der Copernicus Daten kostenfrei als offenen Datensatz zur Verfügung. Zur Suche und für den Download solcher Daten wird das online Datenportal <a href="https://dataspace.copernicus.eu/" class="uri">https://dataspace.copernicus.eu/</a> betrieben. Für die Nutzung des Portals ist eine einmalige kostenfreie Registrierung notwendig um einen Nutzernamen und ein Passwort zu erhalten.</p>
-<p>Nach der erfolgreichen Registrierung kann ein Login auf der Homepage erfolgen. Für die Suche nach Daten (Explore Data) wird der Copernicus-Browser unter folgender URL angeboten:</p>
+<p>Die Europäische Raumfahrt Agentur (ESA) stellt das gesamte Archiv der Copernicus Daten kostenfrei als offenen Datensatz zur Verfügung. Zur Suche und für den Download solcher Daten wird das online Datenportal <a href="https://dataspace.copernicus.eu/" class="uri">https://dataspace.copernicus.eu/</a> betrieben. Für die Nutzung des Portals ist eine einmalige kostenfreie Registrierung notwendig, um einen Nutzernamen und ein Passwort zu erhalten.</p>
+<p>Nach der erfolgreichen Registrierung kann ein Login auf der Homepage erfolgen. Für die Suche nach Daten (“Explore Data”) wird der Copernicus-Browser unter folgender URL angeboten:</p>
 <p><a href="https://browser.dataspace.copernicus.eu" class="uri">https://browser.dataspace.copernicus.eu</a></p>
-<p>Der Browser bietet umfangreiche Möglichkeiten nach Geodatenprodukten zu suchen.</p>
+<p>Der Browser bietet umfangreiche Möglichkeiten, um nach Geodatenprodukten zu suchen. Ändern Sie die englische Spracheinstellung im Copernicus Browser indem sie oben links auf EN klicken und Deutsch aus der Liste auswählen.</p>
 <p><strong>Festlegen der Area of Interest (AOI)</strong></p>
-<p>Dazu können die Polygone od Multipolygone des Untersuchungsgebietes verwendet werden. Als Datenformat für die Definition der Geometrie akzeptiert der Copernicus-Browser das GeoJSON Format im Koordinatenreferenzsystem EPSG:4326 mit geographischen Längen- und Breitengraden. GeoJSON ist ein text-basiertes Format zum speichern von Vektordaten (siehe auch <a href="https://de.wikipedia.org/wiki/GeoJSON" class="uri">https://de.wikipedia.org/wiki/GeoJSON</a>). Für die Übung soll die Außengrenze des NP-Harz genutzt werden. Das entsprechende GeoJSON kann hier heruntergeladen werden:</p>
+<p>Hierfür können Polygone oder Multipolygone des Untersuchungsgebietes verwendet werden. Als Datenformat für die Definition der Geometrie akzeptiert der Copernicus-Browser das GeoJSON Format im Koordinatenreferenzsystem EPSG:4326 mit geographischen Längen- und Breitengraden. GeoJSON ist ein textbasiertes Format zum Speichern von Vektordaten (s. auch <a href="https://de.wikipedia.org/wiki/GeoJSON" class="uri">https://de.wikipedia.org/wiki/GeoJSON</a>). Für die Übung soll das Grenzpolygon des NP-Harz genutzt werden. Das entsprechende GeoJSON kann hier heruntergeladen werden:</p>
 <p><a href="https://cloud.hawk.de/index.php/s/2Zg8raN2qsHMyZf" class="uri">https://cloud.hawk.de/index.php/s/2Zg8raN2qsHMyZf</a></p>
-<p>Speichern sie diese Datei in ihrem Projektordner im Unterordner <em>“daten”</em>. Diese Datei kann sowohl mit QGIS als auch mit einem Texteditor (z.B. Editor, WordPad, Notepad++) geöffnet werden.</p>
-<p>Im Copernicus-Browser kann nun eine Area of Interest (AOI) mit diesen Informationen angelegt werden. Dazu rechts oben auf das Polygonsymbol klicken und den Upload Icon auswählen. Mit Drag &amp; Drop die GeoJSON Datei direkt von Dateimanager in den Browserbereich “Drop a file …” ziehen.</p>
+<p>Speichern Sie die Datei in Ihrem Projektordner im Unterordner <em>“daten”</em>. Sie kann sowohl mit QGIS als auch mit einem Texteditor (z.B. Editor, WordPad, Notepad++) geöffnet werden.</p>
+<p>Im Copernicus-Browser kann nun eine Area of Interest (AOI) angelegt werden. Dazu rechts oben auf das Polygonsymbol <img src="images/LE04_cb_poly_icon.png" class="img-fluid"> klicken und das Upload Icon <img src="images/LE04_cb_upload_file.png" class="img-fluid"> auswählen. Mit Drag &amp; Drop die GeoJSON Datei direkt von Dateimanager in den Browserbereich “Drop a file …” ziehen.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/LE04_dataspace_area_definition.png" class="img-fluid figure-img" width="719"></p>
-<figcaption>Upload der Gebietsgrenzen als GeoJSON in den Copernicus-Browser.</figcaption>
+<figcaption>Upload des Gebietsgrenzenpolygons als GeoJSON in den Copernicus-Browser.</figcaption>
 </figure>
 </div>
-<p>Nach dem erfolgreichen Upload werden die Außengrenzen des Nationalparks Harz im Browser angezeigt.</p>
+<p>Nach dem erfolgreichen Upload wird die Außengrenze des Nationalparks Harz im Browser angezeigt.</p>
 <div class="callout callout-style-default callout-caution callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -316,11 +316,15 @@ Vorsicht
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Wenn die Dateigröße der GeoJON Datei 10MB überschreitet, wird die Datei nicht akzeptiert. In diesem Fall können 1. die Geometrien vereinfacht werden mit <code>Vektor</code> -&gt; <code>Geometrie Tools</code> -&gt; <code>Vereinfachen</code> oder 2. eine Bounding Box berechnet werden mit <code>Verarbeitung</code> -&gt; <code>Werkzeugkiste</code> -&gt; <code>Layerwerkzeuge</code> -&gt; <code>Layerausdehnung extrahieren</code></p>
+<p>Wenn die Dateigröße der GeoJON Datei 10MB überschreitet, wird die Datei nicht akzeptiert. In diesem Fall können</p>
+<ol type="1">
+<li><p>die Geometrien vereinfacht werden mit <code>Vektor</code> -&gt; <code>Geometrie Tools</code> -&gt; <code>Vereinfachen</code> oder</p></li>
+<li><p>eine Bounding Box berechnet werden mit <code>Verarbeitung</code> -&gt; <code>Werkzeugkiste</code> -&gt; <code>Layerwerkzeuge</code> -&gt; <code>Layerausdehnung extrahieren</code></p></li>
+</ol>
 </div>
 </div>
 <p><strong>Auswahl und Download der gewünschten Produkte</strong></p>
-<p>Auf der linken Seite des Browsers können die gesuchten Produkte spezifiziert werden. Ändern Sie eventuell die Spracheinstellung im Copernicus Browser oben links vion EN auf DE. In der Lerneinheit arbeiten wir mit Produkten des Sentinel-2 Systems. Zusätzlich können Filter gesetzt werden.</p>
+<p>Auf der linken Seite des Browsers können die gesuchten Produkte spezifiziert werden. In der Lerneinheit arbeiten wir mit Produkten des Sentinel-2 Satelliten. Zusätzlich können Filter gesetzt werden.</p>
 <ul>
 <li>Klicken Sie auf “Suche”</li>
 </ul>
@@ -334,7 +338,7 @@ Vorsicht
 <ul>
 <li>Max. Cloud Cover = <strong>10%</strong></li>
 </ul>
-<p>Für die Übung suchen wir nach einer Aufnahme aus dem Juni 2025. Als Zeitraum, in welchem Bilder gesucht werden, setzen wir folgende Werte:</p>
+<p>Für die Übung suchen wir nach einer Aufnahme aus dem Juni 2025. Als Zeitraum, in welchem Bilder gesucht werden. Nach unten scrollen und im Abschnitt “Zeitraum:” setzen wir folgende Werte:</p>
 <ul>
 <li><p>Von: <em>2025-06-01</em></p></li>
 <li><p>Bis: <em>2025-06-30</em></p></li>
@@ -400,7 +404,7 @@ Vorsicht
 </div>
 <p>Fügen Sie die Bänder <strong>B02, B03, B04 und B08</strong> mit einer räumlichen Auflösung von 10m zu ihrem QGIS-Projekt hinzu.</p>
 <div style="border: 3px solid #ff8a0b; background-color: #ffffff; padding: 8px;">
-<p><strong>Ordnen sie den folgenden Bandnummern des Sentinel-2 MSI eine der Beschreibungen der Spektralbereiche zu: </strong>’Coastal aerosol, Blue, Green, Red, Red edge1, Red edge2, Red edge3, Narrow NIR, NIR, Water vapour, SWIR1, SWIR 2`**</p>
+<p>**Ordnen sie den folgenden Bandnummern des Sentinel-2 MSI eine der Beschreibungen der Spektralbereiche zu: <code>Coastal aerosol, Blue, Green, Red, Red edge1, Red edge2, Red edge3, Narrow NIR, NIR, Water vapour, SWIR1, SWIR 2</code></p>
 <p>B02 =</p>
 <p>B03 =</p>
 <p>B04 =</p>
@@ -424,28 +428,66 @@ Vorsicht
 </section>
 <section id="sec-zuschneiden" class="level2" data-number="4.6">
 <h2 data-number="4.6" class="anchored" data-anchor-id="sec-zuschneiden"><span class="header-section-number">4.6</span> Aufgabe 04: Zuschneiden des Satellitenbildmosaiks</h2>
-<p>Die beide originalen S2-Kacheln decken ca. 100 x 100km ab. Der Bereich ist also deutlich größer als der gesamte Harz. Um diesen Bereich zu verkleiner sollen die Satellitenbilder auf den Nationalpark zugeschnitten werden. Um die Grenzen trotzdem gut darstellen zu können, soll ein Puffer von 1000 m um die Außengrenzen des Parks gelegt werden.</p>
+<p>Die beiden originalen S2-Kacheln decken jeweils ca. 100 x 100km ab. Der Bereich ist also deutlich größer als der gesamte Harz. Um diesen Bereich zu verkleinern sollen die Satellitenbilder auf den Nationalpark zugeschnitten werden. Um die Grenzbereiche trotzdem gut darstellen zu können, soll ein Puffer mit der Breite von 1000m um die Außengrenze des Parks gelegt werden.</p>
 <p><strong>Außengrenze Puffern</strong></p>
-<p>Speichern Sie das GeoJSON der Nationalparkgrenze als Geopackage in Unterordner “daten” ab. Achten Sie darauf, dass das Koordinatenbezugssystem auf das metrische UTM Koordinatenreferenzsystem EPSG:25832 gestellt ist. Puffern Sie anschließend außen mit einer Breite von 1000 m.</p>
+<p>Speichern Sie das GeoJSON der Nationalparkgrenze als <strong>Geopackage</strong>, transformiert in ein metrisches UTM-Koordinatenreferenzsystem, im Unterordner “daten” ab. Achten Sie darauf, dass das Koordinatenbezugssystem auf das metrische UTM Koordinatenreferenzsystem <code>EPSG:25832</code> gestellt ist. Puffern Sie anschließend mit einer Breite von 1000 m.</p>
 <p><strong>Bild zuschneiden und maskieren</strong></p>
 <p>Zum Maskieren und zuschneiden nutzen Sie anschließend die Funktion:</p>
 <div style="border: 2px solid #afca0b; background-color: #fafafa; padding: 8px;">
 <p><code>Raster</code> →<code>Extraktion</code> → <code>Raster auf Layermaske zuschneiden</code></p>
 </div>
-<p>Speichern Sie das neue Raster unter dem Namen NP_Harz_2025_06_12 als *tif im Unterordner “daten” ab und laden Sie die Satellitenbildkarte als CIR-Falschfarbenbild in QGIS. Überlagern Sie das Bild mit den originalen Außengrenzen des Nationalparks.</p>
+<p>Speichern Sie das neue Raster unter dem Namen <em>NP_Harz_2025_06_12</em> als *tif im Unterordner “daten” ab und laden Sie die Satellitenbildkarte als CIR-Falschfarbenbild in QGIS. Überlagern Sie das Bild mit der Außengrenze des Nationalparks.</p>
 </section>
 <section id="aufgabe-05-import-von-sentinel-satellitenbilder-mit-der-enmap-box" class="level2" data-number="4.7">
 <h2 data-number="4.7" class="anchored" data-anchor-id="aufgabe-05-import-von-sentinel-satellitenbilder-mit-der-enmap-box"><span class="header-section-number">4.7</span> Aufgabe 05: Import von Sentinel Satellitenbilder mit der EnMAP-Box</h2>
 <p>Die EnMap-Box enthält die praktische Funktion</p>
 <p><code>Verarbeitung</code> -&gt; <code>Werkzeugkiste</code> -&gt; <code>Import data</code> -&gt; <code>Ìmport Sentinel-2 L2A product</code>,</p>
-<p>die Aufgabe 02 <a href="#sec-import-S2" class="quarto-xref"><span>Kapitel 4.4</span></a> vereinfacht. Es braucht nur die ZIP-Datei mit den originalen L2A-Daten ausgepackt werden. Im <code>.SAFE</code> Ordner befindet sich die Metadaten-Datei <em>MTD_MSIL2A.xml</em>, die ausgewählt oder direkt mit drag &amp; drop vom Dateimanager auf das <code>Import Sentinel-2 L2A product</code> Panel gezogen werden kann. Aus einer Liste lassen sich dann verschiedene Bänder auswählen, die in einem Mehrkanalbild zusammengeführt werden.</p>
+<p>die Aufgabe 02 <a href="#sec-import-S2" class="quarto-xref"><span>Kapitel 4.4</span></a> vereinfacht. Es braucht nur die ZIP-Datei mit den originalen L2A-Daten entpackt werden. Im <code>.SAFE</code> Ordner befindet sich die Metadaten-Datei <code>*MTD_MSIL2A.xml*</code>, die ausgewählt oder direkt mit drag &amp; drop vom Dateimanager auf das <code>Import Sentinel-2 L2A product</code> Panel gezogen werden kann. Aus einer Liste lassen sich dann verschiedene Bänder auswählen, die in einem Mehrkanalbild zusammengeführt werden.</p>
 <ul>
 <li><p>Wählen Sie aus der <strong>Band list</strong> die Bänder B2, B3, B4, B8.</p></li>
-<li><p>Als <strong>Output raster layer</strong> definieren Sie zum Speichern eine virtuelle VRT Datei.</p></li>
+<li><p>Als <strong>Output raster layer</strong> definieren Sie eine Datei zum Speichern als im Format VRT.</p></li>
+</ul>
+<div id="fig-import_s2" class="quarto-layout-panel">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-import_s2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-import_s2" style="flex-basis: 55.6%;justify-content: flex-start;">
+<div id="fig-a" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-a-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/LE04_eb_import_s2a.png" id="fig-a" class="img-fluid figure-img" style="width:100.0%" data-ref-parent="fig-import_s2">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-a-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(a)
+</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-import_s2" style="flex-basis: 44.4%;justify-content: flex-start;">
+<div id="fig-b" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-b-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/LE04_eb_import_s2b.png" id="fig-b" class="img-fluid figure-img" style="width:80.0%" data-ref-parent="fig-import_s2">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-b-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(b)
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-import_s2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;4.1: Import von Sentinel-2 Daten in der EnMAP-Box
+</figcaption>
+</figure>
+</div>
+<ul>
+<li>Als <strong>Output raster layer</strong> definieren Sie eine Datei zum Speichern als im Format <strong>VRT</strong>.</li>
 </ul>
 <p>Die ausgewählten Bänder werden mit der kleinsten Pixelgröße der ausgewählten Bänder resampled. Wellenlängenbereiche und Bandnamen werden als Metadaten gleich automatisch in die Ausgabe-Rasterdatei geschrieben.</p>
 <ul>
-<li>Stellen Sie das virtuelle Mehrkanalbild als CIR Falschfarbenbild dar.</li>
+<li>Sehen Sie sich das virtuelle Mehrkanalbild als CIR-Falschfarbendarstellung an.</li>
 </ul>
 </section>
 <section id="aufgabe-06-projekt-bereinigen-und-sichern" class="level2" data-number="4.8">
