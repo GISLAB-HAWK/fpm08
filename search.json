@@ -204,17 +204,27 @@
     "href": "uebung03.html#aufgabe-04-hintergrundkarte-als-vektor-kacheln",
     "title": "3  Lerneinheit 03: Beschaffung von Geodaten für den Nordcampus Göttingen",
     "section": "3.6 Aufgabe 04: Hintergrundkarte als Vektor-Kacheln",
-    "text": "3.6 Aufgabe 04: Hintergrundkarte als Vektor-Kacheln\nAls Hintergrundkarten wollen wir einen Geodatendienst in Form von Vektor-Kacheln nutzen. Basemap ist eine Kartengrundlage, die auf amtlichen Daten basiert und kostenfrei von der Arbeitsgemeinschaft der Vermessungsverwaltungen der Länder der Bundesrepublik Deutschland (AdV) zur Verfügung gestellt wird. Um diese zu verwenden, kann die Verbindungseinstellung per XML-Datei in QGIS importiert werden. Laden Sie sich dazu folgende XML-Datei herunter und speichern Sie die Datei lokal auf ihrem Rechner:\nhttps://basemap.de/data/produkte/web_vektor/sonstiges/basemap_de_Web_Vektor_qgis_connection.xml\nAnschließend nutzen Sie die XML-Datei um die Verbindung anzulegen:\n\nLayer → Datenquellenverwaltung → Vektorkachel -&gt; laden\n\nEs wird eine neue Datenquelle “basemap.de Farbe” angelegt, die dem Projekt hinzugefügt werden kann.\n\n\n\n\n\n\nTipp\n\n\n\nWir empfehlen das hilfreiche QGIS Plugin GeoBasis_Loader zu installieren und auszuprobieren. Das Plugin vereinfacht das Finden und Einfügen ausgewählter WMS-, WMTS-, WFS-, WCS-, und VectorTiles-Dienste aus den Open Data Portalen der Landesvermessungsämter in Deutschland, europäische und weltweite Hintergrundkarten.",
+    "text": "3.6 Aufgabe 04: Hintergrundkarte als Vektor-Kacheln\nAls Hintergrundkarten wollen wir einen Geodatendienst in Form von Vektor-Kacheln nutzen. Basemap ist eine Kartengrundlage, die auf amtlichen Daten basiert und kostenfrei von der Arbeitsgemeinschaft der Vermessungsverwaltungen der Länder der Bundesrepublik Deutschland (AdV) zur Verfügung gestellt wird. Um diese zu verwenden, kann die Verbindungseinstellung per XML-Datei in QGIS importiert werden. Laden Sie sich dazu folgende XML-Datei herunter und speichern Sie die Datei lokal auf ihrem Rechner:\nhttps://basemap.de/data/produkte/web_vektor/sonstiges/basemap_de_Web_Vektor_qgis_connection.xml\nAnschließend nutzen Sie die XML-Datei um die Verbindung anzulegen:\n\nLayer → Datenquellenverwaltung → Vektorkachel → Laden\n\nEs wird eine neue Datenquelle “basemap.de Farbe” angelegt, die dem Projekt hinzugefügt werden kann.",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Lerneinheit 03: Beschaffung von Geodaten für den Nordcampus Göttingen</span>"
     ]
   },
   {
-    "objectID": "uebung03.html#aufgabe-05-sichern-des-benutzerprofils",
-    "href": "uebung03.html#aufgabe-05-sichern-des-benutzerprofils",
+    "objectID": "uebung03.html#aufgabe-05-installation-der-geobasis_loader-erweiterung",
+    "href": "uebung03.html#aufgabe-05-installation-der-geobasis_loader-erweiterung",
     "title": "3  Lerneinheit 03: Beschaffung von Geodaten für den Nordcampus Göttingen",
-    "section": "3.7 Aufgabe 05: Sichern des Benutzerprofils",
-    "text": "3.7 Aufgabe 05: Sichern des Benutzerprofils\nSie haben nun mehrere neue Datenquellen angelegt. QGIS speichert diese Datenquellen in Ihrem Benutzerprofil. Beim nächsten Start von QGIS können diese Quellen wieder verwendet werden. Daher ist jetzt ein guter Zeitpunkt eine Kopie Ihres Benutzerprofils erneut zu sichern. Folgen Sie dazu der Anleitung in LE01 Kapitel 1.2.4",
+    "section": "3.7 Aufgabe 05: Installation der GeoBasis_Loader Erweiterung",
+    "text": "3.7 Aufgabe 05: Installation der GeoBasis_Loader Erweiterung\nInstallieren Sie das QGIS Plugin GeoBasis_Loader. Das Plugin vereinfacht das Finden und Einfügen ausgewählter WMS-, WMTS-, WFS-, WCS-, und VectorTiles-Dienste aus den Open Data Portalen der Landesvermessungsämter in Deutschland, europäische und weltweite Hintergrundkarten.\nErweiterungen → Erweiterungen verwalten und installieren\nIm Suchfenster geobasis eingeben, das angezeigte Plugin GeoBasis_Loaderauswählen und installieren.\nLaden Sie aus dem Katalog 3: Welt:\n\nOpenStreeMap abgeleitet → OpenTopoMap (XYZ)\nGoogle → Google Hybrid (XYZ)\nBING → Bing VirtualEarth (XYZ)",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Lerneinheit 03: Beschaffung von Geodaten für den Nordcampus Göttingen</span>"
+    ]
+  },
+  {
+    "objectID": "uebung03.html#aufgabe-06-sichern-des-benutzerprofils",
+    "href": "uebung03.html#aufgabe-06-sichern-des-benutzerprofils",
+    "title": "3  Lerneinheit 03: Beschaffung von Geodaten für den Nordcampus Göttingen",
+    "section": "3.8 Aufgabe 06: Sichern des Benutzerprofils",
+    "text": "3.8 Aufgabe 06: Sichern des Benutzerprofils\nSie haben nun mehrere neue Datenquellen angelegt. QGIS speichert diese Datenquellen in Ihrem Benutzerprofil. Beim nächsten Start von QGIS können diese Quellen wieder verwendet werden. Daher ist jetzt ein guter Zeitpunkt eine Kopie Ihres Benutzerprofils erneut zu sichern. Folgen Sie dazu der Anleitung in LE01 Kapitel 1.2.4",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Lerneinheit 03: Beschaffung von Geodaten für den Nordcampus Göttingen</span>"
     ]
