@@ -184,16 +184,29 @@ auf ihrem Rechner:
 Anschließend nutzen Sie die XML-Datei um die Verbindung anzulegen:
 
 ::: {style="border: 2px solid #afca0b; background-color: #fafafa; padding: 8px;"}
-`Layer` → `Datenquellenverwaltung` → Vektorkachel -\> laden
+`Layer` → `Datenquellenverwaltung` → `Vektorkachel` → `Laden`
 :::
 
 Es wird eine neue Datenquelle "basemap.de Farbe" angelegt, die dem Projekt hinzugefügt werden kann.
 
-::: callout-tip
-Wir empfehlen das hilfreiche QGIS Plugin `GeoBasis_Loader` zu installieren und auszuprobieren. Das Plugin vereinfacht das Finden und Einfügen ausgewählter WMS-, WMTS-, WFS-, WCS-, und VectorTiles-Dienste aus den Open Data Portalen der Landesvermessungsämter in Deutschland, europäische und weltweite Hintergrundkarten.
-:::
+## Aufgabe 05: Installation der GeoBasis_Loader Erweiterung
 
-## Aufgabe 05: Sichern des Benutzerprofils
+Installieren Sie das QGIS Plugin `GeoBasis_Loader`. Das Plugin vereinfacht das Finden und Einfügen ausgewählter WMS-, WMTS-, WFS-, WCS-, und VectorTiles-Dienste aus den Open Data Portalen der Landesvermessungsämter in Deutschland, europäische und weltweite Hintergrundkarten.
+
+`Erweiterungen` → `Erweiterungen verwalten und installieren`
+
+Im Suchfenster `geobasis` eingeben, das angezeigte Plugin `GeoBasis_Loader`auswählen und installieren.
+
+Laden Sie aus dem Katalog 3: Welt:
+
+- `OpenStreeMap abgeleitet` → `OpenTopoMap (XYZ)`
+
+- `Google` → `Google Hybrid (XYZ)`
+
+- `BING` → `Bing VirtualEarth (XYZ)`
+
+
+## Aufgabe 06: Sichern des Benutzerprofils
 
 Sie haben nun mehrere neue Datenquellen angelegt. QGIS speichert diese Datenquellen in Ihrem
 Benutzerprofil. Beim nächsten Start von QGIS können diese Quellen wieder verwendet werden. Daher ist

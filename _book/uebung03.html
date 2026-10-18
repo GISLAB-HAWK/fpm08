@@ -255,7 +255,8 @@ window.Quarto = {
   <li><a href="#sec-wms" id="toc-sec-wms" class="nav-link" data-scroll-target="#sec-wms"><span class="header-section-number">3.4</span> Aufgabe 02: Einbinden von WMS-Diensten zur Darstellung von Ortholuftbildern</a></li>
   <li><a href="#aufgabe-03-einbinden-der-flurstücksgrenzen-als-wfs-dienste" id="toc-aufgabe-03-einbinden-der-flurstücksgrenzen-als-wfs-dienste" class="nav-link" data-scroll-target="#aufgabe-03-einbinden-der-flurstücksgrenzen-als-wfs-dienste"><span class="header-section-number">3.5</span> Aufgabe 03: Einbinden der Flurstücksgrenzen als WFS-Dienste</a></li>
   <li><a href="#aufgabe-04-hintergrundkarte-als-vektor-kacheln" id="toc-aufgabe-04-hintergrundkarte-als-vektor-kacheln" class="nav-link" data-scroll-target="#aufgabe-04-hintergrundkarte-als-vektor-kacheln"><span class="header-section-number">3.6</span> Aufgabe 04: Hintergrundkarte als Vektor-Kacheln</a></li>
-  <li><a href="#aufgabe-05-sichern-des-benutzerprofils" id="toc-aufgabe-05-sichern-des-benutzerprofils" class="nav-link" data-scroll-target="#aufgabe-05-sichern-des-benutzerprofils"><span class="header-section-number">3.7</span> Aufgabe 05: Sichern des Benutzerprofils</a></li>
+  <li><a href="#aufgabe-05-installation-der-geobasis_loader-erweiterung" id="toc-aufgabe-05-installation-der-geobasis_loader-erweiterung" class="nav-link" data-scroll-target="#aufgabe-05-installation-der-geobasis_loader-erweiterung"><span class="header-section-number">3.7</span> Aufgabe 05: Installation der GeoBasis_Loader Erweiterung</a></li>
+  <li><a href="#aufgabe-06-sichern-des-benutzerprofils" id="toc-aufgabe-06-sichern-des-benutzerprofils" class="nav-link" data-scroll-target="#aufgabe-06-sichern-des-benutzerprofils"><span class="header-section-number">3.8</span> Aufgabe 06: Sichern des Benutzerprofils</a></li>
   </ul>
 </nav>
     </div>
@@ -402,25 +403,24 @@ FOSSGIS 2024:
 <p><a href="https://basemap.de/data/produkte/web_vektor/sonstiges/basemap_de_Web_Vektor_qgis_connection.xml" class="uri">https://basemap.de/data/produkte/web_vektor/sonstiges/basemap_de_Web_Vektor_qgis_connection.xml</a></p>
 <p>Anschließend nutzen Sie die XML-Datei um die Verbindung anzulegen:</p>
 <div style="border: 2px solid #afca0b; background-color: #fafafa; padding: 8px;">
-<p><code>Layer</code> → <code>Datenquellenverwaltung</code> → Vektorkachel -&gt; laden</p>
+<p><code>Layer</code> → <code>Datenquellenverwaltung</code> → <code>Vektorkachel</code> → <code>Laden</code></p>
 </div>
 <p>Es wird eine neue Datenquelle “basemap.de Farbe” angelegt, die dem Projekt hinzugefügt werden kann.</p>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Tipp
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Wir empfehlen das hilfreiche QGIS Plugin <code>GeoBasis_Loader</code> zu installieren und auszuprobieren. Das Plugin vereinfacht das Finden und Einfügen ausgewählter WMS-, WMTS-, WFS-, WCS-, und VectorTiles-Dienste aus den Open Data Portalen der Landesvermessungsämter in Deutschland, europäische und weltweite Hintergrundkarten.</p>
-</div>
-</div>
 </section>
-<section id="aufgabe-05-sichern-des-benutzerprofils" class="level2" data-number="3.7">
-<h2 data-number="3.7" class="anchored" data-anchor-id="aufgabe-05-sichern-des-benutzerprofils"><span class="header-section-number">3.7</span> Aufgabe 05: Sichern des Benutzerprofils</h2>
+<section id="aufgabe-05-installation-der-geobasis_loader-erweiterung" class="level2" data-number="3.7">
+<h2 data-number="3.7" class="anchored" data-anchor-id="aufgabe-05-installation-der-geobasis_loader-erweiterung"><span class="header-section-number">3.7</span> Aufgabe 05: Installation der GeoBasis_Loader Erweiterung</h2>
+<p>Installieren Sie das QGIS Plugin <code>GeoBasis_Loader</code>. Das Plugin vereinfacht das Finden und Einfügen ausgewählter WMS-, WMTS-, WFS-, WCS-, und VectorTiles-Dienste aus den Open Data Portalen der Landesvermessungsämter in Deutschland, europäische und weltweite Hintergrundkarten.</p>
+<p><code>Erweiterungen</code> → <code>Erweiterungen verwalten und installieren</code></p>
+<p>Im Suchfenster <code>geobasis</code> eingeben, das angezeigte Plugin <code>GeoBasis_Loader</code>auswählen und installieren.</p>
+<p>Laden Sie aus dem Katalog 3: Welt:</p>
+<ul>
+<li><p><code>OpenStreeMap abgeleitet</code> → <code>OpenTopoMap (XYZ)</code></p></li>
+<li><p><code>Google</code> → <code>Google Hybrid (XYZ)</code></p></li>
+<li><p><code>BING</code> → <code>Bing VirtualEarth (XYZ)</code></p></li>
+</ul>
+</section>
+<section id="aufgabe-06-sichern-des-benutzerprofils" class="level2" data-number="3.8">
+<h2 data-number="3.8" class="anchored" data-anchor-id="aufgabe-06-sichern-des-benutzerprofils"><span class="header-section-number">3.8</span> Aufgabe 06: Sichern des Benutzerprofils</h2>
 <p>Sie haben nun mehrere neue Datenquellen angelegt. QGIS speichert diese Datenquellen in Ihrem Benutzerprofil. Beim nächsten Start von QGIS können diese Quellen wieder verwendet werden. Daher ist jetzt ein guter Zeitpunkt eine Kopie Ihres Benutzerprofils erneut zu sichern. Folgen Sie dazu der Anleitung in LE01 <a href="uebung01.html#sec-nutzerprofil" class="quarto-xref"><span>Kapitel 1.2.4</span></a></p>
 
 
