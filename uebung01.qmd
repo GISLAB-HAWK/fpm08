@@ -114,7 +114,7 @@ Weitere Informationen zu den QGIS-Benutzerprofilen finden sie hier:
 
 Neben QGIS nutzen wir für die fernerkundlichen Auswertungen das quelloffene QGIS Plugin [EnMAP-Box](https://enmap-box.readthedocs.io/en/latest/general/about.html) in der Version 3.17.9.
 
-#### Installation der EnMAP-Box Erweiterung
+#### Installation der EnMAP-Box Erweiterung {#sec-epinstall}
 
 ::: {style="border: 2px solid #afca0b; background-color: #fafafa; padding: 8px;"}
 `Erweiterungen` → `Erweiterungen verwalten und installieren`
@@ -123,7 +123,7 @@ Im Suchfenster `enmap`  eingeben, das angezeigte Plugin `EnMAP-Box 3`auswählen 
 
 :::
 
-#### Installation zusätzlicher EnMAP-Box Module
+#### Installation zusätzlicher EnMAP-Box Module {#sec-epmodulinstall}
 
 ::: {.panel-tabset}
 

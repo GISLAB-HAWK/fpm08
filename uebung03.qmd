@@ -178,7 +178,7 @@ In dem Menü kann dann die korrekte URL des Dienstes eingetragen werden
 Nachdem die Verbindung angelegt wurde kann QGIS sich mit dem WFS-Server verbinden und die zur
 Verfügung stehenden Layer abrufen. Die Flurstücke finden Sie im Layer "*adv_AX_Flurstueck"*.
 
-## Aufgabe 04: Hintergrundkarte als Vektor-Kacheln
+## Aufgabe 04: Hintergrundkarte als Vektor-Kacheln {#sec-basemap_vektorkachel}
 
 Als Hintergrundkarten wollen wir einen [Geodatendienst in Form von
 Vektor-Kacheln](https://basemap.de/produkte-und-dienste/web-vektor/) nutzen. Basemap ist eine

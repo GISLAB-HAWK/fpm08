@@ -239,7 +239,7 @@ darstellen können. Dies ermöglicht es nun auch die Darstellung aller Bilder gl
 einheitlich anzupassen. Legen sie dazu wie oben beschrieben für das Orthomosaik einen neuen Stil
 *`CIR`* an und stellen sie das Mosaik als CIR-Abbildung dar.
 
-## Erstellen eines Kartenlayouts zur Ausgabe einer Luftbildkarte
+## Erstellen eines Kartenlayouts zur Ausgabe einer Luftbildkarte {#sec-kartenlayout}
 
 Wir können das Orthobildmosaik als Luftbildkarte im Format PDF ausgeben, ein wichtiges Produkt für
 Übersicht und Orientierung in einem Forstrevier oder zur Erstellung detaillierter Arbeitskarten.
