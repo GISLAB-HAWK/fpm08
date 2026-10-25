@@ -271,7 +271,7 @@ Die ausgewählten Bänder werden mit der kleinsten Pixelgröße der ausgewählte
 
 ## Aufgabe 07: Erstellen eines Kartenlayouts zur Ausgabe einer Satellitenbildkarte
 
-Erstellen Sie ein Layout für eine Satellitenbildkarte in den Grenzen des Harz Nationalparks mit dem Hintergrund  **"basemap.de Grau"** (s. @sec-basemap_vektorkachel)  zur Ausgabe im Format PDF mit den wichtigsten Kartenelementen (s. @sec-kartenlayout).
+Erstellen Sie ein Layout für eine Satellitenbildkarte in den Grenzen des Harz Nationalparks mit dem Hintergrund  **"basemap.de Grau"** (s. @sec-basemap_vektorkachel) zur Ausgabe im Format PDF mit den wichtigsten Kartenelementen (s. @sec-kartenlayout).
 
 
 ## Aufgabe 08: Projekt bereinigen und sichern
