@@ -18,10 +18,8 @@ Lizenz: Creative Commons BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc
 
 ## Lernziele und Aufgabenstellung
 
-Aufgrund der langanhaltenden und ausgeprägten Trockenheit in den Jahren 2017 und 2018 kam zu großflächigen
-Waldschäden. Davon betroffen ist auch das Forstamt Heiligenstadt in
-Thüringen. Im Rahmen der regelmäßigen Forsteinrichtung werden die aktuellen Bestandesgrenzen und die
-Waldeinteilung mithilfe von Luftbildern und im Gelände überprüft. Aufgrund der Schäden haben sich im
+Aufgrund der langanhaltenden und ausgeprägten Trockenheit in den Jahren 2017 und 2018 kam es zu großflächigen
+Waldschäden. Davon betroffen ist auch das Forstamt Heiligenstadt in Thüringen. Im Rahmen der regelmäßigen Forsteinrichtung werden die aktuellen Bestandesgrenzen und die Waldeinteilung mithilfe von Luftbildern und im Gelände überprüft. Aufgrund der Schäden haben sich im
 FoA Heiligenstadt - gegenüber der letzten Einrichtung im Jahr 2012 - einige Änderungen in der
 Bestockung der Bestände ergeben. In der Übung sollen anhand von aktuellen Luftbildern diese
 Änderungen erfasst und die Waldeinteilung des Forstbetriebes aktualisiert werden.
@@ -43,14 +41,14 @@ Die Studierenden sollen:
 
 2.  Beschaffen Sie sich die Waldeinteilung Thüringens aus dem Geoportal des Landesbetriebes ThüringenForst und filtern Sie diese mit den Abteilungen des FoA Heilligenstadt
 
-3.  Beschaffen Sie sich Informationen zur satellitenbasierten Waldschadenserfassung als WMS-Goedatendienst des Geoportals des Landesbetriebes ThüringenForst
+3.  Beschaffen Sie sich Informationen zur satellitenbasierten Waldschadenserfassung als WMS-Geodatendienst des Geoportals des Landesbetriebes ThüringenForst
 
 4.  Erstellen Sie auf Basis dieser Informationen eine aktualisierte Waldeinteilung
 
 ## Aufgabe 0: Anlegen eine neuen QGIS-Projektes
 
 Folgen sie der Anleitung aus LE01 @sec-projekt_management, um eine neue Ordnerstruktur und ein neues
-QGIS-Projekt für LE05 anzulegen. In der Übung bietet es sich an den Ordner "daten" weiter in die
+QGIS-Projekt für LE05 anzulegen. In der Übung bietet es sich an, den Ordner "daten" weiter in die
 Unterordner "vektor" und "raster" zu unterteilen.
 
 ## Aufgabe 01: Recherche und Download aktueller Ortholuftbilder {#sec-le05_download}
@@ -71,7 +69,7 @@ Der Teil des FoA, den wir bearbeiten, wird durch folgende Kacheln abgedeckt:
 -   32581_5692
 
 Für diese Kacheln liegen digitale Orthophotos (DOP) aus einer Befliegung vom 28.4.2021 vor. Die
-Waldeinteilung, die momentan vorliegt fand zum Stichtag 1.1.2012 statt. Insofern wäre eine Befliegung
+Waldeinteilung, die momentan vorliegt, fand zum Stichtag 1.1.2012 statt. Insofern wäre eine Befliegung
 aus dem Jahr 2022 im zehnjährigen Rhythmus. Trotz der Abweichung von einem Jahr zum nächsten
 Stichtag (1.1.2022) sind die Daten für die Aktualisierung der Waldeinteilung geeignet.
 
@@ -87,8 +85,7 @@ LE02 @sec-CIR_darstellung).
 ::: callout-tip
 **Stil kopieren**
 
-Mit den Funktionen *„Stil kopieren“/“Stil einfügen“* können sie die Symbolisierung von einem Layer
-auf den anderen übertragen.
+Wenn Sie den Layernamen im Layer-Panel markieren, können Sie mit der Funktion *"Rechtsklick \> Stile > Stile kopieren" und "Stile einfügen“* die Symbolisierung von einem Layer auf den anderen übertragen.
 :::
 
 ::: {style="border: 3px solid #ff8a0b; background-color: #ffffff; padding: 8px;"}
@@ -125,29 +122,29 @@ die Filterung verwenden:
 "FOA"=55 AND "ABT" IN ('24','25','26','27','28','29','30','32')
 ```
 
-Zur Aktivierung der Filterfunktion klicken wir im Layer-Panel rechts auf unseren Layer „Baumarten“ und
-wählen die Option „Filter“. In dem sich öffnenden Fenster können wir unten unter
+Zur Aktivierung der Abfragefunktion markieren wir im Layer-Panel den Layer „Baumarten“ und
+ *„Rechtsklick \> Filter“*. In dem sich öffnenden Fenster können wir unten unter
 „Datenanbieterspezifischer Filterausdruck“ den oben genannten SQL Filterausdruck eintragen.
 Anschließend können Sie über die Funktion „Testen“ überprüfen, ob der Filter funktioniert. Es
-sollten 60 Zeilen ausgegeben werden. Ist dies der Fall aktivieren wir den neuen Filter mit „o.k“.
+sollten 60 Zeilen ausgegeben werden. Ist dies der Fall aktivieren wir den neuen Filter mit „OK“.
 
 Für die spätere Bearbeitung der Geometrien legen wir uns eine Kopie der gefilterten Bestände an und
 speichern diese im Geopackage Format ab. Dazu klicken wir im Layer-Panel rechts auf den Layer
-*„Baumarten“* und wählen die Funktion *„Export“* \> *„Objekte speichern als“*. Wir speichern die
+*„Baumarten“* und wählen die Funktion *„Export“* \> *„Gewählte Objekte speichern als“*. Wir speichern die
 Objekte als Geopackage im Ordner „.../vektor/“ unter dem Namen „uebung05.gpkg“ ab und nennen den
 Layer „Waldeinteilung“.
 
 ![](images/LE05_export_geopackage.png)
 
-Für die weitere Bearbeitung soll die Darstellung der Waldeinteilung so angepasst werden, dass eine
+Für die weitere Bearbeitung soll die Darstellung der Waldeinteilung angepasst werden, so dass eine
 Aktualisierung mithilfe visueller Interpretation erfolgen kann. Dazu sollen zunächst das CIR-Luftbild mit den Bestandesgrenzen als kontrastreiche Linien überlagert werden. Hier bietet sich
-als Symbollayertyp *„Rand_Einfache Linie“* mit einem hellen Blauton an. Wir können die
-Symbolisierung unter Eigenschaften -\> Symbolisierung einstellen.
+als Symbollayertyp *„Rand: Einfache Linie“* mit einem hellen Blauton an. Wir können die
+Symbolisierung unter Layer -\> Eigenschaften -\> Symbolisierung einstellen.
 
 Für die Aktualisierung der Waldeinteilung benötigen wir eine zusätzliche Spalte mit einer
-Bestandesnummer. Wir können diese hinzufügen, indem wir die Attributtabelle des neuen Layers
-öffnen. Nun aktivieren wir den Editiermodus mit dem kleinen Stiftsymbol und wählen „Neue Spalte“
-hinzufügen.
+Bestandesnummer. Wir können diese hinzufügen, in dem wir die Attributtabelle des neuen Layers
+öffnen. Nun aktivieren wir den Editiermodus mit dem kleinen Stiftsymbol ![](images/LE05_tabelle_edit.png)  und wählen „Neue Spalte
+hinzufügen" ![](images/LE05_add_spalte.png).
 
 ::: {style="border: 3px solid #ff8a0b; background-color: #ffffff; padding: 8px;"}
 **Waldeinteilungsdaten**
@@ -177,14 +174,14 @@ Richten sie WMS-Verbindung in QGIS ein und laden sie den Layer "Waldschäden" (s
 
 Bevor wir mit der Aktualisierung der Bestandesgrenzen beginnen können, müssen wir zunächst die
 verschiedenen Werkzeuge zum Editieren von Polygonen kennenlernen. Um topologische Fehler beim
-Editieren der Geometrien zu reduzieren verwenden wir die „Einrastwerkzeuge“(snapping) in QGIS. Bei
-der ersten Verwendung müssen diese zunächst aktiviert/sichtbar gemacht werden. Dazu wählen wir:
+Editieren der Geometrien zu reduzieren, verwenden wir die „Einrastwerkzeuge“(snapping) in QGIS. Bei
+der ersten Verwendung müssen wir diese zunächst aktivieren/sichtbar machen. Dazu wählen wir:
 
 ::: {style="border: 2px solid #afca0b; background-color: #fafafa; padding: 8px;"}
-Menü `→` Ansicht `→` Werkzeugleisten `→` Einrastewerkzeugleiste
+`Ansicht`→`Werkzeugleisten`→`Einrastewerkzeugleiste`
 :::
 
-In der Werkzeugleiste erscheint nun ein kleines Magnetsymbol. Wir aktivieren die Einrastfunktion
+In der Werkzeugleiste erscheint nun ein kleines Magnetsymbol ![](images/LE05_einrastwerkzeug.png). Wir aktivieren die Einrastfunktion
 durch Klick auf das Magnet-Symbol und wählen folgende Einstellungen:
 
 ![](images/le05_topologisches_editieren_einstellen.png)
@@ -193,7 +190,7 @@ Zusätzlich nutzen wir die *erweiterten Digitalisierungswerkzeuge* in QGIS. Bei 
 Verwendung müssen wir diese wie folgt aktivieren:
 
 ::: {style="border: 2px solid #afca0b; background-color: #fafafa; padding: 8px;"}
-Menü `→` Ansicht `→` Werkzeugleisten `→` Erweiterte Digitalisierungswerkzeugleiste
+`Ansicht`→`Werkzeugleisten`→`Erweiterte Digitalisierungswerkzeugleiste`
 :::
 
 QGIS bietet vielfältige Funktionen zum Editieren von Geometrien an. In dieser Übung wollen wir nur
@@ -203,35 +200,33 @@ die wichtigsten vorstellen:
 
 Wir können bestehende Polygone in zwei oder mehrere Teile zerschneiden. Diese Funktion ist immer
 dann sinnvoll, wenn z.B. ein schon kartierter Bestand aufgrund von Störungen weiter aufgeteilt
-werden soll. Dazu wählen wir das Tool „Objekte zerteilen“ in der Werkzeugleiste „Erweiterte
-Digitalisierungswerkzeuge“.
+werden soll. Wir markieren  den zu bearbeitenden Polygon-Layer im Layer-Panel und klicken im Menü auf das ![](images/LE05_start_edit.png) Stiftsymbol, um den Editiermodus zu aktivieren. Jetzt können wir das Tool ![](images/LE05_poly_teilen.png) „Objekte zerteilen“  in der Werkzeugleiste „Erweiterte Digitalisierungswerkzeuge“ wählen.
 
 ::: callout-caution
-Bevor sie mit dem Zerteilen starten, achten Sie darauf das kein Polygon ausgewählt ist.
+Bevor sie mit dem Zerteilen starten, achten Sie darauf, das kein Polygon ausgewählt ist.
 :::
 
 ::: callout-note
-Wenn sie die Funktion „Teile zerlegen“ wählen wird ein Polygon in ein Multi-Polygon aufgeteilt und
-keine neue Zeile in der Attributtabelle angelegt!
+Wenn sie die Funktion ![](images/LE05_teile_zerlegen.png) „Teile zerlegen“  wählen, wird ein Polygon in ein Multipolygon aufgeteilt. Es entsteht keine neue Zeile in der Attributtabelle!
 :::
 
 Anschließend können wir ein Polygon zerteilen, in dem wir mit der Maus eine Trennlinie einzeichnen
 und diese nach dem letzten Stützpunkt mit einem Rechtsklick bestätigen. Vorteil dieses Verfahrens
 ist, dass keine Zwischenräume oder Selbstschneidungen entstehen. In der Attributtabelle wird eine
-neue Zeile mit den gleichen Werten angelegt. Hier müssen wir noch die Bestandsnummer ändern und in
-die neue Spalte „Bestand“ eine Zahl eintragen. Dies geht am einfachsten mit dem Attribut
-Editierwerkzeug, das sich in der Werkzeugleiste befindet.
+neue Zeile mit den gleichen Werten angelegt. Hier müssen wir noch die Bestandesnummer ändern und in
+der neue Spalte „Bestand“ eine Zahl eintragen. Dies geht mit dem 
+ ![](images/LE05_attributtabelle_oeffnen.png) Editierwerkzeug, das sich im Hauptmenü in der Werkzeugleiste befindet.
+Nach Öffnen der Attributtabelle können Sie  ![](images/LE05_objekt_select.png) "Objekte wählen" aktivieren, in das neue Polygon klicken und die Attribute des ausgewählten Polygons anpassen.
 
 ![](images/LE05_Beispiel_polygon_teilen.png)
 
-Nach der Aktivierung des Werkzeugs können sie in das neue Polygon klicken und die Attribute
-anpassen.
+
 
 #### Polygongrenzen verschieben
 
-Um die Grenzen eines bestehenden Polygons zu ändern, verwenden wir das Stützpunktwerkzeug. Nach
+Um die Grenzen eines bestehenden Polygons zu ändern, verwenden wir das ![](images/LE05_stuetzpunkt_edit.png) Stützpunktwerkzeug . Nach
 Auswahl des Werkzeuges klicken wir einmal in das zu ändernde Polygon. Daraufhin erscheinen die
-Grenzen und Stützpunkte dieses Polygons. Durch Rechtsklick können die Stützpunkte ausgewählt und mit
+Grenzen und Stützpunkte dieses Polygons. Mit Linksklick kann ein einzelener Stützpunkt ausgewählt und mit
 der Maus verschoben werden. Durch Doppelklick auf die Grenzlinie können neue Stützpunkte hinzugefügt
 werden. Stützpunkte können mit der Taste „Entf“ oder mit dem Mülleimer-Symbol gelöscht werden.
 
@@ -240,10 +235,9 @@ werden. Stützpunkte können mit der Taste „Entf“ oder mit dem Mülleimer-Sy
 #### Polygone vereinen
 
 In Fällen, in denen Bestandesgrenzen aufgelöst werden müssen, können die Bestände vereint werden.
-Dazu werden zunächst die Polygone, die vereint werden sollen, mit dem Auswahlwerkzeug in der
+Dazu werden zunächst die Polygone, die vereint werden sollen, mit dem ![](images/LE05_objekt_select.png) Auswahlwerkzeug in der
 Werkzeugleiste selektiert. Zum Selektieren mehrerer Polygone halten sie die Shift-Taste beim Klicken
-gedrückt! Anschließend können wir das Werkzeug „Objekte verschmelzen“ wählen und das Dialogfeld mit
-den Attributtabellen bestätigen.
+gedrückt! Anschließend können wir das Werkzeug ![](images/LE05_verschmelzen.png) „Objekte verschmelzen“  wählen und im Dialogfeld entscheiden, welche Attribute für das verschmolzene Polygon übernommen werden sollen.
 
 ![](images/LE05_Verschmelzen_von_Beständen.png)
 
@@ -254,7 +248,7 @@ Sie den Umgang mit diesen Funktionen üben und die Waldeinteilung der ausgewähl
 aktualisieren. Gehen Sie dabei systematisch vor, in dem Sie jede Abteilung einzeln bearbeiten.
 
 ::: callout-tip
-*Erstellen Sie sich eine Kopie des Waldeinteilungslayers und setzen Sie den Symbolisierungswert auf
+*Erstellen Sie eine Kopie des Waldeinteilungslayers und setzen Sie den Symbolisierungswert auf
 „Abt“. Dann sehen Sie sofort, welche Bestände zu einer Abteilung gehören. Alternativ können Sie auch
 mit Filtern arbeiten.*
 :::
