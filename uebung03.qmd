@@ -66,7 +66,7 @@ Die Studierenden sollen:
 Folgen Sie der Anleitung aus @sec-projekt_management, um eine neue Ordnerstruktur und ein neues
 QGIS-Projekt für LE03 anzulegen.
 
-## Aufgabe 01: Download und CIR-Darstellung eines Ortholuftbildes des Nordcampus
+## Aufgabe 01: Download und CIR-Darstellung eines Ortholuftbildes des Nordcampus {#sec-ortho_download}
 
 Das Landesamt für Geoinformation und Landesvermessung Niedersachsen (LGLN) stellt über die
 [OpenGeoData.NI](https://ni-lgln-opengeodata.hub.arcgis.com/pages/opengeodata) Plattform amtliche

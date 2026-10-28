@@ -52,7 +52,7 @@ Die Studierenden sollen:
 Folgen Sie der Anleitung aus LE01 @sec-projekt_management, um eine neue Ordnerstruktur und ein neues
 QGIS-Projekt für LE04 anzulegen.
 
-## Aufgabe 01: Überprüfen der EnMAP-Box Installation
+## Aufgabe 01: Überprüfen der EnMAP-Box Installation (Optional)
 
 Starten Sie die EnMAP-Box: `Raster` → `EnMAP-Box` →  `EnMAP-Box`
 
@@ -244,7 +244,7 @@ Zum Maskieren und zuschneiden nutzen Sie anschließend die Funktion:
 
 Speichern Sie das neue Raster unter dem Namen *NP_Harz_2025_06_12* als GeoTIFF im Unterordner `daten` ab und laden Sie die Satellitenbildkarte als CIR-Falschfarbenbild in QGIS. Überlagern Sie das Bild mit der Außengrenze des Nationalparks.
 
-## Aufgabe 06: Import von Sentinel Satellitenbilder mit der EnMAP-Box
+## Aufgabe 06: Import von Sentinel Satellitenbilder mit der EnMAP-Box (Optional)
 
 Die EnMap-Box enthält die praktische Funktion
 

@@ -231,7 +231,6 @@ der Maus verschoben werden. Durch Doppelklick auf die Grenzlinie können neue St
 werden. Stützpunkte können mit der Taste „Entf“ oder mit dem Mülleimer-Symbol gelöscht werden.
 
 ![](images/LE05_Anpassen_der_Polygon_grenzen.png)
-
 #### Polygone vereinen
 
 In Fällen, in denen Bestandesgrenzen aufgelöst werden müssen, können die Bestände vereint werden.

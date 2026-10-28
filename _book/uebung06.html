@@ -74,6 +74,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -230,7 +259,14 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#farbpaletten" id="toc-farbpaletten" class="nav-link" data-scroll-target="#farbpaletten"><span class="header-section-number">6.5.2</span> Farbpaletten</a></li>
   </ul></li>
   <li><a href="#aufgabe-04-digitalisierung-der-schadflächen" id="toc-aufgabe-04-digitalisierung-der-schadflächen" class="nav-link" data-scroll-target="#aufgabe-04-digitalisierung-der-schadflächen"><span class="header-section-number">6.6</span> Aufgabe 04: Digitalisierung der Schadflächen</a></li>
-  <li><a href="#aufgabe-05-entwicklung-der-schadflächen-optional" id="toc-aufgabe-05-entwicklung-der-schadflächen-optional" class="nav-link" data-scroll-target="#aufgabe-05-entwicklung-der-schadflächen-optional"><span class="header-section-number">6.7</span> Aufgabe 05: Entwicklung der Schadflächen (Optional)</a></li>
+  <li><a href="#aufgabe-05-digitaliserung-der-schadflächen-mit-der-enmap-box-optional" id="toc-aufgabe-05-digitaliserung-der-schadflächen-mit-der-enmap-box-optional" class="nav-link" data-scroll-target="#aufgabe-05-digitaliserung-der-schadflächen-mit-der-enmap-box-optional"><span class="header-section-number">6.7</span> Aufgabe 05: Digitaliserung der Schadflächen mit der EnMAP-Box (optional)</a>
+  <ul class="collapse">
+  <li><a href="#import-von-rasterdaten-in-die-enmap-box" id="toc-import-von-rasterdaten-in-die-enmap-box" class="nav-link" data-scroll-target="#import-von-rasterdaten-in-die-enmap-box"><span class="header-section-number">6.7.1</span> Import von Rasterdaten in die EnMAP Box</a></li>
+  <li><a href="#ndvi-berechnung" id="toc-ndvi-berechnung" class="nav-link" data-scroll-target="#ndvi-berechnung"><span class="header-section-number">6.7.2</span> NDVI Berechnung</a></li>
+  <li><a href="#farbpalette" id="toc-farbpalette" class="nav-link" data-scroll-target="#farbpalette"><span class="header-section-number">6.7.3</span> Farbpalette</a></li>
+  <li><a href="#vektorisierung" id="toc-vektorisierung" class="nav-link" data-scroll-target="#vektorisierung"><span class="header-section-number">6.7.4</span> Vektorisierung</a></li>
+  </ul></li>
+  <li><a href="#aufgabe-06-entwicklung-der-schadflächen-optional" id="toc-aufgabe-06-entwicklung-der-schadflächen-optional" class="nav-link" data-scroll-target="#aufgabe-06-entwicklung-der-schadflächen-optional"><span class="header-section-number">6.8</span> Aufgabe 06: Entwicklung der Schadflächen (Optional)</a></li>
   </ul>
 </nav>
     </div>
@@ -263,6 +299,7 @@ B.Sc. Forstwirtschaft an der HAWK Göttingen.
 
 Autor: Paul Magdon
 Datum: 2025-11-06
+Letztes Update: 2026-10-28 (Hans Fuchs)
 Lizenz: Creative Commons BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 -->
@@ -284,7 +321,7 @@ Lizenz: Creative Commons BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc
 </ul>
 <p><strong>Aufgaben</strong></p>
 <ol type="1">
-<li>Rasterdaten importieren und als CIR Darstellen</li>
+<li>Rasterdaten importieren und als CIR darstellen</li>
 <li>Berechnung des Normalized Difference Vegetation Index (NDVI)</li>
 <li>Durchführung einer Kontraststreckung und Erstellen einer Farbpalette</li>
 <li>Digitalisierung der Schadflächen</li>
@@ -296,17 +333,17 @@ Lizenz: Creative Commons BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc
 </section>
 <section id="aufgabe-01-download-und-import-der-ortholuftbilder" class="level2" data-number="6.3">
 <h2 data-number="6.3" class="anchored" data-anchor-id="aufgabe-01-download-und-import-der-ortholuftbilder"><span class="header-section-number">6.3</span> Aufgabe 01: Download und Import der Ortholuftbilder</h2>
-<p>Nachdem wir das Projekt angelegt haben, soll das Luftbild aus der Befliegung der NW-FVA importiert werden. Laden Sie zunächst die Geodatensätze für die Übungen herunter. Sie finden diese hier:</p>
-<p><a href="https://cloud.hawk.de/index.php/s/W7GzR6TKK736Cby" class="uri">https://cloud.hawk.de/index.php/s/W7GzR6TKK736Cby</a></p>
-<p>Kopieren &amp; entpacken sie sich diesen Ordner.</p>
+<p>Nachdem wir das Projekt angelegt haben, soll das Luftbild aus der Befliegung der NWFVA importiert werden. Laden Sie zunächst die Geodatensätze für die Übungen herunter. Sie finden diese hier:</p>
+<p><a href="https://cloud.hawk.de/index.php/s/WffowNpbeg4qajB" class="uri">https://cloud.hawk.de/index.php/s/WffowNpbeg4qajB</a></p>
+<p>Kopieren &amp; entpacken Sie sich diesen Ordner.</p>
 <p>Bei dem Bild handelt es sich um ein Digitales Orthophoto (DOP) mit vier Bändern:</p>
 <ul>
 <li>Band 1 (rot)</li>
 <li>Band 2 (grün)</li>
-<li>Band 3(blau)</li>
-<li>Band 4 (Nahes Infrarot, NIR)</li>
+<li>Band 3 (blau)</li>
+<li>Band 4 (nir, Nahes Infrarot)</li>
 </ul>
-<p>Importieren sie die Ortholuftbilder in ihr QGIS-Projekt und erzeugen sie eine CIR-Falschfarbendarstellung (siehe auch LE02 <a href="uebung02.html#sec-CIR_darstellung" class="quarto-xref"><span>Kapitel 2.6</span></a>).</p>
+<p>Importieren sie die Ortholuftbilder in ihr QGIS-Projekt und erzeugen Sie eine CIR-Falschfarbendarstellung (siehe auch LE02 <a href="uebung02.html#sec-CIR_darstellung" class="quarto-xref"><span>Kapitel 2.6</span></a>).</p>
 <p><strong>Fragen:</strong></p>
 <div style="border: 3px solid #ff8a0b; background-color: #ffffff; padding: 8px;">
 <ol type="1">
@@ -317,16 +354,13 @@ Lizenz: Creative Commons BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc
 </section>
 <section id="aufgabe-02-berechnung-des-normalized-difference-vegetation-index-ndvi" class="level2" data-number="6.4">
 <h2 data-number="6.4" class="anchored" data-anchor-id="aufgabe-02-berechnung-des-normalized-difference-vegetation-index-ndvi"><span class="header-section-number">6.4</span> Aufgabe 02: Berechnung des Normalized Difference Vegetation Index (NDVI)</h2>
-<p>Zur besseren Ansprache der Vitalität/des Blattverlusts möchten wir den Vegetationsindex NDVI berechnen. Für die Berechnung nutzen wir die Funktion <em>Radiometric Indices</em> in der Orfeo-Toolbox (OTB). Mit dieser Funktion können unterschiedliche Vegetationsindices berechnet werden. Sie finden die Funktion am einfachsten über die Suche in der Werkzeugkiste. Sollte diese nicht angezeigt werden, können sie die Werkzeugkiste im Menü -&gt; <em>Verarbeitung</em> aktivieren. Sollte ihnen die Funktion nicht angezeigt werden, müssen sie die Pfadeinstellungen zu OTB anpassen.</p>
-<p>Zur Berechnung des Vegetationsindex muss dem Programm mitgeteilt werden, welches Bild genutzt werden soll (<code>Input Image=sub_prezelle_2013</code>), welche Kanäle im Bild vorhanden sind (siehe oben), welchen Indices berechnet werden sollen (Available Radiometric Indices=Vegetation:NDVI), welche radiometrische Auflösung das Ausgabebild haben soll (Output pixel type= float) und wo das Ausgabebildgespeichert werden soll (Output<br>
-Image=sub_prezelle_2013_ndvi.tif).</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/le06_radiometric_indices.png" class="img-fluid figure-img"></p>
-<figcaption>Einstellungen für die Berechnung des NDVIs mit der OTB Funktion <em>Radiometric Indices</em></figcaption>
-</figure>
-</div>
-<p>Als Ausgabe erhalten wir ein Graustufenbild mit den NDVI Werten (-1≤Pixelwert≤1) wie unten dargestellt:</p>
+<p>Zur besseren Ansprache der Vitalität/des Blattverlusts berechnen wir den Normalisierten Differenz-VegetationsIndex (NDVI) nach der folgenden Formel:</p>
+<p><span class="math display">\[
+\text{ndvi} = \dfrac{\text{nir} - \text{rot}}{\text{nir} + \text{rot}}
+\]</span> Für die Berechnung nutzen wir den <code>Raster</code> → <code>Rasterrechner</code>:</p>
+<p>Die Liste “Rasterkanäle” enthält alle geladenen Bänder, die verwendet werden können. Um ein Rasterband zum Feld für den Rasterberechnungsausdruck hinzuzufügen, doppelklicken Sie auf den Bandnamen in der Liste “Felder”. Sie können dann die Operatoren verwenden, um Berechnungsausdrücke zu formulieren, oder Sie können sie einfach in das Feld eingeben. Vergessen Sie nicht die Klammern! Als Ergebnis definieren Sie den <code>Ausgabelayer: sub_prezelle_2013_ndvi</code> mit Angabe des Speicherpfades und das <code>Ausgabeformat: GeoTIFF</code>.</p>
+<p><img src="images/LE06_Rasterrechner.png" class="img-fluid"></p>
+<p>Als Ausgabe erhalten wir ein Graustufenbild mit den NDVI Werten im Bereich -1 ≤ Pixelwert ≤1 (s. unten)</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/le06_NDVI.png" class="img-fluid figure-img"></p>
@@ -336,7 +370,7 @@ Image=sub_prezelle_2013_ndvi.tif).</p>
 <div style="border: 3px solid #ff8a0b; background-color: #ffffff; padding: 8px;">
 <p><strong>NDVI</strong></p>
 <ul>
-<li><em>Wie unterscheidet sich die CIR-Falschfarbendarstellung vom NDVI?</em></li>
+<li><em>Welche Unterschiede gibt es zwischen einer CIR-Falschfarbendarstellung und NDVI Darstellung??</em></li>
 <li><em>Was ist der kleinste und was der größte NDVI-Wert?</em></li>
 <li><em>Welche NDVI-Werte haben geschädigte, welche gesunde Kiefern?</em></li>
 <li><em>Sind allen niedrigen NDVI-Werte auf Fraßschäden zurückzuführen?</em></li>
@@ -364,7 +398,7 @@ Image=sub_prezelle_2013_ndvi.tif).</p>
 </section>
 <section id="farbpaletten" class="level3" data-number="6.5.2">
 <h3 data-number="6.5.2" class="anchored" data-anchor-id="farbpaletten"><span class="header-section-number">6.5.2</span> Farbpaletten</h3>
-<p>Für die Kartierung der Schadflächen kann es sinnvoll sein, die Darstellung der NDVI-Karte nicht als Graustufenbild darzustellen, sondern dafür ein Farbpalette zu nutzen. Erstellen sie dafür einen neuen Stil mit einer kontrastreichen Farbpalette. Stellen Sie dazu die Darstellungsart unter <em>Layereigenschaften -&gt; Symbolisierung auf Einkanalpseudofarben</em> und wählen sie eigneten Farbverlauf aus.</p>
+<p>Für die Kartierung der Schadflächen kann es sinnvoll sein, die Darstellung der NDVI-Karte nicht als Graustufenbild darzustellen, sondern dafür ein Farbpalette zu nutzen. Erstellen sie dafür einen neuen Stil mit einer kontrastreichen Farbpalette. Stellen Sie dazu die Darstellungsart unter <em>Layereigenschaften -&gt; Symbolisierung auf Einkanalpseudofarben</em> und wählen sie einen eigneten Farbverlauf aus.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/LE06_Farbpalette_NDVI.png" class="img-fluid figure-img" width="709"></p>
@@ -375,8 +409,8 @@ Image=sub_prezelle_2013_ndvi.tif).</p>
 </section>
 <section id="aufgabe-04-digitalisierung-der-schadflächen" class="level2" data-number="6.6">
 <h2 data-number="6.6" class="anchored" data-anchor-id="aufgabe-04-digitalisierung-der-schadflächen"><span class="header-section-number">6.6</span> Aufgabe 04: Digitalisierung der Schadflächen</h2>
-<p>Im nächsten Schritt sollen die vom Kiefernspinner befallen Flächen digitalisiert werden. Legen sie dazu ein neues geopackage im Ordner <em>“daten/vektor”</em> mit dem Namen <em>uebung06.gpkg</em> an. In dem Geopackage soll ein neuer Layer mit dem Namen “Schadflächen” angelegt werden.</p>
-<p>Erfassen sie anschließend die Bereiche, die sie eindeutig als befallen erkennen können als Polygone und bestimmen sie die Flächengröße der Schadflächen.</p>
+<p>Im nächsten Schritt sollen die vom Kiefernspinner befallen Flächen digitalisiert werden. Legen Sie dazu ein neues Geopackage im Ordner <em>“daten/vektor”</em> mit dem Namen <em>uebung06.gpkg</em> an. In dem Geopackage wird ein neuer Layer mit dem Namen “Schadflächen” angelegt werden.</p>
+<p>Erfassen sie anschließend die Bereiche, die Sie eindeutig als befallen erkennen können als Polygone und bestimmen Sie die Flächengröße der Schadflächen.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/LE06_Schadflaechen.png" class="img-fluid figure-img"></p>
@@ -384,13 +418,59 @@ Image=sub_prezelle_2013_ndvi.tif).</p>
 </figure>
 </div>
 </section>
-<section id="aufgabe-05-entwicklung-der-schadflächen-optional" class="level2" data-number="6.7">
-<h2 data-number="6.7" class="anchored" data-anchor-id="aufgabe-05-entwicklung-der-schadflächen-optional"><span class="header-section-number">6.7</span> Aufgabe 05: Entwicklung der Schadflächen (Optional)</h2>
-<p>Die bisherigen bearbeiteten Aufnahmen stammen aus dem Jahr 2013. Im Mai 2024 hat das LGLN erneut eine Befliegung der Flächen vorgenommen. Laden sie sich die beiden Bilder für das Untersuchungsgebiet vom Geoportal des LGLN und vergleichen sie den Stand 2024 mit dem Stand 2013.</p>
+<section id="aufgabe-05-digitaliserung-der-schadflächen-mit-der-enmap-box-optional" class="level2" data-number="6.7">
+<h2 data-number="6.7" class="anchored" data-anchor-id="aufgabe-05-digitaliserung-der-schadflächen-mit-der-enmap-box-optional"><span class="header-section-number">6.7</span> Aufgabe 05: Digitaliserung der Schadflächen mit der EnMAP-Box (optional)</h2>
+<p>Die EnMAP-Box bietet nützliche Werkzeuge, die Workflows wie z.B. visuelle Interpretation und Kartierung von Referenzdaten auf Grundlage von Ortholuftbildern erleichtern.</p>
+<section id="import-von-rasterdaten-in-die-enmap-box" class="level3" data-number="6.7.1">
+<h3 data-number="6.7.1" class="anchored" data-anchor-id="import-von-rasterdaten-in-die-enmap-box"><span class="header-section-number">6.7.1</span> Import von Rasterdaten in die EnMAP Box</h3>
+<ul>
+<li>Starten Sie die EnMAP-Box mit Klick auf <img src="images/LE06_EB_enmap_symbol.png" class="img-fluid"><br>
+Das Ortholuftbild <code>sub_prezelle_2013.tif</code> kann mit Klick auf <img src="images/LE06_EB_addData_symbol.png" class="img-fluid"> oder auf <img src="images/LE06_EB_plusData_symbol.png" class="img-fluid"> geladen werden. Wenn das Orthobild noch in der QGIS Kartenansicht geladen ist können wir auch mit <img src="images/LE06_EB_addQgis_symbol.png" class="img-fluid"> importieren.</li>
+</ul>
+<p><img src="images/LE06_EB_importData.png" class="img-fluid"></p>
+<ul>
+<li>Zum Darstellen einer Falschfarbenkomposite markieren wir den Layernamen in der EnMAP-Box. Rechtsklick auf den Layernamen, <code>Open in new map</code> → <code>CIR</code>.</li>
+</ul>
+<p><img src="images/LE06_EB_openMapView.png" class="img-fluid"></p>
+</section>
+<section id="ndvi-berechnung" class="level3" data-number="6.7.2">
+<h3 data-number="6.7.2" class="anchored" data-anchor-id="ndvi-berechnung"><span class="header-section-number">6.7.2</span> NDVI Berechnung</h3>
+<ul>
+<li>Öffnen Sie <code>Applications</code> → <code>Raster math</code>. Klicken Sie auf den Reiter <code>Code snippets</code>. - Doppelklick auf <code>Indices</code> und <code>ndvi</code> öffnet ein Fenster zur Berechnung des NDVI.</li>
+<li>In der Auswahliste <em>Select source for placeholder “raster”</em> wählen Sie <code>sub_prezelle_2013</code> aus. Auf <code>OK</code> und <code>Starte</code> klicken.</li>
+</ul>
+<p><img src="images/LE06_EB_RasterMath.png" class="img-fluid"></p>
+<ul>
+<li>Ein neuer Layer <code>ndvi</code> erscheint unter <code>Data sources</code>. Rechtsklick auf den Layernamen <code>Open in new map</code> → <code>default</code>. Es sind jetzt zwei Map Views geöffnet.</li>
+<li>Mit Klick auf <img src="images/LE06_EB_sync_symbol.png" class="img-fluid"> und Link <img src="images/LE06_EB_connect_symbol.png" class="img-fluid"> sind beide Map Views geometrisch synchronisiert. - Aktivieren Sie Map View #2, mit dem Identify Tool <img src="images/LE06_EB_identify_symbol.png" class="img-fluid"> können einzelne Pixelwerte abgefragt werden.</li>
+</ul>
+</section>
+<section id="farbpalette" class="level3" data-number="6.7.3">
+<h3 data-number="6.7.3" class="anchored" data-anchor-id="farbpalette"><span class="header-section-number">6.7.3</span> Farbpalette</h3>
+<ul>
+<li>Mit Klick auf <img src="images/LE06_EB_styling_symbol.png" class="img-fluid"> öffnet sich ein Fenster zur Änderung der Rasteransicht.</li>
+<li>Wählen Sie den Reiter <code>Pseudo</code> und übertrage die Minimum- und Maximum-Werte aus dem Reiter <code>Gray</code> auf den Reiter <code>Pseudo</code>.</li>
+<li>Klicken Sie auf den kleinen Pfeil neben der Color Ramp und wähle <code>Farbverlauf invertieren</code>.</li>
+</ul>
+</section>
+<section id="vektorisierung" class="level3" data-number="6.7.4">
+<h3 data-number="6.7.4" class="anchored" data-anchor-id="vektorisierung"><span class="header-section-number">6.7.4</span> Vektorisierung</h3>
+<ul>
+<li>Importiere die neuerstellte Vektordatei <code>uebung06.gpkg</code> in die EnMAP Box.</li>
+<li>Rechtsklick auf den Vektorlayernamen <code>Open in existing map</code>→ <code>Map #1</code></li>
+<li>Markiere den Vektor-Layernamen unter <code>Data Views</code></li>
+<li>Mit Klick auf <code>Toggle editing</code> und <code>Add new polygon</code> können weitere Schadflächen kartiert werden.</li>
+</ul>
+<p><img src="images/LE06_EB_toggle_symbol.png" class="img-fluid"></p>
+</section>
+</section>
+<section id="aufgabe-06-entwicklung-der-schadflächen-optional" class="level2" data-number="6.8">
+<h2 data-number="6.8" class="anchored" data-anchor-id="aufgabe-06-entwicklung-der-schadflächen-optional"><span class="header-section-number">6.8</span> Aufgabe 06: Entwicklung der Schadflächen (Optional)</h2>
+<p>Die bisherigen bearbeiteten Aufnahmen stammen aus dem Jahr 2013. Im Mai 2024 hat das niedersächsische Landesamt für Geoinformation und Landesvermessung (LGLN) erneut eine Befliegung der Flächen vorgenommen. Laden Sie sich die beiden Orthobildkacheln für das Untersuchungsgebiet vom Geoportal des LGLN herunter (s. <a href="uebung03.html#sec-ortho_download" class="quarto-xref"><span>Kapitel 3.3</span></a>) und vergleichen sie den Stand 2024 mit 2013.</p>
 <div style="border: 3px solid #ff8a0b; background-color: #ffffff; padding: 8px;">
 <p>[<strong>Zeitliche Änderungen</strong>]</p>
 <ul>
-<li><p>Lassen sich die Schadflächen von 2013 auch in 2024 ansprechen?</p></li>
+<li><p>Lassen sich Schadflächen von 2013 auch in den Orthobildern 2024 erkennen?</p></li>
 <li><p>Welche Schlüsse für die Waldbewirtschaftung lassen sich aus dem Vergleich der Jahre 2013 und 2024 ziehen?</p></li>
 </ul>
 </div>
