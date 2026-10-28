@@ -191,7 +191,7 @@ Fügen Sie die Bänder **B02, B03, B04 und B08** mit einer räumlichen Auflösun
 QGIS-Projekt hinzu.
 
 ::: {style="border: 3px solid #ff8a0b; background-color: #ffffff; padding: 8px;"}
-Ordnen sie den folgenden Bandnummern des Sentinel-2 MSI eine der Beschreibungen der Spektralbereiche zu:  `Coastal aerosol, Blue, Green, Red, Red edge1, Red edge2, Red edge3, Narrow NIR, NIR, Water vapour, SWIR1, SWIR 2`
+Ordnen sie den folgenden Bandnummern des Sentinel-2 MSI eine der Beschreibungen der Spektralbereiche zu:  `Coastal aerosol, Blue, Green, Red, Red edge1, Red edge2, Red edge3, Narrow NIR, NIR, Water vapour, SWIR-1, SWIR-2`
 
 B02 =
 
@@ -208,9 +208,9 @@ Nach dem Import der einzelnen Bänder werden diese als Graustufenbilder dargeste
 Farbdarstellung zur ermöglichen, müssen die Bänder als Mehrkanalfarbild zusammengestellt werden (s. auch LE02 @sec-mehrkanalbilder). Erstellen Sie für beide Kacheln ein virtuelles Mehrkanalraster
 und speichern sie diese unter:
 
--   *S2B_MSIL2A_20250612T102559_N0511_R108_T32**UNC**\_20250612T131505.vrt*
+-   *S2B_**T32UNC**\_20250612.vrt*
 
--   *S2B_MSIL2A_20250612T102559_N0511_R108_T32**UPC**\_20250612T131505.vrt*
+-   *S2B_**T32UPC**\_20250612.vrt*
 
 Erstellen sie anschließend ein virtuelles Satellitenbildmosaik und stellen Sie es in QGIS als
 CIR-Bild dar. Folgen Sie dazu auch der Anleitung aus der LE02 @sec-mosaikieren.
