@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="de" xml:lang="de"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.10.19">
+<meta name="generator" content="quarto-1.10.20">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -45,10 +45,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-bf27225e3a48a9273f3daa8f8e829971.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-17888a1159294d3eb470f19f6f52f5a5.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-7b41b65cdd4b030162f185184962183e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-fd33a4952e9ae2782db733e1f7710525.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -77,6 +77,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -447,6 +476,10 @@ Vorsicht
 <p><code>Raster</code> →<code>Extraktion</code> → <code>Raster auf Layermaske zuschneiden</code></p>
 </div>
 <p>Speichern Sie das neue Raster unter dem Namen <em>NP_Harz_2025_06_12</em> als GeoTIFF im Unterordner <code>daten</code> ab und laden Sie die Satellitenbildkarte als CIR-Falschfarbenbild in QGIS. Überlagern Sie das Bild mit der Außengrenze des Nationalparks.</p>
+<p><strong>Zusätzlichen Transparentwert einstellen</strong></p>
+<ul>
+<li>Rechtsklick auf den <code>Layer</code> → <code>Eigenschaften</code> → <code>Transparenz</code> <strong>Zusätzlicher Leerwert</strong>: 0</li>
+</ul>
 </section>
 <section id="aufgabe-06-import-von-sentinel-satellitenbilder-mit-der-enmap-box-optional" class="level2" data-number="4.8">
 <h2 data-number="4.8" class="anchored" data-anchor-id="aufgabe-06-import-von-sentinel-satellitenbilder-mit-der-enmap-box-optional"><span class="header-section-number">4.8</span> Aufgabe 06: Import von Sentinel Satellitenbilder mit der EnMAP-Box (Optional)</h2>
@@ -498,6 +531,37 @@ Abbildung&nbsp;4.1: Import von Sentinel-2 Daten in der EnMAP-Box
 <ul>
 <li>Sehen Sie sich das virtuelle Mehrkanalbild als CIR-Falschfarbendarstellung an.</li>
 </ul>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tipp
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Der Datentyp der VRT-Ergebnisdatei liegt unverändert gespeichert als <strong>UinT16</strong> (vorzeichenlose 16‑Bit‑Ganzzahl, Wertebereich 0–65535) vor. In QGIS werden die Pixelwerte (DN, digital numbers) dann als <strong>Float32</strong> Gleitkommawerte angezeigt: die physikalische Bodenreflexion BOA (Bottom of Atmopshere), skaliert mit einem Offset von -0,1 und einem Skalierungsfaktor von 0,0001:</p>
+<p><span class="math inline">\(BOA_{Reflexion}=DN⋅0.0001−0.1\)</span></p>
+<p>Der Layer zeigt deshalb unter <code>Eigenschaften</code> → <code>Information</code> bzw. im Identify‑Werkzeug Float32 Gleitkommawerte an. Das ist näherungsweise die tatsächliche Oberflächenreflexion. Die Reflexion <span class="math inline">\(\rho\)</span> (Reflektanz) ist der Anteil der einfallenden Sonnenstrahlung, den eine Oberfläche in einem bestimmten Wellenlängenbereich zurückwirft:</p>
+<p><span class="math inline">\(\rho(\lambda) = \frac{\text{reflektierte Strahlung}}{\text{einfallende Strahlung}}\)</span></p>
+<p>Sie ist dimensionslos und liegt physikalisch zwischen 0 (alles absorbiert) und 1 (alles reflektiert), also 0–100 % und beschreibt eine physikalische Eigenschaft des Materials am Boden. Weil sie auf die einfallende Strahlung normiert ist, hängt sie kaum von Sonnenstand und Beleuchtung ab. Dadurch lassen sich Szenen von verschiedenen Tagen und Orten vergleichen.</p>
+<p>In dieser VRT Datei ist kein Leerwert (NoDataValue) definiert. Der Füllwert DN 0 erscheint deshalb als gültiger Wert −0.1 und wird schwarz dargestellt, nicht transparent. Der NoData‑Wert muss die Ganzzahl 0 sein.</p>
+<ul>
+<li><p>Rufen Sie das Modul auf: <code>Verarbeitung → Werkzeugkiste → EnMAP-Box → Raster → Raster miscellaneous → Edit raster source band properties.</code></p></li>
+<li><p>Entfernen Sie den VRT Layer aus dem QGIS Layer-Panel. Markieren Sie den Rasterlayer-Namen, <code>Rechtsklick</code> → <code>Layer löschen</code>.</p></li>
+<li><p><strong>GDAL raster source:</strong> Wählen Sie die VRT-Datei aus.</p></li>
+</ul>
+<p>Für die Vier-Kanaldatei (B02, B03, B04, B08) eingeben:</p>
+<ul>
+<li><strong>No data values</strong>: <code>0, 0, 0, 0</code></li>
+</ul>
+<p>Auf <code>Starte</code> klicken.</p>
+<ul>
+<li>Layer neu laden. Die Füllpixel werden jetzt transparent dargestellt.</li>
+</ul>
+</div>
+</div>
 </section>
 <section id="aufgabe-07-erstellen-eines-kartenlayouts-zur-ausgabe-einer-satellitenbildkarte" class="level2" data-number="4.9">
 <h2 data-number="4.9" class="anchored" data-anchor-id="aufgabe-07-erstellen-eines-kartenlayouts-zur-ausgabe-einer-satellitenbildkarte"><span class="header-section-number">4.9</span> Aufgabe 07: Erstellen eines Kartenlayouts zur Ausgabe einer Satellitenbildkarte</h2>
