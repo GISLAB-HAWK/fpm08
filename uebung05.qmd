@@ -111,7 +111,7 @@ Waldeinteilung in das QGIS-Projekt ein.
 Für die Übung beschränken wir uns auf die Auswertung folgender Abteilungen des FoA Heiligenstadt
 (55):
 
-Abt. 24, 25, 26, 27, 29, 30, 32.
+Abt. 24, 25, 26, 27, 28, 29, 30, 32.
 
 Daher werden die Vektordatensätze entsprechend ausgewählt und gefiltert. QGIS bietet Selektions- und Filterungswerkzeuge an. In der Übung verwenden wir das Filterwerkzeug, mit dem Vektordaten über Attribute gefiltert werden können. Als Syntax
 für den Filteraufruf wird die Datenbankprogrammiersprache Structured Query Language (SQL) verwendet.
