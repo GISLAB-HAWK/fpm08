@@ -244,6 +244,12 @@ Zum Maskieren und zuschneiden nutzen Sie anschließend die Funktion:
 
 Speichern Sie das neue Raster unter dem Namen *NP_Harz_2025_06_12* als GeoTIFF im Unterordner `daten` ab und laden Sie die Satellitenbildkarte als CIR-Falschfarbenbild in QGIS. Überlagern Sie das Bild mit der Außengrenze des Nationalparks.
 
+**Zusätzlichen Transparentwert einstellen**
+
+-    Rechtsklick auf den `Layer` → `Eigenschaften` → `Transparenz`
+     **Zusätzlicher Leerwert**: 0
+
+
 ## Aufgabe 06: Import von Sentinel Satellitenbilder mit der EnMAP-Box (Optional)
 
 Die EnMap-Box enthält die praktische Funktion
@@ -268,6 +274,38 @@ Import von Sentinel-2 Daten in der EnMAP-Box
 Die ausgewählten Bänder werden mit der kleinsten Pixelgröße der ausgewählten Bänder resampled. Wellenlängenbereiche und Bandnamen werden als Metadaten gleich automatisch in die Ausgabe-Rasterdatei geschrieben.
 
 - Sehen Sie sich das virtuelle Mehrkanalbild als CIR-Falschfarbendarstellung an.
+
+::: callout-tip
+Der Datentyp der VRT-Ergebnisdatei liegt unverändert gespeichert als **UinT16** (vorzeichenlose 16‑Bit‑Ganzzahl, Wertebereich 0–65535) vor. 
+In QGIS werden die Pixelwerte (DN, digital numbers) dann als **Float32** Gleitkommawerte angezeigt: die physikalische Bodenreflexion BOA (Bottom of Atmopshere), skaliert mit einem Offset von -0,1 und einem Skalierungsfaktor von 0,0001:
+
+$BOA_{Reflexion}=DN⋅0.0001−0.1$
+
+Der Layer zeigt deshalb unter `Eigenschaften` → `Information` bzw. im Identify‑Werkzeug Float32 Gleitkommawerte an. Das ist näherungsweise die tatsächliche Oberflächenreflexion. 
+Die Reflexion $\rho$ (Reflektanz) ist der Anteil der einfallenden Sonnenstrahlung, den eine Oberfläche in einem bestimmten Wellenlängenbereich zurückwirft:
+
+$\rho(\lambda) = \frac{\text{reflektierte Strahlung}}{\text{einfallende Strahlung}}$
+
+Sie ist dimensionslos und liegt physikalisch zwischen 0 (alles absorbiert) und 1 (alles reflektiert), also 0–100 % und beschreibt eine physikalische Eigenschaft des Materials am Boden. Weil sie auf die einfallende Strahlung normiert ist, hängt sie kaum von Sonnenstand und Beleuchtung ab. Dadurch lassen sich Szenen von verschiedenen Tagen und Orten vergleichen.
+
+In dieser VRT Datei ist kein Leerwert (NoDataValue) definiert. Der Füllwert DN 0 erscheint deshalb als gültiger Wert −0.1 und wird schwarz dargestellt, nicht transparent. Der NoData‑Wert muss die Ganzzahl 0 sein.
+
+-    Rufen Sie das Modul auf: `Verarbeitung → Werkzeugkiste → EnMAP-Box → Raster → Raster miscellaneous → Edit raster source band properties.`
+
+-    Entfernen Sie den VRT Layer aus dem QGIS Layer-Panel. Markieren Sie den Rasterlayer-Namen,
+     `Rechtsklick` → `Layer löschen`.
+
+-    **GDAL raster source:** Wählen Sie die VRT-Datei aus.
+
+Für die Vier-Kanaldatei (B02, B03, B04, B08) eingeben:
+
+-    **No data values**: `0, 0, 0, 0`
+
+Auf `Starte` klicken.
+
+-   Layer neu laden. Die Füllpixel werden jetzt transparent dargestellt.
+:::
+
 
 ## Aufgabe 07: Erstellen eines Kartenlayouts zur Ausgabe einer Satellitenbildkarte
 
