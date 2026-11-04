@@ -84,7 +84,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-63b5708e65d6cd79cd7618c58d0c21e7.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-23b890f5a05820f21dcc4ff2c2b23077.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-4f67ab1e4efc86feb5e21e0983fc9301.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -399,8 +399,53 @@ Tipp
 <div style="border: 2px solid #afca0b; background-color: #fafafa; padding: 8px;">
 <p><code>Ansicht</code>→<code>Werkzeugleisten</code>→<code>Einrastewerkzeugleiste</code></p>
 </div>
-<p>In der Werkzeugleiste erscheint nun ein kleines Magnetsymbol <img src="images/LE05_einrastwerkzeug.png" class="img-fluid">. Wir aktivieren die Einrastfunktion durch Klick auf das Magnet-Symbol und wählen folgende Einstellungen:</p>
-<p><img src="images/le05_topologisches_editieren_einstellen.png" class="img-fluid"></p>
+<p>In der Werkzeugleiste erscheint nun ein kleines Magnetsymbol <img src="images/LE05_einrastwerkzeug.png" class="img-fluid">. Wir aktivieren die Einrastfunktion durch Klick auf das Magnet-Symbol und wählen folgende Einstellungen, um Fehler beim Digitalisieren zu vermeiden:</p>
+<p><img src="images/LE05_snap_settings.png" class="img-fluid"></p>
+<ol type="1">
+<li><pre><code>Checkbox des zu editierenden Vektor-Layers einschalten</code></pre></li>
+<li><pre><code>Typ: Stützpunkt</code></pre></li>
+<li><pre><code>Einheiten: Meter</code></pre></li>
+<li><pre><code>Toleranz: 0,5</code></pre></li>
+<li><pre><code>"Topologisches Editieren" einschalten</code></pre></li>
+<li><pre><code>"Überlappung zulassen"</code></pre></li>
+<li><pre><code>"Einrasten auf Schnittpunkte" ausschalten</code></pre></li>
+<li><pre><code>"Selbsteinrasten" ausschalten</code></pre></li>
+</ol>
+<p>Wir können ausserdem automatische Geometrieüberprüfungen und -reparaturen für den Vektorlayer aktivieren:</p>
+<p><img src="images/LE05_auto_correct.png" class="img-fluid"></p>
+<ul>
+<li>Markieren Sie den Vektor-Layernamen im Layer-Panel</li>
+<li><code>Rechtsklick</code> → <code>Eigenschaften</code> → <code>Digitalisierung</code></li>
+<li>“Doppelte Knoten entfernen” einschalten</li>
+<li>Geometriegenauigenaigkeit: 0,001</li>
+<li>Geometrieprüfungen “ist gültig” einschalten</li>
+<li>Topologieprüfungen “Überlappt” einschalten</li>
+</ul>
+<p>Beim Teilen von Polygonen können Fehler entstehen, wenn für das neue Polygon eine ungültige oder doppelte FID vergeben wird. Mit der folgenden Einstellung wird eine eindeutige FID automatisch vergeben:</p>
+<p><img src="images/LE05_fid_vorgabewert.png" class="img-fluid"></p>
+<ul>
+<li><code>Rechtsklick auf Vektor-Layername</code> → <code>Eigenschaften</code> → <code>Attributformular</code></li>
+<li>Markieren Sie “fid” in der Liste der “Verfügbaren Bedienelemente”</li>
+<li>Unter Richtlinien -&gt; Beim Teilen von Objekten “Vorgabewert verwenden” auswählen</li>
+</ul>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tipp
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Falls Geometriefehler beim Digitalisieren entstehen, können Sie diese auch nach dem Editieren korrigieren:</p>
+<ul>
+<li>Beenden Sie den Editiermodus mit Klick auf das Stiftsymbol.</li>
+<li>Mit <code>Vektor</code> → <code>Geometrie-Werkzeuge</code> → <code>Gültigkeit prüfen</code> werden Geometriefehler angezeigt.</li>
+<li>Fehler lassen sich beheben mit <code>Verarbeitung</code> → <code>Werkzeugkiste</code> → <code>Vektorgeoemtrie</code> → <code>Geometrien reparieren</code>.</li>
+</ul>
+</div>
+</div>
 <p>Zusätzlich nutzen wir die <em>erweiterten Digitalisierungswerkzeuge</em> in QGIS. Bei der ersten Verwendung müssen wir diese wie folgt aktivieren:</p>
 <div style="border: 2px solid #afca0b; background-color: #fafafa; padding: 8px;">
 <p><code>Ansicht</code>→<code>Werkzeugleisten</code>→<code>Erweiterte Digitalisierungswerkzeugleiste</code></p>
