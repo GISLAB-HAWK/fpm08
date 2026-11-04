@@ -182,9 +182,54 @@ der ersten Verwendung müssen wir diese zunächst aktivieren/sichtbar machen. Da
 :::
 
 In der Werkzeugleiste erscheint nun ein kleines Magnetsymbol ![](images/LE05_einrastwerkzeug.png). Wir aktivieren die Einrastfunktion
-durch Klick auf das Magnet-Symbol und wählen folgende Einstellungen:
+durch Klick auf das Magnet-Symbol und wählen folgende Einstellungen, um Fehler beim Digitalisieren zu vermeiden: 
 
-![](images/le05_topologisches_editieren_einstellen.png)
+![](images/LE05_snap_settings.png)
+
+1.     Checkbox des zu editierenden Vektor-Layers einschalten
+
+2.     Typ: Stützpunkt
+
+3.     Einheiten: Meter
+
+4.     Toleranz: 0,5
+
+5.     "Topologisches Editieren" einschalten
+
+6.     "Überlappung zulassen"
+
+7.     "Einrasten auf Schnittpunkte" ausschalten
+
+8.     "Selbsteinrasten" ausschalten
+
+Wir können ausserdem automatische Geometrieüberprüfungen und -reparaturen für den Vektorlayer aktivieren:
+
+![](images/LE05_auto_correct.png)
+
+-    Markieren Sie den Vektor-Layernamen im Layer-Panel
+-    `Rechtsklick` → `Eigenschaften` → `Digitalisierung`
+-    "Doppelte Knoten entfernen" einschalten
+-    Geometriegenauigenaigkeit: 0,001
+-    Geometrieprüfungen "ist gültig" einschalten
+-    Topologieprüfungen "Überlappt" einschalten
+
+
+Beim Teilen von Polygonen können Fehler entstehen, wenn für das neue Polygon eine ungültige oder doppelte FID vergeben wird. Mit der folgenden Einstellung wird eine eindeutige FID automatisch vergeben:
+
+![](images/LE05_fid_vorgabewert.png)
+
+-    `Rechtsklick auf Vektor-Layername` → `Eigenschaften` → `Attributformular`
+-    Markieren Sie "fid" in der Liste der "Verfügbaren Bedienelemente"
+-    Unter Richtlinien \-> Beim Teilen von Objekten  "Vorgabewert verwenden" auswählen
+
+
+::: callout-tip
+Falls Geometriefehler beim Digitalisieren entstehen, können Sie diese auch nach dem Editieren korrigieren:
+
+-    Beenden Sie den Editiermodus mit Klick auf das Stiftsymbol.
+-    Mit `Vektor` → `Geometrie-Werkzeuge`  → `Gültigkeit prüfen` werden Geometriefehler angezeigt.
+-    Fehler lassen sich beheben mit `Verarbeitung` →  `Werkzeugkiste` → `Vektorgeoemtrie` →  `Geometrien reparieren`.
+:::
 
 Zusätzlich nutzen wir die *erweiterten Digitalisierungswerkzeuge* in QGIS. Bei der ersten
 Verwendung müssen wir diese wie folgt aktivieren:
