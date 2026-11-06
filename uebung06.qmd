@@ -18,7 +18,7 @@ Lizenz: Creative Commons BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc
 
 ## Lernziele & Aufgabenstellung
 
-Die Nordwestdeutsche Forstliche Versuchsanstalt (NWFVA) überwacht in Niedersachsen großflächige
+Die Nordwestdeutsche Forstliche Versuchsanstalt (NW-FVA) überwacht in Niedersachsen großflächige
 Fraßschäden des Kiefernspinners (*Dendrolimus pini*, Abbildung 1) mithilfe von
 Fernerkundungsverfahren. Im Juli 2013 wurde dazu eine Luftbildbefliegung durchgeführt und digitale
 Orthophotos (DOP) hergestellt. In dieser Lerneinheit sollen Schwerpunkte der
@@ -30,7 +30,7 @@ Auflösung von 20 cm (DOP20).
 
 Die Studierenden sollen:
 
--   Luftbilder für die Schadenkartierung aufbereiten
+-   Luftbilder für die Schadenskartierung aufbereiten
 -   Vegetationsindizes berechnen
 -   Schadflächen digitalisieren
 
