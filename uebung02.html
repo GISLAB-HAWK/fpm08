@@ -365,7 +365,13 @@ Wichtig
 <p>Nach dem ein Mehrkanalraster als virtuelle Datei angelegt wurde, stellt QGIS diese sofort als Farbbild dar. Dabei nutzt QGIS die Standardeinstellungen für Raster und interpretiert die Bänder wie folgt:</p>
 <p>Band 1: rot; Band 2: grün; Band 3: blau.</p>
 <p><strong>Echtfarben Darstellung</strong></p>
-<p>Wenn die spektralen Bereiche der Bänder den primären Farbkanälen zugeordnet werden, also Kanal (Band) 1: rot zum Roten Kanal, Kanal (Band) 2: grün zum grünen Kanal und Kanal (Band) 3: blau zum blauen Kanal wird das Raster in den echten Farben dargestellt. In vorliegenden Fall ist das bereits korrekt und führt automatisch zu einer Echtfarbendarstellung. Dies muss jedoch nicht immer der Fall sein. Daher ist es wichtig, die Zuordnung der Bänder zu den Farben in den Layereigenschaften zu überprüfen. Dazu mit Rechtsklick auf den jeweiligen VRT-Layer:</p>
+<p>Wenn die spektralen Bereiche der Bänder den primären Farbkanälen zugeordnet werden, also:</p>
+<ul>
+<li>roter Farbkanal -&gt; rot (band 1)</li>
+<li>grüner Farbkanal -&gt; grün (band 2)</li>
+<li>blauer Farbkanal -&gt; blaue (band 3)</li>
+</ul>
+<p>In vorliegenden Fall ist das bereits korrekt und führt automatisch zu einer Echtfarbendarstellung. Dies muss jedoch nicht immer der Fall sein. Daher ist es wichtig, die Zuordnung der Bänder zu den Farben in den Layereigenschaften zu überprüfen. Dazu mit Rechtsklick auf den jeweiligen VRT-Layer:</p>
 <div style="border: 2px solid #afca0b; background-color: #fafafa; padding: 8px;">
 <p><code>Eigenschaften</code> → <code>Symbolisierung</code> → <code>Darstellungsart</code> → <code>Multikanalfarbe</code></p>
 </div>
@@ -376,7 +382,13 @@ Wichtig
 <div style="border: 2px solid #afca0b; background-color: #fafafa; padding: 8px;">
 <p><code>Stil</code> → <code>Stil hinzufügen</code> → <code>Name: CIR</code></p>
 </div>
-<p>Anschließend öffnen wir wieder die Symbolisierung des Layers und wählen in der Darstellungsart Multikanalfarbe für den Roten Farbkanal Band 4: nir, für den Grünen Farbkanal Band 1: rot und den Blauen Farbkanal Band 2: grün. Dadurch wird nun eine Standard CIR-Falschfarben Darstellung angezeigt.</p>
+<p>Anschließend öffnen wir wieder die Symbolisierung des Layers und wählen in der Darstellungsart Multikanalfarbe:</p>
+<ul>
+<li>roter Farbkanal &lt;- nir (band 4)</li>
+<li>grüner Farbkanal &lt;- rot (band 1)</li>
+<li>blauer Farbkanal &lt;- grün (band 2)</li>
+</ul>
+<p>Dadurch wird nun eine Standard CIR-Falschfarben Darstellung angezeigt.</p>
 <div style="border: 3px solid #ff8a0b; background-color: #ffffff; padding: 8px;">
 <p><strong>Frage:</strong></p>
 <ol type="1">
@@ -418,13 +430,13 @@ Vorsicht
 <p>Wir können das Orthobildmosaik als Luftbildkarte im Format PDF ausgeben, ein wichtiges Produkt für Übersicht und Orientierung in einem Forstrevier oder zur Erstellung detaillierter Arbeitskarten.</p>
 <p>In einem QGIS Projekt können mehrere Karten erstellt und gespeichert werden. Zur Verwaltung der verschiedenen Karten wird der Kartenlayout-Manager verwendet. Sie finden dieses im Menü unter Projekt. Hier können sie ein neues Drucklayout °Luftbildkarte” anlegen.</p>
 <p>Nachdem Sie ein Kartenlayout im Manager angelegt haben öffnet sich ein neues Fenster mit dem noch leeren Kartenlayout. Um ein erstes Layout zu erstellen gehen wir schrttweise vor:</p>
-<p>1.)&nbsp; Hinzufügen eines Kartenfelds.</p>
+<p>1.) Hinzufügen eines Kartenfelds.</p>
 <p>Dazu wählen Sie links das Werkzeug “Karte hinzufügen” und ziehen anschließend in ihrem Layout ein Kartenfeld auf. QGIS stellt danach automatisch die Layer aus dem Hauptfenster dar.</p>
 <p>2.) Hinzufügen eines Titels</p>
 <p>Dazu wählen Sie links das Werkzeug “Beschriftung hinzufügen” und ziehen anschließend ein Textfeld oberhalb Ihrer Karte auf. Geben sie dann im Feld rechts unter „Beschriftung“ einen sinnvollen Titel (z.b. Luftbildkarte FoA Heiligenstadt) ein und wählen Sie eine passende Schriftgröße aus.</p>
 <p>3.) Hinzufügen einer Legende</p>
 <p>Dazu wählen Sie links das Werkzeug “Legende hinzufügen” aus und ziehen anschließend ein Legendenfeld rechts neben ihren Kartenfeld auf. QGIS übernimmt für die Legende dann automatisch die Symbolisierung aller Layer des Projektes. Wenn Sie rechts unter Legendenelemente die Funktion „Automatisch aktualisieren“ entfernen, können Sie Einträge manuell hinzufügen und entfernen.</p>
-<p>4.)&nbsp;Hinzufügen eine Nordpfeils</p>
+<p>4.) Hinzufügen eine Nordpfeils</p>
 <p>Dazu wählen Sie links das Werkzeug “Nordpfeil hinzufügen” und ziehen anschließend ein Fenster für den Nordpfeil auf.</p>
 <p>5.) Koordinatengitter hinzufügen</p>
 <p>Um ein Koordinatengitter hinzuzufügen, selektieren Sie zunächst das Kartenfenster in dem Sie darauf klicken. Anschließend öffnen Sie die Option „Gitter“, die ihnen im rechten Teil unter den Haupteigenschaften des Kartenfelds angezeigt wird. Über das grüne Plus Symbol legen Sie ein neues Gitter an. Anschließend wählen Sie dieses Gitter aus, und klicken auf „Gitter ändern“. Hier ändern wir folgende Optionen:</p>
