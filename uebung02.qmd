@@ -154,12 +154,15 @@ Band 1: rot; Band 2: grün; Band 3: blau.
 
 **Echtfarben Darstellung**
 
-Wenn die spektralen Bereiche der Bänder den primären Farbkanälen zugeordnet werden, also Kanal
-(Band) 1: rot zum Roten Kanal, Kanal (Band) 2: grün zum grünen Kanal und Kanal (Band) 3: blau zum
-blauen Kanal wird das Raster in den echten Farben dargestellt. In vorliegenden Fall ist das bereits
-korrekt und führt automatisch zu einer Echtfarbendarstellung. Dies muss jedoch nicht immer der Fall
-sein. Daher ist es wichtig, die Zuordnung der Bänder zu den Farben in den Layereigenschaften zu
-überprüfen. Dazu mit Rechtsklick auf den jeweiligen VRT-Layer:
+Wenn die spektralen Bereiche der Bänder den primären Farbkanälen zugeordnet werden, also:
+
+- roter Farbkanal -\> rot (band 1)
+- grüner Farbkanal -\> grün (band 2)
+- blauer Farbkanal -\> blaue (band 3)
+
+In vorliegenden Fall ist das bereits korrekt und führt automatisch zu einer Echtfarbendarstellung.
+Dies muss jedoch nicht immer der Fall sein. Daher ist es wichtig, die Zuordnung der Bänder zu den
+Farben in den Layereigenschaften zu überprüfen. Dazu mit Rechtsklick auf den jeweiligen VRT-Layer:
 
 ::: {style="border: 2px solid #afca0b; background-color: #fafafa; padding: 8px;"}
 `Eigenschaften` → `Symbolisierung` → `Darstellungsart` → `Multikanalfarbe`
@@ -184,9 +187,13 @@ wählen:
 :::
 
 Anschließend öffnen wir wieder die Symbolisierung des Layers und wählen in der Darstellungsart
-Multikanalfarbe für den Roten Farbkanal Band 4: nir, für den Grünen Farbkanal Band 1: rot und den
-Blauen Farbkanal Band 2: grün. Dadurch wird nun eine Standard CIR-Falschfarben Darstellung
-angezeigt.
+Multikanalfarbe:
+
+- roter Farbkanal \<- nir (band 4)
+- grüner Farbkanal \<- rot (band 1)
+- blauer Farbkanal \<- grün (band 2)
+
+Dadurch wird nun eine Standard CIR-Falschfarben Darstellung angezeigt.
 
 ::: {style="border: 3px solid #ff8a0b; background-color: #ffffff; padding: 8px;"}
 **Frage:**
@@ -251,7 +258,7 @@ Projekt. Hier können sie ein neues Drucklayout °Luftbildkarte" anlegen.
 Nachdem Sie ein Kartenlayout im Manager angelegt haben öffnet sich ein neues Fenster mit dem noch
 leeren Kartenlayout. Um ein erstes Layout zu erstellen gehen wir schrttweise vor:
 
-1.)  Hinzufügen eines Kartenfelds.
+1.) Hinzufügen eines Kartenfelds.
 
 Dazu wählen Sie links das Werkzeug "Karte hinzufügen" und ziehen anschließend in ihrem Layout ein
 Kartenfeld auf. QGIS stellt danach automatisch die Layer aus dem Hauptfenster dar.
@@ -269,7 +276,7 @@ rechts neben ihren Kartenfeld auf. QGIS übernimmt für die Legende dann automat
 Symbolisierung aller Layer des Projektes. Wenn Sie rechts unter Legendenelemente die Funktion
 „Automatisch aktualisieren“ entfernen, können Sie Einträge manuell hinzufügen und entfernen.
 
-4.) Hinzufügen eine Nordpfeils
+4.) Hinzufügen eine Nordpfeils
 
 Dazu wählen Sie links das Werkzeug "Nordpfeil hinzufügen" und ziehen anschließend ein Fenster für
 den Nordpfeil auf.
