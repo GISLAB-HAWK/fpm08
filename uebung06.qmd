@@ -30,9 +30,9 @@ Auflösung von 20 cm (DOP20).
 
 Die Studierenden sollen:
 
--   Luftbilder für die Schadenskartierung aufbereiten
--   Vegetationsindizes berechnen
--   Schadflächen digitalisieren
+- Luftbilder für die Schadenskartierung aufbereiten
+- Vegetationsindizes berechnen
+- Schadflächen digitalisieren
 
 **Aufgaben**
 
@@ -58,10 +58,10 @@ Kopieren & entpacken Sie sich diesen Ordner.
 
 Bei dem Bild handelt es sich um ein Digitales Orthophoto (DOP) mit vier Bändern:
 
--   Band 1 (rot)
--   Band 2 (grün)
--   Band 3 (blau)
--   Band 4 (nir, Nahes Infrarot)
+- Band 1 (rot)
+- Band 2 (grün)
+- Band 3 (blau)
+- Band 4 (nir, Nahes Infrarot)
 
 Importieren sie die Ortholuftbilder in ihr QGIS-Projekt und erzeugen Sie eine
 CIR-Falschfarbendarstellung (siehe auch LE02 @sec-CIR_darstellung).
@@ -75,29 +75,34 @@ CIR-Falschfarbendarstellung (siehe auch LE02 @sec-CIR_darstellung).
 
 ## Aufgabe 02: Berechnung des Normalized Difference Vegetation Index (NDVI)
 
-Zur besseren Ansprache der Vitalität/des Blattverlusts berechnen wir den Normalisierten Differenz-VegetationsIndex (NDVI) nach der folgenden Formel:
+Zur besseren Ansprache der Vitalität/des Blattverlusts berechnen wir den Normalisierten
+Differenz-VegetationsIndex (NDVI) nach der folgenden Formel:
 
 $$
 \text{ndvi} = \dfrac{\text{nir} - \text{rot}}{\text{nir} + \text{rot}}
-$$
-Für die Berechnung nutzen wir den `Raster` → `Rasterrechner`:
+$$ Für die Berechnung nutzen wir den `Raster` → `Rasterrechner`:
 
-Die Liste "Rasterkanäle" enthält alle geladenen Bänder, die verwendet werden können. Um ein Rasterband zum Feld für den Rasterberechnungsausdruck hinzuzufügen, doppelklicken Sie auf den Bandnamen in der Liste "Felder". Sie können dann die Operatoren verwenden, um Berechnungsausdrücke zu formulieren, oder Sie können sie einfach in das Feld eingeben. Vergessen Sie nicht die Klammern!
-Als Ergebnis definieren Sie den **Ausgabelayer:** "sub_prezelle_2013_ndvi" mit Angabe des Speicherpfades und das **Ausgabeformat:** "GeoTIFF".
+Die Liste "Rasterkanäle" enthält alle geladenen Bänder, die verwendet werden können. Um ein
+Rasterband zum Feld für den Rasterberechnungsausdruck hinzuzufügen, doppelklicken Sie auf den
+Bandnamen in der Liste "Felder". Sie können dann die Operatoren verwenden, um Berechnungsausdrücke
+zu formulieren, oder Sie können sie einfach in das Feld eingeben. Vergessen Sie nicht die Klammern!
+Als Ergebnis definieren Sie den **Ausgabelayer:** "sub_prezelle_2013_ndvi" mit Angabe des
+Speicherpfades und das **Ausgabeformat:** "GeoTIFF".
 
 ![](images/LE06_Rasterrechner.png)
 
-Als Ausgabe erhalten wir ein Graustufenbild mit den NDVI Werten im Bereich -1 ≤ Pixelwert ≤1 (s. unten)
+Als Ausgabe erhalten wir ein Graustufenbild mit den NDVI Werten im Bereich -1 ≤ Pixelwert ≤1 (s.
+unten)
 
 ![NDVI als Graustufenbild für Prezelle 2013](images/le06_NDVI.png)
 
 ::: {style="border: 3px solid #ff8a0b; background-color: #ffffff; padding: 8px;"}
 **NDVI**
 
--   *Welche Unterschiede gibt es zwischen einer CIR-Falschfarbendarstellung und NDVI Darstellung??*
--   *Was ist der kleinste und was der größte NDVI-Wert?*
--   *Welche NDVI-Werte haben geschädigte, welche gesunde Kiefern?*
--   *Sind allen niedrigen NDVI-Werte auf Fraßschäden zurückzuführen?*
+- *Welche Unterschiede gibt es zwischen einer CIR-Falschfarbendarstellung und NDVI Darstellung?*
+- *Was ist der kleinste und was der größte NDVI-Wert?*
+- *Welche NDVI-Werte haben geschädigte, welche gesunde Kiefern?*
+- *Sind allen niedrigen NDVI-Werte auf Fraßschäden zurückzuführen?*
 :::
 
 ## Aufgabe 03: Bildverbesserung
@@ -124,54 +129,69 @@ Wertebereich.
 Für die Kartierung der Schadflächen kann es sinnvoll sein, die Darstellung der NDVI-Karte nicht als
 Graustufenbild darzustellen, sondern dafür ein Farbpalette zu nutzen. Erstellen sie dafür einen
 neuen Stil mit einer kontrastreichen Farbpalette. Stellen Sie dazu die Darstellungsart auf
-*Layereigenschaften -\> Symbolisierung auf Einkanalpseudofarben* und wählen sie einen geeigneten Farbverlauf (z.B. "Spectral")
-aus.
+*Layereigenschaften -\> Symbolisierung auf Einkanalpseudofarben* und wählen sie einen geeigneten
+Farbverlauf (z.B. "Spectral") aus.
 
-![Darstellung der NDVI-Karte mit der Farbpalette "Spectral"](images/LE06_Farbpalette_NDVI.png){width="709"}
+![Darstellung der NDVI-Karte mit der Farbpalette
+"Spectral"](images/LE06_Farbpalette_NDVI.png){width="709"}
 
 ## Aufgabe 04: Digitalisierung der Schadflächen
 
-Im nächsten Schritt sollen die vom Kiefernspinner befallen Flächen digitalisiert werden. 
+Im nächsten Schritt sollen die vom Kiefernspinner befallen Flächen digitalisiert werden.
 
-Legen Sie dazu einen neuen Layer an mit `Layer` → `Layer erstellen` →  `Neuer Geopackage-Layer...` im Ordner *"daten/vektor"* mit dem Namen *uebung06.gpkg*. In dem Geopackage wird ein neuer Layer "Schadflaechen" angelegt. Wählen Sie als Geometrietyp "Polygon" und als KBS "EPSG:25832".
-Legen Sie ein neues Feld mit **Name** "Klasse" und **Typ** "Ganzzahl (Integer 32 bit) an. Klicken Sie auf "Zur Feldliste hinzufügen".
+Legen Sie dazu einen neuen Layer an mit `Layer` → `Layer erstellen` → `Neuer Geopackage-Layer...` im
+Ordner *"daten/vektor"* mit dem Namen *uebung06.gpkg*. In dem Geopackage wird ein neuer Layer
+"Schadflaechen" angelegt. Wählen Sie als Geometrietyp "Polygon" und als KBS "EPSG:25832". Legen Sie
+ein neues Feld mit **Name** "Klasse" und **Typ** "Ganzzahl (Integer 32 bit) an. Klicken Sie auf "Zur
+Feldliste hinzufügen".
 
+Das Feld "Klasse" dient später dazu für die Schadflächen die Klasse "1" anzugeben.
 
 ![](images/LE06_layer_neu.png)
 
-Zur gleichzeitigen Darstellung des Luftbildes und des Vegetationsindex bereiten wir zwei Kartenansichten vor.
+Zur gleichzeitigen Darstellung des Luftbildes und des Vegetationsindex bereiten wir zwei
+Kartenansichten vor.
 
 - Aktivieren Sie im Layer-Panel nur den Layer "sub_prezelle_2013".
 
-- Legen Sie eine neue Kartenansicht im Layer-Panel an mit dem Namen Luftbild mit "Kartenansicht verwalten -\> Thema hinzufügen..."
-
-
+- Legen Sie eine neue Kartenansicht im Layer-Panel an mit dem Namen Luftbild mit "Kartenansicht
+  verwalten -\> Thema hinzufügen..."
 
 ![](images/LE06_kartenansicht_verwalten.png)
 
-- Aktivieren Sie nun im Layer-Panel den Layer "sub_prezelle_2013_ndvi". Deaktivieren Sie den Layer "sub_prezelle_2013". Mit "Kartenansicht verwalten -\> Thema hinzufügen..." fügen Sie eine neue Kartenansicht mit dem Namen "NDVI" hinzu.
-- Im Hauptmenü `Ansicht` → `Neue Kartenansicht` einen zweiten Viewer mit dem Namen "Karte 1" öffnen. Ordnen Sie Hauptansicht und Ansicht "Karte 1" so an, dass beide Fenster gleich gross nebeneinander platziert sind.
+- Aktivieren Sie nun im Layer-Panel den Layer "sub_prezelle_2013_ndvi". Deaktivieren Sie den Layer
+  "sub_prezelle_2013". Mit "Kartenansicht verwalten -\> Thema hinzufügen..." fügen Sie eine neue
+  Kartenansicht mit dem Namen "NDVI" hinzu.
+- Im Hauptmenü `Ansicht` → `Neue Kartenansicht` einen zweiten Viewer mit dem Namen "Karte 1" öffnen.
+  Ordnen Sie Hauptansicht und Ansicht "Karte 1" so an, dass beide Fenster gleich gross nebeneinander
+  platziert sind.
 - Wählen Sie in Ansicht "Karte 1" das Kartenthema "NDVI" aus.
-
 
 ![](images/LE06_kartenansicht_ndvi.png)
 
-- Aktivieren Sie in den Ansichtseinstellungen der "Karte 1" die Optionen "Ansichtszentrum mit Hauptkarte synchronisieren" und "Maßstäbe synchronisieren".
+- Aktivieren Sie in den Ansichtseinstellungen der "Karte 1" die Optionen "Ansichtszentrum mit
+  Hauptkarte synchronisieren" und "Maßstäbe synchronisieren".
 
 ![](images/LE06_kartenansicht_synch.png)
 
-- Aktivieren Sie den Editiermodus des Vektor-Layers "uebung06" mit dem Stiftsymbol ![](images/LE05_start_edit.png), Klicken Sie auf ![](images/LE06_poly_hinzufügen.png)"Polygonobjekt hinzufügen". Erfassen sie anschließend Bereiche, die Sie eindeutig als befallen erkennen können als Polygone im Hauptansichtsfenster. 
+- Aktivieren Sie den Editiermodus des Vektor-Layers "uebung06" mit dem Stiftsymbol
+  ![](images/LE05_start_edit.png), Klicken Sie auf
+  ![](images/LE06_poly_hinzufügen.png)"Polygonobjekt hinzufügen". Erfassen sie anschließend
+  Bereiche, die Sie eindeutig als befallen erkennen können als Polygone im Hauptansichtsfenster.
+  Weißen sie diesen Polygonen die Klasse "1" zu.
 - Bestimmen Sie die Flächengröße der Schadflächen.
 
 ![Beispiel Kartierung von zwei Schadflächen](images/LE06_digitalisieren.png)
 
 ::: callout-tip
-Wenn Sie benachbarte Polygone ohne Geometriefehler direkt anschliessen wollen, können Sie die `Ansicht` → `Werkzeugleisten` → `Einrastwerkzeuge` einschalten. Aktivieren Sie "Überlappungen auf aktiven Layer vermeiden".
+Wenn Sie benachbarte Polygone ohne Geometriefehler direkt anschliessen wollen, können Sie die
+`Ansicht` → `Werkzeugleisten` → `Einrastwerkzeuge` einschalten. Aktivieren Sie "Überlappungen auf
+aktiven Layer vermeiden".
 
 ![](images/LE06_ueberlappung_vermeiden.png)
 :::
 
-
+```{=html}
 <!--
 ## Aufgabe 05: Digitaliserung der Schadflächen mit der EnMAP-Box (optional)
 
@@ -210,19 +230,28 @@ Das Ortholuftbild `sub_prezelle_2013.tif` kann mit Klick auf ![](images/LE06_EB_
 
 ![](images/LE06_EB_toggle_symbol.png)
 -->
-
+```
 
 ## Aufgabe 05: Entwicklung der Schadflächen (Optional)
 
-Die bisherigen bearbeiteten Aufnahmen stammen aus dem Jahr 2013. Im Mai 2024 hat das niedersächsische Landesamt für Geoinformation und Landesvermessung (LGLN) erneut
-eine Befliegung der Flächen vorgenommen. Laden Sie sich die beiden Orthobildkacheln für das
-Untersuchungsgebiet vom Geoportal des LGLN herunter (s. @sec-ortho_download) und vergleichen sie den Stand 2024 mit 2013.
+Die bisherigen bearbeiteten Aufnahmen stammen aus dem Jahr 2013. Im April 2026 
+hat das niedersächsische Landesamt für Geoinformation und Landesvermessung (LGLN)
+erneut eine Befliegung der Flächen vorgenommen. Laden Sie sich die
+Orthobildkacheln für das Untersuchungsgebiet aus dem Geoportal des LGLN herunter 
+(s. @sec-ortho_download) und vergleichen sie den Stand 2026 mit 2026.
+
+::: callout-tip
+Um die korrekten Kachelnummern eindeutig zu identifizieren können sie zunächst
+den DOP20-WMS Dienst laden (s. #sec-wms). Hier gibt es einen Layer DOP20 info in dem die 
+Kachelnummern dargestellt werden.
+:::
+
 
 ::: {style="border: 3px solid #ff8a0b; background-color: #ffffff; padding: 8px;"}
 \[**Zeitliche Änderungen**\]
 
--   Lassen sich Schadflächen von 2013 auch in den Orthobildern 2024 erkennen?
+- Lassen sich Schadflächen von 2013 auch in den Orthobildern 2026 erkennen?
 
--   Welche Schlüsse für die Waldbewirtschaftung lassen sich aus dem Vergleich der Jahre 2013 und
-    2024 ziehen?
+- Welche Schlüsse für die Waldbewirtschaftung lassen sich aus dem Vergleich der
+Jahre 2013 und 2026 ziehen?
 :::
