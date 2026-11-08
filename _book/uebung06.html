@@ -366,7 +366,7 @@ Lizenz: Creative Commons BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc
 <div style="border: 3px solid #ff8a0b; background-color: #ffffff; padding: 8px;">
 <p><strong>NDVI</strong></p>
 <ul>
-<li><em>Welche Unterschiede gibt es zwischen einer CIR-Falschfarbendarstellung und NDVI Darstellung??</em></li>
+<li><em>Welche Unterschiede gibt es zwischen einer CIR-Falschfarbendarstellung und NDVI Darstellung?</em></li>
 <li><em>Was ist der kleinste und was der größte NDVI-Wert?</em></li>
 <li><em>Welche NDVI-Werte haben geschädigte, welche gesunde Kiefern?</em></li>
 <li><em>Sind allen niedrigen NDVI-Werte auf Fraßschäden zurückzuführen?</em></li>
@@ -407,6 +407,7 @@ Lizenz: Creative Commons BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc
 <h2 data-number="6.6" class="anchored" data-anchor-id="aufgabe-04-digitalisierung-der-schadflächen"><span class="header-section-number">6.6</span> Aufgabe 04: Digitalisierung der Schadflächen</h2>
 <p>Im nächsten Schritt sollen die vom Kiefernspinner befallen Flächen digitalisiert werden.</p>
 <p>Legen Sie dazu einen neuen Layer an mit <code>Layer</code> → <code>Layer erstellen</code> → <code>Neuer Geopackage-Layer...</code> im Ordner <em>“daten/vektor”</em> mit dem Namen <em>uebung06.gpkg</em>. In dem Geopackage wird ein neuer Layer “Schadflaechen” angelegt. Wählen Sie als Geometrietyp “Polygon” und als KBS “EPSG:25832”. Legen Sie ein neues Feld mit <strong>Name</strong> “Klasse” und <strong>Typ</strong> “Ganzzahl (Integer 32 bit) an. Klicken Sie auf”Zur Feldliste hinzufügen”.</p>
+<p>Das Feld “Klasse” dient später dazu für die Schadflächen die Klasse “1” anzugeben.</p>
 <p><img src="images/LE06_layer_neu.png" class="img-fluid"></p>
 <p>Zur gleichzeitigen Darstellung des Luftbildes und des Vegetationsindex bereiten wir zwei Kartenansichten vor.</p>
 <ul>
@@ -425,7 +426,7 @@ Lizenz: Creative Commons BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc
 </ul>
 <p><img src="images/LE06_kartenansicht_synch.png" class="img-fluid"></p>
 <ul>
-<li>Aktivieren Sie den Editiermodus des Vektor-Layers “uebung06” mit dem Stiftsymbol <img src="images/LE05_start_edit.png" class="img-fluid">, Klicken Sie auf <img src="images/LE06_poly_hinzufügen.png" class="img-fluid">“Polygonobjekt hinzufügen”. Erfassen sie anschließend Bereiche, die Sie eindeutig als befallen erkennen können als Polygone im Hauptansichtsfenster.</li>
+<li>Aktivieren Sie den Editiermodus des Vektor-Layers “uebung06” mit dem Stiftsymbol <img src="images/LE05_start_edit.png" class="img-fluid">, Klicken Sie auf <img src="images/LE06_poly_hinzufügen.png" class="img-fluid">“Polygonobjekt hinzufügen”. Erfassen sie anschließend Bereiche, die Sie eindeutig als befallen erkennen können als Polygone im Hauptansichtsfenster. Weißen sie diesen Polygonen die Klasse “1” zu.</li>
 <li>Bestimmen Sie die Flächengröße der Schadflächen.</li>
 </ul>
 <div class="quarto-figure quarto-figure-center">
@@ -489,12 +490,25 @@ Das Ortholuftbild `sub_prezelle_2013.tif` kann mit Klick auf ![](images/LE06_EB_
 </section>
 <section id="aufgabe-05-entwicklung-der-schadflächen-optional" class="level2" data-number="6.7">
 <h2 data-number="6.7" class="anchored" data-anchor-id="aufgabe-05-entwicklung-der-schadflächen-optional"><span class="header-section-number">6.7</span> Aufgabe 05: Entwicklung der Schadflächen (Optional)</h2>
-<p>Die bisherigen bearbeiteten Aufnahmen stammen aus dem Jahr 2013. Im Mai 2024 hat das niedersächsische Landesamt für Geoinformation und Landesvermessung (LGLN) erneut eine Befliegung der Flächen vorgenommen. Laden Sie sich die beiden Orthobildkacheln für das Untersuchungsgebiet vom Geoportal des LGLN herunter (s. <a href="uebung03.html#sec-ortho_download" class="quarto-xref"><span>Kapitel 3.3</span></a>) und vergleichen sie den Stand 2024 mit 2013.</p>
+<p>Die bisherigen bearbeiteten Aufnahmen stammen aus dem Jahr 2013. Im April 2026 hat das niedersächsische Landesamt für Geoinformation und Landesvermessung (LGLN) erneut eine Befliegung der Flächen vorgenommen. Laden Sie sich die Orthobildkacheln für das Untersuchungsgebiet aus dem Geoportal des LGLN herunter (s. <a href="uebung03.html#sec-ortho_download" class="quarto-xref"><span>Kapitel 3.3</span></a>) und vergleichen sie den Stand 2026 mit 2026.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tipp
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Um die korrekten Kachelnummern eindeutig zu identifizieren können sie zunächst den DOP20-WMS Dienst laden (s. #sec-wms). Hier gibt es einen Layer DOP20 info in dem die Kachelnummern dargestellt werden.</p>
+</div>
+</div>
 <div style="border: 3px solid #ff8a0b; background-color: #ffffff; padding: 8px;">
 <p>[<strong>Zeitliche Änderungen</strong>]</p>
 <ul>
-<li><p>Lassen sich Schadflächen von 2013 auch in den Orthobildern 2024 erkennen?</p></li>
-<li><p>Welche Schlüsse für die Waldbewirtschaftung lassen sich aus dem Vergleich der Jahre 2013 und 2024 ziehen?</p></li>
+<li><p>Lassen sich Schadflächen von 2013 auch in den Orthobildern 2026 erkennen?</p></li>
+<li><p>Welche Schlüsse für die Waldbewirtschaftung lassen sich aus dem Vergleich der Jahre 2013 und 2026 ziehen?</p></li>
 </ul>
 </div>
 
