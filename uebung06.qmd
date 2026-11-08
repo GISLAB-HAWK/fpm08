@@ -47,7 +47,7 @@ Folgen sie der Anleitung aus LE01 @sec-projekt_management um eine neue Ordnerstr
 QGIS-Projekt für LE05 anzulegen. In der Übung bietet es sich an den Ordner "daten" weiter in die
 Unterordner "vektor" und "raster" zu unterteilen.
 
-## Aufgabe 01: Download und Import der Ortholuftbilder
+## Aufgabe 01: Download und Import des Ortholuftbildes
 
 Nachdem wir das Projekt angelegt haben, soll das Luftbild aus der Befliegung der NWFVA importiert
 werden. Laden Sie zunächst die Geodatensätze für die Übungen herunter. Sie finden diese hier:
@@ -83,7 +83,7 @@ $$
 Für die Berechnung nutzen wir den `Raster` → `Rasterrechner`:
 
 Die Liste "Rasterkanäle" enthält alle geladenen Bänder, die verwendet werden können. Um ein Rasterband zum Feld für den Rasterberechnungsausdruck hinzuzufügen, doppelklicken Sie auf den Bandnamen in der Liste "Felder". Sie können dann die Operatoren verwenden, um Berechnungsausdrücke zu formulieren, oder Sie können sie einfach in das Feld eingeben. Vergessen Sie nicht die Klammern!
-Als Ergebnis definieren Sie den `Ausgabelayer: sub_prezelle_2013_ndvi` mit Angabe des Speicherpfades und das `Ausgabeformat: GeoTIFF`.
+Als Ergebnis definieren Sie den **Ausgabelayer:** "sub_prezelle_2013_ndvi" mit Angabe des Speicherpfades und das **Ausgabeformat:** "GeoTIFF".
 
 ![](images/LE06_Rasterrechner.png)
 
@@ -113,7 +113,7 @@ Verteilung der NDVI-Werte zu überprüfen. Zum Erstellen des Histogramms gehen w
 Das Histogramm zeigt eine typische Verteilung der NDVI-Werte über Vegetationsoberflächen. Es ist
 deutlich zu erkennen, dass der Wertebereich nicht vollständig abgedeckt wird. Die meisten Pixel
 liegen in Wertebereich von 0.1-0.8. Diese Information können wir nutzen um mithilfe einer
-Kontraststreckung die Qualität des Bildes zu erhöhen. Dazu schneiden wir die unteren 0.2 % und
+Kontraststreckung die Qualität des Bildes zu erhöhen. Dazu schneiden wir die unteren 0,2 % und die
 oberen 2% der Verteilung ab (Tail-clipping) und strecken den Rest der Werte auf den gesamten
 Wertebereich.
 
@@ -123,24 +123,56 @@ Wertebereich.
 
 Für die Kartierung der Schadflächen kann es sinnvoll sein, die Darstellung der NDVI-Karte nicht als
 Graustufenbild darzustellen, sondern dafür ein Farbpalette zu nutzen. Erstellen sie dafür einen
-neuen Stil mit einer kontrastreichen Farbpalette. Stellen Sie dazu die Darstellungsart unter
-*Layereigenschaften -\> Symbolisierung auf Einkanalpseudofarben* und wählen sie einen eigneten Farbverlauf
+neuen Stil mit einer kontrastreichen Farbpalette. Stellen Sie dazu die Darstellungsart auf
+*Layereigenschaften -\> Symbolisierung auf Einkanalpseudofarben* und wählen sie einen geeigneten Farbverlauf (z.B. "Spectral")
 aus.
 
-![Darstellung der NDVI-Karte mit einer Fabpalette](images/LE06_Farbpalette_NDVI.png){width="709"}
+![Darstellung der NDVI-Karte mit der Farbpalette "Spectral"](images/LE06_Farbpalette_NDVI.png){width="709"}
 
 ## Aufgabe 04: Digitalisierung der Schadflächen
 
-Im nächsten Schritt sollen die vom Kiefernspinner befallen Flächen digitalisiert werden. Legen Sie
-dazu ein neues Geopackage im Ordner *"daten/vektor"* mit dem Namen *uebung06.gpkg* an. In dem
-Geopackage wird ein neuer Layer mit dem Namen "Schadflächen" angelegt werden.
+Im nächsten Schritt sollen die vom Kiefernspinner befallen Flächen digitalisiert werden. 
 
-Erfassen sie anschließend die Bereiche, die Sie eindeutig als befallen erkennen können als Polygone
-und bestimmen Sie die Flächengröße der Schadflächen.
-
-![Beispiel Kartierung von zwei Schadflächen](images/LE06_Schadflaechen.png)
+Legen Sie dazu einen neuen Layer an mit `Layer` → `Layer erstellen` →  `Neuer Geopackage-Layer...` im Ordner *"daten/vektor"* mit dem Namen *uebung06.gpkg*. In dem Geopackage wird ein neuer Layer "Schadflaechen" angelegt. Wählen Sie als Geometrietyp "Polygon" und als KBS "EPSG:25832".
+Legen Sie ein neues Feld mit **Name** "Klasse" und **Typ** "Ganzzahl (Integer 32 bit) an. Klicken Sie auf "Zur Feldliste hinzufügen".
 
 
+![](images/LE06_layer_neu.png)
+
+Zur gleichzeitigen Darstellung des Luftbildes und des Vegetationsindex bereiten wir zwei Kartenansichten vor.
+
+- Aktivieren Sie im Layer-Panel nur den Layer "sub_prezelle_2013".
+
+- Legen Sie eine neue Kartenansicht im Layer-Panel an mit dem Namen Luftbild mit "Kartenansicht verwalten -\> Thema hinzufügen..."
+
+
+
+![](images/LE06_kartenansicht_verwalten.png)
+
+- Aktivieren Sie nun im Layer-Panel den Layer "sub_prezelle_2013_ndvi". Deaktivieren Sie den Layer "sub_prezelle_2013". Mit "Kartenansicht verwalten -\> Thema hinzufügen..." fügen Sie eine neue Kartenansicht mit dem Namen "NDVI" hinzu.
+- Im Hauptmenü `Ansicht` → `Neue Kartenansicht` einen zweiten Viewer mit dem Namen "Karte 1" öffnen. Ordnen Sie Hauptansicht und Ansicht "Karte 1" so an, dass beide Fenster gleich gross nebeneinander platziert sind.
+- Wählen Sie in Ansicht "Karte 1" das Kartenthema "NDVI" aus.
+
+
+![](images/LE06_kartenansicht_ndvi.png)
+
+- Aktivieren Sie in den Ansichtseinstellungen der "Karte 1" die Optionen "Ansichtszentrum mit Hauptkarte synchronisieren" und "Maßstäbe synchronisieren".
+
+![](images/LE06_kartenansicht_synch.png)
+
+- Aktivieren Sie den Editiermodus des Vektor-Layers "uebung06" mit dem Stiftsymbol ![](images/LE05_start_edit.png), Klicken Sie auf ![](images/LE06_poly_hinzufügen.png)"Polygonobjekt hinzufügen". Erfassen sie anschließend Bereiche, die Sie eindeutig als befallen erkennen können als Polygone im Hauptansichtsfenster. 
+- Bestimmen Sie die Flächengröße der Schadflächen.
+
+![Beispiel Kartierung von zwei Schadflächen](images/LE06_digitalisieren.png)
+
+::: callout-tip
+Wenn Sie benachbarte Polygone ohne Geometriefehler direkt anschliessen wollen, können Sie die `Ansicht` → `Werkzeugleisten` → `Einrastwerkzeuge` einschalten. Aktivieren Sie "Überlappungen auf aktiven Layer vermeiden".
+
+![](images/LE06_ueberlappung_vermeiden.png)
+:::
+
+
+<!--
 ## Aufgabe 05: Digitaliserung der Schadflächen mit der EnMAP-Box (optional)
 
 Die EnMAP-Box bietet nützliche Werkzeuge, die Workflows wie z.B. visuelle Interpretation und Kartierung von Referenzdaten auf Grundlage von Ortholuftbildern erleichtern.
@@ -177,8 +209,10 @@ Das Ortholuftbild `sub_prezelle_2013.tif` kann mit Klick auf ![](images/LE06_EB_
 - Mit Klick auf `Toggle editing` und `Add new polygon` können weitere Schadflächen kartiert werden.
 
 ![](images/LE06_EB_toggle_symbol.png)
+-->
 
-## Aufgabe 06: Entwicklung der Schadflächen (Optional)
+
+## Aufgabe 05: Entwicklung der Schadflächen (Optional)
 
 Die bisherigen bearbeiteten Aufnahmen stammen aus dem Jahr 2013. Im Mai 2024 hat das niedersächsische Landesamt für Geoinformation und Landesvermessung (LGLN) erneut
 eine Befliegung der Flächen vorgenommen. Laden Sie sich die beiden Orthobildkacheln für das
