@@ -197,7 +197,7 @@ Anschließend nutzen Sie die XML-Datei um die Verbindung anzulegen:
 
 Es wird eine neue Datenquelle "basemap.de Farbe" angelegt, die dem Projekt hinzugefügt werden kann.
 
-## Aufgabe 05: Installation der GeoBasis_Loader Erweiterung
+## Aufgabe 05: Installation der GeoBasis_Loader Erweiterung{#sec_install-geobasis}
 
 Installieren Sie das QGIS Plugin `GeoBasis_Loader`. Das Plugin vereinfacht das Finden und Einfügen
 ausgewählter WMS-, WMTS-, WFS-, WCS-, und VectorTiles-Dienste aus den Open Data Portalen der

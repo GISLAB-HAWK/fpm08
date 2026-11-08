@@ -33,8 +33,8 @@ den zeitlichen Rahmen dieser Übung sprengen.
 
 Die Studierenden sollen:
 
--   Trainingsdaten für Bildklassifikationen anzulegen
--   Maschinelle Lernverfahren zum Erstellen von Klassifikationsmodellen zu nutzen
+-   Trainingsdaten für Bildklassifikationen anzlegen
+-   Maschinelle Lernverfahren zum Erstellen von Klassifikationsmodellen nutzen
 -   Mithilfe von trainierten Klassifikationsmodellen Satellitenbilder klassifizieren um einfache
     Landbedeckungskarten zu erstellen.
 
@@ -49,7 +49,7 @@ Die Studierenden sollen:
 
 Folgen sie der Anleitung aus LE01 @sec-projekt_management um eine neue Ordnerstruktur und ein neues
 QGIS-Projekt für LE07 anzulegen. In der Übung bietet es sich an den Ordner *"daten"* weiter in die
-Unterordner *"vektor"* und "raster" zu unterteilen.
+Unterordner *"vektor"* und *"raster"* zu unterteilen.
 
 ## Aufgabe 01: Download und Import der Geodaten
 
@@ -99,7 +99,7 @@ Niedersachsen:
 
 DOP:
 
-`https://opendata.lgln.niedersachsen.de/doorman/noauth/dop_wms>`
+`https://opendata.lgln.niedersachsen.de/doorman/noauth/dop_wms`
 
 **Fragen:**
 
@@ -172,65 +172,68 @@ die Luftbilder aus den beiden Bundesländern. Achten sie dabei auf folgende Aspe
 
 ## Aufgabe 03: Training eines Klassifikationsmodells {#sec-rf_training}
 
-Im ersten Schritt müssen wir das Klassifikationsmodell mithilfe der Trainingsdaten „anlernen“. OTB
-stellt dazu die Funktion *„TrainImageClassifier“* zur Verfügung, die wir in der Werkzeugkiste der
-Verarbeitungsfunktionen über die Suche finden können. In dieser Funktion setzen wir die folgenden
-Optionen:
+Die Trainingsdaten liegen als Vektordaten vor, die Klassenzugehörigkeit ist in der Attributtabelle gespeichert. Um diese Information zum Trainieren eines Klassifkationsmodelles zu nutzen, müssen wir die Vektordaten in einen Rasterlayer umwandeln.
 
--   **Input Image List**: Hier geben wir unser Sentinel2-Bild des NP-Harz an
+EnMAP-Box stellt hierfür die Funktion *„Create classification dataset (from categorized vector layer and feature raster)“* zur Verfügung, die wir in der Werkzeugkiste der Verarbeitungsfunktionen über die Suche finden können. In dieser Funktion setzen wir die folgenden Optionen:
 
--   **Input Vector Data**: Hier wählen wir das geopackage mit den Referenzdaten.
+-   **Categorized Vector Data**: Hier wählen wir das Geopackage mit den Referenzdaten.
 
--   **Field containing the class integer label for supervision**: Hier wählen wir das Feld “Klasse”
-    aus.
+-   **Raster layer with features**: Hier geben wir unser Sentinel2-Bild des NP-Harz an
 
--   **Classifier to use for the training**: OTB bietet sehr viele Klassifikationsverfahren an, die
-    alle mit dieser Funktion trainiert werden können. Für die Übung wählen wir „rf“ für „Random
-    Forests“.
+Klicken Sie auf `Fortgeschrittene Parameter`.
 
--   **Output model**: Hier geben wir an wo das trainierte Klassifikationsmodell gespeichert werden
-    soll. Wir wählen *„rf_harz_2025.modell“* im Ordner *"daten"*.
+-   **Field with class labels**: Hier **kein** Feld auswählen und frei lassen. Die Klassenwerte und -namen werden dann aus der qml-Stildatei der Vektordaten eingelesen.
 
--   **Output confusion matrix or contingency table**: Hier können wir eine Datei angeben in dem die
-    Fehlermatrix gespeichert wird. Wir wählen *„rf_harz_2025.cm“* im Ordner *"daten".*
+-   **Output dataset**: Hier geben wir an, wo die gerasterten Trainingsdaten gespeichert werden sollen. Wir wählen *„trainingsdaten.skops“* im Ordner *"daten"*.
 
-    ![TrainImageClassifier](images/LE07_trainclassifier.png)
+![](images/LE07_EB_create_dataset.png)
 
-    Alle anderen Optionen lassen wir unverändert und starten das Training. Je nach gewähltem
-    Algorithmus und der Anzahl und Größe der Trainingsdaten kann dieser Prozess einige Minuten
-    dauern. Wenn alles funktioniert hat, werden einige Statistiken zur Beurteilung der
-    Modellgenauigkeit im Protokollfenster ausgegeben:
+Jetzt können wir mit der Werkzeugkistenfunktion *„Fit RandomForestClassifier“* ein Klassifikationsmodell anpassen mit den folgenden Optionen:
 
-    ![](images/LE07_TrainImageClassifier_protocoll.png)
+-   **Training dataset**: Hier geben wir die Datei *„trainingsdaten.skops“* an.
 
-In Ordner "daten" befinden sich nun zwei neue Dateien: i) die Modelldatei mit dem trainierten
-Klassifikationsmodell und eine Fehlermatrix. Letzter werden wir in der nächsten Lehreinheit
-besprechen.
+-   **Output classifier**: Hier geben wir an, wo das trainierte Klassifikationsmodell gespeichert werden soll. Wir wählen *„rf_modell_harz_2025.skops“* im Ordner *"daten"*.
+
+
+![](images/LE07_EB_fit_rf_model.png)
+
+
+Mit der Werkzeugkistenfunktion *„Classifier Performance“* können wir statistische Kennzahlen zur Beurteilung der Modellgenauigkeit berechnen mit den Optionen:
+
+-   **Classifier**: Hier geben wir das das Klassifikationsmodell *„rf_modell_harz_2025.skops“* an. 
+
+-   **Test dataset**: Hier geben wir wieder unsere Trainingsdaten  *„trainingsdaten.skops“* an.
+
+Klicken Sie auf `Fortgeschrittene Parameter`.
+
+-   **Number of cross-validation folds**: Hier geben wir die Anzahl der Kreuzvalidierungsfaltungen ein: z.B. *"5"*
+
+-   **Output report**: Hier geben wir an, wo der Bericht über Modellgenauigkeit gespeichert werden soll. Wir wählen *„modellgenauigkeit.html“* im Ordner *"daten"*.
+
+![](images/LE07_EB_model_performance.png)
+Nach Ausführen der Funktion öffnet sich ein Bericht mit Fehlermatrix und Statistiken, die wir in der nächsten Lehreinheit besprechen werden.  
+
 
 ## Aufgabe 04: Klassifikation eines S2-Satellitenbilds zur Erstellung einer Waldtypenkarte {#sec-rf_inference}
 
 Nachdem wir das *RandomForest* Klassifikationsmodell trainiert haben, können wir es auf das gesamte
 Satellitenbild anwenden, um jedem Pixel eine unsere vier thematischen Klassen zuzuweisen. Dazu
-verwenden wir die OTB-Funktion *ImageClassifier* die im Werkzeugkasten der Verarbeitungsfunktionen
-zu finden ist. Hier werden folgende Optionen gewählt.
+verwenden wir die EnMAP-Box-Funktion *Predict classifcation layer* die im Werkzeugkasten der Verarbeitungsfunktionen zu finden ist. Hier werden folgende Optionen gewählt:
 
--   **Input Image List**: Hier geben wir unser Sentinel2-Bild
+-   **Rasterlayer with features**: Hier geben wir unser Sentinel2-Bild an.
 
--   **Model file**: Wir geben das vorher trainierte Modell *„rf_harz_2025.modell“* an.
+-   **Classifier**: Wir geben das vorher trainierte Modell *„rf_harz_2025_modell.skops“* an.
 
--   **Output pixel type**: uint8
+-   **Output classifcation layer**: Hier geben wir den Speicherpfad der thematischen Rasterkarte im Format GeoTiff ein unter *"daten/NP_Harz_2025_06_12_Waldtypen_klassifiziert.tif"*.
 
-Alle anderen Optionen lassen wir unverändert und starten die Bildklassifikation. Je nach gewähltem
-Algorithmus und der Bildgröße kann dieser Prozess einige Minuten dauern. Nach erfolgreicher
-Klassifikation wird das Bild als Graustufenbild im QGIS geladen. Prüfen sie jetzt nochmal, ob das
-Koordinatenrefenerzsystem des Projektes immer noch korrekt ist. Falls nicht ändern sie es
-entsprechend.
+
+![](images/LE07_EB_predict_model.png)
+Nach erfolgreicher Klassifikation wird das Bild als Raster mit indizierter Palette mit Graustufen im QGIS geladen. Prüfen sie jetzt nochmal, ob das Koordinatenreferenzsystem des Projektes immer noch korrekt ist. Falls nicht ändern sie es entsprechend.
 
 Anschließend schneiden wir das klassifizierte Bild auf auf die Grenzen des Nationalparks zu (siehe
-dazu auch LE04 @sec-zuschneiden). Das zugeschnittene Bild wird als GeoTif unter *"daten/
-NP_Harz_2025_06_12_Waldtypen.tif"* gespeichert. Für die bessere Darstellung sollen die Farbwerte der
-Pixel identisch zu den Farben im Referenzdatensatz sein. Erstellen sie dafür eine entsprechende
-Symbolisierung.
+dazu auch LE04 @sec-zuschneiden). Das zugeschnittene Bild wird als GeoTIFF unter *"daten/
+NP_Harz_2025_06_12_Waldtypen.tif"* gespeichert. Für die Darstellung sollen die Farbwerte der
+Pixel identisch zu den Farben des Vektor-Referenzdatensatz sein. Erstellen sie dafür eine entsprechende Symbolisierung.
 
 **Fragen:**
 

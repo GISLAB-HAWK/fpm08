@@ -130,7 +130,7 @@ Im Suchfenster `enmap`  eingeben, das angezeigte Plugin `EnMAP-Box 3`auswählen 
 ## Windows
 Nachdem das Plugin installiert ist, müssen noch zusätzliche Module installiert werden bevor es gestartet werden kann. 
 
-- Laden Sie das Installationskript [installation_qgis_dependencies_base.py](https://cloud.hawk.de/index.php/s/CwTKje2HLo2RZHX)
+- Laden Sie das Installationskript [install_qgis_dependencies_base.py](https://cloud.hawk.de/index.php/s/CwTKje2HLo2RZHX)
 herunter und speichern Sie es direkt in das lokale Verzeichnis `D:\`
 
 - Öffen Sie die QGIS Python Konsole: `Erweiterungen` → `Python Konsole`
@@ -220,7 +220,7 @@ Falls diese Installation auf Ihrem Macbook nicht funktioniert, können Sie alter
 ## Linux
 Nachdem das Plugin installiert ist, müssen noch zusätzliche Module installiert werden bevor es gestartet werden kann. 
 
-- Laden Sie das Installationskript [installation_qgis_dependencies_base.py](https://cloud.hawk.de/index.php/s/CwTKje2HLo2RZHX)
+- Laden Sie das Installationskript [install_qgis_dependencies_base.py](https://cloud.hawk.de/index.php/s/CwTKje2HLo2RZHX)
 herunter und speichern Sie es in ein lokales Verzeichnis z.B. unter Downloads.
 
 - Öffen Sie die QGIS Python Konsole: `Erweiterungen` → `Python Konsole`
