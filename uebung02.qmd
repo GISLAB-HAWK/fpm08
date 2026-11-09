@@ -113,6 +113,18 @@ Erstellen sie für jedes der vier Bänder eine VRT-Datei in dem jeweiligen Bildo
 
 ![Anlegen eines VRT-Rasters](images/LE02_vrt_anlegen.png)
 
+Um ein Mehrkanalbild zu erstellen, müssen Sie alle Bänder der jeweiligen Kachel zusammenführen. Die
+LGLN teilt ganz Niedersachsen in Kacheln ein, die durch Spalten und Zeilennummern eindeutig
+definiert sind. Sie können die Angaben zur Spalte und Zeile im Dateinnamen sehen:
+
+- *dop20rgbi_32\_**544\_**57**04**\_2_ni_2025-03-06_b1.tif → Band 1 der Kachel
+  5**44**\_57**04**\_2*
+
+- *dop20rgbi_32\_**544**\_57**04**\_2_ni_2025-03-06_b2.tif → Band 2 der Kachel
+  5**44**\_57**04**\_2*
+
+- *dop20rgbi_32_5**44**\_57**02**\_2_ni_2025-03-06_b1.tif → Band 1 der Kachel 5**44**\_57**02**\_2*
+
 Im ersten Schritt werden unter "Eingabelayer" die vier Bänder ausgewählt. Wichtig ist hier das die
 Reihenfolge der Bänder aufsteigend angezeigt wird (b1, b2, b3, b4). Sollte das nicht der Fall sein,
 kann die Reihenfolge per drag & drop in dem Menü entsprechend angepasst werden. Da mehrerere Bänder
