@@ -332,6 +332,12 @@ Lizenz: Creative Commons BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc
 <figcaption>Anlegen eines VRT-Rasters</figcaption>
 </figure>
 </div>
+<p>Um ein Mehrkanalbild zu erstellen, müssen Sie alle Bänder der jeweiligen Kachel zusammenführen. Die LGLN teilt ganz Niedersachsen in Kacheln ein, die durch Spalten und Zeilennummern eindeutig definiert sind. Sie können die Angaben zur Spalte und Zeile im Dateinnamen sehen:</p>
+<ul>
+<li><p><em>dop20rgbi_32_<strong>544_</strong>57<strong>04</strong>_2_ni_2025-03-06_b1.tif → Band 1 der Kachel 5<strong>44</strong>_57<strong>04</strong>_2</em></p></li>
+<li><p><em>dop20rgbi_32_<strong>544</strong>_57<strong>04</strong>_2_ni_2025-03-06_b2.tif → Band 2 der Kachel 5<strong>44</strong>_57<strong>04</strong>_2</em></p></li>
+<li><p><em>dop20rgbi_32_5<strong>44</strong>_57<strong>02</strong>_2_ni_2025-03-06_b1.tif → Band 1 der Kachel 5<strong>44</strong>_57<strong>02</strong>_2</em></p></li>
+</ul>
 <p>Im ersten Schritt werden unter “Eingabelayer” die vier Bänder ausgewählt. Wichtig ist hier das die Reihenfolge der Bänder aufsteigend angezeigt wird (b1, b2, b3, b4). Sollte das nicht der Fall sein, kann die Reihenfolge per drag &amp; drop in dem Menü entsprechend angepasst werden. Da mehrerere Bänder zusammengeführt werden, ist es wichtig, dass die Option <em>“Jeder Datei einen eigenen Kanal zuordnen”</em> aktiviert wird. Unter “Virtuell” wird die Ausgabedatei angegeben. Diese sollte z.B. <em>LE02/raster/bild_1/bild_1_mehrkanal.vrt</em> heißen.</p>
 </section>
 <section id="editieren-der-raster-metadaten" class="level2" data-number="2.5">
