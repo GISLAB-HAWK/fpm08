@@ -178,7 +178,7 @@ Kartenansichten vor.
   ![](images/LE05_start_edit.png), Klicken Sie auf
   ![](images/LE06_poly_hinzufügen.png)"Polygonobjekt hinzufügen". Erfassen sie anschließend
   Bereiche, die Sie eindeutig als befallen erkennen können als Polygone im Hauptansichtsfenster.
-  Weißen sie diesen Polygonen die Klasse "1" zu.
+  Weisen sie diesen Polygonen die Klasse "1" zu.
 - Bestimmen Sie die Flächengröße der Schadflächen.
 
 ![Beispiel Kartierung von zwei Schadflächen](images/LE06_digitalisieren.png)
@@ -238,11 +238,11 @@ Die bisherigen bearbeiteten Aufnahmen stammen aus dem Jahr 2013. Im April 2026
 hat das niedersächsische Landesamt für Geoinformation und Landesvermessung (LGLN)
 erneut eine Befliegung der Flächen vorgenommen. Laden Sie sich die
 Orthobildkacheln für das Untersuchungsgebiet aus dem Geoportal des LGLN herunter 
-(s. @sec-ortho_download) und vergleichen sie den Stand 2026 mit 2026.
+(s. @sec-ortho_download) und vergleichen sie den Stand 2013 mit 2026.
 
 ::: callout-tip
 Um die korrekten Kachelnummern eindeutig zu identifizieren können sie zunächst
-den DOP20-WMS Dienst laden (s. #sec-wms). Hier gibt es einen Layer DOP20 info in dem die 
+den DOP20-WMS Dienst laden (s. @sec-wms). Hier gibt es einen Layer DOP20 info in dem die 
 Kachelnummern dargestellt werden.
 :::
 
