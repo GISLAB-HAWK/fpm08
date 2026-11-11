@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="de" xml:lang="de"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.10.18">
+<meta name="generator" content="quarto-1.9.38">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -13,13 +13,10 @@
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
 */
+code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: 1.5em;}
-div.column{flex: auto;}
-@media screen {
-div.columns{gap: min(4vw, 1.5em);}
-div.column{overflow-x: auto;}
-}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -45,10 +42,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-b04df3be2e5e302e3ea93ca300ce7128.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-c1ac5ceca7a3d2815e625db92de944b1.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -78,7 +75,7 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <script type="text/javascript">
 const typesetMath = (el) => {
@@ -407,16 +404,15 @@ Lizenz: Creative Commons BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc
 <h2 data-number="6.6" class="anchored" data-anchor-id="aufgabe-04-digitalisierung-der-schadflächen"><span class="header-section-number">6.6</span> Aufgabe 04: Digitalisierung der Schadflächen</h2>
 <p>Im nächsten Schritt sollen die vom Kiefernspinner befallen Flächen digitalisiert werden.</p>
 <p>Legen Sie dazu einen neuen Layer an mit <code>Layer</code> → <code>Layer erstellen</code> → <code>Neuer Geopackage-Layer...</code> im Ordner <em>“daten/vektor”</em> mit dem Namen <em>uebung06.gpkg</em>. In dem Geopackage wird ein neuer Layer “Schadflaechen” angelegt. Wählen Sie als Geometrietyp “Polygon” und als KBS “EPSG:25832”. Legen Sie ein neues Feld mit <strong>Name</strong> “Klasse” und <strong>Typ</strong> “Ganzzahl (Integer 32 bit) an. Klicken Sie auf”Zur Feldliste hinzufügen”.</p>
-<p>Das Feld “Klasse” dient später dazu für die Schadflächen die Klasse “1” anzugeben.</p>
+<p>Das Feld “Klasse” dient später dazu für Schadflächen die Klasse “1” anzugeben.</p>
 <p><img src="images/LE06_layer_neu.png" class="img-fluid"></p>
 <p>Zur gleichzeitigen Darstellung des Luftbildes und des Vegetationsindex bereiten wir zwei Kartenansichten vor.</p>
-<ul>
-<li><p>Aktivieren Sie im Layer-Panel nur den Layer “sub_prezelle_2013”.</p></li>
-<li><p>Legen Sie eine neue Kartenansicht im Layer-Panel an mit dem Namen Luftbild mit “Kartenansicht verwalten -&gt; Thema hinzufügen…”</p></li>
-</ul>
+<p>Aktivieren Sie im Layer-Panel die Layer - “uebung06” und - “sub_prezelle_2013_ndvi”</p>
+<p>Deaktivieren Sie den Layer “sub_prezelle_2013”. Mit “Kartenansicht verwalten -&gt; Thema hinzufügen…” fügen Sie eine neue Kartenansicht mit dem Namen <strong>NDVI</strong> hinzu.</p>
 <p><img src="images/LE06_kartenansicht_verwalten.png" class="img-fluid"></p>
+<p>Aktivieren Sie nun im Layer-Panel die Layer - “uebung06” und - “sub_prezelle_2013”.</p>
+<p>Deaktivieren Sie den Layer “sub_prezelle_2013_ndvi”. Mit “Kartenansicht verwalten -&gt; Thema hinzufügen…” legen Sie eine neue Kartenansicht im Layer-Panel an mit dem Namen <strong>Luftbild</strong>.</p>
 <ul>
-<li>Aktivieren Sie nun im Layer-Panel den Layer “sub_prezelle_2013_ndvi”. Deaktivieren Sie den Layer “sub_prezelle_2013”. Mit “Kartenansicht verwalten -&gt; Thema hinzufügen…” fügen Sie eine neue Kartenansicht mit dem Namen “NDVI” hinzu.</li>
 <li>Im Hauptmenü <code>Ansicht</code> → <code>Neue Kartenansicht</code> einen zweiten Viewer mit dem Namen “Karte 1” öffnen. Ordnen Sie Hauptansicht und Ansicht “Karte 1” so an, dass beide Fenster gleich gross nebeneinander platziert sind.</li>
 <li>Wählen Sie in Ansicht “Karte 1” das Kartenthema “NDVI” aus.</li>
 </ul>
@@ -426,7 +422,9 @@ Lizenz: Creative Commons BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc
 </ul>
 <p><img src="images/LE06_kartenansicht_synch.png" class="img-fluid"></p>
 <ul>
-<li>Aktivieren Sie den Editiermodus des Vektor-Layers “uebung06” mit dem Stiftsymbol <img src="images/LE05_start_edit.png" class="img-fluid">, Klicken Sie auf <img src="images/LE06_poly_hinzufügen.png" class="img-fluid">“Polygonobjekt hinzufügen”. Erfassen sie anschließend Bereiche, die Sie eindeutig als befallen erkennen können als Polygone im Hauptansichtsfenster. Weisen sie diesen Polygonen die Klasse “1” zu.</li>
+<li>Aktivieren Sie den Editiermodus des Vektor-Layers “uebung06” mit dem Stiftsymbol <img src="images/LE05_start_edit.png" class="img-fluid"></li>
+<li>Klicken Sie auf <img src="images/LE06_poly_hinzufügen.png" class="img-fluid">“Polygonobjekt hinzufügen”.</li>
+<li>Erfassen sie anschließend Bereiche, die Sie eindeutig als befallen erkennen können als Polygone im Hauptansichtsfenster. Weisen sie diesen Polygonen die Klasse “1” zu.</li>
 <li>Bestimmen Sie die Flächengröße der Schadflächen.</li>
 </ul>
 <div class="quarto-figure quarto-figure-center">

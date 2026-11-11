@@ -145,23 +145,29 @@ Ordner *"daten/vektor"* mit dem Namen *uebung06.gpkg*. In dem Geopackage wird ei
 ein neues Feld mit **Name** "Klasse" und **Typ** "Ganzzahl (Integer 32 bit) an. Klicken Sie auf "Zur
 Feldliste hinzufügen".
 
-Das Feld "Klasse" dient später dazu für die Schadflächen die Klasse "1" anzugeben.
+Das Feld "Klasse" dient später dazu für Schadflächen die Klasse "1" anzugeben.
 
 ![](images/LE06_layer_neu.png)
 
 Zur gleichzeitigen Darstellung des Luftbildes und des Vegetationsindex bereiten wir zwei
 Kartenansichten vor.
 
-- Aktivieren Sie im Layer-Panel nur den Layer "sub_prezelle_2013".
+Aktivieren Sie im Layer-Panel die Layer
+- "uebung06" und
+- "sub_prezelle_2013_ndvi"
 
-- Legen Sie eine neue Kartenansicht im Layer-Panel an mit dem Namen Luftbild mit "Kartenansicht
-  verwalten -\> Thema hinzufügen..."
+Deaktivieren Sie den Layer "sub_prezelle_2013". Mit "Kartenansicht verwalten -\> Thema hinzufügen..." fügen Sie eine neue
+Kartenansicht mit dem Namen **NDVI** hinzu.
 
 ![](images/LE06_kartenansicht_verwalten.png)
 
-- Aktivieren Sie nun im Layer-Panel den Layer "sub_prezelle_2013_ndvi". Deaktivieren Sie den Layer
-  "sub_prezelle_2013". Mit "Kartenansicht verwalten -\> Thema hinzufügen..." fügen Sie eine neue
-  Kartenansicht mit dem Namen "NDVI" hinzu.
+Aktivieren Sie nun im Layer-Panel die Layer 
+- "uebung06" und
+- "sub_prezelle_2013".
+
+Deaktivieren Sie den Layer "sub_prezelle_2013_ndvi". Mit "Kartenansicht verwalten -\> Thema hinzufügen..." legen Sie eine neue
+Kartenansicht im Layer-Panel an mit dem Namen **Luftbild**.
+
 - Im Hauptmenü `Ansicht` → `Neue Kartenansicht` einen zweiten Viewer mit dem Namen "Karte 1" öffnen.
   Ordnen Sie Hauptansicht und Ansicht "Karte 1" so an, dass beide Fenster gleich gross nebeneinander
   platziert sind.
@@ -175,9 +181,9 @@ Kartenansichten vor.
 ![](images/LE06_kartenansicht_synch.png)
 
 - Aktivieren Sie den Editiermodus des Vektor-Layers "uebung06" mit dem Stiftsymbol
-  ![](images/LE05_start_edit.png), Klicken Sie auf
-  ![](images/LE06_poly_hinzufügen.png)"Polygonobjekt hinzufügen". Erfassen sie anschließend
-  Bereiche, die Sie eindeutig als befallen erkennen können als Polygone im Hauptansichtsfenster.
+  ![](images/LE05_start_edit.png)
+- Klicken Sie auf ![](images/LE06_poly_hinzufügen.png)"Polygonobjekt hinzufügen".
+- Erfassen sie anschließend Bereiche, die Sie eindeutig als befallen erkennen können als Polygone im Hauptansichtsfenster.
   Weisen sie diesen Polygonen die Klasse "1" zu.
 - Bestimmen Sie die Flächengröße der Schadflächen.
 
