@@ -154,7 +154,7 @@ Aktivieren Sie im Layer-Panel **nur** die Layer:
 - Legen Sie eine neue Kartenansicht im Layer-Panel an mit dem Namen **"Luftbild"** mit "Kartenansicht
   verwalten -\> Thema hinzufügen..."
 
-![](images/LE06_kartenansicht_verwalten.png)
+![](images/LE07_kartenansicht_verwalten.png)
 
 Aktivieren Sie jetzt im Layer-Panel **nur** diese Layer:
 
@@ -173,7 +173,7 @@ Aktivieren Sie jetzt im Layer-Panel **nur** diese Layer:
   
 - Wählen Sie in Ansicht "Karte 1" das Kartenthema "Luftbild" aus.
 
-![](images/LE06_kartenansicht_ndvi.png)
+![](images/LE07_kartenansicht_luftbild.png)
 
 - Aktivieren Sie in den Ansichtseinstellungen der "Karte 1" die Optionen "Ansichtszentrum mit
   Hauptkarte synchronisieren" und "Maßstäbe synchronisieren".
@@ -212,6 +212,9 @@ Der Layer Referenzdaten im Geopackage *uebung07.gpkg* enthält bereits für alle
 Klassifikationsschlüssels jeweils 20 Polygone als Trainingsdaten. Ergänzen sie den Datensatz, um
 jeweils fünf weitere Polygone pro Klasse. Nutzen Sie für die visuelle Auswahl und Anlage der Polygone die synchronisierte 
 Hauptkartenansicht (Sentinel-2) und Karte 1 (Luftbild).
+
+![](images/LE07_digitalisieren.png)
+
 
 Achten sie dabei auf folgende Aspekte:
 
