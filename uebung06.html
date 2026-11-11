@@ -408,16 +408,15 @@ Lizenz: Creative Commons BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc
 <h2 data-number="6.6" class="anchored" data-anchor-id="aufgabe-04-digitalisierung-der-schadflächen"><span class="header-section-number">6.6</span> Aufgabe 04: Digitalisierung der Schadflächen</h2>
 <p>Im nächsten Schritt sollen die vom Kiefernspinner befallen Flächen digitalisiert werden.</p>
 <p>Legen Sie dazu einen neuen Layer an mit <code>Layer</code> → <code>Layer erstellen</code> → <code>Neuer Geopackage-Layer...</code> im Ordner <em>“daten/vektor”</em> mit dem Namen <em>uebung06.gpkg</em>. In dem Geopackage wird ein neuer Layer “Schadflaechen” angelegt. Wählen Sie als Geometrietyp “Polygon” und als KBS “EPSG:25832”. Legen Sie ein neues Feld mit <strong>Name</strong> “Klasse” und <strong>Typ</strong> “Ganzzahl (Integer 32 bit) an. Klicken Sie auf”Zur Feldliste hinzufügen”.</p>
-<p>Das Feld “Klasse” dient später dazu für die Schadflächen die Klasse “1” anzugeben.</p>
+<p>Das Feld “Klasse” dient später dazu für Schadflächen die Klasse “1” anzugeben.</p>
 <p><img src="images/LE06_layer_neu.png" class="img-fluid"></p>
 <p>Zur gleichzeitigen Darstellung des Luftbildes und des Vegetationsindex bereiten wir zwei Kartenansichten vor.</p>
-<ul>
-<li><p>Aktivieren Sie im Layer-Panel nur den Layer “sub_prezelle_2013”.</p></li>
-<li><p>Legen Sie eine neue Kartenansicht im Layer-Panel an mit dem Namen Luftbild mit “Kartenansicht verwalten -&gt; Thema hinzufügen…”</p></li>
-</ul>
+<p>Aktivieren Sie im Layer-Panel die Layer - “uebung06” und - “sub_prezelle_2013_ndvi”</p>
+<p>Deaktivieren Sie den Layer “sub_prezelle_2013”. Mit “Kartenansicht verwalten -&gt; Thema hinzufügen…” fügen Sie eine neue Kartenansicht mit dem Namen <strong>NDVI</strong> hinzu.</p>
 <p><img src="images/LE06_kartenansicht_verwalten.png" class="img-fluid"></p>
+<p>Aktivieren Sie nun im Layer-Panel die Layer - “uebung06” und - “sub_prezelle_2013”.</p>
+<p>Deaktivieren Sie den Layer “sub_prezelle_2013_ndvi”. Mit “Kartenansicht verwalten -&gt; Thema hinzufügen…” legen Sie eine neue Kartenansicht im Layer-Panel an mit dem Namen <strong>Luftbild</strong>.</p>
 <ul>
-<li>Aktivieren Sie nun im Layer-Panel den Layer “sub_prezelle_2013_ndvi”. Deaktivieren Sie den Layer “sub_prezelle_2013”. Mit “Kartenansicht verwalten -&gt; Thema hinzufügen…” fügen Sie eine neue Kartenansicht mit dem Namen “NDVI” hinzu.</li>
 <li>Im Hauptmenü <code>Ansicht</code> → <code>Neue Kartenansicht</code> einen zweiten Viewer mit dem Namen “Karte 1” öffnen. Ordnen Sie Hauptansicht und Ansicht “Karte 1” so an, dass beide Fenster gleich gross nebeneinander platziert sind.</li>
 <li>Wählen Sie in Ansicht “Karte 1” das Kartenthema “NDVI” aus.</li>
 </ul>
@@ -427,7 +426,9 @@ Lizenz: Creative Commons BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc
 </ul>
 <p><img src="images/LE06_kartenansicht_synch.png" class="img-fluid"></p>
 <ul>
-<li>Aktivieren Sie den Editiermodus des Vektor-Layers “uebung06” mit dem Stiftsymbol <img src="images/LE05_start_edit.png" class="img-fluid">, Klicken Sie auf <img src="images/LE06_poly_hinzufügen.png" class="img-fluid">“Polygonobjekt hinzufügen”. Erfassen sie anschließend Bereiche, die Sie eindeutig als befallen erkennen können als Polygone im Hauptansichtsfenster. Weisen sie diesen Polygonen die Klasse “1” zu.</li>
+<li>Aktivieren Sie den Editiermodus des Vektor-Layers “uebung06” mit dem Stiftsymbol <img src="images/LE05_start_edit.png" class="img-fluid"></li>
+<li>Klicken Sie auf <img src="images/LE06_poly_hinzufügen.png" class="img-fluid">“Polygonobjekt hinzufügen”.</li>
+<li>Erfassen sie anschließend Bereiche, die Sie eindeutig als befallen erkennen können als Polygone im Hauptansichtsfenster. Weisen sie diesen Polygonen die Klasse “1” zu.</li>
 <li>Bestimmen Sie die Flächengröße der Schadflächen.</li>
 </ul>
 <div class="quarto-figure quarto-figure-center">
