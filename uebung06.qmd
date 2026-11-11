@@ -153,6 +153,7 @@ Zur gleichzeitigen Darstellung des Luftbildes und des Vegetationsindex bereiten 
 Kartenansichten vor.
 
 Aktivieren Sie im Layer-Panel die Layer
+
 - "uebung06" und
 - "sub_prezelle_2013_ndvi"
 
@@ -161,7 +162,8 @@ Kartenansicht mit dem Namen **NDVI** hinzu.
 
 ![](images/LE06_kartenansicht_verwalten.png)
 
-Aktivieren Sie nun im Layer-Panel die Layer 
+Aktivieren Sie nun im Layer-Panel die Layer
+
 - "uebung06" und
 - "sub_prezelle_2013".
 
