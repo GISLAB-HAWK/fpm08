@@ -303,7 +303,7 @@ Für die Vier-Kanaldatei (B02, B03, B04, B08) eingeben:
 
 Auf `Starte` klicken.
 
--   Layer neu laden. Die Füllpixel werden jetzt transparent dargestellt.
+-   Layer neu laden. Die Leerpixel werden jetzt transparent dargestellt.
 :::
 
 

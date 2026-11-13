@@ -6,6 +6,7 @@ B.Sc. Forstwirtschaft an der HAWK Göttingen.
 
 Autor: Paul Magdon
 Datum: 2025-11-16
+Letztes Update: 2026-11-11 (Hans Fuchs)
 Lizenz: Creative Commons BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 -->
@@ -184,7 +185,7 @@ Aktivieren Sie jetzt im Layer-Panel **nur** diese Layer:
   ![](images/LE05_start_edit.png), Klicken Sie auf
   ![](images/LE06_poly_hinzufügen.png)"Polygonobjekt hinzufügen". 
   
-### Klassifikationschlüssel
+### Klassifikationschlüssel {#sec-class_scheme}
 
 Der Klassifikationsschlüssel legt fest, welche Landbedeckungs-/Landnutzungsklassen in der
 thematischen Karte erfasst werden sollen. Er enthält üblicherweise auch eine detaillierte
@@ -195,9 +196,9 @@ sein:
 | Name              | Erläuterung                  | Klasse |
 |-------------------|------------------------------|--------|
 | Nadelholz         | Lebende, vitale Nadelgehölze |    1   |
-| stehendes Totholz | Stehende tote Bäume          |    2   |
+| Stehendes Totholz | Stehende tote Bäume          |    2   |
 | Laubholz          | Lebende, vitale Laubgehölze  |    3   |
-| Freiflächen       | Flächen ohne stehende Bäume  |    4   |
+| Freifläche        | Fläche ohne stehende Bäume   |    4   |
 
 ### Trainingsdaten ergänzen
 
