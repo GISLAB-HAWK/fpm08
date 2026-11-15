@@ -476,7 +476,7 @@ Hinweis
 <section id="sec-rf_training" class="level2" data-number="7.6">
 <h2 data-number="7.6" class="anchored" data-anchor-id="sec-rf_training"><span class="header-section-number">7.6</span> Aufgabe 03: Training eines Klassifikationsmodells</h2>
 <p>Die Trainingsdaten liegen als Vektordaten vor, die Klassenzugehörigkeit ist in der Attributtabelle gespeichert. Um diese Information zum Trainieren eines Klassifkationsmodelles zu nutzen, müssen wir diese in ein spezielles Serialisierungs- und Speicherformat (“skops”) umwandeln, das für maschinelles Lernen entwickelt wurde.</p>
-<p>EnMAP-Box stellt hierfür die Funktion <em>„Create classification dataset (from categorized vector layer and feature raster)“</em> zur Verfügung, die wir in der Werkzeugkiste der Verarbeitungsfunktionen über das Suchfeld finden können. In dieser Funktion setzen wir die folgenden Optionen:</p>
+<p>EnMAP-Box stellt hierfür die Funktion <code>Create classification dataset (from categorized vector layer and feature raster)</code> zur Verfügung, die wir in der Werkzeugkiste der Verarbeitungsfunktionen über das Suchfeld finden können. In dieser Funktion setzen wir die folgenden Optionen:</p>
 <ul>
 <li><p><strong>Categorized Vector Data</strong>: Hier wählen wir das Geopackage “uebung07” mit den Referenzdaten.</p></li>
 <li><p><strong>Raster layer with features</strong>: Hier geben wir das Sentinel2-Bild “NP_Harz_2025-06_12.tif” an.</p></li>
@@ -487,13 +487,13 @@ Hinweis
 <li><p><strong>Output dataset</strong>: Hier geben wir an, wo die Trainingsdaten gespeichert werden sollen. Wir wählen <em>„trainingsdaten.skops“</em> im Ordner <em>“daten”</em>.</p></li>
 </ul>
 <p><img src="images/LE07_EB_create_dataset.png" class="img-fluid"></p>
-<p>Jetzt können wir mit der Werkzeugkistenfunktion <em>„Fit RandomForestClassifier“</em> ein Klassifikationsmodell anpassen mit den folgenden Optionen:</p>
+<p>Jetzt können wir mit der Werkzeugkistenfunktion <code>Fit RandomForestClassifier</code> ein Klassifikationsmodell anpassen mit den folgenden Optionen:</p>
 <ul>
 <li><p><strong>Training dataset</strong>: Hier geben wir die Datei <em>„trainingsdaten.skops“</em> an.</p></li>
 <li><p><strong>Output classifier</strong>: Hier geben wir an, wo das trainierte Klassifikationsmodell gespeichert werden soll. Wir wählen <em>„rf_modell_harz_2025.skops“</em> im Ordner <em>“daten”</em>.</p></li>
 </ul>
 <p><img src="images/LE07_EB_fit_rf_model.png" class="img-fluid"></p>
-<p>Mit der Werkzeugkistenfunktion <em>„Classifier Performance“</em> können wir statistische Kennzahlen zur Beurteilung der Modellgenauigkeit berechnen mit den Optionen:</p>
+<p>Mit der Werkzeugkistenfunktion <code>Classifier Performance</code> können wir statistische Kennzahlen zur Beurteilung der Modellgenauigkeit berechnen mit den Optionen:</p>
 <ul>
 <li><p><strong>Classifier</strong>: Hier geben wir das das Klassifikationsmodell <em>„rf_modell_harz_2025.skops“</em> an.</p></li>
 <li><p><strong>Test dataset</strong>: Hier geben wir wieder unsere Trainingsdaten <em>„trainingsdaten.skops“</em> an.</p></li>
@@ -507,7 +507,7 @@ Hinweis
 </section>
 <section id="sec-rf_inference" class="level2" data-number="7.7">
 <h2 data-number="7.7" class="anchored" data-anchor-id="sec-rf_inference"><span class="header-section-number">7.7</span> Aufgabe 04: Klassifikation eines S2-Satellitenbilds zur Erstellung einer Waldtypenkarte</h2>
-<p>Nachdem wir das <em>RandomForest</em> Klassifikationsmodell trainiert haben, können wir es auf das gesamte Satellitenbild anwenden, um jedem Pixel eine unsere vier thematischen Klassen zuzuweisen. Dazu verwenden wir die EnMAP-Box-Funktion <em>Predict classifcation layer</em>, die im Werkzeugkasten der Verarbeitungsfunktionen zu finden ist. Hier werden folgende Optionen gewählt:</p>
+<p>Nachdem wir das <em>RandomForest</em> Klassifikationsmodell trainiert haben, können wir es auf das gesamte Satellitenbild anwenden, um jedem Pixel eine unsere vier thematischen Klassen zuzuweisen. Dazu verwenden wir die EnMAP-Box-Funktion <code>Predict classifcation layer</code>, die im Werkzeugkasten der Verarbeitungsfunktionen zu finden ist. Hier werden folgende Optionen gewählt:</p>
 <ul>
 <li><p><strong>Rasterlayer with features</strong>: Hier geben wir unser Sentinel2-Bild an.</p></li>
 <li><p><strong>Classifier</strong>: Wir geben das vorher trainierte Modell <em>„rf_harz_2025_modell.skops“</em> an.</p></li>
