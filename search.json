@@ -672,71 +672,81 @@
   {
     "objectID": "uebung09_aenderungsanalyse.html",
     "href": "uebung09_aenderungsanalyse.html",
-    "title": "9  Lerneinheit 09: Analyse der Waldflächenänderung im Nationalpark Harz (2017-2025)",
+    "title": "9  Lerneinheit 09: Analyse der Waldflächenänderung im Nationalpark Harz (2017 - 2025)",
     "section": "",
-    "text": "9.1 Lernziele & Aufgabenstellung\nIn der der Übung (Kapitel 7) haben wir mithilfe eines automatischen Bildklassifikationsverfahrens eine einfache Waldtypenkarten für den Nationalpark Harz erstellt. Dafür wurden Trainingsdaten erhoben und ein RandomForest Klassifikationsmodell erstellt. In der vorliegenden Übung wollen dieses Modell verwenden um ein älteres Satellitenbild zu klassifizieren und eine Waldtypenkarte für das Jahr 2017 zu erstellen. Anschließend sollen die Waldtypenkarten mit einander verglichen und die Änderungen der Waldflächen bestimmt werden.\nLernziele\nDie Studierenden sollen:\nAufgaben",
+    "text": "9.1 Lernziele und Aufgabenstellung\nIn der der Übung (Kapitel 7) haben wir mithilfe eines automatischen Bildklassifikationsverfahrens eine einfache Waldtypenkarten für den Nationalpark Harz erstellt. Dafür wurden Trainingsdaten erhoben und ein RandomForest Klassifikationsmodell erstellt. In der vorliegenden Übung wird dieses Modell verwendet, um ein älteres Satellitenbild zu klassifizieren und eine Waldtypenkarte für das Jahr 2017 zu erstellen. Anschließend sollen die Waldtypenkarten 2017 und 2015 miteinander verglichen und die Änderung der Waldflächen quantifiziert werden.\nLernziele\nDie Studierenden sollen:\nAufgaben",
     "crumbs": [
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Lerneinheit 09: Analyse der Waldflächenänderung im Nationalpark Harz (2017-2025)</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Lerneinheit 09: Analyse der Waldflächenänderung im Nationalpark Harz (2017 - 2025)</span>"
     ]
   },
   {
-    "objectID": "uebung09_aenderungsanalyse.html#lernziele-aufgabenstellung",
-    "href": "uebung09_aenderungsanalyse.html#lernziele-aufgabenstellung",
-    "title": "9  Lerneinheit 09: Analyse der Waldflächenänderung im Nationalpark Harz (2017-2025)",
+    "objectID": "uebung09_aenderungsanalyse.html#lernziele-und-aufgabenstellung",
+    "href": "uebung09_aenderungsanalyse.html#lernziele-und-aufgabenstellung",
+    "title": "9  Lerneinheit 09: Analyse der Waldflächenänderung im Nationalpark Harz (2017 - 2025)",
     "section": "",
-    "text": "Ein bestehendes Klassifikationsmodell auf einen weiteres Satellitenbild anwenden.\nZwei Waldtypenkarten mithilfe einer Änderungsmatrix vergleichen.\nDie Waldflächenänderungen bestimmen.\n\n\n\nRaster- und Vektordaten importieren\nErstellen einer Waldtypenkarte für das Jahr 2017\nErstellen einer Änderungsmatrix\nAuswertung der Änderungsmatrix zur Bestimmung der Waldflächenänderungen",
+    "text": "Ein bestehendes Klassifikationsmodell auf einen weiteres Satellitenbild anwenden.\nZwei Waldtypenkarten mithilfe einer Änderungsmatrix vergleichen.\nDie Waldflächenänderung bestimmen.\n\n\n\nRaster- und Vektordaten importieren\nErstellen einer Waldtypenkarte für das Jahr 2017\nErstellen einer Änderungsmatrix\nAuswertung der Änderungsmatrix zur Bestimmung der Waldflächenänderungen 2017-2025",
     "crumbs": [
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Lerneinheit 09: Analyse der Waldflächenänderung im Nationalpark Harz (2017-2025)</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Lerneinheit 09: Analyse der Waldflächenänderung im Nationalpark Harz (2017 - 2025)</span>"
     ]
   },
   {
     "objectID": "uebung09_aenderungsanalyse.html#aufgabe-0-anlegen-eine-neuen-qgis-projektes-und-kontrolle-des-nutzerprofils",
     "href": "uebung09_aenderungsanalyse.html#aufgabe-0-anlegen-eine-neuen-qgis-projektes-und-kontrolle-des-nutzerprofils",
-    "title": "9  Lerneinheit 09: Analyse der Waldflächenänderung im Nationalpark Harz (2017-2025)",
+    "title": "9  Lerneinheit 09: Analyse der Waldflächenänderung im Nationalpark Harz (2017 - 2025)",
     "section": "9.2 Aufgabe 0: Anlegen eine neuen QGIS-Projektes und Kontrolle des Nutzerprofils",
-    "text": "9.2 Aufgabe 0: Anlegen eine neuen QGIS-Projektes und Kontrolle des Nutzerprofils\nFolgen sie der Anleitung aus LE01 Kapitel 1.3 um eine neue Ordnerstruktur und ein neues QGIS-Projekt für LE09 anzulegen. In der Übung bietet es sich an den Ordner “daten” weiter in die Unterordner “vektor” und “raster” zu unterteilen.\nPrüfen sie außerdem ob Ihr Nutzerprofil korrekt geladen wurde und ob die OTB-Funktionen im Werkzeugkasten vorhanden sind. Sollte dies nicht der Fall sein stellen sie ihr gesichertes Nutzerprofil wieder her (siehe auch LE01 Kapitel 1.2.4).",
+    "text": "9.2 Aufgabe 0: Anlegen eine neuen QGIS-Projektes und Kontrolle des Nutzerprofils\nFolgen sie der Anleitung aus LE01 Kapitel 1.3 um eine neue Ordnerstruktur und ein neues QGIS-Projekt für LE09 anzulegen. In der Übung bietet es sich an den Ordner “daten” weiter in die Unterordner “vektor” und “raster” zu unterteilen.\nPrüfen Sie außerdem, ob die Plugins EnMAP-Box und Geobasis_Loader installiert sind. Sollte dies nicht der Fall sein, stellen Sie Ihr gesichertes Benutzerprofil wieder her (siehe auch LE01 Kapitel 1.2.4).",
     "crumbs": [
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Lerneinheit 09: Analyse der Waldflächenänderung im Nationalpark Harz (2017-2025)</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Lerneinheit 09: Analyse der Waldflächenänderung im Nationalpark Harz (2017 - 2025)</span>"
     ]
   },
   {
     "objectID": "uebung09_aenderungsanalyse.html#aufgabe-01-download-und-import-der-geodaten",
     "href": "uebung09_aenderungsanalyse.html#aufgabe-01-download-und-import-der-geodaten",
-    "title": "9  Lerneinheit 09: Analyse der Waldflächenänderung im Nationalpark Harz (2017-2025)",
+    "title": "9  Lerneinheit 09: Analyse der Waldflächenänderung im Nationalpark Harz (2017 - 2025)",
     "section": "9.3 Aufgabe 01: Download und Import der Geodaten",
-    "text": "9.3 Aufgabe 01: Download und Import der Geodaten\n\n9.3.1 Satellitenbilder & Waldtypenkarten\nLaden sie sich die Waldtypenkarte für das Jahr 2017 (“NP_Harz_2025_06_12_Waldtypen.tif”) aus der Übung Kapitel 7 in ihr Projektordner und QGIS. Falls sie keinen Zugang zu dieser Karte mehr haben können sie sich unter folgendem Link eine Kopie herunterladen:\nhttps://cloud.hawk.de/index.php/s/e8oqsCezoQYft6C\nDer Waldzustand im Jahr 2025 soll mit der Situation vor den großen Kalamitäten im Jahr 2017 verglichen werden. Für die Erstellung einer Waldtypenkarte in 2025 soll das gleiche RandomForest Klassifikationsmodell verwendet werden. Daher ist es wichtig, dass die Satellitenbilder der beiden Jahre miteinander vergleichbar sind. Wir nutzen dazu ein Satellitenbild des selben Sensors (S2-MSI), welches zu einem ähnlichen phänologischen Zeitpunkt (Juni) aufgenommen wurde. Sie können das vorbereitete Sentinel-2 Satellitenbild hier herunterladen:\nhttps://cloud.hawk.de/index.php/s/QWPY2984sb3jmT9\nFür die farbige Darstellung der thematischen Karte können Sie die Stildatei zusätzlich herunterladen:\nhttps://cloud.hawk.de/index.php/s/HKMseitrK9bHpZY\n\n\n9.3.2 Vektordaten\nLaden Sie sich außerdem die Außengrenzen des Nationalparks herunter:\nhttps://cloud.hawk.de/index.php/s/Hs52DFGtPnfKzyN\n\n\n9.3.3 Modelle\nFür die Klassifikation nutzen wir das RandomForest-Klassifikationsmodell welches in der Übung Kapitel 7 auf Basis der Trainingsdaten angelegt haben noch einmal.\nhttps://cloud.hawk.de/index.php/s/XzQHBBzKd83MYwZ",
+    "text": "9.3 Aufgabe 01: Download und Import der Geodaten\n\n9.3.1 Satellitenbilder und Waldtypenkarten\nLaden Sie sich das Satellitenbild “NP_Harz_2025_06_12.tif” und die Waldtypenkarte “NP_Harz_2025_06_12_Waldtypen.tif” für das Jahr 2025 aus der Übung Kapitel 7 in Ihren aktuelleb Projektordner LE09. Falls sie keinen Zugang mehr zu diesen Daten haben können Sie sich unter folgendem herunterladen:\nSatellitenbild 2025:\nhttps://cloud.hawk.de/index.php/s/i56LB4dCBxt4cm6\nWaldtypenkarte 2025:\nhttps://cloud.hawk.de/index.php/s/5FRfCaH3gTGexC6\nDer Waldzustand im Jahr 2025 soll mit der Situation im Jahr 2017 vor den großen Kalamitäten verglichen werden. Für die Erstellung einer Waldtypenkarte 2017 soll das gleiche RandomForest Klassifikationsmodell verwendet werden, das für 2025 erstellt wurde. Daher ist es wichtig, dass die Satellitenbilder der beiden Jahre miteinander vergleichbar sind. Wir nutzen dazu ein Satellitenbild des selben Sensors (S2-MSI) und Datentyps (L2A), das zu einem ähnlichen phänologischen Zeitpunkt (Juni) aufgenommen wurde. Sie können das vorbereitete Sentinel-2 Satellitenbild 2017 hier herunterladen:\nSatellitenbild 2017:\nhttps://cloud.hawk.de/index.php/s/onBgcri8igW6czi\nFür die farbige Darstellung der thematischen Karten können Sie diese Stildatei zusätzlich herunterladen:\nhttps://cloud.hawk.de/index.php/s/nbn3YQsAoGM7jEd\n\n\n9.3.2 Vektordaten\nLaden Sie sich außerdem die Außengrenze des Nationalparks herunter:\nhttps://cloud.hawk.de/index.php/s/MmT7fwzZ3Z2sNex\n\n\n9.3.3 Modelle\nFür die Klassifikation nutzen wir das RandomForest (RF) Klassifikationsmodell, das in der Übung Kapitel 7 auf Basis der Trainingsdaten angelegt wurde, noch einmal. Bitte hier herunterladen:\nhttps://cloud.hawk.de/index.php/s/RamYqcKbYSRsZda",
     "crumbs": [
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Lerneinheit 09: Analyse der Waldflächenänderung im Nationalpark Harz (2017-2025)</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Lerneinheit 09: Analyse der Waldflächenänderung im Nationalpark Harz (2017 - 2025)</span>"
     ]
   },
   {
     "objectID": "uebung09_aenderungsanalyse.html#aufgabe-02-erstellen-der-waldtypenkarte-2017",
     "href": "uebung09_aenderungsanalyse.html#aufgabe-02-erstellen-der-waldtypenkarte-2017",
-    "title": "9  Lerneinheit 09: Analyse der Waldflächenänderung im Nationalpark Harz (2017-2025)",
+    "title": "9  Lerneinheit 09: Analyse der Waldflächenänderung im Nationalpark Harz (2017 - 2025)",
     "section": "9.4 Aufgabe 02: Erstellen der Waldtypenkarte 2017",
-    "text": "9.4 Aufgabe 02: Erstellen der Waldtypenkarte 2017\nLaden sie das 2017’er Satellitenbild in das QGIS Projekt. Nutzen sie anschließend die OTB-Funktion “ImageClassifier” um mithilfe des RF-Modells eine neue Waldtypenkarte für das Jahr 2017 zu erstellen. Speichern sie die neue Waldtypenkarte als Raster unter dem Dateinamen NP_Harz_2017_06_01_Waldtypen.tif ab. Nutzen sie dazu auch die Hinweise aus Kapitel 7.7.\nStellen sie vor dem nächsten Schritt sicher, dass die Waldtypenkarte des Jahres 2017 auf den NP-Harz zugeschnitten sind.\n\n\n\n\n\n\nTippTipp\n\n\n\nIn der OTB-Funktion imageClassifier können sie eine Maske angeben. Wenn sie hier das Satellitenbild NP_Harz_2017_06_12.tif wählen, wir die Klassifikation direkt auf den Bereich des NP-Harzes beschränkt und die äußeren Flächen als Leerwerte markiert.\n\n\n\n\nWie beurteilen sie die Genauigkeit der Klassifikation für das Jahr 2017?\nWelche Probleme sehen sie bei der Übertragen des Klassifikationsmodells aus dem Jahr 2025 auf das Jahr 2017?",
+    "text": "9.4 Aufgabe 02: Erstellen der Waldtypenkarte 2017\n\nLaden sie das Satellitenbild 2017 in das QGIS Projekt.\nNutzen sie anschließend die Enmap-Box Funktion “Predict classifcation layer”, um mithilfe des RF-Modells eine neue Waldtypenkarte für das Jahr 2017 zu erstellen.\nSpeichern sie die neue Waldtypenkarte als Raster unter dem Dateinamen NP_Harz_2017_06_01_Waldtypen_klassifiziert.tif ab. Nutzen sie dazu auch die Hinweise aus Kapitel 7.7.\n\n\nFür einen Änderungsanalyse sollten Rasterdaten dieselbe Ausdehnung, Lage und Grösse der Pixel und dasselbe Koordinatenbezugssystem haben.\nMit der Funktion Create mask raster layeraus der EnMAP-Box können Sie eine Binärmaske erstellen:\n\nRaster layer: NP_Harz_2025_06_12_Waldtypen\nBand: Kanal 1\nMask values: Geben Sie hier als zusätzlichen Leerwert 0 ein!\nOutput mask raster layer: NP_Harz_mask.tif\n\n\nDie Binärmaske kann jetzt mit der EnMAP-Box Funktion Apply mask layer to raster layer auf die neue Waldtypenkarte 2017 angewendet werden:\n\nRaster layer: NP_Harz_2017_06_01_klassifiziert.tif\nMask layer: NP_Harz_mask.tif\nOutput mask raster layer: NP_Harz_2017_06_01_Waldtypen.tif\n\n\nZum visuellen Vergleich der Waltypenentwicklung können Sie die Stildatei NP_Harz_2025_06_12_Waldtypen.qml in beide Rasterlayer NP_Harz_2017_06_01_Waldtypen und NP_Harz_2025_06_12_Waldtypen laden.\n\n\nWie beurteilen Sie die Genauigkeit der Klassifikation für das Jahr 2017?\nWelche Probleme sehen Sie bei der Übertragung des Klassifikationsmodells aus dem Jahr 2025 auf das Jahr 2017?",
     "crumbs": [
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Lerneinheit 09: Analyse der Waldflächenänderung im Nationalpark Harz (2017-2025)</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Lerneinheit 09: Analyse der Waldflächenänderung im Nationalpark Harz (2017 - 2025)</span>"
     ]
   },
   {
     "objectID": "uebung09_aenderungsanalyse.html#aufgabe-03-erstellen-einer-änderungsmatrix",
     "href": "uebung09_aenderungsanalyse.html#aufgabe-03-erstellen-einer-änderungsmatrix",
-    "title": "9  Lerneinheit 09: Analyse der Waldflächenänderung im Nationalpark Harz (2017-2025)",
+    "title": "9  Lerneinheit 09: Analyse der Waldflächenänderung im Nationalpark Harz (2017 - 2025)",
     "section": "9.5 Aufgabe 03: Erstellen einer Änderungsmatrix",
-    "text": "9.5 Aufgabe 03: Erstellen einer Änderungsmatrix\nVergleichbar zur Fehlermatrix, werden in der Änderungsmatrix die Klassifikationsergebnisse der beiden Jahre in einer Matrix gegenüber gestellt. Da beide Klassifikationen auf den S2-Satellitenbildern beruhen, kann der Vergleich direkt auf der Ebene der einzelnen Pixel durchgeführt werden. Es muss also kein systematisches Punktraster erstellt werden. Auch für den Vergleich auf Pixelebene kann die OTB-Funktion “ComputeConfusionMatrix” genutzt werden.\nHier bei werden folgende Einstellungen gewählt:\n\nInput Image: NP_Harz_2017_06_01_Waldtypen.tif\nOutput format: confusionmatrix\nGround Truth: raster\nInput Reference Image: NP_Harz_2025_06_12_Waldtypen.tif\nMatrix output: waldtypen_aenderungs_matrix.cm\n\nAls Ergebnis wird eine Textdatei erzeugt, in der die Pixelwerte aus dem Jahr 2017 in den Spalten und die Referenzwerte aus dem Jahr 2025 in den Zeilen aufgetragen sind. In der Diagonale befinden sich die Pixel die zu beiden Zeitpunkten der gleichen Klasse zugeordnet wurden.",
+    "text": "9.5 Aufgabe 03: Erstellen einer Änderungsmatrix\nVergleichbar zur Fehlermatrix, werden in einer Änderungsmatrix die Klassifikationsergebnisse der beiden Jahre in einer Kreuztabelle gegenüber gestellt. Da beide Klassifikationen auf S2-Satellitenbildern beruhen, kann der Vergleich direkt auf Ebene einzelner Pixel durchgeführt werden. Es muss also kein systematisches Punktraster erstellt werden. Für den Vergleich auf Pixelebene kann die EnMAP-Funktion Classification layer accuracy report genutzt werden.\nHier bei werden folgende Einstellungen gewählt:\n\nPredicted classifcation layer: Waldtypen zum Zeitpunkt 2  NP_Harz_2025_06_12_Waldtypen.tif und\nObserved categorized layer: Waldtypen zum Zeitpunkt 1  NP_Harz_2017_06_01_Waldtypen.tif\nOutput report: veraenderungsmatrix.html\n\n\nAls Ergebnis wird ein Bericht im Webbrowser angezeigt, wobei die 2. Kreuztabelle jetzt als Veränderungsmatrix zu interpretieren ist.\nIn der Veränderungsmatrix sind die Pixelwerte aus dem Jahr 2017 in den Spalten und die Werte aus dem Jahr 2025 in den Zeilen aufgetragen. In der Diagonale befinden sich die Pixel, die zu beiden Zeitpunkten der gleichen Klasse zugeordnet wurden.",
     "crumbs": [
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Lerneinheit 09: Analyse der Waldflächenänderung im Nationalpark Harz (2017-2025)</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Lerneinheit 09: Analyse der Waldflächenänderung im Nationalpark Harz (2017 - 2025)</span>"
     ]
   },
   {
     "objectID": "uebung09_aenderungsanalyse.html#aufgabe-04-berechnung-der-flächenänderungen",
     "href": "uebung09_aenderungsanalyse.html#aufgabe-04-berechnung-der-flächenänderungen",
-    "title": "9  Lerneinheit 09: Analyse der Waldflächenänderung im Nationalpark Harz (2017-2025)",
+    "title": "9  Lerneinheit 09: Analyse der Waldflächenänderung im Nationalpark Harz (2017 - 2025)",
     "section": "9.6 Aufgabe 04: Berechnung der Flächenänderungen",
-    "text": "9.6 Aufgabe 04: Berechnung der Flächenänderungen\nNutzen sie ein Tabellenkalkulationsprogramm um aus der Textdatei eine Änderungsmatrix für die zwei Zeitpunkte zu erstellen. Dabei sollten zwei Versionen der Änderungsmatrix erarbeitet werden:\n\nmit der Anzahl der Pixel\nmit den ha-Werten.\n\nNutzen sie die beiden Matrizen zum beantworten folgender Fragen:\n\n\nWie groß ist der Anteil an Verlust von Nadelholzflächen im NP-Harz zwischen 2017-2025?\nWie viel ha Freiflächen gibt es im NP-Harz im Jahr 2025?\nWie hat sich der Anteil der stehenden Totholzflächen von 2017-2025 geändert?",
+    "text": "9.6 Aufgabe 04: Berechnung der Flächenänderungen\nErstellen Sie eine Veränderungsmatrix mit der Einheit Hektar. Öffnen Sie hierfür die Textdatei “daten/veraenderungsmatrix.html.csv” in einem Tabellenkalkulationsprogramm.\nJetzt können Sie zwei Versionen der Änderungsmatrix vergleichen:\n\nmit der Anzahl der Pixel\nmit den ha-Werten.\n\nNutzen sie die beiden Matrizen zum Beantworten folgender Fragen:\n\n\nWie groß ist der Anteil an Verlust von Nadelholzflächen im NP-Harz zwischen 2017-2025?\nWie viel ha Freiflächen gibt es im NP-Harz im Jahr 2025?\nWie hat sich der Anteil der stehenden Totholzflächen von 2017-2025 geändert?",
     "crumbs": [
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Lerneinheit 09: Analyse der Waldflächenänderung im Nationalpark Harz (2017-2025)</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Lerneinheit 09: Analyse der Waldflächenänderung im Nationalpark Harz (2017 - 2025)</span>"
+    ]
+  },
+  {
+    "objectID": "uebung09_aenderungsanalyse.html#aufgabe-05-erstellung-eines-sankey-veränderungsdiagramms",
+    "href": "uebung09_aenderungsanalyse.html#aufgabe-05-erstellung-eines-sankey-veränderungsdiagramms",
+    "title": "9  Lerneinheit 09: Analyse der Waldflächenänderung im Nationalpark Harz (2017 - 2025)",
+    "section": "9.7 Aufgabe 05: Erstellung eines Sankey Veränderungsdiagramms",
+    "text": "9.7 Aufgabe 05: Erstellung eines Sankey Veränderungsdiagramms\nEin Sankey Veränderungsdiagramm wird durch Aufrufen der EnMAP-Box Funktion Land cover change statistics report hergestellt:\n\nClassification layers: Wählen Sie NP_Harz_2017_06_01_Waldtypen und NP_Harz_2025_06_12_Waldtypen aus.\nClass size units: Hectares (ha)\nLink opacity: 50\nOutput report: sankey_veraenderung_hektar.html\n\n\nVergleichen Sie die Werte im Sankey Diagramm mit den Werten in den Änderungsmatrizen i) mit der Anzahl der Pixel und ii) mit der Fläche in ha.",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Lerneinheit 09: Analyse der Waldflächenänderung im Nationalpark Harz (2017 - 2025)</span>"
     ]
   },
   {
