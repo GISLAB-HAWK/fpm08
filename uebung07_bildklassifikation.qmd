@@ -235,7 +235,7 @@ Achten sie dabei auf folgende Aspekte:
 
 Die Trainingsdaten liegen als Vektordaten vor, die Klassenzugehörigkeit ist in der Attributtabelle gespeichert. Um diese Information zum Trainieren eines Klassifkationsmodelles zu nutzen, müssen wir diese in ein spezielles Serialisierungs- und Speicherformat ("skops") umwandeln, das für maschinelles Lernen entwickelt wurde.
 
-EnMAP-Box stellt hierfür die Funktion *„Create classification dataset (from categorized vector layer and feature raster)“* zur Verfügung, die wir in der Werkzeugkiste der Verarbeitungsfunktionen über das Suchfeld finden können. In dieser Funktion setzen wir die folgenden Optionen:
+EnMAP-Box stellt hierfür die Funktion `Create classification dataset (from categorized vector layer and feature raster)` zur Verfügung, die wir in der Werkzeugkiste der Verarbeitungsfunktionen über das Suchfeld finden können. In dieser Funktion setzen wir die folgenden Optionen:
 
 -   **Categorized Vector Data**: Hier wählen wir das Geopackage "uebung07" mit den Referenzdaten.
 
@@ -249,7 +249,7 @@ Klicken Sie auf `Fortgeschrittene Parameter`.
 
 ![](images/LE07_EB_create_dataset.png)
 
-Jetzt können wir mit der Werkzeugkistenfunktion *„Fit RandomForestClassifier“* ein Klassifikationsmodell anpassen mit den folgenden Optionen:
+Jetzt können wir mit der Werkzeugkistenfunktion `Fit RandomForestClassifier` ein Klassifikationsmodell anpassen mit den folgenden Optionen:
 
 -   **Training dataset**: Hier geben wir die Datei *„trainingsdaten.skops“* an.
 
@@ -259,7 +259,7 @@ Jetzt können wir mit der Werkzeugkistenfunktion *„Fit RandomForestClassifier�
 ![](images/LE07_EB_fit_rf_model.png)
 
 
-Mit der Werkzeugkistenfunktion *„Classifier Performance“* können wir statistische Kennzahlen zur Beurteilung der Modellgenauigkeit berechnen mit den Optionen:
+Mit der Werkzeugkistenfunktion `Classifier Performance` können wir statistische Kennzahlen zur Beurteilung der Modellgenauigkeit berechnen mit den Optionen:
 
 -   **Classifier**: Hier geben wir das das Klassifikationsmodell *„rf_modell_harz_2025.skops“* an.
 
@@ -278,7 +278,7 @@ Nach Ausführen der Funktion öffnet sich ein Bericht mit Fehlermatrix und Stati
 
 Nachdem wir das *RandomForest* Klassifikationsmodell trainiert haben, können wir es auf das gesamte
 Satellitenbild anwenden, um jedem Pixel eine unsere vier thematischen Klassen zuzuweisen. Dazu
-verwenden wir die EnMAP-Box-Funktion *Predict classifcation layer*, die im Werkzeugkasten der Verarbeitungsfunktionen zu finden ist. Hier werden folgende Optionen gewählt:
+verwenden wir die EnMAP-Box-Funktion `Predict classifcation layer`, die im Werkzeugkasten der Verarbeitungsfunktionen zu finden ist. Hier werden folgende Optionen gewählt:
 
 -   **Rasterlayer with features**: Hier geben wir unser Sentinel2-Bild an.
 
