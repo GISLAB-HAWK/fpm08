@@ -259,6 +259,8 @@ Sie können sich die aktuelle Anzahl der Trainingspolygone pro Klasse im Layer-P
 
 ## Aufgabe 03: Training eines Klassifikationsmodells {#sec-rf_training}
 
+### Erstellen uns Speichern eines Klassifikationsmodells
+
 Die Trainingsdaten liegen als Vektordaten vor, die Klassenzugehörigkeit ist in der Attributtabelle
 gespeichert. Um diese Information zum Trainieren eines Klassifkationsmodelles zu nutzen, müssen wir
 diese in ein spezielles Serialisierungs- und Speicherformat ("skops") umwandeln, das für
@@ -298,6 +300,8 @@ Klassifikationsmodell anpassen mit den folgenden Optionen:
 
 ![](images/LE07_EB_fit_rf_model.png)
 
+### Erstellen eines Berichts zur Beurteilung der Modellgenauigkeit
+
 Mit der Werkzeugkistenfunktion `Classifier performance report` können wir statistische Kennzahlen
 zur Beurteilung der Modellgenauigkeit berechnen mit den Optionen:
 
@@ -313,7 +317,7 @@ Klicken Sie auf `Fortgeschrittene Parameter`.
 - **Output report**: Hier geben wir an, wo der Bericht über Modellgenauigkeit gespeichert werden
   soll. Wir wählen *„modellgenauigkeit.html“* im Ordner *"daten"*.
 
-![](images/LE07_EB_model_performance.png) Nach Ausführen der Funktion öffnet sich ein Bericht mit
+![](images/LE07_EB_model_performance.png)Nach Ausführen der Funktion öffnet sich ein Bericht mit
 Fehlermatrix und Statistiken, die wir in der nächsten Lehreinheit besprechen werden.
 
 ## Aufgabe 04: Klassifikation eines S2-Satellitenbilds zur Erstellung einer Waldtypenkarte {#sec-rf_inference}
@@ -330,15 +334,19 @@ Verarbeitungsfunktionen zu finden ist. Hier werden folgende Optionen gewählt:
 - **Output classifcation layer**: Hier geben wir den Speicherpfad der thematischen Rasterkarte im
   Format GeoTiff ein unter *"daten/NP_Harz_2025_06_12_Waldtypen.tif"*.
 
-![](images/LE07_EB_predict_model.png) Nach erfolgreicher Klassifikation wird das Bild als Raster mit
+![](images/LE07_EB_predict_model.png)Nach erfolgreicher Klassifikation wird das Bild als Raster mit
 indizierter Palette mit Graustufen im QGIS geladen. Prüfen Sie jetzt nochmal, ob das
 Koordinatenreferenzsystem des Projektes immer noch korrekt ist.
 
 Anschließend schneiden wir das klassifizierte Bild auf auf die Grenzen des Nationalparks zu (siehe
 dazu auch LE04 @sec-zuschneiden). Das zugeschnittene Bild wird als GeoTIFF unter *"daten/
-NP_Harz_2025_06_12_Waldtypen.tif"* gespeichert. Für die Darstellung sollen die Farbwerte der Pixel
-identisch zu den Farben des Vektor-Referenzdatensatz sein. Erstellen sie dafür eine entsprechende
-Symbolisierung.
+NP_Harz_2025_06_12_Waldtypen.tif"* gespeichert.
+
+::: callout-tip
+Die Enmap-Toolbox erzeugt für die neue Rasterkarte auch einen passenden Stil. Dieser wird im selben
+Ordner mit dem selben Dateinamen wie die Waldtypenkarte mit der Dateiendung \*.qml abgelegt. Falls
+die Karte nicht farbig dargestellt wird laden Sie diesen Stil manuel unter Layereigenschaften.
+:::
 
 **Fragen:**
 
