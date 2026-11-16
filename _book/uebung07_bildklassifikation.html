@@ -171,7 +171,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./uebung09_aenderungsanalyse.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Lerneinheit 09: Analyse der Waldflächenänderung im Nationalpark Harz (2017-2025)</span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Lerneinheit 09: Analyse der Waldflächenänderung im Nationalpark Harz (2017 - 2025)</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -232,7 +232,7 @@ ul.task-list li input[type="checkbox"] {
   </ul></li>
   <li><a href="#aufgabe-02-ergänzung-der-referenzdaten" id="toc-aufgabe-02-ergänzung-der-referenzdaten" class="nav-link" data-scroll-target="#aufgabe-02-ergänzung-der-referenzdaten"><span class="header-section-number">7.5</span> Aufgabe 02: Ergänzung der Referenzdaten</a>
   <ul class="collapse">
-  <li><a href="#klassifikationschlüssel" id="toc-klassifikationschlüssel" class="nav-link" data-scroll-target="#klassifikationschlüssel"><span class="header-section-number">7.5.1</span> Klassifikationschlüssel</a></li>
+  <li><a href="#sec-class_scheme" id="toc-sec-class_scheme" class="nav-link" data-scroll-target="#sec-class_scheme"><span class="header-section-number">7.5.1</span> Klassifikationschlüssel</a></li>
   <li><a href="#trainingsdaten-ergänzen" id="toc-trainingsdaten-ergänzen" class="nav-link" data-scroll-target="#trainingsdaten-ergänzen"><span class="header-section-number">7.5.2</span> Trainingsdaten ergänzen</a></li>
   </ul></li>
   <li><a href="#sec-rf_training" id="toc-sec-rf_training" class="nav-link" data-scroll-target="#sec-rf_training"><span class="header-section-number">7.6</span> Aufgabe 03: Training eines Klassifikationsmodells</a></li>
@@ -269,6 +269,7 @@ B.Sc. Forstwirtschaft an der HAWK Göttingen.
 
 Autor: Paul Magdon
 Datum: 2025-11-16
+Letztes Update: 2026-11-11 (Hans Fuchs)
 Lizenz: Creative Commons BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 -->
@@ -418,8 +419,8 @@ Hinweis
 <ul>
 <li>Aktivieren Sie den Editiermodus des Vektor-Layers “uebung07” mit dem Stiftsymbol <img src="images/LE05_start_edit.png" class="img-fluid">, Klicken Sie auf <img src="images/LE06_poly_hinzufügen.png" class="img-fluid">“Polygonobjekt hinzufügen”.</li>
 </ul>
-<section id="klassifikationschlüssel" class="level3" data-number="7.5.1">
-<h3 data-number="7.5.1" class="anchored" data-anchor-id="klassifikationschlüssel"><span class="header-section-number">7.5.1</span> Klassifikationschlüssel</h3>
+<section id="sec-class_scheme" class="level3" data-number="7.5.1">
+<h3 data-number="7.5.1" class="anchored" data-anchor-id="sec-class_scheme"><span class="header-section-number">7.5.1</span> Klassifikationschlüssel</h3>
 <p>Der Klassifikationsschlüssel legt fest, welche Landbedeckungs-/Landnutzungsklassen in der thematischen Karte erfasst werden sollen. Er enthält üblicherweise auch eine detaillierte Beschreibung wie die einzelnen Klassen definiert sind und wie sie erfasst werden sollen. Für diese Übung soll eine einfache Unterscheidung von drei Waldtypen und einer Hintergrundklasse ausreichend sein:</p>
 <table class="caption-top table">
 <thead>
@@ -436,7 +437,7 @@ Hinweis
 <td>1</td>
 </tr>
 <tr class="even">
-<td>stehendes Totholz</td>
+<td>Stehendes Totholz</td>
 <td>Stehende tote Bäume</td>
 <td>2</td>
 </tr>
@@ -446,8 +447,8 @@ Hinweis
 <td>3</td>
 </tr>
 <tr class="even">
-<td>Freiflächen</td>
-<td>Flächen ohne stehende Bäume</td>
+<td>Freifläche</td>
+<td>Fläche ohne stehende Bäume</td>
 <td>4</td>
 </tr>
 </tbody>
@@ -471,7 +472,7 @@ Hinweis
 <section id="sec-rf_training" class="level2" data-number="7.6">
 <h2 data-number="7.6" class="anchored" data-anchor-id="sec-rf_training"><span class="header-section-number">7.6</span> Aufgabe 03: Training eines Klassifikationsmodells</h2>
 <p>Die Trainingsdaten liegen als Vektordaten vor, die Klassenzugehörigkeit ist in der Attributtabelle gespeichert. Um diese Information zum Trainieren eines Klassifkationsmodelles zu nutzen, müssen wir diese in ein spezielles Serialisierungs- und Speicherformat (“skops”) umwandeln, das für maschinelles Lernen entwickelt wurde.</p>
-<p>EnMAP-Box stellt hierfür die Funktion <em>„Create classification dataset (from categorized vector layer and feature raster)“</em> zur Verfügung, die wir in der Werkzeugkiste der Verarbeitungsfunktionen über das Suchfeld finden können. In dieser Funktion setzen wir die folgenden Optionen:</p>
+<p>EnMAP-Box stellt hierfür die Funktion <code>Create classification dataset (from categorized vector layer and feature raster)</code> zur Verfügung, die wir in der Werkzeugkiste der Verarbeitungsfunktionen über das Suchfeld finden können. In dieser Funktion setzen wir die folgenden Optionen:</p>
 <ul>
 <li><p><strong>Categorized Vector Data</strong>: Hier wählen wir das Geopackage “uebung07” mit den Referenzdaten.</p></li>
 <li><p><strong>Raster layer with features</strong>: Hier geben wir das Sentinel2-Bild “NP_Harz_2025-06_12.tif” an.</p></li>
@@ -482,13 +483,13 @@ Hinweis
 <li><p><strong>Output dataset</strong>: Hier geben wir an, wo die Trainingsdaten gespeichert werden sollen. Wir wählen <em>„trainingsdaten.skops“</em> im Ordner <em>“daten”</em>.</p></li>
 </ul>
 <p><img src="images/LE07_EB_create_dataset.png" class="img-fluid"></p>
-<p>Jetzt können wir mit der Werkzeugkistenfunktion <em>„Fit RandomForestClassifier“</em> ein Klassifikationsmodell anpassen mit den folgenden Optionen:</p>
+<p>Jetzt können wir mit der Werkzeugkistenfunktion <code>Fit RandomForestClassifier</code> ein Klassifikationsmodell anpassen mit den folgenden Optionen:</p>
 <ul>
 <li><p><strong>Training dataset</strong>: Hier geben wir die Datei <em>„trainingsdaten.skops“</em> an.</p></li>
 <li><p><strong>Output classifier</strong>: Hier geben wir an, wo das trainierte Klassifikationsmodell gespeichert werden soll. Wir wählen <em>„rf_modell_harz_2025.skops“</em> im Ordner <em>“daten”</em>.</p></li>
 </ul>
 <p><img src="images/LE07_EB_fit_rf_model.png" class="img-fluid"></p>
-<p>Mit der Werkzeugkistenfunktion <em>„Classifier Performance“</em> können wir statistische Kennzahlen zur Beurteilung der Modellgenauigkeit berechnen mit den Optionen:</p>
+<p>Mit der Werkzeugkistenfunktion <code>Classifier Performance</code> können wir statistische Kennzahlen zur Beurteilung der Modellgenauigkeit berechnen mit den Optionen:</p>
 <ul>
 <li><p><strong>Classifier</strong>: Hier geben wir das das Klassifikationsmodell <em>„rf_modell_harz_2025.skops“</em> an.</p></li>
 <li><p><strong>Test dataset</strong>: Hier geben wir wieder unsere Trainingsdaten <em>„trainingsdaten.skops“</em> an.</p></li>
@@ -502,7 +503,7 @@ Hinweis
 </section>
 <section id="sec-rf_inference" class="level2" data-number="7.7">
 <h2 data-number="7.7" class="anchored" data-anchor-id="sec-rf_inference"><span class="header-section-number">7.7</span> Aufgabe 04: Klassifikation eines S2-Satellitenbilds zur Erstellung einer Waldtypenkarte</h2>
-<p>Nachdem wir das <em>RandomForest</em> Klassifikationsmodell trainiert haben, können wir es auf das gesamte Satellitenbild anwenden, um jedem Pixel eine unsere vier thematischen Klassen zuzuweisen. Dazu verwenden wir die EnMAP-Box-Funktion <em>Predict classifcation layer</em>, die im Werkzeugkasten der Verarbeitungsfunktionen zu finden ist. Hier werden folgende Optionen gewählt:</p>
+<p>Nachdem wir das <em>RandomForest</em> Klassifikationsmodell trainiert haben, können wir es auf das gesamte Satellitenbild anwenden, um jedem Pixel eine unsere vier thematischen Klassen zuzuweisen. Dazu verwenden wir die EnMAP-Box-Funktion <code>Predict classifcation layer</code>, die im Werkzeugkasten der Verarbeitungsfunktionen zu finden ist. Hier werden folgende Optionen gewählt:</p>
 <ul>
 <li><p><strong>Rasterlayer with features</strong>: Hier geben wir unser Sentinel2-Bild an.</p></li>
 <li><p><strong>Classifier</strong>: Wir geben das vorher trainierte Modell <em>„rf_harz_2025_modell.skops“</em> an.</p></li>

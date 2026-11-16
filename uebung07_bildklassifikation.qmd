@@ -94,7 +94,7 @@ Sentinel-2 Bilder beschafft und vorbereitet. Kopieren Sie sich das Bild **NP_Har
 aus der Übung LE04 in den Ordner "daten/raster" der akuellen Übung (LE07). Sollten Sie keinen Zugriff auf
 dieses Bild haben, können Sie es sich alternativ hier herunterladen:
 
-<https://cloud.hawk.de/index.php/s/FHap7J8Ge3iKa89>
+<https://cloud.hawk.de/index.php/s/6LA9LN2X65aZqMj>
 
 Bei dem Bild handelt es sich um ein Sentinel-2 Satellitenbild vom 12.06.2025 mit folgenden vier
 Bändern:
@@ -183,8 +183,9 @@ Aktivieren Sie jetzt im Layer-Panel **nur** diese Layer:
 
 - Aktivieren Sie den Editiermodus des Vektor-Layers "uebung07" mit dem Stiftsymbol
   ![](images/LE05_start_edit.png), Klicken Sie auf
-  ![](images/LE06_poly_hinzufügen.png)"Polygonobjekt hinzufügen". 
+  ![](images/LE06_poly_hinzufügen.png)"Polygonobjekt hinzufügen".
   
+
 ### Klassifikationschlüssel {#sec-class_scheme}
 
 Der Klassifikationsschlüssel legt fest, welche Landbedeckungs-/Landnutzungsklassen in der
@@ -227,9 +228,16 @@ Achten sie dabei auf folgende Aspekte:
 - die Trainingsdaten sollten die Variabillität der Spektralbereiche der jeweiligen Klassen
     möglichst abdecken.
 
-- ein Trainingspolygon sollte etwa 10 - 100 Pixel enthalten.
+- ein Trainingspolygon sollte etwa 10 - 100 Pixel des Satellitenbildes enthalten.
 
 - die Anzahl der Trainingspolygone bzw. der Trainingspixel pro Klasse sollte in etwa gleich sein.
+
+::: callout-tip
+Sie können sich die aktuelle Anzahl der Trainingspolygone pro Klasse im Layer-Panel anzeigen lassen:
+
+- Markieren Sie den Layer-Namen "uebung07" im Layer-Panel.
+- `Rechtsklick` → `Objektanzahl anzeigen` einschalten.
+:::
 
 ## Aufgabe 03: Training eines Klassifikationsmodells {#sec-rf_training}
 
@@ -259,7 +267,7 @@ Jetzt können wir mit der Werkzeugkistenfunktion `Fit RandomForestClassifier` ei
 ![](images/LE07_EB_fit_rf_model.png)
 
 
-Mit der Werkzeugkistenfunktion `Classifier Performance` können wir statistische Kennzahlen zur Beurteilung der Modellgenauigkeit berechnen mit den Optionen:
+Mit der Werkzeugkistenfunktion `Classifier performance report` können wir statistische Kennzahlen zur Beurteilung der Modellgenauigkeit berechnen mit den Optionen:
 
 -   **Classifier**: Hier geben wir das das Klassifikationsmodell *„rf_modell_harz_2025.skops“* an.
 
