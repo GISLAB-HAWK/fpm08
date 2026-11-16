@@ -348,7 +348,7 @@ Hinweis
 <section id="satellitenbilder" class="level3" data-number="7.4.3">
 <h3 data-number="7.4.3" class="anchored" data-anchor-id="satellitenbilder"><span class="header-section-number">7.4.3</span> <strong>Satellitenbilder</strong></h3>
 <p>In dieser Übung sollen aktuelle Sentinel-2 Satellitenbilder für die Klassifikation verwendet werden. In LE04 <a href="uebung04.html" class="quarto-xref"><span>Kapitel 4</span></a> haben wir bereits eine Satellitenbildkarte angelegt und die entsprechenden Sentinel-2 Bilder beschafft und vorbereitet. Kopieren Sie sich das Bild <strong>NP_Harz_2025_06_12.tif</strong> aus der Übung LE04 in den Ordner “daten/raster” der akuellen Übung (LE07). Sollten Sie keinen Zugriff auf dieses Bild haben, können Sie es sich alternativ hier herunterladen:</p>
-<p><a href="https://cloud.hawk.de/index.php/s/FHap7J8Ge3iKa89" class="uri">https://cloud.hawk.de/index.php/s/FHap7J8Ge3iKa89</a></p>
+<p><a href="https://cloud.hawk.de/index.php/s/6LA9LN2X65aZqMj" class="uri">https://cloud.hawk.de/index.php/s/6LA9LN2X65aZqMj</a></p>
 <p>Bei dem Bild handelt es sich um ein Sentinel-2 Satellitenbild vom 12.06.2025 mit folgenden vier Bändern:</p>
 <ul>
 <li>Band 1: B02 Blue</li>
@@ -468,9 +468,26 @@ Hinweis
 <li><p>die Trainingsdaten sollten verteilt über das ganze Gebiet des Nationalparks liegen.</p></li>
 <li><p>als Trainingsdaten sollten Gebiete gewählt werden, die eindeutig der jeweiligen Klasse zugeordnet werden können. Randpixel, die verschiedene Landbeckungsklassen abdecken, sollten vermieden werden.</p></li>
 <li><p>die Trainingsdaten sollten die Variabillität der Spektralbereiche der jeweiligen Klassen möglichst abdecken.</p></li>
-<li><p>ein Trainingspolygon sollte etwa 10 - 100 Pixel enthalten.</p></li>
+<li><p>ein Trainingspolygon sollte etwa 10 - 100 Pixel des Satellitenbildes enthalten.</p></li>
 <li><p>die Anzahl der Trainingspolygone bzw. der Trainingspixel pro Klasse sollte in etwa gleich sein.</p></li>
 </ul>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tipp
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Sie können sich die aktuelle Anzahl der Trainingspolygone pro Klasse im Layer-Panel anzeigen lassen:</p>
+<ul>
+<li>Markieren Sie den Layer-Namen “uebung07” im Layer-Panel.</li>
+<li><code>Rechtsklick</code> → <code>Objektanzahl anzeigen</code> einschalten.</li>
+</ul>
+</div>
+</div>
 </section>
 </section>
 <section id="sec-rf_training" class="level2" data-number="7.6">
@@ -486,6 +503,19 @@ Hinweis
 <li><p><strong>Field with class labels</strong>: Hier <strong>kein</strong> Feld auswählen und frei lassen. Die Klassenwerte und -namen werden dann aus der qml-Stildatei der Vektordaten eingelesen.</p></li>
 <li><p><strong>Output dataset</strong>: Hier geben wir an, wo die Trainingsdaten gespeichert werden sollen. Wir wählen <em>„trainingsdaten.skops“</em> im Ordner <em>“daten”</em>.</p></li>
 </ul>
+<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Vorsicht
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Auch wenn der Fortschrittsbalken schon 100% anzeigt, sollten Sie geduldig warten bis im Protokollfenster die Meldung erscheint : “Algorithmus… beendet”.</p>
+</div>
+</div>
 <p><img src="images/LE07_EB_create_dataset.png" class="img-fluid"></p>
 <p>Jetzt können wir mit der Werkzeugkistenfunktion <code>Fit RandomForestClassifier</code> ein Klassifikationsmodell anpassen mit den folgenden Optionen:</p>
 <ul>
@@ -493,7 +523,7 @@ Hinweis
 <li><p><strong>Output classifier</strong>: Hier geben wir an, wo das trainierte Klassifikationsmodell gespeichert werden soll. Wir wählen <em>„rf_modell_harz_2025.skops“</em> im Ordner <em>“daten”</em>.</p></li>
 </ul>
 <p><img src="images/LE07_EB_fit_rf_model.png" class="img-fluid"></p>
-<p>Mit der Werkzeugkistenfunktion <code>Classifier Performance</code> können wir statistische Kennzahlen zur Beurteilung der Modellgenauigkeit berechnen mit den Optionen:</p>
+<p>Mit der Werkzeugkistenfunktion <code>Classifier performance report</code> können wir statistische Kennzahlen zur Beurteilung der Modellgenauigkeit berechnen mit den Optionen:</p>
 <ul>
 <li><p><strong>Classifier</strong>: Hier geben wir das das Klassifikationsmodell <em>„rf_modell_harz_2025.skops“</em> an.</p></li>
 <li><p><strong>Test dataset</strong>: Hier geben wir wieder unsere Trainingsdaten <em>„trainingsdaten.skops“</em> an.</p></li>
