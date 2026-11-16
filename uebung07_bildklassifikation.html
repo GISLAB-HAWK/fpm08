@@ -239,7 +239,11 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#sec-class_scheme" id="toc-sec-class_scheme" class="nav-link" data-scroll-target="#sec-class_scheme"><span class="header-section-number">7.5.1</span> Klassifikationschlüssel</a></li>
   <li><a href="#trainingsdaten-ergänzen" id="toc-trainingsdaten-ergänzen" class="nav-link" data-scroll-target="#trainingsdaten-ergänzen"><span class="header-section-number">7.5.2</span> Trainingsdaten ergänzen</a></li>
   </ul></li>
-  <li><a href="#sec-rf_training" id="toc-sec-rf_training" class="nav-link" data-scroll-target="#sec-rf_training"><span class="header-section-number">7.6</span> Aufgabe 03: Training eines Klassifikationsmodells</a></li>
+  <li><a href="#sec-rf_training" id="toc-sec-rf_training" class="nav-link" data-scroll-target="#sec-rf_training"><span class="header-section-number">7.6</span> Aufgabe 03: Training eines Klassifikationsmodells</a>
+  <ul class="collapse">
+  <li><a href="#erstellen-uns-speichern-eines-klassifikationsmodells" id="toc-erstellen-uns-speichern-eines-klassifikationsmodells" class="nav-link" data-scroll-target="#erstellen-uns-speichern-eines-klassifikationsmodells"><span class="header-section-number">7.6.1</span> Erstellen uns Speichern eines Klassifikationsmodells</a></li>
+  <li><a href="#erstellen-eines-berichts-zur-beurteilung-der-modellgenauigkeit" id="toc-erstellen-eines-berichts-zur-beurteilung-der-modellgenauigkeit" class="nav-link" data-scroll-target="#erstellen-eines-berichts-zur-beurteilung-der-modellgenauigkeit"><span class="header-section-number">7.6.2</span> Erstellen eines Berichts zur Beurteilung der Modellgenauigkeit</a></li>
+  </ul></li>
   <li><a href="#sec-rf_inference" id="toc-sec-rf_inference" class="nav-link" data-scroll-target="#sec-rf_inference"><span class="header-section-number">7.7</span> Aufgabe 04: Klassifikation eines S2-Satellitenbilds zur Erstellung einer Waldtypenkarte</a></li>
   </ul>
 </nav>
@@ -344,6 +348,24 @@ Hinweis
 <li><code>Sachsen-Anhalt</code> → <code>ST: DOP -Kachelübersicht-Überfliegungsdatum (WMS)</code> mit dem KBS “ETS89 / UTM Zone 32N (EPSG:25832)”</li>
 <li><code>Niedersachsen</code> → <code>NI: Digitale Orthophotos - DOP20 (WMS)</code> mit dem KBS “ETS89 / UTM Zone 32N (EPSG:25832)”</li>
 </ol>
+<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Vorsicht</span>SSL-Fehler
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Unter Windows kommt es bei einigen Layer aus Sachsen-Anhalt zu einem Fehler beim laden (SSL-Protokoll Fehler). Wenn das auftritt bitte das QGIS-Projekt speichern und schließen. Einschließend in Windows das Programm “Eingabaufforderung” starten. In der Konsole die sich öffnet folgenden Beffehl abschicken:</p>
+<pre><code>curl https://www.geodatenportal.sachsen-anhalt.de/wss/service/ST_LVermGeo_DOP_WMS_OpenData/guest?</code></pre>
+<p>Danach QGIS neustarten und das Projekt laden..</p>
+</div>
+</div>
+</div>
 </section>
 <section id="satellitenbilder" class="level3" data-number="7.4.3">
 <h3 data-number="7.4.3" class="anchored" data-anchor-id="satellitenbilder"><span class="header-section-number">7.4.3</span> <strong>Satellitenbilder</strong></h3>
@@ -382,7 +404,6 @@ Hinweis
 <ul>
 <li>Importieren sie die Vektordaten.</li>
 <li>Markieren Sie den Layer “uebung07” im Layer-Panel.</li>
-<li>Laden Sie die QGIS-Stildatei “waldtypen_np_harz_vektor.qml”</li>
 <li><code>Rechtsklick</code> → <code>Eigenschaften</code> → <code>Symbolisierung</code> → <code>Stil</code> → <code>Lade Stil</code></li>
 <li>Stellen sie die Deckkraft der Layerdarstellung mit dem Schieberegler auf ca. 50%.</li>
 </ul>
@@ -492,6 +513,8 @@ Tipp
 </section>
 <section id="sec-rf_training" class="level2" data-number="7.6">
 <h2 data-number="7.6" class="anchored" data-anchor-id="sec-rf_training"><span class="header-section-number">7.6</span> Aufgabe 03: Training eines Klassifikationsmodells</h2>
+<section id="erstellen-uns-speichern-eines-klassifikationsmodells" class="level3" data-number="7.6.1">
+<h3 data-number="7.6.1" class="anchored" data-anchor-id="erstellen-uns-speichern-eines-klassifikationsmodells"><span class="header-section-number">7.6.1</span> Erstellen uns Speichern eines Klassifikationsmodells</h3>
 <p>Die Trainingsdaten liegen als Vektordaten vor, die Klassenzugehörigkeit ist in der Attributtabelle gespeichert. Um diese Information zum Trainieren eines Klassifkationsmodelles zu nutzen, müssen wir diese in ein spezielles Serialisierungs- und Speicherformat (“skops”) umwandeln, das für maschinelles Lernen entwickelt wurde.</p>
 <p>EnMAP-Box stellt hierfür die Funktion <code>Create classification dataset (from categorized vector layer and feature raster)</code> zur Verfügung, die wir in der Werkzeugkiste der Verarbeitungsfunktionen über das Suchfeld finden können. In dieser Funktion setzen wir die folgenden Optionen:</p>
 <ul>
@@ -523,6 +546,9 @@ Vorsicht
 <li><p><strong>Output classifier</strong>: Hier geben wir an, wo das trainierte Klassifikationsmodell gespeichert werden soll. Wir wählen <em>„rf_modell_harz_2025.skops“</em> im Ordner <em>“daten”</em>.</p></li>
 </ul>
 <p><img src="images/LE07_EB_fit_rf_model.png" class="img-fluid"></p>
+</section>
+<section id="erstellen-eines-berichts-zur-beurteilung-der-modellgenauigkeit" class="level3" data-number="7.6.2">
+<h3 data-number="7.6.2" class="anchored" data-anchor-id="erstellen-eines-berichts-zur-beurteilung-der-modellgenauigkeit"><span class="header-section-number">7.6.2</span> Erstellen eines Berichts zur Beurteilung der Modellgenauigkeit</h3>
 <p>Mit der Werkzeugkistenfunktion <code>Classifier performance report</code> können wir statistische Kennzahlen zur Beurteilung der Modellgenauigkeit berechnen mit den Optionen:</p>
 <ul>
 <li><p><strong>Classifier</strong>: Hier geben wir das das Klassifikationsmodell <em>„rf_modell_harz_2025.skops“</em> an.</p></li>
@@ -533,7 +559,8 @@ Vorsicht
 <li><p><strong>Number of cross-validation folds</strong>: Hier geben wir die Anzahl der Kreuzvalidierungsfaltungen ein: z.B. <em>“5”</em></p></li>
 <li><p><strong>Output report</strong>: Hier geben wir an, wo der Bericht über Modellgenauigkeit gespeichert werden soll. Wir wählen <em>„modellgenauigkeit.html“</em> im Ordner <em>“daten”</em>.</p></li>
 </ul>
-<p><img src="images/LE07_EB_model_performance.png" class="img-fluid"> Nach Ausführen der Funktion öffnet sich ein Bericht mit Fehlermatrix und Statistiken, die wir in der nächsten Lehreinheit besprechen werden.</p>
+<p><img src="images/LE07_EB_model_performance.png" class="img-fluid">Nach Ausführen der Funktion öffnet sich ein Bericht mit Fehlermatrix und Statistiken, die wir in der nächsten Lehreinheit besprechen werden.</p>
+</section>
 </section>
 <section id="sec-rf_inference" class="level2" data-number="7.7">
 <h2 data-number="7.7" class="anchored" data-anchor-id="sec-rf_inference"><span class="header-section-number">7.7</span> Aufgabe 04: Klassifikation eines S2-Satellitenbilds zur Erstellung einer Waldtypenkarte</h2>
@@ -543,8 +570,21 @@ Vorsicht
 <li><p><strong>Classifier</strong>: Wir geben das vorher trainierte Modell <em>„rf_harz_2025_modell.skops“</em> an.</p></li>
 <li><p><strong>Output classifcation layer</strong>: Hier geben wir den Speicherpfad der thematischen Rasterkarte im Format GeoTiff ein unter <em>“daten/NP_Harz_2025_06_12_Waldtypen.tif”</em>.</p></li>
 </ul>
-<p><img src="images/LE07_EB_predict_model.png" class="img-fluid"> Nach erfolgreicher Klassifikation wird das Bild als Raster mit indizierter Palette mit Graustufen im QGIS geladen. Prüfen Sie jetzt nochmal, ob das Koordinatenreferenzsystem des Projektes immer noch korrekt ist.</p>
-<p>Anschließend schneiden wir das klassifizierte Bild auf auf die Grenzen des Nationalparks zu (siehe dazu auch LE04 <a href="uebung04.html#sec-zuschneiden" class="quarto-xref"><span>Kapitel 4.7</span></a>). Das zugeschnittene Bild wird als GeoTIFF unter <em>“daten/ NP_Harz_2025_06_12_Waldtypen.tif”</em> gespeichert. Für die Darstellung sollen die Farbwerte der Pixel identisch zu den Farben des Vektor-Referenzdatensatz sein. Erstellen sie dafür eine entsprechende Symbolisierung.</p>
+<p><img src="images/LE07_EB_predict_model.png" class="img-fluid">Nach erfolgreicher Klassifikation wird das Bild als Raster mit indizierter Palette mit Graustufen im QGIS geladen. Prüfen Sie jetzt nochmal, ob das Koordinatenreferenzsystem des Projektes immer noch korrekt ist.</p>
+<p>Anschließend schneiden wir das klassifizierte Bild auf auf die Grenzen des Nationalparks zu (siehe dazu auch LE04 <a href="uebung04.html#sec-zuschneiden" class="quarto-xref"><span>Kapitel 4.7</span></a>). Das zugeschnittene Bild wird als GeoTIFF unter <em>“daten/ NP_Harz_2025_06_12_Waldtypen.tif”</em> gespeichert.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tipp
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Die Enmap-Toolbox erzeugt für die neue Rasterkarte auch einen passenden Stil. Dieser wird im selben Ordner mit dem selben Dateinamen wie die Waldtypenkarte mit der Dateiendung *.qml abgelegt. Falls die Karte nicht farbig dargestellt wird laden Sie diesen Stil manuel unter Layereigenschaften.</p>
+</div>
+</div>
 <p><strong>Fragen:</strong></p>
 <div style="border: 3px solid #ff8a0b; background-color: #ffffff; padding: 8px;">
 <ol type="1">
