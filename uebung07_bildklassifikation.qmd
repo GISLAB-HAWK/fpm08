@@ -255,6 +255,9 @@ Klicken Sie auf `Fortgeschrittene Parameter`.
 
 -   **Output dataset**: Hier geben wir an, wo die Trainingsdaten gespeichert werden sollen. Wir wählen *„trainingsdaten.skops“* im Ordner *"daten"*.
 
+::: callout-caution
+Auch wenn der Fortschrittsbalken schon 100% anzeigt, sollten Sie geduldig warten bis im Protokollfenster die Meldung erscheint : "Algorithmus... beendet".
+:::
 ![](images/LE07_EB_create_dataset.png)
 
 Jetzt können wir mit der Werkzeugkistenfunktion `Fit RandomForestClassifier` ein Klassifikationsmodell anpassen mit den folgenden Optionen:
