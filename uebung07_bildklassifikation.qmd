@@ -130,14 +130,13 @@ Für die Übung werden zwei Vektordatensätze benötigt:
 
 <https://cloud.hawk.de/index.php/s/ox2CsrEDHNjiiyF>
 
-Für die Darstellung und Klassifizierung der Waldtypen ist eine qml-Stildatei sehr wichtig, die bereits vorbereitet ist und die
-Sie hier herunterladen können:
+Für die Darstellung und Klassifizierung der Waldtypen ist eine qml-Stildatei sehr 
+wichtig, die bereits vorbereitet ist und die Sie hier herunterladen können:
 
 <https://cloud.hawk.de/index.php/s/TBSk6Xi27JpMQLA>
 
 - Importieren sie die Vektordaten. 
 - Markieren Sie den Layer "uebung07" im Layer-Panel.
-- Laden Sie die QGIS-Stildatei "waldtypen_np_harz_vektor.qml"
 - `Rechtsklick` → `Eigenschaften` → `Symbolisierung` → `Stil` →  `Lade Stil`
 - Stellen sie die Deckkraft der Layerdarstellung mit dem Schieberegler auf ca. 50%.
 
